@@ -326,6 +326,12 @@
     a { color: var(--navy); text-decoration: none; }
     .section-banner { break-before: page; }
   }
+
+  .back-to-hub { display:inline-flex; align-items:center; gap:6px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; color:var(--terra-dark); text-decoration:none; padding:6px 10px 6px 8px; margin:0 0 14px -8px; border-radius:4px; transition:background-color 150ms ease, color 150ms ease; }
+  .back-to-hub:hover, .back-to-hub:focus-visible { background:var(--navy-tint); color:var(--navy); text-decoration:none; outline:none; }
+  .back-to-hub:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+  .back-to-hub .arrow-glyph { font-size:14px; line-height:1; }
+  @media print { .back-to-hub { display:none; } }
 </style>
 </head>
 <body>
@@ -333,6 +339,7 @@
 
 <div class="page-wrap" id="top">
 
+  <a href="index.html" class="back-to-hub" id="back-to-hub-link" aria-label="Back to Concept Notes library"><span class="arrow-glyph" aria-hidden="true">&larr;</span><span>Back to Concept Notes</span></a>
   <header class="atlas-header">
     <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
     <h1 class="page-title">Cardiovascular Anatomy &amp; Physiology</h1>
@@ -2809,7 +2816,7 @@ document.querySelectorAll('[data-depth]').forEach(btn => {
   const course = params.get('course');
   const COURSE_MAP = {
     'BIO004': { eyebrow: 'BIO 004 Human Anatomy · Solano Community College',                     view: 'anatomy',  depth: 'full' },
-    'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology · American River College',          view: 'combined', depth: 'full' },
+    'BIO430':{eyebrow:'BIO 430 Human Anatomy & Physiology I · American River College',view:'combined',depth:'full'},'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology II · American River College',          view: 'combined', depth: 'full' },
     'BIO304': { eyebrow: 'BIO 304 Human Anatomy & Physiology (Online) · American River College', view: 'combined', depth: 'essentials' }
   };
   if (course && COURSE_MAP[course]) {
@@ -2850,6 +2857,17 @@ applyFilters();
   }
   const obs = new MutationObserver(sendHeight);
   obs.observe(document.body, { childList: true, subtree: true, attributes: true });
+})();
+</script>
+
+<script>
+/* Preserve ?course= parameter on the back-to-hub link */
+(function () {
+  var match = /[?&]course=([^&]+)/.exec(window.location.search);
+  if (match) {
+    var link = document.getElementById('back-to-hub-link');
+    if (link) link.setAttribute('href', 'index.html?course=' + encodeURIComponent(match[1]));
+  }
 })();
 </script>
 </body>

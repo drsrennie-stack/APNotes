@@ -52,11 +52,18 @@
   footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
   .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
   @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+
+  .back-to-hub { display:inline-flex; align-items:center; gap:6px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; color:var(--terra-dark); text-decoration:none; padding:6px 10px 6px 8px; margin:0 0 14px -8px; border-radius:4px; transition:background-color 150ms ease, color 150ms ease; }
+  .back-to-hub:hover, .back-to-hub:focus-visible { background:var(--navy-tint); color:var(--navy); text-decoration:none; outline:none; }
+  .back-to-hub:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+  .back-to-hub .arrow-glyph { font-size:14px; line-height:1; }
+  @media print { .back-to-hub { display:none; } }
 </style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="page-wrap" id="top">
+  <a href="index.html" class="back-to-hub" id="back-to-hub-link" aria-label="Back to Concept Notes library"><span class="arrow-glyph" aria-hidden="true">&larr;</span><span>Back to Concept Notes</span></a>
   <header class="atlas-header">
     <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
     <h1 class="page-title">Cells: Anatomy &amp; Physiology</h1>
@@ -479,9 +486,20 @@ function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='c
 function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
 document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
-(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Cells';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO430':{eyebrow:'BIO 430 Human Anatomy & Physiology I · American River College',view:'combined',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology II · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Cells';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
 applyFilters();
 (function(){const id='cells-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+
+<script>
+/* Preserve ?course= parameter on the back-to-hub link */
+(function () {
+  var match = /[?&]course=([^&]+)/.exec(window.location.search);
+  if (match) {
+    var link = document.getElementById('back-to-hub-link');
+    if (link) link.setAttribute('href', 'index.html?course=' + encodeURIComponent(match[1]));
+  }
+})();
 </script>
 </body>
 </html>

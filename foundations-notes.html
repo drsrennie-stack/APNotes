@@ -20,10 +20,17 @@
   .links a { color:var(--navy); text-decoration:none; font-weight:600; }
   .links a:hover { color:var(--terra-dark); text-decoration:underline; }
   footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); }
+
+  .back-to-hub { display:inline-flex; align-items:center; gap:6px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; color:var(--terra-dark); text-decoration:none; padding:6px 10px 6px 8px; margin:0 0 14px -8px; border-radius:4px; transition:background-color 150ms ease, color 150ms ease; }
+  .back-to-hub:hover, .back-to-hub:focus-visible { background:var(--navy-tint); color:var(--navy); text-decoration:none; outline:none; }
+  .back-to-hub:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+  .back-to-hub .arrow-glyph { font-size:14px; line-height:1; }
+  @media print { .back-to-hub { display:none; } }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <a href="index.html" class="back-to-hub" id="back-to-hub-link" aria-label="Back to Concept Notes library"><span class="arrow-glyph" aria-hidden="true">&larr;</span><span>Back to Concept Notes</span></a>
   <p class="eyebrow">Concept Notes &middot; Reorganized</p>
   <h1>Foundations has been split into four units</h1>
   <p class="lead">The original Foundations unit was reorganized into four standalone files to match how A&amp;P programs typically teach this material. Each unit retains the View / Depth filters and course URL parameters.</p>
@@ -38,5 +45,16 @@
   </div>
   <footer>Notes prepared by Dr. Sharilyn Rennie.</footer>
 </div>
+
+<script>
+/* Preserve ?course= parameter on the back-to-hub link */
+(function () {
+  var match = /[?&]course=([^&]+)/.exec(window.location.search);
+  if (match) {
+    var link = document.getElementById('back-to-hub-link');
+    if (link) link.setAttribute('href', 'index.html?course=' + encodeURIComponent(match[1]));
+  }
+})();
+</script>
 </body>
 </html>
