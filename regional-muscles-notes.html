@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regional Muscle Anatomy &amp; Joints &mdash; Concept Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  .back-to-hub { display:inline-flex; align-items:center; gap:6px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; color:var(--terra-dark); text-decoration:none; padding:6px 10px 6px 8px; margin:0 0 14px -8px; border-radius:4px; transition:background-color 150ms ease, color 150ms ease; }
+  .back-to-hub:hover, .back-to-hub:focus-visible { background:var(--navy-tint); color:var(--navy); text-decoration:none; outline:none; }
+  .back-to-hub:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+  .back-to-hub .arrow-glyph { font-size:14px; line-height:1; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:14px 0 0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:13.5px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  table.summary tbody td:first-child { font-weight:600; color:var(--navy-deep); white-space:nowrap; }
+  .joint-block { background:var(--navy-tint); border-left:3px solid var(--navy); border-radius:4px; padding:12px 14px; margin:8px 0 14px; } .joint-block h4 { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 6px; }
+  .joint-block p, .joint-block ul { font-size:14px; margin:0; } .joint-block ul { padding-left:20px; }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, .back-to-hub, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .joint-block { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <a href="index.html" class="back-to-hub" id="back-to-hub-link" aria-label="Back to Concept Notes library"><span class="arrow-glyph" aria-hidden="true">&larr;</span><span>Back to Concept Notes</span></a>
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Regional Muscle Anatomy &amp; Joints</h1>
+    <p class="usage">Major muscles by body region. For each region: the joints present, the movements they allow, and the muscles that produce them. Origin, insertion, action, and innervation in summary tables. Pair this unit with the Muscular System unit for tissue/microanatomy/physiology, and the Skeletal System unit for bones.</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 430/431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">12</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 1 of 12</p>
+    <h2 class="card-title">How to learn regional muscles <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Don't memorize muscles in isolation. Anchor each to the joint it crosses and the movement it produces. If you know where it starts (origin), where it ends (insertion), and the joint it crosses, the action falls out for free.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Naming patterns</strong> tell you about the muscle:
+          <ul><li>Location: temporalis, occipitalis, intercostals.</li>
+          <li>Action: extensor digitorum, flexor carpi radialis, adductor longus.</li>
+          <li>Shape: deltoid (triangle), trapezius, rhomboid.</li>
+          <li>Size: maximus, longus, brevis.</li>
+          <li>Origin/insertion: sternocleidomastoid (sternum + clavicle &rarr; mastoid).</li>
+          <li>Direction of fibers: rectus (straight), oblique, transverse.</li></ul>
+        </li>
+        <li><strong>Origin vs insertion:</strong>
+          <ul><li>Origin = less mobile attachment (usually proximal).</li>
+          <li>Insertion = more mobile attachment (usually distal). Pulled toward the origin when the muscle contracts.</li></ul>
+        </li>
+        <li><strong>Action language:</strong>
+          <ul><li>Flexion/extension (sagittal plane, decreasing/increasing angle).</li>
+          <li>Abduction/adduction (frontal plane, away from / toward midline).</li>
+          <li>Rotation (transverse plane); medial vs lateral.</li>
+          <li>Circumduction (combined flex + abd + ext + add at ball-and-socket joints).</li>
+          <li>Specialized: pronation/supination (forearm), inversion/eversion (foot), dorsiflexion/plantarflexion (ankle), opposition (thumb), protraction/retraction (scapula, jaw), elevation/depression.</li></ul>
+        </li>
+        <li><strong>Innervation matters clinically:</strong> a nerve injury denervates every muscle it supplies; predicting deficits requires knowing the nerve, not the individual muscle.</li>
+        <li><strong>Compartments:</strong> in the limbs, fascia divides muscles into compartments that share a nerve and blood supply. Learning by compartment beats learning muscle-by-muscle.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Sketch a stick figure. At each major joint (shoulder, elbow, wrist, hip, knee, ankle), draw a curved arrow for each movement that joint allows. Label the prime mover for that movement next to the arrow. This is your spatial map for every region.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> If a muscle's origin is the iliac crest and its insertion is the femur, what joint does it cross and what movement(s) does it likely produce?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why does naming a muscle "flexor carpi ulnaris" tell you four things at once?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Hip joint. Likely hip movements (flexion, adduction, abduction, or rotation depending on exact attachments).</li><li>It tells you the action (flex), the joint (carpi = wrist), the location (ulnar side), and that it's on the flexor compartment of the forearm.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 2 of 12</p>
+    <h2 class="card-title">Head &amp; Neck: facial expression, mastication, neck movement <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Facial muscles insert on skin (so they move skin, not bone). Mastication muscles move the mandible. Neck muscles flex, extend, and rotate the head on the cervical spine.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Temporomandibular joint (TMJ):</strong> condylar/hinge-glide synovial. Movements: elevation, depression, protraction, retraction, side-to-side (lateral excursion).</li>
+        <li><strong>Atlanto-occipital joint (C0&ndash;C1):</strong> condylar synovial. Movements: head flexion/extension ("yes" nod).</li>
+        <li><strong>Atlanto-axial joint (C1&ndash;C2):</strong> pivot synovial. Movement: head rotation ("no" shake).</li>
+        <li><strong>Cervical intervertebral joints (C2&ndash;C7):</strong> contribute flexion, extension, lateral flexion, and rotation of the neck.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Muscles of facial expression (CN VII, facial nerve)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Frontalis (occipitofrontalis frontal belly)</td><td>Galea aponeurotica</td><td>Skin of eyebrow/forehead</td><td>Raises eyebrows (surprise)</td></tr>
+          <tr><td>Orbicularis oculi</td><td>Frontal &amp; maxillary bones, medial orbit</td><td>Skin around eye</td><td>Closes eyelid (blink, wink, squint)</td></tr>
+          <tr><td>Orbicularis oris</td><td>Surrounding facial muscles</td><td>Skin/mucosa of lip</td><td>Closes/purses lips (kiss)</td></tr>
+          <tr><td>Zygomaticus major</td><td>Zygomatic bone</td><td>Skin at corner of mouth</td><td>Elevates corner of mouth (smile)</td></tr>
+          <tr><td>Buccinator</td><td>Maxilla, mandible (alveolar processes)</td><td>Orbicularis oris</td><td>Compresses cheek (whistle, suck, chew)</td></tr>
+          <tr><td>Platysma</td><td>Fascia of pec major/deltoid</td><td>Skin of lower face, mandible</td><td>Tenses neck skin, depresses lower lip</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Muscles of mastication (CN V<sub>3</sub>, trigeminal mandibular branch)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action at TMJ</th></tr></thead>
+        <tbody>
+          <tr><td>Masseter</td><td>Zygomatic arch</td><td>Angle/ramus of mandible</td><td>Elevates mandible (close jaw, primary chewer)</td></tr>
+          <tr><td>Temporalis</td><td>Temporal fossa</td><td>Coronoid process of mandible</td><td>Elevates &amp; retracts mandible</td></tr>
+          <tr><td>Medial pterygoid</td><td>Pterygoid plate</td><td>Medial mandible</td><td>Elevates, protracts; side-to-side grinding</td></tr>
+          <tr><td>Lateral pterygoid</td><td>Pterygoid plate, greater wing of sphenoid</td><td>Mandibular condyle/TMJ capsule</td><td>Protracts &amp; depresses mandible (opens jaw)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Anterolateral neck (head/neck movers)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Innervation</th></tr></thead>
+        <tbody>
+          <tr><td>Sternocleidomastoid (SCM)</td><td>Sternum + clavicle (two heads)</td><td>Mastoid process</td><td>Bilateral: flexes neck. Unilateral: rotates head to <em>opposite</em> side, tilts to same side</td><td>CN XI (accessory) + C2/C3</td></tr>
+          <tr><td>Scalenes (anterior, middle, posterior)</td><td>Transverse processes C2&ndash;C7</td><td>Ribs 1&ndash;2</td><td>Lateral flexion of neck; elevate ribs (accessory respiration)</td><td>Cervical spinal nerves</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Bell's palsy</strong>: unilateral CN VII paralysis &rarr; ipsilateral loss of facial expression on that side (drooping mouth corner, can't close eye, can't wrinkle forehead). Distinguishes from stroke (which spares the forehead because CN VII forehead motor nucleus gets bilateral cortical input). <strong>Trigeminal neuralgia</strong>: paroxysmal facial pain in CN V distribution; treat with carbamazepine. <strong>TMJ disorders</strong>: pain, clicking, restricted opening; conservative management first.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Draw a profile of the face/neck. Sketch the masseter (rectangular over angle of mandible), temporalis (fan over the temple), and SCM (the rope from sternum/clavicle to behind the ear). Add arrows showing the action of each.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which cranial nerve supplies the muscles of facial expression?</li>
+        <li><span class="qc-meta">DOK 2.</span> A patient turns their head to the right. Which SCM contracted?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why does a Bell's palsy spare nothing on one side of the face, while a stroke spares the forehead?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>CN VII (facial nerve).</li><li>The <em>left</em> SCM. (Unilateral SCM rotates the head to the contralateral side.)</li><li>The CN VII nucleus segment for the forehead receives motor input from <em>both</em> cerebral hemispheres. A unilateral cortical/upper-motor-neuron lesion (stroke) leaves one cortical input intact, so the forehead still works. Bell's palsy is a lower-motor-neuron lesion of the nerve itself, so everything on that side fails.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 3 of 12</p>
+    <h2 class="card-title">Vertebral column &amp; back: extension and posture <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Superficial back muscles move the upper limb (those belong with shoulder, Concept 6). The intrinsic back muscles (under the superficial layer) extend the spine, hold you upright against gravity, and rotate or laterally bend the trunk.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Intervertebral joints (cartilaginous, IVD between bodies):</strong> small individual movement; sum allows flexion, extension, lateral flexion, rotation.</li>
+        <li><strong>Zygapophyseal (facet) joints (synovial, plane):</strong> guide direction of motion in each region (cervical: most rotation; thoracic: mostly rotation; lumbar: mostly flex/extend).</li>
+        <li><strong>Costovertebral joints:</strong> ribs articulating with thoracic vertebrae (relevant for breathing).</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Intrinsic back muscles (innervated by dorsal rami of spinal nerves)</h3>
+      <table class="summary">
+        <thead><tr><th>Group / Muscle</th><th>Position</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Erector spinae: <em>iliocostalis, longissimus, spinalis</em></td><td>Lateral &rarr; medial columns running cranio-caudally on either side of vertebrae</td><td>Bilateral: extends vertebral column. Unilateral: lateral flexion to same side. Main postural support.</td></tr>
+          <tr><td>Transversospinalis: <em>semispinalis, multifidus, rotatores</em></td><td>Deep, oblique fibers spanning transverse-to-spinous processes</td><td>Extend and rotate spine; stabilize segments; multifidus is key to lumbar stability</td></tr>
+          <tr><td>Splenius capitis / cervicis</td><td>Superior posterior neck</td><td>Bilateral: extends head/neck. Unilateral: rotates head to <em>same</em> side</td></tr>
+          <tr><td>Suboccipitals (rectus capitis post. major/minor, obliquus capitis sup./inf.)</td><td>Deepest, around C0&ndash;C2</td><td>Fine head movements; extension and rotation of head</td></tr>
+          <tr><td>Quadratus lumborum (QL)</td><td>Iliac crest &rarr; rib 12 and L1&ndash;L4 TVPs</td><td>Lateral flexion of trunk; elevates ipsilateral hip (hip hike); stabilizes 12th rib in breathing</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Low back pain</strong> often involves the lumbar paraspinals (esp. multifidus deconditioning) and QL. <strong>Lumbar disc herniation</strong> at L4/L5 or L5/S1 compresses nerve roots, causing radicular leg pain (sciatica) and weakness in specific myotomes. Test the L5 myotome with great toe extension (EHL), S1 with plantarflexion. <strong>Scoliosis</strong>: lateral curvature, may be idiopathic in adolescents.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Draw a posterior view of the trunk. Sketch the three erector spinae columns (iliocostalis lateral, longissimus middle, spinalis medial) as parallel stripes alongside the vertebrae. Add the QL as a quadrilateral from iliac crest to rib 12. Arrow: bilateral contraction = extension.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 2.</span> Which intrinsic back muscle group is most important for lumbar segmental stability?</li>
+        <li><span class="qc-meta">DOK 2.</span> A patient has weak great-toe extension on the right. Which nerve root is most likely compressed?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Transversospinalis group, especially the multifidi.</li><li>L5 (great-toe extension is an L5 myotome via EHL).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 4 of 12</p>
+    <h2 class="card-title">Thorax &amp; respiration: diaphragm, intercostals, accessory muscles <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Quiet inspiration is mostly the diaphragm. Forced inspiration recruits accessory muscles to lift the ribs and sternum. Expiration is passive at rest but becomes active (abdominals, internal intercostals) with exercise or disease.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Costovertebral joints:</strong> ribs to vertebrae. Synovial plane joints. Pivot point for "bucket handle" and "pump handle" rib motion.</li>
+        <li><strong>Sternocostal joints:</strong> costal cartilages to sternum. Allow rib elevation/depression.</li>
+        <li><strong>Sternoclavicular (SC) joint:</strong> only true bony connection of the upper limb to the axial skeleton.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Primary respiratory muscles</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin / Insertion</th><th>Action</th><th>Innervation</th></tr></thead>
+        <tbody>
+          <tr><td>Diaphragm</td><td>Sternum, lower ribs, lumbar vertebrae &rarr; central tendon</td><td>Contracts &rarr; flattens dome &rarr; vertical thorax expansion (inhalation). Primary muscle of quiet inspiration.</td><td>Phrenic nerve (C3, C4, C5 "keeps the diaphragm alive")</td></tr>
+          <tr><td>External intercostals (11 pairs)</td><td>Inferior border of rib above &rarr; superior border of rib below; fibers angle down/forward</td><td>Elevate ribs &rarr; expand thorax (inspiration)</td><td>Intercostal nerves (T1&ndash;T11)</td></tr>
+          <tr><td>Internal intercostals</td><td>Deep to external, fibers angle down/backward</td><td>Depress ribs (forced expiration)</td><td>Intercostal nerves</td></tr>
+          <tr><td>Innermost intercostals + transversus thoracis</td><td>Deepest layer</td><td>Assist forced expiration; neurovascular bundle runs between innermost and internal layers</td><td>Intercostal nerves</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Accessory respiratory muscles</h3>
+      <ul>
+        <li><strong>Forced inspiration:</strong> SCM, scalenes, pectoralis minor, serratus posterior superior. Elevate ribs and sternum to expand thorax further.</li>
+        <li><strong>Forced expiration:</strong> rectus abdominis, external/internal obliques, transversus abdominis, internal intercostals. Compress abdominal contents &rarr; push diaphragm up &rarr; depress ribs.</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Phrenic nerve injury</strong> &rarr; ipsilateral hemidiaphragm paralysis; chest X-ray shows elevated hemidiaphragm. Origin from C3&ndash;C5 explains the saying "C3, 4, 5 keep the diaphragm alive": cervical spine injuries at or above C3 are usually fatal without ventilation. <strong>COPD</strong> patients use accessory muscles at rest ("tripoding" with hands on knees fixes the shoulder girdle to optimize pec minor as an inspiratory muscle). <strong>Intercostal nerve block</strong> for rib fracture pain enters between innermost and internal layers in the costal groove (vein-artery-nerve, "VAN," runs superior &rarr; inferior).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which nerve supplies the diaphragm? Which spinal levels?</li>
+        <li><span class="qc-meta">DOK 2.</span> A COPD patient leans forward and braces hands on knees. Which accessory muscle benefits, and why?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Phrenic nerve, C3&ndash;C5.</li><li>Pectoralis minor. With the shoulder girdle fixed by bracing the arms, pec minor's pull on the scapula now pulls the ribs <em>up</em> (reversed origin/insertion), expanding the thorax.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 5 of 12</p>
+    <h2 class="card-title">Abdominal wall &amp; pelvic floor <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The abdominal wall has four paired muscles arranged in three layers. They flex and rotate the trunk, generate intra-abdominal pressure (cough, defecation, parturition), and support the viscera. The pelvic floor closes the bony pelvic outlet from below.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Lumbar intervertebral joints + facets:</strong> permit flexion (sit-up), extension (back-bend), and trunk rotation.</li>
+        <li><strong>Lumbosacral joint (L5&ndash;S1):</strong> transition between mobile spine and fixed pelvis.</li>
+        <li><strong>Sacroiliac (SI) joints:</strong> limited gliding; transmit weight from spine to pelvis.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Abdominal wall muscles</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Rectus abdominis</td><td>Pubic symphysis &amp; pubic crest</td><td>Costal cartilages 5&ndash;7, xiphoid</td><td>Flexes trunk (sit-up); compresses abdomen</td></tr>
+          <tr><td>External oblique</td><td>External surfaces of ribs 5&ndash;12</td><td>Iliac crest, linea alba (via aponeurosis)</td><td>Bilateral: flex trunk. Unilateral: lateral flex to same side, rotation to <em>opposite</em> side. ("Hands in pockets" direction.)</td></tr>
+          <tr><td>Internal oblique</td><td>Iliac crest, thoracolumbar fascia, inguinal lig.</td><td>Linea alba, ribs 10&ndash;12</td><td>Bilateral: flex trunk. Unilateral: lateral flex &amp; rotation to <em>same</em> side</td></tr>
+          <tr><td>Transversus abdominis (TA)</td><td>Iliac crest, thoracolumbar fascia, lower ribs, inguinal lig.</td><td>Linea alba</td><td>Compresses abdomen; generates intra-abdominal pressure; spinal stabilizer</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13.5px; margin:8px 0 0; color:var(--gray-text); font-family:'Lora',serif; font-style:italic;">All four innervated by thoracoabdominal nerves (T7&ndash;T12) and iliohypogastric/ilioinguinal (L1).</p>
+    </section>
+
+    <section class="card-section"><h3>Pelvic floor (pelvic diaphragm)</h3>
+      <ul>
+        <li><strong>Levator ani</strong> (puborectalis, pubococcygeus, iliococcygeus) and <strong>coccygeus</strong>: form the muscular floor of the pelvis.</li>
+        <li>Support pelvic viscera (bladder, rectum, uterus in females), maintain continence, contribute to intra-abdominal pressure.</li>
+        <li>Innervation: nerve to levator ani (S3&ndash;S4) and pudendal nerve (S2&ndash;S4).</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Diastasis recti</strong>: separation of rectus abdominis halves at linea alba, common postpartum. <strong>Inguinal hernia</strong>: indirect (through deep inguinal ring, lateral to inferior epigastric vessels) is most common in young males; direct (through Hesselbach's triangle, medial to inferior epigastric) is more common in older men. <strong>Pelvic floor dysfunction</strong>: contributes to stress urinary incontinence and pelvic organ prolapse; PT can be highly effective.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 2.</span> A patient rotates trunk to the left. Which oblique muscles contracted?</li>
+        <li><span class="qc-meta">DOK 1.</span> Name the three named parts of levator ani.</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Left internal oblique (same-side rotation) + right external oblique (opposite-side rotation). They work together as a couple.</li><li>Puborectalis, pubococcygeus, iliococcygeus.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 6 of 12</p>
+    <h2 class="card-title">Pectoral girdle &amp; shoulder <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The scapula floats on the thorax, anchored by muscles, not bone. The glenohumeral joint trades stability for mobility, relying on the rotator cuff for active stability. Move the scapula first, then the humerus.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Sternoclavicular (SC) joint:</strong> saddle synovial. The only bony link of the upper limb to the axial skeleton.</li>
+        <li><strong>Acromioclavicular (AC) joint:</strong> plane synovial. Transmits force between clavicle and scapula.</li>
+        <li><strong>Scapulothoracic "joint":</strong> not a true joint; scapula gliding on the thoracic cage. Movements: elevation/depression, protraction/retraction, upward/downward rotation.</li>
+        <li><strong>Glenohumeral (shoulder) joint:</strong> ball-and-socket synovial. Movements: flexion/extension, abduction/adduction, internal/external rotation, circumduction. Most mobile, most commonly dislocated.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Scapular movers (move the scapula on the thorax)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Innervation</th></tr></thead>
+        <tbody>
+          <tr><td>Trapezius</td><td>Occiput, ligamentum nuchae, T1&ndash;T12 spinous processes</td><td>Clavicle, acromion, scapular spine</td><td>Upper: elevate scapula. Middle: retract. Lower: depress + upward rotation</td><td>CN XI (accessory)</td></tr>
+          <tr><td>Rhomboids (major &amp; minor)</td><td>C7&ndash;T5 spinous processes</td><td>Medial border of scapula</td><td>Retract &amp; downward rotate scapula</td><td>Dorsal scapular n. (C5)</td></tr>
+          <tr><td>Levator scapulae</td><td>C1&ndash;C4 transverse processes</td><td>Superior medial scapula</td><td>Elevate scapula</td><td>Dorsal scapular n. + C3/C4</td></tr>
+          <tr><td>Serratus anterior</td><td>External surface of ribs 1&ndash;9</td><td>Anterior medial border of scapula</td><td>Protract &amp; upward rotate scapula; "boxer's muscle"</td><td>Long thoracic n. (C5&ndash;C7)</td></tr>
+          <tr><td>Pectoralis minor</td><td>Ribs 3&ndash;5</td><td>Coracoid process</td><td>Depress &amp; protract scapula; elevates ribs (accessory respiration)</td><td>Medial pectoral n.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Glenohumeral movers</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Innervation</th></tr></thead>
+        <tbody>
+          <tr><td>Deltoid (3 heads)</td><td>Anterior: clavicle. Middle: acromion. Posterior: scapular spine</td><td>Deltoid tuberosity of humerus</td><td>Anterior: flex &amp; medial rotate. Middle: abduct (after 15&deg;). Posterior: extend &amp; lateral rotate</td><td>Axillary n. (C5&ndash;C6)</td></tr>
+          <tr><td>Pectoralis major</td><td>Clavicle, sternum, costal cartilages</td><td>Lateral lip of intertubercular groove</td><td>Adduct, flex, medially rotate humerus</td><td>Medial &amp; lateral pectoral n.</td></tr>
+          <tr><td>Latissimus dorsi</td><td>T7&ndash;L5 spinous processes, thoracolumbar fascia, iliac crest, ribs 9&ndash;12</td><td>Floor of intertubercular groove of humerus</td><td>Extend, adduct, medially rotate humerus. Pulls body up to the arm in climbing/swimming</td><td>Thoracodorsal n. (C6&ndash;C8)</td></tr>
+          <tr><td>Teres major</td><td>Inferior angle of scapula</td><td>Medial lip of intertubercular groove</td><td>Extend, adduct, medially rotate (synergist to latissimus)</td><td>Lower subscapular n.</td></tr>
+          <tr><td>Coracobrachialis</td><td>Coracoid process</td><td>Mid-medial humerus</td><td>Flex &amp; adduct shoulder</td><td>Musculocutaneous n.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Rotator cuff (SITS): active stabilizers of glenohumeral joint</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Innervation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>S</strong>upraspinatus</td><td>Supraspinous fossa of scapula</td><td>Greater tubercle of humerus</td><td>Initiates abduction (first 15&deg;)</td><td>Suprascapular n.</td></tr>
+          <tr><td><strong>I</strong>nfraspinatus</td><td>Infraspinous fossa</td><td>Greater tubercle</td><td>Lateral (external) rotation</td><td>Suprascapular n.</td></tr>
+          <tr><td><strong>T</strong>eres minor</td><td>Lateral border of scapula</td><td>Greater tubercle</td><td>Lateral rotation, adduction</td><td>Axillary n.</td></tr>
+          <tr><td><strong>S</strong>ubscapularis</td><td>Subscapular fossa (anterior scapula)</td><td>Lesser tubercle</td><td>Medial (internal) rotation</td><td>Upper &amp; lower subscapular n.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Rotator cuff tear</strong>: supraspinatus most commonly torn (passes under acromion, vulnerable to impingement). Empty-can test isolates it. <strong>Anterior shoulder dislocation</strong> (most common direction): humeral head pushed anterior-inferior; can injure axillary nerve (test sensation over "regimental badge" area over deltoid) and tear rotator cuff. <strong>Winged scapula</strong>: long thoracic nerve injury &rarr; serratus anterior paralysis &rarr; scapula wings off the thorax when patient pushes against a wall. <strong>Adhesive capsulitis (frozen shoulder)</strong>: progressive global ROM loss, often idiopathic or post-immobilization.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Posterior view of scapula: shade the supraspinous fossa (S) and infraspinous fossa (I + T) and label SITS muscles. Anterior view: shade the subscapular fossa (S). Add an arrow showing each muscle's rotation direction.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which rotator cuff muscle initiates shoulder abduction?</li>
+        <li><span class="qc-meta">DOK 2.</span> A patient cannot push their arms forward against a wall without the medial scapula winging out. Which nerve is injured?</li>
+        <li><span class="qc-meta">DOK 2.</span> After anterior shoulder dislocation, why test sensation over the lateral deltoid?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Supraspinatus (first 15&deg;); middle deltoid takes over after.</li><li>Long thoracic nerve (serratus anterior paralysis &rarr; winged scapula).</li><li>To check the axillary nerve, which wraps around the surgical neck of the humerus and is at risk in anterior dislocation.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 7 of 12</p>
+    <h2 class="card-title">Arm &amp; elbow <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The arm has two compartments separated by intermuscular septa. The anterior compartment flexes the elbow (and is the biceps' second job at the shoulder). The posterior compartment extends. Pronation and supination happen at the radioulnar joints.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Humeroulnar joint:</strong> hinge synovial. Flexion / extension (the main elbow joint).</li>
+        <li><strong>Humeroradial joint:</strong> condylar. Flexion / extension; allows radius to rotate.</li>
+        <li><strong>Proximal radioulnar joint:</strong> pivot. Pronation / supination of forearm (radius rotates around ulna).</li>
+        <li><strong>Distal radioulnar joint:</strong> pivot. Completes pronation / supination.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Anterior compartment of arm (musculocutaneous nerve, C5&ndash;C7)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Biceps brachii (long &amp; short heads)</td><td>Long: supraglenoid tubercle. Short: coracoid process</td><td>Radial tuberosity, bicipital aponeurosis</td><td>Flexes elbow; <strong>supinates forearm</strong> (strongest supinator); flexes shoulder</td></tr>
+          <tr><td>Brachialis</td><td>Distal half of anterior humerus</td><td>Coronoid process &amp; tuberosity of ulna</td><td>Primary elbow flexor (works in all positions)</td></tr>
+          <tr><td>Coracobrachialis</td><td>Coracoid process</td><td>Medial mid-humerus</td><td>Flexes &amp; adducts shoulder</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Posterior compartment of arm (radial nerve, C6&ndash;C8)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Triceps brachii (long, lateral, medial heads)</td><td>Long: infraglenoid tubercle. Lateral &amp; medial: posterior humerus</td><td>Olecranon of ulna</td><td>Extends elbow (long head also extends shoulder)</td></tr>
+          <tr><td>Anconeus (small)</td><td>Lateral epicondyle</td><td>Olecranon</td><td>Assists elbow extension; abducts ulna in pronation</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Forearm muscles producing pronation/supination (covered also in Concept 8)</h3>
+      <ul>
+        <li><strong>Supinator</strong> (radial n.): supinates with elbow extended.</li>
+        <li><strong>Biceps brachii</strong>: strongest supinator with elbow flexed (think turning a screwdriver clockwise with your right hand).</li>
+        <li><strong>Pronator teres &amp; pronator quadratus</strong> (median n.): pronate forearm.</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Biceps tendon rupture (long head)</strong>: "Popeye sign"; usually a degenerative tear at the bicipital groove. Function is often preserved because brachialis remains intact. <strong>Olecranon bursitis</strong>: "student's elbow" from prolonged pressure on the elbow. <strong>Cubital tunnel syndrome</strong>: ulnar nerve entrapment at the elbow (medial epicondyle). Tinel's sign positive, paresthesias in 4th/5th digits.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Name the primary elbow flexor (the workhorse in every position).</li>
+        <li><span class="qc-meta">DOK 2.</span> A patient has weak elbow extension after a humeral shaft fracture. Which nerve is injured?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Brachialis (biceps is the supinator/elbow flexor stylist, but brachialis does the heavy lifting in every position).</li><li>Radial nerve. It runs in the radial (spiral) groove of the humerus and is vulnerable to mid-shaft fractures. Wrist drop is also classic.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 8 of 12</p>
+    <h2 class="card-title">Forearm &amp; hand <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Forearm muscles split into anterior (flexors + pronators) and posterior (extensors + supinator) compartments. The anterior compartment is mostly median-nerve territory; the posterior compartment is mostly radial-nerve. Intrinsic hand muscles are mostly ulnar-nerve, with thenar exceptions on median.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Radiocarpal (wrist) joint:</strong> condylar synovial. Flexion / extension; abduction (radial deviation) / adduction (ulnar deviation).</li>
+        <li><strong>Carpometacarpal (CMC) joints:</strong> mostly plane; <strong>1st CMC of thumb</strong> is saddle (allows opposition).</li>
+        <li><strong>Metacarpophalangeal (MCP) joints:</strong> condylar. Flex/extend + abduct/adduct fingers.</li>
+        <li><strong>Interphalangeal (PIP, DIP) joints:</strong> hinge. Flex/extend only.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Anterior forearm: flexors &amp; pronators (mostly median n.; FCU + medial half FDP by ulnar n.)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Action summary</th></tr></thead>
+        <tbody>
+          <tr><td>Pronator teres</td><td>Pronates forearm; weak elbow flexor</td></tr>
+          <tr><td>Flexor carpi radialis (FCR)</td><td>Flex &amp; radially deviate wrist</td></tr>
+          <tr><td>Palmaris longus (often absent)</td><td>Tenses palmar fascia; weak wrist flexor</td></tr>
+          <tr><td>Flexor carpi ulnaris (FCU) — ulnar n.</td><td>Flex &amp; ulnar deviate wrist</td></tr>
+          <tr><td>Flexor digitorum superficialis (FDS)</td><td>Flexes PIP joints (and MCP, wrist)</td></tr>
+          <tr><td>Flexor digitorum profundus (FDP) — split: lateral half median n., medial half ulnar n.</td><td>Only muscle that flexes the DIP joints</td></tr>
+          <tr><td>Flexor pollicis longus (FPL)</td><td>Flexes thumb IP and MCP</td></tr>
+          <tr><td>Pronator quadratus</td><td>Primary pronator</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Posterior forearm: extensors &amp; supinator (radial n.)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Action summary</th></tr></thead>
+        <tbody>
+          <tr><td>Brachioradialis</td><td>Flexes elbow (despite being posterior; "beer raiser")</td></tr>
+          <tr><td>Extensor carpi radialis longus &amp; brevis (ECRL, ECRB)</td><td>Extend &amp; radially deviate wrist</td></tr>
+          <tr><td>Extensor digitorum (ED)</td><td>Extends MCP &amp; IP joints of fingers 2&ndash;5</td></tr>
+          <tr><td>Extensor carpi ulnaris (ECU)</td><td>Extends &amp; ulnar deviates wrist</td></tr>
+          <tr><td>Supinator</td><td>Supinates forearm (works alone with elbow extended)</td></tr>
+          <tr><td>Abductor pollicis longus (APL), extensor pollicis brevis &amp; longus (EPB, EPL)</td><td>Form the "anatomical snuffbox" tendons; extend/abduct thumb</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Intrinsic hand muscles</h3>
+      <ul>
+        <li><strong>Thenar group</strong> (median n. via recurrent branch): abductor pollicis brevis, flexor pollicis brevis (superficial head), opponens pollicis. Allow opposition of the thumb.</li>
+        <li><strong>Hypothenar group</strong> (ulnar n.): abductor digiti minimi, flexor digiti minimi brevis, opponens digiti minimi.</li>
+        <li><strong>Lumbricals</strong>: flex MCP, extend IP joints (write the letter Y with your fingers). Lateral 2 = median n.; medial 2 = ulnar n.</li>
+        <li><strong>Interossei</strong> (ulnar n.): Dorsal AB-duct (DAB), Palmar AD-duct (PAD). Also assist lumbrical action (flex MCP, extend IP).</li>
+        <li><strong>Adductor pollicis</strong> (ulnar n.): adducts thumb.</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Carpal tunnel syndrome</strong>: median nerve compression at the wrist. Numbness/tingling in lateral 3.5 digits, thenar atrophy in advanced cases. <strong>Ulnar claw hand</strong>: ulnar nerve lesion at the wrist denervates medial 2 lumbricals + interossei &rarr; loss of MCP flexion + IP extension in digits 4 &amp; 5 &rarr; hyperextended MCP, flexed IP. <strong>Wrist drop</strong>: radial nerve lesion proximal to elbow (e.g., humeral shaft fracture) &rarr; can't extend wrist or fingers. <strong>Anatomical snuffbox tenderness</strong> after fall on outstretched hand suggests <em>scaphoid fracture</em> &mdash; high risk of avascular necrosis.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which is the only muscle that can flex the DIP joints of digits 2&ndash;5?</li>
+        <li><span class="qc-meta">DOK 2.</span> A patient cannot oppose the thumb to the pinky and has thenar wasting. Which nerve?</li>
+        <li><span class="qc-meta">DOK 2.</span> Snuffbox tenderness after a fall &mdash; what bone, what worry?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Flexor digitorum profundus (FDP).</li><li>Median nerve (typically at the carpal tunnel).</li><li>Scaphoid fracture. Worry: avascular necrosis of the proximal pole (the scaphoid's blood supply enters distally and flows retrograde).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 9 of 12</p>
+    <h2 class="card-title">Pelvic girdle &amp; hip <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The hip is a deep ball-and-socket built for weight-bearing stability. Anterior muscles flex, posterior/lateral muscles extend and abduct, medial muscles adduct, and a cluster of deep muscles laterally rotate.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Hip (acetabulofemoral) joint:</strong> ball-and-socket synovial. Movements: flexion / extension, abduction / adduction, internal / external rotation, circumduction. More stable, less mobile than shoulder.</li>
+        <li><strong>Pubic symphysis:</strong> cartilaginous; widens slightly in pregnancy.</li>
+        <li><strong>Sacroiliac joints:</strong> partly synovial, partly fibrous; transmit body weight to pelvis.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Hip flexors (anterior)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th><th>Innervation</th></tr></thead>
+        <tbody>
+          <tr><td>Iliopsoas (iliacus + psoas major)</td><td>Iliac fossa; T12&ndash;L5 bodies/TVPs</td><td>Lesser trochanter of femur</td><td>Primary hip flexor; flexes trunk on hip (sit-up)</td><td>Femoral n. (iliacus); L1&ndash;L3 ventral rami (psoas)</td></tr>
+          <tr><td>Sartorius</td><td>ASIS</td><td>Medial tibia (pes anserinus)</td><td>Flex, abduct, lateral rotate hip; flex knee. "Tailor's muscle"</td><td>Femoral n.</td></tr>
+          <tr><td>Rectus femoris (quad component)</td><td>AIIS</td><td>Tibial tuberosity via patellar tendon</td><td>Flexes hip + extends knee (only quad doing both)</td><td>Femoral n.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Hip abductors and lateral rotators</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Action</th><th>Innervation</th></tr></thead>
+        <tbody>
+          <tr><td>Gluteus maximus</td><td>Powerful hip extensor + external rotator (rising from chair, climbing stairs)</td><td>Inferior gluteal n.</td></tr>
+          <tr><td>Gluteus medius &amp; minimus</td><td>Hip abductors; <strong>stabilize pelvis during single-leg stance</strong> (prevent contralateral pelvic drop)</td><td>Superior gluteal n.</td></tr>
+          <tr><td>Tensor fasciae latae (TFL)</td><td>Abducts &amp; medially rotates hip; tenses IT band</td><td>Superior gluteal n.</td></tr>
+          <tr><td>Deep lateral rotators (piriformis, obturators internus &amp; externus, gemelli, quadratus femoris)</td><td>External rotation of hip; piriformis is most superficial. Sciatic nerve exits below piriformis</td><td>Various</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Hip adductors (medial compartment, obturator n.)</h3>
+      <ul>
+        <li><strong>Adductor longus, brevis, magnus</strong>: adduct, weakly medial rotate.</li>
+        <li><strong>Gracilis</strong>: adducts hip; flexes knee (crosses both joints; inserts at pes anserinus with sartorius &amp; semitendinosus).</li>
+        <li><strong>Pectineus</strong>: adduction + flexion at hip (femoral n., not obturator).</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Trendelenburg sign</strong>: with gluteus medius/minimus weakness on the stance leg, the contralateral pelvis drops when the patient lifts that leg. Indicates superior gluteal nerve dysfunction or hip pathology. <strong>Piriformis syndrome</strong>: piriformis irritates the underlying sciatic nerve &rarr; gluteal &amp; posterior thigh pain. <strong>Hip fracture</strong> (intracapsular femoral neck): risks avascular necrosis of the femoral head; the leg classically appears <em>shortened &amp; externally rotated</em>.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Posterior view of pelvis &amp; hip. Sketch glute max (large diamond), glute medius (fan above it), and piriformis (cylinder from sacrum through greater sciatic foramen). Draw the sciatic nerve emerging <em>below</em> piriformis.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which nerve supplies the medial (adductor) compartment of the thigh?</li>
+        <li><span class="qc-meta">DOK 2.</span> Trendelenburg sign &mdash; which muscle is weak and which side of the pelvis drops?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Obturator nerve.</li><li>Gluteus medius (and minimus). The <em>contralateral</em> (unsupported) pelvis drops because the weak side cannot stabilize.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 10 of 12</p>
+    <h2 class="card-title">Thigh &amp; knee <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Thigh compartments map to action: anterior extends the knee (quads + femoral n.), posterior flexes the knee and extends the hip (hamstrings + sciatic/tibial n.), medial adducts the hip (covered in Concept 9). The knee is a hinge that locks at full extension.</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Tibiofemoral (knee) joint:</strong> modified hinge synovial. Flexion / extension; small "screw home" rotation at terminal extension (lateral rotation of tibia).</li>
+        <li><strong>Patellofemoral joint:</strong> sellar/plane; patella glides in trochlear groove.</li>
+        <li><strong>Superior tibiofibular joint:</strong> plane synovial; allows minor fibular movement.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Anterior compartment: knee extensors &amp; some hip flexors (femoral n., L2&ndash;L4)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Quadriceps femoris (4 heads):</td><td colspan="3" style="font-style:italic;">All insert via patellar tendon onto tibial tuberosity</td></tr>
+          <tr><td>&nbsp;&nbsp;Rectus femoris</td><td>AIIS</td><td>Tibial tuberosity</td><td>Extends knee + flexes hip (only quad crossing both)</td></tr>
+          <tr><td>&nbsp;&nbsp;Vastus lateralis</td><td>Lateral femur (linea aspera)</td><td>Tibial tuberosity</td><td>Extends knee</td></tr>
+          <tr><td>&nbsp;&nbsp;Vastus medialis</td><td>Medial femur (linea aspera)</td><td>Tibial tuberosity</td><td>Extends knee; VMO stabilizes patella medially</td></tr>
+          <tr><td>&nbsp;&nbsp;Vastus intermedius</td><td>Anterior femur</td><td>Tibial tuberosity</td><td>Extends knee</td></tr>
+          <tr><td>Sartorius</td><td>ASIS</td><td>Pes anserinus (medial tibia)</td><td>Flex/abduct/lateral rotate hip; flex knee</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Posterior compartment: hamstrings (sciatic n. tibial division, L5&ndash;S2)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Biceps femoris (long head)</td><td>Ischial tuberosity</td><td>Head of fibula</td><td>Flex knee + extend hip; lateral rotation of flexed knee. Short head: lateral femur, sciatic <em>common fibular</em> division</td></tr>
+          <tr><td>Semitendinosus</td><td>Ischial tuberosity</td><td>Pes anserinus</td><td>Flex knee + extend hip; medial rotation of flexed knee</td></tr>
+          <tr><td>Semimembranosus</td><td>Ischial tuberosity</td><td>Medial tibial condyle</td><td>Flex knee + extend hip; medial rotation of flexed knee</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13.5px; margin:8px 0 0; color:var(--gray-text); font-family:'Lora',serif; font-style:italic;">Pes anserinus = "goose's foot" = combined insertion of <strong>S</strong>artorius + <strong>G</strong>racilis + semi<strong>T</strong>endinosus on the medial tibia. (Mnemonic: "Say Grace before Tea.")</p>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>ACL injury</strong>: common in non-contact pivoting with planted foot (skiing, soccer, basketball); pop, swelling, instability. Positive anterior drawer / Lachman test. <strong>"Unhappy triad"</strong>: ACL + MCL + medial meniscus injury (classically from lateral blow to a planted knee). <strong>Patellofemoral pain syndrome</strong>: pain behind the patella, worse with stairs/squats; often related to weak VMO and poor patellar tracking. <strong>Hamstring strain</strong>: high incidence in sprinters; biceps femoris long head most common.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which quadriceps muscle also flexes the hip?</li>
+        <li><span class="qc-meta">DOK 2.</span> A skier feels a pop in their knee while pivoting on a planted foot. Which ligament is most likely torn, and which test is positive?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Rectus femoris (the only quad crossing the hip joint).</li><li>Anterior cruciate ligament (ACL). Positive Lachman test and anterior drawer test (anterior translation of tibia on femur).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c11" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 11 of 12</p>
+    <h2 class="card-title">Leg, ankle &amp; foot <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The leg has three compartments with three different nerves and three different jobs: anterior dorsiflexes (deep fibular n.), lateral everts (superficial fibular n.), posterior plantarflexes (tibial n.).</p>
+
+    <div class="joint-block"><h4>Joints in this region</h4>
+      <ul>
+        <li><strong>Talocrural (ankle) joint:</strong> hinge synovial between tibia/fibula and talus. Dorsiflexion / plantarflexion.</li>
+        <li><strong>Subtalar joint:</strong> talus on calcaneus. Inversion / eversion of the foot.</li>
+        <li><strong>Transverse tarsal joints &amp; intertarsal joints:</strong> gliding; allow foot to mold to terrain.</li>
+        <li><strong>MTP / IP joints of toes:</strong> flex / extend.</li>
+      </ul>
+    </div>
+
+    <section class="card-section"><h3>Anterior compartment: dorsiflexors (deep fibular [peroneal] n., L4&ndash;S1)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Tibialis anterior</td><td>Dorsiflex + invert foot. Primary dorsiflexor</td></tr>
+          <tr><td>Extensor hallucis longus (EHL)</td><td>Extend great toe (L5 myotome); dorsiflex foot</td></tr>
+          <tr><td>Extensor digitorum longus (EDL)</td><td>Extend toes 2&ndash;5; dorsiflex foot</td></tr>
+          <tr><td>Fibularis (peroneus) tertius</td><td>Dorsiflex + evert foot</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Lateral compartment: everters (superficial fibular [peroneal] n., L4&ndash;S1)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Fibularis (peroneus) longus</td><td>Evert &amp; plantarflex foot; supports arches</td></tr>
+          <tr><td>Fibularis (peroneus) brevis</td><td>Evert &amp; plantarflex</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Posterior compartment: plantarflexors &amp; toe flexors (tibial n., L4&ndash;S3)</h3>
+      <table class="summary">
+        <thead><tr><th>Muscle</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Gastrocnemius (2 heads)</td><td>Plantarflex foot + flex knee (crosses both). Powerful, fast-twitch dominant.</td></tr>
+          <tr><td>Soleus</td><td>Plantarflex foot (only). Slow-twitch dominant, postural.</td></tr>
+          <tr><td>Plantaris (variable)</td><td>Vestigial; small contribution to plantarflexion. Tendon often confused with Achilles rupture.</td></tr>
+          <tr><td>Tibialis posterior</td><td>Plantarflex &amp; invert foot; supports medial longitudinal arch</td></tr>
+          <tr><td>Flexor digitorum longus (FDL)</td><td>Flex toes 2&ndash;5; plantarflex/invert foot</td></tr>
+          <tr><td>Flexor hallucis longus (FHL)</td><td>Flex great toe; plantarflex/invert</td></tr>
+          <tr><td>Popliteus</td><td>"Unlocks" the knee at the start of flexion (medial rotation of tibia on femur)</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13.5px; margin:8px 0 0; color:var(--gray-text); font-family:'Lora',serif; font-style:italic;">Gastrocnemius + soleus = <strong>triceps surae</strong> &rarr; insert via the <strong>Achilles (calcaneal) tendon</strong> onto the calcaneus.</p>
+    </section>
+
+    <section class="card-section"><h3>Intrinsic foot muscles (brief)</h3>
+      <ul>
+        <li>Dorsal: extensor digitorum brevis (deep fibular n.).</li>
+        <li>Plantar (4 layers, mostly medial &amp; lateral plantar n. of tibial n.): support arches, fine toe movements.</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Foot drop</strong>: common fibular nerve injury (wraps around fibular neck, vulnerable to compression &mdash; crossing legs, cast pressure, fibular head fracture) &rarr; loss of dorsiflexion and eversion &rarr; steppage gait. <strong>Achilles tendon rupture</strong>: sudden "kicked in the back of the leg" pain; positive Thompson test (squeezing calf doesn't plantarflex foot). <strong>Plantar fasciitis</strong>: heel pain worst with first steps in the morning; treat with calf/plantar stretching, supportive footwear. <strong>Compartment syndrome</strong> of leg: especially anterior compartment after trauma; pain out of proportion, pain on passive stretch, pallor, paresthesias, late: pulselessness/paralysis. Surgical emergency (fasciotomy).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which nerve injury causes foot drop?</li>
+        <li><span class="qc-meta">DOK 2.</span> Three compartments of the leg, three actions, three nerves &mdash; match them.</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Common fibular (peroneal) nerve.</li><li>Anterior = dorsiflexion = deep fibular n. Lateral = eversion = superficial fibular n. Posterior = plantarflexion = tibial n.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c12" data-tags="A">
+    <p class="card-eyebrow">Regional Muscles &middot; Concept 12 of 12</p>
+    <h2 class="card-title">Joints &amp; movements: quick reference <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">A single table of every major joint, its classification, and the movements it allows. Use this as a study summary when learning muscle actions.</p>
+
+    <section class="card-section"><h3>Synovial joint types (review)</h3>
+      <table class="summary">
+        <thead><tr><th>Type</th><th>Axes</th><th>Example</th><th>Movements</th></tr></thead>
+        <tbody>
+          <tr><td>Plane (gliding)</td><td>Non-axial</td><td>Intercarpal, intertarsal, AC, facet joints</td><td>Gliding only</td></tr>
+          <tr><td>Hinge</td><td>Uniaxial</td><td>Elbow, knee, IP joints, ankle</td><td>Flexion/extension only</td></tr>
+          <tr><td>Pivot</td><td>Uniaxial</td><td>Atlantoaxial, proximal/distal radioulnar</td><td>Rotation</td></tr>
+          <tr><td>Condylar (ellipsoid)</td><td>Biaxial</td><td>Radiocarpal (wrist), MCP, atlanto-occipital</td><td>Flex/ext + ab/adduction</td></tr>
+          <tr><td>Saddle</td><td>Biaxial</td><td>1st CMC (thumb), SC joint</td><td>Flex/ext + ab/adduction; thumb adds opposition</td></tr>
+          <tr><td>Ball-and-socket</td><td>Multiaxial</td><td>Glenohumeral (shoulder), hip</td><td>Flex/ext + ab/adduction + rotation + circumduction</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Major joints: type and movements</h3>
+      <table class="summary">
+        <thead><tr><th>Joint</th><th>Type</th><th>Movements</th></tr></thead>
+        <tbody>
+          <tr><td>Atlanto-occipital (C0&ndash;C1)</td><td>Condylar</td><td>Flex/extend head ("yes")</td></tr>
+          <tr><td>Atlanto-axial (C1&ndash;C2)</td><td>Pivot</td><td>Rotate head ("no")</td></tr>
+          <tr><td>TMJ</td><td>Condylar/hinge-glide</td><td>Elevate/depress, protract/retract, lateral excursion</td></tr>
+          <tr><td>Intervertebral (cervical/thoracic/lumbar)</td><td>Cartilaginous + facet plane</td><td>Flex/extend, lateral flexion, rotation (varies by region)</td></tr>
+          <tr><td>Sternoclavicular (SC)</td><td>Saddle</td><td>Elevate/depress, protract/retract, axial rotation of clavicle</td></tr>
+          <tr><td>Acromioclavicular (AC)</td><td>Plane</td><td>Gliding (transmits scapular motion)</td></tr>
+          <tr><td>Glenohumeral (shoulder)</td><td>Ball-and-socket</td><td>Flex/ext, ab/adduct, medial/lateral rotation, circumduction</td></tr>
+          <tr><td>Elbow (humeroulnar + humeroradial)</td><td>Hinge</td><td>Flex/extend</td></tr>
+          <tr><td>Proximal &amp; distal radioulnar</td><td>Pivot</td><td>Pronation/supination of forearm</td></tr>
+          <tr><td>Radiocarpal (wrist)</td><td>Condylar</td><td>Flex/extend, radial/ulnar deviation</td></tr>
+          <tr><td>1st CMC (thumb)</td><td>Saddle</td><td>Flex/extend, ab/adduct, opposition</td></tr>
+          <tr><td>MCP (digits 2&ndash;5)</td><td>Condylar</td><td>Flex/extend, ab/adduct</td></tr>
+          <tr><td>IP (PIP, DIP)</td><td>Hinge</td><td>Flex/extend</td></tr>
+          <tr><td>Sacroiliac (SI)</td><td>Plane / partly fibrous</td><td>Limited gliding; force transmission</td></tr>
+          <tr><td>Pubic symphysis</td><td>Cartilaginous (secondary)</td><td>Minimal; widens in pregnancy</td></tr>
+          <tr><td>Hip (acetabulofemoral)</td><td>Ball-and-socket</td><td>Flex/ext, ab/adduct, medial/lateral rotation, circumduction</td></tr>
+          <tr><td>Knee (tibiofemoral)</td><td>Modified hinge</td><td>Flex/extend; small rotation at terminal extension ("screw home")</td></tr>
+          <tr><td>Talocrural (ankle)</td><td>Hinge</td><td>Dorsiflex/plantarflex</td></tr>
+          <tr><td>Subtalar</td><td>Plane</td><td>Inversion/eversion</td></tr>
+          <tr><td>MTP / IP of toes</td><td>Condylar / hinge</td><td>Flex/extend, MTP ab/adduct</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Match joint type to typical injury: hinge joints (elbow, knee, IP) most often suffer collateral ligament tears (lateral stress). Pivot joints rarely dislocate (e.g., proximal radius head subluxation = "nursemaid's elbow" in toddlers). Ball-and-socket joints (shoulder, hip) trade stability for range, and the shoulder is the most-dislocated joint in the body. Saddle joints (1st CMC, SC) are uniquely positioned for opposition and limited rotation.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Make your own one-page cheat sheet. Down the left column: every joint from C0 to the toes. Across the top: type, movements, prime muscles. Fill it in from memory. Check this concept card for what you missed.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which joint is uniquely a saddle joint that allows opposition?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why is the shoulder the most-dislocated joint in the body?</li>
+        <li><span class="qc-meta">DOK 2.</span> What does "screw home" refer to at the knee?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>1st carpometacarpal joint of the thumb.</li><li>Its ball-and-socket trades stability for the body's greatest range of motion. The glenoid is shallow, the capsule is loose, and active stability depends on the rotator cuff. Translation: lots of room to move = lots of room to come out.</li><li>The small lateral rotation of the tibia on the femur (or medial rotation of femur on fixed tibia) at terminal knee extension that locks the joint. Popliteus "unlocks" it to initiate flexion.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Regional muscle anatomy + joints master concept set.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO430':{eyebrow:'BIO 430 Human Anatomy & Physiology I · American River College',view:'combined',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology II · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Regional Muscles & Joints';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='regional-muscles-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+
+<script>
+/* Preserve ?course= parameter on the back-to-hub link */
+(function () {
+  var match = /[?&]course=([^&]+)/.exec(window.location.search);
+  if (match) {
+    var link = document.getElementById('back-to-hub-link');
+    if (link) link.setAttribute('href', 'index.html?course=' + encodeURIComponent(match[1]));
+  }
+})();
+</script>
+</body>
+</html>

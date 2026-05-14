@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articulations (Joints) &mdash; Concept Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  .back-to-hub { display:inline-flex; align-items:center; gap:6px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; color:var(--terra-dark); text-decoration:none; padding:6px 10px 6px 8px; margin:0 0 14px -8px; border-radius:4px; transition:background-color 150ms ease, color 150ms ease; }
+  .back-to-hub:hover, .back-to-hub:focus-visible { background:var(--navy-tint); color:var(--navy); text-decoration:none; outline:none; }
+  .back-to-hub:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+  .back-to-hub .arrow-glyph { font-size:14px; line-height:1; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:14px 0 0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:13.5px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  table.summary tbody td:first-child { font-weight:600; color:var(--navy-deep); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  .key-callout { background:var(--navy-tint); border-left:3px solid var(--navy); border-radius:4px; padding:12px 14px; margin:14px 0; font-size:14px; }
+  .key-callout strong { color:var(--navy-deep); }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, .back-to-hub, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .key-callout { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <a href="index.html" class="back-to-hub" id="back-to-hub-link" aria-label="Back to Concept Notes library"><span class="arrow-glyph" aria-hidden="true">&larr;</span><span>Back to Concept Notes</span></a>
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Articulations (Joints)</h1>
+    <p class="usage">Every junction between two bones is a joint. Classify them two ways: by what holds them together (structural: fibrous, cartilaginous, synovial) and by how much they move (functional: synarthrosis, amphiarthrosis, diarthrosis). The mobility / stability trade-off shows up at every joint in the body.</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 430/431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">10</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 1 of 10</p>
+    <h2 class="card-title">How joints are classified <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">There are two ways to classify a joint: structurally (what tissue connects the bones) and functionally (how much movement is allowed). They overlap but don't perfectly align, so know both.</p>
+
+    <section class="card-section"><h3>Structural classification (what holds it together)</h3>
+      <ul>
+        <li><strong>Fibrous joints:</strong> bones joined by dense connective tissue. No joint cavity. Examples: skull sutures, syndesmosis (tibia-fibula), gomphosis (tooth-socket).</li>
+        <li><strong>Cartilaginous joints:</strong> bones joined by cartilage. No joint cavity. Examples: epiphyseal plate (hyaline), pubic symphysis (fibrocartilage).</li>
+        <li><strong>Synovial joints:</strong> bones separated by a fluid-filled joint cavity. Most movable, most clinically important. Examples: knee, shoulder, hip, IP joints.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Functional classification (how much it moves)</h3>
+      <ul>
+        <li><strong>Synarthrosis:</strong> immovable. Stability over mobility. (Most fibrous, some cartilaginous.)</li>
+        <li><strong>Amphiarthrosis:</strong> slightly movable. Compromise between stability and motion. (Most cartilaginous, some fibrous.)</li>
+        <li><strong>Diarthrosis:</strong> freely movable. Mobility over stability. (All synovial joints are diarthroses.)</li>
+      </ul>
+    </section>
+
+    <div class="key-callout">
+      <strong>Big idea:</strong> structure predicts function. Fibrous &amp; cartilaginous joints trade motion for stability and durability. Synovial joints add a fluid-filled cavity to maximize motion, but they pay for it with a more complex, injury-prone architecture.
+    </div>
+
+    <section class="card-section"><h3>Crosswalk</h3>
+      <table class="summary">
+        <thead><tr><th>Structural type</th><th>Functional type</th><th>Examples</th></tr></thead>
+        <tbody>
+          <tr><td>Fibrous &mdash; Suture</td><td>Synarthrosis (immovable)</td><td>Skull bone junctions</td></tr>
+          <tr><td>Fibrous &mdash; Syndesmosis</td><td>Amphiarthrosis (slightly movable)</td><td>Distal tibiofibular joint; interosseous membrane of radius/ulna</td></tr>
+          <tr><td>Fibrous &mdash; Gomphosis</td><td>Synarthrosis</td><td>Tooth in alveolar socket (periodontal ligament)</td></tr>
+          <tr><td>Cartilaginous &mdash; Synchondrosis</td><td>Synarthrosis</td><td>Epiphyseal plate; first sternocostal joint</td></tr>
+          <tr><td>Cartilaginous &mdash; Symphysis</td><td>Amphiarthrosis</td><td>Pubic symphysis; intervertebral discs; manubriosternal joint</td></tr>
+          <tr><td>Synovial</td><td>Diarthrosis</td><td>Knee, shoulder, hip, elbow, all IP joints, TMJ</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Make two columns on a page. Left: every structural type. Right: every functional type. Draw a line from each structural type to the functional type(s) it produces. The web you draw should show that fibrous and cartilaginous joints can be either synarthrosis or amphiarthrosis, while every synovial joint is a diarthrosis.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which structural type always corresponds to diarthrosis?</li>
+        <li><span class="qc-meta">DOK 2.</span> The pubic symphysis: structural type? functional type?</li>
+        <li><span class="qc-meta">DOK 1.</span> What's the special name for the fibrous joint between a tooth and its socket?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Synovial.</li><li>Cartilaginous (specifically symphysis, because the bones are joined by fibrocartilage). Functional: amphiarthrosis.</li><li>Gomphosis (held by the periodontal ligament).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 2 of 10</p>
+    <h2 class="card-title">Fibrous joints: sutures, syndesmoses, gomphoses <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Bones joined directly by dense fibrous connective tissue. No joint cavity. The length of the fibers between the bones predicts how much (if any) movement is possible.</p>
+
+    <section class="card-section"><h3>Sutures (skull)</h3>
+      <ul>
+        <li>Very short fibers; bones tightly interlocked along irregular margins.</li>
+        <li>Functional: <strong>synarthrosis</strong> (immovable in adults).</li>
+        <li>In infants: open (fontanels) to allow brain growth and birth canal passage. Sutures close by adulthood. In old age, sutures often <strong>ossify</strong> into synostoses (bony fusion).</li>
+        <li>Examples: sagittal, coronal, lambdoid, squamous.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Syndesmoses</h3>
+      <ul>
+        <li>Bones connected by a <strong>ligament or interosseous membrane</strong>; fibers are longer than sutures, so a small amount of give exists.</li>
+        <li>Functional class depends on fiber length:
+          <ul><li>Short fibers (distal tibiofibular joint): <strong>amphiarthrosis</strong> &mdash; slight movement only.</li>
+          <li>Longer fibers (interosseous membrane between radius &amp; ulna, or tibia &amp; fibula along the shaft): allows more give. Permits pronation/supination of the forearm and transmits forces between paired bones.</li></ul>
+        </li>
+        <li>Examples: distal tibiofibular joint; interosseous membranes of forearm and leg.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Gomphoses ("peg-in-socket")</h3>
+      <ul>
+        <li>A cone-shaped peg (tooth root) embedded in a bony socket (alveolus), bound by the <strong>periodontal ligament</strong>.</li>
+        <li>Functional: <strong>synarthrosis</strong>.</li>
+        <li>Periodontal ligament permits slight tooth movement under load (chewing, orthodontics) and houses mechanoreceptors that give us bite awareness.</li>
+        <li>Only example in the body: <strong>tooth in alveolar socket</strong>.</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Periodontitis</strong>: bacterial inflammation of the gomphosis structures &rarr; periodontal ligament destruction &rarr; tooth loosening and eventual loss. <strong>High ankle sprain</strong> (syndesmotic injury): tearing of the distal tibiofibular ligaments &mdash; slower to heal than a typical lateral ankle sprain, often requires immobilization or surgery. <strong>Premature suture fusion (craniosynostosis)</strong>: skull deformity in infancy because brain growth can't push the bones apart; needs surgical release.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Name the only example of a gomphosis in the human body.</li>
+        <li><span class="qc-meta">DOK 2.</span> Why does a "high ankle sprain" take longer to heal than a typical inversion sprain?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Tooth held in alveolar socket by the periodontal ligament.</li><li>It tears the syndesmosis (distal tibiofibular ligaments and/or interosseous membrane). These tissues are load-bearing at every step and have limited blood supply, so they heal slowly and often require surgical fixation.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 3 of 10</p>
+    <h2 class="card-title">Cartilaginous joints: synchondroses &amp; symphyses <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Bones joined directly by cartilage. The <em>type</em> of cartilage decides which subtype and how much it moves. Hyaline cartilage = synchondrosis (rigid). Fibrocartilage = symphysis (compressible).</p>
+
+    <section class="card-section"><h3>Synchondroses (hyaline cartilage)</h3>
+      <ul>
+        <li>Hyaline cartilage rigidly connects the bones. No joint cavity.</li>
+        <li>Functional: <strong>synarthrosis</strong>.</li>
+        <li>Many are temporary: the <strong>epiphyseal plate</strong> connects the diaphysis and epiphysis during growth, then ossifies into a synostosis at skeletal maturity (epiphyseal line).</li>
+        <li>Other examples: first sternocostal joint (rib 1 to sternum) is a permanent synchondrosis; this is why rib 1 doesn't move with breathing the way ribs 2&ndash;7 do at their synovial sternocostal joints.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Symphyses (fibrocartilage)</h3>
+      <ul>
+        <li>A pad of fibrocartilage sits between the bones; thin hyaline plates cover each bony surface.</li>
+        <li>Fibrocartilage absorbs compression and tolerates shear &mdash; gives slight movement.</li>
+        <li>Functional: <strong>amphiarthrosis</strong>.</li>
+        <li>Examples: <strong>pubic symphysis</strong>, <strong>intervertebral discs</strong> (between vertebral bodies, with nucleus pulposus and annulus fibrosus), <strong>manubriosternal joint</strong> (often calcifies in adults).</li>
+      </ul>
+    </section>
+
+    <div class="key-callout">
+      <strong>Mnemonic:</strong> &ldquo;Syn<u>chondrosis</u> = h<u>y</u>aline; <u>Sym</u>physis = fibrocartilage&rdquo;. Synchondroses are rigid; symphyses give slightly.
+    </div>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Salter-Harris fractures</strong>: pediatric fractures involving the epiphyseal plate (synchondrosis). Damage can cause premature closure and growth arrest; orthopedic follow-up is essential. <strong>Intervertebral disc herniation</strong>: nucleus pulposus extrudes through a tear in the annulus fibrosus, compressing a spinal nerve. Most common at L4&ndash;L5 and L5&ndash;S1. <strong>Pubic symphysis diastasis</strong>: pregnancy hormones (relaxin) soften the fibrocartilage to allow birth; excessive widening causes pelvic girdle pain.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> What kind of cartilage is in a symphysis?</li>
+        <li><span class="qc-meta">DOK 2.</span> The epiphyseal plate is what kind of joint while it's still open? What does it become when growth is complete?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Fibrocartilage.</li><li>A synchondrosis (hyaline cartilage, synarthrosis). When ossified at the end of growth it becomes a synostosis (bone-to-bone fusion) marked by the epiphyseal line.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 4 of 10</p>
+    <h2 class="card-title">Synovial joint anatomy <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">All synovial joints share the same toolkit: a fluid-filled cavity, slick cartilage on the bone ends, a fibrous capsule lined with synovial membrane, and reinforcing ligaments. Accessory structures (menisci, bursae, fat pads, labra) tune each joint for its specific demands.</p>
+
+    <section class="card-section"><h3>The six required parts</h3>
+      <ol>
+        <li><strong>Articular (joint) cavity:</strong> a small space separating the bones; contains synovial fluid.</li>
+        <li><strong>Articular cartilage:</strong> hyaline cartilage on the bone ends. Smooth, slick, avascular. Reduces friction, absorbs shock. <em>Damage doesn't heal well</em> &mdash; the basis of osteoarthritis.</li>
+        <li><strong>Articular capsule:</strong> two layers:
+          <ul><li><em>Fibrous capsule</em> (outer): dense irregular connective tissue; continuous with periosteum. Strong, restrains motion.</li>
+          <li><em>Synovial membrane</em> (inner): loose connective tissue with specialized synoviocytes that <strong>produce synovial fluid</strong>.</li></ul>
+        </li>
+        <li><strong>Synovial fluid:</strong> viscous, egg-white-like (Greek <em>synovia</em>). Lubricates, distributes load, and nourishes the avascular articular cartilage. Contains hyaluronic acid + lubricin.</li>
+        <li><strong>Reinforcing ligaments:</strong>
+          <ul><li><em>Capsular</em>: thickening of the fibrous capsule itself.</li>
+          <li><em>Extracapsular</em>: outside the capsule (e.g., MCL, LCL of knee).</li>
+          <li><em>Intracapsular</em>: inside the capsule but outside the synovial cavity (e.g., ACL, PCL of knee).</li></ul>
+        </li>
+        <li><strong>Nerves &amp; blood vessels:</strong> innervate the capsule and ligaments (proprioception, pain). Cartilage itself is avascular and aneural.</li>
+      </ol>
+    </section>
+
+    <section class="card-section"><h3>Accessory structures (joint-specific)</h3>
+      <ul>
+        <li><strong>Menisci (articular discs):</strong> wedges of fibrocartilage that deepen the joint and improve load distribution (knee, TMJ, sternoclavicular, distal radioulnar).</li>
+        <li><strong>Labra:</strong> fibrocartilaginous rims that deepen a shallow socket (glenoid labrum of shoulder, acetabular labrum of hip).</li>
+        <li><strong>Bursae:</strong> flat sacs of synovial fluid where tendons cross bones or ligaments. Reduce friction (e.g., subacromial bursa of shoulder, prepatellar bursa of knee).</li>
+        <li><strong>Tendon sheaths:</strong> elongated bursae wrapping a tendon as it passes through a tight space (e.g., long head of biceps; flexor tendons of the hand).</li>
+        <li><strong>Fat pads:</strong> cushions inside the joint (infrapatellar fat pad).</li>
+      </ul>
+    </section>
+
+    <div class="key-callout">
+      <strong>Why this matters:</strong> when a joint is "swollen," the synovial membrane is overproducing fluid in response to injury or inflammation. <strong>Arthrocentesis</strong> (joint tap) samples the fluid: clear &amp; viscous = normal; cloudy with high WBC = infection (septic arthritis); bloody = hemarthrosis (trauma, ACL tear, bleeding disorder); crystals = gout (negatively birefringent needles) or pseudogout (positively birefringent rhomboids).
+    </div>
+
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Cross-section a generic synovial joint. Label all six required parts: cavity, cartilage, fibrous capsule, synovial membrane, fluid, reinforcing ligament. Add an arrow into the cavity showing where you'd insert a needle for arthrocentesis.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> What kind of cartilage covers the articular surfaces of a synovial joint?</li>
+        <li><span class="qc-meta">DOK 1.</span> What does the synovial membrane produce, and why does it matter?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why is articular cartilage damage so slow (or unable) to heal?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Hyaline cartilage.</li><li>Synovial fluid &mdash; it lubricates the joint, distributes load, and is the only source of nutrients for the avascular articular cartilage.</li><li>Hyaline cartilage is avascular and aneural. Without a blood supply, chondrocytes can't mount an inflammatory healing response, and replacement cartilage is typically fibrocartilage (mechanically inferior).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 5 of 10</p>
+    <h2 class="card-title">Six types of synovial joints <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">All synovial joints are diarthroses, but they're not equally free. Joint shape determines the number of axes of motion: nonaxial &rarr; uniaxial &rarr; biaxial &rarr; multiaxial. More axes = more freedom = less stability.</p>
+
+    <section class="card-section"><h3>The six types</h3>
+      <table class="summary">
+        <thead><tr><th>Type</th><th>Axes</th><th>Example</th><th>Permitted movements</th></tr></thead>
+        <tbody>
+          <tr><td>Plane (gliding)</td><td>Nonaxial</td><td>Intercarpal, intertarsal, AC, facet (zygapophyseal) joints</td><td>Short gliding only; no rotation around an axis</td></tr>
+          <tr><td>Hinge</td><td>Uniaxial</td><td>Elbow (humeroulnar), knee, IP joints, ankle (talocrural)</td><td>Flexion / extension only (around one axis)</td></tr>
+          <tr><td>Pivot</td><td>Uniaxial</td><td>Atlantoaxial (dens of C2 within C1 ring), proximal &amp; distal radioulnar</td><td>Rotation around the long axis only</td></tr>
+          <tr><td>Condylar (ellipsoid)</td><td>Biaxial</td><td>Radiocarpal (wrist), MCP joints (knuckles), atlanto-occipital</td><td>Flex/extend AND abduct/adduct</td></tr>
+          <tr><td>Saddle</td><td>Biaxial</td><td><strong>1st CMC of thumb</strong>, sternoclavicular</td><td>Flex/extend AND abduct/adduct; thumb saddle also allows opposition</td></tr>
+          <tr><td>Ball-and-socket</td><td>Multiaxial</td><td>Glenohumeral (shoulder), hip (acetabulofemoral)</td><td>Flex/extend, abduct/adduct, rotation, circumduction</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="key-callout">
+      <strong>Stability vs mobility:</strong> as axes increase, motion increases and stability decreases. Plane joints (nonaxial) are stable; ball-and-sockets (multiaxial) sacrifice stability for range. The hip cheats this rule by having a <em>deep</em> socket. The shoulder doesn't &mdash; that's why it's the most-dislocated joint in the body.
+    </div>
+
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Draw six small joint shapes (plane = flat plates; hinge = door hinge; pivot = stake in a ring; condylar = oval in a cup; saddle = two saddles facing each other; ball-and-socket = sphere in cup). Next to each, write the example and movements. This builds the mental model of shape &rarr; movement.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> What's the only saddle joint that allows opposition?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why is a hinge joint inherently more stable than a ball-and-socket?</li>
+        <li><span class="qc-meta">DOK 1.</span> Name the multiaxial joints in the body.</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>The 1st carpometacarpal joint of the thumb.</li><li>A hinge has bony congruence in two planes (the joint can only move in one plane), so the bony shape itself limits motion. A ball-and-socket is geometrically free in three planes; only soft tissue (capsule, ligaments, muscles) limits it.</li><li>The glenohumeral (shoulder) and hip joints.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 6 of 10</p>
+    <h2 class="card-title">Movements at synovial joints <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Four categories of movement: gliding, angular, rotation, and special. Master the vocabulary and you can describe any motion at any joint precisely.</p>
+
+    <section class="card-section"><h3>1. Gliding</h3>
+      <p>Bones slide past each other in linear or curved paths. No rotation around an axis. Limited range. Examples: plane joints (intercarpal, intertarsal, facet joints).</p>
+    </section>
+
+    <section class="card-section"><h3>2. Angular movements (change the angle between two bones)</h3>
+      <ul>
+        <li><strong>Flexion / extension:</strong> sagittal plane, around a frontal axis. Flexion decreases the angle (elbow bends), extension increases it.</li>
+        <li><strong>Hyperextension:</strong> extension beyond anatomical position (head tilted back, wrist bent dorsally past straight).</li>
+        <li><strong>Abduction / adduction:</strong> frontal plane, around a sagittal axis. AB-duct = away from midline (arm out to side). AD-duct = toward midline.</li>
+        <li><strong>Circumduction:</strong> the distal end of the bone traces a cone; the proximal end stays put. Combination of flex + abd + ext + add. Possible at biaxial and multiaxial joints (shoulder, hip).</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>3. Rotation (around the long axis of a bone)</h3>
+      <ul>
+        <li><strong>Medial (internal) rotation:</strong> anterior surface of bone turns toward midline.</li>
+        <li><strong>Lateral (external) rotation:</strong> turns away from midline.</li>
+        <li>Possible at pivot, condylar, and ball-and-socket joints. <em>Rotation of the head</em> happens primarily at the atlantoaxial pivot (C1&ndash;C2).</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>4. Special movements (named for unique joints)</h3>
+      <ul>
+        <li><strong>Pronation / supination:</strong> forearm rotation. Supination = palm forward / up (anatomical position; "holding a bowl of soup"). Pronation = palm backward / down.</li>
+        <li><strong>Dorsiflexion / plantarflexion:</strong> ankle. Dorsiflexion = toes up. Plantarflexion = toes down (standing on tiptoes).</li>
+        <li><strong>Inversion / eversion:</strong> foot. Inversion = sole turns inward. Eversion = sole turns outward.</li>
+        <li><strong>Protraction / retraction:</strong> anterior &amp; posterior gliding. Mandible (jaw forward / back), scapulae (shoulders forward / back).</li>
+        <li><strong>Elevation / depression:</strong> superior / inferior. Shoulders shrugged (elevation) vs. dropped (depression). Mandible closing / opening.</li>
+        <li><strong>Opposition / reposition:</strong> only at the 1st CMC of the thumb. Opposition: thumb pad to fingertip.</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Goniometry</strong>: measuring joint range of motion with a goniometer. Normal values exist for each joint movement; deficits trend toward stiffness or laxity. <strong>Active ROM</strong> tests muscle + joint; <strong>passive ROM</strong> tests joint alone (examiner moves the limb). When passive ROM exceeds active ROM, suspect muscle/tendon weakness or pain inhibition rather than joint contracture.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 2.</span> Which joint and movement get tested when you ask a patient to do "thumbs up"?</li>
+        <li><span class="qc-meta">DOK 2.</span> What movement combines flexion, abduction, extension, and adduction in sequence?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Extension at the carpometacarpal and metacarpophalangeal joints of the thumb (with the wrist held neutral).</li><li>Circumduction.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 7 of 10</p>
+    <h2 class="card-title">Knee joint: structure, ligaments, menisci <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The largest joint in the body and the most clinically tested. The knee is a modified hinge that combines two functional joints in one capsule (tibiofemoral + patellofemoral), depends on muscles for stability, and is held together by four critical ligaments plus two crescent-shaped fibrocartilage menisci.</p>
+
+    <section class="card-section"><h3>The two joints in one capsule</h3>
+      <ul>
+        <li><strong>Tibiofemoral joint:</strong> femoral condyles roll/glide on the tibial plateau. Modified hinge: flexion / extension + small "screw-home" rotation at terminal extension.</li>
+        <li><strong>Patellofemoral joint:</strong> patella tracks in the trochlear groove of the femur. Plane / sellar joint. Patella acts as a lever to increase quadriceps mechanical advantage.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>The four major ligaments</h3>
+      <table class="summary">
+        <thead><tr><th>Ligament</th><th>Type</th><th>Function</th><th>Test</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ACL</strong> (anterior cruciate)</td><td>Intracapsular, intra-synovial; runs from anterior tibia to posterolateral femoral condyle</td><td>Prevents anterior translation of tibia on femur and hyperextension</td><td>Anterior drawer; <strong>Lachman test</strong> (most sensitive)</td></tr>
+          <tr><td><strong>PCL</strong> (posterior cruciate)</td><td>Intracapsular; from posterior tibia to anteromedial femoral condyle</td><td>Prevents posterior translation of tibia on femur</td><td>Posterior drawer; "sag sign"</td></tr>
+          <tr><td><strong>MCL</strong> (medial collateral / tibial collateral)</td><td>Extracapsular, broad; from medial femoral epicondyle to medial tibia. Attached to the <strong>medial meniscus</strong>.</td><td>Resists <em>valgus</em> stress (lateral blow that pushes knee inward)</td><td>Valgus stress test</td></tr>
+          <tr><td><strong>LCL</strong> (lateral collateral / fibular collateral)</td><td>Extracapsular, cord-like; from lateral femoral epicondyle to head of fibula</td><td>Resists <em>varus</em> stress (medial blow that pushes knee outward)</td><td>Varus stress test</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>The menisci</h3>
+      <ul>
+        <li><strong>Medial meniscus:</strong> C-shaped (open larger); firmly attached to the medial tibial plateau AND to the MCL &mdash; less mobile, more vulnerable to tears. Bears most weight on the medial side.</li>
+        <li><strong>Lateral meniscus:</strong> nearly circular (O-shaped); not attached to the LCL, more mobile, less injury-prone.</li>
+        <li>Function: deepen the tibial articular surface, improve congruence with the femoral condyles, distribute load, absorb shock.</li>
+        <li>Blood supply: only outer ~1/3 ("red zone") receives blood. Tears in the inner "white zone" don't heal and often need trimming (partial meniscectomy).</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Other knee features</h3>
+      <ul>
+        <li><strong>Bursae:</strong> prepatellar (in front of patella; bursitis = "housemaid's knee"), infrapatellar, suprapatellar, semimembranosus (a tear here forms a <em>Baker's cyst</em> in the popliteal fossa).</li>
+        <li><strong>Locking mechanism (screw-home):</strong> at terminal extension the femur medially rotates on a fixed tibia (or tibia laterally rotates on a fixed femur), locking the joint for stable weight-bearing. The popliteus muscle "unlocks" it to initiate flexion.</li>
+        <li><strong>Iliotibial (IT) band:</strong> thickened fascia along the lateral thigh; helps stabilize the lateral knee. IT band friction syndrome is common in runners.</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>ACL tear:</strong> classically a non-contact pivoting injury with planted foot (skiing, soccer, basketball). Sudden pop, immediate hemarthrosis (bloody effusion within hours), instability. Positive Lachman &amp; anterior drawer. Often needs surgical reconstruction in active patients. <strong>"Unhappy triad":</strong> lateral blow to a planted knee &rarr; valgus force &rarr; tears MCL + ACL + <em>medial</em> meniscus. <strong>PCL tear:</strong> "dashboard injury" &mdash; posterior tibial force in MVA. <strong>Meniscus tear:</strong> twisting injury, locking or catching, joint-line tenderness, positive McMurray test. <strong>Patellar tendon rupture vs quadriceps tendon rupture:</strong> patellar tendon rupture in younger patients (jumping athletes); quad tendon rupture more common in older patients.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAWING PROMPT</h3><p>Anterior view of right knee with patella removed. Draw the femoral condyles, tibial plateau, and the two menisci (C-shaped medial, O-shaped lateral). Add the ACL (from anterior tibia going up and lateral to femur), PCL (from posterior tibia going up and medial). Add MCL on the medial side (connected to medial meniscus) and LCL on the lateral side (separate from lateral meniscus).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Which ligament prevents anterior translation of the tibia on the femur?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why is the medial meniscus torn more often than the lateral?</li>
+        <li><span class="qc-meta">DOK 2.</span> A lateral blow to a planted knee produces which three classic injuries (the "unhappy triad")?</li>
+        <li><span class="qc-meta">DOK 2.</span> What is the "screw-home" mechanism and what muscle "unlocks" the knee?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>ACL (anterior cruciate ligament).</li><li>The medial meniscus is firmly attached to the MCL and to the joint capsule, so it is less mobile. The lateral meniscus is more mobile and gets out of the way.</li><li>MCL + ACL + medial meniscus.</li><li>At terminal knee extension, the medial femoral condyle rotates medially on the tibia (or tibia laterally rotates on a fixed femur), locking the knee for energy-efficient standing. The popliteus muscle medially rotates the tibia at the start of flexion to unlock it.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 8 of 10</p>
+    <h2 class="card-title">Shoulder &amp; hip: stability vs mobility trade-off <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Both are ball-and-socket joints. They solve the stability/mobility trade-off in opposite directions: the shoulder bets on motion (and dislocates), the hip bets on stability (and rarely dislocates without major trauma).</p>
+
+    <section class="card-section"><h3>Glenohumeral (shoulder) joint</h3>
+      <ul>
+        <li><strong>Geometry:</strong> shallow glenoid fossa receives a large humeral head &mdash; "golf ball on a tee." Maximum mobility, minimum bony stability.</li>
+        <li><strong>Glenoid labrum:</strong> fibrocartilage rim deepens the socket ~50% and resists translation.</li>
+        <li><strong>Capsule and ligaments:</strong> loose inferior capsule (allows full abduction); reinforced by glenohumeral ligaments (superior, middle, inferior) and the coracohumeral ligament.</li>
+        <li><strong>Rotator cuff (SITS):</strong> primary <em>active</em> stabilizer. Pulls humeral head into the glenoid during arm motion.</li>
+        <li><strong>Bursae:</strong> subacromial-subdeltoid bursa (key in impingement); subscapular bursa.</li>
+      </ul>
+      <p style="font-size:14px; margin:10px 0 0;"><strong>Common injuries:</strong> anterior dislocation (most common, axillary nerve at risk), Bankart lesion (anterior labral tear), Hill-Sachs lesion (humeral head impaction), SLAP tears (superior labrum anterior-to-posterior), rotator cuff tears (supraspinatus most often), adhesive capsulitis ("frozen shoulder").</p>
+    </section>
+
+    <section class="card-section"><h3>Hip (acetabulofemoral) joint</h3>
+      <ul>
+        <li><strong>Geometry:</strong> deep acetabulum holds a smaller femoral head &mdash; "deep cup." Less motion, far more bony stability than the shoulder.</li>
+        <li><strong>Acetabular labrum:</strong> fibrocartilage rim deepens the socket further and creates a partial seal.</li>
+        <li><strong>Capsular ligaments (three big ones):</strong>
+          <ul><li><strong>Iliofemoral ligament (Y-ligament of Bigelow):</strong> anterior, strongest ligament in the body. Resists hyperextension &mdash; lets us stand upright with minimal muscle effort.</li>
+          <li><strong>Pubofemoral ligament:</strong> anteroinferior, resists abduction.</li>
+          <li><strong>Ischiofemoral ligament:</strong> posterior, resists internal rotation.</li></ul>
+        </li>
+        <li><strong>Ligamentum teres (ligament of the head of femur):</strong> intracapsular ligament running from acetabular notch to the fovea on the femoral head. Carries a small artery to the femoral head in childhood; minor mechanical role.</li>
+        <li><strong>Blood supply:</strong> medial &amp; lateral circumflex femoral arteries (branches of profunda femoris) wrap the femoral neck. <em>Intracapsular femoral neck fracture</em> disrupts these vessels &rarr; risk of <strong>avascular necrosis</strong> of the femoral head.</li>
+      </ul>
+      <p style="font-size:14px; margin:10px 0 0;"><strong>Common injuries:</strong> femoral neck fracture (shortened, externally rotated leg), posterior hip dislocation (often from MVA with knee against dashboard &mdash; sciatic nerve at risk), labral tears (often from femoroacetabular impingement), hip osteoarthritis (one of the most common reasons for joint replacement).</p>
+    </section>
+
+    <div class="key-callout">
+      <strong>Compare:</strong> shoulder = shallow socket + loose capsule + small labrum &rarr; huge ROM, frequent dislocation. Hip = deep socket + large labrum + thick ligaments (iliofemoral is the body's strongest) &rarr; restricted ROM, rare dislocation outside of major trauma.
+    </div>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Anterior shoulder dislocation:</strong> humeral head pushed anteroinferior; classic Bankart + Hill-Sachs lesions; axillary nerve sensation (lateral deltoid) tested before and after reduction. <strong>Posterior hip dislocation:</strong> leg appears <em>shortened, adducted, and internally rotated</em>. Check sciatic nerve function (foot drop, hamstring weakness). <strong>Femoral neck fracture in elderly:</strong> leg appears <em>shortened and externally rotated</em>. Surgical fixation (or hip replacement if AVN risk is high).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> What is the strongest ligament in the human body, and what does it resist?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why does an intracapsular femoral neck fracture carry a high risk of avascular necrosis?</li>
+        <li><span class="qc-meta">DOK 2.</span> Why is the shoulder more prone to dislocation than the hip?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>The iliofemoral ligament (Y-ligament of Bigelow). It resists hip hyperextension and supports upright standing.</li><li>The medial and lateral circumflex femoral arteries wrap the femoral neck; an intracapsular fracture tears them. The femoral head loses its main blood supply (the ligamentum teres artery contributes very little in adulthood).</li><li>Shallow glenoid + loose capsule + small labrum &rarr; the shoulder traded stability for motion. The hip has a deep socket and thick capsular ligaments and trades motion for stability.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="A">
+    <p class="card-eyebrow">Articulations &middot; Concept 9 of 10</p>
+    <h2 class="card-title">Selected synovial joints: TMJ, elbow, wrist, ankle <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Quick anatomy of the other clinically important synovial joints. Each illustrates the same architecture (capsule, cartilage, ligaments) tuned for a different job.</p>
+
+    <section class="card-section"><h3>Temporomandibular joint (TMJ)</h3>
+      <ul>
+        <li>Condylar joint with a complete <strong>articular disc</strong> dividing the joint into two compartments.</li>
+        <li>Upper compartment: gliding (protraction, retraction, lateral excursion). Lower compartment: hinge (elevation, depression).</li>
+        <li>Lateral, sphenomandibular, and stylomandibular ligaments stabilize.</li>
+        <li>Innervation: auriculotemporal branch of CN V<sub>3</sub>.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Elbow complex</h3>
+      <ul>
+        <li>Three joints share one capsule:
+          <ul><li><strong>Humeroulnar</strong>: hinge. Carries most flex/extend load.</li>
+          <li><strong>Humeroradial</strong>: condylar; allows radius to rotate AND flex/extend.</li>
+          <li><strong>Proximal radioulnar</strong>: pivot; radial head spins in the annular ligament for pronation/supination.</li></ul>
+        </li>
+        <li><strong>Collateral ligaments:</strong> medial (ulnar) collateral ligament resists valgus; lateral (radial) collateral resists varus.</li>
+        <li><strong>Annular ligament</strong>: encircles radial head; "nursemaid's elbow" = radial head subluxation when a child's arm is yanked (the annular ligament slips off the radial head).</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Wrist (radiocarpal) and intercarpal joints</h3>
+      <ul>
+        <li><strong>Radiocarpal joint</strong>: condylar between distal radius and the proximal row of carpals (scaphoid, lunate, triquetrum). Flex/extend + radial/ulnar deviation.</li>
+        <li>The ulna does <em>not</em> directly articulate with the carpals &mdash; an articular disc of the distal radioulnar joint intervenes.</li>
+        <li><strong>Intercarpal joints</strong>: plane; allow gliding between carpal rows.</li>
+        <li><strong>Scaphoid</strong> is the most commonly fractured carpal (fall on outstretched hand &rarr; snuffbox tenderness). Blood supply enters distally, so proximal pole fractures risk avascular necrosis.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Ankle (talocrural) and subtalar joints</h3>
+      <ul>
+        <li><strong>Talocrural</strong>: hinge between distal tibia/fibula "mortise" and the talus. Dorsiflexion/plantarflexion only.</li>
+        <li><strong>Subtalar</strong>: plane between talus and calcaneus. Inversion/eversion.</li>
+        <li><strong>Lateral ligament complex</strong> (the one that gets sprained):
+          <ul><li><em>Anterior talofibular ligament (ATFL)</em>: weakest, most commonly torn.</li>
+          <li><em>Calcaneofibular (CFL)</em>: second most often torn.</li>
+          <li><em>Posterior talofibular (PTFL)</em>: rarely torn.</li></ul>
+        </li>
+        <li><strong>Medial (deltoid) ligament</strong>: thick, fan-shaped, strong. Inversion sprains are far more common than eversion (deltoid ligament is harder to tear).</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>TMJ disorder</strong>: clicking, locking, pain with chewing; often related to disc displacement or bruxism. <strong>Nursemaid's elbow:</strong> radial head subluxation in toddlers; reduce by supinating + flexing the elbow. <strong>Lateral ankle sprain</strong> (inversion injury): ATFL torn first; grade I &mdash; III based on severity. <strong>High ankle sprain</strong>: syndesmotic injury (tibiofibular ligaments); longer recovery.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Name the most commonly torn ligament in a typical (inversion) ankle sprain.</li>
+        <li><span class="qc-meta">DOK 2.</span> A child is in tears after being lifted by one arm; the elbow is held slightly flexed and pronated, and the child won't move it. What is the diagnosis and reduction maneuver?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Anterior talofibular ligament (ATFL).</li><li>Nursemaid's elbow (radial head subluxation). Reduce by supinating the forearm and flexing the elbow, often feeling a click as the annular ligament slips back over the radial head.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="A CLIN">
+    <p class="card-eyebrow">Articulations &middot; Concept 10 of 10</p>
+    <h2 class="card-title">Joint disorders: sprains, dislocations, arthritis <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">A short clinical taxonomy of the conditions that affect joints. Distinguish sprain (ligament) from strain (muscle/tendon), dislocation from subluxation, and the major arthropathies (OA vs RA vs gout vs septic).</p>
+
+    <section class="card-section"><h3>Sprain vs strain vs contusion</h3>
+      <ul>
+        <li><strong>Sprain:</strong> ligament injury. Graded I (stretch), II (partial tear), III (complete tear).</li>
+        <li><strong>Strain:</strong> muscle or tendon injury.</li>
+        <li><strong>Contusion:</strong> blunt soft-tissue injury (bruise).</li>
+        <li>Initial management for all three: <strong>RICE</strong> (Rest, Ice, Compression, Elevation), often plus NSAIDs and progressive rehab.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Dislocation and subluxation</h3>
+      <ul>
+        <li><strong>Dislocation (luxation):</strong> complete loss of contact between articular surfaces. Often deformity, severe pain, loss of motion. Reduce promptly (after assessing neurovascular status).</li>
+        <li><strong>Subluxation:</strong> partial dislocation; articular surfaces still partly in contact.</li>
+        <li>Repeated dislocations &rarr; capsular and labral laxity &rarr; chronic instability that may need surgical repair.</li>
+      </ul>
+    </section>
+
+    <section class="card-section"><h3>Major arthropathies</h3>
+      <table class="summary">
+        <thead><tr><th>Disease</th><th>Mechanism</th><th>Pattern</th><th>Key features</th></tr></thead>
+        <tbody>
+          <tr><td>Osteoarthritis (OA)</td><td>Mechanical wear of articular cartilage &rarr; bone exposure, osteophytes</td><td>Asymmetric, weight-bearing joints (knees, hips, lumbar spine), DIPs (Heberden), PIPs (Bouchard)</td><td>Pain worse with use, morning stiffness &lt; 30 min, no systemic features</td></tr>
+          <tr><td>Rheumatoid arthritis (RA)</td><td>Autoimmune synovitis (anti-CCP, RF); pannus erodes cartilage and bone</td><td>Symmetric, small joints (MCP, PIP &mdash; <em>spares DIP</em>), morning stiffness &gt; 1 hour</td><td>Ulnar deviation, swan neck, boutonni&egrave;re deformities; systemic illness</td></tr>
+          <tr><td>Gout</td><td>Monosodium urate crystals in joint &rarr; intense inflammation</td><td>Acute, monoarticular; classically first MTP ("podagra"); also midfoot, ankle, knee</td><td>Negatively birefringent needle-shaped crystals; treat acute with NSAID/colchicine/steroid; long-term urate lowering (allopurinol)</td></tr>
+          <tr><td>Pseudogout (CPPD)</td><td>Calcium pyrophosphate crystals</td><td>Knees and wrists more typical than gout</td><td>Positively birefringent rhomboids; chondrocalcinosis on X-ray</td></tr>
+          <tr><td>Septic arthritis</td><td>Bacterial infection (often <em>S. aureus</em>); hematogenous or direct inoculation</td><td>Acute monoarticular; hot, swollen, fever; refuses to bear weight</td><td>Arthrocentesis WBC often &gt; 50,000 (frequently &gt; 100,000); empiric antibiotics + surgical washout; cartilage destroyed in hours; mortality 10&ndash;15%</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-section"><h3>Bursitis &amp; tendinopathy</h3>
+      <ul>
+        <li><strong>Bursitis:</strong> inflammation of a bursa (prepatellar = "housemaid's knee"; subacromial = shoulder impingement; trochanteric = lateral hip pain).</li>
+        <li><strong>Tendinopathy:</strong> overuse-related degeneration of a tendon (lateral epicondylitis = "tennis elbow"; rotator cuff tendinopathy).</li>
+      </ul>
+    </section>
+
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Always</strong> assess neurovascular status before and after reducing a dislocation. <strong>Always</strong> consider septic arthritis in any acutely hot, swollen joint with fever or systemic symptoms; delay can destroy a joint in hours. <strong>Distinguish OA from RA</strong> in five questions: which joints? symmetric? morning stiffness duration? worse with use or rest? any systemic illness?</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol>
+        <li><span class="qc-meta">DOK 1.</span> Define sprain vs strain.</li>
+        <li><span class="qc-meta">DOK 2.</span> A patient has a hot, swollen, painful first MTP. Arthrocentesis shows negatively birefringent needle-shaped crystals. Diagnosis and acute treatment?</li>
+        <li><span class="qc-meta">DOK 2.</span> Which arthritis spares the DIP joints?</li>
+      </ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Sprain = ligament injury. Strain = muscle or tendon injury.</li><li>Acute gout. Acute treatment: NSAID, colchicine, or corticosteroid (oral or intra-articular). Long-term urate-lowering therapy (allopurinol) after the acute attack settles.</li><li>Rheumatoid arthritis (it favors MCP and PIP joints; OA classically involves DIP).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">&uarr; Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Articulations master concept set.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO430':{eyebrow:'BIO 430 Human Anatomy & Physiology I · American River College',view:'combined',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology II · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Articulations';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='articulations-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+
+<script>
+/* Preserve ?course= parameter on the back-to-hub link */
+(function () {
+  var match = /[?&]course=([^&]+)/.exec(window.location.search);
+  if (match) {
+    var link = document.getElementById('back-to-hub-link');
+    if (link) link.setAttribute('href', 'index.html?course=' + encodeURIComponent(match[1]));
+  }
+})();
+</script>
+</body>
+</html>
