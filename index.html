@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept Notes Library | Dr. Sharilyn Rennie</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:#1E3D4C;
+    --navy-deep:#142a36;
+    --navy-tint:#EDF1F3;
+    --gold:#B8924A;
+    --gold-deep:#8f7136;
+    --terra:#C2734D;
+    --terra-dark:#A0522D;
+    --white:#FFFFFF;
+    --off-white:#FAFAF9;
+    --gray-line:#D9DEE1;
+    --gray-text:#5A6E78;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0;
+    background:var(--off-white);
+    color:var(--navy);
+    font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a.skip {
+    position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+  }
+  a.skip:focus {
+    position:fixed; left:12px; top:12px; width:auto; height:auto; padding:10px 14px;
+    background:var(--navy); color:var(--white); z-index:1000; border-radius:4px;
+  }
+  .wrap { max-width:1100px; margin:0 auto; padding:48px 24px 80px; }
+  header.page { margin-bottom:32px; }
+  .eyebrow {
+    font-family:'DM Sans',sans-serif;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.10em;
+    color:var(--terra-dark);
+    font-weight:500;
+    margin:0 0 10px;
+  }
+  h1 {
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:800;
+    color:var(--navy);
+    font-size:36px;
+    line-height:1.15;
+    margin:0 0 12px;
+    letter-spacing:-0.01em;
+  }
+  .lead {
+    font-family:'Lora',serif;
+    font-style:italic;
+    color:var(--navy);
+    font-size:18px;
+    max-width:780px;
+    margin:0 0 8px;
+  }
+  .byline {
+    font-family:'DM Sans',sans-serif;
+    font-size:13px;
+    color:var(--gray-text);
+    margin:0;
+  }
+
+  /* Course chip / banner */
+  #courseBanner {
+    display:none;
+    margin:20px 0 0;
+    padding:12px 16px;
+    background:var(--navy-tint);
+    border-left:4px solid var(--gold);
+    border-radius:4px;
+    font-size:14px;
+    color:var(--navy);
+  }
+  #courseBanner.show { display:block; }
+  #courseBanner strong { color:var(--navy-deep); }
+
+  /* Section heading */
+  h2.section {
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:700;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.10em;
+    color:var(--terra-dark);
+    margin:48px 0 16px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--gray-line);
+  }
+  h2.section:first-of-type { margin-top:24px; }
+
+  /* Card grid */
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:16px;
+  }
+  .card {
+    background:var(--white);
+    border:1px solid var(--gray-line);
+    border-radius:6px;
+    padding:20px 22px;
+    text-decoration:none;
+    color:var(--navy);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 1px 3px rgba(0,0,0,0.08);
+    transition:transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  }
+  .card:hover, .card:focus-visible {
+    transform:translateY(-2px);
+    box-shadow:0 8px 16px rgba(0,0,0,0.10);
+    border-color:var(--gold);
+    outline:none;
+  }
+  .card:focus-visible {
+    outline:3px solid var(--gold);
+    outline-offset:2px;
+  }
+  .card .num {
+    font-family:'DM Sans',sans-serif;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.10em;
+    color:var(--terra-dark);
+    font-weight:500;
+    margin:0 0 6px;
+  }
+  .card h3 {
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:700;
+    font-size:18px;
+    color:var(--navy);
+    margin:0 0 10px;
+    line-height:1.25;
+  }
+  .card p {
+    font-size:14px;
+    line-height:1.5;
+    color:var(--gray-text);
+    margin:0;
+    flex:1;
+  }
+  .card .arrow {
+    margin-top:14px;
+    font-family:'DM Sans',sans-serif;
+    font-size:13px;
+    color:var(--gold-deep);
+    font-weight:600;
+  }
+  .card:hover .arrow, .card:focus-visible .arrow { color:var(--terra-dark); }
+
+  /* Usage panel */
+  .usage {
+    background:var(--white);
+    border:1px solid var(--gray-line);
+    border-radius:6px;
+    padding:22px 26px;
+    margin:48px 0 0;
+  }
+  .usage h2 {
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:16px;
+    color:var(--terra-dark);
+    margin:0 0 10px;
+    text-transform:none;
+    letter-spacing:0;
+    border:none;
+    padding:0;
+  }
+  .usage p { font-size:14px; line-height:1.6; margin:0 0 8px; color:var(--navy); }
+  .usage p:last-child { margin-bottom:0; }
+  .usage code {
+    background:var(--navy-tint);
+    padding:2px 6px;
+    border-radius:3px;
+    font-family:'DM Sans',monospace;
+    font-size:13px;
+    color:var(--navy-deep);
+  }
+
+  footer.page {
+    margin-top:56px;
+    padding-top:18px;
+    border-top:1px solid var(--gray-line);
+    font-size:13px;
+    color:var(--gray-text);
+  }
+
+  @media (max-width:520px) {
+    .wrap { padding:32px 16px 60px; }
+    h1 { font-size:28px; }
+    .lead { font-size:16px; }
+    .grid { grid-template-columns:1fr; }
+  }
+
+  @media print {
+    body { background:var(--white); }
+    .card { break-inside:avoid; box-shadow:none; }
+    a { color:var(--navy); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition:none; }
+    .card:hover, .card:focus-visible { transform:none; }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow" id="eyebrow">Concept Notes</p>
+    <h1>Anatomy &amp; Physiology Concept Notes</h1>
+    <p class="lead">Sixteen units. Start with the four Foundations units, then move through the body systems in any order your course assigns.</p>
+    <p class="byline">Prepared by Dr. Sharilyn Rennie</p>
+    <div id="courseBanner" role="status" aria-live="polite"></div>
+  </header>
+
+  <main id="main">
+
+    <h2 class="section">Foundations</h2>
+    <div class="grid">
+      <a class="card" href="intro-notes.html">
+        <p class="num">Unit 01</p>
+        <h3>Introduction to Anatomy &amp; Physiology</h3>
+        <p>Terminology, anatomical position, planes, regions, cavities, levels of organization, homeostasis and feedback.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="chemistry-biochemistry-notes.html">
+        <p class="num">Unit 02</p>
+        <h3>Chemistry &amp; Biochemistry</h3>
+        <p>Atoms, bonds, water, pH, biomolecules, DNA replication, transcription, translation, ATP and metabolism.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="cells-notes.html">
+        <p class="num">Unit 03</p>
+        <h3>Cells</h3>
+        <p>Membrane and organelles, transport, signaling, the cell cycle, apoptosis, and cancer hallmarks.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="tissues-notes.html">
+        <p class="num">Unit 04</p>
+        <h3>Tissues &amp; Body Membranes</h3>
+        <p>Four primary tissue types, glands, the four body membranes, and tissue repair.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+    </div>
+
+    <h2 class="section">Support &amp; Movement</h2>
+    <div class="grid">
+      <a class="card" href="integumentary-notes.html">
+        <p class="num">Unit 05</p>
+        <h3>Integumentary System</h3>
+        <p>Skin layers, accessory structures, thermoregulation, wound healing, and burn classification.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="skeletal-notes.html">
+        <p class="num">Unit 06</p>
+        <h3>Skeletal System</h3>
+        <p>Bone tissue, ossification, axial and appendicular skeleton, joints, fractures and remodeling.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="muscular-notes.html">
+        <p class="num">Unit 07</p>
+        <h3>Muscular System</h3>
+        <p>Skeletal, cardiac, and smooth muscle, sarcomere mechanics, motor units, fiber types, and contraction.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+    </div>
+
+    <h2 class="section">Communication &amp; Control</h2>
+    <div class="grid">
+      <a class="card" href="nervous-notes.html">
+        <p class="num">Unit 08</p>
+        <h3>Nervous System &amp; Special Senses</h3>
+        <p>Neurons, action potentials, synapses, CNS and PNS, autonomic pharmacology, vision, hearing, balance, taste, smell.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="endocrine-notes.html">
+        <p class="num">Unit 09</p>
+        <h3>Endocrine System</h3>
+        <p>Hormone classes and signaling, HPA / HPT axes, pancreas, adrenal, thyroid, calcium balance, glucose feedback.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+    </div>
+
+    <h2 class="section">Transport &amp; Defense</h2>
+    <div class="grid">
+      <a class="card" href="blood-hematology-notes.html">
+        <p class="num">Unit 10</p>
+        <h3>Blood &amp; Hematology</h3>
+        <p>Plasma and formed elements, erythropoiesis, EPO, hemostasis cascade, ABO and Rh, common dyscrasias.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="cardiovascular-notes.html">
+        <p class="num">Unit 11</p>
+        <h3>Cardiovascular System</h3>
+        <p>Heart anatomy, conduction, ECG, cardiac cycle, PV loop, hemodynamics, regulation, and acute MI.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="lymphatic-immune-notes.html">
+        <p class="num">Unit 12</p>
+        <h3>Lymphatic &amp; Immune System</h3>
+        <p>Lymph circulation, primary and secondary organs, innate and adaptive immunity, antibodies, hypersensitivities.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+    </div>
+
+    <h2 class="section">Energy &amp; Maintenance</h2>
+    <div class="grid">
+      <a class="card" href="respiratory-notes.html">
+        <p class="num">Unit 13</p>
+        <h3>Respiratory System</h3>
+        <p>Conducting and respiratory zones, mechanics, gas exchange, hemoglobin curve, control of breathing, ABG basics.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="gi-notes.html">
+        <p class="num">Unit 14</p>
+        <h3>Digestive System</h3>
+        <p>GI tract anatomy, accessory organs, motility, secretion, digestion and absorption of each macronutrient.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+      <a class="card" href="renal-notes.html">
+        <p class="num">Unit 15</p>
+        <h3>Urinary &amp; Renal System</h3>
+        <p>Nephron anatomy, GFR, tubular transport, urine concentration, acid-base, and ABG interpretation.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+    </div>
+
+    <h2 class="section">Continuity</h2>
+    <div class="grid">
+      <a class="card" href="reproductive-notes.html">
+        <p class="num">Unit 16</p>
+        <h3>Reproductive System</h3>
+        <p>Male and female anatomy, gametogenesis, hormonal cycles, fertilization, embryology, and fetal circulation.</p>
+        <span class="arrow" aria-hidden="true">Open unit &rarr;</span>
+      </a>
+    </div>
+
+    <section class="usage" aria-labelledby="usage-h">
+      <h2 id="usage-h">How to use these notes</h2>
+      <p>Each unit is built around concept cards. Use the View filter (Combined, Anatomy, or Physiology) and the Depth filter (Full or Essentials) inside each unit to match your course.</p>
+      <p>Instructors can pass a course code in the URL so the page opens with the right branding and filters preset. Examples: <code>?course=BIO004</code>, <code>?course=BIO431</code>, <code>?course=BIO304</code>. The same parameter on this page tags every unit link so students stay in their course context.</p>
+    </section>
+
+  </main>
+
+  <footer class="page">
+    <p>Concept Notes prepared by Dr. Sharilyn Rennie. WCAG 2.2 AA target across the library.</p>
+  </footer>
+</div>
+
+<script>
+  // Course parameter handling: set eyebrow + banner, tag all unit links so students stay in course context.
+  (function () {
+    var COURSE_MAP = {
+      'BIO004': { eyebrow: 'BIO 004 Human Anatomy · Solano Community College', label: 'BIO 004 Human Anatomy at Solano Community College' },
+      'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology · American River College', label: 'BIO 431 Human Anatomy & Physiology at American River College' },
+      'BIO304': { eyebrow: 'BIO 304 Human Anatomy & Physiology (Online) · American River College', label: 'BIO 304 Human Anatomy & Physiology (Online) at American River College' }
+    };
+
+    function getParam(name) {
+      var match = new RegExp('[?&]' + name + '=([^&]+)').exec(window.location.search);
+      return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    var course = getParam('course');
+    if (course && COURSE_MAP[course.toUpperCase()]) {
+      var cfg = COURSE_MAP[course.toUpperCase()];
+      var eyebrow = document.getElementById('eyebrow');
+      if (eyebrow) eyebrow.textContent = cfg.eyebrow;
+      var banner = document.getElementById('courseBanner');
+      if (banner) {
+        banner.innerHTML = 'Viewing as <strong>' + cfg.label + '</strong>. Each unit will open with the filters preset for this course.';
+        banner.classList.add('show');
+      }
+      document.title = cfg.eyebrow + ' — Concept Notes';
+      var cards = document.querySelectorAll('a.card');
+      for (var i = 0; i < cards.length; i++) {
+        var href = cards[i].getAttribute('href');
+        if (!href) continue;
+        var sep = href.indexOf('?') === -1 ? '?' : '&';
+        cards[i].setAttribute('href', href + sep + 'course=' + encodeURIComponent(course.toUpperCase()));
+      }
+    }
+  })();
+
+  // Iframe height-sender for Kajabi / embedded contexts.
+  (function () {
+    var iframeId = window.name || 'concept-notes-index';
+    function sendHeight() {
+      try {
+        var h = Math.max(
+          document.body.scrollHeight,
+          document.documentElement.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        );
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'resize-iframe', id: iframeId, height: h }, '*');
+        }
+      } catch (e) { /* no-op */ }
+    }
+    window.addEventListener('load', sendHeight);
+    window.addEventListener('resize', sendHeight);
+    if (typeof ResizeObserver !== 'undefined') {
+      var ro = new ResizeObserver(sendHeight);
+      ro.observe(document.body);
+    }
+    // Force same-domain / relative links to break out of iframe.
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href) return;
+      if (/^https?:\/\//i.test(href)) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener');
+      } else {
+        a.setAttribute('target', '_top');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
