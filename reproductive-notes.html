@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproductive + Development — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:14px 0 0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Reproductive System + Development</h1>
+    <p class="usage">Reproduction is two parallel systems (male and female), one shared hormonal axis (HPG), and a developmental program that runs from fertilization to birth and beyond. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">11</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="A">
+    <p class="card-eyebrow">Reproductive &middot; Concept 1 of 11</p>
+    <h2 class="card-title">Male reproductive anatomy <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The male system makes sperm and delivers them. Two testes (gonads), a duct system, accessory glands that produce semen, and the penis.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Testes (paired gonads):</strong>
+          <ul><li>In scrotum (extra-abdominal — sperm production needs temperature ~2 °C below core body).</li>
+          <li>Seminiferous tubules: site of spermatogenesis. Contain Sertoli cells (nurse cells; blood-testis barrier).</li>
+          <li>Interstitial Leydig cells (between tubules): make testosterone.</li>
+          <li>Cremaster muscle adjusts scrotal position to regulate temperature.</li></ul>
+        </li>
+        <li><strong>Duct system (sperm pathway: "SEVEN UP"):</strong>
+          <ul><li>Seminiferous tubules → rete testis → efferent ductules → epididymis (sperm mature, gain motility; ~20-day transit) → ductus (vas) deferens → ejaculatory duct → urethra (prostatic → membranous → spongy/penile).</li></ul>
+        </li>
+        <li><strong>Accessory glands</strong> (contribute to semen):
+          <ul><li>Seminal vesicles (~60% of semen): fructose, prostaglandins, alkaline fluid. Empty into ejaculatory duct.</li>
+          <li>Prostate (~30%): milky alkaline fluid with citrate, PSA (prostate-specific antigen), enzymes. Surrounds urethra below bladder.</li>
+          <li>Bulbourethral glands (Cowper's): pre-ejaculate mucus that lubricates and neutralizes residual acidic urine in urethra.</li></ul>
+        </li>
+        <li><strong>Semen:</strong> ~2-5 mL per ejaculation; ~20-300 million sperm/mL is normal range. Alkaline pH ~7.4 to neutralize female vaginal acidity.</li>
+        <li><strong>Penis:</strong>
+          <ul><li>Three erectile bodies: two corpora cavernosa (dorsal, fill with blood during erection) + one corpus spongiosum (ventral, surrounds urethra).</li>
+          <li>Glans penis is the expanded tip of corpus spongiosum.</li>
+          <li>Erection: parasympathetic (NO → cGMP → smooth muscle relaxation → blood pools).</li>
+          <li>Ejaculation: sympathetic (emission of semen) + somatic (rhythmic contractions).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>BPH (benign prostatic hyperplasia):</strong> common in older men. Enlarged prostate compresses urethra → hesitancy, weak stream, frequency, nocturia, urgency. Treat: α-blockers (tamsulosin), 5α-reductase inhibitors (finasteride), TURP if severe. <strong>Prostate cancer:</strong> screening with PSA controversial; DRE may reveal nodular firm gland. <strong>Cryptorchidism:</strong> undescended testis. Surgical correction in childhood to preserve fertility and ↓ cancer risk. <strong>Testicular torsion:</strong> surgical emergency — twisting cuts blood supply, 6-hour window. Sudden severe scrotal pain, swelling.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which cells produce testosterone?</li>
+      <li><span class="qc-meta">DOK 3.</span> A young man has sudden severe testicular pain and swelling. Why is this an emergency?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Leydig (interstitial) cells.</li><li>Testicular torsion — the spermatic cord twists, cutting off arterial supply. Testicle becomes ischemic and is rarely salvageable after ~6 hours. Surgical detorsion is urgent.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="P">
+    <p class="card-eyebrow">Reproductive &middot; Concept 2 of 11</p>
+    <h2 class="card-title">Spermatogenesis + testosterone <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Sperm production is continuous from puberty onward — ~100 million new sperm per day. Testosterone drives the process and produces male secondary sex characteristics.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Spermatogenesis</strong> (in seminiferous tubules, ~64-day cycle):
+          <ol><li>Spermatogonium (2n, diploid) divides by mitosis → primary spermatocyte (2n).</li>
+          <li>Primary spermatocyte undergoes meiosis I → two secondary spermatocytes (n, haploid).</li>
+          <li>Meiosis II → four spermatids.</li>
+          <li>Spermatids mature (spermiogenesis) into sperm with head (DNA + acrosome), midpiece (mitochondria), tail (flagellum).</li></ol>
+        </li>
+        <li><strong>Sertoli cells (nurse cells):</strong>
+          <ul><li>Support developing sperm.</li>
+          <li>Blood-testis barrier (immune privilege — protects haploid cells from immune attack).</li>
+          <li>Secrete inhibin (→ ↓ FSH).</li>
+          <li>Convert testosterone to estradiol (locally).</li></ul>
+        </li>
+        <li><strong>Testosterone</strong>:
+          <ul><li>Synthesized by Leydig cells from cholesterol; stimulated by LH.</li>
+          <li>Functions:
+            <ul><li>Drives spermatogenesis (local high concentration).</li>
+            <li>Secondary sex characteristics: facial/body hair, voice deepening, muscle mass, bone growth.</li>
+            <li>Libido, anabolic effects, sperm transport.</li>
+            <li>Converted peripherally to DHT (more potent — by 5α-reductase) and to estradiol (by aromatase).</li></ul>
+          </li>
+          <li>Levels gradually decline with age.</li></ul>
+        </li>
+        <li><strong>HPG axis</strong> (covered in Concept 5):
+          <ul><li>GnRH (hypothalamus) → LH + FSH (anterior pituitary) → testes.</li>
+          <li>LH → Leydig cells → testosterone.</li>
+          <li>FSH → Sertoli cells → spermatogenesis support.</li>
+          <li>Negative feedback: testosterone inhibits hypothalamus and pituitary; inhibin selectively inhibits FSH.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Anabolic steroid use</strong>: exogenous testosterone suppresses HPG axis → Leydig cells atrophy → testicular atrophy + infertility. <strong>Finasteride</strong> (5α-reductase inhibitor): blocks T → DHT conversion; treats BPH and male pattern hair loss. <strong>Klinefelter syndrome (XXY):</strong> small firm testes, gynecomastia, tall stature, infertility, low testosterone, ↑ FSH/LH.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which hormone stimulates testosterone production by Leydig cells?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does long-term anabolic steroid use cause infertility?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>LH (luteinizing hormone).</li><li>Exogenous testosterone suppresses GnRH and LH/FSH → endogenous testosterone production drops → intratesticular testosterone (needed for spermatogenesis) falls dramatically → spermatogenesis arrests. May be reversible if short-course; sometimes permanent.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="A">
+    <p class="card-eyebrow">Reproductive &middot; Concept 3 of 11</p>
+    <h2 class="card-title">Female reproductive anatomy <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Two ovaries, two fallopian tubes, one uterus, one vagina, plus external structures. Functions: produce eggs, support pregnancy, deliver and nurse the infant.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Ovaries (paired gonads):</strong>
+          <ul><li>Almond-sized; in pelvis, anchored by ovarian and suspensory ligaments.</li>
+          <li>Cortex: follicles at various stages.</li>
+          <li>Medulla: vessels, nerves.</li>
+          <li>Functions: produce oocytes (born with ~1-2 million primary oocytes, ~400,000 at puberty, ~500 ovulated in lifetime); secrete estrogen + progesterone.</li></ul>
+        </li>
+        <li><strong>Fallopian (uterine) tubes:</strong>
+          <ul><li>Site of fertilization (usually in ampulla, the widest middle region).</li>
+          <li>Fimbriae catch ovulated egg.</li>
+          <li>Cilia + smooth muscle waft egg toward uterus over ~3-4 days.</li>
+          <li>Not directly continuous with ovary — small peritoneal gap allows ectopic pregnancy risk.</li></ul>
+        </li>
+        <li><strong>Uterus:</strong>
+          <ul><li>Pear-shaped, ~7.5 cm. Regions: fundus, body, isthmus, cervix.</li>
+          <li>Three wall layers:
+            <ul><li>Endometrium: inner mucosal lining — functional layer sheds with menses, basal layer regenerates.</li>
+            <li>Myometrium: thick smooth muscle (contracts during labor; site of fibroids).</li>
+            <li>Perimetrium: outer serosa.</li></ul>
+          </li>
+          <li>Cervix: narrow inferior portion. External os opens into vagina. Cervical canal contains mucus that thickens/thins with cycle. Site of Pap smear screening for cervical cancer.</li></ul>
+        </li>
+        <li><strong>Vagina:</strong> muscular tube, birth canal. Acidic pH ~3.8-4.5 (Lactobacillus normal flora) — defends against pathogens.</li>
+        <li><strong>External genitalia (vulva):</strong> mons pubis, labia majora/minora, clitoris (homologous to penis — corpora cavernosa, sensitive), vestibule, Bartholin glands (lubricate).</li>
+        <li><strong>Breasts:</strong>
+          <ul><li>Modified apocrine glands.</li>
+          <li>Lobes → lobules → alveoli (milk-producing cells) → lactiferous ducts → nipple.</li>
+          <li>Suspensory (Cooper) ligaments anchor tissue.</li>
+          <li>Develop under estrogen + progesterone; secrete milk under prolactin + oxytocin (let-down).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Ectopic pregnancy:</strong> implantation outside uterus — usually fallopian tube. Risk factors: prior PID, tubal surgery, IUD, smoking. Sudden severe lower abdominal pain + missed period + positive β-hCG → emergency (rupture can cause hemoperitoneum and shock). <strong>Pap smear:</strong> screens cervix for HPV-related dysplasia and cervical cancer. <strong>Endometriosis:</strong> endometrial tissue outside uterus (ovary, pelvis, peritoneum). Cyclic pelvic pain, dysmenorrhea, infertility.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Where in the fallopian tube does fertilization usually occur?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does ectopic pregnancy in the fallopian tube cause severe pain and hemodynamic collapse?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Ampulla (middle widest portion).</li><li>The tubal wall cannot stretch like the uterus. As the embryo grows, the tube ruptures → hemoperitoneum → potential shock. Surgical emergency. Manage early with methotrexate (small unruptured) or surgery (ruptured).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="P">
+    <p class="card-eyebrow">Reproductive &middot; Concept 4 of 11</p>
+    <h2 class="card-title">Ovarian and uterine cycles <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Two cycles run in parallel over ~28 days: the ovary develops a follicle and ovulates (ovarian cycle), and the uterus thickens then sheds its lining (uterine/menstrual cycle). Hormones synchronize them.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Ovarian cycle</strong> (3 phases):
+          <ol><li><em>Follicular phase</em> (days 1-13, variable): FSH → primary follicle develops to secondary then mature (Graafian) follicle. Granulosa cells make estradiol. Estradiol rises.</li>
+          <li><em>Ovulation</em> (day ~14): LH surge (triggered by sustained high estrogen — switches from negative to positive feedback) → follicle ruptures → oocyte released into peritoneal cavity → swept by fimbriae into tube.</li>
+          <li><em>Luteal phase</em> (days 15-28, more constant ~14 days): ruptured follicle becomes corpus luteum → secretes progesterone (and some estrogen) → maintains uterine lining. If no pregnancy → corpus luteum degenerates → P and E drop → menses.</li></ol>
+        </li>
+        <li><strong>Uterine (menstrual) cycle</strong> (3 phases, aligned with ovarian):
+          <ol><li><em>Menses</em> (days 1-5): functional endometrium sheds with bleeding (~35-80 mL).</li>
+          <li><em>Proliferative phase</em> (days 6-14): estrogen from growing follicle → endometrium rebuilds and thickens.</li>
+          <li><em>Secretory phase</em> (days 15-28): progesterone from corpus luteum → endometrium becomes glandular, vascular, ready for implantation. If no implantation: P drops → spiral arteries constrict → ischemia → endometrium sloughs → menses begins.</li></ol>
+        </li>
+        <li><strong>Cervical mucus changes:</strong>
+          <ul><li>Periovulatory (high estrogen): thin, watery, stretchy ("egg white") — sperm-friendly.</li>
+          <li>Luteal (high progesterone): thick, sticky — blocks sperm and pathogens.</li></ul>
+        </li>
+        <li><strong>Basal body temperature:</strong> rises ~0.3-0.5 °C after ovulation (progesterone effect). Used historically for fertility tracking.</li>
+        <li><strong>Oogenesis quirks</strong> (deep dive):
+          <ul><li>Primary oocytes are arrested in prophase I from before birth until ovulation (decades!) → contributes to ↑ aneuploidy risk with maternal age.</li>
+          <li>Each ovulated oocyte arrested in metaphase II — meiosis II completes only if fertilized.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Oral contraceptives</strong>: combined estrogen + progestin → suppress GnRH/FSH/LH → no LH surge → no ovulation. Also thicken cervical mucus, alter endometrium. <strong>PCOS:</strong> insulin resistance + hyperandrogenism + irregular ovulation. Oligomenorrhea, hirsutism, acne, infertility, often obesity. Treat: lifestyle, metformin, OCPs (regulate cycles), letrozole or clomiphene (induce ovulation if pregnancy desired). <strong>Plan B</strong> (levonorgestrel): emergency contraception works mainly by delaying or preventing ovulation if taken before LH surge.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What hormone surge triggers ovulation?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does corpus luteum failure lead to menses?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>LH surge.</li><li>The corpus luteum makes progesterone (and some estrogen) that maintains the secretory endometrium. When it degenerates (no pregnancy, no hCG to rescue it), progesterone falls → spiral artery constriction → endometrial ischemia → sloughing → menses.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="P">
+    <p class="card-eyebrow">Reproductive &middot; Concept 5 of 11</p>
+    <h2 class="card-title">HPG axis: GnRH, FSH, LH, estrogen, progesterone <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">The hypothalamic-pituitary-gonadal axis controls reproductive physiology in both sexes. Pulsatile GnRH drives FSH and LH; gonadal hormones feed back to control the pulse.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Hypothalamus:</strong> pulsatile GnRH release (every ~1-2 h). Continuous (non-pulsatile) GnRH paradoxically suppresses LH/FSH — basis for GnRH analog therapy (leuprolide).</li>
+        <li><strong>Anterior pituitary:</strong> GnRH → release of FSH and LH from gonadotrophs.</li>
+        <li><strong>FSH actions:</strong>
+          <ul><li>Female: stimulates ovarian follicle development and granulosa cell estrogen production.</li>
+          <li>Male: stimulates Sertoli cells; supports spermatogenesis.</li></ul>
+        </li>
+        <li><strong>LH actions:</strong>
+          <ul><li>Female: triggers ovulation (mid-cycle surge); maintains corpus luteum after ovulation.</li>
+          <li>Male: stimulates Leydig cells → testosterone.</li></ul>
+        </li>
+        <li><strong>Estrogens</strong> (estradiol most potent):
+          <ul><li>Sources: ovarian granulosa cells; placenta in pregnancy; small amounts from adrenal androgens converted by aromatase.</li>
+          <li>Effects: female secondary sex characteristics, uterine proliferative phase, bone density, lipid profile (HDL ↑), feedback on HPG axis (mostly negative; positive at midcycle peak).</li></ul>
+        </li>
+        <li><strong>Progesterone:</strong>
+          <ul><li>Source: corpus luteum; placenta in pregnancy.</li>
+          <li>Effects: secretory phase of endometrium, maintains pregnancy, breast development, thermogenic (raises BBT), inhibits FSH/LH.</li></ul>
+        </li>
+        <li><strong>Feedback patterns:</strong>
+          <ul><li>Most of the cycle: negative feedback (E + P inhibit GnRH, FSH, LH).</li>
+          <li>Mid-cycle: sustained high estrogen flips to positive feedback → LH surge → ovulation.</li>
+          <li>Inhibin (from granulosa or Sertoli cells): selectively inhibits FSH.</li></ul>
+        </li>
+        <li><strong>Menopause:</strong>
+          <ul><li>Ovarian follicle depletion → ↓ estrogen and inhibin → loss of feedback → ↑ FSH/LH (FSH especially high — &gt; 30 IU/L is diagnostic).</li>
+          <li>Symptoms: vasomotor (hot flashes), genitourinary atrophy, accelerated bone loss, mood changes, sleep disturbance.</li>
+          <li>HRT controversies: short-term symptom relief vs long-term risks (DVT, breast cancer, stroke). Individualized decision.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>GnRH analogs</strong> (leuprolide): paradoxically suppress LH/FSH when given continuously → "chemical castration" used in prostate cancer, endometriosis, fibroids, precocious puberty, IVF protocols. <strong>Tamoxifen</strong>: SERM (selective estrogen receptor modulator) — antagonist in breast tissue (treats ER+ breast cancer), agonist in uterus (↑ endometrial cancer risk), agonist in bone. <strong>Aromatase inhibitors</strong> (anastrozole, letrozole): block estrogen synthesis from androgens; used in postmenopausal breast cancer.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which hormone selectively inhibits FSH but not LH?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does continuous (non-pulsatile) GnRH suppress LH instead of stimulating it?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Inhibin (from granulosa cells in females, Sertoli cells in males).</li><li>Pituitary gonadotrophs require <em>pulsatile</em> GnRH stimulation. Continuous binding causes receptor desensitization and down-regulation → ↓ LH/FSH release. Used therapeutically (leuprolide) to suppress sex hormone production.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="P">
+    <p class="card-eyebrow">Reproductive &middot; Concept 6 of 11</p>
+    <h2 class="card-title">Fertilization and implantation <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Sperm reach the oocyte in the fallopian tube. One sperm penetrates the zona pellucida and fuses; the zygote begins dividing as it travels back to the uterus. About a week after fertilization, it implants in the endometrium.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Sperm transport:</strong> ejaculation → vagina → cervix → uterus → fallopian tube. ~300 million sperm released; only ~200 reach the oocyte. Travel time minutes to hours.</li>
+        <li><strong>Capacitation:</strong> sperm undergo membrane changes in the female tract that prepare them for fertilization (takes hours).</li>
+        <li><strong>Fertilization</strong> (in ampulla):
+          <ol><li>Sperm penetrate corona radiata (the cumulus cells around the egg).</li>
+          <li>Acrosome reaction: sperm enzymes digest zona pellucida.</li>
+          <li>Sperm membrane fuses with oocyte plasma membrane.</li>
+          <li>Cortical reaction: oocyte releases granules that harden the zona, blocking polyspermy.</li>
+          <li>Oocyte completes meiosis II.</li>
+          <li>Pronuclei fuse → zygote (2n, fertilized egg). Genetic sex determined here (XX or XY based on sperm).</li></ol>
+        </li>
+        <li><strong>Pre-implantation development:</strong>
+          <ul><li>Day 1: zygote.</li>
+          <li>Days 2-3: cleavage into 2, 4, 8 cells (still in tube).</li>
+          <li>Day 4: morula (16+ cells).</li>
+          <li>Day 5: blastocyst — outer trophoblast (becomes placenta) + inner cell mass (becomes embryo) + blastocoel (cavity). Reaches uterus.</li>
+          <li>Day 6-7: blastocyst hatches from zona, attaches to endometrium.</li></ul>
+        </li>
+        <li><strong>Implantation</strong> (~day 6-10):
+          <ul><li>Trophoblast invades endometrium.</li>
+          <li>Forms syncytiotrophoblast (outer fused multinucleated) + cytotrophoblast (inner cellular).</li>
+          <li>Syncytiotrophoblast secretes <strong>hCG</strong> (human chorionic gonadotropin) → maintains corpus luteum → continued progesterone → endometrium maintained → menses prevented.</li>
+          <li>hCG detectable in maternal blood ~day 8-9; in urine within ~2 weeks (basis of pregnancy test).</li></ul>
+        </li>
+        <li><strong>Placenta:</strong> develops from trophoblast + maternal endometrial decidua over weeks. Fully functional by ~weeks 10-12. Replaces corpus luteum as main hormone source (E + P) around weeks 8-12.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>IVF:</strong> ovarian stimulation with FSH analogs → retrieve oocytes → in vitro fertilization → embryo transfer. <strong>Beta-hCG kinetics:</strong> roughly doubles every 48-72 hours in early normal pregnancy. Slower rise or plateau is concerning for ectopic or non-viable pregnancy. <strong>Implantation bleeding:</strong> small amount of spotting at implantation around expected period — sometimes mistaken for a light period.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which hormone produced by the trophoblast maintains the corpus luteum?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does a slowly rising β-hCG raise concern for ectopic pregnancy?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>hCG (human chorionic gonadotropin).</li><li>In a healthy intrauterine pregnancy, β-hCG roughly doubles every 48-72 hours. Slower rise suggests a non-viable or ectopic implantation where trophoblastic tissue isn't proliferating normally. Combined with transvaginal ultrasound, this trend distinguishes intrauterine from extrauterine pregnancy.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="P">
+    <p class="card-eyebrow">Reproductive &middot; Concept 7 of 11</p>
+    <h2 class="card-title">Pregnancy and maternal adaptations <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Every maternal system changes during pregnancy. CO rises ~50%, blood volume rises ~45%, breathing changes, GI motility slows. Most adaptations support fetal oxygen and nutrient delivery.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Trimesters:</strong> 1st (weeks 1-12), 2nd (13-26), 3rd (27-40). Term = 37-42 weeks.</li>
+        <li><strong>Placental hormones:</strong>
+          <ul><li>hCG (early): rescue corpus luteum until placenta takes over.</li>
+          <li>Estrogen: from placenta + fetus + mother (placenta needs fetal DHEA-S).</li>
+          <li>Progesterone: maintains uterine quiescence, supports endometrium.</li>
+          <li>hPL (human placental lactogen): induces maternal insulin resistance → preserves glucose for fetus. Linked to gestational diabetes.</li>
+          <li>Relaxin: relaxes pelvic ligaments, softens cervix.</li></ul>
+        </li>
+        <li><strong>Cardiovascular changes:</strong>
+          <ul><li>CO ↑ 30-50% (↑ HR, ↑ SV).</li>
+          <li>Blood volume ↑ ~45%, plasma rises more than RBC mass → dilutional anemia ("physiologic anemia of pregnancy").</li>
+          <li>SVR ↓ (placental vasodilation).</li>
+          <li>BP often ↓ slightly in mid-pregnancy, returns to baseline by term.</li></ul>
+        </li>
+        <li><strong>Respiratory changes:</strong>
+          <ul><li>Progesterone ↑ tidal volume and minute ventilation → mild respiratory alkalosis (PaCO₂ ~30) compensated with renal HCO₃⁻ wasting.</li>
+          <li>Diaphragm elevates as uterus grows → ↓ FRC.</li>
+          <li>Dyspnea is common, normal in 3rd trimester.</li></ul>
+        </li>
+        <li><strong>Renal changes:</strong>
+          <ul><li>GFR ↑ ~50% → ↓ serum Cr (creatinine of 1.0 may be abnormal in pregnancy).</li>
+          <li>Glycosuria more common (glucose load exceeds threshold).</li>
+          <li>Ureteral dilation, urinary stasis → ↑ UTI/pyelonephritis risk.</li></ul>
+        </li>
+        <li><strong>GI changes:</strong>
+          <ul><li>Progesterone ↓ motility → constipation, GERD.</li>
+          <li>Nausea/vomiting common 1st trimester (hCG-related); hyperemesis gravidarum is severe.</li>
+          <li>Hemorrhoids common.</li></ul>
+        </li>
+        <li><strong>Hematologic changes:</strong>
+          <ul><li>Hypercoagulable state (↑ clotting factors II, VII, VIII, X, fibrinogen; ↓ protein S). Reduces postpartum hemorrhage risk but ↑ VTE risk through pregnancy and ~6 weeks postpartum.</li></ul>
+        </li>
+        <li><strong>Endocrine changes:</strong>
+          <ul><li>Thyroid: T-binding globulin ↑ → total T4 rises; free T4 relatively stable. TSH falls in 1st trimester from hCG cross-reactivity.</li>
+          <li>Insulin resistance ↑ (hPL, placental hormones) → gestational diabetes screen at 24-28 weeks.</li></ul>
+        </li>
+        <li><strong>Nutrient demands:</strong>
+          <ul><li>Folate (start before conception → ↓ neural tube defects).</li>
+          <li>Iron (↑ RBC mass + fetal demand).</li>
+          <li>Calcium, iodine, vitamin D, total calories.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Preeclampsia:</strong> new HTN (≥ 140/90) + proteinuria or end-organ damage after 20 weeks. Severe features: SBP ≥ 160 or DBP ≥ 110, severe headache, vision changes, RUQ pain, low platelets, ↑ LFTs, AKI. Eclampsia adds seizures. <strong>HELLP syndrome:</strong> Hemolysis, Elevated Liver enzymes, Low Platelets — severe variant. Treatment: deliver baby (definitive), magnesium sulfate for seizure prophylaxis, BP control. <strong>Gestational diabetes:</strong> insulin resistance during pregnancy. Screen with glucose challenge at 24-28 weeks. Treat with diet, then insulin if needed. Increases later T2DM risk for mother and metabolic risk for child.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Why does pregnancy cause a mild respiratory alkalosis?</li>
+      <li><span class="qc-meta">DOK 4.</span> A pregnant woman at 32 weeks has BP 165/110, severe headache, RUQ pain. Concern and immediate priorities?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Progesterone increases ventilatory drive → ↑ minute ventilation → ↓ PaCO₂ → respiratory alkalosis. Kidneys compensate by wasting bicarbonate (HCO₃⁻ drops slightly). This shift facilitates CO₂ transfer from fetus to mother across placenta.</li><li>Severe preeclampsia. Priorities: lab workup (CBC for platelets, LFTs, Cr, urine protein), BP control (labetalol or hydralazine), magnesium sulfate seizure prophylaxis, fetal monitoring, plan for delivery (definitive treatment).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="P">
+    <p class="card-eyebrow">Reproductive &middot; Concept 8 of 11</p>
+    <h2 class="card-title">Parturition (labor and delivery) <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Labor is a coordinated transition from quiescence to active uterine contraction. Oxytocin is the engine. Positive feedback drives delivery.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Initiating signals (still incompletely understood in humans):</strong>
+          <ul><li>Fetal cortisol rises near term → placental shift from progesterone production to estrogen.</li>
+          <li>↑ Estrogen / progesterone ratio → uterine sensitization (↑ gap junctions, ↑ oxytocin receptors, ↑ prostaglandin synthesis).</li>
+          <li>Cervical ripening.</li></ul>
+        </li>
+        <li><strong>Oxytocin positive feedback:</strong>
+          <ul><li>Uterine stretch (fetal head pressing on cervix) → afferent signal → posterior pituitary releases oxytocin.</li>
+          <li>Oxytocin → uterine contraction → more stretch → more oxytocin.</li>
+          <li>Loop continues until baby is delivered.</li></ul>
+        </li>
+        <li><strong>Three stages of labor:</strong>
+          <ol><li><em>Stage 1 (dilation):</em> from onset of regular contractions to full cervical dilation (10 cm). Hours; longest in first-time mothers.
+            <ul><li>Latent phase (0-6 cm).</li>
+            <li>Active phase (6-10 cm).</li></ul>
+          </li>
+          <li><em>Stage 2 (expulsion):</em> full dilation to delivery of baby. Minutes to hours.</li>
+          <li><em>Stage 3 (placental):</em> delivery of placenta within ~30 min after baby.</li></ol>
+        </li>
+        <li><strong>Postpartum:</strong>
+          <ul><li>Uterine involution (returns to non-pregnant size over ~6 weeks).</li>
+          <li>Lochia: discharge from uterine lining (rubra → serosa → alba).</li>
+          <li>Postpartum hemorrhage risk peaks in first 24 hours; major causes — uterine atony, retained placenta, lacerations, coagulopathy ("4 T's": Tone, Tissue, Trauma, Thrombin).</li></ul>
+        </li>
+        <li><strong>Interventions:</strong>
+          <ul><li>Pitocin (synthetic oxytocin): augment labor or treat postpartum hemorrhage.</li>
+          <li>Epidural analgesia.</li>
+          <li>Tocolytics (β2 agonists, magnesium, indomethacin, CCBs): slow preterm labor.</li>
+          <li>Cesarean section: indications include fetal distress, breech, prior C-section, failure to progress, placenta previa.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Postpartum hemorrhage</strong>: blood loss &gt; 500 mL vaginal or &gt; 1000 mL C-section. Most common cause: uterine atony. Fundal massage, oxytocin, additional uterotonics (methylergonovine, carboprost, misoprostol), TXA, manual exploration, surgical intervention if refractory. <strong>Postpartum depression:</strong> common; screen with EPDS. Different from "baby blues" (brief, self-limited). Treat with therapy, SSRIs (sertraline preferred during breastfeeding), and address postpartum thyroiditis if present.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which posterior pituitary hormone drives uterine contractions in labor?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is oxytocin a classic example of positive feedback?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Oxytocin.</li><li>Contraction → cervical stretch → ↑ oxytocin release → stronger contraction → more stretch. The loop escalates until delivery terminates the stretch stimulus. One of the few clear positive feedback loops in human physiology.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="P">
+    <p class="card-eyebrow">Reproductive &middot; Concept 9 of 11</p>
+    <h2 class="card-title">Lactation <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Breasts mature during pregnancy under estrogen + progesterone. Milk production starts after delivery when those hormones drop. Prolactin makes milk; oxytocin lets it down.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Prenatal preparation:</strong>
+          <ul><li>Estrogen → duct growth.</li>
+          <li>Progesterone → alveolar (milk-producing) tissue growth.</li>
+          <li>Prolactin rises throughout pregnancy but milk production is suppressed by high progesterone.</li></ul>
+        </li>
+        <li><strong>Postpartum onset:</strong>
+          <ul><li>Placental delivery → P + E fall sharply → prolactin's milk-producing action unmasked → milk synthesis begins (~day 2-4).</li>
+          <li>Colostrum (first few days): yellow, antibody-rich (IgA), low volume, high nutrition.</li>
+          <li>Mature milk: transitional then mature over ~2 weeks.</li></ul>
+        </li>
+        <li><strong>Prolactin (PRL):</strong>
+          <ul><li>From anterior pituitary.</li>
+          <li>Stimulated by suckling (afferent → hypothalamus → ↓ dopamine → ↑ PRL).</li>
+          <li>Drives milk synthesis in alveolar cells.</li>
+          <li>Also suppresses GnRH → ↓ FSH/LH → lactational amenorrhea (not reliable contraception, but contributes).</li></ul>
+        </li>
+        <li><strong>Oxytocin and milk ejection ("let-down") reflex:</strong>
+          <ul><li>Suckling → afferent to hypothalamus → posterior pituitary releases oxytocin.</li>
+          <li>Oxytocin → myoepithelial cells around alveoli contract → milk pushed into ducts → ejection.</li>
+          <li>Conditioned reflex: can be triggered by hearing baby cry, thinking about baby, etc.</li></ul>
+        </li>
+        <li><strong>Maintenance:</strong> regular suckling (or pumping) is required to maintain supply. Stop = supply tapers off in days to weeks.</li>
+        <li><strong>Breastfeeding benefits:</strong>
+          <ul><li>Infant: IgA (passive immunity), optimal nutrition, microbiome seeding, ↓ infection risk, possibly ↓ allergy/asthma risk.</li>
+          <li>Maternal: faster uterine involution (oxytocin), ↓ ovarian + breast cancer risk, postpartum weight loss, bonding.</li></ul>
+        </li>
+        <li class="deep-dive"><strong>Drugs and breastfeeding:</strong> most drugs cross into milk at low concentrations. Specific concerns: amiodarone, chemotherapy, lithium, radioactive iodine, some psychoactives. LactMed database is the standard reference.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Mastitis</strong>: bacterial infection (often Staph aureus) entering through cracked nipple → painful firm tender area in breast, fever, malaise. Treat with continued nursing (helps drain), warm compresses, antibiotics (dicloxacillin or cephalexin). Abscess may need drainage. <strong>Sheehan syndrome</strong> (review from endocrine): postpartum hemorrhage → pituitary infarction → failure to lactate is often the first clue (absent prolactin response).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which hormone is responsible for milk ejection (let-down)?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does milk production start only after delivery, not during pregnancy?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Oxytocin.</li><li>Throughout pregnancy, high progesterone (from placenta) blocks prolactin's milk-producing action on alveolar cells. After placental delivery, progesterone falls sharply → prolactin's effect is unmasked → milk synthesis begins. This is why retained placenta can delay milk onset.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="AP">
+    <p class="card-eyebrow">Reproductive &middot; Concept 10 of 11</p>
+    <h2 class="card-title">Embryology, fetal circulation, neonatal transition <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">In nine months, a single zygote becomes a multi-system newborn. Three germ layers form first; each gives rise to specific tissues. The fetus uses a unique circulation that shunts blood around non-functioning lungs and liver, then reroutes everything within minutes of birth.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Germ layers (formed during gastrulation, week 3):</strong>
+          <ul><li><em>Ectoderm:</em> skin epidermis, nervous system, neural crest (which gives rise to many things — adrenal medulla, melanocytes, much of facial bone, peripheral neurons, etc.).</li>
+          <li><em>Mesoderm:</em> muscle, bone, blood, heart, vessels, kidneys, gonads, dermis, most connective tissue.</li>
+          <li><em>Endoderm:</em> GI tract lining, respiratory tract lining, liver, pancreas, thyroid, bladder.</li></ul>
+        </li>
+        <li><strong>Major developmental milestones (rough):</strong>
+          <ul><li>Week 3: gastrulation → three germ layers.</li>
+          <li>Week 4: heart beats, neural tube closes (folate timing critical here).</li>
+          <li>Weeks 4-8: organogenesis (most major organs form). Highest teratogen vulnerability.</li>
+          <li>Week 8: embryo → fetus.</li>
+          <li>Week 12: external genitalia distinguishable.</li>
+          <li>Week 24: viability threshold (surfactant production starts in earnest at ~24-28 weeks).</li>
+          <li>Week 37+: term.</li></ul>
+        </li>
+        <li><strong>Fetal circulation</strong> — three shunts bypass non-functioning organs:
+          <ol><li><em>Ductus venosus:</em> umbilical vein → bypasses liver → IVC.</li>
+          <li><em>Foramen ovale:</em> opening between right and left atria → blood bypasses pulmonary circulation.</li>
+          <li><em>Ductus arteriosus:</em> pulmonary artery → aorta → bypasses pulmonary circulation.</li></ol>
+        </li>
+        <li><strong>Why bypass lungs?</strong> Pulmonary vascular resistance is very high in the fetus (fluid-filled, collapsed alveoli, hypoxic vasoconstriction). Right-to-left shunting sends most blood through systemic circulation. Oxygenation happens at the placenta, not the lungs.</li>
+        <li><strong>Why bypass liver?</strong> Liver is functionally immature in fetus; doesn't need full perfusion until birth.</li>
+        <li><strong>Fetal-to-neonatal transition (first minutes of life):</strong>
+          <ol><li>First breath → lungs expand, alveoli fill with air → ↓ pulmonary vascular resistance.</li>
+          <li>↓ Right-sided pressures + ↑ left-sided pressures → foramen ovale closes functionally (anatomically months later → becomes fossa ovalis).</li>
+          <li>↑ Oxygenation + ↓ prostaglandin (umbilical cord clamping removes placental prostaglandins) → ductus arteriosus constricts and closes (becomes ligamentum arteriosum).</li>
+          <li>Umbilical vessels constrict → ductus venosus closes (becomes ligamentum venosum); umbilical arteries → medial umbilical ligaments; umbilical vein → round ligament of liver (ligamentum teres).</li>
+          <li>Liver and kidneys take over their adult roles.</li></ol>
+        </li>
+        <li><strong>If transition fails:</strong>
+          <ul><li>Patent ductus arteriosus (PDA): continuous "machinery murmur," can cause left-to-right shunt and CHF. Treat with indomethacin (blocks PGE) or surgical ligation.</li>
+          <li>Patent foramen ovale (PFO): often asymptomatic in adults; can be a route for paradoxical embolism.</li>
+          <li>Persistent pulmonary hypertension of the newborn (PPHN): pulmonary resistance fails to drop → continued right-to-left shunting → cyanosis.</li></ul>
+        </li>
+        <li><strong>Common congenital defects:</strong>
+          <ul><li>Heart: ASD, VSD, tetralogy of Fallot (PROVe — pulmonary stenosis, RVH, overriding aorta, VSD), transposition of great arteries.</li>
+          <li>Neural tube defects: anencephaly, spina bifida (folate prevents).</li>
+          <li>Cleft lip/palate.</li>
+          <li>Down syndrome (trisomy 21): characteristic facies, intellectual disability, heart defects (AVSD), ↑ ALL/AML risk, early Alzheimer.</li>
+          <li>Limb anomalies, GI atresias, cryptorchidism.</li></ul>
+        </li>
+        <li class="deep-dive"><strong>Teratogens:</strong> alcohol (FAS — fetal alcohol syndrome), tobacco, certain medications (warfarin, ACE-I, isotretinoin, valproate, lithium), infections (TORCH — Toxoplasmosis, Other [syphilis, varicella, parvovirus], Rubella, CMV, Herpes), radiation, maternal diabetes, maternal hyperthermia. Greatest risk during organogenesis (weeks 3-8).</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Newborn assessment</strong> (APGAR at 1 and 5 min): Appearance, Pulse, Grimace, Activity, Respiration. Score 0-10. Useful but doesn't predict long-term outcome alone. <strong>Folic acid 400 mcg daily</strong> for all reproductive-age women — pre-conception folate is the single most effective prevention of neural tube defects. <strong>RhoGAM</strong> at 28 weeks and within 72 h of delivery for Rh-negative mothers carrying Rh-positive babies (prevents future hemolytic disease of the newborn — see blood/hematology Concept 7).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Name the three fetal shunts that bypass the lungs and liver.</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does indomethacin promote ductus arteriosus closure in a newborn?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Foramen ovale (RA → LA, bypasses lungs), ductus arteriosus (pulmonary artery → aorta, bypasses lungs), ductus venosus (umbilical vein → IVC, bypasses liver).</li><li>Prostaglandin E (PGE) keeps the ductus arteriosus open in utero. Indomethacin inhibits COX, blocking PGE synthesis → ductus constricts and closes. Conversely, in ductus-dependent congenital heart disease (e.g., transposition), prostaglandin E1 infusion is given to <em>keep</em> the ductus open until surgical correction.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c11" data-tags="CLIN">
+    <p class="card-eyebrow">Reproductive &middot; Concept 11 of 11</p>
+    <h2 class="card-title">Common reproductive conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">A short tour of the most common reproductive pathology — most have appeared elsewhere in these notes. Use this card as a consolidated review.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Male:</strong>
+          <ul><li>BPH: aging prostate compresses urethra.</li>
+          <li>Prostate cancer: most common male cancer. PSA screening controversial.</li>
+          <li>Erectile dysfunction: vascular (most common cause in older men), neurogenic, psychogenic, hormonal. PDE5 inhibitors (sildenafil) common treatment.</li>
+          <li>Testicular cancer: most common cancer in men 15-35. Painless testicular mass. Highly curable.</li>
+          <li>Hypogonadism: low testosterone. Primary (testicular failure) vs secondary (pituitary/hypothalamic).</li></ul>
+        </li>
+        <li><strong>Female:</strong>
+          <ul><li>PCOS: insulin resistance, hyperandrogenism, oligo-ovulation.</li>
+          <li>Endometriosis: ectopic endometrial tissue → pelvic pain, dysmenorrhea, infertility.</li>
+          <li>Uterine fibroids (leiomyomas): benign smooth muscle tumors. Heavy menses, pressure symptoms.</li>
+          <li>Cervical cancer: HPV-related (16, 18). Pap screening + HPV vaccination dramatically reduced incidence.</li>
+          <li>Ovarian cancer: silent until late. Bloating, pelvic discomfort, weight loss. CA-125, imaging.</li>
+          <li>Breast cancer: most common cancer in women. Screening mammography. BRCA1/2 mutations confer high lifetime risk.</li>
+          <li>Menopause: vasomotor symptoms, GU atrophy, bone loss, mood/sleep changes.</li></ul>
+        </li>
+        <li><strong>Pregnancy-related:</strong>
+          <ul><li>Ectopic pregnancy.</li>
+          <li>Spontaneous abortion (miscarriage).</li>
+          <li>Hyperemesis gravidarum.</li>
+          <li>Gestational diabetes.</li>
+          <li>Preeclampsia / eclampsia / HELLP.</li>
+          <li>Placenta previa, abruption.</li>
+          <li>Preterm labor.</li>
+          <li>Postpartum hemorrhage, postpartum depression.</li></ul>
+        </li>
+        <li><strong>STIs (high-yield):</strong>
+          <ul><li>Chlamydia (most common bacterial STI): often asymptomatic; PID risk → infertility, ectopic. Treat: doxycycline.</li>
+          <li>Gonorrhea: discharge, dysuria, PID. Treat: ceftriaxone (often combined with doxy for co-infection).</li>
+          <li>Syphilis: primary (chancre), secondary (rash including palms/soles), latent, tertiary (cardiovascular, neuro). Treat: penicillin G.</li>
+          <li>HSV: painful vesicles, recurrent. Treat: acyclovir, valacyclovir.</li>
+          <li>HPV: cervical / anal / oropharyngeal cancer risk. Vaccine prevents most.</li>
+          <li>HIV (covered in immune notes).</li>
+          <li>Trichomoniasis: itching, malodorous discharge. Treat: metronidazole.</li>
+          <li>PID: ascending infection of upper genital tract. Pain, fever, cervical motion tenderness. Treat: broad-spectrum antibiotics.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Nursing assessment in reproductive complaints: <strong>last menstrual period</strong>, <strong>obstetric history</strong> (G/P), pregnancy status (always rule out in reproductive-age women), STI exposure, contraception, family history of reproductive cancers. Use trauma-informed approach for pelvic and genital exams; respect privacy and consent. Patient education is a huge component of reproductive health.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which STI most commonly causes pelvic inflammatory disease and tubal infertility?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why is folate supplementation recommended before conception, not just after?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Chlamydia trachomatis (often asymptomatic, so untreated → ascending infection → tubal scarring).</li><li>The neural tube closes at ~week 4 of gestation — often before a woman knows she's pregnant. Folate is needed for nucleotide synthesis in rapidly dividing cells, including the neural tube. By the time a pregnancy is confirmed, the critical window has passed. Universal supplementation in all reproductive-age women is the safest strategy.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Reproductive + Development master concept set.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Reproductive + Development';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='reproductive-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

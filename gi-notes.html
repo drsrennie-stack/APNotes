@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GI / Digestive — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; }
+  .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; }
+  a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; }
+  .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; }
+  table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; }
+  table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; }
+  .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); }
+  .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; }
+  .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; }
+  .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">GI / Digestive System</h1>
+    <p class="usage">The GI tract is a 9-meter tube with four jobs: ingest, digest, absorb, eliminate. Accessory organs (liver, gallbladder, pancreas) handle chemistry the tube can't do alone. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">14</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="A">
+    <p class="card-eyebrow">GI &middot; Concept 1 of 14</p>
+    <h2 class="card-title">GI tract overview, peritoneum, mesentery <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">One long tube from mouth to anus, plus three accessory organs. The peritoneum suspends and supports, the mesenteries carry vessels and nerves.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>GI tract</strong> (alimentary canal): mouth → pharynx → esophagus → stomach → small intestine (duodenum, jejunum, ileum) → large intestine (cecum, ascending, transverse, descending, sigmoid, rectum) → anus.</li>
+        <li><strong>Accessory organs:</strong> teeth, salivary glands, liver, gallbladder, pancreas.</li>
+        <li><strong>Peritoneum</strong> (serous membrane):
+          <ul><li>Parietal peritoneum: lines abdominal cavity wall.</li>
+          <li>Visceral peritoneum: covers organs.</li>
+          <li>Peritoneal cavity: potential space with thin serous fluid.</li></ul>
+        </li>
+        <li><strong>Intraperitoneal organs:</strong> stomach, jejunum, ileum, transverse colon, sigmoid colon, liver, spleen.</li>
+        <li><strong>Retroperitoneal organs (SAD PUCKER):</strong> Suprarenal, Aorta/IVC, Duodenum (2nd/3rd), Pancreas (except tail), Ureters, Colon (asc/desc), Kidneys, Esophagus, Rectum.</li>
+        <li><strong>Mesentery:</strong> double layer of peritoneum that suspends intraperitoneal organs and carries vessels/nerves. Greater omentum (apron over abdomen), lesser omentum (between liver and stomach).</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Region</th><th>Length</th><th>Main job</th></tr></thead>
+      <tbody>
+        <tr><td>Esophagus</td><td>~25 cm</td><td>Transport, swallow</td></tr>
+        <tr><td>Stomach</td><td>—</td><td>Mix, acid, pepsin, intrinsic factor</td></tr>
+        <tr><td>Small intestine</td><td>~6 m</td><td>Most digestion + absorption</td></tr>
+        <tr><td>Large intestine</td><td>~1.5 m</td><td>Water absorption, microbiome, feces</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Peritonitis:</strong> inflammation of peritoneum (perforation, surgery, dialysis). Rigid abdomen, rebound tenderness, fever, ileus. Surgical/medical emergency. <strong>Ascites:</strong> fluid in peritoneal cavity (cirrhosis, malignancy, HF). Transudate vs exudate distinction guides workup.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw the GI tract from mouth to anus. Color intraperitoneal organs and retroperitoneal organs differently. Add the three accessory organs (liver, gallbladder, pancreas).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Is the pancreas intra- or retroperitoneal?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is the rigid abdomen of peritonitis a surgical emergency?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Retroperitoneal (except the tail, which is intraperitoneal).</li>
+        <li>Rigid abdomen reflects diffuse peritoneal inflammation, often from perforation (bowel, gastric ulcer, ruptured viscus) releasing GI contents and bacteria into a normally sterile cavity → rapid systemic sepsis. Time to surgical source control matters.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">GI &middot; Concept 2 of 14</p>
+    <h2 class="card-title">GI wall layers (four tunics) <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The GI wall has the same four-layer architecture from esophagus to anus. Regional modifications support each segment's specific job.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Mucosa (innermost, faces lumen):</strong>
+          <ul><li>Epithelium: type varies — stratified squamous (esophagus, anal canal); simple columnar (stomach, intestines).</li>
+          <li>Lamina propria: loose CT with capillaries, lymphatics, MALT.</li>
+          <li>Muscularis mucosae: thin smooth muscle layer; local movement of mucosa.</li></ul>
+        </li>
+        <li><strong>Submucosa:</strong> dense CT, large vessels, nerves, glands. Houses the <em>submucosal (Meissner) plexus</em> — controls secretion.</li>
+        <li><strong>Muscularis externa:</strong>
+          <ul><li>Inner circular layer.</li>
+          <li>Outer longitudinal layer.</li>
+          <li>Houses the <em>myenteric (Auerbach) plexus</em> between them — controls motility.</li>
+          <li>Specializations: 3 layers in stomach (extra oblique); taeniae coli (3 longitudinal bands) in colon.</li></ul>
+        </li>
+        <li><strong>Serosa</strong> (or adventitia where not intraperitoneal): outer layer. Serosa is visceral peritoneum; adventitia is connective tissue without serous covering (esophagus, retroperitoneal segments).</li>
+        <li><strong>Mucosa modifications for absorption:</strong>
+          <ul><li>Circular folds (plicae circulares): small intestine. Three-fold increase.</li>
+          <li>Villi: small intestine. Ten-fold increase.</li>
+          <li>Microvilli (brush border): on enterocytes. Twenty-fold increase.</li>
+          <li>Combined: ~600× increase, total surface area ~250 m² in small intestine.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Layer</th><th>Key feature</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>Mucosa</td><td>Epithelium + lamina propria + muscularis mucosae</td><td>Secretion + absorption</td></tr>
+        <tr><td>Submucosa</td><td>CT, Meissner plexus</td><td>Vessels, secretion control</td></tr>
+        <tr><td>Muscularis externa</td><td>Circular + longitudinal, Auerbach plexus</td><td>Motility</td></tr>
+        <tr><td>Serosa / adventitia</td><td>Outer</td><td>Anchor, friction-free</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Crohn's disease</strong> involves all four wall layers (transmural inflammation) → fistulas, strictures, abscesses. <strong>Ulcerative colitis</strong> is limited to mucosa and submucosa → bleeding, mucus, but not fistulas. <strong>Celiac disease</strong>: gluten-driven autoimmune attack on small intestinal villi → villous atrophy → malabsorption.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw a cross-section of the small intestinal wall. Label all four layers. Add villi, microvilli, both nerve plexuses, and a circular fold.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which plexus controls GI motility?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does Crohn disease cause fistulas while ulcerative colitis does not?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Myenteric (Auerbach) plexus, between circular and longitudinal muscle.</li>
+        <li>Crohn inflammation is transmural — extends through all layers and serosa — eroding into adjacent loops or skin to form fistulas. UC stays in mucosa/submucosa, so it bleeds but does not tunnel.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 3 of 14</p>
+    <h2 class="card-title">Enteric nervous system + motility <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The gut has its own brain. ~500 million neurons in the enteric nervous system can run motility and secretion locally, with ANS as override.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Enteric nervous system (ENS):</strong>
+          <ul><li>Two intrinsic plexuses: Meissner (submucosal, secretion) + Auerbach (myenteric, motility).</li>
+          <li>Can function autonomously — coordinates peristalsis and secretion even if vagus is cut.</li>
+          <li>Modulated by ANS (parasympathetic ↑ activity, sympathetic ↓ activity) and hormones (gastrin, CCK, secretin, GLP-1, ghrelin).</li></ul>
+        </li>
+        <li><strong>Motility patterns:</strong>
+          <ul><li><em>Peristalsis:</em> wave of contraction-relaxation pushing contents forward. Esophagus and intestine.</li>
+          <li><em>Segmentation:</em> alternating circular muscle contractions that mix without forward propulsion. Small intestine for digestion/absorption.</li>
+          <li><em>Mass movement:</em> 3-4× daily in colon, large peristaltic wave moving feces toward rectum.</li>
+          <li><em>Migrating motor complex (MMC):</em> "housekeeping" pattern between meals — sweeps debris distally. Driven by motilin during fasting.</li></ul>
+        </li>
+        <li><strong>Sphincters control passage:</strong>
+          <ul><li>Upper esophageal (UES): voluntary skeletal muscle.</li>
+          <li>Lower esophageal (LES): physiologic, prevents reflux.</li>
+          <li>Pyloric: stomach → duodenum.</li>
+          <li>Ileocecal: small → large intestine, prevents backflow.</li>
+          <li>Internal anal: involuntary smooth muscle.</li>
+          <li>External anal: voluntary skeletal muscle.</li></ul>
+        </li>
+        <li class="deep-dive"><strong>Hirschsprung disease:</strong> congenital absence of enteric ganglia in distal colon → no peristalsis there → functional obstruction in newborns. Failure to pass meconium &gt;48 h.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Pattern</th><th>Where</th><th>Job</th></tr></thead>
+      <tbody>
+        <tr><td>Peristalsis</td><td>Esophagus, intestine</td><td>Forward propulsion</td></tr>
+        <tr><td>Segmentation</td><td>Small intestine</td><td>Mix + absorb</td></tr>
+        <tr><td>Mass movement</td><td>Colon</td><td>Feces toward rectum</td></tr>
+        <tr><td>MMC</td><td>Stomach + small intestine, fasting</td><td>Housekeeping</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Ileus:</strong> functional bowel paralysis. Post-op, electrolyte imbalance (especially hypokalemia), opioids, sepsis. Distinct from mechanical obstruction (which has a physical block). Both cause distention, vomiting, and absent stool/flatus, but management differs. <strong>Gastroparesis</strong> (often diabetic): delayed gastric emptying → nausea, early satiety, vomiting. Metoclopramide (prokinetic) is used cautiously.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw the GI sphincters in order from mouth to anus, marking voluntary (skeletal) vs involuntary (smooth).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> What motility pattern dominates the small intestine to mix nutrients with enzymes?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does severe hypokalemia cause ileus?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Segmentation.</li>
+        <li>Smooth muscle excitability depends on K⁺ gradients. Hypokalemia hyperpolarizes the resting membrane (further from threshold) → impaired contraction → reduced peristalsis → functional ileus. Correct the K to restore motility.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 4 of 14</p>
+    <h2 class="card-title">Mouth, pharynx, esophagus + swallowing <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Swallowing is the most complex coordinated motor sequence the body performs. It moves food from mouth to stomach while keeping the airway protected.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Mouth:</strong> mechanical breakdown (teeth) + salivary digestion.
+          <ul><li>Salivary glands: parotid (CN IX), submandibular + sublingual (CN VII). ~1.5 L/day.</li>
+          <li>Saliva: water, mucus, electrolytes, amylase (starch digestion begins), lysozyme, IgA.</li></ul>
+        </li>
+        <li><strong>Pharynx</strong>: shared with respiratory tract.</li>
+        <li><strong>Esophagus:</strong> 25 cm muscular tube. Skeletal muscle (upper 1/3), mixed (middle), smooth muscle (lower 1/3). Lined with stratified squamous epithelium (durability). UES and LES at top and bottom.</li>
+        <li><strong>Three phases of swallowing:</strong>
+          <ol><li><em>Oral (voluntary):</em> tongue pushes bolus posteriorly.</li>
+          <li><em>Pharyngeal (involuntary):</em> ~1 second. Soft palate elevates (blocks nasopharynx), epiglottis tips (blocks airway), vocal cords close, UES opens, peristaltic wave begins.</li>
+          <li><em>Esophageal (involuntary):</em> 5-10 sec. Primary peristaltic wave moves bolus down. Secondary wave clears residual. LES opens then closes.</li></ol>
+        </li>
+        <li><strong>Reflexes during swallowing:</strong> respiration is briefly suppressed; gag reflex protects against aspiration if bolus contacts oropharynx prematurely.</li>
+        <li class="deep-dive"><strong>Dysphagia patterns:</strong>
+          <ul><li>Oropharyngeal (difficulty initiating, coughing, nasal regurgitation): stroke, Parkinson, ALS, myasthenia.</li>
+          <li>Esophageal (food sticks after swallowing): stricture, ring, achalasia (LES fails to relax), motility disorder, cancer.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Phase</th><th>Control</th><th>Key event</th></tr></thead>
+      <tbody>
+        <tr><td>Oral</td><td>Voluntary</td><td>Tongue pushes bolus back</td></tr>
+        <tr><td>Pharyngeal</td><td>Reflex (medulla)</td><td>Airway protection, UES opens</td></tr>
+        <tr><td>Esophageal</td><td>Reflex</td><td>Peristalsis, LES opens</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Aspiration risk</strong> rises with stroke, dementia, sedation, ETT/NGT, dysphagia. Bedside swallow screen before oral intake post-stroke. Speech pathology consult for failed screen. <strong>GERD</strong>: LES dysfunction → acid reflux → heartburn, regurgitation, esophagitis, Barrett (premalignant). Treat with PPI, lifestyle. <strong>Achalasia</strong>: LES fails to relax → progressive dysphagia, regurgitation. Treat with pneumatic dilation, Heller myotomy, or POEM.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw a swallow sequence in 3 frames: oral, pharyngeal (note airway protection), esophageal. Label UES, LES, epiglottis, soft palate.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which enzyme in saliva begins digestion of starch?</li>
+      <li><span class="qc-meta">DOK 3.</span> A post-stroke patient coughs during the oral phase. What's the safest immediate action?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Salivary amylase.</li>
+        <li>Stop oral intake (NPO), suction airway if needed, position upright, consult speech pathology for formal swallow evaluation. Aspiration is a leading cause of post-stroke morbidity and mortality.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 5 of 14</p>
+    <h2 class="card-title">Stomach + gastric phases of digestion <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The stomach is a reservoir and acid bath. It mixes food into chyme, kills most pathogens, starts protein digestion, and releases nutrients into the duodenum at a manageable rate.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Regions:</strong> cardia (entrance), fundus (dome above LES), body (main mixing area), antrum (distal grinder), pylorus (gate to duodenum).</li>
+        <li><strong>Three muscular layers</strong> (extra oblique layer beyond standard 2): allow churning/mixing.</li>
+        <li><strong>Rugae:</strong> folds in mucosa, flatten when stomach fills (allows ~4× expansion).</li>
+        <li><strong>Gastric pit cells</strong> (in glands):
+          <ul><li>Mucous cells: bicarbonate-rich mucus → protect lining from acid.</li>
+          <li>Parietal cells: HCl (pH 1-2) + intrinsic factor (essential for B12 absorption in ileum).</li>
+          <li>Chief cells: pepsinogen → pepsin (activated by acid; begins protein digestion).</li>
+          <li>G cells (antrum): gastrin → stimulates parietal acid secretion.</li>
+          <li>D cells: somatostatin → inhibits acid secretion.</li>
+          <li>Enterochromaffin-like (ECL) cells: histamine → stimulate parietal cells (H2 receptor).</li></ul>
+        </li>
+        <li><strong>Three phases of gastric secretion:</strong>
+          <ol><li><em>Cephalic (~30%):</em> sight, smell, thought of food → vagus → ACh on parietal cells → acid + gastrin release.</li>
+          <li><em>Gastric (~60%):</em> stomach distention + protein/peptides → local + vagal reflexes → maximum gastrin and acid. Lasts hours.</li>
+          <li><em>Intestinal (~10%):</em> chyme entering duodenum initially briefly stimulates, then inhibits gastric activity via enterogastric reflex + CCK, secretin (matches stomach output to small intestine capacity).</li></ol>
+        </li>
+        <li><strong>Functions of gastric acid:</strong>
+          <ul><li>Denature proteins.</li>
+          <li>Activate pepsinogen → pepsin.</li>
+          <li>Kill most ingested microbes.</li>
+          <li>Solubilize iron (Fe³⁺ → Fe²⁺ for absorption).</li>
+          <li>Release B12 from food proteins.</li></ul>
+        </li>
+        <li><strong>Mucosal protection:</strong> mucus-bicarbonate barrier, rapid epithelial turnover, prostaglandins maintain blood flow. NSAIDs inhibit prostaglandins → ulcer risk.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Cell</th><th>Secretes</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>Parietal</td><td>HCl + IF</td><td>Acid + B12 absorption</td></tr>
+        <tr><td>Chief</td><td>Pepsinogen</td><td>Protein digestion</td></tr>
+        <tr><td>G cell</td><td>Gastrin</td><td>↑ Acid</td></tr>
+        <tr><td>D cell</td><td>Somatostatin</td><td>↓ Acid</td></tr>
+        <tr><td>ECL cell</td><td>Histamine</td><td>↑ Acid (H2)</td></tr>
+        <tr><td>Mucous</td><td>Mucus + HCO₃⁻</td><td>Protection</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>PUD (peptic ulcer disease):</strong> imbalance of acid vs mucosal defense. Two main causes: H. pylori (~70-90% of duodenal, ~50-70% of gastric) and NSAIDs. Test and treat H. pylori (triple or quadruple therapy). <strong>PPIs</strong> (omeprazole, pantoprazole): irreversibly inhibit parietal cell H⁺/K⁺ ATPase. <strong>H2 blockers</strong> (famotidine): block histamine effect on parietal cells. <strong>Pernicious anemia:</strong> autoimmune attack on parietal cells → no intrinsic factor → no B12 absorption → megaloblastic anemia + neuro symptoms.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw the gastric gland with all six cell types. Then draw the three regulators of parietal acid secretion (vagus → ACh, gastrin from G cells, histamine from ECL cells) converging on the H⁺/K⁺ ATPase.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which cell makes intrinsic factor, and what is it needed for?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why might chronic PPI use cause iron deficiency?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Parietal cell. Intrinsic factor binds vitamin B12 in stomach → IF-B12 complex absorbed in terminal ileum. Without IF, B12 deficiency develops (megaloblastic anemia + neuropathy).</li>
+        <li>Gastric acid solubilizes dietary iron (Fe³⁺ → Fe²⁺ for absorption in duodenum). Chronic acid suppression → less Fe²⁺ → iron deficiency anemia, especially in already at-risk patients.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 6 of 14</p>
+    <h2 class="card-title">Small intestine: anatomy + absorption <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The small intestine is where almost all nutrient absorption happens. Six meters long, optimized for surface area, and partnered with the pancreas and liver for chemistry.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Three regions:</strong>
+          <ul><li><em>Duodenum</em> (~25 cm): receives chyme + pancreatic enzymes + bile. Mostly retroperitoneal. Brunner glands secrete alkaline mucus.</li>
+          <li><em>Jejunum</em> (~2.5 m): main absorption site. Tall villi, many circular folds.</li>
+          <li><em>Ileum</em> (~3.5 m): completes absorption. Peyer's patches (MALT). Terminal ileum reabsorbs bile salts (enterohepatic circulation) and absorbs vitamin B12.</li></ul>
+        </li>
+        <li><strong>Surface area amplification</strong> (review):
+          <ul><li>Plicae (3×) → villi (10×) → microvilli (20×) ≈ <strong>600× total amplification</strong>.</li>
+          <li>Each villus has: enterocytes (absorption), goblet cells (mucus), enteroendocrine cells, a central lacteal (lymph), capillary network.</li>
+          <li>Brush border enzymes (on enterocyte microvilli): lactase, sucrase, maltase, peptidases, etc.</li></ul>
+        </li>
+        <li><strong>Crypts of Lieberkühn:</strong> tubular glands between villi. Stem cells migrate up villus, mature, then slough off (~5-day turnover). Paneth cells at base secrete antimicrobial peptides.</li>
+        <li><strong>Absorption mechanisms:</strong>
+          <ul><li>Passive diffusion: lipid-soluble substances, water.</li>
+          <li>Facilitated diffusion: fructose (GLUT-5).</li>
+          <li>Secondary active transport: glucose, galactose, amino acids (Na-cotransport via SGLT, etc.).</li>
+          <li>Active transport: ions.</li>
+          <li>Endocytosis: lipids in chylomicrons (into lacteals).</li></ul>
+        </li>
+        <li><strong>Hormones from the small intestine:</strong> CCK, secretin, GIP, GLP-1, motilin, ghrelin (mostly stomach but related), serotonin.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Region</th><th>Distinguishing feature</th><th>Key absorption</th></tr></thead>
+      <tbody>
+        <tr><td>Duodenum</td><td>Brunner glands, receives bile/pancreas</td><td>Iron, Ca</td></tr>
+        <tr><td>Jejunum</td><td>Tall villi, max surface</td><td>Carbs, AA, water-soluble vitamins</td></tr>
+        <tr><td>Ileum</td><td>Peyer's patches</td><td>B12, bile salts, fat-soluble vitamins</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Celiac disease:</strong> gluten triggers autoimmune attack on small intestinal villi → villous atrophy in proximal small intestine → malabsorption (especially iron, folate). Anti-tTG IgA + endoscopic biopsy confirms. Treat: lifelong gluten-free diet. <strong>Crohn disease</strong> often involves terminal ileum → B12 and bile salt malabsorption. <strong>Short bowel syndrome:</strong> after extensive resection. Diarrhea, malabsorption, often need TPN.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw a villus with its enterocytes, capillary network, and central lacteal. Indicate where carbs/AAs absorb (into capillary) vs fat (into lacteal).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Where is vitamin B12 absorbed?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient with Crohn disease involving the terminal ileum develops diarrhea after fatty meals. Mechanism?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Terminal ileum (requires intrinsic factor from stomach).</li>
+        <li>Bile salts are reabsorbed in the terminal ileum. With ileal disease, bile salts pass into the colon, where they irritate the mucosa and stimulate secretion → bile-acid diarrhea after fatty meals. Cholestyramine (bile-acid binder) can help.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 7 of 14</p>
+    <h2 class="card-title">Large intestine, microbiome, defecation <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The colon's main job is water reclamation and feces formation. The microbiome ferments fiber, makes vitamin K, and competes with pathogens. Loss of those bacteria (antibiotics) is its own disease.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Segments:</strong> cecum (with appendix) → ascending colon → transverse → descending → sigmoid → rectum → anal canal.</li>
+        <li><strong>Unique features:</strong>
+          <ul><li>Taeniae coli: three longitudinal muscle bands (instead of complete longitudinal layer).</li>
+          <li>Haustra: sac-like pouches between bands.</li>
+          <li>Epiploic appendages: small fat tags on serosa.</li>
+          <li>Mucosa: simple columnar with goblet cells (lots of mucus); no villi.</li></ul>
+        </li>
+        <li><strong>Functions:</strong>
+          <ul><li>Reabsorb water (~1.5 L/day in vs ~100 mL in stool).</li>
+          <li>Reabsorb electrolytes (Na, Cl).</li>
+          <li>Bacterial fermentation: ferment indigestible fiber → short-chain fatty acids (butyrate, acetate, propionate) → colonocyte fuel, anti-inflammatory.</li>
+          <li>Produce vitamin K and some B vitamins (bacterial).</li>
+          <li>Form and store feces.</li></ul>
+        </li>
+        <li><strong>Microbiome:</strong>
+          <ul><li>~100 trillion bacteria, &gt;1,000 species. Mostly anaerobic (Bacteroides, Firmicutes).</li>
+          <li>Roles: barrier, immune training, fermentation, vitamin production, drug metabolism.</li>
+          <li>Disruption (antibiotics, illness) → dysbiosis. Worst-case: C. difficile colitis after broad-spectrum antibiotics.</li></ul>
+        </li>
+        <li><strong>Defecation:</strong>
+          <ul><li>Mass movements (3-4× daily) push feces into rectum.</li>
+          <li>Stretch receptors in rectal wall → defecation reflex (S2-S4 parasympathetic).</li>
+          <li>Internal anal sphincter (smooth, involuntary) relaxes; external anal sphincter (skeletal, voluntary) under cortical control.</li>
+          <li>Valsalva maneuver assists.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Feature</th><th>Small intestine</th><th>Large intestine</th></tr></thead>
+      <tbody>
+        <tr><td>Length</td><td>~6 m</td><td>~1.5 m</td></tr>
+        <tr><td>Surface modifications</td><td>Plicae, villi, microvilli</td><td>None (just mucus + crypts)</td></tr>
+        <tr><td>Main job</td><td>Digestion + absorption</td><td>Water reabsorption, microbiome, feces</td></tr>
+        <tr><td>Unique muscle</td><td>Standard 2 layers</td><td>Taeniae coli</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>C. difficile colitis:</strong> often after antibiotics disrupt normal flora. Watery diarrhea, pseudomembranes, leukocytosis, ↑ lactate in severe. Treat with oral vancomycin or fidaxomicin; fecal microbiota transplant in recurrent. <strong>Diverticulosis:</strong> outpouchings of mucosa through muscular wall, common in sigmoid. Often asymptomatic; diverticulitis if inflamed. <strong>Colorectal cancer:</strong> 3rd leading cancer death. Screening with colonoscopy q10y starting age 45 (USPSTF).</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw the colon with taeniae coli and haustra. Add the appendix at the cecum. Mark sigmoid (common diverticulosis site) and rectum.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which vitamin is largely produced by colonic bacteria?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why is broad-spectrum antibiotic use a major risk factor for C. difficile?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Vitamin K (used in clotting factor synthesis). Newborns get a vitamin K shot at birth because their colon hasn't been colonized yet.</li>
+        <li>Antibiotics kill commensal anaerobes that normally outcompete C. diff. With the niche cleared, C. diff overgrows and produces toxins (TcdA, TcdB) that destroy colonic epithelium → pseudomembranous colitis.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 8 of 14</p>
+    <h2 class="card-title">Liver: anatomy + functions <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The liver is the body's central chemistry lab. It processes nutrients from the portal vein, detoxifies, makes plasma proteins, stores energy, produces bile, and regulates blood glucose between meals.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Anatomy:</strong> ~1.5 kg, right upper quadrant under diaphragm. Four lobes (right, left, caudate, quadrate). Capsule (Glisson's).</li>
+        <li><strong>Dual blood supply:</strong>
+          <ul><li>Hepatic artery (~25%): oxygenated blood.</li>
+          <li>Portal vein (~75%): nutrient-rich, deoxygenated blood from GI tract and spleen.</li>
+          <li>Both drain into hepatic sinusoids → hepatic veins → IVC.</li></ul>
+        </li>
+        <li><strong>Microscopic unit: hepatic lobule.</strong> Hexagonal; central vein in middle, portal triads at corners (hepatic artery, portal vein, bile duct). Hepatocytes arranged in plates.</li>
+        <li><strong>Bile flow:</strong> opposite direction from blood — from central vein toward portal triad bile ducts → common hepatic duct → cystic duct (to gallbladder) or common bile duct (to duodenum).</li>
+        <li><strong>Functions (a lot):</strong>
+          <ul><li><em>Metabolic:</em> gluconeogenesis, glycogen storage, glycogenolysis, lipogenesis, ketogenesis, urea synthesis (from ammonia), cholesterol synthesis.</li>
+          <li><em>Synthetic:</em> plasma proteins (albumin, clotting factors except VIII, complement proteins, transport proteins).</li>
+          <li><em>Detoxification:</em> Phase I (cytochrome P450) + Phase II (conjugation). Drugs, hormones, toxins.</li>
+          <li><em>Bile production:</em> ~600-1,200 mL/day.</li>
+          <li><em>Storage:</em> glycogen, iron (ferritin), fat-soluble vitamins (A, D, E, K), B12.</li>
+          <li><em>Immune:</em> Kupffer cells (resident macrophages) filter portal blood.</li>
+          <li><em>Activation:</em> vitamin D 25-hydroxylation; thyroid T4 → T3 (partly).</li></ul>
+        </li>
+        <li><strong>Lab markers:</strong>
+          <ul><li>AST/ALT: hepatocellular injury (ALT more liver-specific).</li>
+          <li>ALP / GGT: cholestasis or biliary obstruction.</li>
+          <li>Bilirubin: hepatic processing.</li>
+          <li>Albumin, PT/INR: synthetic function.</li>
+          <li>Ammonia: detox capacity.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary: liver failure consequences</h3>
+      <table class="summary"><thead><tr><th>Lost function</th><th>Clinical consequence</th></tr></thead>
+      <tbody>
+        <tr><td>Detox of ammonia</td><td>Hepatic encephalopathy</td></tr>
+        <tr><td>Albumin synthesis</td><td>Edema, ascites</td></tr>
+        <tr><td>Clotting factor synthesis</td><td>↑ INR, bleeding</td></tr>
+        <tr><td>Bilirubin processing</td><td>Jaundice</td></tr>
+        <tr><td>Estrogen metabolism</td><td>Gynecomastia, spider angiomata, palmar erythema (in cirrhotic males)</td></tr>
+        <tr><td>Portal flow</td><td>Portal HTN → varices, splenomegaly, ascites</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Cirrhosis</strong>: fibrosis + nodular regeneration replaces normal architecture. Causes: alcohol, viral hepatitis (B, C), NAFLD/NASH, autoimmune. Decompensation: ascites, variceal bleeding, hepatic encephalopathy, hepatorenal syndrome. <strong>Acetaminophen toxicity:</strong> overdose depletes glutathione → toxic metabolite (NAPQI) destroys hepatocytes. Antidote: N-acetylcysteine (NAC), most effective within 8-10 hours. <strong>Hepatic encephalopathy:</strong> precipitated by infection, GI bleed, constipation, electrolytes. Treat with lactulose (traps ammonia in colon) and rifaximin.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw a hepatic lobule: hexagon with central vein, six portal triads at corners. Show plates of hepatocytes between them. Add arrows for blood flow (toward center) and bile flow (toward periphery).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which lab elevation is most specific for hepatocellular injury?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does cirrhosis cause both ascites and bleeding?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>ALT (alanine aminotransferase). AST is also released from heart, muscle, RBC. AST &gt; ALT 2:1 suggests alcoholic liver disease.</li>
+        <li>Reduced albumin synthesis → ↓ oncotic pressure → fluid leaves vessels (ascites, edema). Portal hypertension drives more fluid out of splanchnic capillaries. Reduced clotting factor synthesis (II, VII, IX, X) → ↑ INR → bleeding tendency. Both reflect loss of synthetic function. Splenomegaly from portal HTN also sequesters platelets, compounding bleeding risk.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 9 of 14</p>
+    <h2 class="card-title">Gallbladder + bile <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The gallbladder stores and concentrates bile between meals. When fat enters the duodenum, CCK signals release, and bile emulsifies lipids for digestion.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Anatomy:</strong> pear-shaped sac under the liver's right lobe. Cystic duct joins common hepatic duct → common bile duct → joins pancreatic duct at ampulla of Vater → enters duodenum via sphincter of Oddi.</li>
+        <li><strong>Bile composition:</strong> bile salts (cholesterol-derived), cholesterol, phospholipids, bilirubin (waste from RBC breakdown), water, electrolytes.</li>
+        <li><strong>Functions of bile:</strong>
+          <ul><li>Emulsify fats (mechanical breakup of fat globules into smaller droplets → ↑ surface area for lipase).</li>
+          <li>Form micelles (transport fat-soluble products to enterocyte).</li>
+          <li>Excrete bilirubin, cholesterol, and other waste.</li>
+          <li>Mild bactericidal activity.</li></ul>
+        </li>
+        <li><strong>Release:</strong>
+          <ol><li>Fat (and protein) in duodenum → CCK from I cells.</li>
+          <li>CCK contracts gallbladder + relaxes sphincter of Oddi.</li>
+          <li>Bile flows into duodenum.</li>
+          <li>Bile salts emulsify fat → absorbed in jejunum/ileum.</li>
+          <li>~95% of bile salts reabsorbed at terminal ileum → enterohepatic circulation back to liver (cycles 4-12× per meal).</li></ol>
+        </li>
+        <li><strong>Bilirubin pathway:</strong>
+          <ul><li>RBC breakdown → heme → biliverdin → unconjugated (indirect) bilirubin (lipid-soluble, albumin-bound).</li>
+          <li>Liver conjugates bilirubin with glucuronic acid → conjugated (direct) bilirubin (water-soluble).</li>
+          <li>Conjugated bilirubin excreted in bile → gut bacteria reduce to urobilinogen → some reabsorbed (urine: urobilin = yellow); rest oxidized to stercobilin (stool: brown).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary: causes of jaundice</h3>
+      <table class="summary"><thead><tr><th>Type</th><th>Mechanism</th><th>Bilirubin pattern</th></tr></thead>
+      <tbody>
+        <tr><td>Pre-hepatic</td><td>Hemolysis → ↑ unconjugated</td><td>↑ Unconjugated</td></tr>
+        <tr><td>Hepatic</td><td>Hepatocyte dysfunction</td><td>Mixed (uncon + con)</td></tr>
+        <tr><td>Post-hepatic</td><td>Biliary obstruction (stone, tumor)</td><td>↑ Conjugated, ↑ ALP, ↑ GGT, dark urine, pale stool</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Cholelithiasis</strong> (gallstones): ~80% cholesterol, ~20% pigment. Risk factors: "4 F's" — fat, female, fertile, forty (plus rapid weight loss, OCP, ethnicity). <strong>Cholecystitis:</strong> stone obstructs cystic duct → gallbladder inflammation. RUQ pain, fever, Murphy's sign. <strong>Choledocholithiasis</strong>: stone in CBD → obstructive jaundice ± pancreatitis. ERCP for stone removal. <strong>Cholangitis:</strong> infected obstructed CBD. Charcot triad: RUQ pain + fever + jaundice. Reynolds pentad adds hypotension + AMS — septic shock.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw the biliary tree: hepatic ducts → common hepatic → cystic → gallbladder; common bile duct + pancreatic duct meeting at the ampulla → duodenum. Mark sphincter of Oddi. Add arrows for CCK action.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What hormone triggers gallbladder contraction in response to a fatty meal?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient with obstructive jaundice has pale stools and dark urine. Explain.</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>CCK (cholecystokinin), from I cells in the duodenum.</li>
+        <li>CBD obstruction prevents conjugated bilirubin from reaching the gut → no stercobilin → pale stools. The water-soluble conjugated bilirubin backs up into blood → kidney excretes it → dark (tea-colored) urine.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="AP">
+    <p class="card-eyebrow">GI &middot; Concept 10 of 14</p>
+    <h2 class="card-title">Pancreas: exocrine function <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The pancreas is two organs in one. The exocrine pancreas produces digestive enzymes and bicarbonate-rich fluid. The endocrine pancreas (islets) makes insulin and glucagon — covered in endocrine notes.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Anatomy:</strong> retroperitoneal organ across L1-L2, behind stomach. Head (in C-loop of duodenum), neck, body, tail (extends to spleen).</li>
+        <li><strong>Two outputs:</strong>
+          <ul><li>Main pancreatic duct (Wirsung) → joins CBD at ampulla of Vater.</li>
+          <li>Accessory duct (Santorini) in some people.</li></ul>
+        </li>
+        <li><strong>Acinar cells</strong> (~80% of pancreas): secrete digestive enzymes as inactive zymogens.</li>
+        <li><strong>Duct cells:</strong> secrete bicarbonate-rich fluid (neutralizes acidic chyme to pH 7-8 in duodenum).</li>
+        <li><strong>Pancreatic enzymes:</strong>
+          <ul><li><em>Proteases:</em> trypsinogen, chymotrypsinogen, proelastase, procarboxypeptidase. All inactive until enterokinase (from duodenum) cleaves trypsinogen → trypsin, which activates the rest.</li>
+          <li><em>Pancreatic amylase:</em> starch digestion.</li>
+          <li><em>Pancreatic lipase:</em> triglyceride digestion (with bile salts).</li>
+          <li><em>Nucleases:</em> DNase, RNase.</li></ul>
+        </li>
+        <li><strong>Control:</strong>
+          <ul><li>CCK (from I cells in duodenum, triggered by fat/protein) → acinar enzyme release.</li>
+          <li>Secretin (from S cells, triggered by acid in duodenum) → duct cell bicarbonate release.</li>
+          <li>Vagus stimulation (parasympathetic) augments both.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Cell / output</th><th>Substance</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>Acinar</td><td>Zymogens (trypsinogen, etc.) + amylase + lipase</td><td>Digest protein, carb, fat, nucleic acids</td></tr>
+        <tr><td>Duct cell</td><td>Bicarbonate fluid</td><td>Neutralize chyme</td></tr>
+        <tr><td>Islet β / α / δ</td><td>Insulin / glucagon / somatostatin</td><td>Glucose homeostasis (endocrine — see endocrine notes)</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Acute pancreatitis:</strong> autodigestion. Most common causes: gallstones (cause obstruction at ampulla) and alcohol. Severe epigastric pain radiating to back, nausea, vomiting. Labs: ↑ lipase (more specific) and ↑ amylase. Management: NPO, IV fluids (aggressive), pain control, treat cause. <strong>Chronic pancreatitis:</strong> permanent damage → exocrine insufficiency (steatorrhea, weight loss) and eventually endocrine insufficiency (diabetes). Treat with pancreatic enzyme replacement. <strong>Pancreatic cancer:</strong> often presents late; Courvoisier sign (palpable non-tender gallbladder + jaundice) suggests pancreatic head mass obstructing CBD.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw the pancreas with head in duodenal C-loop, body across L1-L2, tail to spleen. Add ducts and ampulla of Vater. Show CCK and secretin arrows from duodenum to pancreas with their effects.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Why are pancreatic enzymes secreted as zymogens?</li>
+      <li><span class="qc-meta">DOK 4.</span> In pancreatitis, premature trypsinogen activation in the pancreas causes autodigestion. Explain.</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>To prevent the pancreas from digesting itself. Zymogens are inactive precursors; activation happens only in the duodenum via enterokinase, where trypsin activates the rest in cascade.</li>
+        <li>Normally trypsinogen is held inactive until reaching the duodenum. Disease (stone blocking ampulla, alcohol, etc.) can trigger premature intra-pancreatic activation. Activated trypsin then activates the entire cascade locally → autodigestion → inflammation, edema, hemorrhage, fat necrosis, and in severe cases systemic SIRS/ARDS.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c11" data-tags="P">
+    <p class="card-eyebrow">GI &middot; Concept 11 of 14</p>
+    <h2 class="card-title">Carbohydrate digestion and absorption <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Carbohydrates are broken down to monosaccharides (glucose, fructose, galactose) before absorption. The brush border does the last step. Lactose intolerance is the most common malabsorption you'll see clinically.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Dietary carb forms:</strong>
+          <ul><li>Polysaccharides: starch, glycogen, fiber (indigestible).</li>
+          <li>Disaccharides: sucrose (glucose-fructose), lactose (glucose-galactose), maltose (glucose-glucose).</li>
+          <li>Monosaccharides: glucose, fructose, galactose.</li></ul>
+        </li>
+        <li><strong>Digestion pathway:</strong>
+          <ol><li>Mouth: salivary amylase begins starch digestion.</li>
+          <li>Stomach: amylase inactivated by acid.</li>
+          <li>Duodenum: pancreatic amylase breaks starch to disaccharides + oligosaccharides.</li>
+          <li>Brush border (enterocyte microvilli): lactase, sucrase, maltase split disaccharides into monosaccharides.</li>
+          <li>Absorption: monosaccharides cross enterocyte → portal vein → liver.</li></ol>
+        </li>
+        <li><strong>Absorption mechanisms:</strong>
+          <ul><li>Glucose, galactose: secondary active transport via SGLT-1 (Na cotransport).</li>
+          <li>Fructose: facilitated diffusion via GLUT-5.</li>
+          <li>All exit basolateral side via GLUT-2 into portal blood.</li></ul>
+        </li>
+        <li><strong>Lactose intolerance:</strong> ↓ lactase activity (common in adults of African, Asian, Native American descent). Undigested lactose → osmotic diarrhea + bacterial fermentation (gas, bloating).</li>
+        <li><strong>Fiber:</strong> indigestible. Soluble (oats, beans) → slows absorption, lowers cholesterol. Insoluble (wheat bran) → bulks stool, prevents constipation. Bacterial fermentation produces SCFAs.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>SGLT2 inhibitors</strong> (empagliflozin, dapagliflozin) block renal glucose reabsorption — exploit the same transporter class to dump glucose in urine, lowering blood glucose and providing cardio-renal benefit in T2DM and HF.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Trace one starch molecule from mouth to portal vein. Mark each digestion step and the transporter used at the enterocyte.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which transporter brings glucose into the enterocyte apical membrane?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does undigested lactose cause diarrhea?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>SGLT-1 (sodium-glucose cotransporter, secondary active transport).</li>
+        <li>Undigested lactose draws water into the gut lumen osmotically (osmotic diarrhea) and is fermented by colonic bacteria producing gas (bloating, flatulence) and short-chain fatty acids.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c12" data-tags="P">
+    <p class="card-eyebrow">GI &middot; Concept 12 of 14</p>
+    <h2 class="card-title">Protein digestion and absorption <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Protein digestion starts in the stomach with pepsin, finishes in the small intestine with pancreatic and brush border enzymes. Amino acids and small peptides are absorbed by Na-cotransport.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Digestion pathway:</strong>
+          <ol><li>Stomach: HCl denatures protein; pepsin (from chief cell pepsinogen) cleaves peptide bonds → polypeptides.</li>
+          <li>Duodenum: enterokinase activates trypsinogen → trypsin → cascade activates chymotrypsin, elastase, carboxypeptidase A/B → smaller peptides + amino acids.</li>
+          <li>Brush border peptidases (aminopeptidases, dipeptidases) finish the job.</li>
+          <li>Absorption: amino acids, dipeptides, tripeptides taken up by enterocytes.</li></ol>
+        </li>
+        <li><strong>Absorption mechanisms:</strong>
+          <ul><li>Amino acids: multiple Na-cotransporters specific to AA class (neutral, acidic, basic, etc.).</li>
+          <li>Dipeptides and tripeptides: PepT1 transporter (H⁺-cotransport). Cleaved inside cell.</li>
+          <li>Exit basolateral side → portal vein → liver.</li></ul>
+        </li>
+        <li><strong>Neonates</strong> can absorb intact proteins briefly (gut permeability) → enables passive immunity from breast milk IgA. Closes within first months.</li>
+        <li><strong>Essential amino acids</strong> (9; cannot be synthesized): histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, valine.</li>
+        <li class="deep-dive"><strong>Hartnup disease:</strong> defect in neutral AA transporter → ↓ tryptophan absorption → pellagra-like skin and neurologic symptoms (tryptophan is niacin precursor).</li>
+        <li><strong>B12 absorption</strong> is unique:
+          <ol><li>Pepsin releases B12 from food protein in stomach.</li>
+          <li>B12 binds R-protein (salivary glands).</li>
+          <li>Pancreatic enzymes cleave R-protein in duodenum.</li>
+          <li>B12 binds intrinsic factor (from parietal cells).</li>
+          <li>IF-B12 complex absorbed by specific receptor in terminal ileum.</li></ol>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Pernicious anemia:</strong> autoimmune destruction of parietal cells → no intrinsic factor → no B12 absorption → megaloblastic anemia + neuro symptoms (subacute combined degeneration). <strong>Ileal resection or Crohn disease</strong> affecting the terminal ileum also causes B12 deficiency. Treat with IM or high-dose oral B12.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Trace a dietary protein from stomach to amino acid in portal blood. Mark each enzyme. Then draw the B12 absorption path with all its handoffs.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What activates trypsinogen to trypsin?</li>
+      <li><span class="qc-meta">DOK 4.</span> A vegan patient has megaloblastic anemia. Why is this expected?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Enterokinase (enteropeptidase), released from duodenal mucosa. Trypsin then activates the rest of the protease cascade.</li>
+        <li>B12 comes only from animal sources (or fortification). Strict vegans without B12 supplementation eventually deplete liver stores (~3-5 years' worth) and develop megaloblastic anemia + neurologic symptoms. Always supplement.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c13" data-tags="P">
+    <p class="card-eyebrow">GI &middot; Concept 13 of 14</p>
+    <h2 class="card-title">Lipid digestion: micelles, chylomicrons, fat-soluble vitamins <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Fats need extra steps because they don't dissolve in water. Bile emulsifies, lipase digests, micelles ferry products to the enterocyte, and chylomicrons carry absorbed fat into lymph rather than blood.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Dietary lipid forms:</strong> triglycerides (most, ~90%), phospholipids, cholesterol, fat-soluble vitamins (A, D, E, K).</li>
+        <li><strong>Digestion pathway:</strong>
+          <ol><li>Mouth and stomach: minimal (lingual and gastric lipase contribute small amount).</li>
+          <li>Duodenum: bile salts emulsify large fat globules into small droplets → ↑ surface area.</li>
+          <li>Pancreatic lipase + colipase cleave triglycerides → 2 free fatty acids + monoglyceride.</li>
+          <li>Products combine with bile salts to form <em>micelles</em> → ferry products through unstirred water layer to enterocyte microvilli.</li>
+          <li>Inside enterocyte: re-esterified into triglycerides; packaged with cholesterol, phospholipids, and apolipoprotein B-48 into <em>chylomicrons</em>.</li>
+          <li>Chylomicrons exit via lacteals → lymph → thoracic duct → left subclavian vein → systemic circulation. Bypass the liver initially.</li></ol>
+        </li>
+        <li><strong>Fat-soluble vitamins (ADEK):</strong> absorbed with fats. Stored in liver and adipose. Deficiency states reflect malabsorption (cholestasis, pancreatic insufficiency, celiac, CF).</li>
+        <li><strong>Vitamin K specifically</strong> is also produced by colonic bacteria. Needed for clotting factors II, VII, IX, X and proteins C, S. Warfarin is a vitamin K antagonist.</li>
+        <li><strong>Enterohepatic circulation:</strong> ~95% of bile salts reabsorbed in terminal ileum → portal vein → liver → recycled into bile. Liver only needs to synthesize ~5% of total bile pool per cycle.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Step</th><th>Where</th><th>What happens</th></tr></thead>
+      <tbody>
+        <tr><td>Emulsification</td><td>Duodenum</td><td>Bile salts → small droplets</td></tr>
+        <tr><td>Hydrolysis</td><td>Duodenum / jejunum</td><td>Pancreatic lipase → FFA + monoglyceride</td></tr>
+        <tr><td>Micelle formation</td><td>Lumen</td><td>Bile salts + lipid products → ferries</td></tr>
+        <tr><td>Absorption</td><td>Enterocyte</td><td>Products diffuse into cell</td></tr>
+        <tr><td>Chylomicron packaging</td><td>Inside enterocyte</td><td>Resyntehsized TGs + apoB-48</td></tr>
+        <tr><td>Transport</td><td>Lacteal → thoracic duct</td><td>Lymph, not portal</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Steatorrhea</strong> (fatty, foul-smelling, floating stool): malabsorption of fat. Causes: pancreatic insufficiency (CF, chronic pancreatitis), bile insufficiency (biliary obstruction, ileal disease losing enterohepatic recycling), mucosal disease (celiac). Also lose fat-soluble vitamins (ADEK). <strong>Orlistat</strong> (anti-obesity drug): blocks pancreatic lipase → fat malabsorption → weight loss + steatorrhea side effect.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw a fat globule's journey: emulsification by bile, lipase hydrolysis, micelle formation, enterocyte uptake, chylomicron formation, lacteal transport. Compare to monosaccharide/AA pathway (portal vein).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which lipoprotein carries dietary fat from gut to circulation?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient with chronic pancreatitis develops easy bruising. Why?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Chylomicrons.</li>
+        <li>Chronic pancreatitis → ↓ pancreatic lipase → fat malabsorption → ↓ absorption of fat-soluble vitamin K → ↓ synthesis of clotting factors II, VII, IX, X → ↑ INR and bruising/bleeding. Replace with pancreatic enzymes + parenteral vitamin K.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c14" data-tags="CLIN">
+    <p class="card-eyebrow">GI &middot; Concept 14 of 14</p>
+    <h2 class="card-title">Common GI conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Most GI presentations are one of these patterns: motility (GERD, IBS, gastroparesis), mucosal damage (PUD, IBD, celiac), obstruction (mechanical or ileus), inflammation (appendicitis, diverticulitis, pancreatitis, cholecystitis), bleeding (upper vs lower), or hepatobiliary (cirrhosis, hepatitis, cholestasis).</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>GERD:</strong> LES dysfunction → heartburn, regurgitation, atypical (cough, hoarse, asthma). Complication: Barrett esophagus (premalignant). PPI + lifestyle.</li>
+        <li><strong>PUD:</strong> H. pylori (~70-90% duodenal) and NSAIDs (most gastric). Epigastric pain, GI bleed, perforation. Test and treat H. pylori. PPI.</li>
+        <li><strong>IBS:</strong> functional disorder. Abdominal pain related to defecation, altered bowel habits. No structural cause. Rome IV criteria. Manage diet (low FODMAP), antispasmodics, fiber, antidepressants.</li>
+        <li><strong>IBD:</strong>
+          <ul><li>Crohn: anywhere mouth-to-anus, transmural, skip lesions, fistulas, terminal ileum favored. Smoking worsens.</li>
+          <li>UC: continuous from rectum, mucosa only, bloody diarrhea, ↑ colon cancer risk after years.</li></ul>
+        </li>
+        <li><strong>Appendicitis:</strong> obstruction of appendix lumen → inflammation. Periumbilical → RLQ pain, fever, anorexia, nausea. McBurney's point, Rovsing's, psoas, obturator signs. Surgical.</li>
+        <li><strong>Diverticulitis:</strong> inflamed diverticulum (usually sigmoid). LLQ pain, fever, ↑ WBC. CT confirms. Bowel rest, antibiotics; surgery if complicated.</li>
+        <li><strong>Hepatitis:</strong>
+          <ul><li>A: fecal-oral, acute, self-limited. Vaccine available.</li>
+          <li>B: blood/sex, can be chronic, hepatocellular cancer risk. Vaccine.</li>
+          <li>C: blood, often chronic, treatable now with DAAs. No vaccine.</li>
+          <li>D: only with B. E: like A, dangerous in pregnancy.</li></ul>
+        </li>
+        <li><strong>Cirrhosis</strong> (covered in liver concept): decompensation = ascites, varices, encephalopathy, hepatorenal syndrome.</li>
+        <li><strong>Cholelithiasis / cholecystitis</strong> (covered in gallbladder concept).</li>
+        <li><strong>Pancreatitis</strong> (covered in pancreas concept).</li>
+        <li><strong>GI bleeding:</strong>
+          <ul><li>Upper (proximal to ligament of Treitz): hematemesis, melena. Causes: PUD, varices, Mallory-Weiss, malignancy.</li>
+          <li>Lower (distal): hematochezia. Causes: diverticulosis, AVM, hemorrhoids, neoplasm, ischemic colitis.</li>
+          <li>Resuscitate with IV fluids and blood; PPI for upper; octreotide for variceal; endoscopy.</li></ul>
+        </li>
+        <li><strong>Colorectal cancer:</strong> usually adenoma → adenocarcinoma sequence over years. Screening: colonoscopy q10y from age 45, or FIT yearly. Symptoms (late): change in habits, blood, weight loss, anemia.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Pattern</th><th>Examples</th><th>Initial action</th></tr></thead>
+      <tbody>
+        <tr><td>Acute abdomen</td><td>Appendicitis, perforation, ischemia</td><td>Surgical consult, imaging</td></tr>
+        <tr><td>Upper GI bleed</td><td>PUD, varices</td><td>Resuscitate, PPI, endoscopy</td></tr>
+        <tr><td>Lower GI bleed</td><td>Diverticular, AVM</td><td>Resuscitate, colonoscopy</td></tr>
+        <tr><td>Chronic mucosal disease</td><td>IBD, celiac</td><td>Endoscopy + biopsy, specialty referral</td></tr>
+        <tr><td>Hepatobiliary</td><td>Hepatitis, cirrhosis, stones</td><td>LFTs, imaging, hepatology</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Nursing assessment for acute abdomen: vital signs (sepsis screen), abdominal exam (tenderness, rebound, guarding, rigidity, bowel sounds), HEENT (jaundice, pallor), CV/lung (assess for shock), pain quality and location, last menses (always rule out pregnancy in reproductive-age females), medication review (anticoagulants, steroids, NSAIDs). NPO and IV access while workup proceeds.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Build an "acute abdomen by quadrant" reference card. RUQ: cholecystitis, hepatitis. Epigastric: PUD, pancreatitis, MI. LUQ: splenic. RLQ: appendicitis. LLQ: diverticulitis. Diffuse: peritonitis, mesenteric ischemia, bowel obstruction.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> A patient on long-term NSAIDs develops epigastric pain and melena. Most likely diagnosis?</li>
+      <li><span class="qc-meta">DOK 4.</span> A cirrhotic patient with new altered mental status and asterixis. What's the diagnosis and three precipitants to look for?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>NSAID-induced gastric ulcer with upper GI bleed.</li>
+        <li>Hepatic encephalopathy. Precipitants to investigate: infection (SBP, UTI, pneumonia), GI bleed (high protein load), constipation, electrolyte imbalance (hypokalemia, hyponatremia), medication (sedatives, opioids), dietary indiscretion. Treat the precipitant + lactulose + rifaximin.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. GI/Digestive master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p></footer>
+</div>
+
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · GI / Digestive';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='gi-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

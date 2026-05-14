@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cells — Concept Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:14px 0 0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Cells: Anatomy &amp; Physiology</h1>
+    <p class="usage">The cell is the smallest unit of life. Cell anatomy is the parts list — organelles, membrane, cytoskeleton. Cell physiology is what those parts actually do — transport, signal, divide, die. Tight cellular machinery underlies every system.</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">7</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="A">
+    <p class="card-eyebrow">Cells &middot; Concept 1 of 7</p>
+    <h2 class="card-title">Cell anatomy and organelles <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The cell is a factory. Each organelle has a specific job — like rooms in the factory. Knowing each part predicts which cells specialize where.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Three basic parts of any cell:</strong>
+          <ul><li>Plasma membrane (boundary).</li>
+          <li>Cytoplasm (cytosol + organelles).</li>
+          <li>Nucleus (in eukaryotes — houses DNA).</li></ul>
+        </li>
+        <li><strong>Nucleus:</strong>
+          <ul><li>Largest organelle. Contains DNA (chromatin → chromosomes during division).</li>
+          <li>Nuclear envelope: double membrane with nuclear pores (allow mRNA, proteins to cross).</li>
+          <li>Nucleolus: dense region inside; makes ribosomes.</li>
+          <li>Most cells have one nucleus; some have many (skeletal muscle); RBC has none.</li></ul>
+        </li>
+        <li><strong>Ribosomes:</strong>
+          <ul><li>Sites of protein synthesis.</li>
+          <li>Free (cytoplasm) → make cytoplasmic proteins.</li>
+          <li>Attached to rough ER → make secretory + membrane proteins.</li></ul>
+        </li>
+        <li><strong>Endoplasmic reticulum (ER):</strong>
+          <ul><li>Rough ER (RER): studded with ribosomes; folds + modifies proteins for export.</li>
+          <li>Smooth ER (SER): no ribosomes. Makes lipids + steroids; detoxifies drugs (abundant in liver); stores Ca²⁺ (especially in muscle = SR).</li></ul>
+        </li>
+        <li><strong>Golgi apparatus:</strong> modifies, sorts, packages proteins from RER into vesicles destined for plasma membrane, lysosomes, or secretion. The cell's post office.</li>
+        <li><strong>Mitochondria:</strong>
+          <ul><li>"Powerhouse" — makes most ATP via oxidative phosphorylation.</li>
+          <li>Double-membrane bound; inner membrane folded into cristae.</li>
+          <li>Has its own DNA (mtDNA) and ribosomes; maternally inherited.</li>
+          <li>Number per cell varies dramatically by energy demand (lots in muscle, neurons, liver; few in skin, lens).</li></ul>
+        </li>
+        <li><strong>Lysosomes:</strong>
+          <ul><li>Membrane-bound bags of digestive enzymes (acid hydrolases).</li>
+          <li>Break down waste, debris, pathogens, dead organelles (autophagy).</li>
+          <li>Defects → lysosomal storage diseases (Tay-Sachs, Gaucher, Pompe).</li></ul>
+        </li>
+        <li><strong>Peroxisomes:</strong>
+          <ul><li>Detoxify (catalase: H₂O₂ → H₂O + O₂).</li>
+          <li>Break down very long-chain fatty acids.</li>
+          <li>Abundant in liver + kidney.</li></ul>
+        </li>
+        <li><strong>Cytoskeleton:</strong>
+          <ul><li>Microfilaments (actin): cell shape, contraction, motility (cell division cleavage).</li>
+          <li>Intermediate filaments: tensile strength (keratin in skin, neurofilaments in axons, desmin in muscle).</li>
+          <li>Microtubules: structural support, intracellular transport (kinesin, dynein motors), mitotic spindle, cilia + flagella cores.</li></ul>
+        </li>
+        <li><strong>Centrosome / centrioles:</strong> organize microtubules; form mitotic spindle during division.</li>
+        <li><strong>Cilia and flagella:</strong>
+          <ul><li>Cilia: many short projections; move fluid across cell surface (respiratory, fallopian tube).</li>
+          <li>Flagellum: single long projection for cell motility (sperm).</li></ul>
+        </li>
+        <li><strong>Inclusions:</strong> non-living storage (glycogen granules, lipid droplets, melanin).</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Tay-Sachs</strong>: lysosomal hexosaminidase A deficiency → GM2 ganglioside accumulates in neurons → neurodegeneration in infancy. <strong>Mitochondrial diseases</strong> (MELAS, Leber): maternally inherited; affect high-energy tissues. <strong>Kartagener syndrome (PCD):</strong> defective cilia → recurrent sinusitis, bronchiectasis, infertility, situs inversus.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which organelle is the main site of ATP production?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why do liver hepatocytes have abundant smooth ER?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Mitochondrion.</li><li>Liver detoxifies drugs (cytochrome P450 enzymes live in SER) and synthesizes lipids/steroids (also SER functions). Heavy drug or alcohol use induces SER proliferation.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Cells &middot; Concept 2 of 7</p>
+    <h2 class="card-title">Plasma membrane structure <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The plasma membrane is a phospholipid bilayer studded with proteins. Polar heads face water on both sides; nonpolar tails face inward. The "fluid mosaic model" captures both its movement and its composition.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Phospholipid bilayer:</strong>
+          <ul><li>Two layers of phospholipids. Polar (hydrophilic) heads face extracellular fluid and cytosol; nonpolar (hydrophobic) tails face each other in the middle.</li>
+          <li>Self-assembles in water due to the hydrophobic effect.</li>
+          <li>Selectively permeable — small nonpolar molecules cross freely; ions and polar molecules need transport proteins.</li></ul>
+        </li>
+        <li><strong>Cholesterol</strong> (in animal membranes only):
+          <ul><li>Sits between phospholipid tails.</li>
+          <li>Stiffens at high temperatures (reduces fluidity).</li>
+          <li>Increases fluidity at low temperatures (prevents packing).</li>
+          <li>Stabilizes the membrane across temperature ranges.</li></ul>
+        </li>
+        <li><strong>Membrane proteins (functions):</strong>
+          <ul><li><em>Channels and transporters:</em> let ions and molecules cross.</li>
+          <li><em>Receptors:</em> bind signaling molecules (covered in Concept 5).</li>
+          <li><em>Enzymes:</em> catalyze reactions at membrane.</li>
+          <li><em>Cell identity markers:</em> glycoproteins (MHC, ABO antigens) → immune recognition, blood typing.</li>
+          <li><em>Adhesion molecules:</em> bind to neighboring cells or ECM (CAMs, integrins, cadherins).</li>
+          <li><em>Cytoskeleton anchors:</em> link membrane to internal structure.</li></ul>
+        </li>
+        <li><strong>Carbohydrates:</strong> attached to lipids (glycolipids) or proteins (glycoproteins) on the outer surface only → form the "glycocalyx" coat. Cell recognition, protection, lubrication.</li>
+        <li><strong>Cell junctions</strong> (between adjacent cells):
+          <ul><li><em>Tight junctions:</em> seal the space between cells; prevent leakage (apical surfaces of epithelium).</li>
+          <li><em>Desmosomes:</em> mechanical anchors that bind cells together (in tissues that experience stress — skin, cardiac muscle).</li>
+          <li><em>Gap junctions:</em> protein channels (connexins) allow ions and small molecules to pass directly between cells (cardiac muscle, smooth muscle, neurons).</li></ul>
+        </li>
+        <li><strong>Resting membrane potential</strong> (preview): the membrane maintains an electrical gradient by selective permeability + active Na/K ATPase. Resting neuron ~−70 mV. Detailed in nervous Concept 3.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Cystic fibrosis</strong>: defective CFTR chloride channel → thick mucus in lungs, GI, exocrine pancreas, sweat. Sweat chloride test diagnostic. <strong>Pemphigus vulgaris</strong>: autoantibodies against desmoglein in desmosomes → skin and mucosal blistering. <strong>Cardiac arrhythmias</strong>: many target gap junction connexins or ion channels.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which junction type allows ions to pass directly between cells?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does the plasma membrane self-assemble into a bilayer in water?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Gap junctions (made of connexin proteins forming connexons).</li><li>Phospholipids are amphipathic — polar heads love water, nonpolar tails avoid it. In water, the most stable arrangement is a bilayer where heads face water on both sides and tails are buried inside, away from water. This is the hydrophobic effect.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="P">
+    <p class="card-eyebrow">Cells &middot; Concept 3 of 7</p>
+    <h2 class="card-title">Passive transport: diffusion, osmosis, facilitated diffusion <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Passive transport doesn't require ATP. Substances move down their gradients (high → low). What determines whether something can cross is its size, charge, and lipid solubility.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Simple diffusion:</strong>
+          <ul><li>Molecules move spontaneously from higher to lower concentration.</li>
+          <li>No transport protein needed — substance crosses the bilayer directly.</li>
+          <li>What can do this: small nonpolar / lipid-soluble molecules (O₂, CO₂, N₂, steroids, fatty acids, urea).</li>
+          <li>Rate depends on: concentration gradient, surface area, temperature, membrane thickness.</li>
+          <li>Fick's law: rate ∝ (concentration gradient × area × permeability) / thickness.</li></ul>
+        </li>
+        <li><strong>Facilitated diffusion:</strong>
+          <ul><li>Still passive (down gradient), but uses transport proteins because the molecule can't cross alone.</li>
+          <li>Two types of proteins:
+            <ul><li><em>Channels:</em> tubes that allow specific ions through. Many are gated (voltage-gated, ligand-gated, mechanically-gated).</li>
+            <li><em>Carriers (uniporters):</em> bind substance → undergo conformational change → release on other side. Glucose into RBCs via GLUT-1.</li></ul>
+          </li>
+          <li>Saturable — once all carriers are occupied, rate plateaus (Vmax).</li></ul>
+        </li>
+        <li><strong>Osmosis:</strong>
+          <ul><li>Diffusion of water across a selectively permeable membrane.</li>
+          <li>Water moves from low solute → high solute (toward higher concentration of dissolved stuff).</li>
+          <li>Aquaporins are channels that vastly speed water flux in many tissues (esp. kidney collecting duct under ADH).</li></ul>
+        </li>
+        <li><strong>Tonicity:</strong> effective osmolarity of a solution relative to a cell.
+          <ul><li><em>Isotonic:</em> same effective osmolarity → no net water movement → cell unchanged. 0.9% NaCl (normal saline), LR.</li>
+          <li><em>Hypotonic:</em> less solute outside → water moves IN → cell swells, possibly lyses. RBCs in pure water hemolyze.</li>
+          <li><em>Hypertonic:</em> more solute outside → water moves OUT → cell shrinks (crenates). 3% NaCl for severe hyponatremia.</li></ul>
+        </li>
+        <li><strong>Osmolarity vs tonicity:</strong> only effective (non-penetrating) solutes contribute to tonicity. Urea crosses freely so does not contribute to tonicity even though it raises osmolarity.</li>
+        <li><strong>Osmotic pressure:</strong> the pressure needed to prevent water flow into a solution. Higher solute → higher osmotic pressure.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>IV fluid selection</strong>: isotonic (NS, LR) for volume resuscitation; hypotonic (½ NS, D5W as free water) for free water deficit (hypernatremia); hypertonic (3% NaCl, mannitol) for severe hyponatremia, cerebral edema, ICP management. <strong>D5W appears isotonic in the bag</strong> but the glucose gets metabolized, leaving water that distributes across total body water — effectively a hypotonic infusion. <strong>Mannitol</strong>: osmotic diuretic; pulls water from brain to reduce ICP, then excreted by kidneys.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which transport mechanism uses aquaporins?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient receives rapid IV pure water. What happens to RBCs?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Osmosis (water moves through aquaporin channels across membranes).</li><li>Pure water is profoundly hypotonic. Water rushes into RBCs → they swell and lyse (hemolysis). Pure water is never given IV for this reason.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="P">
+    <p class="card-eyebrow">Cells &middot; Concept 4 of 7</p>
+    <h2 class="card-title">Active transport, secondary active transport, vesicular transport <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Active transport requires energy. Substances can be moved against their gradients, which is what lets cells build the gradients on which all of physiology depends.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Primary active transport (uses ATP directly):</strong>
+          <ul><li><em>Na/K ATPase:</em> the workhorse. 3 Na⁺ out, 2 K⁺ in per ATP. Maintains the Na and K gradients essential for resting membrane potential, secondary transport, cell volume.</li>
+          <li><em>Ca²⁺ ATPase:</em> pumps Ca²⁺ out of cytoplasm into ER/SR or out of cell. Essential for muscle relaxation and signal termination.</li>
+          <li><em>H⁺/K⁺ ATPase:</em> gastric parietal cells; pumps H⁺ into stomach lumen. Target of PPIs.</li>
+          <li><em>H⁺ ATPase:</em> α-intercalated cells of kidney CD; lysosomes (maintains acidic interior).</li></ul>
+        </li>
+        <li><strong>Secondary active transport (uses an ion gradient set up by primary):</strong>
+          <ul><li>Doesn't directly use ATP, but indirectly depends on Na/K ATPase keeping the Na gradient.</li>
+          <li><em>Symporter (cotransport):</em> two substances move same direction. SGLT (Na-glucose) in intestine and kidney; Na-amino acid cotransporters.</li>
+          <li><em>Antiporter (countertransport):</em> two substances move opposite directions. Na/Ca exchanger (NCX) in cardiac muscle; Na/H exchanger.</li></ul>
+        </li>
+        <li><strong>Vesicular transport</strong> (bulk movement; needs ATP):
+          <ul><li><em>Endocytosis</em> (cell takes in):
+            <ul><li>Phagocytosis: "cell eating" of large particles or pathogens. Done by macrophages, neutrophils.</li>
+            <li>Pinocytosis: "cell drinking" of fluid + dissolved solutes.</li>
+            <li>Receptor-mediated endocytosis: specific molecules bind receptors → coated pit forms → vesicle internalizes. Cholesterol uptake via LDL receptor.</li></ul>
+          </li>
+          <li><em>Exocytosis</em> (cell releases): vesicles fuse with plasma membrane and release contents. Hormone secretion, neurotransmitter release, enzyme secretion.</li>
+          <li><em>Transcytosis</em>: vesicle crosses cell entirely (one side → other). Capillary endothelium transports some macromolecules this way.</li></ul>
+        </li>
+        <li><strong>Why active transport matters:</strong>
+          <ul><li>Builds the Na gradient that powers nearly all secondary transport.</li>
+          <li>Maintains the K gradient that sets resting membrane potential.</li>
+          <li>Maintains low cytoplasmic Ca²⁺ so Ca²⁺ release can serve as a signal.</li>
+          <li>Concentrates substances against their gradients (urine concentration, nutrient absorption against high gut content).</li></ul>
+        </li>
+        <li class="deep-dive"><strong>Cardiac glycosides</strong> (digoxin): inhibit Na/K ATPase → ↑ intracellular Na → less driving force for Na/Ca exchanger → ↑ intracellular Ca²⁺ → ↑ cardiac contractility. Therapeutic window is narrow; toxicity → arrhythmias.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>SGLT2 inhibitors</strong> (empagliflozin, dapagliflozin): block renal Na-glucose cotransport → urinary glucose loss → ↓ blood glucose. Also lower BP and provide cardio-renal benefit in HF and CKD. <strong>PPIs</strong> (omeprazole, pantoprazole): block gastric parietal H⁺/K⁺ ATPase irreversibly → profound acid suppression for GERD and PUD. <strong>Diuretics</strong>: all target specific renal transporters — loops block Na/K/2Cl, thiazides block Na-Cl, K-sparing block ENaC.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> The Na/K ATPase pumps how many of each ion per cycle?</li>
+      <li><span class="qc-meta">DOK 4.</span> How does digoxin increase cardiac contractility without directly opening Ca²⁺ channels?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>3 Na⁺ out, 2 K⁺ in, per ATP hydrolyzed.</li><li>Digoxin inhibits Na/K ATPase → intracellular Na⁺ rises → reduced gradient for Na/Ca exchange → less Ca²⁺ pumped out → cytoplasmic and SR Ca²⁺ accumulate → stronger calcium release with each beat → ↑ contractility. Indirect mechanism via the sodium gradient.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="P">
+    <p class="card-eyebrow">Cells &middot; Concept 5 of 7</p>
+    <h2 class="card-title">Cell signaling and receptor types <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Cells talk to each other through signaling molecules and receptors. The receptor type determines how fast and how long the response lasts. Most drugs work by binding receptors.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Modes of signaling (by distance):</strong>
+          <ul><li>Endocrine: hormone in blood → distant target.</li>
+          <li>Paracrine: signals nearby cells (histamine, NO, eicosanoids).</li>
+          <li>Autocrine: cell signals itself (some cytokines, growth factors).</li>
+          <li>Synaptic: neuron to next cell at synapse (very local, very fast).</li>
+          <li>Contact-dependent: direct cell-cell contact (immune synapse, gap junctions).</li></ul>
+        </li>
+        <li><strong>Two main receptor categories:</strong>
+          <ul><li><em>Membrane receptors</em> (for water-soluble signals like peptides and catecholamines):
+            <ul><li><strong>Ion channel-linked (ionotropic):</strong> direct, fast (ms). Examples: nicotinic ACh receptor (Na⁺ + K⁺), GABA-A (Cl⁻), glutamate receptors (NMDA, AMPA).</li>
+            <li><strong>G-protein coupled receptors (GPCR):</strong> largest receptor family. Slower (seconds). Examples: β-adrenergic, muscarinic, all peptide hormone receptors. Activate second-messenger cascades (cAMP via Gs/Gi; IP3 + DAG + Ca²⁺ via Gq).</li>
+            <li><strong>Enzyme-linked (receptor tyrosine kinases):</strong> examples — insulin, growth factor receptors. Trigger phosphorylation cascades and gene expression changes.</li>
+            <li><strong>Cytokine receptors:</strong> use JAK-STAT pathway.</li></ul>
+          </li>
+          <li><em>Intracellular receptors</em> (for lipid-soluble signals — steroids, thyroid hormone, vitamin D):
+            <ul><li>Signal crosses plasma membrane → binds cytoplasmic or nuclear receptor → complex enters nucleus → binds DNA response elements → alters transcription of specific genes → new protein synthesis.</li>
+            <li>Slow (hours) but durable.</li></ul>
+          </li></ul>
+        </li>
+        <li><strong>Second messengers (inside the cell):</strong>
+          <ul><li><em>cAMP</em> (from ATP via adenylyl cyclase): activates protein kinase A.</li>
+          <li><em>IP3</em>: releases Ca²⁺ from SR/ER.</li>
+          <li><em>DAG</em>: activates protein kinase C.</li>
+          <li><em>Ca²⁺</em>: itself a second messenger; activates many enzymes via calmodulin.</li>
+          <li><em>cGMP</em>: NO-mediated vasodilation pathway.</li></ul>
+        </li>
+        <li><strong>Receptor regulation:</strong>
+          <ul><li><em>Up-regulation:</em> more receptors expressed when ligand chronically low. Denervation supersensitivity. β-blocker withdrawal sensitivity.</li>
+          <li><em>Down-regulation:</em> fewer receptors when ligand chronically high. Insulin resistance in T2DM.</li>
+          <li><em>Tachyphylaxis:</em> rapid loss of response to repeated drug doses (decongestants).</li></ul>
+        </li>
+        <li><strong>Agonists vs antagonists:</strong>
+          <ul><li>Agonist: binds + activates.</li>
+          <li>Antagonist: binds + blocks endogenous ligand.</li>
+          <li>Partial agonist: activates incompletely (e.g., buprenorphine at opioid receptors).</li>
+          <li>Inverse agonist: stabilizes receptor in inactive state.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Every ANS drug class (covered in nervous Concept 11) maps to a receptor type. Speed of onset and duration follow the receptor mechanism. <strong>Catecholamines</strong> work in seconds (GPCR → second messenger). <strong>Insulin</strong> works in minutes to hours (RTK → phosphorylation cascade). <strong>Steroids</strong> work in hours (intracellular → transcription). This explains why a heart attack is treated with intravenous nitroglycerin (immediate vasodilation via cGMP), not prednisone.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What is the most common type of membrane receptor family in humans?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why do steroid hormones take hours to act compared to catecholamines that act in seconds?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>G-protein coupled receptors (GPCRs). Hundreds in humans; target of about a third of all drugs.</li><li>Steroids must enter the cell, bind intracellular receptors, translocate to the nucleus, alter gene transcription, and wait for new protein synthesis (transcription → translation → protein folding → action). Catecholamines bind membrane GPCRs that trigger immediate second-messenger cascades (cAMP, etc.) without requiring new protein synthesis.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="P">
+    <p class="card-eyebrow">Cells &middot; Concept 6 of 7</p>
+    <h2 class="card-title">Cell cycle, mitosis, meiosis <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Cells divide to grow, repair, and replace. The cell cycle has tight checkpoints. Mitosis produces identical daughter cells; meiosis produces genetically varied gametes.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Cell cycle phases:</strong>
+          <ul><li><em>Interphase</em> (most of the cycle):
+            <ul><li>G1: cell grows; proteins, organelles made.</li>
+            <li>S: DNA replicated (cell now has 2 sister chromatids per chromosome).</li>
+            <li>G2: more growth; final prep for division.</li></ul>
+          </li>
+          <li><em>M (mitosis)</em>: nuclear division. Four phases:
+            <ul><li>Prophase: chromatin condenses → visible chromosomes; nuclear envelope breaks down; spindle forms.</li>
+            <li>Metaphase: chromosomes align at metaphase plate (cell equator).</li>
+            <li>Anaphase: sister chromatids separate; pulled to opposite poles.</li>
+            <li>Telophase: nuclear envelopes reform; chromatids decondense.</li></ul>
+          </li>
+          <li><em>Cytokinesis</em>: cytoplasm divides → two daughter cells.</li>
+          <li><em>G0</em>: non-dividing state. Most adult neurons + cardiac muscle live here.</li></ul>
+        </li>
+        <li><strong>Result of mitosis:</strong> two identical diploid (2n = 46) daughter cells. For growth, repair, tissue replacement.</li>
+        <li><strong>Checkpoints</strong> (gatekeepers):
+          <ul><li>G1 → S (restriction point): cell big enough? DNA undamaged? Nutrients available?</li>
+          <li>G2 → M: DNA fully replicated and correctly?</li>
+          <li>Metaphase → anaphase: are all chromosomes attached to the spindle?</li>
+          <li>Driven by cyclins + cyclin-dependent kinases (CDKs).</li>
+          <li>p53 protein halts cycle for repair; if damage too severe, triggers apoptosis. Most-mutated gene in cancer.</li></ul>
+        </li>
+        <li><strong>Meiosis</strong> (only in gamete-producing cells; gives haploid sex cells):
+          <ul><li>Two divisions (meiosis I + II) from one DNA replication → four haploid (n = 23) cells.</li>
+          <li>Meiosis I: homologous chromosomes pair up (synapsis) → crossing over (genetic recombination) → separate. Reductional division (2n → n).</li>
+          <li>Meiosis II: like mitosis but with haploid cells → separates sister chromatids.</li>
+          <li>Genetic variation: independent assortment + crossing over → ~2²³ different combinations per gamete (without crossing over).</li></ul>
+        </li>
+        <li><strong>Mitosis vs meiosis comparison:</strong>
+          <table class="summary"><thead><tr><th>Feature</th><th>Mitosis</th><th>Meiosis</th></tr></thead>
+            <tbody>
+              <tr><td>Divisions</td><td>One</td><td>Two (I and II)</td></tr>
+              <tr><td>Daughter cells</td><td>2</td><td>4</td></tr>
+              <tr><td>Chromosomes</td><td>Diploid (2n)</td><td>Haploid (n)</td></tr>
+              <tr><td>Daughters identical?</td><td>Yes</td><td>No (genetic variation)</td></tr>
+              <tr><td>Where</td><td>Somatic cells</td><td>Germ cells (testis, ovary)</td></tr>
+              <tr><td>Crossing over</td><td>No</td><td>Yes (prophase I)</td></tr>
+            </tbody>
+          </table>
+        </li>
+        <li><strong>Mitotic timing in humans:</strong> some cells continuously divide (skin, gut, marrow); some divide if needed (liver, fibroblasts); some never divide (neurons, cardiac myocytes, skeletal muscle). Predicts regenerative capacity after injury.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Chemotherapy</strong> targets dividing cells. High-turnover tissues (tumor + marrow + GI mucosa + hair follicles + germ cells) take the hit → cytopenias, mucositis, alopecia, infertility. Specific drugs target specific phases — taxanes (mitotic spindle), vinca alkaloids (microtubules), antimetabolites (S phase). <strong>Nondisjunction</strong> during meiosis → aneuploidy in gametes. ↑ with maternal age (long arrest in prophase I). Trisomy 21 (Down syndrome) is the classic example.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> In which phase of mitosis do sister chromatids separate?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does maternal age increase the risk of chromosomal abnormalities in offspring?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Anaphase.</li><li>Primary oocytes arrest in prophase I of meiosis from before birth until ovulation. The spindle apparatus and chromosome-attachment machinery age over decades, leading to higher rates of nondisjunction (failure of homologous chromosomes to separate properly) → aneuploid gametes (trisomies). Risk rises steeply after age 35.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="P">
+    <p class="card-eyebrow">Cells &middot; Concept 7 of 7</p>
+    <h2 class="card-title">Apoptosis, necrosis, cancer hallmarks <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Cells die two ways: cleanly (apoptosis) or messily (necrosis). Failure of either to happen at the right time produces disease — including cancer.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Apoptosis (programmed cell death):</strong>
+          <ul><li>Orderly self-destruction by activation of caspases (proteases).</li>
+          <li>Triggers: damage, developmental cues, immune signals (Fas-FasL, TNF, granzyme), withdrawal of survival factors.</li>
+          <li>Steps: cell shrinks → chromatin condenses → DNA fragments (laddering pattern) → membrane blebs → apoptotic bodies → cleaned up by macrophages without inflammation.</li>
+          <li>Routine physiology: tadpole tail regression, fingers/toes formed by interdigital apoptosis, immune cell selection (negative thymic selection), endometrial shedding.</li></ul>
+        </li>
+        <li><strong>Necrosis (pathologic cell death):</strong>
+          <ul><li>Triggered by injury (ischemia, toxins, trauma, severe heat/cold, radiation).</li>
+          <li>Cell swells → membrane ruptures → contents spill → inflammation.</li>
+          <li>Types: coagulative (most ischemic injury), liquefactive (brain, abscesses), caseous (TB), fat necrosis (pancreatitis), fibrinoid (vascular injury), gangrenous.</li></ul>
+        </li>
+        <li><strong>Apoptosis vs necrosis:</strong>
+          <ul><li>Apoptosis: regulated, no inflammation, cleaned up neatly.</li>
+          <li>Necrosis: unregulated, inflammation, neighboring tissue affected.</li></ul>
+        </li>
+        <li><strong>Cancer = uncontrolled cell division.</strong>
+          <ul><li>Result of mutations in:
+            <ul><li><em>Proto-oncogenes</em> (gain of function = oncogene): accelerators stuck on. Examples: RAS, MYC, HER2.</li>
+            <li><em>Tumor suppressors</em> (loss of function): brakes broken. Examples: p53, Rb, BRCA1/2, APC.</li>
+            <li><em>DNA repair genes:</em> mutator phenotype. Examples: Lynch syndrome (MMR genes), xeroderma pigmentosum (NER).</li></ul>
+          </li>
+          <li>Usually multiple mutations accumulated over time (Knudson "two-hit" hypothesis for tumor suppressors).</li></ul>
+        </li>
+        <li><strong>Eight (or more) hallmarks of cancer</strong> (Hanahan + Weinberg):
+          <ol><li>Sustained proliferative signaling.</li>
+          <li>Evasion of growth suppressors.</li>
+          <li>Resisting cell death (apoptosis).</li>
+          <li>Replicative immortality (telomerase reactivation).</li>
+          <li>Inducing angiogenesis (new vessel growth to feed tumor).</li>
+          <li>Invasion + metastasis.</li>
+          <li>Altered metabolism (Warburg effect — increased glycolysis even in oxygen).</li>
+          <li>Evasion of immune destruction.</li>
+          <li>Genome instability (mutations beget more mutations).</li>
+          <li>Tumor-promoting inflammation.</li></ol>
+        </li>
+        <li><strong>Tumor terminology:</strong>
+          <ul><li>Benign: well-differentiated, encapsulated, doesn't metastasize. Suffix often -oma (lipoma, adenoma).</li>
+          <li>Malignant: invades + metastasizes. Suffix: -carcinoma (epithelial origin), -sarcoma (mesenchymal — bone, muscle, cartilage), -leukemia / lymphoma (blood + lymphoid).</li>
+          <li>In situ: hasn't crossed basement membrane.</li>
+          <li>Metastatic: distant spread.</li></ul>
+        </li>
+        <li><strong>How cancer therapies exploit these vulnerabilities:</strong>
+          <ul><li>Chemotherapy: targets dividing cells (Hallmark 1).</li>
+          <li>Anti-angiogenic agents (bevacizumab): block VEGF → starve tumor of vessels (Hallmark 5).</li>
+          <li>Immune checkpoint inhibitors (pembrolizumab, nivolumab): release immune brake (Hallmark 8).</li>
+          <li>Targeted therapies (imatinib, trastuzumab, gefitinib): exploit specific tumor mutations.</li>
+          <li>Surgery + radiation: physical removal or local DNA damage.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Tumor lysis syndrome:</strong> rapid death of cancer cells (especially after chemo for leukemia, lymphoma) → release of K, phosphate, uric acid, DNA → hyperK, hyperphos, hyperuricemia, hypocalcemia, AKI. Prevent: hydration, allopurinol, rasburicase. <strong>Paraneoplastic syndromes:</strong> tumors produce ectopic hormones — small cell lung cancer (SIADH, ectopic ACTH), squamous lung cancer (PTHrP → hypercalcemia). <strong>Common metastasis sites by primary:</strong> breast → bone, brain, lungs, liver. Prostate → bone (often vertebrae). Colon → liver. Lung → brain.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> What is the most commonly mutated tumor suppressor gene in human cancers?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does cancer chemotherapy commonly cause hair loss, mucositis, and low blood counts?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>p53 (mutated in ~50% of human cancers). Encoded by TP53. Stops the cell cycle for DNA repair or triggers apoptosis if damage is severe — "guardian of the genome."</li><li>Chemotherapy targets dividing cells. Hair follicles, GI mucosa, and bone marrow have very high turnover rates. Killing dividing cells in those tissues causes alopecia, mucositis, and cytopenias as predictable side effects. Tumor cells are also dividing rapidly → that's the therapeutic target. Selectivity is incomplete — modern targeted therapies and immunotherapies aim for higher specificity.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Cells master concept set.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Cells';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='cells-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

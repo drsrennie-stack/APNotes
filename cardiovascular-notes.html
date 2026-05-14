@@ -1,0 +1,2856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardiovascular — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1E3D4C; --navy-deep: #142a36; --navy-tint: #EDF1F3;
+    --gold: #B8924A; --gold-deep: #8f7136;
+    --terra: #C2734D; --terra-dark: #A0522D;
+    --white: #FFFFFF; --off-white: #FAFAF9;
+    --rest-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --hover-shadow: 0 8px 16px rgba(0,0,0,0.10);
+    --transition: transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease, border-color 150ms ease;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+  body {
+    margin: 0; background: var(--off-white); color: var(--navy);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px; line-height: 1.55;
+  }
+  .skip-link { position: absolute; left: -9999px; top: auto; }
+  .skip-link:focus {
+    position: fixed; left: 12px; top: 12px; padding: 10px 14px;
+    background: var(--navy); color: var(--white); z-index: 9999; border-radius: 4px;
+    font-weight: 600; text-decoration: none;
+  }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+  a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--terra-dark); }
+
+  .page-wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+
+  /* Header */
+  header.atlas-header { margin-bottom: 22px; }
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--terra-dark); font-weight: 500; margin: 0 0 10px;
+  }
+  h1.page-title {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--navy);
+    font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin: 0 0 8px;
+  }
+  .subhead {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: var(--terra-dark);
+    font-size: clamp(17px, 2vw, 22px); margin: 0 0 14px;
+  }
+  .usage {
+    font-family: 'Lora', serif; font-style: italic; color: var(--navy);
+    font-size: 15px; max-width: 760px; margin: 0;
+  }
+
+  /* Sticky filter bar */
+  .filter-bar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--off-white);
+    padding: 14px 0 12px;
+    margin: 0 0 22px;
+    border-bottom: 1px solid var(--navy-tint);
+  }
+  .filter-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .filter-label {
+    font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--terra-dark); font-weight: 700;
+  }
+  .seg { display: inline-flex; border: 1px solid var(--navy); border-radius: 4px; overflow: hidden; background: var(--white); }
+  .seg button {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px;
+    padding: 8px 14px; background: var(--white); color: var(--navy);
+    border: none; border-right: 1px solid var(--navy); cursor: pointer; transition: var(--transition);
+  }
+  .seg button:last-child { border-right: none; }
+  .seg button:hover { background: var(--navy-tint); }
+  .seg button[aria-pressed="true"] { background: var(--navy); color: var(--white); }
+  .counter {
+    margin-left: auto; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--navy);
+    background: var(--navy-tint); border: 1px solid var(--navy); border-radius: 4px; padding: 6px 12px;
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--white); border: 1px solid var(--navy-tint); border-radius: 6px;
+    padding: 18px 22px; margin-bottom: 30px; box-shadow: var(--rest-shadow); transition: var(--transition);
+  }
+  .toc:hover { box-shadow: var(--hover-shadow); }
+  .toc-h {
+    font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--terra-dark); font-weight: 700; margin: 0 0 10px;
+  }
+  .toc-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 4px 18px; }
+  @media (min-width: 720px) { .toc-list { grid-template-columns: 1fr 1fr; } }
+  .toc-list li[hidden] { display: none; }
+  .toc-list a {
+    display: flex; align-items: baseline; gap: 8px; padding: 4px 0; font-size: 14px;
+    text-decoration: none; color: var(--navy);
+  }
+  .toc-list a:hover { color: var(--terra-dark); text-decoration: underline; }
+  .toc-num {
+    font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--terra-dark);
+    font-weight: 700; min-width: 22px;
+  }
+
+  /* Section headers (Heart, Vessels) */
+  .section-banner {
+    margin: 36px 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--navy-tint);
+  }
+  .section-banner .eyebrow { margin-bottom: 4px; }
+  .section-banner h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--navy);
+    font-size: 26px; margin: 0;
+  }
+
+  /* Concept cards */
+  .concept-card {
+    background: var(--white); border: 1px solid var(--navy-tint); border-radius: 6px;
+    padding: 24px 26px; margin-bottom: 22px; box-shadow: var(--rest-shadow); transition: var(--transition);
+  }
+  .concept-card:hover { transform: translateY(-2px); box-shadow: var(--hover-shadow); }
+  .concept-card[hidden] { display: none; }
+
+  .card-eyebrow {
+    font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--terra-dark); font-weight: 500; margin: 0 0 6px;
+  }
+  .card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--navy);
+    font-size: 22px; line-height: 1.25; margin: 0 0 12px;
+  }
+  .given {
+    font-family: 'Lora', serif; font-style: italic; color: var(--navy);
+    font-size: 16px; line-height: 1.5; margin: 0 0 18px;
+    padding-left: 14px; border-left: 2px solid var(--gold);
+  }
+
+  .card-section {
+    margin-top: 18px;
+  }
+  .card-section h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: var(--terra-dark);
+    font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em;
+    margin: 0 0 10px;
+  }
+  .card-section ul, .card-section ol { margin: 0; padding-left: 22px; }
+  .card-section li { margin-bottom: 6px; }
+  .card-section li ul { margin-top: 4px; margin-bottom: 6px; padding-left: 20px; }
+  .card-section li ul li { margin-bottom: 3px; color: var(--navy); }
+
+  /* Tables */
+  table.summary {
+    width: 100%; border-collapse: collapse; margin: 6px 0 4px;
+    font-size: 14px;
+  }
+  table.summary th, table.summary td {
+    text-align: left; padding: 8px 10px; border: 1px solid var(--navy);
+    vertical-align: top;
+  }
+  table.summary thead th {
+    background: var(--navy); color: var(--white);
+    font-family: 'DM Sans', sans-serif; font-weight: 700;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  table.summary tbody tr:nth-child(even) td { background: var(--off-white); }
+
+  /* Depth tagging (deep dive content) */
+  .deep-dive, [data-depth="deep"] {
+    border-left: 3px solid var(--gold);
+    padding-left: 12px;
+    position: relative;
+  }
+  .deep-dive::before, [data-depth="deep"]::before {
+    content: "DEEP DIVE";
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gold-deep);
+    background: rgba(184,146,74,0.10);
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  li.deep-dive { list-style: none; margin-left: -18px; }
+  li.deep-dive::before { margin-right: 6px; }
+  article.concept-card[data-depth="deep"] {
+    border-left: 4px solid var(--gold);
+  }
+  article.concept-card[data-depth="deep"]::before { display: none; }
+  article.concept-card[data-depth="deep"] .card-eyebrow::after {
+    content: " · DEEP DIVE";
+    color: var(--gold-deep);
+    font-weight: 700;
+  }
+  .deep-dive.callout { border-left-width: 4px; border-left-color: var(--gold); }
+  .deep-dive.callout::before { display: none; }
+  .deep-dive.callout h3::after {
+    content: " · DEEP DIVE";
+    font-size: 10px;
+    color: var(--gold-deep);
+    letter-spacing: 0.08em;
+  }
+  body.depth-essentials .deep-dive,
+  body.depth-essentials [data-depth="deep"] { display: none !important; }
+
+  /* Diagrams */
+  figure.diagram { margin: 14px 0 4px; padding: 0; }
+  figure.diagram svg {
+    width: 100%; max-width: 700px; height: auto; display: block;
+    margin: 0 auto; background: var(--off-white);
+    border: 1px solid var(--navy-tint); border-radius: 4px;
+  }
+  figure.diagram figcaption {
+    font-family: 'Lora', serif; font-style: italic; font-size: 13px;
+    color: var(--navy); margin-top: 8px; text-align: center; line-height: 1.4;
+  }
+  figure.diagram svg text {
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    fill: var(--navy); font-size: 12px;
+  }
+  figure.diagram svg .lbl-bold { font-weight: 700; }
+  figure.diagram svg .lbl-terra { fill: var(--terra-dark); }
+  figure.diagram svg .lbl-gold { fill: var(--gold-deep); }
+  figure.diagram svg .lbl-small { font-size: 10.5px; }
+  figure.diagram svg .ax-line { stroke: var(--navy); stroke-width: 1; fill: none; }
+  figure.diagram svg .leader  { stroke: var(--navy); stroke-width: 0.8; fill: none; }
+  figure.diagram svg .vessel-deox { fill: var(--navy); fill-opacity: 0.18; stroke: var(--navy); stroke-width: 1.4; }
+  figure.diagram svg .vessel-ox   { fill: var(--terra); fill-opacity: 0.15; stroke: var(--terra-dark); stroke-width: 1.4; }
+  figure.diagram svg .chamber-r   { fill: rgba(30,61,76,0.10); stroke: var(--navy); stroke-width: 1.5; }
+  figure.diagram svg .chamber-l   { fill: rgba(194,115,77,0.10); stroke: var(--navy); stroke-width: 1.5; }
+  figure.diagram svg .septum      { fill: var(--navy-tint); stroke: var(--navy); stroke-width: 1.5; }
+  figure.diagram svg .node        { fill: var(--gold); stroke: var(--gold-deep); stroke-width: 1.5; }
+  figure.diagram svg .node-text   { fill: var(--gold-deep); font-weight: 700; }
+  figure.diagram svg .curve-main  { stroke: var(--navy); stroke-width: 2.4; fill: none; }
+  figure.diagram svg .curve-alt   { stroke: var(--terra-dark); stroke-width: 2.4; fill: none; stroke-dasharray: 5 4; }
+  figure.diagram svg .curve-warn  { stroke: var(--gold-deep); stroke-width: 2.4; fill: none; stroke-dasharray: 2 3; }
+  @media print { figure.diagram svg { background: var(--white); } }
+
+  /* Callouts */
+  .callout {
+    border: 1px solid; border-left-width: 3px; border-radius: 4px;
+    padding: 14px 16px; margin-top: 14px;
+  }
+  .callout h3 { margin: 0 0 6px; font-size: 13px; letter-spacing: 0.06em; }
+  .callout p, .callout ul { margin: 0; }
+  .callout-clinical { border-color: var(--terra-dark); background: var(--white); }
+  .callout-clinical h3 { color: var(--terra-dark); }
+  .callout-drawing  { border-color: var(--gold-deep); background: var(--white); }
+  .callout-drawing  h3 { color: var(--gold-deep); }
+
+  /* Quick check */
+  .quick-check {
+    margin-top: 18px; background: var(--navy-tint); border: 1px solid var(--navy);
+    border-radius: 4px; padding: 14px 16px;
+  }
+  .quick-check h3 {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--navy); font-weight: 700; margin: 0 0 10px;
+  }
+  .quick-check ol { margin: 0; padding-left: 22px; }
+  .quick-check li { margin-bottom: 8px; }
+  .qc-meta { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--terra-dark); font-weight: 700; }
+  details.answers { margin-top: 10px; }
+  details.answers > summary {
+    cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.04em; color: var(--navy);
+    font-weight: 700; padding: 4px 0;
+  }
+  details.answers > summary:focus-visible { outline-offset: 4px; }
+  details.answers[open] > summary { margin-bottom: 6px; }
+  details.answers ol { margin: 0; padding-left: 22px; }
+
+  /* Tags */
+  .tag-pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 2px 7px; border-radius: 3px; border: 1px solid currentColor;
+    margin-left: 6px; vertical-align: middle;
+  }
+  .tag-A    { color: var(--navy); background: var(--navy-tint); }
+  .tag-P    { color: var(--terra-dark); background: var(--white); }
+  .tag-AP   { color: var(--gold-deep); background: var(--white); }
+  .tag-CLIN { color: var(--navy-deep); background: var(--white); border-style: dashed; }
+
+  /* Footer */
+  footer.byline {
+    margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--navy-tint);
+    font-size: 13px; color: var(--navy);
+  }
+  footer.byline .signature {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--navy);
+  }
+
+  /* Visually hidden */
+  .vh { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+  /* Back to top */
+  .top-link {
+    display: inline-block; margin-top: 12px; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; color: var(--terra-dark);
+    text-decoration: none;
+  }
+  .top-link:hover { text-decoration: underline; }
+
+  /* Print */
+  @media print {
+    body { background: var(--white); }
+    .filter-bar, .skip-link, .top-link, details.answers > summary { display: none; }
+    details.answers[open] > summary { display: none; }
+    details.answers ol { padding-left: 22px; }
+    details.answers { display: block; }
+    details.answers:not([open]) > *:not(summary) { display: block; }
+    .concept-card { break-inside: avoid; page-break-inside: avoid; box-shadow: none; border-color: var(--navy); margin-bottom: 14px; }
+    .toc { display: none; }
+    .quick-check { background: var(--white); }
+    .concept-card[hidden] { display: none !important; }
+    a { color: var(--navy); text-decoration: none; }
+    .section-banner { break-before: page; }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page-wrap" id="top">
+
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Cardiovascular Anatomy &amp; Physiology</h1>
+    <p class="usage">Each concept stands alone, but every concept connects forward and backward. Use the <strong>View</strong> filter to switch between Anatomy only, Physiology only, or Combined A&amp;P. Use the <strong>Depth</strong> filter to choose Essentials (BIO 304 scope) or Full (BIO 431 majors level, including deep-dive sections in gold). Read the bullet notes, check yourself against the summary chart, then draw it from memory and answer the quick check before moving on.</p>
+  </header>
+
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy"  aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio"   aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full"       aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">19</strong> concepts</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 class="toc-h" id="toc-h">Contents</h2>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
+  <main id="main">
+
+    <div class="section-banner">
+      <p class="eyebrow">Part 1</p>
+      <h2>The Heart</h2>
+    </div>
+
+    <!-- ===== CONCEPT 1 ===== -->
+    <article class="concept-card" id="c1" data-tags="A">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 1 of 19</p>
+      <h2 class="card-title">Heart location, pericardium, wall layers <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The heart sits in the middle mediastinum, wrapped in a tough fibrous sac with a slick serous lining that lets it beat without friction.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Location:</strong> middle mediastinum, between the lungs, posterior to the sternum. About two-thirds lies left of midline.</li>
+          <li><strong>Orientation:</strong> base (top) points to the right shoulder, apex points anterior-inferior to the left (5th intercostal space, midclavicular line). PMI (point of maximal impulse) is felt here.</li>
+          <li><strong>Pericardium</strong> (3 layers from outside in):
+            <ul>
+              <li>Fibrous pericardium: tough, inelastic, anchors heart to diaphragm and great vessels.</li>
+              <li>Parietal serous pericardium: lines the inside of the fibrous layer.</li>
+              <li>Visceral serous pericardium (epicardium): adheres to the heart surface.</li>
+            </ul>
+          </li>
+          <li><strong>Pericardial cavity:</strong> the slit between parietal and visceral serous layers. Contains ~15-50 mL serous fluid for friction reduction.</li>
+          <li><strong>Heart wall</strong> (3 layers from outside in):
+            <ul>
+              <li>Epicardium: visceral serous pericardium.</li>
+              <li>Myocardium: cardiac muscle. The pump. Thickness varies by chamber.</li>
+              <li>Endocardium: endothelium continuous with the lining of the great vessels.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Layer</th><th>What it is</th><th>Why it matters</th></tr></thead>
+          <tbody>
+            <tr><td>Fibrous pericardium</td><td>Dense connective tissue</td><td>Prevents overfilling, anchors the heart</td></tr>
+            <tr><td>Parietal serous</td><td>Simple squamous + CT</td><td>Lines the fibrous sac</td></tr>
+            <tr><td>Pericardial cavity</td><td>Potential space, serous fluid</td><td>Reduces friction</td></tr>
+            <tr><td>Visceral serous (epicardium)</td><td>Outer heart surface</td><td>Smooth slippery surface</td></tr>
+            <tr><td>Myocardium</td><td>Cardiac muscle</td><td>Generates force</td></tr>
+            <tr><td>Endocardium</td><td>Endothelium + CT</td><td>Continuous with vessel lining; smooth flow surface</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Cardiac tamponade:</strong> rapid fluid accumulation in the pericardial cavity (blood from trauma, effusion) compresses the heart because the fibrous pericardium will not stretch. Beck's triad: hypotension, distended neck veins, muffled heart sounds. Pulsus paradoxus on assessment. <strong>Pericarditis:</strong> inflammation of serous layers. Sharp chest pain that worsens lying flat, eases sitting forward. Pericardial friction rub on auscultation.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>From memory: sketch a cross section of the heart in the chest. Label fibrous pericardium, parietal and visceral serous pericardium, pericardial cavity, and the three wall layers. Add an arrow showing where you would expect to feel the PMI.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which layer of the heart wall is continuous with the endothelial lining of the great vessels?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient with blunt chest trauma develops hypotension, jugular venous distention, and muffled heart sounds. Explain, using the anatomy of the pericardium, why these signs develop so rapidly.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Endocardium.</strong> It lines the chambers and is continuous with the endothelium of arteries and veins.</li>
+            <li>The fibrous pericardium is inelastic. Blood filling the pericardial cavity has nowhere to go, so pressure compresses the heart (especially the thin-walled right atrium and ventricle), reducing venous return and stroke volume. This is cardiac tamponade.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 2 ===== -->
+    <article class="concept-card" id="c2" data-tags="A">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 2 of 19</p>
+      <h2 class="card-title">Chambers, valves, great vessels, and internal landmarks <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">Four chambers, four valves, and one rule: blood always flows from high pressure to low. Each chamber has signature internal landmarks. Knowing those landmarks is how you orient on a cadaver, an echo, or a CT.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Four chambers (wall thickness tracks workload):</strong>
+            <ul>
+              <li>Right atrium (RA): receives deoxygenated blood from SVC, IVC, coronary sinus.</li>
+              <li>Right ventricle (RV): pumps to the lungs through the pulmonary trunk. Wall ~4 mm.</li>
+              <li>Left atrium (LA): receives oxygenated blood from four pulmonary veins.</li>
+              <li>Left ventricle (LV): pumps to the systemic circulation through the aorta. Wall ~10-15 mm, 3 to 4 times thicker than RV.</li>
+            </ul>
+          </li>
+          <li><strong>Great vessels:</strong>
+            <ul>
+              <li>Into the heart: SVC, IVC, coronary sinus (into RA); four pulmonary veins (into LA).</li>
+              <li>Out of the heart: pulmonary trunk (from RV); aorta (from LV).</li>
+            </ul>
+          </li>
+          <li><strong>Right atrium internal landmarks:</strong>
+            <ul>
+              <li><em>Sinus venarum:</em> smooth-walled posterior region. Receives the openings of the SVC, IVC, and coronary sinus.</li>
+              <li><em>Pectinate muscles:</em> parallel ridges on the anterior wall and inside the right auricle (atrial appendage).</li>
+              <li class="deep-dive"><em>Crista terminalis:</em> vertical muscular ridge that separates the smooth sinus venarum from the trabecular (pectinate) region.</li>
+              <li><em>Fossa ovalis:</em> oval depression on the interatrial septum. Closed remnant of the fetal foramen ovale.</li>
+              <li><em>SA (sinoatrial) node:</em> embedded in the wall of the sinus venarum near the SVC opening. The natural pacemaker.</li>
+              <li><em>AV (atrioventricular) node:</em> in the floor of the RA, in the interatrial septum near the coronary sinus opening (within Koch's triangle).</li>
+              <li><em>Tricuspid orifice:</em> entrance into the RV.</li>
+            </ul>
+          </li>
+          <li><strong>Right ventricle internal landmarks:</strong>
+            <ul>
+              <li><em>Trabeculae carneae:</em> irregular muscular ridges on the inner wall.</li>
+              <li><em>Papillary muscles (3):</em> anterior, posterior, septal. Project into the chamber.</li>
+              <li><em>Chordae tendineae:</em> tendinous cords running from papillary muscle tips to the free edges of the tricuspid cusps. Prevent valve prolapse during systole.</li>
+              <li><em>Moderator band (septomarginal trabecula):</em> muscular bridge from the interventricular septum to the anterior papillary muscle. Carries the right bundle branch.</li>
+              <li><em>Conus arteriosus (infundibulum):</em> smooth-walled outflow region leading to the pulmonary valve.</li>
+            </ul>
+          </li>
+          <li><strong>Left atrium internal landmarks:</strong>
+            <ul>
+              <li class="deep-dive"><em>Smooth main body:</em> derived embryologically from incorporated pulmonary vein tissue.</li>
+              <li><em>Four pulmonary vein openings:</em> two superior, two inferior. Posterior wall.</li>
+              <li><em>Pectinate muscles confined to the auricle</em> (left atrial appendage).</li>
+              <li><em>Left atrial appendage:</em> a small ear-shaped pouch. Clinically critical — most common site of thrombus formation in atrial fibrillation.</li>
+              <li><em>Valve of fossa ovalis:</em> seen on the septal side; pushes against the right side and closes the fetal foramen.</li>
+              <li><em>Mitral orifice:</em> entrance into the LV.</li>
+            </ul>
+          </li>
+          <li><strong>Left ventricle internal landmarks:</strong>
+            <ul>
+              <li><em>Trabeculae carneae:</em> finer and more numerous than in the RV.</li>
+              <li><em>Papillary muscles (2):</em> anterior (anterolateral) and posterior (posteromedial). Larger than the RV papillaries.</li>
+              <li><em>Chordae tendineae</em> from each papillary muscle anchor both cusps of the mitral valve.</li>
+              <li><em>Aortic vestibule:</em> smooth-walled outflow region leading to the aortic valve.</li>
+              <li>Wall 3 to 4 times thicker than the RV because of systemic afterload.</li>
+            </ul>
+          </li>
+          <li><strong>Atrioventricular (AV) valves:</strong>
+            <ul>
+              <li>Tricuspid (right): three cusps — anterior, posterior, septal. Between RA and RV.</li>
+              <li>Mitral / bicuspid (left): two cusps — anterior, posterior. Between LA and LV.</li>
+              <li>Both anchored by chordae tendineae to papillary muscles. The papillary muscles contract just before the rest of the ventricle to tension the chordae and prevent valve prolapse.</li>
+            </ul>
+          </li>
+          <li><strong>Semilunar valves:</strong>
+            <ul>
+              <li>Pulmonary semilunar: between RV and pulmonary trunk.</li>
+              <li>Aortic semilunar: between LV and aorta. Aortic sinuses behind two of the cusps give rise to the coronary arteries.</li>
+              <li>Three cusps each, no chordae. Snap shut from backflow pressure.</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>Cardiac skeleton:</strong> dense fibrous rings around all four valves. Anchor valves, electrically insulate atria from ventricles (only the AV bundle pierces it).</li>
+        </ul>
+      </section>
+
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Valve</th><th>Location</th><th>Open when</th><th>Anchored by</th></tr></thead>
+          <tbody>
+            <tr><td>Tricuspid</td><td>RA → RV</td><td>Ventricular filling (diastole)</td><td>Chordae + papillary muscles</td></tr>
+            <tr><td>Mitral</td><td>LA → LV</td><td>Ventricular filling (diastole)</td><td>Chordae + papillary muscles</td></tr>
+            <tr><td>Pulmonary semilunar</td><td>RV → pulm trunk</td><td>Ventricular ejection (systole)</td><td>Three cusps, no chordae</td></tr>
+            <tr><td>Aortic semilunar</td><td>LV → aorta</td><td>Ventricular ejection (systole)</td><td>Three cusps, no chordae</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Stenosis</strong> (valve will not open fully): increases workload upstream. Mitral stenosis → LA pressure rises → pulmonary congestion. <strong>Regurgitation</strong> (valve will not close fully): blood leaks backward. Mitral regurgitation → blood pushed back into LA during systole → murmur, reduced forward output. <strong>Heart murmurs:</strong> turbulent flow heard on auscultation. Listen at the valve's auscultation point, not its anatomical location.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the heart from the anterior view. Label all four chambers, all four valves, all great vessels in and out, and trace the path of one drop of blood from the SVC to the aorta. Use arrows to show direction.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which valve has two cusps and lies between the LA and LV?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient has aortic stenosis. Which chamber will hypertrophy first, and why?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Mitral (bicuspid) valve.</strong></li>
+            <li>The <strong>left ventricle</strong>. With a stenotic aortic valve, the LV must generate higher pressure to push blood through the narrowed opening. Chronic pressure overload drives concentric hypertrophy.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 3 ===== -->
+    <article class="concept-card" id="c3" data-tags="A">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 3 of 19</p>
+      <h2 class="card-title">Coronary circulation <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The heart cannot use the blood inside its chambers as its own supply. It feeds itself through the coronary arteries, and almost all of that feeding happens during diastole.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Origin:</strong> right and left coronary arteries arise from the aortic sinuses just above the aortic valve.</li>
+          <li><strong>Left coronary artery (LCA):</strong>
+            <ul>
+              <li>Left anterior descending (LAD) in the anterior interventricular sulcus. Supplies anterior LV, anterior 2/3 of septum, apex.</li>
+              <li>Circumflex (LCx) in the coronary sulcus. Supplies LA and lateral LV.</li>
+            </ul>
+          </li>
+          <li><strong>Right coronary artery (RCA):</strong>
+            <ul>
+              <li>Right marginal: supplies RA and lateral RV.</li>
+              <li>Posterior interventricular (posterior descending, PDA): inferior LV and posterior 1/3 of septum. In about 85% of people the PDA branches from the RCA ("right-dominant" circulation).</li>
+              <li>In most people, supplies SA node and AV node.</li>
+            </ul>
+          </li>
+          <li><strong>Venous drainage:</strong> coronary veins → coronary sinus on the posterior heart → right atrium.</li>
+          <li><strong>Timing:</strong> coronary arteries fill during diastole. Systole compresses the intramural vessels.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Vessel</th><th>Supplies</th><th>Clinical association</th></tr></thead>
+          <tbody>
+            <tr><td>LAD</td><td>Anterior LV, anterior septum, apex</td><td>"Widow maker" — large anterior MI</td></tr>
+            <tr><td>Circumflex</td><td>Lateral LV, LA</td><td>Lateral wall MI</td></tr>
+            <tr><td>RCA</td><td>RA, RV, often SA/AV nodes</td><td>Inferior MI, bradyarrhythmias, heart blocks</td></tr>
+            <tr><td>PDA (usually from RCA)</td><td>Inferior LV, posterior septum</td><td>Inferior wall MI</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Tachycardia shortens diastole more than systole. That cuts coronary perfusion time. In a patient with stable angina, exercise (which raises HR) can tip them into ischemia even without new plaque. This is why we use rate control (beta blockers) and reduce demand. ECG changes localize the lesion: anterior ST elevation in V1 to V4 points to LAD; inferior ST elevation in II, III, aVF points to RCA; lateral changes in I, aVL, V5, V6 point to circumflex.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the anterior and posterior heart surfaces. Label LAD, LCx, RCA, marginal, PDA, and the coronary sinus. Shade in which territory each artery supplies.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which artery supplies the anterior interventricular septum?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient with inferior wall ST elevation develops symptomatic bradycardia. Which coronary artery is most likely involved, and why does the bradycardia make anatomical sense?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Left anterior descending (LAD).</strong></li>
+            <li>The <strong>RCA</strong>. It supplies the inferior LV (hence inferior ST elevation) and, in most people, the SA and AV nodes. Nodal ischemia produces sinus bradycardia or AV block.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 4 ===== -->
+    <article class="concept-card" id="c4" data-tags="AP">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 4 of 19</p>
+      <h2 class="card-title">Conduction system: SA, AV, bundle of His, Purkinje <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">The heart's electrical system is built so that the atria contract first, the AV node deliberately delays, and then the ventricles fire from apex upward in a coordinated wave.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>SA (sinoatrial) node:</strong> in the right atrium near the SVC opening. The natural pacemaker. Intrinsic rate 60-100 bpm.</li>
+          <li><strong>AV (atrioventricular) node:</strong> floor of right atrium near the tricuspid valve. Introduces a deliberate ~0.1 second delay so atria finish emptying before ventricles contract ("atrial kick"). Intrinsic rate 40-60 bpm if SA fails.</li>
+          <li><strong>Bundle of His (AV bundle):</strong> only electrical bridge through the fibrous skeleton between atria and ventricles.</li>
+          <li><strong>Right and left bundle branches:</strong> run down the interventricular septum.</li>
+          <li><strong>Purkinje fibers:</strong> spread through the ventricular myocardium from apex upward. Cause coordinated contraction. Intrinsic rate 20-40 bpm.</li>
+          <li><strong>Pacemaker hierarchy:</strong> SA &gt; AV &gt; ventricles. The fastest pacemaker wins. If SA fails, AV takes over (junctional rhythm). If AV fails, ventricles take over (slow, unreliable).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Structure</th><th>Function</th><th>Intrinsic rate</th></tr></thead>
+          <tbody>
+            <tr><td>SA node</td><td>Primary pacemaker</td><td>60-100 bpm</td></tr>
+            <tr><td>AV node</td><td>Delay, backup pacemaker</td><td>40-60 bpm</td></tr>
+            <tr><td>Bundle of His</td><td>Atria-to-ventricle conduction</td><td>Conducts, does not pace</td></tr>
+            <tr><td>Bundle branches</td><td>Septum conduction</td><td>Conducts</td></tr>
+            <tr><td>Purkinje fibers</td><td>Ventricular spread, apex up</td><td>20-40 bpm (escape rhythm)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Heart blocks</strong> are AV node or below.</p>
+        <ul>
+          <li>1st degree: prolonged PR, all beats conduct.</li>
+          <li>2nd degree Mobitz I (Wenckebach): progressive PR lengthening, then a dropped beat.</li>
+          <li>2nd degree Mobitz II: PR constant, sudden dropped beats. Higher risk.</li>
+          <li>3rd degree (complete): atria and ventricles fire independently. Needs pacemaker.</li>
+        </ul>
+        <p>Atropine works on AV node by blocking parasympathetic input. Pacemakers replace failed nodes.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the conduction pathway from SA node to ventricular apex. Mark the delay at the AV node. Draw the resulting ECG strip next to it and align P, PR interval, QRS, and T to the events.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> What is the intrinsic rate of the SA node?</li>
+          <li><span class="qc-meta">DOK 4.</span> Predict what would happen to cardiac output if a patient lost AV node function entirely (3rd degree block) and an inherent ventricular escape rhythm of 30 bpm took over. Why does atrial kick matter here?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>60 to 100 bpm.</strong></li>
+            <li>CO would drop sharply. CO = HR × SV. HR is now ~30. SV also falls because atria and ventricles are no longer coordinated, so the atrial kick (the last 20-30% of ventricular filling driven by atrial contraction) is lost. Result: hypotension, syncope, end-organ hypoperfusion. Treatment: temporary pacing then permanent pacemaker.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 4a (NEW): CARDIAC MYOCYTE PHYSIOLOGY ===== -->
+    <article class="concept-card" id="c4a" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Cardiac myocyte physiology</p>
+      <h2 class="card-title">Cardiac muscle contraction: how it differs from other muscle <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Cardiac muscle uses the same sliding-filament machinery as skeletal muscle, but it solves a different problem: it must contract rhythmically, never tetanize, and recruit every cell every beat. Three features make that possible — intercalated discs, calcium-induced calcium release, and a long plateau in the action potential.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Structural differences from skeletal muscle:</strong>
+            <ul>
+              <li>Branched, mononucleated (or binucleated) cells, not long multinucleated fibers.</li>
+              <li><em>Intercalated discs</em> connect cell ends. Two components: <em>desmosomes</em> (mechanical anchoring so cells don't pull apart) and <em>gap junctions</em> (electrical connections so the whole myocardium fires as one functional syncytium).</li>
+              <li>Abundant mitochondria, ~30% of cell volume (vs ~2% in skeletal). The heart is obligately aerobic.</li>
+              <li>T-tubules align with Z-discs (in cardiac, they are wider and at the Z-line rather than at the A-I junction as in skeletal).</li>
+              <li>Sarcoplasmic reticulum less developed than skeletal; depends on extracellular Ca++ as well as stored.</li>
+            </ul>
+          </li>
+          <li><strong>Excitation-contraction coupling: calcium-induced calcium release (CICR).</strong>
+            <ul>
+              <li>Action potential opens voltage-gated L-type Ca++ channels (DHP receptors) in the T-tubule.</li>
+              <li>A small influx of extracellular Ca++ triggers the ryanodine receptors (RyR2) on the SR to release a much larger Ca++ load.</li>
+              <li>Ca++ binds troponin C → tropomyosin moves → cross-bridge cycling → contraction.</li>
+              <li>Relaxation requires Ca++ to be pumped back into SR (SERCA, blocked by phospholamban) and out of the cell (Na/Ca exchanger, Ca-ATPase).</li>
+              <li><strong>Key contrast:</strong> skeletal muscle uses direct mechanical coupling (DHP-RyR1 physical link), no extracellular Ca++ needed. Cardiac muscle <em>requires</em> extracellular Ca++.</li>
+            </ul>
+          </li>
+          <li><strong>Action potential differences (working myocyte):</strong>
+            <ul>
+              <li>Resting membrane potential: ~ −90 mV (similar to skeletal).</li>
+              <li>Phase 0: rapid Na+ influx → depolarization to ~ +20 mV.</li>
+              <li>Phase 1: brief partial repolarization (transient K+ out).</li>
+              <li>Phase 2: <em>plateau</em> ~200 ms. Ca++ in balances K+ out. This is the signature feature.</li>
+              <li>Phase 3: K+ efflux dominates → rapid repolarization.</li>
+              <li>Phase 4: resting potential restored.</li>
+              <li>Total duration ~250-300 ms (vs ~2 ms in skeletal muscle).</li>
+            </ul>
+          </li>
+          <li><strong>Pacemaker cell physiology (SA / AV nodes):</strong>
+            <ul>
+              <li>No stable resting potential. They drift upward in Phase 4 ("funny current," I<sub>f</sub>, Na+ inward).</li>
+              <li>Threshold reached → Phase 0 driven by slow Ca++ (not Na+).</li>
+              <li>Phase 3: K+ efflux repolarizes.</li>
+              <li>The drift rate sets the heart rate. Sympathetic ↑ slope (faster), parasympathetic ↓ slope (slower).</li>
+            </ul>
+          </li>
+          <li><strong>Why no tetanus:</strong> the long absolute refractory period spans almost the entire contraction. A second stimulus cannot fire until the first has nearly finished. The heart physically cannot tetanize. This is what allows it to fill between beats.</li>
+          <li><strong>Functional syncytium:</strong> atrial syncytium and ventricular syncytium contract as units. Action potentials spread cell-to-cell through gap junctions. Either the chamber contracts together or it doesn't (all-or-none at the chamber level).</li>
+          <li><strong>Length-tension relationship:</strong> cardiac sarcomeres rest at less than optimal overlap. Stretching them (increased preload) increases force. This is the molecular basis of the Frank-Starling mechanism. Cardiac muscle is also more sensitive to length-induced changes in calcium sensitivity than skeletal muscle.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: cardiac vs skeletal action potential</h3>
+        <figure class="diagram" aria-labelledby="dxAP-title dxAP-desc">
+          <svg viewBox="0 0 700 360" role="img" aria-labelledby="dxAP-title dxAP-desc">
+            <title id="dxAP-title">Cardiac ventricular action potential compared to skeletal muscle action potential</title>
+            <desc id="dxAP-desc">A graph with time on the X axis and membrane potential on the Y axis. The cardiac action potential shows five phases: rapid depolarization (phase 0), brief partial repolarization (phase 1), a long plateau at zero millivolts (phase 2) lasting about two hundred milliseconds, rapid repolarization (phase 3), and resting potential at negative ninety millivolts (phase 4). A dotted overlay shows the skeletal muscle action potential, which has no plateau and lasts only about two milliseconds. The refractory period of the cardiac action potential covers most of its duration, preventing tetanic contraction.</desc>
+
+            <!-- Axes -->
+            <line x1="60" y1="40" x2="60" y2="300" class="ax-line"/>
+            <line x1="60" y1="300" x2="660" y2="300" class="ax-line"/>
+            <!-- Y axis labels -->
+            <text x="55" y="60" text-anchor="end" class="lbl-small">+30</text>
+            <text x="55" y="145" text-anchor="end" class="lbl-small">0</text>
+            <text x="55" y="225" text-anchor="end" class="lbl-small">−50</text>
+            <text x="55" y="285" text-anchor="end" class="lbl-small">−90</text>
+            <text x="20" y="170" class="lbl-small lbl-bold" transform="rotate(-90 20 170)">Membrane potential (mV)</text>
+            <!-- Reference lines -->
+            <line x1="60" y1="145" x2="660" y2="145" stroke="var(--navy-tint)" stroke-width="1" stroke-dasharray="2 3"/>
+            <line x1="60" y1="285" x2="660" y2="285" stroke="var(--navy-tint)" stroke-width="1" stroke-dasharray="2 3"/>
+            <!-- X axis labels -->
+            <text x="60" y="320" text-anchor="middle" class="lbl-small">0</text>
+            <text x="200" y="320" text-anchor="middle" class="lbl-small">100</text>
+            <text x="340" y="320" text-anchor="middle" class="lbl-small">200</text>
+            <text x="480" y="320" text-anchor="middle" class="lbl-small">300</text>
+            <text x="620" y="320" text-anchor="middle" class="lbl-small">400</text>
+            <text x="360" y="345" text-anchor="middle" class="lbl-small lbl-bold">Time (ms)</text>
+
+            <!-- Skeletal AP (dotted, brief) -->
+            <path d="M 90 285 L 96 60 L 105 285 L 200 285" class="curve-warn"/>
+            <text x="220" y="80" class="lbl-small lbl-gold lbl-bold">Skeletal muscle AP (~2 ms, no plateau)</text>
+            <line x1="105" y1="280" x2="218" y2="80" class="leader"/>
+
+            <!-- Cardiac AP path -->
+            <!-- Phase 4: resting -85 mV from 60-90 -->
+            <!-- Phase 0: rapid depol from 90 to ~95 going from -85 to +20 -->
+            <!-- Phase 1: small notch dip from +20 to ~+5 (10 ms) -->
+            <!-- Phase 2: plateau ~0 mV for 200 ms (from x=105 to x=305) -->
+            <!-- Phase 3: rapid repol from x=305 to x=370 down to -85 -->
+            <!-- Phase 4 again -->
+            <path d="M 60 285 L 90 285 L 96 55 L 110 140 L 115 145 L 380 150 L 430 285 L 660 285"
+                  class="curve-main"/>
+
+            <!-- Phase labels -->
+            <text x="106" y="50" class="lbl-bold">0</text>
+            <text x="125" y="135" class="lbl-bold">1</text>
+            <text x="240" y="135" class="lbl-bold">2 (plateau)</text>
+            <text x="410" y="265" class="lbl-bold">3</text>
+            <text x="80" y="278" class="lbl-bold">4</text>
+            <text x="490" y="278" class="lbl-bold">4</text>
+
+            <!-- Phase descriptions -->
+            <text x="125" y="178" class="lbl-small">Na+ in</text>
+            <text x="240" y="170" class="lbl-small">Ca++ in ≈ K+ out</text>
+            <text x="395" y="245" class="lbl-small">K+ out</text>
+
+            <!-- Refractory bar -->
+            <rect x="96" y="38" width="280" height="6" fill="var(--gold)" opacity="0.65"/>
+            <text x="236" y="32" text-anchor="middle" class="lbl-small lbl-gold lbl-bold">Absolute refractory period — no second contraction possible</text>
+          </svg>
+          <figcaption>The cardiac action potential plateau (phase 2) lasts ~200 ms because slow Ca++ influx balances K+ efflux. The refractory period covers nearly the entire AP, which is why cardiac muscle cannot tetanize.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>Skeletal muscle</th><th>Cardiac muscle</th></tr></thead>
+          <tbody>
+            <tr><td>Cell shape</td><td>Long, cylindrical, multinucleate</td><td>Branched, mono- or binucleate</td></tr>
+            <tr><td>Cell-to-cell connection</td><td>None (motor unit recruitment)</td><td>Intercalated discs (gap junctions + desmosomes)</td></tr>
+            <tr><td>Ca++ source for contraction</td><td>SR only (DHP-RyR1 direct coupling)</td><td>SR <em>and</em> extracellular (CICR via DHP-RyR2)</td></tr>
+            <tr><td>Action potential duration</td><td>~2 ms</td><td>~250-300 ms (plateau)</td></tr>
+            <tr><td>Refractory period</td><td>Brief — can tetanize</td><td>Long — cannot tetanize</td></tr>
+            <tr><td>Energy metabolism</td><td>Aerobic + anaerobic</td><td>Obligately aerobic</td></tr>
+            <tr><td>Recruitment</td><td>Variable (motor units)</td><td>All-or-none at chamber level</td></tr>
+            <tr><td>Length-tension sensitivity</td><td>Modest</td><td>Steep (Frank-Starling)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <ul>
+          <li><strong>Calcium channel blockers (verapamil, diltiazem):</strong> block L-type Ca++ channels → reduce Ca++ influx → ↓ contractility and slow AV nodal conduction. Cardiac muscle's dependence on extracellular Ca++ is exactly why these drugs work and why they can precipitate heart failure in vulnerable patients.</li>
+          <li><strong>Digoxin:</strong> blocks the Na/K ATPase → ↑ intracellular Na+ → less Ca++ extrusion via Na/Ca exchange → ↑ intracellular Ca++ → ↑ contractility (positive inotrope). It also enhances vagal tone, slowing AV conduction.</li>
+          <li><strong>Hyperkalemia:</strong> shifts the resting membrane potential closer to threshold initially (mild K+ elevation), but at higher levels inactivates Na+ channels → reduced AP upstroke → conduction slowing, widened QRS, peaked T waves, eventual asystole.</li>
+          <li><strong>Hypocalcemia:</strong> prolongs phase 2 → prolonged QT interval → risk of torsades.</li>
+          <li><strong>Ischemia:</strong> ATP depletion impairs SERCA and the Na/K ATPase → calcium overload → contraction band necrosis and arrhythmogenicity.</li>
+        </ul>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch a working cardiac myocyte. Show the T-tubule with an L-type Ca++ channel, the SR with ryanodine receptor and SERCA, the sarcomere with troponin, and the Na/Ca exchanger and Ca-ATPase at the membrane. Trace a Ca++ ion through one full contraction-relaxation cycle.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> What does CICR stand for, and which two channels are the key players?</li>
+          <li><span class="qc-meta">DOK 4.</span> Explain in mechanistic terms why digoxin increases the force of cardiac contraction without directly opening calcium channels.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Calcium-induced calcium release.</strong> Voltage-gated L-type Ca++ channels (DHP receptors) on the T-tubule and ryanodine receptors (RyR2) on the SR.</li>
+            <li>Digoxin inhibits the sarcolemmal Na/K ATPase. Intracellular Na+ rises. The Na/Ca exchanger normally uses the Na+ gradient to pump Ca++ out of the cell, three Na+ in for one Ca++ out. With less of a Na+ gradient, the exchanger works less efficiently and may even reverse, so Ca++ extrusion drops. More Ca++ accumulates intracellularly and in the SR. The next CICR cycle releases a larger Ca++ load → stronger contraction. It is an indirect inotrope.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 5 ===== -->
+    <article class="concept-card" id="c5" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 5 of 19</p>
+      <h2 class="card-title">ECG basics: P, QRS, T, and intervals <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The ECG is just a recording of electrical events. Each wave is depolarization or repolarization of a specific chamber. Once you know which event is which, you can read what the heart is doing.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>P wave:</strong> atrial depolarization. Just before atrial contraction.</li>
+          <li><strong>PR interval:</strong> start of P to start of QRS. Reflects AV node delay. Normal 0.12 to 0.20 s (3 to 5 small boxes).</li>
+          <li><strong>QRS complex:</strong> ventricular depolarization. Atrial repolarization happens here but is buried under QRS. Normal &lt; 0.12 s.</li>
+          <li><strong>ST segment:</strong> ventricles fully depolarized. Should be at baseline (isoelectric).</li>
+          <li><strong>T wave:</strong> ventricular repolarization.</li>
+          <li><strong>QT interval:</strong> start of QRS to end of T. Total time of ventricular depolarization plus repolarization. Varies with HR (corrected QT, QTc).</li>
+          <li><strong>Standard paper:</strong> 25 mm/s. Small box = 0.04 s. Large box = 0.20 s. Five large boxes = 1 second.</li>
+          <li><strong>Rate calculation:</strong> 300 / number of large boxes between R waves.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Wave / interval</th><th>What is happening</th><th>Normal range</th></tr></thead>
+          <tbody>
+            <tr><td>P wave</td><td>Atrial depolarization</td><td>&lt; 0.12 s, upright in II</td></tr>
+            <tr><td>PR interval</td><td>AV node delay (and atrial conduction)</td><td>0.12 - 0.20 s</td></tr>
+            <tr><td>QRS</td><td>Ventricular depolarization</td><td>&lt; 0.12 s</td></tr>
+            <tr><td>ST segment</td><td>Plateau, ventricles depolarized</td><td>Isoelectric</td></tr>
+            <tr><td>T wave</td><td>Ventricular repolarization</td><td>Upright in most leads</td></tr>
+            <tr><td>QT interval</td><td>Total ventricular electrical activity</td><td>QTc &lt; 440 ms (M), &lt; 460 ms (F)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: labeled ECG waves and intervals</h3>
+        <figure class="diagram" aria-labelledby="dxECG-title dxECG-desc">
+          <svg viewBox="0 0 720 320" role="img" aria-labelledby="dxECG-title dxECG-desc">
+            <title id="dxECG-title">Single cardiac cycle on ECG with labeled waves, segments, and intervals</title>
+            <desc id="dxECG-desc">A clean ECG tracing of one cardiac cycle. The P wave represents atrial depolarization, followed by the PR interval, then the sharp QRS complex of ventricular depolarization, the flat ST segment with the ventricles fully depolarized, and the T wave of ventricular repolarization. The PR interval spans from the start of the P wave to the start of the QRS complex, normally 0.12 to 0.20 seconds. The QRS complex is normally less than 0.12 seconds. The QT interval spans from the start of QRS to the end of T, normally less than 440 milliseconds corrected for heart rate.</desc>
+
+            <defs>
+              <pattern id="ecgsmall" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+                <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(194,115,77,0.15)" stroke-width="0.4"/>
+              </pattern>
+              <pattern id="ecglarge" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(194,115,77,0.30)" stroke-width="0.8"/>
+              </pattern>
+            </defs>
+
+            <rect x="40" y="50" width="640" height="180" fill="url(#ecgsmall)"/>
+            <rect x="40" y="50" width="640" height="180" fill="url(#ecglarge)"/>
+            <rect x="40" y="50" width="640" height="180" fill="none" stroke="var(--navy-tint)" stroke-width="1"/>
+
+            <!-- ECG trace -->
+            <path d="M 60 160
+                     L 110 160
+                     Q 130 130, 150 160
+                     L 220 160
+                     L 235 168
+                     L 245 88
+                     L 255 200
+                     L 265 160
+                     L 360 160
+                     Q 410 100, 460 160
+                     L 660 160"
+                  stroke="var(--navy)" stroke-width="2.2" fill="none"/>
+
+            <!-- Wave labels -->
+            <text x="130" y="115" text-anchor="middle" class="lbl-bold">P</text>
+            <text x="245" y="78" text-anchor="middle" class="lbl-bold">R</text>
+            <text x="235" y="180" class="lbl-bold">Q</text>
+            <text x="262" y="218" class="lbl-bold">S</text>
+            <text x="410" y="90" text-anchor="middle" class="lbl-bold">T</text>
+
+            <!-- Wave descriptions -->
+            <text x="130" y="262" text-anchor="middle" class="lbl-small">Atrial depol.</text>
+            <text x="245" y="262" text-anchor="middle" class="lbl-small">Vent depol.</text>
+            <text x="320" y="262" text-anchor="middle" class="lbl-small lbl-terra">ST segment</text>
+            <text x="410" y="262" text-anchor="middle" class="lbl-small">Vent repol.</text>
+
+            <!-- Interval brackets -->
+            <line x1="110" y1="285" x2="245" y2="285" stroke="var(--navy)" stroke-width="1.2"/>
+            <line x1="110" y1="280" x2="110" y2="290" stroke="var(--navy)" stroke-width="1.2"/>
+            <line x1="245" y1="280" x2="245" y2="290" stroke="var(--navy)" stroke-width="1.2"/>
+            <text x="178" y="305" text-anchor="middle" class="lbl-small lbl-bold">PR interval (0.12-0.20 s)</text>
+
+            <line x1="235" y1="40" x2="270" y2="40" stroke="var(--navy)" stroke-width="1.2"/>
+            <line x1="235" y1="35" x2="235" y2="45" stroke="var(--navy)" stroke-width="1.2"/>
+            <line x1="270" y1="35" x2="270" y2="45" stroke="var(--navy)" stroke-width="1.2"/>
+            <text x="253" y="30" text-anchor="middle" class="lbl-small lbl-bold">QRS (&lt; 0.12 s)</text>
+
+            <line x1="235" y1="20" x2="455" y2="20" stroke="var(--terra-dark)" stroke-width="1.2"/>
+            <line x1="235" y1="15" x2="235" y2="25" stroke="var(--terra-dark)" stroke-width="1.2"/>
+            <line x1="455" y1="15" x2="455" y2="25" stroke="var(--terra-dark)" stroke-width="1.2"/>
+            <text x="345" y="12" text-anchor="middle" class="lbl-small lbl-terra lbl-bold">QT interval (rate-corrected QTc &lt; 440 ms M / 460 ms F)</text>
+
+            <!-- ST segment indicator -->
+            <line x1="270" y1="160" x2="360" y2="160" stroke="var(--gold-deep)" stroke-width="3"/>
+            <text x="315" y="148" text-anchor="middle" class="lbl-small lbl-gold lbl-bold">ST (should be isoelectric)</text>
+          </svg>
+          <figcaption>Standard ECG paper: each small box = 0.04 s × 0.1 mV, each large box = 0.20 s × 0.5 mV. Rate estimate at glance: 300 ÷ number of large boxes between R waves.</figcaption>
+        </figure>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <ul>
+          <li><strong>ST elevation:</strong> acute injury (STEMI). Time-critical.</li>
+          <li><strong>ST depression / T inversion:</strong> ischemia.</li>
+          <li><strong>Prolonged PR:</strong> 1st degree AV block.</li>
+          <li><strong>Widened QRS:</strong> bundle branch block or ventricular origin beat.</li>
+          <li><strong>Long QT:</strong> risk of torsades de pointes. Drug-induced (some antibiotics, antiemetics, antipsychotics) or congenital.</li>
+          <li><strong>Peaked T waves:</strong> hyperkalemia.</li>
+          <li><strong>U waves:</strong> hypokalemia.</li>
+        </ul>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw one cardiac cycle on ECG paper. Label P, PR interval, QRS, ST, T, and QT. Underneath, draw what the heart muscle is doing at each point (atrial contraction, ventricular contraction, relaxation).</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient's PR interval measures 0.28 s. What does this indicate?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient on ondansetron and azithromycin develops a QTc of 530 ms. Why is this dangerous?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>1st degree AV block.</strong> Conduction through the AV node is slowed, but every P is followed by a QRS.</li>
+            <li>Both drugs prolong the QT interval. A long QT predisposes to <strong>torsades de pointes</strong>, a polymorphic ventricular tachycardia that can degenerate into VFib. Consider stopping or substituting one of the QT-prolonging agents and checking electrolytes (K+, Mg++).</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 6 ===== -->
+    <article class="concept-card" id="c6" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 6 of 19</p>
+      <h2 class="card-title">Cardiac cycle: systole, diastole, heart sounds <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">One heartbeat is a pressure story. Track which chamber has the higher pressure at each phase and the valve behavior, sounds, and blood movement follow automatically.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li>One cycle at 75 bpm is about 0.8 s: ~0.3 s systole, ~0.5 s diastole.</li>
+          <li><strong>Phases (one cycle):</strong>
+            <ul>
+              <li>Atrial systole: atria contract, finish filling ventricles (atrial kick = last 20-30% of EDV).</li>
+              <li>Isovolumetric ventricular contraction: ventricles begin to contract; AV valves close (S1); pressure rises with no volume change because semilunar valves are still closed.</li>
+              <li>Ventricular ejection: ventricular pressure exceeds aortic/pulmonary pressure → semilunar valves open → blood ejected. Stroke volume leaves.</li>
+              <li>Isovolumetric relaxation: ventricles relax; aortic and pulmonary pressures now exceed ventricular pressure → semilunar valves snap shut (S2); volume unchanged because AV valves still closed.</li>
+              <li>Ventricular filling: ventricular pressure falls below atrial pressure → AV valves open → passive filling (most of EDV).</li>
+            </ul>
+          </li>
+          <li><strong>Heart sounds:</strong>
+            <ul>
+              <li>S1 ("lub"): AV valves close. Marks beginning of ventricular systole. Loudest at apex.</li>
+              <li>S2 ("dub"): semilunar valves close. Marks end of ventricular systole. Loudest at base.</li>
+              <li>S3 (ventricular gallop): early diastole, rapid filling. Normal in young athletes and pregnancy. Pathologic in adults with heart failure.</li>
+              <li>S4 (atrial gallop): late diastole, atrial contraction into a stiff ventricle. Pathologic (LVH, HTN, MI).</li>
+            </ul>
+          </li>
+          <li><strong>Murmurs:</strong> turbulent flow. Timed against S1 and S2 (systolic vs diastolic).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Phase</th><th>AV valves</th><th>Semilunar valves</th><th>Sound at start</th></tr></thead>
+          <tbody>
+            <tr><td>Atrial systole</td><td>Open</td><td>Closed</td><td>—</td></tr>
+            <tr><td>Isovolumetric contraction</td><td>Close</td><td>Closed</td><td>S1</td></tr>
+            <tr><td>Ventricular ejection</td><td>Closed</td><td>Open</td><td>—</td></tr>
+            <tr><td>Isovolumetric relaxation</td><td>Closed</td><td>Close</td><td>S2</td></tr>
+            <tr><td>Ventricular filling</td><td>Open</td><td>Closed</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: left ventricular pressure-volume loop</h3>
+        <figure class="diagram" aria-labelledby="dxPV-title dxPV-desc">
+          <svg viewBox="0 0 660 460" role="img" aria-labelledby="dxPV-title dxPV-desc">
+            <title id="dxPV-title">Left ventricular pressure-volume loop with four phases labeled</title>
+            <desc id="dxPV-desc">A graph showing left ventricular pressure on the Y axis and left ventricular volume on the X axis. The loop is traced counterclockwise through four phases. Starting at point A (end of filling, mitral valve closes), the loop rises vertically as the ventricle contracts isovolumetrically. At point B, the aortic valve opens and the loop arcs leftward as blood is ejected. At point C, the aortic valve closes at end-systolic volume. The loop drops vertically as the ventricle relaxes isovolumetrically. At point D, the mitral valve opens and the loop returns rightward along the filling curve back to point A. End-diastolic volume is approximately 120 milliliters; end-systolic volume is approximately 50 milliliters. Stroke volume equals the width of the loop, approximately 70 milliliters.</desc>
+
+            <!-- Axes -->
+            <line x1="80" y1="40" x2="80" y2="380" class="ax-line"/>
+            <line x1="80" y1="380" x2="610" y2="380" class="ax-line"/>
+            <!-- Y axis labels -->
+            <text x="75" y="60" text-anchor="end" class="lbl-small">130</text>
+            <text x="75" y="125" text-anchor="end" class="lbl-small">100</text>
+            <text x="75" y="190" text-anchor="end" class="lbl-small">80</text>
+            <text x="75" y="280" text-anchor="end" class="lbl-small">40</text>
+            <text x="75" y="380" text-anchor="end" class="lbl-small">0</text>
+            <text x="30" y="220" class="lbl-small lbl-bold" transform="rotate(-90 30 220)">LV pressure (mmHg)</text>
+
+            <!-- X axis labels -->
+            <text x="80" y="398" text-anchor="middle" class="lbl-small">0</text>
+            <text x="220" y="398" text-anchor="middle" class="lbl-small">50</text>
+            <text x="360" y="398" text-anchor="middle" class="lbl-small">100</text>
+            <text x="500" y="398" text-anchor="middle" class="lbl-small">150</text>
+            <text x="345" y="420" text-anchor="middle" class="lbl-small lbl-bold">LV volume (mL)</text>
+
+            <!-- ESPVR (end-systolic pressure-volume relationship) -->
+            <line x1="220" y1="380" x2="320" y2="40" stroke="var(--gold-deep)" stroke-width="1.4" stroke-dasharray="3 3"/>
+            <text x="295" y="58" class="lbl-small lbl-gold">ESPVR (contractility)</text>
+
+            <!-- EDPVR (end-diastolic) -->
+            <path d="M 80 380 Q 250 378, 410 360 Q 460 340, 500 300" stroke="var(--terra-dark)" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
+            <text x="430" y="320" class="lbl-small lbl-terra">EDPVR (compliance)</text>
+
+            <!-- PV loop (counterclockwise) -->
+            <!-- A: ESV ~50mL, low pressure (~10) → start of mitral closing... Actually let me trace correctly:
+                 D: mitral opens at ESV(~50), low pressure
+                 Filling: from (50, low P) to (120, slightly higher P) = bottom curve
+                 A: EDV(120), mitral closes
+                 Isovolumetric contraction: vertical up at x=120, from low P to ~80
+                 B: aortic opens at (120, 80)
+                 Ejection: from (120, 80) curving to (50, 100) approx, going down-left to up-left
+                 C: aortic closes at ESV(120 → 50)
+                 Isovolumetric relaxation: vertical down at x=50 from ~100 to low P
+                 Back to D -->
+
+            <!-- Convert to SVG coords: 0 mL = x=80, 150 mL = x=500. So 1 mL ≈ 2.8 px.
+                 ESV 50 mL → x = 80 + 50*2.8 = 220
+                 EDV 120 mL → x = 80 + 120*2.8 = 416
+                 Pressure: 0 mmHg → y=380, 130 mmHg → y=40. 1 mmHg ≈ 2.6 px.
+                 8 mmHg → y = 380-8*2.6 = 359
+                 80 mmHg → y = 380-80*2.6 = 172
+                 120 mmHg → y = 380-120*2.6 = 68 -->
+            <path d="M 220 360
+                     Q 320 358, 416 350
+                     L 416 172
+                     Q 380 95, 340 100
+                     Q 280 110, 220 130
+                     L 220 360 Z"
+                  fill="rgba(30,61,76,0.05)" stroke="var(--navy)" stroke-width="2.4"/>
+
+            <!-- Direction arrows -->
+            <!-- Filling arrow (right along bottom) -->
+            <polygon points="370,355 380,352 380,358" fill="var(--navy)"/>
+            <!-- Iso contraction arrow (up) -->
+            <polygon points="412,250 419,260 423,250" fill="var(--navy)"/>
+            <!-- Ejection arrow (left top) -->
+            <polygon points="290,107 280,104 280,110" fill="var(--navy)"/>
+            <!-- Iso relax arrow (down) -->
+            <polygon points="216,250 223,260 227,250" fill="var(--navy)"/>
+
+            <!-- Points -->
+            <circle cx="220" cy="360" r="5" class="node"/>
+            <circle cx="416" cy="350" r="5" class="node"/>
+            <circle cx="416" cy="172" r="5" class="node"/>
+            <circle cx="220" cy="130" r="5" class="node"/>
+
+            <!-- Point labels -->
+            <text x="200" y="378" class="node-text">D</text>
+            <text x="432" y="370" class="node-text">A</text>
+            <text x="432" y="170" class="node-text">B</text>
+            <text x="200" y="128" class="node-text">C</text>
+
+            <!-- Point descriptions -->
+            <text x="240" y="378" class="lbl-small lbl-bold">Mitral opens</text>
+            <text x="440" y="368" class="lbl-small lbl-bold">Mitral closes</text>
+            <text x="440" y="168" class="lbl-small lbl-bold">Aortic opens</text>
+            <text x="210" y="118" class="lbl-small lbl-bold" text-anchor="end">Aortic closes</text>
+
+            <!-- Phase labels -->
+            <text x="320" y="345" text-anchor="middle" class="lbl-small">Filling</text>
+            <text x="430" y="270" class="lbl-small">Isovol.<tspan x="430" dy="14">contraction</tspan></text>
+            <text x="320" y="80" text-anchor="middle" class="lbl-small">Ejection</text>
+            <text x="160" y="240" class="lbl-small">Isovol.<tspan x="160" dy="14">relaxation</tspan></text>
+
+            <!-- ESV / EDV markers -->
+            <line x1="220" y1="380" x2="220" y2="390" stroke="var(--navy)" stroke-width="1.2"/>
+            <text x="220" y="436" text-anchor="middle" class="lbl-small lbl-bold">ESV</text>
+            <line x1="416" y1="380" x2="416" y2="390" stroke="var(--navy)" stroke-width="1.2"/>
+            <text x="416" y="436" text-anchor="middle" class="lbl-small lbl-bold">EDV</text>
+            <!-- SV bracket -->
+            <line x1="220" y1="395" x2="416" y2="395" stroke="var(--navy)" stroke-width="1"/>
+            <text x="318" y="420" text-anchor="middle" class="lbl-small lbl-bold">SV (width of loop)</text>
+          </svg>
+          <figcaption>Trace the loop counterclockwise: D → A (filling), A → B (isovolumetric contraction), B → C (ejection), C → D (isovolumetric relaxation). Loop width = stroke volume. Loop height up to point B = afterload. The ESPVR slope = contractility; the EDPVR curve = ventricular compliance. Drugs and disease shift these curves predictably.</figcaption>
+        </figure>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>S3 in an adult</strong> is a soft early diastolic sound often heard in volume overload from heart failure (the ventricle is full, then more blood slams into a stretched chamber). <strong>S4</strong> reflects a stiff ventricle. New onset S3 or S4 in an adult is a finding, not a noise to ignore. <strong>Split S2</strong> on inspiration is physiologic (delayed pulmonary valve closure from increased venous return); fixed splitting suggests atrial septal defect.</p>
+        <p><strong>Reading the PV loop in disease:</strong></p>
+        <ul>
+          <li><em>Aortic stenosis:</em> loop becomes taller (high LV pressure required to open the stenotic valve).</li>
+          <li><em>Aortic regurgitation:</em> loop widens (extra volume regurgitates back in during diastole).</li>
+          <li><em>Mitral regurgitation:</em> loop loses its isovolumetric contraction phase (blood escapes back to LA as soon as LV pressure rises).</li>
+          <li><em>HFrEF:</em> ESPVR shifts down-right (less force at any volume); loop shifts right with larger EDV and ESV, narrower SV.</li>
+          <li><em>HFpEF:</em> EDPVR shifts up-left (stiff ventricle); same EDV requires much higher filling pressure.</li>
+        </ul>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Reproduce the PV loop from memory. Mark all four valve events, the four phases, EDV, ESV, and SV. Then sketch a second loop on the same axes for a patient with severe aortic stenosis and explain how each segment changed.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which heart sound corresponds to closure of the AV valves?</li>
+          <li><span class="qc-meta">DOK 3.</span> Explain why "isovolumetric" contraction has no change in volume even though the ventricle is generating force.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>S1.</strong></li>
+            <li>Both the AV valves and the semilunar valves are closed during this brief phase. The ventricle is generating pressure but cannot move blood, so volume is constant while pressure rises. Once ventricular pressure exceeds aortic/pulmonary pressure, the semilunar valves open and ejection begins.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 7 ===== -->
+    <article class="concept-card" id="c7" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 7 of 19</p>
+      <h2 class="card-title">Cardiac output (CO = HR × SV) <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Cardiac output equals heart rate times stroke volume. Almost every cardiac intervention is changing one of those two numbers, or both.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>CO</strong> = heart rate (bpm) × stroke volume (mL/beat). Normal resting CO ~5 L/min. Equals total blood volume per minute.</li>
+          <li><strong>Stroke volume (SV):</strong> volume ejected per beat. Normal ~70 mL.
+            <ul>
+              <li>SV = EDV − ESV.</li>
+              <li>EDV: end-diastolic volume (~120 mL). ESV: end-systolic volume (~50 mL).</li>
+            </ul>
+          </li>
+          <li><strong>Ejection fraction (EF):</strong> SV / EDV × 100. Normal ≥ 55%. Single most important number for systolic function.</li>
+          <li><strong>Cardiac index (CI):</strong> CO / body surface area (m²). Normalizes across body sizes. Normal 2.5 to 4.0 L/min/m².</li>
+          <li><strong>Determinants of SV</strong> (Concept 8): preload, afterload, contractility.</li>
+          <li><strong>Determinants of HR:</strong> intrinsic SA rate modulated by ANS (sympathetic ↑, parasympathetic ↓), hormones (epinephrine, thyroid), temperature, electrolytes.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Variable</th><th>Formula / normal</th><th>What changes it</th></tr></thead>
+          <tbody>
+            <tr><td>HR</td><td>60-100 bpm</td><td>ANS, hormones, fever, drugs</td></tr>
+            <tr><td>SV</td><td>~70 mL</td><td>Preload, afterload, contractility</td></tr>
+            <tr><td>CO</td><td>HR × SV; ~5 L/min</td><td>Either determinant</td></tr>
+            <tr><td>EF</td><td>SV/EDV × 100; ≥ 55%</td><td>Contractility, afterload</td></tr>
+            <tr><td>CI</td><td>CO/BSA; 2.5-4.0</td><td>Cardiac reserve in ICU</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked calculations</h3>
+        <ol>
+          <li><strong>Stroke volume:</strong> Patient's echo shows EDV 130 mL, ESV 55 mL.
+            <ul>
+              <li>SV = EDV − ESV = 130 − 55 = <strong>75 mL/beat</strong>.</li>
+              <li><em>Interpretation:</em> within the normal range (60-100 mL).</li>
+            </ul>
+          </li>
+          <li><strong>Cardiac output:</strong> Same patient, HR 80 bpm.
+            <ul>
+              <li>CO = HR × SV = 80 × 75 = 6,000 mL/min = <strong>6.0 L/min</strong>.</li>
+              <li><em>Interpretation:</em> normal resting CO (4-8 L/min).</li>
+            </ul>
+          </li>
+          <li><strong>Ejection fraction:</strong> Same patient.
+            <ul>
+              <li>EF = SV / EDV × 100 = 75/130 × 100 = <strong>57.7%</strong>.</li>
+              <li><em>Interpretation:</em> preserved systolic function (≥ 55%). If this number had been 35%, you would be looking at HFrEF.</li>
+            </ul>
+          </li>
+          <li><strong>Cardiac index:</strong> Same patient, BSA 1.8 m².
+            <ul>
+              <li>CI = CO / BSA = 6.0 / 1.8 = <strong>3.3 L/min/m²</strong>.</li>
+              <li><em>Interpretation:</em> normal (2.5-4.0). A CI &lt; 2.2 typically indicates cardiogenic shock and triggers escalation of care.</li>
+            </ul>
+          </li>
+          <li><strong>Worked exam-style case:</strong> 68-year-old with HFrEF arrives in clinic. Echo: EDV 200 mL, ESV 140 mL. HR 90 bpm. BSA 1.9 m². Compute SV, CO, EF, CI and interpret.
+            <ul>
+              <li>SV = 200 − 140 = 60 mL.</li>
+              <li>CO = 90 × 60 = 5,400 mL/min = 5.4 L/min.</li>
+              <li>EF = 60/200 × 100 = <strong>30%</strong>.</li>
+              <li>CI = 5.4 / 1.9 = 2.8 L/min/m².</li>
+              <li><em>Interpretation:</em> CO and CI look "fine" at rest, but EF is severely reduced (HFrEF). The dilated ventricle is producing acceptable forward flow only by tolerating a huge EDV — a chronically maladaptive compensation. Exercise tolerance and prognosis are poor without medical therapy targeting remodeling (ACE-I/ARB/ARNI, beta blocker, MRA, SGLT2 inhibitor).</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Heart failure with reduced EF (HFrEF):</strong> EF &lt; 40%. Systolic dysfunction. Classic dilated ventricle. <strong>Heart failure with preserved EF (HFpEF):</strong> EF ≥ 50%. Diastolic dysfunction — the ventricle cannot relax and fill properly. <strong>Shock:</strong> inadequate tissue perfusion. Often a CO problem (cardiogenic, hypovolemic) but distributive shock (sepsis) is a TPR problem with usually high CO.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a CO equation tree. CO at the root. Branch to HR and SV. Branch HR to ANS, hormones, electrolytes. Branch SV to preload, afterload, contractility. For each leaf, write one drug or condition that changes it.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> A patient has EDV 130 mL and ESV 60 mL. What is the SV? What is the EF?</li>
+          <li><span class="qc-meta">DOK 3.</span> During exercise, CO can rise from 5 to 25 L/min. Explain which variables increase and by how much.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>SV = 130 − 60 = <strong>70 mL</strong>. EF = 70/130 × 100 = <strong>54%</strong>.</li>
+            <li>HR can roughly triple (e.g., 70 → 180 bpm). SV roughly doubles via increased contractility (sympathetic), increased preload (muscle pump returning blood), and reduced afterload (vasodilation in working muscle). Triple × double = roughly 5× increase, matching the observed CO change.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 8 ===== -->
+    <article class="concept-card" id="c8" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 8 of 19</p>
+      <h2 class="card-title">Preload, afterload, contractility <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Three independent levers move stroke volume. Preload is the stretch you start with, afterload is the pressure you have to push against, contractility is how hard the muscle squeezes regardless of either.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Preload:</strong> the wall stretch on the ventricle at the end of diastole. Best clinical proxy: EDV. Depends mostly on venous return.
+            <ul>
+              <li>Increased by: increased venous return (volume infusion, lying down, exercise), bradycardia (longer fill time).</li>
+              <li>Decreased by: hemorrhage, vasodilators (venodilators like nitroglycerin), tachycardia.</li>
+            </ul>
+          </li>
+          <li><strong>Afterload:</strong> the resistance the ventricle must push against to eject. For the LV, best proxy: aortic pressure (or systemic vascular resistance).
+            <ul>
+              <li>Increased by: hypertension, aortic stenosis, vasoconstriction.</li>
+              <li>Decreased by: vasodilators (ACE inhibitors, ARBs, hydralazine), reduced TPR.</li>
+            </ul>
+          </li>
+          <li><strong>Contractility (inotropy):</strong> the intrinsic strength of contraction independent of preload and afterload.
+            <ul>
+              <li>Increased by: sympathetic stimulation (β1), positive inotropes (dobutamine, digoxin, milrinone), calcium.</li>
+              <li>Decreased by: β blockers, calcium channel blockers (non-dihydropyridines), acidosis, ischemia, hypoxia.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Lever</th><th>Best proxy</th><th>Effect on SV when ↑</th><th>Example intervention</th></tr></thead>
+          <tbody>
+            <tr><td>Preload</td><td>EDV</td><td>↑ (via Starling) until failing heart</td><td>IV fluids, leg raise</td></tr>
+            <tr><td>Afterload</td><td>SVR / aortic pressure</td><td>↓ (harder to eject)</td><td>ACE inhibitor reduces it</td></tr>
+            <tr><td>Contractility</td><td>EF curve shift</td><td>↑ at any preload</td><td>Dobutamine, digoxin</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Heart failure treatment maps directly onto these three levers:</p>
+        <ul>
+          <li><strong>Reduce preload:</strong> diuretics, nitroglycerin → relieves pulmonary congestion.</li>
+          <li><strong>Reduce afterload:</strong> ACE inhibitors, ARBs → easier ejection, less LV remodeling.</li>
+          <li><strong>Improve contractility:</strong> short term — dobutamine, milrinone in acute decompensation. Long term — beta blockers (counterintuitive but they reduce remodeling and improve long-term contractility) and SGLT2 inhibitors.</li>
+        </ul>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw three Starling curves on one set of axes (force/SV on Y, preload on X): normal, ↑ contractility, ↓ contractility. Mark where preload changes move a patient on each curve. Then add a fourth curve for failing heart (flatter, shifted down).</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient with severe sepsis gets aggressive IV fluids. Which determinant of SV are you targeting?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why might a patient with severely impaired LV function get worse if you give a calcium channel blocker like diltiazem?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Preload.</strong> Fluids increase venous return → ↑ EDV → ↑ SV (per Starling), assuming the heart can respond.</li>
+            <li>Diltiazem is a non-dihydropyridine CCB. It reduces contractility (negative inotrope) and slows the AV node. In a failing LV, the heart depends on preserved contractility to maintain CO. Suppressing contractility can drop CO further and precipitate cardiogenic shock.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 9 ===== -->
+    <article class="concept-card" id="c9" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 9 of 19</p>
+      <h2 class="card-title">Frank-Starling mechanism <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The healthy heart pumps out whatever venous return delivers. Stretch the muscle and it contracts harder. This is how the two sides of the heart stay matched without external control.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Definition:</strong> within physiologic limits, ↑ EDV (preload) → ↑ stretch → ↑ force of contraction → ↑ SV.</li>
+          <li><strong>Mechanism:</strong> the length-tension relationship of cardiac sarcomeres. Stretching brings actin and myosin into more optimal overlap and increases calcium sensitivity.</li>
+          <li><strong>Why it matters:</strong>
+            <ul>
+              <li>Beat-to-beat balance: if RV pumps a little more, LV preload rises and LV matches output.</li>
+              <li>Allows the heart to respond to changes in venous return without nervous system input.</li>
+            </ul>
+          </li>
+          <li><strong>Limits:</strong>
+            <ul>
+              <li>At very high preload, sarcomeres overstretch and force falls (descending limb).</li>
+              <li>In a failing heart, the curve is flatter and shifted down. Adding more preload buys less benefit and risks pulmonary edema.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Heart state</th><th>Starling curve shape</th><th>Response to ↑ preload</th></tr></thead>
+          <tbody>
+            <tr><td>Normal</td><td>Steep, rises then plateaus</td><td>Large ↑ in SV</td></tr>
+            <tr><td>↑ Contractility (e.g., sympathetic)</td><td>Shifted up and steeper</td><td>Even more SV at same preload</td></tr>
+            <tr><td>↓ Contractility / failure</td><td>Flatter, shifted down</td><td>Smaller ↑ in SV; risk of congestion</td></tr>
+            <tr><td>Overstretched (volume overload)</td><td>Past peak, descending</td><td>SV falls with more preload</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: family of Starling curves</h3>
+        <figure class="diagram" aria-labelledby="dxFS-title dxFS-desc">
+          <svg viewBox="0 0 640 400" role="img" aria-labelledby="dxFS-title dxFS-desc">
+            <title id="dxFS-title">Three Frank-Starling curves comparing normal heart, increased contractility, and failing heart</title>
+            <desc id="dxFS-desc">A graph with end-diastolic volume on the X axis and stroke volume on the Y axis. Three curves rise from the origin and plateau. The middle curve represents the normal heart. The upper curve, dashed in terra color, represents increased contractility from sympathetic stimulation, reaching higher stroke volume at any given preload. The lower curve, dashed in gold, represents the failing heart, which produces less stroke volume at every preload and plateaus much earlier. Marked points show where a hypovolemic patient sits, where a normal resting state sits, and where a decompensated heart failure patient sits.</desc>
+
+            <!-- Axes -->
+            <line x1="70" y1="40" x2="70" y2="340" class="ax-line"/>
+            <line x1="70" y1="340" x2="600" y2="340" class="ax-line"/>
+            <text x="335" y="370" text-anchor="middle" class="lbl-bold">Preload (EDV)</text>
+            <text x="30" y="190" class="lbl-bold" transform="rotate(-90 30 190)">Stroke volume</text>
+
+            <!-- Increased contractility curve -->
+            <path d="M 70 340 Q 220 60, 600 50" class="curve-alt"/>
+            <text x="490" y="65" class="lbl-small lbl-terra lbl-bold">↑ Contractility</text>
+            <text x="490" y="78" class="lbl-small lbl-terra">(sympathetic, dobutamine)</text>
+
+            <!-- Normal curve -->
+            <path d="M 70 340 Q 220 150, 600 130" class="curve-main"/>
+            <text x="500" y="148" class="lbl-bold">Normal</text>
+
+            <!-- Failing heart curve -->
+            <path d="M 70 340 Q 250 280, 600 240" class="curve-warn"/>
+            <text x="490" y="232" class="lbl-small lbl-gold lbl-bold">Failing heart (HFrEF)</text>
+
+            <!-- Point: hypovolemia (on normal curve, low preload) -->
+            <circle cx="140" cy="290" r="6" fill="var(--navy)"/>
+            <text x="150" y="295" class="lbl-small lbl-bold">Hypovolemic</text>
+            <text x="150" y="310" class="lbl-small">(low EDV, healthy heart)</text>
+
+            <!-- Point: normal resting -->
+            <circle cx="280" cy="190" r="6" fill="var(--navy)"/>
+            <text x="290" y="195" class="lbl-small lbl-bold">Normal rest</text>
+
+            <!-- Point: decompensated HF -->
+            <circle cx="440" cy="252" r="6" fill="var(--gold)"/>
+            <text x="450" y="245" class="lbl-small lbl-gold lbl-bold">Decompensated HF</text>
+            <text x="450" y="260" class="lbl-small">(high EDV, low SV)</text>
+
+            <!-- Arrows showing intervention effects -->
+            <path d="M 140 290 L 250 200" stroke="var(--navy)" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+            <polygon points="247,196 254,201 250,206" fill="var(--navy)"/>
+            <text x="155" y="240" class="lbl-small">Fluids ↑ SV</text>
+
+            <path d="M 440 252 L 360 270" stroke="var(--gold-deep)" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+            <polygon points="363,266 358,270 363,274" fill="var(--gold-deep)"/>
+            <text x="320" y="295" class="lbl-small lbl-gold">Diuretic moves leftward</text>
+          </svg>
+          <figcaption>The healthy heart's response to a load is automatic: stretch in, force out. In failure, the curve flattens and shifts down. The same fluid bolus that helps a hypovolemic patient pushes a failing heart further into pulmonary congestion. Diuretics, not fluids, move the failing heart left toward better function.</figcaption>
+        </figure>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>In a patient with HFrEF, IV fluids do not produce the SV bump you would expect in a healthy heart. The flatter Starling curve means fluid backs up into the pulmonary circulation before improving CO. This is why diuretics, not fluids, are the workhorse in decompensated systolic heart failure. In contrast, a hypovolemic patient with a healthy heart sits low on a normal Starling curve, so fluid resuscitation produces a strong CO response.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw normal and failing Starling curves on the same axes. Mark a patient with hypovolemia (low EDV, healthy heart) and a patient with decompensated HF (high EDV, failing heart). Show where fluid administration moves each one.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> What variable on the Starling curve is on the X axis?</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient with chronic HFrEF arrives with crackles, JVD, and SBP 100. Using Starling logic, justify giving a diuretic instead of IV fluids.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>End-diastolic volume (preload).</strong></li>
+            <li>The patient is on the flat/descending part of a depressed Starling curve. Additional preload (fluids) will not improve SV but will worsen pulmonary venous pressure and cause pulmonary edema. Reducing preload with a diuretic moves the patient leftward on the curve to a point where SV is preserved and lung congestion improves.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 10 ===== -->
+    <article class="concept-card" id="c10" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 10 of 19</p>
+      <h2 class="card-title">ANS control of the heart <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Sympathetic input speeds up, strengthens, and conducts faster through the heart. Parasympathetic input does the opposite, but mostly just slows the rate. The medulla coordinates it through baroreceptor feedback.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Sympathetic:</strong>
+            <ul>
+              <li>Cardiac accelerator nerves from T1-T4 spinal cord.</li>
+              <li>Postganglionic NE → β1 receptors on SA, AV, atrial and ventricular myocytes.</li>
+              <li>Effects: ↑ HR (chronotropy), ↑ contractility (inotropy), ↑ conduction velocity (dromotropy), ↑ rate of relaxation (lusitropy).</li>
+            </ul>
+          </li>
+          <li><strong>Parasympathetic:</strong>
+            <ul>
+              <li>Vagus nerve (CN X). Releases ACh onto muscarinic (M2) receptors.</li>
+              <li>Densest innervation on SA node, AV node, atria. Minimal on ventricles.</li>
+              <li>Effects: ↓ HR, ↓ AV conduction, modest ↓ atrial contractility.</li>
+            </ul>
+          </li>
+          <li><strong>Baseline tone:</strong> resting heart is parasympathetic-dominant. Intrinsic SA rate ~100 bpm, vagal tone drops resting HR to ~70.</li>
+          <li><strong>Baroreceptor reflex:</strong>
+            <ul>
+              <li>Receptors in carotid sinus (CN IX) and aortic arch (CN X) detect stretch (pressure).</li>
+              <li>Send to medulla. If BP rises → ↑ vagal, ↓ sympathetic → ↓ HR, ↓ contractility, vasodilation.</li>
+              <li>If BP falls → ↓ vagal, ↑ sympathetic → ↑ HR, ↑ contractility, vasoconstriction.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Branch</th><th>NT &amp; receptor</th><th>Effects</th><th>Drug example</th></tr></thead>
+          <tbody>
+            <tr><td>Sympathetic</td><td>NE → β1</td><td>↑ HR, ↑ contractility, ↑ conduction</td><td>Dobutamine (β1 agonist)</td></tr>
+            <tr><td>Sympathetic block</td><td>β1 antagonist</td><td>↓ HR, ↓ contractility</td><td>Metoprolol</td></tr>
+            <tr><td>Parasympathetic</td><td>ACh → M2</td><td>↓ HR, ↓ AV conduction</td><td>—</td></tr>
+            <tr><td>Parasympathetic block</td><td>Muscarinic antagonist</td><td>↑ HR (unmasked SA rate)</td><td>Atropine</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Atropine</strong> in symptomatic bradycardia: blocks M2 receptors, removes vagal brake, lets the SA node speed up. <strong>Beta blockers</strong> reduce mortality in HFrEF by blunting chronic sympathetic overdrive, which (long-term) reduces remodeling. <strong>Carotid sinus massage:</strong> stimulates baroreceptors → ↑ vagal tone → can break some SVTs.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the baroreceptor reflex arc: receptors → afferent nerves → medulla → efferent sympathetic and parasympathetic → heart and vessels. Show two scenarios: BP suddenly rises (e.g., hypertensive crisis) and BP suddenly drops (e.g., hemorrhage).</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Why does giving atropine to a bradycardic patient raise the heart rate?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient stands up quickly and feels lightheaded. The baroreflex kicks in within seconds. Predict the HR, contractility, and vascular tone changes.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Atropine blocks muscarinic (M2) receptors at the SA and AV nodes. Vagal slowing is removed, so the intrinsic SA rate (~100) takes over and HR rises.</li>
+            <li>Standing → blood pools in legs → venous return falls → BP drops → baroreceptors fire less → medulla ↑ sympathetic, ↓ parasympathetic. Result: HR rises, contractility increases, peripheral vasoconstriction restores BP.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 10a (NEW): ACUTE MI PATHOPHYSIOLOGY ===== -->
+    <article class="concept-card" id="c10a" data-tags="CLIN">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Acute MI in depth</p>
+      <h2 class="card-title">Acute myocardial infarction: pathophysiology and management <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">An MI is muscle death from prolonged ischemia. The trigger is almost always a plaque rupture inside a coronary artery, and the clock starts the instant flow stops. Time is muscle. Time is mortality.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Three things have to be present for an MI:</strong> a coronary supply, a metabolic demand the supply cannot meet, and time. Remove flow long enough and the muscle dies.</li>
+          <li><strong>ACS spectrum:</strong>
+            <ul>
+              <li><em>Stable angina:</em> predictable, exertional, relieved by rest or nitrates. No troponin rise. ECG may be normal at rest.</li>
+              <li><em>Unstable angina:</em> new, at rest, crescendo, or with less exertion than usual. No troponin rise. ECG may show ischemic changes.</li>
+              <li><em>NSTEMI:</em> troponin rises (cardiac muscle is dying) without ST elevation. Often ST depression or T inversion.</li>
+              <li><em>STEMI:</em> ST elevation in two contiguous leads (or new LBBB) plus troponin rise. Transmural infarct.</li>
+            </ul>
+          </li>
+          <li><strong>Symptoms:</strong> classic crushing substernal chest pain or pressure, often radiating to left arm or jaw, diaphoresis, dyspnea, nausea. <em>Atypical presentations</em> in women, older adults, and patients with diabetes — fatigue, dyspnea, epigastric pain, syncope. Do not dismiss atypical symptoms.</li>
+          <li><strong>First-line investigations at the bedside:</strong> 12-lead ECG within 10 minutes of arrival, IV access, troponin, basic chemistries, chest X-ray.</li>
+          <li><strong>Bedside management priorities (immediate, all patients):</strong>
+            <ul>
+              <li><em>Oxygen</em> if SpO₂ &lt; 90% (no routine oxygen if normal).</li>
+              <li><em>Aspirin</em> 162-325 mg chewed (antiplatelet).</li>
+              <li><em>Nitroglycerin</em> sublingual if SBP &gt; 90 and not RV infarct.</li>
+              <li><em>Morphine</em> for unrelieved pain (used cautiously; signals reperfusion failure).</li>
+              <li><em>Anticoagulation:</em> heparin or LMWH per protocol.</li>
+              <li><em>P2Y12 inhibitor</em> (clopidogrel, ticagrelor) per cath plan.</li>
+              <li><em>Beta blocker</em> if no contraindications (no HF, no shock, no bradycardia).</li>
+              <li><em>High-intensity statin.</em></li>
+            </ul>
+          </li>
+          <li><strong>Reperfusion (STEMI):</strong>
+            <ul>
+              <li><em>PCI (preferred):</em> door-to-balloon &lt; 90 min if available.</li>
+              <li><em>Thrombolytics:</em> if PCI is not available within 120 min from first medical contact; door-to-needle &lt; 30 min.</li>
+            </ul>
+          </li>
+          <li><strong>Lead grouping for localization:</strong>
+            <ul>
+              <li>Anterior: V1-V4 (LAD).</li>
+              <li>Lateral: I, aVL, V5, V6 (circumflex or diagonal LAD).</li>
+              <li>Inferior: II, III, aVF (RCA in most; circumflex in left-dominant).</li>
+              <li>Posterior: tall R + ST depression in V1-V2 (often with inferior MI).</li>
+              <li>RV: ST elevation in V4R (always check in inferior MI — nitrates contraindicated).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: ECG evolution of STEMI</h3>
+        <figure class="diagram" aria-labelledby="dxMI-title dxMI-desc">
+          <svg viewBox="0 0 720 380" role="img" aria-labelledby="dxMI-title dxMI-desc">
+            <title id="dxMI-title">Evolution of ECG changes during acute ST-elevation myocardial infarction</title>
+            <desc id="dxMI-desc">Five ECG strips arrayed horizontally showing the progression of changes during a STEMI. Strip one: normal sinus rhythm with isoelectric ST segment and upright T wave. Strip two: minutes after coronary occlusion, the T wave becomes hyperacute, tall and broad. Strip three: hours later, the ST segment elevates above baseline. Strip four: days later, a pathologic Q wave develops and the ST segment begins to return toward baseline while T waves invert. Strip five: weeks later, the ST segment is back to baseline but a persistent Q wave and inverted T wave remain.</desc>
+
+            <!-- Helper grid background -->
+            <defs>
+              <pattern id="ecggrid" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+                <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(194,115,77,0.15)" stroke-width="0.5"/>
+              </pattern>
+            </defs>
+
+            <!-- Strip 1: Normal -->
+            <g transform="translate(15,40)">
+              <rect width="130" height="120" fill="url(#ecggrid)" stroke="var(--navy-tint)" stroke-width="1"/>
+              <path d="M 5 80 L 25 80 Q 30 70, 35 80 L 50 80 L 55 95 L 60 50 L 64 95 L 70 80 L 90 80 Q 100 65, 110 80 L 125 80" stroke="var(--navy)" stroke-width="1.6" fill="none"/>
+              <text x="65" y="15" text-anchor="middle" class="lbl-bold">Normal</text>
+              <text x="65" y="30" text-anchor="middle" class="lbl-small">Baseline ST</text>
+              <text x="65" y="140" text-anchor="middle" class="lbl-small lbl-bold">Pre-event</text>
+            </g>
+
+            <!-- Strip 2: Hyperacute T -->
+            <g transform="translate(155,40)">
+              <rect width="130" height="120" fill="url(#ecggrid)" stroke="var(--navy-tint)" stroke-width="1"/>
+              <path d="M 5 80 L 25 80 Q 30 72, 35 80 L 50 80 L 55 95 L 60 50 L 64 95 L 70 80 L 85 80 Q 100 35, 115 80 L 125 80" stroke="var(--navy)" stroke-width="1.8" fill="none"/>
+              <text x="65" y="15" text-anchor="middle" class="lbl-bold">Hyperacute T</text>
+              <text x="65" y="30" text-anchor="middle" class="lbl-small lbl-terra">Tall, broad T wave</text>
+              <text x="65" y="140" text-anchor="middle" class="lbl-small lbl-bold">Minutes</text>
+            </g>
+
+            <!-- Strip 3: ST Elevation -->
+            <g transform="translate(295,40)">
+              <rect width="130" height="120" fill="url(#ecggrid)" stroke="var(--navy-tint)" stroke-width="1"/>
+              <path d="M 5 80 L 25 80 Q 30 72, 35 80 L 50 80 L 55 95 L 60 50 L 64 95 L 70 80 L 78 60 L 95 60 Q 105 55, 115 65 L 125 80" stroke="var(--terra-dark)" stroke-width="2.2" fill="none"/>
+              <line x1="5" y1="80" x2="125" y2="80" stroke="var(--navy)" stroke-width="0.6" stroke-dasharray="2 2"/>
+              <text x="65" y="15" text-anchor="middle" class="lbl-bold lbl-terra">ST elevation</text>
+              <text x="65" y="30" text-anchor="middle" class="lbl-small lbl-terra">"Tombstone"</text>
+              <text x="65" y="140" text-anchor="middle" class="lbl-small lbl-bold">Hours</text>
+            </g>
+
+            <!-- Strip 4: Q wave developing -->
+            <g transform="translate(435,40)">
+              <rect width="130" height="120" fill="url(#ecggrid)" stroke="var(--navy-tint)" stroke-width="1"/>
+              <path d="M 5 80 L 25 80 Q 30 72, 35 80 L 50 80 L 53 105 L 56 105 L 62 50 L 66 95 L 70 80 L 82 70 L 95 75 L 110 95 L 120 90 L 125 80" stroke="var(--navy)" stroke-width="1.8" fill="none"/>
+              <text x="65" y="15" text-anchor="middle" class="lbl-bold">Q wave + T inv</text>
+              <text x="65" y="30" text-anchor="middle" class="lbl-small">ST returning</text>
+              <text x="65" y="140" text-anchor="middle" class="lbl-small lbl-bold">Days</text>
+            </g>
+
+            <!-- Strip 5: Resolution -->
+            <g transform="translate(575,40)">
+              <rect width="130" height="120" fill="url(#ecggrid)" stroke="var(--navy-tint)" stroke-width="1"/>
+              <path d="M 5 80 L 25 80 Q 30 72, 35 80 L 50 80 L 53 105 L 56 105 L 62 50 L 66 95 L 70 80 L 90 80 Q 100 95, 110 80 L 125 80" stroke="var(--navy)" stroke-width="1.6" fill="none"/>
+              <text x="65" y="15" text-anchor="middle" class="lbl-bold">Healed</text>
+              <text x="65" y="30" text-anchor="middle" class="lbl-small">Persistent Q</text>
+              <text x="65" y="140" text-anchor="middle" class="lbl-small lbl-bold">Weeks</text>
+            </g>
+
+            <!-- Timeline below -->
+            <line x1="40" y1="220" x2="700" y2="220" class="ax-line" stroke-width="1.4"/>
+            <polygon points="700,217 708,220 700,223" fill="var(--navy)"/>
+            <text x="370" y="245" text-anchor="middle" class="lbl-small lbl-bold lbl-terra">Time from coronary occlusion</text>
+
+            <!-- Cellular timeline -->
+            <g transform="translate(40,260)">
+              <text x="0" y="10" class="lbl-small lbl-bold">Cellular timeline:</text>
+              <text x="0" y="30" class="lbl-small">Seconds: ATP falls, ischemic dysfunction (reversible)</text>
+              <text x="0" y="46" class="lbl-small">20-30 min: irreversible injury begins</text>
+              <text x="0" y="62" class="lbl-small">4-6 h: coagulation necrosis visible</text>
+              <text x="0" y="78" class="lbl-small">1-3 days: PMN infiltrate, risk of arrhythmias</text>
+              <text x="0" y="94" class="lbl-small">5-10 days: macrophages, risk of ventricular wall or papillary muscle rupture</text>
+              <text x="0" y="110" class="lbl-small">2-8 weeks: scar formation, persistent ECG Q wave</text>
+            </g>
+          </svg>
+          <figcaption>STEMI ECG evolves on a predictable timeline. Hyperacute T waves appear within minutes — easy to miss. ST elevation peaks in hours. Q waves form as full-thickness necrosis develops, often persisting permanently as the ECG signature of a healed infarct.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Type</th><th>ECG</th><th>Troponin</th><th>Anatomic correlate</th></tr></thead>
+          <tbody>
+            <tr><td>Stable angina</td><td>Normal or non-specific</td><td>Negative</td><td>Fixed plaque, demand ischemia</td></tr>
+            <tr><td>Unstable angina</td><td>ST ↓ or T inversion possible</td><td>Negative</td><td>Plaque instability, no necrosis</td></tr>
+            <tr><td>NSTEMI</td><td>ST ↓, T inversion, or normal</td><td>Positive</td><td>Subendocardial infarct</td></tr>
+            <tr><td>STEMI</td><td>ST ↑ in ≥ 2 contiguous leads</td><td>Positive</td><td>Transmural infarct</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pre-hospital and ED priorities (nursing-relevant):</strong></p>
+        <ul>
+          <li>12-lead ECG within 10 min. Continuous monitoring. Defibrillator at bedside.</li>
+          <li>Two large-bore IVs. Labs: troponin (repeat at 3-6 h), CBC, BMP, coag, lipid panel.</li>
+          <li>Aspirin 162-325 mg chewed if not contraindicated.</li>
+          <li>Nitroglycerin SL if SBP &gt; 90 and no signs of RV infarct.</li>
+          <li>Pain control: morphine cautiously (mask perfusion failure).</li>
+          <li>Anticipate: arrhythmias (esp. inferior MI → bradyarrhythmias; anterior MI → tachyarrhythmias and HF).</li>
+          <li>Time-to-cath team activation: door-to-balloon &lt; 90 min for STEMI.</li>
+        </ul>
+        <p><strong>Watch for these complications</strong> in the first hours to days post-MI: cardiogenic shock, free wall rupture, papillary muscle rupture (acute MR, flash pulmonary edema), VSD, sustained VT/VF, AV blocks, RV infarct, Dressler syndrome (autoimmune pericarditis, weeks later).</p>
+      </aside>
+
+      <aside class="callout callout-clinical deep-dive">
+        <h3>MOLECULAR AND CELLULAR PATHOGENESIS</h3>
+        <ul>
+          <li><strong>Plaque rupture:</strong> the fibrous cap of an atherosclerotic plaque tears. Often a "vulnerable" plaque with thin cap, lipid-rich core, inflammatory infiltrate. Exposed subendothelial collagen and tissue factor activate platelets and the clotting cascade. A thrombus forms over the rupture site.</li>
+          <li><strong>From thrombus to infarct:</strong>
+            <ul>
+              <li>Coronary flow drops below metabolic demand. ATP production fails within minutes.</li>
+              <li>Loss of Na/K ATPase activity → intracellular Na+ and Ca++ rise → membrane dysfunction.</li>
+              <li>Anaerobic glycolysis raises intracellular lactate and H+ → contractile failure (within seconds).</li>
+              <li>By 20-30 minutes of complete occlusion, irreversible injury begins at the subendocardium (the most vulnerable region — furthest from epicardial coronary supply, highest tension).</li>
+              <li>Wave of cell death spreads from endocardium to epicardium over hours ("wavefront phenomenon"). This is why early reperfusion saves muscle.</li>
+            </ul>
+          </li>
+          <li><strong>Reperfusion injury:</strong> restoring flow paradoxically harms some already-stressed cells via free radical generation, Ca++ overload, and mitochondrial permeability transition pore opening. Net benefit still strongly favors reperfusion, but explains why some early benefit is offset.</li>
+          <li><strong>Inflammatory phase (days 1-7):</strong> neutrophils, then macrophages clear debris. The wall is mechanically weakest at days 5-10 — peak risk of free wall rupture, papillary muscle rupture, VSD.</li>
+          <li><strong>Healing phase (weeks 2-8):</strong> granulation tissue, then fibrosis. The scar is non-contractile. If large, the LV remodels — chamber dilates, eventual HFrEF.</li>
+          <li><strong>Biomarker kinetics:</strong>
+            <ul>
+              <li>Troponin I/T: rises within 2-4 h, peaks ~24 h, persists 7-10 days. The standard.</li>
+              <li>CK-MB: rises within 4-6 h, peaks ~24 h, normalizes within 2-3 days. Useful to detect re-infarction during the troponin tail.</li>
+              <li>Myoglobin: rises within 1-2 h but non-specific.</li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <aside class="callout callout-clinical deep-dive">
+        <h3>POST-MI COMPLICATIONS BY TIMING</h3>
+        <table class="summary">
+          <thead><tr><th>Timing</th><th>Complication</th><th>Mechanism</th></tr></thead>
+          <tbody>
+            <tr><td>0-24 h</td><td>VT/VF, sudden death</td><td>Re-entry around ischemic tissue</td></tr>
+            <tr><td>0-24 h</td><td>Cardiogenic shock</td><td>Large infarct with ↓ CO</td></tr>
+            <tr><td>1-3 days</td><td>Pericarditis (early)</td><td>Inflammation over infarct</td></tr>
+            <tr><td>3-7 days</td><td>Papillary muscle rupture</td><td>Necrosis of muscle holding chordae → acute mitral regurgitation</td></tr>
+            <tr><td>3-7 days</td><td>Free wall rupture</td><td>Wall weakness → tamponade, often fatal</td></tr>
+            <tr><td>3-7 days</td><td>VSD</td><td>Septal infarct → L-to-R shunt, new murmur</td></tr>
+            <tr><td>Weeks to months</td><td>Dressler syndrome</td><td>Autoimmune pericarditis</td></tr>
+            <tr><td>Months</td><td>Ventricular aneurysm</td><td>Persistent ST elevation, HF</td></tr>
+            <tr><td>Months</td><td>HF / LV remodeling</td><td>Loss of contractile mass + dilation</td></tr>
+          </tbody>
+        </table>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a coronary artery with a plaque. Show fibrous cap, lipid core, endothelium. Then sketch the next frame: cap rupture, thrombus, downstream ischemic muscle. Mark where in the wall thickness the infarct begins (subendocardium) and which direction it spreads.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient has chest pain at rest, ST depression in V4-V6, and a troponin level rising over 6 hours. Which ACS category?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does an inferior MI sometimes cause symptomatic bradycardia, and why might nitroglycerin be dangerous in this patient?</li>
+          <li><span class="qc-meta">DOK 4.</span><span class="deep-dive" style="display:inline;border:none;padding:0;"> </span> A patient is 5 days post-anterior MI and develops a new harsh holosystolic murmur with sudden hypotension. What complication should you suspect and why does the timing make sense mechanistically?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>NSTEMI.</strong> Troponin rise without ST elevation, with ischemic ECG changes (ST depression).</li>
+            <li>The RCA supplies the SA and AV nodes in most people, so inferior MI (RCA territory) can cause nodal ischemia and bradyarrhythmias. RV infarct often accompanies inferior MI; preload-dependent. Nitroglycerin reduces preload (venodilation), which can collapse cardiac output if the RV is failing. Always check for RV involvement (V4R) before giving nitrates in an inferior MI.</li>
+            <li><strong>Papillary muscle rupture</strong> causing acute mitral regurgitation. The papillary muscles necrose with the infarct, become friable, and structurally fail at days 3-7 when macrophage infiltrate has weakened the tissue but new collagen has not yet stabilized it. Acute MR overwhelms the LA, flash pulmonary edema follows, and forward output collapses. Surgical emergency.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 11 ===== -->
+    <article class="concept-card" id="c11" data-tags="CLIN">
+      <p class="card-eyebrow">Cardiovascular &middot; Heart &middot; Concept 11 of 19</p>
+      <h2 class="card-title">Common cardiac conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Most cardiac pathology is one of three patterns: a coronary supply problem, a pump-mechanics problem, or an electrical problem. Place each diagnosis into one of those buckets and the rest of the picture follows.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Acute coronary syndrome (ACS):</strong> a spectrum from stable angina (predictable on exertion) to unstable angina (rest or worsening, no troponin rise) to NSTEMI (troponin rise, no ST elevation) to STEMI (transmural infarct, ST elevation).</li>
+          <li><strong>Heart failure:</strong>
+            <ul>
+              <li>HFrEF (systolic): EF &lt; 40%, dilated LV, weak contraction.</li>
+              <li>HFpEF (diastolic): EF ≥ 50%, stiff LV, poor filling.</li>
+              <li>Left-sided: pulmonary congestion (crackles, dyspnea, orthopnea, PND).</li>
+              <li>Right-sided: systemic congestion (JVD, hepatomegaly, peripheral edema).</li>
+            </ul>
+          </li>
+          <li><strong>Arrhythmias:</strong>
+            <ul>
+              <li>Atrial fibrillation: irregularly irregular rhythm, no clear P waves. Risk of thromboembolic stroke (anticoagulate).</li>
+              <li>Ventricular tachycardia: wide QRS, fast. May be pulseless (emergency).</li>
+              <li>Ventricular fibrillation: chaotic, no organized rhythm. Defibrillate.</li>
+              <li>Asystole: flatline. CPR, epinephrine; not shockable.</li>
+            </ul>
+          </li>
+          <li><strong>Valvular disease:</strong> stenosis (will not open) or regurgitation (will not close). Murmur timing localizes the lesion.</li>
+          <li><strong>Pericardial disease:</strong> pericarditis (inflammation, friction rub, diffuse ST elevation, PR depression); tamponade (compression, Beck's triad).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Category</th><th>Hallmark</th><th>Key intervention</th></tr></thead>
+          <tbody>
+            <tr><td>STEMI</td><td>ST elevation, troponin rise</td><td>Reperfusion (PCI or thrombolytics) within 90 min</td></tr>
+            <tr><td>NSTEMI / UA</td><td>Troponin rise without ST elevation / ischemic Sx without rise</td><td>Antiplatelet, anticoagulation, risk stratification</td></tr>
+            <tr><td>HFrEF</td><td>EF &lt; 40%, dilated LV</td><td>ACE-I/ARB/ARNI, beta blocker, MRA, SGLT2-i</td></tr>
+            <tr><td>HFpEF</td><td>EF ≥ 50%, diastolic dysfunction</td><td>BP control, diuretic, SGLT2-i</td></tr>
+            <tr><td>AFib</td><td>Irregularly irregular, no P</td><td>Rate or rhythm control, anticoagulation (CHA₂DS₂-VASc)</td></tr>
+            <tr><td>VF / pulseless VT</td><td>No pulse</td><td>Defibrillation, CPR, epinephrine</td></tr>
+            <tr><td>Tamponade</td><td>Beck's triad</td><td>Pericardiocentesis</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>For nursing assessment, the BIG five at the bedside in suspected cardiac disease: <strong>BP, HR, SpO₂, lung sounds (crackles), peripheral edema</strong>. Add JVD if you suspect right-sided failure. ECG and troponin guide acute decisions; BNP supports HF diagnosis.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Make a 3-circle Venn diagram: supply (coronary), mechanics (pump), electrical. Place each condition into the right circle (or overlap if applicable). This is your cardiac triage map.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient has dyspnea on exertion, crackles, and an EF of 25%. Name the diagnosis and the dominant pathophysiology.</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient with new AFib has CHA₂DS₂-VASc score of 4. Justify anticoagulation in terms of the anatomy and physiology.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>HFrEF</strong> (systolic heart failure). The LV cannot eject adequately; blood backs up into the pulmonary circulation causing crackles and dyspnea.</li>
+            <li>In AFib, the atria fibrillate rather than contract. Blood stagnates, especially in the left atrial appendage. Stagnant blood + endothelial irritation favors thrombus formation. If a clot dislodges, it can embolize through the LV into the systemic circulation, with the brain a common destination (stroke). CHA₂DS₂-VASc ≥ 2 in most populations is a threshold for anticoagulation to reduce that risk.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <div class="section-banner">
+      <p class="eyebrow">Part 2</p>
+      <h2>The Vessels</h2>
+    </div>
+
+    <!-- ===== CONCEPT 12 ===== -->
+    <article class="concept-card" id="c12" data-tags="A">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 12 of 19</p>
+      <h2 class="card-title">Blood vessel histology <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">Every vessel has three tunics, but the thickness and composition of each layer reflects whether the vessel is a pressure reservoir, a distributor, an exchange site, or a return path.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Three tunics</strong> (inside to outside):
+            <ul>
+              <li>Tunica intima: endothelium + basement membrane + internal elastic lamina. Continuous with endocardium.</li>
+              <li>Tunica media: smooth muscle ± elastic fibers + external elastic lamina. Controls diameter.</li>
+              <li>Tunica externa (adventitia): connective tissue. Anchors and contains vasa vasorum in large vessels.</li>
+            </ul>
+          </li>
+          <li><strong>Elastic (conducting) arteries:</strong> aorta and major branches. Thick media rich in elastic laminae. Stretch during systole, recoil during diastole — keeps blood moving forward when ventricle is filling.</li>
+          <li><strong>Muscular (distributing) arteries:</strong> brachial, radial, femoral, splenic. Thick media of smooth muscle. Direct blood to specific organs.</li>
+          <li><strong>Arterioles:</strong> small. Mostly smooth muscle. Major site of total peripheral resistance. "Stopcocks" of the circulation.</li>
+          <li><strong>Capillaries:</strong> single layer of endothelium + basement membrane. Three types:
+            <ul>
+              <li>Continuous: tight, most tissues (skin, muscle, lungs, CNS — tightest).</li>
+              <li>Fenestrated: pores. Sites of filtration or fast exchange (kidney glomerulus, intestinal villi, endocrine glands).</li>
+              <li>Sinusoidal: wide, leaky. Liver, bone marrow, spleen. Pass cells and proteins.</li>
+            </ul>
+          </li>
+          <li><strong>Venules:</strong> drain capillaries. Postcapillary venules are leukocyte exit sites in inflammation.</li>
+          <li><strong>Veins:</strong> thinner walls than arteries, larger lumen, valves (esp. in limbs). Hold ~60-70% of total blood volume — capacitance vessels.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Vessel</th><th>Wall feature</th><th>Functional role</th></tr></thead>
+          <tbody>
+            <tr><td>Elastic artery</td><td>Elastic-rich media</td><td>Pressure reservoir</td></tr>
+            <tr><td>Muscular artery</td><td>Smooth muscle media</td><td>Distribution</td></tr>
+            <tr><td>Arteriole</td><td>SM, no elastic</td><td>Resistance / TPR</td></tr>
+            <tr><td>Capillary</td><td>Endothelium + BM only</td><td>Exchange</td></tr>
+            <tr><td>Venule</td><td>Thin wall</td><td>Collection, inflammation gateway</td></tr>
+            <tr><td>Vein</td><td>Thin wall, valves</td><td>Capacitance, return</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Atherosclerosis</strong> begins in the intima. Endothelial injury + LDL → foam cells → fibrofatty plaque. <strong>Aneurysm</strong> involves media weakening (elastic and SM loss). <strong>Varicose veins</strong> are valve failure plus weakened venous wall. <strong>Capillary leak</strong> from inflammation (sepsis, ARDS) loses the selective permeability and dumps fluid into tissues.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw cross sections of an elastic artery, a muscular artery, an arteriole, a capillary, and a vein. Label each tunic and write one functional consequence of each wall difference.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which type of capillary is found in the liver and allows passage of large molecules and cells?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why are veins called capacitance vessels, and what does that mean for fluid resuscitation in shock?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Sinusoidal capillaries.</strong></li>
+            <li>Veins hold roughly 60-70% of total blood volume. They are thin-walled, low-pressure, distensible. In shock, redistributing volume from the venous capacitance bed (e.g., by leg elevation, vasoconstrictors, or compression) can rapidly raise preload and CO without administering external fluid.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 13 ===== -->
+    <article class="concept-card" id="c13" data-tags="A">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 13 of 19</p>
+      <h2 class="card-title">Major systemic arteries <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The aorta is the trunk. Every major artery is a branch off it (or a branch of a branch). Map the segments, then map the branches by segment.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Aortic segments:</strong>
+            <ul>
+              <li>Ascending aorta: gives off the coronary arteries.</li>
+              <li>Aortic arch: three branches (right to left) — brachiocephalic, left common carotid, left subclavian.</li>
+              <li>Thoracic descending aorta: posterior intercostals, bronchial, esophageal branches.</li>
+              <li>Abdominal aorta: celiac trunk, SMA, renals, gonadals, IMA. Bifurcates into right and left common iliacs at ~L4.</li>
+            </ul>
+          </li>
+          <li><strong>Head and neck:</strong>
+            <ul>
+              <li>Brachiocephalic → right common carotid + right subclavian.</li>
+              <li>Common carotids → internal carotid (brain, eye) + external carotid (face, scalp, neck).</li>
+              <li>Subclavians → vertebral arteries (combine to form basilar artery, part of Circle of Willis).</li>
+            </ul>
+          </li>
+          <li><strong>Upper limb:</strong> subclavian → axillary (at lateral border of first rib) → brachial → splits at elbow into radial and ulnar → palmar arches.</li>
+          <li><strong>Abdominal organs:</strong>
+            <ul>
+              <li>Celiac trunk: left gastric, splenic, common hepatic.</li>
+              <li>SMA: most of small intestine and proximal large intestine.</li>
+              <li>IMA: distal large intestine and rectum.</li>
+            </ul>
+          </li>
+          <li><strong>Lower limb:</strong> common iliac → external iliac → femoral → popliteal (behind knee) → splits into anterior and posterior tibial. Posterior tibial → fibular and plantar arteries.</li>
+          <li><strong>Common pulse points:</strong> temporal, carotid, brachial, radial, femoral, popliteal, posterior tibial, dorsalis pedis.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Region</th><th>Key arteries</th><th>Clinical landmark</th></tr></thead>
+          <tbody>
+            <tr><td>Brain</td><td>Internal carotid + vertebrobasilar</td><td>Circle of Willis</td></tr>
+            <tr><td>Upper limb</td><td>Brachial, radial</td><td>Brachial = BP cuff; radial = ABG, pulse</td></tr>
+            <tr><td>Abdomen</td><td>Celiac, SMA, IMA</td><td>Mesenteric ischemia</td></tr>
+            <tr><td>Lower limb</td><td>Femoral, popliteal, posterior tibial, dorsalis pedis</td><td>PAD pulses; dorsalis pedis on top of foot</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>AAA</strong> (abdominal aortic aneurysm) most often occurs infrarenally (below the renal arteries). Rupture is catastrophic. <strong>Stroke localization:</strong> middle cerebral artery (a continuation of the internal carotid system) → contralateral motor and sensory deficits, often face and arm worse than leg, plus aphasia if dominant hemisphere. <strong>PAD assessment:</strong> palpate dorsalis pedis and posterior tibial; absent or weak pulses with cool, pale limb suggest arterial insufficiency.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a stick figure. Map the aorta down the middle and label each pulse point you would actually feel as a nurse: temporal, carotid, brachial, radial, femoral, popliteal, posterior tibial, dorsalis pedis.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Name the three branches of the aortic arch from right to left.</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient with severe abdominal pain has bowel ischemia on imaging. Which arterial branch is most likely involved if the affected segment is the proximal colon?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Brachiocephalic, left common carotid, left subclavian.</strong></li>
+            <li>The <strong>superior mesenteric artery (SMA).</strong> It supplies the small intestine and proximal colon (up to about the distal transverse colon).</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 14 ===== -->
+    <article class="concept-card" id="c14" data-tags="A">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 14 of 19</p>
+      <h2 class="card-title">Major systemic veins <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">All systemic venous return reaches the right atrium through two veins: SVC and IVC. Everything else is feeders to those two.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Two great venous trunks:</strong>
+            <ul>
+              <li>Superior vena cava (SVC): drains everything above the diaphragm except the heart.</li>
+              <li>Inferior vena cava (IVC): drains everything below the diaphragm.</li>
+            </ul>
+          </li>
+          <li><strong>Head and neck:</strong>
+            <ul>
+              <li>Internal jugular veins (paired) drain the brain and most of head and neck. Join subclavian to form brachiocephalic vein.</li>
+              <li>External jugulars drain superficial scalp and face.</li>
+            </ul>
+          </li>
+          <li><strong>Upper limb:</strong>
+            <ul>
+              <li>Deep: brachial, axillary, subclavian.</li>
+              <li>Superficial: cephalic (lateral), basilic (medial), median cubital (connects the two at the antecubital fossa — preferred venipuncture site).</li>
+            </ul>
+          </li>
+          <li><strong>Hepatic portal system:</strong> capillaries to capillaries.
+            <ul>
+              <li>GI tract, spleen, pancreas → superior and inferior mesenteric veins + splenic vein → portal vein → liver sinusoids → hepatic veins → IVC.</li>
+              <li>Carries nutrient-rich, deoxygenated venous blood. Liver processes it before systemic circulation.</li>
+            </ul>
+          </li>
+          <li><strong>Lower limb:</strong>
+            <ul>
+              <li>Deep: posterior tibial, anterior tibial, popliteal, femoral, external iliac.</li>
+              <li>Superficial: great saphenous (longest vein in body, medial side; often used for CABG), small saphenous.</li>
+            </ul>
+          </li>
+          <li><strong>Central venous access points:</strong> internal jugular, subclavian, femoral.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Vein</th><th>Drains</th><th>Clinical use</th></tr></thead>
+          <tbody>
+            <tr><td>Internal jugular</td><td>Brain, head/neck</td><td>Central line; JVD assessment</td></tr>
+            <tr><td>Median cubital</td><td>Antecubital fossa</td><td>Routine venipuncture, IV start</td></tr>
+            <tr><td>Subclavian</td><td>Upper limb</td><td>Central line, dialysis</td></tr>
+            <tr><td>Portal vein</td><td>GI, spleen → liver</td><td>Portal hypertension in cirrhosis</td></tr>
+            <tr><td>Great saphenous</td><td>Lower limb superficial</td><td>CABG graft, varicose veins</td></tr>
+            <tr><td>Femoral</td><td>Lower limb deep</td><td>Central access, DVT site</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>DVT</strong> classically forms in deep veins of the calf or thigh. Risk factors: Virchow's triad — stasis, endothelial injury, hypercoagulability. <strong>Portal hypertension</strong> in cirrhosis backs up venous blood into collaterals: esophageal varices, caput medusae, hemorrhoids. <strong>JVD</strong> on physical exam reflects elevated right-sided pressures — think right heart failure, tamponade, tension pneumothorax.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the venous return system. Highlight: where you would place a peripheral IV (median cubital), where a central line goes (IJ, subclavian, femoral), and the portal system from gut to liver to IVC.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which superficial vein is the longest in the body and commonly harvested for CABG?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does cirrhosis cause esophageal varices?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Great saphenous vein.</strong></li>
+            <li>Scarred cirrhotic liver resists portal blood flow → portal pressure rises → blood backs up into collateral vessels that connect portal to systemic circulation. The submucosal veins at the lower esophagus dilate → varices, which can rupture and cause life-threatening bleeding.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 15 ===== -->
+    <article class="concept-card" id="c15" data-tags="A">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 15 of 19</p>
+      <h2 class="card-title">Pulmonary circulation <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">Pulmonary circulation is its own world: low pressure, low resistance, the only place where arteries carry deoxygenated blood and veins carry oxygenated blood.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Pathway:</strong>
+            <ul>
+              <li>Deoxygenated blood: RV → pulmonary trunk → right and left pulmonary arteries → progressively smaller arteries → pulmonary capillaries (around alveoli).</li>
+              <li>Oxygenated blood: pulmonary capillaries → pulmonary venules → four pulmonary veins → LA.</li>
+            </ul>
+          </li>
+          <li><strong>Pressure profile:</strong> systolic ~25 mmHg, diastolic ~10 mmHg, mean pulmonary arterial pressure ~15 mmHg. Roughly 1/6th of systemic pressures.</li>
+          <li><strong>Resistance:</strong> low. Pulmonary vessels are short, wide, distensible.</li>
+          <li><strong>Volume:</strong> same as systemic — whatever the RV puts out, the LV gets back.</li>
+          <li><strong>Hypoxic pulmonary vasoconstriction:</strong> opposite of systemic — alveolar hypoxia causes the local pulmonary arteriole to constrict, shunting blood to better-ventilated alveoli. Optimizes V/Q matching.</li>
+          <li><strong>Pulmonary vs bronchial circulation:</strong>
+            <ul>
+              <li>Pulmonary: gas exchange, low pressure.</li>
+              <li>Bronchial: from systemic circulation (off thoracic aorta), supplies lung tissue itself with oxygenated arterial blood.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>Pulmonary</th><th>Systemic</th></tr></thead>
+          <tbody>
+            <tr><td>Driving pressure</td><td>Mean ~15 mmHg</td><td>Mean ~90 mmHg</td></tr>
+            <tr><td>Resistance</td><td>Low</td><td>High</td></tr>
+            <tr><td>Volume per minute</td><td>= systemic CO</td><td>= systemic CO</td></tr>
+            <tr><td>Arteries carry</td><td>Deoxygenated</td><td>Oxygenated</td></tr>
+            <tr><td>Veins carry</td><td>Oxygenated</td><td>Deoxygenated</td></tr>
+            <tr><td>Response to hypoxia</td><td>Vasoconstriction</td><td>Vasodilation</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pulmonary embolism (PE):</strong> a clot (often from a DVT) lodges in the pulmonary arterial tree. Sudden ↑ pulmonary resistance → RV strain. Classic signs: sudden dyspnea, pleuritic chest pain, tachycardia, hypoxemia. <strong>Pulmonary hypertension:</strong> chronically elevated pulmonary pressure → RV hypertrophy → cor pulmonale (right heart failure from lung pathology). Common in COPD, chronic PE, idiopathic PAH.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the heart and lungs. Color deoxygenated blood blue and oxygenated red. Highlight the only places this color flips: pulmonary arteries (blue) and pulmonary veins (red). Trace one full circuit through both pulmonary and systemic loops.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Pulmonary veins drain into which chamber?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why does hypoxic pulmonary vasoconstriction help in a focal pneumonia but harm a patient with diffuse hypoxia from severe COPD?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Left atrium.</strong></li>
+            <li>In focal disease, constricting vessels in the poorly ventilated lobe shunts blood to better-ventilated areas → improves V/Q matching. In diffuse hypoxia (e.g., severe COPD), the whole pulmonary vasculature constricts → pulmonary hypertension → RV strain → cor pulmonale.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 16 ===== -->
+    <article class="concept-card" id="c16" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 16 of 19</p>
+      <h2 class="card-title">Hemodynamics: pressure, flow, resistance, Poiseuille <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Flow equals pressure difference divided by resistance. Resistance is dominated by vessel radius to the fourth power, which is why arterioles control almost everything.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Core equation:</strong> Q = ΔP / R.
+            <ul>
+              <li>Q = flow.</li>
+              <li>ΔP = pressure gradient driving flow (e.g., MAP − right atrial pressure for systemic circulation).</li>
+              <li>R = resistance.</li>
+            </ul>
+          </li>
+          <li><strong>Poiseuille's law:</strong> R ∝ (η × L) / r⁴.
+            <ul>
+              <li>η = viscosity (mostly determined by hematocrit).</li>
+              <li>L = length.</li>
+              <li>r = radius. The fourth power makes radius the dominant lever.</li>
+            </ul>
+          </li>
+          <li><strong>Halving radius increases resistance 16×.</strong> Doubling radius drops it 16×. This is why arteriolar tone is the master control of TPR.</li>
+          <li><strong>Combining resistances:</strong>
+            <ul>
+              <li>In series (sequential vessels): R total = R₁ + R₂ + ...</li>
+              <li>In parallel (capillary beds): 1/R total = 1/R₁ + 1/R₂ + ... → adding parallel paths reduces total resistance.</li>
+            </ul>
+          </li>
+          <li><strong>Where is the biggest pressure drop?</strong> Across arterioles. They are the site of maximum resistance.</li>
+          <li><strong>Velocity vs flow:</strong> flow rate (mL/min) is conserved across the circuit. Velocity (cm/s) is slowest in capillaries because total cross-sectional area is largest there. This is essential for exchange time.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Variable</th><th>Direction</th><th>Effect on resistance</th></tr></thead>
+          <tbody>
+            <tr><td>Vessel radius</td><td>↓ (vasoconstriction)</td><td>↑↑↑↑ (r⁴ effect)</td></tr>
+            <tr><td>Vessel length</td><td>↑ (rare clinically; obesity ↑ length)</td><td>↑</td></tr>
+            <tr><td>Viscosity</td><td>↑ (polycythemia, dehydration)</td><td>↑</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Most BP-lowering meds work by reducing TPR (radius) or reducing CO. <strong>CCBs and ACE-I/ARBs</strong> drop afterload by relaxing arterioles. <strong>IV fluid resuscitation in shock</strong> exploits Q = ΔP/R: raising venous return raises preload, CO, then MAP. <strong>Polycythemia</strong> (high hematocrit) raises viscosity, slows flow, increases workload on the heart, and raises clot risk.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the systemic circuit as a single tube with progressively smaller branches, then back together. Mark where pressure drops most (arterioles), where velocity is lowest (capillaries), and where total cross-sectional area is greatest (capillaries).</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A vessel's radius doubles. By approximately what factor does its resistance change?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why is blood velocity slowest in capillaries even though flow is the same as in the aorta?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Resistance drops by <strong>~16×</strong> (1/2⁴ = 1/16).</li>
+            <li>Flow (Q) is conserved, but Q = velocity × cross-sectional area. Capillaries have the greatest total cross-sectional area of any vascular segment (billions of capillaries in parallel), so velocity must be lowest. This maximizes time for diffusion and exchange.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 17 ===== -->
+    <article class="concept-card" id="c17" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 17 of 19</p>
+      <h2 class="card-title">Capillary exchange: Starling forces <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Fluid leaves capillaries on the arteriolar end because hydrostatic pressure wins, and returns on the venular end because oncotic pressure wins. Anything that changes that balance produces edema.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Four Starling forces:</strong>
+            <ul>
+              <li>Pc: capillary hydrostatic pressure — pushes fluid out.</li>
+              <li>πc: capillary oncotic pressure (mostly albumin) — pulls fluid in.</li>
+              <li>Pi: interstitial hydrostatic pressure — small.</li>
+              <li>πi: interstitial oncotic pressure — small.</li>
+            </ul>
+          </li>
+          <li><strong>Net filtration pressure</strong> = (Pc − Pi) − σ(πc − πi).</li>
+          <li><strong>Arteriolar end:</strong> Pc is high (~35 mmHg) → net filtration outward.</li>
+          <li><strong>Venular end:</strong> Pc has dropped (~15 mmHg); πc has risen slightly → net reabsorption inward.</li>
+          <li><strong>Lymphatic system</strong> returns the small net excess of filtrate (~3 L/day) back to circulation. Critical safety valve.</li>
+          <li><strong>Causes of edema</strong> (mechanism → example):
+            <ul>
+              <li>↑ Pc — heart failure, venous obstruction.</li>
+              <li>↓ πc — low albumin (liver failure, nephrotic syndrome, malnutrition).</li>
+              <li>↑ permeability — inflammation, sepsis, burns.</li>
+              <li>Lymphatic obstruction — post-mastectomy lymphedema, filariasis.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Force</th><th>Direction</th><th>Magnitude</th></tr></thead>
+          <tbody>
+            <tr><td>Pc (capillary hydrostatic)</td><td>Out of capillary</td><td>~35 mmHg arteriolar → ~15 mmHg venular</td></tr>
+            <tr><td>πc (capillary oncotic)</td><td>Into capillary</td><td>~25 mmHg (mostly albumin)</td></tr>
+            <tr><td>Pi (interstitial hydrostatic)</td><td>Into capillary</td><td>Small, near zero</td></tr>
+            <tr><td>πi (interstitial oncotic)</td><td>Out of capillary</td><td>Small, ~3 mmHg</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: Starling forces across a capillary</h3>
+        <figure class="diagram" aria-labelledby="dxCap-title dxCap-desc">
+          <svg viewBox="0 0 700 320" role="img" aria-labelledby="dxCap-title dxCap-desc">
+            <title id="dxCap-title">Capillary cross-section showing hydrostatic and oncotic forces along its length</title>
+            <desc id="dxCap-desc">A horizontal capillary with the arteriolar end on the left and the venular end on the right. At the arteriolar end, the hydrostatic pressure pushing fluid outward (35 mmHg) exceeds the oncotic pressure pulling fluid inward (25 mmHg), producing net filtration into the interstitium. At the venular end, the hydrostatic pressure has dropped to 15 mmHg while the oncotic pressure remains at 25 mmHg, producing net reabsorption back into the capillary. A lymphatic vessel below collects the small surplus fluid not reabsorbed.</desc>
+
+            <!-- Capillary -->
+            <rect x="60" y="120" width="580" height="50" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.6"/>
+            <text x="80" y="115" class="lbl-small lbl-bold lbl-terra">Capillary lumen</text>
+
+            <!-- Arteriolar end label -->
+            <text x="80" y="100" class="lbl-bold">Arteriolar end</text>
+            <!-- Venular end label -->
+            <text x="540" y="100" class="lbl-bold">Venular end</text>
+
+            <!-- Pc arrows (outward, decreasing left to right) -->
+            <!-- Big outward at arteriolar end -->
+            <g>
+              <line x1="120" y1="120" x2="120" y2="60" stroke="var(--navy)" stroke-width="2.4"/>
+              <polygon points="116,64 120,55 124,64" fill="var(--navy)"/>
+              <text x="100" y="50" class="lbl-small lbl-bold">Pc = 35</text>
+              <text x="100" y="38" class="lbl-small lbl-bold">(out)</text>
+            </g>
+            <g>
+              <line x1="190" y1="120" x2="190" y2="75" stroke="var(--navy)" stroke-width="1.8"/>
+              <polygon points="187,79 190,71 193,79" fill="var(--navy)"/>
+              <text x="170" y="65" class="lbl-small">Pc = 28</text>
+            </g>
+            <g>
+              <line x1="280" y1="120" x2="280" y2="92" stroke="var(--navy)" stroke-width="1.5"/>
+              <polygon points="277,95 280,89 283,95" fill="var(--navy)"/>
+              <text x="260" y="85" class="lbl-small">Pc = 22</text>
+            </g>
+            <g>
+              <line x1="370" y1="120" x2="370" y2="105" stroke="var(--navy)" stroke-width="1.2"/>
+              <polygon points="367,108 370,102 373,108" fill="var(--navy)"/>
+              <text x="350" y="100" class="lbl-small">Pc = 18</text>
+            </g>
+
+            <!-- πc arrows (inward, constant) -->
+            <g>
+              <line x1="450" y1="170" x2="450" y2="120" stroke="var(--terra-dark)" stroke-width="2.4"/>
+              <polygon points="447,125 450,135 453,125" fill="var(--terra-dark)"/>
+              <text x="430" y="195" class="lbl-small lbl-terra lbl-bold">πc = 25</text>
+              <text x="430" y="208" class="lbl-small lbl-terra lbl-bold">(in)</text>
+            </g>
+            <g>
+              <line x1="560" y1="170" x2="560" y2="120" stroke="var(--terra-dark)" stroke-width="2.4"/>
+              <polygon points="557,125 560,135 563,125" fill="var(--terra-dark)"/>
+              <text x="540" y="195" class="lbl-small lbl-terra lbl-bold">πc = 25</text>
+            </g>
+
+            <!-- Net direction labels -->
+            <text x="135" y="220" class="lbl-bold lbl-small lbl-terra">Net filtration out</text>
+            <text x="135" y="234" class="lbl-small">(35 − 25 = +10 mmHg)</text>
+
+            <text x="475" y="220" class="lbl-bold lbl-small lbl-terra">Net reabsorption in</text>
+            <text x="475" y="234" class="lbl-small">(15 − 25 = −10 mmHg)</text>
+
+            <!-- Lymphatic vessel -->
+            <rect x="200" y="265" width="320" height="20" fill="rgba(184,146,74,0.20)" stroke="var(--gold-deep)" stroke-width="1.2"/>
+            <text x="360" y="280" text-anchor="middle" class="lbl-small lbl-gold lbl-bold">Lymphatic returns ~3 L/day excess filtrate</text>
+
+            <!-- Connecting drops -->
+            <path d="M 200 240 L 250 265" stroke="var(--gold-deep)" stroke-width="0.8" stroke-dasharray="2 2"/>
+          </svg>
+          <figcaption>Hydrostatic pressure (Pc) drops along the capillary as resistance is encountered. Oncotic pressure (πc) stays roughly constant. The balance shifts from "out" at the arteriolar end to "in" at the venular end. The small surplus that filters but is not reabsorbed is taken up by lymphatics.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked calculation</h3>
+        <ol>
+          <li><strong>Net filtration at the arteriolar end (healthy):</strong>
+            <ul>
+              <li>Pc = 35, πc = 25, Pi ≈ 0, πi ≈ 3.</li>
+              <li>NFP = (Pc − Pi) − (πc − πi) = (35 − 0) − (25 − 3) = 35 − 22 = <strong>+13 mmHg outward</strong>.</li>
+              <li><em>Interpretation:</em> fluid leaves the capillary at the arteriolar end.</li>
+            </ul>
+          </li>
+          <li><strong>Net filtration at the venular end (healthy):</strong>
+            <ul>
+              <li>Pc = 15, πc = 25, Pi ≈ 0, πi ≈ 3.</li>
+              <li>NFP = (15 − 0) − (25 − 3) = 15 − 22 = <strong>−7 mmHg (inward)</strong>.</li>
+              <li><em>Interpretation:</em> fluid returns to the capillary at the venular end.</li>
+            </ul>
+          </li>
+          <li><strong>Heart failure causing pulmonary edema:</strong> Pc rises to 25 at the alveolar capillaries (normally ~7-10).
+            <ul>
+              <li>If πc remains 25, NFP = 25 − 22 = <strong>+3 mmHg outward</strong> across the whole length.</li>
+              <li><em>Interpretation:</em> there is now no net reabsorption. Fluid accumulates in alveolar interstitium and floods the alveoli. This is acute pulmonary edema.</li>
+            </ul>
+          </li>
+          <li><strong>Hypoalbuminemia (cirrhosis, nephrotic syndrome):</strong> πc falls to 15 (low albumin).
+            <ul>
+              <li>Arteriolar end NFP: (35) − (15 − 3) = 35 − 12 = <strong>+23 mmHg outward</strong>.</li>
+              <li>Venular end NFP: (15) − (15 − 3) = 15 − 12 = <strong>+3 mmHg outward</strong> (no reabsorption).</li>
+              <li><em>Interpretation:</em> generalized edema and ascites. Nursing implication: monitor albumin trends; replacing volume with crystalloid in a low-albumin patient further dilutes πc.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pulmonary edema</strong> in left HF: LA pressure rises → pulmonary venous pressure rises → pulmonary capillary Pc rises → fluid filters into alveoli → crackles, dyspnea, hypoxemia. <strong>Peripheral edema</strong> in right HF: systemic venous pressure rises → leg capillary Pc rises → fluid filters into interstitium → ankle and shin edema. <strong>Low-albumin edema:</strong> πc falls, fluid balance shifts outward → ascites in cirrhosis, generalized edema in nephrotic syndrome.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a capillary. Label Pc at arteriolar and venular ends, πc constant across. Show net filtration at the arteriolar end and net reabsorption at the venular end. Add a lymphatic vessel collecting the surplus. Then redraw with: (a) high Pc, (b) low πc, and label which edema each creates.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which protein is the main contributor to capillary oncotic pressure?</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient with severe burns develops generalized edema despite no heart failure or albumin loss. Explain using Starling forces.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Albumin.</strong></li>
+            <li>Burns and the inflammatory response damage endothelial barriers → ↑ capillary permeability. The reflection coefficient (σ) for protein falls, so albumin leaks out, dragging fluid with it. Net filtration rises across the whole capillary length, producing massive third-space fluid loss and generalized edema.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 18 ===== -->
+    <article class="concept-card" id="c18" data-tags="P">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 18 of 19</p>
+      <h2 class="card-title">Blood pressure regulation: short-term and long-term <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">BP equals CO times TPR. Short-term, the baroreflex moves both within seconds. Long-term, the kidney owns BP through volume control with RAAS at the center.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>BP = CO × TPR.</strong></li>
+          <li><strong>MAP estimate</strong> = DBP + ⅓(SBP − DBP). Normal MAP 70-100 mmHg.</li>
+          <li><strong>Short-term regulation (seconds to minutes):</strong>
+            <ul>
+              <li>Baroreceptors: carotid sinus (CN IX) and aortic arch (CN X). Stretch receptors. Send afferent signals to the cardiovascular center in the medulla.</li>
+              <li>BP ↑ → baroreceptors fire more → medulla ↑ vagal, ↓ sympathetic → HR ↓, contractility ↓, vasodilation.</li>
+              <li>BP ↓ → baroreceptors fire less → ↑ sympathetic, ↓ vagal → HR ↑, contractility ↑, vasoconstriction.</li>
+              <li>Chemoreceptors: peripheral (carotid and aortic bodies) and central (medulla). Respond to ↓ O₂, ↑ CO₂, ↓ pH. Contribute to BP support in extremes.</li>
+            </ul>
+          </li>
+          <li><strong>Long-term regulation (hours to days): RAAS.</strong>
+            <ul>
+              <li>Renin from juxtaglomerular cells in the kidney (triggered by low renal perfusion, ↑ sympathetic, ↓ Na+ to macula densa).</li>
+              <li>Renin cleaves angiotensinogen (from liver) → angiotensin I.</li>
+              <li>ACE (mostly pulmonary endothelium) converts AT-I → angiotensin II.</li>
+              <li>AT-II: potent vasoconstrictor; ↑ aldosterone from adrenal cortex; ↑ ADH from posterior pituitary; ↑ thirst; ↑ proximal tubule Na+ reabsorption.</li>
+              <li>Aldosterone: principal cells of cortical collecting duct reabsorb Na+ (water follows), secrete K+ and H+.</li>
+            </ul>
+          </li>
+          <li><strong>ADH (vasopressin):</strong> water reabsorption at collecting duct (V2 receptors) + vasoconstriction (V1).</li>
+          <li><strong>ANP / BNP:</strong> released from atrial and ventricular myocytes when stretched. Promote Na+ and water loss, vasodilation. Counterbalance to RAAS.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>System</th><th>Speed</th><th>Net effect on BP</th><th>Drug class hooks</th></tr></thead>
+          <tbody>
+            <tr><td>Baroreflex (sympathetic side)</td><td>Seconds</td><td>Raises BP</td><td>Alpha and beta blockers blunt it</td></tr>
+            <tr><td>Baroreflex (vagal side)</td><td>Seconds</td><td>Lowers BP</td><td>—</td></tr>
+            <tr><td>RAAS</td><td>Minutes to days</td><td>Raises BP and volume</td><td>ACE-I, ARB, MRA (spironolactone), direct renin inhibitors</td></tr>
+            <tr><td>ADH</td><td>Minutes to hours</td><td>Raises volume, BP</td><td>Vasopressin, ADH antagonists</td></tr>
+            <tr><td>ANP / BNP</td><td>Variable</td><td>Lowers BP and volume</td><td>Used as HF biomarker (BNP)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: RAAS pathway</h3>
+        <figure class="diagram" aria-labelledby="dxRAAS-title dxRAAS-desc">
+          <svg viewBox="0 0 720 420" role="img" aria-labelledby="dxRAAS-title dxRAAS-desc">
+            <title id="dxRAAS-title">Renin-angiotensin-aldosterone system pathway with drug class blocks at each step</title>
+            <desc id="dxRAAS-desc">A flowchart of the RAAS pathway. Low renal perfusion triggers juxtaglomerular cells in the kidney to release renin. Renin cleaves angiotensinogen from the liver into angiotensin one. ACE in the pulmonary endothelium converts angiotensin one to angiotensin two. Angiotensin two has four effects: direct vasoconstriction, stimulation of aldosterone release from the adrenal cortex, stimulation of ADH release from the posterior pituitary, and stimulation of thirst. Aldosterone causes sodium reabsorption and potassium excretion at the cortical collecting duct. ADH causes water reabsorption at the collecting duct. The net result raises blood volume and vascular tone, raising blood pressure. Drug classes that block specific steps are shown with terra-colored boxes: beta blockers block renin release, direct renin inhibitors block renin, ACE inhibitors block ACE, ARBs block angiotensin two receptors, MRAs like spironolactone block aldosterone receptors.</desc>
+
+            <!-- Step boxes with connecting arrows -->
+            <g font-family="DM Sans, Arial, sans-serif">
+              <!-- Trigger -->
+              <rect x="30" y="20" width="200" height="55" rx="6" fill="var(--navy-tint)" stroke="var(--navy)" stroke-width="1.5"/>
+              <text x="130" y="40" text-anchor="middle" class="lbl-bold lbl-small">↓ Renal perfusion</text>
+              <text x="130" y="55" text-anchor="middle" class="lbl-small">↑ Sympathetic, ↓ Na+ at macula densa</text>
+              <text x="130" y="69" text-anchor="middle" class="lbl-small">in JG cells</text>
+
+              <!-- Arrow -->
+              <line x1="130" y1="78" x2="130" y2="98" stroke="var(--navy)" stroke-width="1.4"/>
+              <polygon points="130,102 126,94 134,94" fill="var(--navy)"/>
+
+              <!-- Renin -->
+              <rect x="30" y="105" width="200" height="42" rx="6" fill="var(--white)" stroke="var(--navy)" stroke-width="1.5"/>
+              <text x="130" y="123" text-anchor="middle" class="lbl-bold">Renin</text>
+              <text x="130" y="138" text-anchor="middle" class="lbl-small">(from kidney JG cells)</text>
+
+              <!-- Block: beta blockers, renin inhibitors -->
+              <rect x="260" y="100" width="180" height="50" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.2"/>
+              <text x="350" y="120" text-anchor="middle" class="lbl-small lbl-terra lbl-bold">Beta blockers ↓ renin release</text>
+              <text x="350" y="138" text-anchor="middle" class="lbl-small lbl-terra lbl-bold">Aliskiren blocks renin</text>
+              <line x1="240" y1="125" x2="258" y2="125" stroke="var(--terra-dark)" stroke-width="1" stroke-dasharray="2 2"/>
+
+              <!-- Arrow + substrate -->
+              <line x1="130" y1="150" x2="130" y2="180" stroke="var(--navy)" stroke-width="1.4"/>
+              <polygon points="130,184 126,176 134,176" fill="var(--navy)"/>
+              <text x="138" y="170" class="lbl-small">+ Angiotensinogen (liver)</text>
+
+              <!-- AT-I -->
+              <rect x="30" y="186" width="200" height="42" rx="6" fill="var(--white)" stroke="var(--navy)" stroke-width="1.5"/>
+              <text x="130" y="204" text-anchor="middle" class="lbl-bold">Angiotensin I</text>
+              <text x="130" y="220" text-anchor="middle" class="lbl-small">(inactive precursor)</text>
+
+              <!-- ACE block -->
+              <rect x="260" y="182" width="180" height="50" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.2"/>
+              <text x="350" y="202" text-anchor="middle" class="lbl-small lbl-terra lbl-bold">ACE inhibitors</text>
+              <text x="350" y="220" text-anchor="middle" class="lbl-small lbl-terra">(lisinopril, enalapril)</text>
+              <line x1="240" y1="207" x2="258" y2="207" stroke="var(--terra-dark)" stroke-width="1" stroke-dasharray="2 2"/>
+
+              <!-- Arrow -->
+              <line x1="130" y1="231" x2="130" y2="261" stroke="var(--navy)" stroke-width="1.4"/>
+              <polygon points="130,265 126,257 134,257" fill="var(--navy)"/>
+              <text x="138" y="251" class="lbl-small">ACE (lung endothelium)</text>
+
+              <!-- AT-II -->
+              <rect x="30" y="268" width="200" height="42" rx="6" fill="var(--gold)" fill-opacity="0.25" stroke="var(--gold-deep)" stroke-width="2"/>
+              <text x="130" y="286" text-anchor="middle" class="lbl-bold lbl-gold">Angiotensin II</text>
+              <text x="130" y="302" text-anchor="middle" class="lbl-small lbl-gold">(active hormone)</text>
+
+              <!-- ARB block -->
+              <rect x="260" y="265" width="180" height="50" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.2"/>
+              <text x="350" y="285" text-anchor="middle" class="lbl-small lbl-terra lbl-bold">ARBs (losartan)</text>
+              <text x="350" y="302" text-anchor="middle" class="lbl-small lbl-terra">Block AT1 receptor</text>
+              <line x1="240" y1="290" x2="258" y2="290" stroke="var(--terra-dark)" stroke-width="1" stroke-dasharray="2 2"/>
+
+              <!-- Four effects of AT-II -->
+              <line x1="130" y1="312" x2="130" y2="332" stroke="var(--navy)" stroke-width="1.4"/>
+              <line x1="40" y1="332" x2="220" y2="332" stroke="var(--navy)" stroke-width="1.4"/>
+              <line x1="40" y1="332" x2="40" y2="350" stroke="var(--navy)" stroke-width="1.4"/>
+              <line x1="100" y1="332" x2="100" y2="350" stroke="var(--navy)" stroke-width="1.4"/>
+              <line x1="160" y1="332" x2="160" y2="350" stroke="var(--navy)" stroke-width="1.4"/>
+              <line x1="220" y1="332" x2="220" y2="350" stroke="var(--navy)" stroke-width="1.4"/>
+              <polygon points="40,354 36,346 44,346" fill="var(--navy)"/>
+              <polygon points="100,354 96,346 104,346" fill="var(--navy)"/>
+              <polygon points="160,354 156,346 164,346" fill="var(--navy)"/>
+              <polygon points="220,354 216,346 224,346" fill="var(--navy)"/>
+
+              <text x="40" y="370" text-anchor="middle" class="lbl-small lbl-bold">Vaso-</text>
+              <text x="40" y="383" text-anchor="middle" class="lbl-small lbl-bold">constriction</text>
+
+              <text x="100" y="370" text-anchor="middle" class="lbl-small lbl-bold">Aldosterone</text>
+              <text x="100" y="383" text-anchor="middle" class="lbl-small">(adrenal)</text>
+
+              <text x="160" y="370" text-anchor="middle" class="lbl-small lbl-bold">ADH</text>
+              <text x="160" y="383" text-anchor="middle" class="lbl-small">(post pit)</text>
+
+              <text x="220" y="370" text-anchor="middle" class="lbl-small lbl-bold">Thirst</text>
+
+              <!-- Aldosterone → Na/H2O retention -->
+              <rect x="475" y="265" width="220" height="50" rx="4" fill="var(--navy-tint)" stroke="var(--navy)" stroke-width="1"/>
+              <text x="585" y="285" text-anchor="middle" class="lbl-small lbl-bold">Aldosterone → CCD</text>
+              <text x="585" y="302" text-anchor="middle" class="lbl-small">Na+ in, K+ &amp; H+ out</text>
+
+              <!-- MRA block -->
+              <rect x="475" y="325" width="220" height="40" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.2"/>
+              <text x="585" y="343" text-anchor="middle" class="lbl-small lbl-terra lbl-bold">MRA (spironolactone, eplerenone)</text>
+              <text x="585" y="358" text-anchor="middle" class="lbl-small lbl-terra">blocks aldosterone receptor</text>
+
+              <!-- Connecting line aldosterone to box -->
+              <line x1="100" y1="385" x2="475" y2="290" stroke="var(--navy)" stroke-width="1" stroke-dasharray="2 2"/>
+
+              <!-- Net effect -->
+              <rect x="475" y="20" width="220" height="50" rx="6" fill="var(--gold)" fill-opacity="0.20" stroke="var(--gold-deep)" stroke-width="2"/>
+              <text x="585" y="40" text-anchor="middle" class="lbl-bold lbl-gold">Net result</text>
+              <text x="585" y="56" text-anchor="middle" class="lbl-small lbl-gold">↑ Volume, ↑ TPR → ↑ BP</text>
+
+              <line x1="240" y1="385" x2="585" y2="70" stroke="var(--gold-deep)" stroke-width="1" stroke-dasharray="3 3"/>
+            </g>
+          </svg>
+          <figcaption>Each drug class blocks a specific step. ACE inhibitors and ARBs are the workhorses of HFrEF and HTN management — both reduce vasoconstriction, aldosterone, ADH, and thirst by blocking either AT-II production or its receptor.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked calculations: MAP, pulse pressure, hemodynamics</h3>
+        <ol>
+          <li><strong>MAP (mean arterial pressure):</strong> Patient BP 120/80.
+            <ul>
+              <li>MAP = DBP + ⅓(SBP − DBP) = 80 + ⅓(120 − 80) = 80 + 13.3 = <strong>93 mmHg</strong>.</li>
+              <li><em>Interpretation:</em> normal (70-100). MAP &lt; 65 is the typical perfusion threshold for organ failure risk in shock.</li>
+            </ul>
+          </li>
+          <li><strong>Pulse pressure:</strong> Same patient.
+            <ul>
+              <li>PP = SBP − DBP = 120 − 80 = <strong>40 mmHg</strong>.</li>
+              <li><em>Interpretation:</em> normal. Reflects stroke volume and arterial compliance. <em>Wide PP</em> (≥ 60) suggests aortic regurgitation, hyperthyroidism, or stiff arteries (older adults). <em>Narrow PP</em> (≤ 25) suggests cardiogenic shock, cardiac tamponade, or severe AS.</li>
+            </ul>
+          </li>
+          <li><strong>Shock case:</strong> ICU patient. BP 78/52, HR 118. Compute MAP and PP. Interpret.
+            <ul>
+              <li>MAP = 52 + ⅓(78 − 52) = 52 + 8.7 = <strong>~61 mmHg</strong>.</li>
+              <li>PP = 78 − 52 = <strong>26 mmHg</strong> (narrow).</li>
+              <li><em>Interpretation:</em> MAP below 65 → inadequate perfusion. Narrow PP with hypotension and tachycardia suggests low CO. Suspect cardiogenic or hypovolemic shock.</li>
+            </ul>
+          </li>
+          <li><strong>Vascular resistance (clinical estimate):</strong> SVR = 80 × (MAP − CVP) / CO, where SVR is in dyn·s·cm⁻⁵ and CVP is central venous pressure. Patient: MAP 60, CVP 4, CO 4 L/min.
+            <ul>
+              <li>SVR = 80 × (60 − 4) / 4 = 80 × 14 = <strong>1,120 dyn·s·cm⁻⁵</strong>.</li>
+              <li><em>Interpretation:</em> normal range 800-1,200. If SVR were &lt; 800 with low MAP, suspect distributive (septic) shock. If SVR &gt; 1,400 with low CO, suspect cardiogenic shock.</li>
+            </ul>
+          </li>
+          <li><strong>Poiseuille's law:</strong> A vasodilator doubles the arteriolar radius. By what factor does resistance change?
+            <ul>
+              <li>R ∝ 1/r⁴, so doubling r reduces R by factor of 2⁴ = <strong>16×</strong>.</li>
+              <li><em>Interpretation:</em> small changes in arteriolar diameter produce massive changes in resistance. This is why arteriolar tone is the master regulator of TPR.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Antihypertensive drug classes map cleanly onto this physiology:</p>
+        <ul>
+          <li><strong>ACE inhibitors / ARBs:</strong> block AT-II → vasodilation, less aldosterone.</li>
+          <li><strong>Beta blockers:</strong> block β1 → lower HR, contractility, and renin release.</li>
+          <li><strong>Calcium channel blockers:</strong> arteriolar vasodilation (dihydropyridines) or also rate control (non-dihydropyridines).</li>
+          <li><strong>Diuretics:</strong> ↓ volume → ↓ preload → ↓ CO → ↓ BP. Loop, thiazide, K+-sparing.</li>
+          <li><strong>Alpha blockers:</strong> block α1 → vasodilation.</li>
+        </ul>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the RAAS pathway: kidney → renin → liver angiotensinogen → AT-I → lung ACE → AT-II → four downstream effects. For each effect, write the drug class that blocks it.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> What enzyme converts angiotensin I to angiotensin II, and where does most of it occur?</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient on lisinopril develops hyperkalemia. Connect the drug mechanism to the lab finding.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>ACE</strong> (angiotensin converting enzyme). Mostly in the pulmonary endothelium.</li>
+            <li>Lisinopril blocks ACE → less angiotensin II → less aldosterone secretion. Aldosterone normally promotes K+ secretion at the cortical collecting duct. Less aldosterone → less K+ excretion → serum K+ rises (hyperkalemia). Especially watch this in patients with CKD or on K+-sparing diuretics.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- ===== CONCEPT 19 ===== -->
+    <article class="concept-card" id="c19" data-tags="CLIN">
+      <p class="card-eyebrow">Cardiovascular &middot; Vessels &middot; Concept 19 of 19</p>
+      <h2 class="card-title">Common vascular conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Most vascular pathology is one of three problems: the pipe is too narrow (occlusion or stenosis), the pipe is too wide or weak (aneurysm), or fluid is in the wrong compartment (edema or shock).</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Hypertension:</strong>
+            <ul>
+              <li>Primary (essential, ~95%): no identifiable cause.</li>
+              <li>Secondary (~5%): renovascular disease, primary aldosteronism, pheochromocytoma, OSA, drugs.</li>
+              <li>Stages (current guidelines): elevated 120-129/&lt;80, stage 1 130-139/80-89, stage 2 ≥140/≥90.</li>
+            </ul>
+          </li>
+          <li><strong>Atherosclerosis:</strong> intimal plaque from chronic injury and lipid accumulation. Hard plaques narrow lumen → stable angina, PAD claudication. Soft plaques rupture → acute thrombosis (MI, stroke).</li>
+          <li><strong>Aneurysm:</strong> abnormal dilation. AAA is the most common (infrarenal aorta). Risk factors: HTN, smoking, atherosclerosis, genetic disorders (Marfan, Ehlers-Danlos). Rupture is catastrophic.</li>
+          <li><strong>Aortic dissection:</strong> tear in the intima, blood enters the media, splitting the wall. Tearing chest or back pain, BP difference between arms. Emergency.</li>
+          <li><strong>Peripheral artery disease (PAD):</strong> atherosclerosis in limb arteries. Intermittent claudication, cool/pale limb, weak pulses, ulcers that do not heal.</li>
+          <li><strong>DVT and PE:</strong> Virchow's triad — stasis, endothelial injury, hypercoagulability. DVT in deep leg veins; PE if a clot embolizes to the pulmonary arteries.</li>
+          <li><strong>Shock</strong> (four classic categories):
+            <ul>
+              <li>Hypovolemic: low volume (hemorrhage, severe dehydration).</li>
+              <li>Cardiogenic: pump failure (MI, severe HF, arrhythmias).</li>
+              <li>Distributive: low TPR (septic, anaphylactic, neurogenic).</li>
+              <li>Obstructive: blocked flow (massive PE, tamponade, tension pneumothorax).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Condition</th><th>Bedside clue</th><th>First-line action</th></tr></thead>
+          <tbody>
+            <tr><td>HTN (stage 2)</td><td>BP ≥ 140/90</td><td>Lifestyle + medication per guidelines</td></tr>
+            <tr><td>STEMI from plaque rupture</td><td>Crushing chest pain, ST elevation</td><td>Reperfusion within 90 min</td></tr>
+            <tr><td>AAA rupture</td><td>Sudden severe abdominal/back pain, hypotension, pulsatile mass</td><td>Surgical emergency</td></tr>
+            <tr><td>Aortic dissection</td><td>Tearing pain, inter-arm BP difference</td><td>BP control, surgery (Type A)</td></tr>
+            <tr><td>DVT</td><td>Unilateral leg swelling, warmth, tenderness</td><td>Anticoagulation, imaging</td></tr>
+            <tr><td>Massive PE</td><td>Sudden dyspnea, hypoxia, hypotension</td><td>Thrombolytics, anticoagulation</td></tr>
+            <tr><td>Septic shock</td><td>Fever, ↑ HR, ↓ BP, warm extremities (early)</td><td>Source control, fluids, vasopressors</td></tr>
+            <tr><td>Cardiogenic shock</td><td>↓ BP, cool extremities, low CO</td><td>Inotropes, treat underlying cause</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Most of nursing assessment in cardiovascular emergencies maps back to perfusion: <strong>BP, mentation, urine output, skin color and temperature, capillary refill, pulses.</strong> If perfusion is poor, find the bucket (volume, pump, vessels, obstruction) and treat the cause. The categories of shock and their hemodynamic profiles (CO, TPR, CVP, wedge) are worth memorizing.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a shock decision tree. Branch 1: is preload low (hypovolemic) or filled? If filled, branch 2: is pump weak (cardiogenic) or strong? If strong, branch 3: is TPR low (distributive) or is something obstructing? Add bedside clues to each branch.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Name the three components of Virchow's triad.</li>
+          <li><span class="qc-meta">DOK 4.</span> A post-op patient on day 3 has unilateral calf swelling and tenderness, then suddenly becomes short of breath with SpO₂ 88%. Walk through the most likely sequence of events.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Stasis, endothelial injury, hypercoagulability.</strong></li>
+            <li>Post-op immobility (stasis) and the inflammatory state (hypercoagulability) caused a DVT in the deep leg veins (calf swelling, tenderness). A portion of the clot broke off and traveled through the IVC → right heart → pulmonary arteries, lodging there. The acute increase in pulmonary vascular resistance impairs V/Q matching, causes hypoxemia, and strains the right ventricle. This is a pulmonary embolism. Immediate priorities: oxygen, anticoagulation, hemodynamic stabilization, imaging confirmation, possible thrombolysis if massive.</li>
+          </ol>
+        </details>
+      </section>
+
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+  </main>
+
+  <footer class="byline">
+    <p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Draft of cardiovascular master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p>
+  </footer>
+</div>
+
+<script>
+/* ---------- Build TOC ---------- */
+(function(){
+  const toc = document.getElementById('toc-list');
+  document.querySelectorAll('.concept-card').forEach((card, idx) => {
+    const title = card.querySelector('.card-title');
+    if (!title) return;
+    // Get clean text (strip child tags like the tag pill)
+    const clone = title.cloneNode(true);
+    clone.querySelectorAll('.tag-pill').forEach(t => t.remove());
+    const text = clone.textContent.trim();
+    const tags = card.dataset.tags;
+    const li = document.createElement('li');
+    li.dataset.tags = tags;
+    li.innerHTML = `<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;
+    toc.appendChild(li);
+  });
+})();
+
+/* ---------- Filters ---------- */
+let currentView  = 'combined';
+let currentDepth = 'full';
+const cntShown   = document.getElementById('cnt-shown');
+
+function viewMatchesTags(view, tags) {
+  const parts = (tags || '').split(/\s+/);
+  if (view === 'combined') return true;
+  if (view === 'anatomy')  return parts.includes('A')  || parts.includes('AP') || parts.includes('CLIN');
+  if (view === 'physio')   return parts.includes('P')  || parts.includes('AP') || parts.includes('CLIN');
+  return true;
+}
+
+function depthMatches(depth, cardEl) {
+  if (depth === 'full') return true;
+  return cardEl.dataset.depth !== 'deep';
+}
+
+function applyFilters() {
+  // Depth class on body controls visibility of .deep-dive elements
+  document.body.classList.toggle('depth-essentials', currentDepth === 'essentials');
+
+  let shown = 0, totalVisible = 0;
+  document.querySelectorAll('.concept-card').forEach(card => {
+    const viewOk  = viewMatchesTags(currentView, card.dataset.tags);
+    const depthOk = depthMatches(currentDepth, card);
+    const show = viewOk && depthOk;
+    card.hidden = !show;
+    if (show) shown++;
+  });
+  document.querySelectorAll('#toc-list li').forEach(li => {
+    const viewOk  = viewMatchesTags(currentView, li.dataset.tags);
+    const depthOk = currentDepth === 'full' || li.dataset.depth !== 'deep';
+    li.hidden = !(viewOk && depthOk);
+  });
+  cntShown.textContent = shown;
+}
+
+document.querySelectorAll('[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentView = btn.dataset.view;
+    applyFilters();
+  });
+});
+document.querySelectorAll('[data-depth]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentDepth = btn.dataset.depth;
+    applyFilters();
+  });
+});
+
+/* URL params: ?course=BIO431  or  ?view=anatomy&depth=essentials */
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const course = params.get('course');
+  const COURSE_MAP = {
+    'BIO004': { eyebrow: 'BIO 004 Human Anatomy · Solano Community College',                     view: 'anatomy',  depth: 'full' },
+    'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology · American River College',          view: 'combined', depth: 'full' },
+    'BIO304': { eyebrow: 'BIO 304 Human Anatomy & Physiology (Online) · American River College', view: 'combined', depth: 'essentials' }
+  };
+  if (course && COURSE_MAP[course]) {
+    const c = COURSE_MAP[course];
+    const eb = document.getElementById('course-eyebrow');
+    if (eb) eb.textContent = c.eyebrow + ' · Cardiovascular';
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === c.view ? 'true' : 'false'));
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === c.depth ? 'true' : 'false'));
+    currentView = c.view;
+    currentDepth = c.depth;
+  }
+  const v = params.get('view');
+  const d = params.get('depth');
+  if (v && ['combined','anatomy','physio'].includes(v)) {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'));
+    currentView = v;
+  }
+  if (d && ['full','essentials'].includes(d)) {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === d ? 'true' : 'false'));
+    currentDepth = d;
+  }
+})();
+
+applyFilters();
+
+/* ---------- Iframe height sender ---------- */
+(function(){
+  const frameId = 'cardiovascular-notes';
+  function sendHeight() {
+    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    try { window.parent.postMessage({ type: 'iframe-height', id: frameId, height: h }, '*'); } catch(e){}
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  if ('ResizeObserver' in window) {
+    const ro = new ResizeObserver(sendHeight);
+    ro.observe(document.body);
+  }
+  const obs = new MutationObserver(sendHeight);
+  obs.observe(document.body, { childList: true, subtree: true, attributes: true });
+})();
+</script>
+</body>
+</html>

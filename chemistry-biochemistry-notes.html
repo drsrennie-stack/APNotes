@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chemistry &amp; Biochemistry — Concept Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:14px 0 0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Chemistry &amp; Biochemistry</h1>
+    <p class="usage">All physiology is chemistry happening fast. Atoms make molecules; molecules make biomolecules; biomolecules make life. DNA stores the instructions, transcription rewrites them as mRNA, and translation builds the proteins that do nearly all the work.</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">7</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="P">
+    <p class="card-eyebrow">Chemistry &amp; Biochemistry &middot; Concept 1 of 7</p>
+    <h2 class="card-title">Atoms, bonds, chemical reactions <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Everything is made of atoms. Bonds are how atoms share or trade electrons. Reactions are how bonds break, form, or rearrange.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Atom:</strong> protons (+) and neutrons in nucleus; electrons (−) orbit in shells.
+          <ul><li>Atomic number = protons.</li>
+          <li>Atomic mass = protons + neutrons.</li>
+          <li>Isotope: same element, different neutron count.</li>
+          <li>Ion: atom with unequal protons and electrons → net charge.</li></ul>
+        </li>
+        <li><strong>Major body elements (CHNOPS):</strong> C, H, N, O, P, S → ~96% of mass. Trace: Ca, P, K, S, Na, Cl, Mg, Fe, I, Zn, Cu, Mn, Co, Cr, Se, Mo, F.</li>
+        <li><strong>Three chemical bonds:</strong>
+          <ul><li><em>Ionic:</em> electrons transferred → cation (+) + anion (−). Strong in solid, dissociate in water (NaCl → Na⁺ + Cl⁻).</li>
+          <li><em>Covalent:</em> electrons shared.
+            <ul><li>Nonpolar: equal sharing (C-H in lipids).</li>
+            <li>Polar: unequal sharing → partial charges (O-H in water).</li></ul>
+          </li>
+          <li><em>Hydrogen bond:</em> weak attraction between slightly + H and slightly − atom (often O or N). Critical for water, DNA base pairing, protein folding.</li></ul>
+        </li>
+        <li><strong>Chemical reactions:</strong>
+          <ul><li>Synthesis (anabolic): A + B → AB. Builds. Uses energy.</li>
+          <li>Decomposition (catabolic): AB → A + B. Breaks down. Releases energy.</li>
+          <li>Exchange: AB + CD → AC + BD.</li>
+          <li>Reversible: A + B ⇌ AB (depends on conditions).</li>
+          <li>Oxidation-reduction (redox): electron transfer. Oxidation = lose electrons; reduction = gain electrons. Core of cellular respiration.</li></ul>
+        </li>
+        <li><strong>Reaction rate factors:</strong>
+          <ul><li>↑ Temperature → ↑ rate (until protein denaturation).</li>
+          <li>↑ Concentration → ↑ rate.</li>
+          <li>Catalyst (enzyme in biology) → ↓ activation energy → ↑ rate without being consumed.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What type of bond holds the two strands of DNA together?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does very high fever (&gt; 41 °C) become dangerous?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Hydrogen bonds (between complementary bases A-T and C-G).</li><li>High temperature disrupts the weak interactions holding protein structure together → enzymes and other proteins denature → cellular machinery fails. The same heat sensitivity that lets us cook eggs damages our own proteins above safe limits.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="P">
+    <p class="card-eyebrow">Chemistry &amp; Biochemistry &middot; Concept 2 of 7</p>
+    <h2 class="card-title">Water, pH, and buffers <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">The body is ~60% water. Water's polarity makes it a universal solvent and gives it thermal properties that protect us. pH determines how proteins fold and how reactions proceed.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Water properties (and why each matters):</strong>
+          <ul><li><em>Polar molecule:</em> universal solvent for ions and polar molecules.</li>
+          <li><em>High specific heat:</em> resists temperature change → thermal stability.</li>
+          <li><em>High heat of vaporization:</em> sweat evaporation cools effectively.</li>
+          <li><em>Cohesion + surface tension:</em> blood flow through capillaries.</li>
+          <li><em>Cushion:</em> CSF, amniotic fluid, synovial fluid.</li>
+          <li><em>Reactant:</em> hydrolysis breaks bonds with water; dehydration synthesis forms bonds, releases water.</li></ul>
+        </li>
+        <li><strong>Solutions, mixtures, suspensions:</strong>
+          <ul><li>Solution: homogeneous mixture (saline).</li>
+          <li>Colloid: particles large enough to scatter light but stay suspended (cytoplasm, blood plasma proteins).</li>
+          <li>Suspension: large particles settle out (RBCs in plasma).</li></ul>
+        </li>
+        <li><strong>pH:</strong>
+          <ul><li>pH = −log[H⁺]. Each unit = 10× change.</li>
+          <li>Acid donates H⁺; base accepts H⁺.</li>
+          <li>Pure water: pH 7 (neutral).</li>
+          <li>Blood pH: 7.35-7.45 (slightly alkaline). Outside ~6.8-8.0 incompatible with life.</li>
+          <li>Stomach pH: 1-2 (very acidic).</li>
+          <li>Urine pH: 4.5-8.0 (variable).</li></ul>
+        </li>
+        <li><strong>Buffers:</strong> resist pH change by absorbing or releasing H⁺.
+          <ul><li><em>Bicarbonate</em> (extracellular, regulated by lungs + kidneys): CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. Main blood buffer.</li>
+          <li><em>Protein</em> (intracellular + plasma): hemoglobin (huge buffer capacity), albumin. Histidine residues are the main acceptors.</li>
+          <li><em>Phosphate</em> (intracellular + urinary): HPO₄²⁻ + H⁺ ⇌ H₂PO₄⁻.</li>
+          <li><em>Ammonia</em> (urinary): NH₃ + H⁺ → NH₄⁺ — kidney's way to excrete H⁺.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Acid-base disorders are introduced in renal Concept 13 and respiratory Concept 11. Briefly: respiratory acidosis (↑ CO₂ from hypoventilation), respiratory alkalosis (↓ CO₂ from hyperventilation), metabolic acidosis (↓ HCO₃⁻ from DKA, sepsis, diarrhea, kidney failure), metabolic alkalosis (↑ HCO₃⁻ from vomiting, diuretics).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which buffer system is the main one for blood pH?</li>
+      <li><span class="qc-meta">DOK 2.</span> A pH drop from 7.4 to 6.4 represents how many times more H⁺?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Bicarbonate (HCO₃⁻/CO₂), regulated by both lungs (CO₂) and kidneys (HCO₃⁻).</li><li>10× more H⁺ (each pH unit = 10-fold change). pH is logarithmic.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="P">
+    <p class="card-eyebrow">Chemistry &amp; Biochemistry &middot; Concept 3 of 7</p>
+    <h2 class="card-title">Carbohydrates and lipids <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Carbs are fast energy. Lipids are stored energy plus structural and signaling molecules. Both built from carbon backbones; both broken down to ATP.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Carbohydrates:</strong>
+          <ul><li>Monosaccharides: simple sugars. Glucose (universal fuel), fructose, galactose.</li>
+          <li>Disaccharides: sucrose (glucose-fructose), lactose (glucose-galactose), maltose (glucose-glucose).</li>
+          <li>Polysaccharides:
+            <ul><li>Glycogen: animal storage form. In liver + muscle. ↑ by insulin.</li>
+            <li>Starch: plant storage (food source).</li>
+            <li>Cellulose: plant cell walls; indigestible to humans (fiber).</li></ul>
+          </li>
+          <li>Function: ATP fuel (preferred by brain, RBC), short-term energy storage as glycogen, structural (glycoproteins on cell surfaces).</li></ul>
+        </li>
+        <li><strong>Lipids:</strong>
+          <ul><li><em>Triglycerides</em> (most abundant): glycerol + 3 fatty acids. ~9 kcal/g (vs 4 for carbs/protein). Long-term energy storage in adipose tissue.
+            <ul><li>Saturated: no double bonds, solid at room temp, animal sources. Linked to ↑ LDL.</li>
+            <li>Unsaturated: one or more double bonds, liquid at room temp, plant sources.</li>
+            <li>Trans fats: industrial hydrogenation; strongly linked to CV disease.</li>
+            <li>Essential fatty acids (must eat): omega-3, omega-6.</li></ul>
+          </li>
+          <li><em>Phospholipids:</em> glycerol + 2 fatty acids + phosphate group. Amphipathic (polar head + nonpolar tails) → form bilayers of cell membranes.</li>
+          <li><em>Steroids:</em> four-ring structure. Cholesterol is the parent.
+            <ul><li>Cholesterol: cell membrane component, precursor to all steroid hormones, bile salts, vitamin D.</li>
+            <li>Steroid hormones: cortisol, aldosterone, estrogens, androgens, vitamin D.</li></ul>
+          </li>
+          <li><em>Eicosanoids:</em> signaling lipids from arachidonic acid.
+            <ul><li>Prostaglandins: inflammation, pain, fever (NSAIDs block COX → ↓ prostaglandins).</li>
+            <li>Leukotrienes: bronchoconstriction (asthma).</li>
+            <li>Thromboxanes: platelet aggregation.</li></ul>
+          </li>
+          <li><em>Fat-soluble vitamins:</em> A, D, E, K. Absorbed with dietary fat.</li></ul>
+        </li>
+        <li><strong>Metabolic overview:</strong>
+          <ul><li>Glucose breakdown: glycolysis → pyruvate → acetyl CoA → Krebs (citric acid) cycle → electron transport chain → ~30-32 ATP per glucose aerobic; only 2 ATP anaerobic.</li>
+          <li>Fatty acid breakdown: β-oxidation → acetyl CoA → Krebs/ETC. Much more ATP per gram than carbs.</li>
+          <li>In starvation: ketone bodies from fatty acids fuel the brain (which can't use fat directly).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Statins</strong> block HMG-CoA reductase → ↓ cholesterol synthesis → ↓ LDL → ↓ CV events. <strong>NSAIDs</strong> block COX → ↓ prostaglandins. Side effects (GI ulcers, kidney injury) reflect the loss of protective prostaglandins. <strong>Aspirin's</strong> antiplatelet effect: irreversibly inhibits COX-1 in platelets → ↓ thromboxane → ↓ platelet aggregation for the platelet's lifespan (~7-10 days).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which biomolecule provides the most kcal per gram?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is the brain primarily glucose-dependent but can use ketones during starvation?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Lipids (~9 kcal/g vs ~4 for carbs and protein).</li><li>Fatty acids can't cross the blood-brain barrier directly. During prolonged fasting, the liver converts fatty acids to ketone bodies (acetoacetate, β-hydroxybutyrate), which DO cross the BBB and can be metabolized by neurons. This is why ketogenic diets affect the brain.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="P">
+    <p class="card-eyebrow">Chemistry &amp; Biochemistry &middot; Concept 4 of 7</p>
+    <h2 class="card-title">Proteins, enzymes, and protein structure <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Proteins do nearly everything in cells. Twenty amino acids combine in sequences that fold into precise 3D shapes. Shape determines function; loss of shape (denaturation) is loss of function.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Amino acids:</strong> 20 types in humans. 9 essential (cannot synthesize). Each has the same backbone + a unique R-group (side chain) that gives properties.</li>
+        <li><strong>Peptide bond:</strong> formed between amino acids by dehydration synthesis.
+          <ul><li>Dipeptide (2 AAs), oligopeptide (3-20), polypeptide (&gt; 20). "Protein" usually means a functional polypeptide.</li></ul>
+        </li>
+        <li><strong>Four levels of protein structure:</strong>
+          <ul><li><em>Primary:</em> linear sequence of amino acids (coded by gene).</li>
+          <li><em>Secondary:</em> local folding by backbone H-bonds. Alpha helix, beta sheet.</li>
+          <li><em>Tertiary:</em> overall 3D shape from R-group interactions (hydrogen bonds, ionic, disulfide bridges, hydrophobic clustering).</li>
+          <li><em>Quaternary:</em> assembly of multiple polypeptide chains. Examples: hemoglobin (4 chains), antibodies (4 chains).</li></ul>
+        </li>
+        <li><strong>Denaturation:</strong> loss of shape (and function) without breaking peptide bonds.
+          <ul><li>Triggers: heat, extreme pH, heavy metals, chemicals.</li>
+          <li>Sometimes reversible if mild; usually irreversible if extreme.</li>
+          <li>Examples: cooking egg whites (clear → opaque), enzyme inactivation in severe fever, gastric acid denaturing dietary proteins for digestion.</li></ul>
+        </li>
+        <li><strong>Protein functions (huge variety):</strong>
+          <ul><li>Enzymes (catalyze reactions).</li>
+          <li>Structural (collagen, keratin).</li>
+          <li>Transport (hemoglobin, albumin, membrane carriers).</li>
+          <li>Motor (actin, myosin in muscle; dynein, kinesin in cytoskeleton).</li>
+          <li>Immune (antibodies, complement, MHC).</li>
+          <li>Hormones (insulin, GH, glucagon, PTH).</li>
+          <li>Receptors (membrane and intracellular).</li>
+          <li>Buffers (hemoglobin, albumin in blood).</li>
+          <li>Storage (ferritin for iron).</li></ul>
+        </li>
+        <li><strong>Enzymes:</strong>
+          <ul><li>Biological catalysts. ↓ activation energy without being consumed.</li>
+          <li>Substrate-specific (lock-and-key or induced fit).</li>
+          <li>Active site = where substrate binds and reaction happens.</li>
+          <li>Cofactors (often minerals: Zn, Mg, Fe) or coenzymes (often vitamins: B-complex) required by many.</li>
+          <li>Naming: usually ends in -ase (lactase, amylase, lipase, dehydrogenase).</li>
+          <li>Regulation:
+            <ul><li>Substrate concentration.</li>
+            <li>Allosteric activators / inhibitors (bind non-active site).</li>
+            <li>Competitive inhibitors (compete with substrate at active site).</li>
+            <li>Covalent modification (phosphorylation by kinases; reversed by phosphatases).</li>
+            <li>Feedback inhibition (end product inhibits earlier enzyme).</li></ul>
+          </li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Many drugs are enzyme inhibitors:</strong> ACE inhibitors (block angiotensin converting enzyme), statins (block HMG-CoA reductase), PPIs (block H⁺/K⁺ ATPase), AChE inhibitors (block acetylcholinesterase), aspirin (blocks COX). <strong>Inborn errors of metabolism</strong> are enzyme deficiencies — PKU (phenylalanine hydroxylase), galactosemia (galactose-1-phosphate uridyltransferase), Tay-Sachs (hexosaminidase A). Newborn screens detect many.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which level of protein structure refers to the linear amino acid sequence?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does denaturation cause loss of function but not loss of primary structure?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Primary structure.</li><li>Denaturation disrupts the weak interactions (H-bonds, ionic, hydrophobic) holding higher-order structure, but does not break the strong peptide bonds of the primary sequence. The amino acid order is preserved; the 3D shape is lost. Sometimes the protein can refold if conditions normalize.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="P">
+    <p class="card-eyebrow">Chemistry &amp; Biochemistry &middot; Concept 5 of 7</p>
+    <h2 class="card-title">Nucleic acids: DNA structure and replication <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">DNA stores every instruction the cell needs. Two strands wound into a double helix, paired by base complementarity. Replication is how cells copy the instructions before they divide.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Nucleotide structure:</strong>
+          <ul><li>Phosphate group + 5-carbon sugar (deoxyribose in DNA, ribose in RNA) + nitrogenous base.</li>
+          <li>Five bases total:
+            <ul><li>Purines (double ring): Adenine (A), Guanine (G).</li>
+            <li>Pyrimidines (single ring): Cytosine (C), Thymine (T) in DNA only, Uracil (U) in RNA only.</li></ul>
+          </li></ul>
+        </li>
+        <li><strong>DNA structure:</strong>
+          <ul><li>Double helix discovered by Watson, Crick, Franklin (1953).</li>
+          <li>Two antiparallel strands held by H-bonds between paired bases.</li>
+          <li>Base pairing rules: A-T (two H-bonds), C-G (three H-bonds).</li>
+          <li>Sugar-phosphate backbone on outside; bases on inside.</li>
+          <li>Each strand has direction: 5' to 3'.</li></ul>
+        </li>
+        <li><strong>DNA in the cell:</strong>
+          <ul><li>Wrapped around histone proteins → nucleosomes → chromatin → chromosomes.</li>
+          <li>23 pairs of chromosomes in human somatic cells (46 total): 22 autosomal + 1 sex (XX or XY).</li>
+          <li>Each cell has ~3 billion base pairs of DNA, ~20,000 protein-coding genes.</li></ul>
+        </li>
+        <li><strong>DNA replication</strong> (during S phase of cell cycle):
+          <ol><li>DNA helicase unwinds the double helix → "replication fork."</li>
+          <li>Single-strand binding proteins keep strands apart.</li>
+          <li>DNA polymerase reads the template strand 3'→5' and synthesizes the new strand 5'→3' by adding complementary nucleotides.</li>
+          <li>Leading strand: synthesized continuously toward the fork.</li>
+          <li>Lagging strand: synthesized discontinuously as Okazaki fragments → joined by DNA ligase.</li>
+          <li>Result: two identical daughter DNA molecules, each with one old and one new strand (semi-conservative).</li></ol>
+        </li>
+        <li><strong>Proofreading:</strong> DNA polymerase corrects mismatches as it goes. Additional repair enzymes fix errors after the fact. Error rate ~1 per 10⁹ bases.</li>
+        <li class="deep-dive"><strong>Telomeres:</strong> repetitive sequences at chromosome ends that shorten with each division (because lagging strand synthesis can't fully copy the very end). Stem cells and germ cells use telomerase to maintain them; most somatic cells don't, contributing to cellular aging.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Chemotherapy</strong> often targets DNA replication: alkylating agents (cyclophosphamide), antimetabolites (methotrexate, 5-FU), topoisomerase inhibitors. Rapidly dividing cells (tumor + bone marrow + GI mucosa + hair follicles) are most affected → explains the side effects. <strong>UV radiation</strong> damages DNA (forms thymine dimers). Defective repair → xeroderma pigmentosum → severe sun sensitivity and skin cancer risk.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What base pairs with adenine in DNA?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is DNA replication called "semi-conservative"?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Thymine (A-T, two H-bonds). In RNA, adenine pairs with uracil.</li><li>Each daughter DNA molecule has one original ("conserved") strand and one newly synthesized strand. "Semi-conservative" means half of each daughter comes from the parent.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="P">
+    <p class="card-eyebrow">Chemistry &amp; Biochemistry &middot; Concept 6 of 7</p>
+    <h2 class="card-title">Transcription and translation: DNA → mRNA → protein <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">A gene is a stretch of DNA that codes for a protein. Transcription rewrites the gene as mRNA. Translation reads the mRNA in three-letter codons and assembles the protein. The central dogma in two steps.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Central dogma:</strong> DNA → mRNA → protein. Information flows from genome to working machinery.</li>
+        <li><strong>Three types of RNA:</strong>
+          <ul><li>mRNA (messenger): carries the protein-coding message from nucleus to cytoplasm.</li>
+          <li>tRNA (transfer): brings amino acids to the ribosome. Each tRNA has an anticodon matching a specific codon.</li>
+          <li>rRNA (ribosomal): structural + catalytic core of the ribosome.</li>
+          <li>Plus miRNAs and others (regulation).</li></ul>
+        </li>
+        <li><strong>Transcription (in nucleus):</strong>
+          <ol><li>RNA polymerase binds promoter region on DNA.</li>
+          <li>DNA unwinds at the gene.</li>
+          <li>RNA polymerase reads the template strand 3'→5' and synthesizes mRNA 5'→3', adding complementary RNA nucleotides (A-U, T-A, C-G, G-C).</li>
+          <li>Termination at stop sequence.</li>
+          <li>Pre-mRNA processing (in eukaryotes):
+            <ul><li>5' cap added.</li>
+            <li>3' poly-A tail added.</li>
+            <li>Introns spliced out; exons joined together.</li></ul>
+          </li>
+          <li>Mature mRNA exits nucleus through nuclear pores.</li></ol>
+        </li>
+        <li><strong>Genetic code:</strong>
+          <ul><li>Triplet code: each codon = 3 bases = 1 amino acid.</li>
+          <li>64 possible codons → code for 20 amino acids + start + stop signals.</li>
+          <li>Redundant (degenerate): most amino acids have &gt; 1 codon.</li>
+          <li>Start codon: AUG (codes for methionine).</li>
+          <li>Stop codons: UAA, UAG, UGA (no AA; terminate translation).</li>
+          <li>Universal: nearly the same code across all life forms.</li></ul>
+        </li>
+        <li><strong>Translation (in cytoplasm, at ribosome):</strong>
+          <ol><li><em>Initiation:</em> small ribosomal subunit binds mRNA's 5' cap, scans to start codon (AUG). Initiator tRNA (carrying methionine) binds. Large subunit joins.</li>
+          <li><em>Elongation:</em> ribosome moves along mRNA codon by codon. For each codon: matching tRNA brings AA → peptide bond forms with growing chain → ribosome shifts to next codon → empty tRNA released.</li>
+          <li><em>Termination:</em> stop codon reached → release factor binds → polypeptide released. Ribosomal subunits dissociate.</li></ol>
+        </li>
+        <li><strong>Post-translational modifications:</strong>
+          <ul><li>Folding (sometimes with chaperone proteins).</li>
+          <li>Cleavage (e.g., proinsulin → insulin).</li>
+          <li>Glycosylation, phosphorylation, methylation, acetylation, ubiquitination.</li>
+          <li>Targeting to specific destinations (nucleus, mitochondrion, membrane, secretion).</li></ul>
+        </li>
+        <li><strong>Mutations:</strong>
+          <ul><li>Silent: different codon, same AA → no effect (because of code redundancy).</li>
+          <li>Missense: different codon, different AA → may or may not affect function.</li>
+          <li>Nonsense: codon → stop → truncated protein.</li>
+          <li>Frameshift: insertion/deletion not a multiple of 3 → all downstream codons read incorrectly. Usually catastrophic.</li>
+          <li>Causes: spontaneous (replication errors), radiation, chemicals (mutagens), viruses.</li></ul>
+        </li>
+        <li><strong>Regulation of gene expression:</strong>
+          <ul><li>Most regulation is at the level of transcription (which genes are read).</li>
+          <li>Transcription factors bind regulatory DNA regions and turn genes on or off.</li>
+          <li>Steroid hormones, thyroid hormone, vitamin D all act as transcription factor regulators.</li>
+          <li>Epigenetic modifications (DNA methylation, histone modification) silence or activate regions without changing the DNA sequence.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Antibiotics that target translation</strong>: aminoglycosides (gentamicin), tetracyclines, macrolides (azithromycin), chloramphenicol, linezolid. They exploit differences between bacterial and human ribosomes. Side effect: side toxicity from mitochondrial ribosomes (which resemble bacterial ones) explains some adverse effects. <strong>mRNA vaccines</strong> (COVID-19): deliver synthetic mRNA encoding viral spike protein → host ribosomes translate it → immune response. The mRNA is degraded within days; doesn't enter the nucleus or alter DNA. <strong>Sickle cell disease</strong>: single missense mutation (Glu → Val) in β-globin. One base change, lifetime of consequences.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What is the start codon, and which amino acid does it code for?</li>
+      <li><span class="qc-meta">DOK 4.</span> A frameshift mutation in the middle of a gene is usually more severe than a missense mutation. Why?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>AUG, methionine (Met).</li><li>A frameshift (insertion or deletion of a non-multiple-of-3 number of bases) shifts the reading frame for every codon downstream. All amino acids after the mutation are wrong, and the new sequence often hits a premature stop codon → truncated nonfunctional protein. A missense changes one AA but preserves the reading frame; the rest of the protein is correctly sequenced.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="P">
+    <p class="card-eyebrow">Chemistry &amp; Biochemistry &middot; Concept 7 of 7</p>
+    <h2 class="card-title">ATP, cellular metabolism, and bioenergetics <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">ATP is the universal energy currency. Every cell makes it and spends it constantly. Three pathways generate ATP at different speeds and yields: substrate-level phosphorylation, glycolysis, and oxidative phosphorylation.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>ATP (adenosine triphosphate):</strong>
+          <ul><li>Adenine + ribose + 3 phosphates.</li>
+          <li>Bond between 2nd and 3rd phosphates stores ~7.3 kcal/mol when broken.</li>
+          <li>ATP → ADP + Pi releases energy used for cellular work (active transport, mechanical work, biosynthesis).</li>
+          <li>ADP + Pi → ATP requires energy input from metabolism.</li>
+          <li>Each cell turns over its weight in ATP every day — it's not stored, it's continuously regenerated.</li></ul>
+        </li>
+        <li><strong>Three ATP-producing pathways:</strong>
+          <ol><li><em>Substrate-level phosphorylation</em> (during glycolysis + Krebs): direct transfer of phosphate from a substrate to ADP. Small contribution; doesn't need oxygen.</li>
+          <li><em>Oxidative phosphorylation</em> (in mitochondria): the major source. Electron transport chain + ATP synthase using O₂ as final electron acceptor. ~26-28 ATP per glucose.</li>
+          <li><em>Photophosphorylation</em>: plants only (photosynthesis). Not in humans.</li></ol>
+        </li>
+        <li><strong>Glucose breakdown — three stages:</strong>
+          <ol><li><em>Glycolysis</em> (cytoplasm):
+            <ul><li>Glucose → 2 pyruvate.</li>
+            <li>Net: 2 ATP + 2 NADH.</li>
+            <li>Anaerobic capable.</li>
+            <li>If no O₂: pyruvate → lactate (lactic acid fermentation in muscle, RBC).</li></ul>
+          </li>
+          <li><em>Pyruvate → Acetyl-CoA</em> (mitochondrial matrix):
+            <ul><li>Each pyruvate → acetyl-CoA + CO₂ + NADH (per pyruvate).</li>
+            <li>Per glucose: 2 acetyl-CoA + 2 CO₂ + 2 NADH.</li></ul>
+          </li>
+          <li><em>Krebs (citric acid) cycle</em> (mitochondrial matrix):
+            <ul><li>Each acetyl-CoA → 2 CO₂ + 3 NADH + 1 FADH₂ + 1 GTP (≈ATP).</li>
+            <li>Per glucose: 4 CO₂ + 6 NADH + 2 FADH₂ + 2 GTP.</li></ul>
+          </li>
+          <li><em>Electron transport chain (ETC)</em> (inner mitochondrial membrane):
+            <ul><li>NADH and FADH₂ donate electrons → carried through complexes I-IV.</li>
+            <li>Energy used to pump H⁺ across membrane → proton gradient.</li>
+            <li>O₂ is final electron acceptor → forms H₂O.</li>
+            <li>H⁺ flows back through ATP synthase → drives ATP synthesis.</li>
+            <li>Total ATP yield from one glucose: ~30-32 ATP (aerobic). Only 2 ATP if anaerobic.</li></ul>
+          </li></ol>
+        </li>
+        <li><strong>Other fuels:</strong>
+          <ul><li>Fatty acids: β-oxidation (mitochondria) → acetyl-CoA → Krebs/ETC. Much higher ATP yield per gram.</li>
+          <li>Amino acids: can feed into Krebs cycle at various points (after deamination → urea synthesis to dispose of nitrogen).</li>
+          <li>Ketone bodies: liver-made from fatty acids during fasting; brain can use them.</li></ul>
+        </li>
+        <li><strong>Anabolism vs catabolism:</strong>
+          <ul><li>Catabolism: breaks molecules → releases energy → captures it as ATP.</li>
+          <li>Anabolism: uses ATP to build complex molecules.</li>
+          <li>Hormones tilt the balance: insulin → anabolic; glucagon, cortisol, epinephrine, GH → catabolic.</li></ul>
+        </li>
+        <li><strong>Metabolic rate:</strong>
+          <ul><li>BMR (basal metabolic rate): energy used at rest. Influenced by thyroid hormone, body size, age, sex, lean mass.</li>
+          <li>Total energy expenditure = BMR + thermic effect of food + physical activity.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Cyanide</strong> poisoning inhibits cytochrome c oxidase (Complex IV of ETC) → cells can't use oxygen → cellular asphyxiation despite normal O₂ delivery. Treat with hydroxocobalamin or nitrites + thiosulfate. <strong>Carbon monoxide</strong> also impairs cellular respiration but mainly by binding hemoglobin and reducing O₂ delivery. <strong>Mitochondrial diseases</strong> (often maternally inherited) affect high-energy tissues — muscle (weakness), brain (encephalopathy), heart (cardiomyopathy). <strong>Metformin</strong> partially inhibits mitochondrial complex I → ↓ hepatic glucose output, helpful in T2DM; rare risk of lactic acidosis.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Where in the cell does glycolysis occur?</li>
+      <li><span class="qc-meta">DOK 4.</span> Cyanide blocks Complex IV of the ETC. Explain why this is so rapidly lethal.</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Cytoplasm (cytosol). Subsequent stages happen in mitochondria.</li><li>Without functional Complex IV, the ETC stops. Cells cannot produce ATP via oxidative phosphorylation. ATP demand is constant and stores are minimal — within minutes the heart and brain run out of energy and fail. Anaerobic glycolysis alone (2 ATP per glucose) cannot meet metabolic demand. Death follows quickly.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Chemistry &amp; Biochemistry master concept set.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Chemistry & Biochemistry';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='chemistry-biochemistry-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

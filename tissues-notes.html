@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tissues &amp; Body Membranes — Concept Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:14px 0 0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Tissues &amp; Body Membranes</h1>
+    <p class="usage">Every human tissue is one of four: epithelial covers and lines, connective supports and connects, muscle moves, nervous communicates. Combinations make organs. Membranes are tissue sheets that line, cover, or separate.</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">5</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="A">
+    <p class="card-eyebrow">Tissues &amp; Body Membranes &middot; Concept 1 of 5</p>
+    <h2 class="card-title">Epithelial tissue: classifications + glands <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Epithelium covers all body surfaces, lines all internal cavities, and forms most glands. Classification is by number of layers and cell shape. Every type has a job — protection, absorption, secretion, filtration.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Common features of all epithelia:</strong>
+          <ul><li>Cellularity: tightly packed cells with minimal extracellular matrix.</li>
+          <li>Polarity: distinct apical (free) and basal (attached) surfaces.</li>
+          <li>Basement membrane: thin layer of extracellular material (basal lamina + reticular lamina) anchors epithelium to underlying CT.</li>
+          <li>Avascular: gets nutrients by diffusion from underlying CT capillaries.</li>
+          <li>Innervated.</li>
+          <li>High regeneration capacity.</li></ul>
+        </li>
+        <li><strong>Classification by layers:</strong>
+          <ul><li><em>Simple:</em> one layer. Found where absorption, secretion, or filtration is needed.</li>
+          <li><em>Stratified:</em> multiple layers. Protection against abrasion.</li>
+          <li><em>Pseudostratified:</em> looks layered but is one layer with cells of different heights (some don't reach the surface). Often ciliated; respiratory tract.</li>
+          <li><em>Transitional:</em> stretches between layers; only in urinary system (bladder, ureters).</li></ul>
+        </li>
+        <li><strong>Classification by cell shape (apical layer):</strong>
+          <ul><li>Squamous: flat, scale-like.</li>
+          <li>Cuboidal: cube-shaped.</li>
+          <li>Columnar: tall column.</li></ul>
+        </li>
+        <li><strong>Common combinations and locations:</strong>
+          <ul><li>Simple squamous: alveoli (gas exchange), capillary endothelium, mesothelium (serous membranes), glomerular capsule.</li>
+          <li>Simple cuboidal: kidney tubules, glands, ovary surface.</li>
+          <li>Simple columnar: GI tract (stomach to anus), gallbladder. Often with microvilli (absorption) + goblet cells (mucus).</li>
+          <li>Pseudostratified ciliated columnar with goblet cells: respiratory tract (trachea, bronchi) — moves mucus.</li>
+          <li>Stratified squamous keratinized: epidermis.</li>
+          <li>Stratified squamous non-keratinized: esophagus, vagina, oral cavity, anal canal — wet surfaces that need protection.</li>
+          <li>Stratified cuboidal: rare; larger glandular ducts.</li>
+          <li>Transitional: bladder, ureters, upper urethra. Cells flatten as bladder fills.</li></ul>
+        </li>
+        <li><strong>Glands</strong> (derived from epithelium):
+          <ul><li><em>Exocrine:</em> secrete via duct onto an epithelial surface. Examples: sweat, salivary, gastric, pancreatic (exocrine portion), sebaceous, mammary.
+            <ul><li>Methods of secretion: merocrine (exocytosis — most), apocrine (apical portion pinches off — mammary), holocrine (whole cell ruptures — sebaceous).</li></ul>
+          </li>
+          <li><em>Endocrine:</em> no duct; secrete hormones into blood. Examples: pituitary, thyroid, adrenal, ovary, testis, parathyroid, pancreatic islets.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Carcinomas</strong> arise from epithelial cells — the most common cancer type. Adenocarcinoma (glandular epithelium), squamous cell carcinoma (stratified squamous), transitional cell carcinoma (urothelium). <strong>Barrett esophagus</strong>: chronic acid reflux → stratified squamous epithelium of distal esophagus replaced by simple columnar with goblet cells (metaplasia toward intestinal type). Premalignant — risk for adenocarcinoma.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which epithelium lines alveoli for gas exchange?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is transitional epithelium uniquely suited to the bladder?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Simple squamous epithelium (thin → fast diffusion of O₂ and CO₂).</li><li>It changes thickness as the bladder fills and empties. When empty, cells appear cuboidal; when full, they flatten to allow stretching without tearing. The transitional ability accommodates large volume changes that would damage other epithelia.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Tissues &amp; Body Membranes &middot; Concept 2 of 5</p>
+    <h2 class="card-title">Connective tissue: the most diverse family <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Connective tissue is everywhere. The common feature: cells suspended in an extracellular matrix (ground substance + fibers). Vary the matrix and you get everything from fat to bone to blood.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Three components of all CT:</strong>
+          <ul><li>Cells (specific to each CT type).</li>
+          <li>Ground substance (interstitial fluid, proteoglycans, glycoproteins).</li>
+          <li>Fibers (collagen, elastic, reticular).</li></ul>
+        </li>
+        <li><strong>Fiber types:</strong>
+          <ul><li>Collagen: thick, strong, tensile strength. Most abundant protein in body. Type I (most CT), Type II (cartilage), Type III (reticular).</li>
+          <li>Elastic: recoil after stretching. Made of elastin. Found in skin, lungs, large arteries.</li>
+          <li>Reticular: fine collagen III networks; support structure for organs (liver, spleen, marrow, lymph nodes).</li></ul>
+        </li>
+        <li><strong>Cells common to many CT types:</strong>
+          <ul><li>Fibroblasts: make fibers + ground substance. Found in most CTs.</li>
+          <li>Macrophages: phagocytic; immune surveillance.</li>
+          <li>Mast cells: release histamine, heparin during inflammation/allergy.</li>
+          <li>Plasma cells: differentiated B cells; make antibodies.</li>
+          <li>Adipocytes: store fat (in adipose tissue).</li>
+          <li>Leukocytes (transient).</li></ul>
+        </li>
+        <li><strong>CT classifications:</strong>
+          <ul><li><em>Loose CT</em> (lots of cells, few fibers, more ground substance):
+            <ul><li>Areolar: most widespread; binds skin to underlying tissue, surrounds vessels and nerves.</li>
+            <li>Adipose: predominantly fat cells; energy storage, insulation, cushioning.</li>
+            <li>Reticular: supports organs (spleen, lymph nodes, marrow).</li></ul>
+          </li>
+          <li><em>Dense CT</em> (lots of fibers, few cells):
+            <ul><li>Dense regular: parallel collagen → tensile strength in one direction. Tendons (muscle to bone), ligaments (bone to bone), aponeuroses.</li>
+            <li>Dense irregular: collagen in many directions → tensile strength in many directions. Dermis, organ capsules, fibrous joint capsules.</li>
+            <li>Elastic: abundant elastic fibers. Walls of large arteries (aorta), bronchial walls, vocal cords.</li></ul>
+          </li>
+          <li><em>Specialized CT</em>:
+            <ul><li>Cartilage (chondrocytes in lacunae; firm rubber-like matrix; avascular). Hyaline (most), elastic (epiglottis, ear), fibrocartilage (intervertebral discs, menisci).</li>
+            <li>Bone (osteocytes; mineralized matrix with hydroxyapatite). Covered in skeletal unit.</li>
+            <li>Blood (cells in fluid plasma matrix). Covered in blood/hematology unit.</li></ul>
+          </li></ul>
+        </li>
+        <li><strong>Why CT regenerates well:</strong> fibroblasts are abundant + replicating. Damage triggers proliferation + matrix synthesis → scar formation. Trade-off: CT scar lacks function of original tissue when it replaces non-regenerating cells (cardiac muscle, neurons).</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Marfan syndrome</strong>: fibrillin-1 defect → weak elastic fibers in aorta + ligaments → aortic dissection risk, tall stature, joint hypermobility. <strong>Ehlers-Danlos</strong>: collagen defects → hypermobile joints, stretchy skin, vascular fragility. <strong>Scurvy</strong>: vitamin C deficiency → impaired collagen synthesis (vit C cofactor for hydroxylation) → bleeding gums, poor wound healing, bruising.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What CT type forms tendons and ligaments?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does vitamin C deficiency cause bleeding gums and poor wound healing?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Dense regular CT (parallel collagen fibers).</li><li>Vitamin C is a cofactor for the enzymes that hydroxylate proline and lysine residues in collagen — essential for stable collagen triple-helix formation. Without it, new collagen is weak → existing fibers break down faster than they can be replaced → vascular fragility (gum bleeding), poor wound healing, easy bruising. Scurvy.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="A">
+    <p class="card-eyebrow">Tissues &amp; Body Membranes &middot; Concept 3 of 5</p>
+    <h2 class="card-title">Muscle and nervous tissue (overview) <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Muscle moves. Nervous tissue communicates. Both are covered in depth in their own units; this concept introduces them within the tissue framework.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Muscle tissue (three types):</strong>
+          <ul><li><em>Skeletal:</em> voluntary, striated, multinucleated, attached to bone. Moves body. See muscular unit.</li>
+          <li><em>Cardiac:</em> involuntary, striated, intercalated discs, branched cells. Only in heart. Beats automatically. See cardiovascular Concept 4a.</li>
+          <li><em>Smooth:</em> involuntary, non-striated, spindle-shaped, single nucleus. In walls of hollow organs (GI, vessels, bronchi, bladder, uterus, eye). Slow, sustained, fatigue-resistant. See muscular Concept 10.</li></ul>
+        </li>
+        <li><strong>Shared muscle properties:</strong>
+          <ul><li>Excitability (respond to stimulus).</li>
+          <li>Contractility (shorten or generate force).</li>
+          <li>Extensibility (stretch without damage).</li>
+          <li>Elasticity (return to resting length).</li></ul>
+        </li>
+        <li><strong>Nervous tissue:</strong>
+          <ul><li>Composed of neurons + glial (support) cells.</li>
+          <li>Functions: detect stimuli, integrate signals, command response.</li>
+          <li>Speed: ms (fastest in the body).</li>
+          <li>Limited regeneration in CNS (modest in PNS).</li>
+          <li>See nervous Concept 2 for cell types.</li></ul>
+        </li>
+        <li><strong>Tissue regeneration capacity</strong> (huge clinical implications):
+          <ul><li>High regeneration: epithelium, most CT, liver.</li>
+          <li>Moderate: smooth muscle, bone.</li>
+          <li>Poor: skeletal muscle.</li>
+          <li>Essentially none: cardiac muscle, CNS neurons.</li></ul>
+        </li>
+        <li><strong>Healing modes:</strong>
+          <ul><li>Regeneration: same tissue type replaces lost cells. Restores function.</li>
+          <li>Fibrosis (scar formation): CT replaces lost tissue. Bridges the gap but with less function. Why MI leaves permanent contractile deficit and spinal cord injury leaves permanent neurological deficit.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>MI and HFrEF:</strong> dead myocardium is replaced by scar tissue. The scar is non-contractile, so EF drops permanently if the infarct was large. <strong>Spinal cord injury</strong>: CNS doesn't regenerate; astrocytic scar and inhibitory factors block axon regrowth. Liver, in contrast, is famous for regeneration — partial hepatectomy can recover within weeks.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which muscle type lacks striations?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does the liver regenerate after partial resection but the heart does not after MI?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Smooth muscle.</li><li>Hepatocytes retain proliferative capacity throughout life and can re-enter the cell cycle in response to injury. Cardiac myocytes are essentially terminally differentiated — they exit the cell cycle shortly after birth and have very limited regenerative ability. Dead myocardium is replaced by fibrous scar (non-contractile) → permanent functional deficit. Stem cell therapy for myocardial regeneration is an active research area.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="A">
+    <p class="card-eyebrow">Tissues &amp; Body Membranes &middot; Concept 4 of 5</p>
+    <h2 class="card-title">Body membranes: cutaneous, mucous, serous, synovial <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Four types of body membranes. Three are epithelial + CT combinations; the fourth (synovial) is pure CT. Each has its own location, function, and pathology.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Cutaneous membrane (skin):</strong>
+          <ul><li>Epidermis (stratified squamous keratinized) + dermis (dense irregular CT).</li>
+          <li>The body's largest organ.</li>
+          <li>Dry surface — barrier between body and external environment.</li>
+          <li>Detailed in integumentary unit.</li></ul>
+        </li>
+        <li><strong>Mucous membranes (mucosae):</strong>
+          <ul><li>Line body cavities open to the outside (respiratory, GI, urogenital tracts).</li>
+          <li>Epithelium (varies by location) + lamina propria (loose CT).</li>
+          <li>Often have goblet cells secreting mucus.</li>
+          <li>Wet surface — moistened by mucus, glandular secretions, urine, etc.</li>
+          <li>Functions: trap pathogens, lubricate, absorb (intestine), secrete digestive enzymes.</li></ul>
+        </li>
+        <li><strong>Serous membranes (serosae):</strong>
+          <ul><li>Line closed body cavities (not open to outside).</li>
+          <li>Simple squamous epithelium (mesothelium) + thin areolar CT.</li>
+          <li>Two layers: parietal (lines body wall) + visceral (covers organ).</li>
+          <li>Slit between layers contains serous fluid (transudate of plasma).</li>
+          <li>Three serous membranes:
+            <ul><li>Pericardium (around heart).</li>
+            <li>Pleura (around lungs).</li>
+            <li>Peritoneum (around abdominal organs).</li></ul>
+          </li>
+          <li>Function: reduce friction between organ and wall, allow organ movement.</li></ul>
+        </li>
+        <li><strong>Synovial membranes:</strong>
+          <ul><li>Line synovial joints (the ONLY epithelial-free membrane).</li>
+          <li>Composed of CT only — fibroblast-like synoviocytes + macrophage-like synoviocytes + loose CT.</li>
+          <li>Function: secrete synovial fluid (lubrication, shock absorption, nutrition for avascular articular cartilage).</li>
+          <li>Pathologies: synovitis, septic arthritis, hemarthrosis, RA (autoimmune attack), bursitis (inflammation of synovial-fluid-filled bursae).</li></ul>
+        </li>
+        <li><strong>Inflammation of each membrane has its own name:</strong>
+          <ul><li>Dermatitis (cutaneous).</li>
+          <li>Mucositis (general); specific: gastritis, enteritis, bronchitis, etc.</li>
+          <li>Pericarditis, pleuritis (pleurisy), peritonitis (each a serous membrane).</li>
+          <li>Synovitis or arthritis (synovial).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Membrane</th><th>Tissue makeup</th><th>Location</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>Cutaneous</td><td>Epithelium + dense CT</td><td>Body surface</td><td>Barrier, sensation, thermoreg, vit D</td></tr>
+        <tr><td>Mucous</td><td>Epithelium + loose CT</td><td>Tracts open to outside</td><td>Trap, lubricate, absorb, secrete</td></tr>
+        <tr><td>Serous</td><td>Mesothelium + thin CT</td><td>Closed cavities</td><td>Reduce friction</td></tr>
+        <tr><td>Synovial</td><td>CT only (no epithelium)</td><td>Synovial joints</td><td>Lubricate joints</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Pericardial effusion / tamponade:</strong> fluid accumulates in pericardial cavity → compresses heart. Beck's triad: hypotension, JVD, muffled heart sounds. <strong>Pleural effusion:</strong> fluid in pleural cavity (HF, infection, malignancy). <strong>Ascites:</strong> fluid in peritoneal cavity (cirrhosis, malignancy, HF). <strong>Septic arthritis:</strong> infected synovial fluid → emergency tap + antibiotics + drainage to prevent joint destruction.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which body membrane has no epithelium?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does the pericardium have two layers (parietal and visceral)?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Synovial. Made entirely of connective tissue (fibroblast-like cells + macrophage-like cells in CT).</li><li>The two layers with serous fluid between them allow the heart to beat and shift position with minimal friction. The visceral layer hugs the heart surface; the parietal layer lines the fibrous pericardial sac. Inflammation makes the two layers rub → friction rub on auscultation in pericarditis.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="P">
+    <p class="card-eyebrow">Tissues &amp; Body Membranes &middot; Concept 5 of 5</p>
+    <h2 class="card-title">Tissue repair: regeneration vs fibrosis <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">When tissue is injured, the body either rebuilds it (regeneration) or patches it with scar (fibrosis). Which path it takes depends on the tissue type and the depth of injury.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Regenerative capacity by tissue type:</strong>
+          <ul><li><em>High:</em> epithelium (skin, gut mucosa, blood cells in marrow), most loose CT, liver.</li>
+          <li><em>Moderate:</em> smooth muscle, bone, dense CT.</li>
+          <li><em>Poor:</em> skeletal muscle (some satellite cell repair).</li>
+          <li><em>Essentially none:</em> cardiac muscle, neurons of CNS (limited repair in PNS via Schwann cells).</li></ul>
+        </li>
+        <li><strong>Stages of wound healing</strong> (review from integumentary Concept 8):
+          <ol><li>Hemostasis (minutes): vasoconstriction, platelet plug, fibrin.</li>
+          <li>Inflammatory (days 1-3): neutrophils, then macrophages clear debris.</li>
+          <li>Proliferative (days 3-21): fibroblasts deposit collagen → granulation tissue; angiogenesis; epithelial migration; wound contraction (myofibroblasts).</li>
+          <li>Remodeling (weeks to ≥ 1 year): type III collagen replaced by stronger type I; tensile strength recovers to ~70-80% of original.</li></ol>
+        </li>
+        <li><strong>Healing types</strong> (clinical):
+          <ul><li><em>Primary intention:</em> clean, apposed edges (surgical incision). Minimal scar.</li>
+          <li><em>Secondary intention:</em> open wound fills with granulation tissue from bottom up. Larger scar.</li>
+          <li><em>Tertiary intention (delayed primary):</em> left open for management (infection, edema), then surgically closed.</li></ul>
+        </li>
+        <li><strong>Factors that impair healing:</strong>
+          <ul><li>Local: infection, poor vascular supply (PAD, smoking), pressure, foreign body, repetitive trauma.</li>
+          <li>Systemic: diabetes, malnutrition (protein, vit C, zinc), corticosteroids (suppress inflammation), age, immune compromise.</li></ul>
+        </li>
+        <li><strong>Abnormal healing patterns:</strong>
+          <ul><li>Hypertrophic scar: thick, raised; stays within wound boundary.</li>
+          <li>Keloid: extends beyond original wound; genetic predisposition.</li>
+          <li>Contracture: scar shortens, restricts movement (especially over joints, post-burn).</li>
+          <li>Chronic wound: failure to progress through normal phases (often stuck in inflammation).</li></ul>
+        </li>
+        <li><strong>Clinical implication of low regenerative tissue:</strong>
+          <ul><li>MI → cardiac scar → permanent ↓ EF.</li>
+          <li>CNS stroke → glial scar → permanent neuro deficit (some recovery via neuroplasticity).</li>
+          <li>Spinal cord injury → typically permanent.</li>
+          <li>Severe skin loss → grafting needed (autograft, xenograft, bioengineered).</li></ul>
+        </li>
+        <li class="deep-dive"><strong>Regenerative medicine</strong>: stem cell therapy, tissue engineering, organ bioprinting. Active research frontier. Mesenchymal stem cells from bone marrow or adipose used in some applications. Induced pluripotent stem cells (iPSCs) enable patient-specific regeneration.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>The four pillars of wound care: <strong>perfusion</strong> (manage diabetes, smoking, PAD), <strong>nutrition</strong> (protein, vit C, zinc), <strong>moisture balance</strong> (moist wound bed heals faster than wet or dry), <strong>infection control</strong> (debridement, dressings, antibiotics only if true infection). Offload pressure. Advanced: negative pressure wound therapy (wound vacs), bioengineered skin substitutes, hyperbaric oxygen for select wounds. <strong>Diabetes</strong> impairs every phase of healing — high glucose, microvascular disease, neuropathy, immune dysfunction all conspire.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which type of healing requires granulation tissue to fill an open wound from below?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does an MI cause permanent reduction in cardiac function while a similar-sized burn can heal completely?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Secondary intention.</li><li>Tissue regenerative capacity is set at the cellular level. Cardiac myocytes are essentially terminally differentiated and don't divide to replace lost cells. Necrotic cardiac muscle is replaced by fibrous (non-contractile) scar — permanent functional loss in proportion to the infarct size. Skin epithelial cells, by contrast, divide actively throughout life. Stem cells in the basal layer continuously produce new keratinocytes that can rebuild epidermis. Same injury, different tissue, different outcome.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Tissues &amp; Body Membranes master concept set.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Tissues & Body Membranes';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='tissues-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood &amp; Hematology — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; } .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; } body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  figure.diagram { margin:14px 0 4px; padding:0; } figure.diagram svg { width:100%; max-width:700px; height:auto; display:block; margin:0 auto; background:var(--off-white); border:1px solid var(--navy-tint); border-radius:4px; }
+  figure.diagram figcaption { font-family:'Lora',serif; font-style:italic; font-size:13px; color:var(--navy); margin-top:8px; text-align:center; line-height:1.4; }
+  figure.diagram svg text { font-family:'DM Sans',sans-serif; fill:var(--navy); font-size:12px; } figure.diagram svg .lbl-bold { font-weight:700; } figure.diagram svg .lbl-terra { fill:var(--terra-dark); } figure.diagram svg .lbl-gold { fill:var(--gold-deep); } figure.diagram svg .lbl-small { font-size:10.5px; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } figure.diagram svg { background:var(--white); } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Blood &amp; Hematology</h1>
+    <p class="usage">Blood is a connective tissue with three jobs: transport (O₂, CO₂, nutrients, waste, hormones, heat), defense (WBCs, antibodies), and homeostasis (pH, hemostasis, fluid balance). Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">10</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="AP">
+    <p class="card-eyebrow">Blood &middot; Concept 1 of 10</p>
+    <h2 class="card-title">Blood composition + plasma proteins <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Blood is ~55% plasma (water with dissolved proteins, electrolytes, gases, nutrients, hormones, waste) and ~45% formed elements (RBCs, WBCs, platelets). Spin it in a centrifuge and that's exactly what you see.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Total blood volume:</strong> ~5 L in 70 kg adult (~7% of body weight).</li>
+        <li><strong>Centrifuged blood (three layers):</strong>
+          <ul><li>Top (~55%): plasma (straw-yellow).</li>
+          <li>Middle (&lt;1%): buffy coat (WBCs + platelets).</li>
+          <li>Bottom (~45%): RBCs. This proportion is the <strong>hematocrit</strong>.</li></ul>
+        </li>
+        <li><strong>Plasma composition (~92% water, ~7% protein, ~1% other):</strong>
+          <ul><li><em>Albumin (~60% of plasma protein):</em> made by liver. Maintains oncotic pressure; binds drugs, hormones, fatty acids.</li>
+          <li><em>Globulins:</em> α, β (transport, complement) + γ (immunoglobulins, immune defense).</li>
+          <li><em>Fibrinogen:</em> precursor to fibrin in clotting.</li>
+          <li>Hormones, gases, electrolytes, nutrients, waste.</li></ul>
+        </li>
+        <li><strong>Serum vs plasma:</strong> serum = plasma minus fibrinogen and other clotting factors (collected after blood has clotted). Plasma comes from anticoagulated blood.</li>
+        <li><strong>Hematocrit:</strong> female ~37-47%, male ~42-52%. ↑ in polycythemia, dehydration. ↓ in anemia, hemorrhage, fluid overload.</li>
+        <li><strong>Functions of blood:</strong> transport (O₂/CO₂/nutrients/waste/heat/hormones), defense (immune, hemostasis), regulation (pH, temperature, fluid balance).</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Component</th><th>% of blood</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>Plasma</td><td>~55%</td><td>Transport, immune, clotting precursors</td></tr>
+        <tr><td>RBCs</td><td>~45%</td><td>O₂ + CO₂ transport</td></tr>
+        <tr><td>WBCs + platelets</td><td>&lt; 1%</td><td>Immune, hemostasis</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Low albumin</strong>: liver failure (decreased synthesis), nephrotic syndrome (renal loss), malnutrition, burns (capillary leak). Consequences: edema, ascites, reduced drug binding (free fraction of albumin-bound drugs rises). <strong>Hyperviscosity syndromes</strong>: very high RBC count (polycythemia vera) or paraproteins (multiple myeloma, Waldenström) → headache, blurred vision, mucosal bleeding, stroke risk.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw a centrifuged blood tube with the three layers labeled and proportions marked. Then draw a plasma protein pie chart with albumin, globulins, and fibrinogen.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What plasma protein is the main contributor to oncotic pressure?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient with nephrotic syndrome develops edema. Mechanism?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Albumin.</li>
+        <li>Nephrotic syndrome causes massive albumin loss in urine → ↓ plasma oncotic pressure (πc) → Starling balance shifts outward → fluid filters into interstitium → generalized edema, ascites. The liver tries to compensate by ↑ synthesis but can't keep up.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="AP">
+    <p class="card-eyebrow">Blood &middot; Concept 2 of 10</p>
+    <h2 class="card-title">Red blood cells, hemoglobin, oxygen transport <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Red blood cells are biconcave disks built for one job: carry O₂ on hemoglobin. They have no nucleus, no organelles, no mitochondria — pure cargo space optimized for life span of about 120 days.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Structure:</strong> biconcave disk, ~7-8 µm, flexible (squeezes through capillaries). No nucleus, no organelles. Cytoplasm packed with hemoglobin (~33% of cell mass).</li>
+        <li><strong>Why no nucleus:</strong> ↑ space for Hb, ↑ deformability. Cost: cannot divide, cannot do oxidative phosphorylation. Lives ~120 days on anaerobic glycolysis.</li>
+        <li><strong>Hemoglobin:</strong>
+          <ul><li>Four subunits (2α + 2β in adult HbA). Each subunit has one heme.</li>
+          <li>Heme contains Fe²⁺ which binds one O₂ molecule.</li>
+          <li>One Hb = up to 4 O₂.</li>
+          <li>Normal Hb: female ~12-16 g/dL, male ~13.5-17.5 g/dL.</li>
+          <li>1 g Hb carries 1.34 mL O₂ at full saturation.</li></ul>
+        </li>
+        <li><strong>Hb forms:</strong>
+          <ul><li>HbA (adult): 2α2β. ~97%.</li>
+          <li>HbA2: 2α2δ. ~2%.</li>
+          <li>HbF (fetal): 2α2γ. Higher O₂ affinity (extracts O₂ from maternal blood at placenta).</li>
+          <li>HbS: sickle cell variant. Polymerizes when deoxygenated.</li></ul>
+        </li>
+        <li><strong>O₂ content of blood</strong> (review from respiratory notes): CaO₂ = (1.34 × Hb × SaO₂) + (0.003 × PaO₂). Hb level matters as much as saturation.</li>
+        <li><strong>RBC life cycle:</strong>
+          <ol><li>Bone marrow: erythropoiesis (Concept 3).</li>
+          <li>Circulation: 120 days.</li>
+          <li>Senescent RBCs phagocytosed by macrophages (spleen, liver bone marrow).</li>
+          <li>Heme broken down: globin → AAs recycled; iron → ferritin/transferrin; porphyrin → bilirubin → liver → bile.</li></ol>
+        </li>
+        <li><strong>Senescent RBC markers:</strong> ↓ surface flexibility, expression of "eat me" signals → splenic macrophages clear.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>RBC parameter</th><th>Normal</th><th>↓ Means</th><th>↑ Means</th></tr></thead>
+      <tbody>
+        <tr><td>RBC count</td><td>~4-6 ×10⁶/µL</td><td>Anemia</td><td>Polycythemia</td></tr>
+        <tr><td>Hemoglobin</td><td>12-17 g/dL (sex-varied)</td><td>Anemia</td><td>Polycythemia</td></tr>
+        <tr><td>Hematocrit</td><td>37-52% (sex-varied)</td><td>Anemia</td><td>Polycythemia, dehydration</td></tr>
+        <tr><td>MCV</td><td>80-100 fL</td><td>Microcytic</td><td>Macrocytic</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>MCV classifies anemias</strong> by RBC size: microcytic (&lt;80) = iron deficiency, thalassemia, anemia of chronic disease (sometimes); normocytic (80-100) = acute blood loss, hemolysis, anemia of chronic disease, early iron deficiency; macrocytic (&gt;100) = B12/folate deficiency, alcoholism, hypothyroidism. Pulse oximetry measures % saturation, not total oxygen content — anemic patients can have normal SpO₂ with dangerously low O₂ delivery.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw an RBC's life cycle: bone marrow → circulation → spleen → heme breakdown → bilirubin path. Mark where iron is recycled.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> How many oxygen molecules can one hemoglobin carry?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is fetal hemoglobin able to extract O₂ from maternal blood?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Four (one per heme; four hemes per Hb tetramer).</li>
+        <li>HbF (2α2γ) does not bind 2,3-BPG as effectively as HbA. With less BPG, the curve shifts left (higher O₂ affinity). At the placenta, fetal blood can pull O₂ off maternal Hb.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="P">
+    <p class="card-eyebrow">Blood &middot; Concept 3 of 10</p>
+    <h2 class="card-title">Erythropoiesis and EPO control <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Bone marrow makes ~2.5 million RBCs every second. The kidneys monitor oxygen delivery and tune the rate via erythropoietin (EPO). Loss of either step causes anemia.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Where:</strong> red bone marrow. In adults: vertebrae, sternum, ribs, pelvis, proximal femur/humerus. In kids: most bones.</li>
+        <li><strong>Lineage:</strong>
+          <ol><li>Hematopoietic stem cell (HSC, pluripotent).</li>
+          <li>Myeloid progenitor.</li>
+          <li>Proerythroblast → basophilic erythroblast → polychromatic → orthochromatic erythroblast (nucleus is ejected here).</li>
+          <li>Reticulocyte (still has some ribosomes, slightly larger). Spends ~1-2 days in marrow, then released to blood, where it matures in ~24 hours.</li>
+          <li>Mature RBC.</li></ol>
+        </li>
+        <li><strong>Time:</strong> stem cell to mature RBC ~7 days. Acceleration is possible — stress reticulocytosis can shorten this to 3-4 days.</li>
+        <li><strong>Reticulocyte count</strong> on labs reflects marrow's recent productive output. Helpful in anemia workup: ↑ retic = appropriate response (e.g., blood loss, hemolysis); ↓ retic = production problem (e.g., iron deficiency, marrow failure).</li>
+        <li><strong>EPO (erythropoietin):</strong>
+          <ul><li>Glycoprotein hormone.</li>
+          <li>Produced by peritubular fibroblasts in the kidney cortex (small amount from liver).</li>
+          <li>Trigger: hypoxia (sensed by HIF — hypoxia-inducible factor — pathway). Anemia, lung disease, high altitude all ↑ EPO.</li>
+          <li>Action: stimulates erythroid progenitors in bone marrow → ↑ RBC production.</li>
+          <li>Half-life ~5 hours; effect on RBC count takes days.</li></ul>
+        </li>
+        <li><strong>Nutritional requirements for erythropoiesis:</strong>
+          <ul><li><em>Iron:</em> heme synthesis. Deficiency → microcytic, hypochromic RBCs.</li>
+          <li><em>Vitamin B12 (cobalamin):</em> DNA synthesis. Needs IF + terminal ileum for absorption. Deficiency → macrocytic (megaloblastic), neuro symptoms.</li>
+          <li><em>Folate (B9):</em> DNA synthesis. Deficiency → macrocytic (megaloblastic), NO neuro symptoms.</li>
+          <li><em>Protein:</em> globin chains, plasma proteins.</li>
+          <li><em>Vitamin C:</em> aids iron absorption (Fe³⁺ → Fe²⁺).</li>
+          <li><em>Vitamin B6:</em> heme synthesis.</li></ul>
+        </li>
+        <li><strong>Negative feedback:</strong> normal RBC mass → normal O₂ delivery → ↓ HIF → ↓ EPO → erythropoiesis at baseline.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Diagram: EPO feedback loop</h3>
+      <figure class="diagram" aria-labelledby="dxEPO-title dxEPO-desc">
+        <svg viewBox="0 0 720 360" role="img" aria-labelledby="dxEPO-title dxEPO-desc">
+          <title id="dxEPO-title">Erythropoietin negative feedback loop</title>
+          <desc id="dxEPO-desc">A four-step loop. Hypoxia in the kidney (from anemia, lung disease, or altitude) activates HIF, which triggers EPO release. EPO travels to bone marrow and stimulates RBC production. More RBCs improve oxygen delivery, which removes the hypoxic stimulus and reduces EPO production, closing the loop.</desc>
+          <rect x="40" y="30" width="200" height="60" rx="8" fill="var(--navy-tint)" stroke="var(--navy)" stroke-width="1.5"/>
+          <text x="140" y="55" text-anchor="middle" class="lbl-bold">Hypoxia detected</text>
+          <text x="140" y="75" text-anchor="middle" class="lbl-small">Kidney peritubular cells (HIF)</text>
+          <line x1="240" y1="60" x2="295" y2="60" stroke="var(--navy)" stroke-width="2"/>
+          <polygon points="299,60 291,56 291,64" fill="var(--navy)"/>
+          <rect x="300" y="30" width="160" height="60" rx="8" fill="rgba(184,146,74,0.15)" stroke="var(--gold-deep)" stroke-width="2"/>
+          <text x="380" y="55" text-anchor="middle" class="lbl-bold lbl-gold">↑ EPO</text>
+          <text x="380" y="75" text-anchor="middle" class="lbl-small lbl-gold">to bone marrow</text>
+          <line x1="460" y1="60" x2="515" y2="60" stroke="var(--navy)" stroke-width="2"/>
+          <polygon points="519,60 511,56 511,64" fill="var(--navy)"/>
+          <rect x="520" y="30" width="160" height="60" rx="8" fill="var(--navy-tint)" stroke="var(--navy)" stroke-width="1.5"/>
+          <text x="600" y="55" text-anchor="middle" class="lbl-bold">↑ Erythropoiesis</text>
+          <text x="600" y="75" text-anchor="middle" class="lbl-small">↑ Reticulocytes → RBCs</text>
+          <line x1="600" y1="90" x2="600" y2="160" stroke="var(--navy)" stroke-width="2"/>
+          <polygon points="600,164 596,156 604,156" fill="var(--navy)"/>
+          <rect x="500" y="170" width="200" height="60" rx="8" fill="var(--white)" stroke="var(--terra-dark)" stroke-width="1.5"/>
+          <text x="600" y="195" text-anchor="middle" class="lbl-bold lbl-terra">↑ O₂ delivery</text>
+          <text x="600" y="215" text-anchor="middle" class="lbl-small lbl-terra">to tissues</text>
+          <path d="M 500 200 Q 360 250, 140 200 Q 100 175, 100 110 Q 100 95, 110 90" stroke="var(--terra-dark)" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+          <polygon points="113,87 109,95 117,93" fill="var(--terra-dark)"/>
+          <text x="280" y="280" class="lbl-bold lbl-terra">⊖ Negative feedback: ↑ O₂ → ↓ hypoxia → ↓ EPO</text>
+        </svg>
+        <figcaption>EPO is the kidney's voice for "we need more red cells." Kidney failure breaks this loop → anemia of CKD.</figcaption>
+      </figure>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Anemia of CKD:</strong> failing kidney → ↓ EPO → ↓ erythropoiesis → normocytic normochromic anemia. Treat with <em>erythropoiesis-stimulating agents</em> (ESAs: epoetin alfa, darbepoetin) + ensure iron stores. <strong>EPO doping</strong> in endurance sports: synthetic EPO ↑ RBC mass → ↑ O₂ delivery → ↑ endurance. Risks: hyperviscosity, thrombosis, stroke. <strong>Anabolic steroids</strong> also stimulate erythropoiesis.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Trace one HSC through erythropoiesis to mature RBC. Mark where the nucleus is ejected. Then draw the EPO feedback loop including the kidney as sensor.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which organ produces EPO?</li>
+      <li><span class="qc-meta">DOK 4.</span> A CKD patient with Hb 8 g/dL has retic count of 0.5%. Interpret and explain.</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Kidney (peritubular fibroblasts).</li>
+        <li>Hb 8 is moderate-severe anemia. Retic 0.5% is inappropriately low — the marrow isn't compensating. In CKD, the kidney can't produce adequate EPO, so the bone marrow doesn't see the signal to ramp up production. Hence the "anemia of CKD." Treat with ESAs (epoetin) + ensure iron stores are adequate.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="AP">
+    <p class="card-eyebrow">Blood &middot; Concept 4 of 10</p>
+    <h2 class="card-title">White blood cells: types and function <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Five WBC types in two big families: granulocytes (neutrophils, eosinophils, basophils) and agranulocytes (lymphocytes, monocytes). Each has a signature shift on the differential when its specific job is needed.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Granulocytes:</strong>
+          <ul><li><em>Neutrophils (60-70%):</em> first responder to bacterial infection. Phagocytic. Multi-lobed nucleus. Short-lived (hours to days).</li>
+          <li><em>Eosinophils (1-4%):</em> attack parasites; participate in allergy. Bilobed nucleus, red-orange granules. ↑ in parasitic infection, asthma, eczema, drug reactions.</li>
+          <li><em>Basophils (&lt;1%):</em> release histamine + heparin. Similar to mast cells but in circulation.</li></ul>
+        </li>
+        <li><strong>Agranulocytes:</strong>
+          <ul><li><em>Lymphocytes (20-40%):</em> T cells, B cells, NK cells (covered in immune notes). Small, round nucleus.</li>
+          <li><em>Monocytes (3-8%):</em> largest WBC, kidney-shaped nucleus. Migrate to tissues → mature into macrophages (Kupffer, alveolar, microglia, osteoclasts). Phagocytic + antigen-presenting.</li></ul>
+        </li>
+        <li><strong>Mnemonic for proportions (highest → lowest):</strong> "Never Let Monkeys Eat Bananas" — Neutrophils &gt; Lymphocytes &gt; Monocytes &gt; Eosinophils &gt; Basophils.</li>
+        <li><strong>Leukocytosis</strong> (↑ WBC &gt; 11,000): infection, inflammation, stress, leukemia.</li>
+        <li><strong>Leukopenia</strong> (↓ WBC &lt; 4,000): viral infection, sepsis (paradoxical), drugs (chemo, clozapine), marrow failure.</li>
+        <li><strong>Left shift:</strong> immature neutrophils (bands, metamyelocytes) appear → marrow under stress, often acute bacterial infection.</li>
+        <li class="deep-dive"><strong>Differential WBC patterns for clinical pattern recognition:</strong>
+          <ul><li>Neutrophilia: bacterial infection, stress, steroids.</li>
+          <li>Lymphocytosis: viral infection, EBV, CMV, CLL.</li>
+          <li>Eosinophilia: parasitic, allergy, drug reaction, Addison, autoimmune ("NAACP" — Neoplasia, Allergy/Asthma, Adrenal insufficiency, Connective tissue, Parasites).</li>
+          <li>Monocytosis: chronic infection (TB), recovery from acute infection, autoimmune.</li>
+          <li>Basophilia: rare; CML, myeloproliferative.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>WBC</th><th>% of WBC</th><th>Main role</th></tr></thead>
+      <tbody>
+        <tr><td>Neutrophil</td><td>60-70</td><td>Bacterial defense, phagocytosis</td></tr>
+        <tr><td>Lymphocyte</td><td>20-40</td><td>Adaptive immunity (T, B, NK)</td></tr>
+        <tr><td>Monocyte</td><td>3-8</td><td>→ macrophages; antigen presentation</td></tr>
+        <tr><td>Eosinophil</td><td>1-4</td><td>Parasites, allergy</td></tr>
+        <tr><td>Basophil</td><td>&lt;1</td><td>Histamine, heparin (allergy)</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Neutropenic fever</strong> (ANC &lt; 500 + T ≥ 38.3): medical emergency in chemotherapy patients. Blood cultures, broad-spectrum antibiotics within 1 hour. Sepsis can progress rapidly without intact neutrophil defense. Use private room, neutropenic precautions.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw the five WBCs to scale with characteristic nuclei. Add one trigger or condition that causes each to rise.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which WBC is the most abundant in normal blood?</li>
+      <li><span class="qc-meta">DOK 3.</span> An asthmatic patient has eosinophilia. Mechanism?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Neutrophil (60-70%).</li>
+        <li>Allergic airway inflammation recruits eosinophils to bronchi via Th2 cytokines (IL-5 in particular). Eosinophils release granule proteins that damage airway epithelium and perpetuate inflammation. Anti-IL-5 biologics (mepolizumab) treat severe eosinophilic asthma.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="AP">
+    <p class="card-eyebrow">Blood &middot; Concept 5 of 10</p>
+    <h2 class="card-title">Platelets <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Platelets are cell fragments shed from megakaryocytes in the marrow. They patrol the circulation looking for breaks in the endothelium and form the first plug in hemostasis.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Origin:</strong> megakaryocytes in bone marrow shed cytoplasmic fragments (~2,000-3,000 platelets per megakaryocyte).</li>
+        <li><strong>Stimulus:</strong> thrombopoietin (TPO) — made by liver. Stimulates megakaryocyte differentiation.</li>
+        <li><strong>Structure:</strong> no nucleus, ~2-4 µm. Contain α-granules (clotting factors, growth factors) and dense granules (ADP, serotonin, Ca²⁺).</li>
+        <li><strong>Lifespan:</strong> ~7-10 days.</li>
+        <li><strong>Normal count:</strong> 150,000-400,000/µL.</li>
+        <li><strong>Functions:</strong>
+          <ul><li>Form platelet plug at vessel injury sites.</li>
+          <li>Release factors that amplify hemostasis (TXA2, ADP).</li>
+          <li>Provide phospholipid surface for coagulation cascade.</li>
+          <li>Wound healing (PDGF growth factor).</li></ul>
+        </li>
+        <li><strong>Thrombocytopenia (&lt; 150,000):</strong>
+          <ul><li>↑ Destruction: ITP (immune), TTP, HIT (heparin-induced), DIC.</li>
+          <li>↓ Production: marrow failure, leukemia, chemotherapy, alcohol, B12/folate deficiency.</li>
+          <li>Sequestration: splenomegaly (cirrhosis).</li>
+          <li>Dilutional: massive transfusion.</li>
+          <li>Bleeding risk rises &lt; 50,000; spontaneous bleeding common &lt; 20,000; high risk &lt; 10,000.</li></ul>
+        </li>
+        <li><strong>Thrombocytosis (&gt; 450,000):</strong> reactive (infection, inflammation, iron deficiency, post-splenectomy) or primary (essential thrombocythemia, myeloproliferative).</li>
+        <li><strong>Drugs that affect platelets:</strong>
+          <ul><li>Aspirin: irreversibly inhibits COX-1 → ↓ TXA2 for the platelet's lifespan (7-10 days).</li>
+          <li>Clopidogrel, ticagrelor, prasugrel: block ADP P2Y12 receptor.</li>
+          <li>Abciximab, eptifibatide, tirofiban: block GpIIb/IIIa fibrinogen receptor (most potent platelet inhibitors).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>ITP</strong> (immune thrombocytopenic purpura): autoantibodies → splenic destruction of platelets. Isolated thrombocytopenia, no schistocytes. Treat: steroids, IVIG, anti-D, splenectomy. <strong>HIT</strong>: heparin-induced thrombocytopenia. Autoantibodies to platelet factor 4-heparin complexes → paradoxically a thrombotic disorder. Stop heparin and use alternative anticoagulant (argatroban). <strong>TTP</strong>: ADAMTS13 deficiency → micro thrombi everywhere. Pentad: thrombocytopenia, microangiopathic hemolysis (schistocytes), fever, renal dysfunction, neuro symptoms. Plasma exchange is life-saving.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Draw a megakaryocyte shedding platelets in the marrow. Add liver → TPO arrow. List 3 causes each of decreased and increased platelet count.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What hormone stimulates megakaryocyte differentiation?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient on heparin develops a falling platelet count and a new DVT. Concern?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Thrombopoietin (TPO), from liver.</li>
+        <li>HIT (heparin-induced thrombocytopenia type II). Antibodies form against PF4-heparin complexes → activate platelets → both thrombocytopenia AND a hypercoagulable state. Stop all heparin (including flushes); use a non-heparin anticoagulant (argatroban, fondaparinux) for ongoing anticoagulation.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="P">
+    <p class="card-eyebrow">Blood &middot; Concept 6 of 10</p>
+    <h2 class="card-title">Hemostasis cascade: vascular spasm → plug → coagulation → fibrinolysis <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Four steps stop bleeding and then clear the clot when healing is done. Each step has a clinical drug class that targets it. Memorize the steps and the pharmacology assembles itself.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Step 1: Vascular spasm.</strong>
+          <ul><li>Injured vessel constricts (reflex + endothelin release).</li>
+          <li>Slows blood loss in seconds.</li></ul>
+        </li>
+        <li><strong>Step 2: Platelet plug formation (primary hemostasis).</strong>
+          <ol><li>Endothelial injury exposes subendothelial collagen and von Willebrand factor (vWF).</li>
+          <li>Platelets adhere via GpIb receptor binding vWF.</li>
+          <li>Platelets activate → release ADP, TXA2, serotonin → recruit more platelets.</li>
+          <li>GpIIb/IIIa receptors on activated platelets bind fibrinogen → bridge platelets to each other.</li>
+          <li>Loose plug forms.</li></ol>
+        </li>
+        <li><strong>Step 3: Coagulation cascade (secondary hemostasis).</strong>
+          <ul><li>Series of enzymatic conversions ending in fibrin mesh that stabilizes the plug.</li>
+          <li><em>Extrinsic pathway:</em> tissue factor (from damaged tissue) + factor VII → activates factor X. Fast, "outside" trigger. Measured by PT/INR.</li>
+          <li><em>Intrinsic pathway:</em> activated within blood by exposure to collagen. Factors XII → XI → IX → VIII → X. Measured by PTT.</li>
+          <li><em>Common pathway:</em> factor X (now Xa) + V → prothrombin (II) → thrombin (IIa) → fibrinogen (I) → fibrin → cross-linked by factor XIII.</li>
+          <li>Factors II, VII, IX, X (and proteins C, S) are <strong>vitamin K-dependent</strong>.</li>
+          <li>Ca²⁺ (factor IV) needed at multiple steps.</li></ul>
+        </li>
+        <li><strong>Step 4: Fibrinolysis.</strong>
+          <ul><li>Plasminogen (built into clot) → plasmin by tissue plasminogen activator (tPA).</li>
+          <li>Plasmin degrades fibrin → D-dimer (a marker of recent fibrinolysis).</li>
+          <li>Restores normal flow as tissue heals.</li></ul>
+        </li>
+        <li><strong>Natural anticoagulants</strong> keep clotting localized:
+          <ul><li>Antithrombin III (inhibits thrombin + Xa; potentiated by heparin).</li>
+          <li>Protein C + S (inhibit factors V and VIII).</li>
+          <li>Tissue factor pathway inhibitor (TFPI).</li>
+          <li>Prostacyclin and NO from intact endothelium prevent platelet activation.</li></ul>
+        </li>
+        <li><strong>Drug class map (pharmacology hooks):</strong>
+          <ul><li>Antiplatelets — aspirin (TXA2), clopidogrel (ADP), abciximab (GpIIb/IIIa).</li>
+          <li>Heparin / LMWH (enoxaparin): potentiate antithrombin → inhibit IIa + Xa. Monitor: PTT (heparin), anti-Xa (LMWH).</li>
+          <li>Warfarin: blocks vitamin K → ↓ factors II, VII, IX, X. Monitor: INR.</li>
+          <li>DOACs: direct factor inhibitors. Apixaban, rivaroxaban (Xa); dabigatran (IIa).</li>
+          <li>Thrombolytics (tPA, alteplase): activate plasminogen → plasmin → lyse clot.</li>
+          <li>Reversal agents: vitamin K (warfarin), 4-factor PCC (warfarin emergency), protamine (heparin), idarucizumab (dabigatran), andexanet alfa (Xa inhibitors).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Diagram: hemostasis pathway with drug targets</h3>
+      <figure class="diagram" aria-labelledby="dxCoag-title dxCoag-desc">
+        <svg viewBox="0 0 720 400" role="img" aria-labelledby="dxCoag-title dxCoag-desc">
+          <title id="dxCoag-title">Coagulation cascade with intrinsic, extrinsic, and common pathways and drug targets</title>
+          <desc id="dxCoag-desc">A flowchart showing the intrinsic pathway on the left (factors XII, XI, IX, VIII) and the extrinsic pathway on the right (tissue factor activates VII), both converging on factor X. Activated factor X then converts prothrombin (II) to thrombin (IIa), which converts fibrinogen (I) to fibrin. Vitamin K-dependent factors (II, VII, IX, X) are marked. Drug class blocks are shown for warfarin (blocks vitamin K), heparin (inhibits IIa and Xa), DOACs (direct Xa or IIa inhibitors), and tPA (activates fibrinolysis).</desc>
+          <rect x="40" y="30" width="200" height="40" rx="6" fill="var(--white)" stroke="var(--navy)" stroke-width="1.5"/>
+          <text x="140" y="55" text-anchor="middle" class="lbl-bold">INTRINSIC</text>
+          <text x="140" y="85" text-anchor="middle" class="lbl-small">Collagen exposure</text>
+          <text x="140" y="100" text-anchor="middle" class="lbl-small">XII → XI → IX → VIII</text>
+          <text x="140" y="115" text-anchor="middle" class="lbl-small lbl-gold lbl-bold">(PTT)</text>
+          <rect x="480" y="30" width="200" height="40" rx="6" fill="var(--white)" stroke="var(--navy)" stroke-width="1.5"/>
+          <text x="580" y="55" text-anchor="middle" class="lbl-bold">EXTRINSIC</text>
+          <text x="580" y="85" text-anchor="middle" class="lbl-small">Tissue factor + VII</text>
+          <text x="580" y="115" text-anchor="middle" class="lbl-small lbl-gold lbl-bold">(PT / INR)</text>
+          <line x1="140" y1="120" x2="280" y2="170" stroke="var(--navy)" stroke-width="2"/>
+          <polygon points="277,167 285,170 280,176" fill="var(--navy)"/>
+          <line x1="580" y1="120" x2="440" y2="170" stroke="var(--navy)" stroke-width="2"/>
+          <polygon points="443,176 438,170 446,167" fill="var(--navy)"/>
+          <rect x="280" y="165" width="160" height="40" rx="6" fill="rgba(184,146,74,0.18)" stroke="var(--gold-deep)" stroke-width="2"/>
+          <text x="360" y="190" text-anchor="middle" class="lbl-bold lbl-gold">Factor Xa</text>
+          <line x1="360" y1="205" x2="360" y2="235" stroke="var(--navy)" stroke-width="2"/>
+          <polygon points="360,239 356,231 364,231" fill="var(--navy)"/>
+          <rect x="280" y="240" width="160" height="40" rx="6" fill="rgba(184,146,74,0.18)" stroke="var(--gold-deep)" stroke-width="2"/>
+          <text x="360" y="265" text-anchor="middle" class="lbl-bold lbl-gold">Thrombin (IIa)</text>
+          <line x1="360" y1="280" x2="360" y2="310" stroke="var(--navy)" stroke-width="2"/>
+          <polygon points="360,314 356,306 364,306" fill="var(--navy)"/>
+          <rect x="280" y="315" width="160" height="40" rx="6" fill="var(--white)" stroke="var(--navy)" stroke-width="2"/>
+          <text x="360" y="338" text-anchor="middle" class="lbl-bold">Fibrinogen → Fibrin</text>
+          <rect x="465" y="160" width="220" height="50" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.4"/>
+          <text x="575" y="180" text-anchor="middle" class="lbl-small lbl-bold lbl-terra">DOACs (Xa): apixaban, rivaroxaban</text>
+          <text x="575" y="200" text-anchor="middle" class="lbl-small lbl-terra">Heparin / LMWH (Xa + IIa)</text>
+          <line x1="440" y1="185" x2="463" y2="185" stroke="var(--terra-dark)" stroke-width="1" stroke-dasharray="2 2"/>
+          <rect x="465" y="235" width="220" height="50" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.4"/>
+          <text x="575" y="255" text-anchor="middle" class="lbl-small lbl-bold lbl-terra">DOAC (IIa): dabigatran</text>
+          <text x="575" y="275" text-anchor="middle" class="lbl-small lbl-terra">Heparin (IIa)</text>
+          <line x1="440" y1="260" x2="463" y2="260" stroke="var(--terra-dark)" stroke-width="1" stroke-dasharray="2 2"/>
+          <rect x="35" y="160" width="230" height="50" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.4"/>
+          <text x="150" y="180" text-anchor="middle" class="lbl-small lbl-bold lbl-terra">Warfarin: blocks vitamin K</text>
+          <text x="150" y="200" text-anchor="middle" class="lbl-small lbl-terra">↓ II, VII, IX, X synthesis</text>
+          <line x1="265" y1="185" x2="282" y2="185" stroke="var(--terra-dark)" stroke-width="1" stroke-dasharray="2 2"/>
+          <rect x="40" y="320" width="220" height="50" rx="4" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.4"/>
+          <text x="150" y="340" text-anchor="middle" class="lbl-small lbl-bold lbl-terra">tPA / alteplase</text>
+          <text x="150" y="358" text-anchor="middle" class="lbl-small lbl-terra">activates plasminogen → lyse fibrin</text>
+          <line x1="260" y1="345" x2="282" y2="335" stroke="var(--terra-dark)" stroke-width="1" stroke-dasharray="2 2"/>
+        </svg>
+        <figcaption>Two pathways meet at factor X, drive thrombin, and convert fibrinogen to fibrin. Vitamin K is needed for the synthesis of factors II, VII, IX, X. Anticoagulants and antiplatelets each block a specific step.</figcaption>
+      </figure>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Coag lab pearl:</strong> PT/INR follows warfarin (and extrinsic/common pathway, esp. factor VII which has shortest half-life). PTT follows heparin (and intrinsic pathway). <strong>Bleeding patterns by defect:</strong> platelet/vWF defects → mucocutaneous bleeding (epistaxis, petechiae, menorrhagia). Coagulation factor defects → deep tissue bleeding (hemarthrosis in hemophilia). Mixed in DIC.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Map all four hemostasis steps in sequence. Add antiplatelets at step 2, anticoagulants at step 3, thrombolytics at step 4. Mark which lab follows which drug.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which factor converts fibrinogen to fibrin?</li>
+      <li><span class="qc-meta">DOK 4.</span> A patient is admitted with a major GI bleed on warfarin and an INR of 8. What four interventions might be appropriate, and why?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Thrombin (factor IIa).</li>
+        <li>(1) Stop warfarin. (2) IV vitamin K to restart synthesis of factors II, VII, IX, X (slow, hours). (3) 4-factor prothrombin complex concentrate (PCC) for immediate factor replacement and INR correction. (4) Pack RBCs and FFP if hemodynamically significant. Address the bleeding source (endoscopy). Re-assess thromboembolic risk before resuming anticoagulation later.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="AP">
+    <p class="card-eyebrow">Blood &middot; Concept 7 of 10</p>
+    <h2 class="card-title">Blood typing: ABO, Rh, transfusion reactions <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">RBCs carry surface antigens. The two clinically critical antigen systems are ABO and Rh. Anti-antigen antibodies in the recipient destroy mismatched donor cells — that's a transfusion reaction.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>ABO system:</strong>
+          <ul><li>Four blood types based on A and B antigens on RBC surface: A, B, AB, O.</li>
+          <li>Antibodies are <em>preformed</em> against the antigens not present on your cells (from early exposure to bacterial polysaccharides resembling A/B antigens):
+            <ul><li>Type A: anti-B in plasma.</li>
+            <li>Type B: anti-A in plasma.</li>
+            <li>Type AB: no anti-A or anti-B (universal recipient for RBCs).</li>
+            <li>Type O: both anti-A and anti-B (universal donor for RBCs; but plasma type O can't be given universally because it has both antibodies).</li></ul>
+          </li>
+          <li>Antibodies are IgM (don't cross placenta).</li></ul>
+        </li>
+        <li><strong>Rh system:</strong>
+          <ul><li>D antigen most clinically important (positive or negative).</li>
+          <li>Antibodies form only after exposure (no preformed anti-D).</li>
+          <li>Once exposed (transfusion, pregnancy), Rh- person makes anti-D IgG → can cross placenta.</li></ul>
+        </li>
+        <li><strong>Transfusion compatibility (RBCs):</strong>
+          <ul><li>O- = universal donor RBCs (no A, no B, no D antigens to react against).</li>
+          <li>AB+ = universal recipient RBCs (no antibodies to react against donor).</li>
+          <li>Always crossmatch when possible.</li></ul>
+        </li>
+        <li><strong>Hemolytic disease of the newborn (HDN, erythroblastosis fetalis):</strong>
+          <ul><li>Rh- mom carries Rh+ fetus. First pregnancy: mom may be exposed to fetal Rh+ blood at delivery → forms anti-D IgG.</li>
+          <li>Subsequent Rh+ pregnancy: anti-D IgG crosses placenta → attacks fetal RBCs → fetal hemolysis, anemia, hydrops fetalis.</li>
+          <li><em>Prevention:</em> RhoGAM (anti-D immunoglobulin) given to Rh- moms at 28 weeks gestation and within 72 hours of delivery of an Rh+ baby. Also after miscarriage, ectopic pregnancy, amniocentesis, trauma.</li></ul>
+        </li>
+        <li><strong>Transfusion reactions:</strong>
+          <ul><li><em>Acute hemolytic (Type II hypersensitivity):</em> ABO incompatibility from clerical error. Within minutes. Fever, chills, flank pain, hypotension, hemoglobinuria. Stop transfusion, supportive care.</li>
+          <li><em>Febrile non-hemolytic (FNHTR):</em> recipient antibodies against donor WBC antigens. Common, benign. Fever, chills. Treat: antipyretic. Future: leukoreduced products.</li>
+          <li><em>Allergic / urticarial:</em> recipient IgE to donor plasma proteins. Hives, itching. Treat: antihistamine, may continue if mild.</li>
+          <li><em>Anaphylactic:</em> in IgA-deficient recipient receiving plasma. Severe. Epi, stop transfusion. Use washed RBCs in future.</li>
+          <li><em>TRALI</em> (transfusion-related acute lung injury): donor antibodies activate recipient neutrophils → non-cardiogenic pulmonary edema. Within 6 hours. Stop transfusion, supportive ventilation.</li>
+          <li><em>TACO</em> (transfusion-associated circulatory overload): too much volume too fast. Common in HF, elderly. Treat: diuretics, slow rate.</li>
+          <li><em>Delayed hemolytic:</em> days later, anamnestic response to minor antigens. Drop in Hb, mild hemolysis.</li>
+          <li><em>Bacterial contamination:</em> rare but lethal. High fever, sepsis. Stop, broad-spectrum abx.</li>
+          <li><em>GVHD:</em> donor T cells attack recipient in immunocompromised. Prevent: irradiated products.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary: ABO matrix</h3>
+      <table class="summary"><thead><tr><th>Type</th><th>RBC antigens</th><th>Plasma antibodies</th><th>Can receive RBCs from</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>A</td><td>Anti-B</td><td>A, O</td></tr>
+        <tr><td>B</td><td>B</td><td>Anti-A</td><td>B, O</td></tr>
+        <tr><td>AB</td><td>A + B</td><td>None</td><td>A, B, AB, O (universal recipient)</td></tr>
+        <tr><td>O</td><td>None</td><td>Anti-A + Anti-B</td><td>O only</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Pre-transfusion checklist: type and crossmatch, two-nurse verification of patient ID and unit match, baseline vital signs, start slowly with frequent monitoring (first 15 min). <strong>Stop the transfusion at the first sign of an acute reaction.</strong> Keep the line open with normal saline only (never D5W → RBC hemolysis). Return unit to blood bank with sample of recipient blood. <strong>Massive transfusion protocol</strong> (≥ 10 units in 24 hr): 1:1:1 ratio of pRBC, FFP, platelets to prevent dilutional coagulopathy.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Build a 4-column compatibility chart for ABO + Rh. Mark universal donor and recipient. Add a side note on RhoGAM use in pregnancy.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which blood type is the universal RBC donor?</li>
+      <li><span class="qc-meta">DOK 4.</span> An Rh-negative mother gives birth to an Rh-positive baby. What is the standard intervention to prevent harm in future pregnancies, and why does it work?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>O-negative (no A, B, or D antigens).</li>
+        <li>RhoGAM (anti-D IgG) given within 72 hours of delivery. The exogenous anti-D coats and clears any fetal Rh+ cells in the mother's circulation before she develops her own immune memory. Without this exposure, no anti-D antibodies form. Subsequent Rh+ pregnancies are protected from hemolytic disease of the newborn.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="CLIN">
+    <p class="card-eyebrow">Blood &middot; Concept 8 of 10</p>
+    <h2 class="card-title">Anemias <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Anemia is low Hb. Sort it three ways: by RBC size (MCV), by mechanism (production, destruction, loss), and by reticulocyte response. Together those three give you the diagnosis.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Approach to anemia:</strong>
+          <ol><li>Is the Hb actually low (vs dilutional)?</li>
+          <li>What's the MCV?</li>
+          <li>What's the retic count?</li>
+          <li>Match to a category.</li></ol>
+        </li>
+        <li><strong>Microcytic (MCV &lt; 80):</strong>
+          <ul><li><em>Iron deficiency:</em> most common worldwide. Causes: chronic blood loss (GI, menstrual), poor intake, malabsorption. Labs: ↓ ferritin, ↓ serum iron, ↑ TIBC. Pica, koilonychia in severe.</li>
+          <li><em>Thalassemia:</em> defective globin chain synthesis. α-thal (α-globin deletions) or β-thal (mutation). Family history; target cells on smear; iron studies normal.</li>
+          <li><em>Anemia of chronic disease:</em> inflammation → hepcidin sequesters iron in macrophages. Can be normo- or microcytic. Ferritin normal/high.</li>
+          <li><em>Sideroblastic:</em> defective heme synthesis (X-linked, alcohol, lead, B6 deficiency, drugs like INH).</li></ul>
+        </li>
+        <li><strong>Normocytic (MCV 80-100):</strong>
+          <ul><li>Acute blood loss (early, before marrow response).</li>
+          <li>Hemolysis (intrinsic: sickle cell, G6PD, hereditary spherocytosis; extrinsic: autoimmune, microangiopathic).</li>
+          <li>Anemia of chronic disease.</li>
+          <li>Early iron deficiency.</li>
+          <li>Anemia of CKD (low EPO).</li>
+          <li>Aplastic anemia (marrow failure).</li></ul>
+        </li>
+        <li><strong>Macrocytic (MCV &gt; 100):</strong>
+          <ul><li><em>Megaloblastic (impaired DNA synthesis):</em>
+            <ul><li>B12 deficiency: poor intake (vegan), pernicious anemia (no IF), terminal ileal disease (Crohn, resection). Adds neuro symptoms.</li>
+            <li>Folate deficiency: poor intake, alcoholism, pregnancy demand, methotrexate. No neuro symptoms.</li></ul>
+          </li>
+          <li><em>Non-megaloblastic:</em> alcoholism, hypothyroidism, liver disease, drug-induced.</li></ul>
+        </li>
+        <li><strong>Hemolytic anemias</strong>: ↑ retic, ↑ LDH, ↑ indirect bilirubin, ↓ haptoglobin. Smear shows fragments (schistocytes), spherocytes, sickle cells, target cells depending on cause.</li>
+        <li><strong>Sickle cell disease</strong> (deep dive worth: autosomal recessive HbS mutation → sickling under deoxygenation/stress → vaso-occlusion crises, hemolysis, splenic dysfunction, acute chest syndrome, stroke. Treat with hydroxyurea (↑ HbF), vaccinations (functional asplenia), pain control during crises, blood transfusion in select indications, hematopoietic stem cell transplant for severe.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary by MCV</h3>
+      <table class="summary"><thead><tr><th>MCV</th><th>Common causes</th></tr></thead>
+      <tbody>
+        <tr><td>&lt; 80 (micro)</td><td>Iron deficiency, thalassemia, ACD, sideroblastic</td></tr>
+        <tr><td>80-100 (normo)</td><td>Acute blood loss, hemolysis, ACD, CKD, aplastic</td></tr>
+        <tr><td>&gt; 100 (macro)</td><td>B12/folate (megaloblastic), alcohol, hypothyroid, liver disease</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Symptomatic threshold for anemia varies widely. Acute drop is far worse than chronic adaptation. Symptoms: fatigue, dyspnea on exertion, pallor, tachycardia, weakness. ECG changes (T inversion, ST depression) in severe anemia. Transfuse symptomatic patients or those with Hb &lt; 7 g/dL in most hospitalized adults (higher threshold for cardiac ischemia). Address underlying cause; don't just treat the number.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Build a flowchart: anemia → check MCV → if &lt; 80 check iron studies; if 80-100 check retic; if &gt; 100 check B12/folate. Add 3 causes at each terminal branch.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> A patient has Hb 9, MCV 70, ferritin 8 (low), TIBC high. Diagnosis?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why do B12 deficiency and folate deficiency both cause megaloblastic anemia, but only B12 deficiency causes neurologic symptoms?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Iron deficiency anemia. Microcytic + low ferritin (depleted stores) + high TIBC (transferrin upregulated to scavenge iron) is the classic pattern. Workup: investigate source of loss (GI evaluation in adults; menorrhagia in pre-menopausal women) and replace iron.</li>
+        <li>Both B12 and folate are needed for thymidine synthesis → DNA replication. Without them, RBC precursors can't divide normally → megaloblastic anemia. B12 has an additional role in myelin maintenance (methylmalonic acid handling). Folate alone deficiency does not affect myelin, so no neuro symptoms.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="CLIN">
+    <p class="card-eyebrow">Blood &middot; Concept 9 of 10</p>
+    <h2 class="card-title">Leukemias <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Leukemias are malignancies of the bone marrow's blood-forming cells. Categorize by speed (acute vs chronic) and lineage (lymphoid vs myeloid). Each of the four buckets has a typical age and presentation.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Four buckets:</strong>
+          <ul><li><em>ALL (acute lymphoblastic leukemia):</em> childhood most common (peak 2-5 years). Lymphoblast proliferation crowds normal marrow.</li>
+          <li><em>AML (acute myeloid leukemia):</em> adult most common acute leukemia. Auer rods on smear. Subtypes by WHO classification.</li>
+          <li><em>CLL (chronic lymphocytic leukemia):</em> older adults, often asymptomatic incidental finding. Mature-appearing lymphocytes accumulate. Smudge cells on smear.</li>
+          <li><em>CML (chronic myeloid leukemia):</em> Philadelphia chromosome — t(9;22) BCR-ABL fusion. Mature myeloid cells. Imatinib (tyrosine kinase inhibitor) revolutionized treatment.</li></ul>
+        </li>
+        <li><strong>Acute leukemia presentation:</strong>
+          <ul><li>Marrow crowding → ↓ normal cells:
+            <ul><li>↓ RBCs → fatigue, pallor, dyspnea.</li>
+            <li>↓ Platelets → bleeding, petechiae, easy bruising.</li>
+            <li>↓ Normal WBCs → infections.</li></ul>
+          </li>
+          <li>Often rapid onset, B symptoms (fever, weight loss, night sweats), bone pain.</li>
+          <li>Workup: CBC with differential, peripheral smear, bone marrow biopsy with flow cytometry and cytogenetics.</li></ul>
+        </li>
+        <li><strong>Chronic leukemia presentation:</strong>
+          <ul><li>Often asymptomatic; found on routine labs (high WBC).</li>
+          <li>May have splenomegaly, lymphadenopathy, fatigue.</li>
+          <li>Slow progression, but transformation to acute can occur.</li></ul>
+        </li>
+        <li><strong>Treatment principles:</strong>
+          <ul><li>Acute: intensive induction chemotherapy → consolidation → maintenance. Stem cell transplant in select cases.</li>
+          <li>Chronic: depends on subtype. CML responds dramatically to tyrosine kinase inhibitors (imatinib). CLL: watchful waiting or targeted agents (BTK inhibitors like ibrutinib, anti-CD20 like rituximab).</li>
+          <li>Targeted therapy and immunotherapy (CAR-T cells) now part of standard care for select leukemias.</li></ul>
+        </li>
+        <li><strong>Oncologic emergencies in leukemia:</strong>
+          <ul><li>Tumor lysis syndrome: massive cell breakdown after chemo → hyperK, hyperphosphatemia, hyperuricemia, hypocalcemia, AKI. Prevent: hydration, allopurinol, rasburicase.</li>
+          <li>Febrile neutropenia.</li>
+          <li>Leukostasis: very high WBC (&gt; 100,000) → microvascular sludging → respiratory, neuro symptoms.</li>
+          <li>DIC (esp. APL — acute promyelocytic leukemia subtype of AML).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Type</th><th>Typical age</th><th>Hallmark</th></tr></thead>
+      <tbody>
+        <tr><td>ALL</td><td>Children (2-5)</td><td>Lymphoblasts, often CNS involvement</td></tr>
+        <tr><td>AML</td><td>Adults (median 65)</td><td>Auer rods; APL subtype causes DIC</td></tr>
+        <tr><td>CLL</td><td>Older adults</td><td>Smudge cells, often indolent</td></tr>
+        <tr><td>CML</td><td>Middle-aged adults</td><td>Philadelphia chromosome (BCR-ABL); imatinib</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Nursing care of leukemia patients revolves around <strong>pancytopenia management</strong>: prevent infection (neutropenic precautions, prompt fever workup), prevent bleeding (avoid IM injections, soft toothbrush, no rectal temps), support oxygenation (transfuse as needed), provide emotional support during long treatment courses. Watch for tumor lysis syndrome at induction.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Make a 2x2 matrix of acute vs chronic × lymphoid vs myeloid. Place ALL, AML, CLL, CML in their cells. Add typical age + hallmark feature for each.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which leukemia is associated with the Philadelphia chromosome?</li>
+      <li><span class="qc-meta">DOK 4.</span> A new AML patient develops DIC during induction. Which AML subtype is most concerning, and why?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>CML (t(9;22), BCR-ABL fusion).</li>
+        <li>APL (acute promyelocytic leukemia, M3 subtype). The malignant promyelocytes contain tissue factor-rich granules that, when lysed by chemotherapy, dump procoagulant material into circulation → massive DIC. Treat with ATRA (all-trans retinoic acid) which differentiates the cells (rather than lysing them) and reduces DIC risk.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="CLIN">
+    <p class="card-eyebrow">Blood &middot; Concept 10 of 10</p>
+    <h2 class="card-title">Bleeding and clotting disorders <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Bleeding disorders are too little clotting; thrombotic disorders are too much. The lab pattern (platelet count, PT, PTT) points at the broken step.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Bleeding disorder patterns:</strong>
+          <ul><li><em>Platelet/vWF defects:</em> mucocutaneous bleeding (epistaxis, gum bleeding, menorrhagia, petechiae). Examples: ITP, vWD, drug-induced.</li>
+          <li><em>Coagulation factor defects:</em> deep tissue bleeding (hemarthrosis, intramuscular). Examples: hemophilia A and B, vitamin K deficiency, liver disease.</li>
+          <li><em>Mixed:</em> DIC.</li></ul>
+        </li>
+        <li><strong>Hemophilia A:</strong> X-linked, factor VIII deficiency. ↑ PTT, normal PT. Joint bleeding, deep bleeds. Treat with factor VIII replacement or emicizumab.</li>
+        <li><strong>Hemophilia B:</strong> X-linked, factor IX deficiency ("Christmas disease"). Clinically similar to A.</li>
+        <li><strong>von Willebrand disease (vWD):</strong> most common inherited bleeding disorder. Mucocutaneous bleeding. vWF helps platelet adhesion and stabilizes factor VIII. Treat: desmopressin (DDAVP releases stored vWF) for mild; vWF concentrates for severe.</li>
+        <li><strong>Vitamin K deficiency:</strong> ↑ PT/INR (factor VII shortest half-life). Causes: malabsorption, antibiotics (kill gut flora), neonate (no gut bacteria yet). Treat: vitamin K (oral, IV).</li>
+        <li><strong>Liver disease coagulopathy:</strong> all factors except VIII are made by the liver. ↑ PT/INR ± PTT. Treat: FFP for bleeding; address liver disease.</li>
+        <li><strong>DIC (disseminated intravascular coagulation):</strong>
+          <ul><li>Pathologic activation of both clotting and fibrinolysis at once.</li>
+          <li>Triggers: sepsis, trauma, obstetric (placental abruption, amniotic fluid embolism), malignancy (especially APL), severe pancreatitis.</li>
+          <li>Labs: ↓ platelets, ↑ PT, ↑ PTT, ↓ fibrinogen, ↑ D-dimer.</li>
+          <li>Clinical: simultaneous bleeding (oozing from IV sites, GI, mucosa) and microthrombi (organ dysfunction).</li>
+          <li>Treat: address underlying cause; replace factors (FFP, cryoprecipitate, platelets) as needed.</li></ul>
+        </li>
+        <li><strong>Hypercoagulable / thrombophilia states:</strong>
+          <ul><li>Inherited: factor V Leiden (most common), prothrombin gene mutation, protein C/S deficiency, antithrombin III deficiency.</li>
+          <li>Acquired: antiphospholipid antibody syndrome (recurrent thromboses, miscarriages, false positive RPR), malignancy (Trousseau syndrome — migratory thrombophlebitis with pancreatic ca), pregnancy, OCPs, smoking, immobility, nephrotic syndrome, sickle cell, PNH.</li>
+          <li>Common presentations: unprovoked DVT/PE, recurrent thrombosis, miscarriages, atypical sites.</li></ul>
+        </li>
+        <li><strong>VTE management overview</strong>: anticoagulation (parenteral bridge if needed, then oral DOAC or warfarin). Duration depends on whether provoked (3 months) or unprovoked (often indefinite). IVC filter only in select cases.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary: lab patterns</h3>
+      <table class="summary"><thead><tr><th>Defect</th><th>Plt</th><th>PT</th><th>PTT</th><th>Smear / other</th></tr></thead>
+      <tbody>
+        <tr><td>ITP</td><td>↓↓</td><td>Normal</td><td>Normal</td><td>Isolated thrombocytopenia</td></tr>
+        <tr><td>TTP</td><td>↓</td><td>Normal</td><td>Normal</td><td>Schistocytes, ↑ LDH, ADAMTS13 ↓</td></tr>
+        <tr><td>DIC</td><td>↓</td><td>↑</td><td>↑</td><td>↓ Fibrinogen, ↑ D-dimer, schistocytes</td></tr>
+        <tr><td>Vit K deficiency / warfarin</td><td>Normal</td><td>↑↑</td><td>Mildly ↑</td><td>↑ PT first</td></tr>
+        <tr><td>Hemophilia A or B</td><td>Normal</td><td>Normal</td><td>↑</td><td>Factor VIII or IX low</td></tr>
+        <tr><td>vWD</td><td>Normal</td><td>Normal</td><td>Normal or ↑</td><td>↑ Bleeding time, ↓ vWF activity</td></tr>
+        <tr><td>Liver disease</td><td>Normal or ↓</td><td>↑</td><td>↑</td><td>All factors ↓ except VIII</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Reversal cheat sheet:</strong> warfarin → vitamin K + 4-factor PCC. Heparin → protamine sulfate. Dabigatran → idarucizumab. Xa inhibitors (apixaban, rivaroxaban) → andexanet alfa or 4-factor PCC. Antiplatelets → no direct reversal; platelet transfusion. <strong>Nursing pearl:</strong> any patient on anticoagulants needs fall precautions, soft toothbrush, electric razor, and education about signs of bleeding. Hold anticoagulants per protocol before procedures.</p></aside>
+    <aside class="callout callout-drawing"><h3>DRAW IT</h3><p>Build a flowchart by lab pattern: low platelets only → consider ITP, HIT, TTP. Long PTT only → hemophilia or heparin. Long PT only → warfarin or vitamin K deficiency. Both prolonged with low platelets → DIC or liver disease.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> A patient has bleeding from gums, IV sites, and GI tract simultaneously with thrombocytopenia, ↑ PT, ↑ PTT, ↓ fibrinogen. Diagnosis?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does a patient with severe liver disease have abnormal PT despite intact platelet count?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>DIC (disseminated intravascular coagulation). Find and treat the trigger (sepsis, malignancy, obstetric, trauma); replace components as bleeding dictates.</li>
+        <li>The liver synthesizes nearly all clotting factors (except VIII, which is also made by endothelium). In severe liver disease, factor synthesis falls. Factor VII has the shortest half-life, so PT prolongs first. Platelets are made in marrow, so their count can be normal initially — though chronic liver disease often causes hypersplenism + thrombocytopenia too.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Blood &amp; hematology master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p></footer>
+</div>
+
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Blood & Hematology';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='blood-hematology-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

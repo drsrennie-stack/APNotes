@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endocrine — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; }
+  .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; }
+  a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; }
+  a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; }
+  .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; }
+  .seg button:hover { background:var(--navy-tint); }
+  .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; }
+  @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; }
+  .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); }
+  .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; }
+  li.deep-dive::before { margin-right:6px; }
+  .deep-dive.callout { border-left-width:4px; border-left-color:var(--gold); }
+  .deep-dive.callout::before { display:none; }
+  .deep-dive.callout h3::after { content:" · DEEP DIVE"; font-size:10px; color:var(--gold-deep); letter-spacing:0.08em; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  figure.diagram { margin:14px 0 4px; padding:0; }
+  figure.diagram svg { width:100%; max-width:700px; height:auto; display:block; margin:0 auto; background:var(--off-white); border:1px solid var(--navy-tint); border-radius:4px; }
+  figure.diagram figcaption { font-family:'Lora',serif; font-style:italic; font-size:13px; color:var(--navy); margin-top:8px; text-align:center; line-height:1.4; }
+  figure.diagram svg text { font-family:'DM Sans',sans-serif; fill:var(--navy); font-size:12px; }
+  figure.diagram svg .lbl-bold { font-weight:700; }
+  figure.diagram svg .lbl-terra { fill:var(--terra-dark); }
+  figure.diagram svg .lbl-gold { fill:var(--gold-deep); }
+  figure.diagram svg .lbl-small { font-size:10.5px; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); }
+  .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; }
+  .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; }
+  .card-section li { margin-bottom:6px; }
+  .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; }
+  table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; }
+  table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; }
+  .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; }
+  .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); }
+  .callout-clinical h3 { color:var(--terra-dark); }
+  .callout-drawing { border-color:var(--gold-deep); background:var(--white); }
+  .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; }
+  .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; }
+  .quick-check li { margin-bottom:8px; }
+  .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; }
+  details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; }
+  details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); }
+  .tag-P { color:var(--terra-dark); background:var(--white); }
+  .tag-AP { color:var(--gold-deep); background:var(--white); }
+  .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); }
+  footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; }
+  .top-link:hover { text-decoration:underline; }
+  @media print {
+    body { background:var(--white); }
+    .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; }
+    details.answers[open] > summary { display:none; }
+    details.answers:not([open]) > *:not(summary) { display:block; }
+    .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; }
+    .toc { display:none; }
+    .quick-check { background:var(--white); }
+    .concept-card[hidden] { display:none !important; }
+    a { color:var(--navy); text-decoration:none; }
+    figure.diagram svg { background:var(--white); }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Endocrine Anatomy &amp; Physiology</h1>
+    <p class="usage">The endocrine system is messages sent in blood: hormones from one cell acting on another, often far away. Every disorder is too much, too little, or wrong response to a hormone. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy"  aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio"   aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full"       aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">13</strong> concepts</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 class="toc-h" id="toc-h">Contents</h2>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
+  <main id="main">
+
+    <!-- 1 -->
+    <article class="concept-card" id="c1" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 1 of 13</p>
+      <h2 class="card-title">Endocrine vs nervous + hormone classes <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Both the nervous and endocrine systems coordinate the body. The nervous system is fast and targeted; the endocrine system is slower but persistent and broadcast. Hormones group into three structural classes that determine how they travel and signal.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Endocrine vs nervous comparison:</strong>
+            <ul>
+              <li>Speed: nervous (ms) &gt;&gt; endocrine (sec to days).</li>
+              <li>Specificity: nervous targets specific cells via synapses; endocrine reaches all cells via blood, with specificity by receptor expression.</li>
+              <li>Duration: nervous is brief; endocrine effects can last hours to days.</li>
+              <li>Overlap: many tissues use both (e.g., adrenal medulla is a modified sympathetic ganglion).</li>
+            </ul>
+          </li>
+          <li><strong>Three hormone classes:</strong>
+            <ul>
+              <li><em>Peptide / protein:</em> insulin, GH, ADH, oxytocin, most pituitary. Water soluble → travel free in plasma. Bind membrane receptors → second messenger cascades. Stored in vesicles, released on demand.</li>
+              <li><em>Steroid:</em> cortisol, aldosterone, sex hormones, vitamin D. Lipid soluble → travel bound to carrier proteins. Cross cell membrane → bind intracellular receptors → modulate gene transcription. Synthesized on demand, not stored.</li>
+              <li><em>Amine:</em> derived from tyrosine.
+                <ul>
+                  <li>Catecholamines (E, NE, DA): water-soluble, like peptides — bind membrane receptors.</li>
+                  <li>Thyroid hormones (T3, T4): lipid-soluble — bind intracellular receptors.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Hormone life cycle:</strong> synthesis → storage (peptides) or on-demand (steroids) → release → transport (free or bound) → bind receptor → effect → degradation (liver, kidney).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Class</th><th>Solubility</th><th>Receptor</th><th>Storage</th></tr></thead>
+          <tbody>
+            <tr><td>Peptide / protein</td><td>Water</td><td>Membrane (2nd messenger)</td><td>Vesicles</td></tr>
+            <tr><td>Steroid</td><td>Lipid</td><td>Intracellular (gene transcription)</td><td>None (made on demand)</td></tr>
+            <tr><td>Amine — catechol</td><td>Water</td><td>Membrane</td><td>Vesicles</td></tr>
+            <tr><td>Amine — thyroid</td><td>Lipid</td><td>Intracellular</td><td>Colloid (T3/T4 bound to thyroglobulin)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pharmacology consequence:</strong> peptides (e.g., insulin, GH, ADH analogs) are destroyed by gut digestion → must be injected. Steroids (e.g., prednisone, levothyroxine for T4) can be oral. Onset and duration follow receptor mechanism: catecholamines act in seconds, steroids and thyroid hormones take hours to days to reach full effect because they work via transcription.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch a cell with a membrane receptor (peptide/catechol pathway: hormone → receptor → G-protein → second messenger → kinase cascade) and an intracellular receptor (steroid/thyroid: hormone crosses membrane → binds receptor → enters nucleus → DNA → mRNA → protein).</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Why can insulin not be given orally?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why do steroid hormones have a slower onset than catecholamines?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Insulin is a peptide — destroyed by gastric and intestinal proteases before absorption.</li>
+            <li>Catecholamines bind membrane receptors → immediate second messenger response (seconds). Steroids must enter the cell, bind an intracellular receptor, translocate to the nucleus, and alter gene transcription → new protein synthesis (hours).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 2 -->
+    <article class="concept-card" id="c2" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 2 of 13</p>
+      <h2 class="card-title">Hormone control: humoral, neural, hormonal + receptor regulation <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Hormone secretion is triggered by one of three signals: a blood substance (humoral), a nerve (neural), or another hormone (hormonal). Receptors are not fixed; cells up- or down-regulate them to dampen or amplify response.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Three stimulus types:</strong>
+            <ul>
+              <li><em>Humoral:</em> blood ion or nutrient level. Example: ↓ Ca²⁺ → parathyroid releases PTH.</li>
+              <li><em>Neural:</em> direct nerve stimulation. Example: sympathetic preganglionic fiber → adrenal medulla → E + NE.</li>
+              <li><em>Hormonal (tropic):</em> hormone from one gland controls another. Example: TSH from anterior pituitary → thyroid → T3/T4.</li>
+            </ul>
+          </li>
+          <li><strong>Feedback loops:</strong>
+            <ul>
+              <li>Negative (the workhorse): hormone effect ↓ stimulus that triggered it. Stabilizes.</li>
+              <li>Positive (rare): hormone effect ↑ stimulus → escalates until event completes. Examples: oxytocin in labor, LH surge in ovulation, clotting cascade.</li>
+            </ul>
+          </li>
+          <li><strong>Receptor regulation:</strong>
+            <ul>
+              <li><em>Down-regulation:</em> chronic high hormone → cell internalizes receptors → response weakens. Insulin resistance in T2DM is the classic example.</li>
+              <li><em>Up-regulation:</em> chronic low hormone → more receptors expressed → response amplifies. Denervation supersensitivity. Beta-blocker withdrawal hypersensitivity.</li>
+            </ul>
+          </li>
+          <li><strong>Half-life sets dosing:</strong> peptides minutes (insulin: 5-7 min); catecholamines seconds; thyroid hormones days (T4: ~7 days, why levothyroxine is dosed once daily).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Trigger</th><th>Example</th><th>Speed</th></tr></thead>
+          <tbody>
+            <tr><td>Humoral (blood substance)</td><td>↓ Ca²⁺ → PTH; ↑ glucose → insulin</td><td>Direct, fast</td></tr>
+            <tr><td>Neural</td><td>Sympathetic → adrenal medulla (E/NE)</td><td>Seconds</td></tr>
+            <tr><td>Hormonal (tropic)</td><td>TSH → thyroid; ACTH → adrenal cortex</td><td>Minutes to hours</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Type 2 diabetes mellitus</strong> is built on receptor down-regulation: chronic hyperinsulinemia → fewer functional insulin receptors → ever-worsening glucose handling. <strong>Abrupt β-blocker discontinuation</strong> can cause rebound HTN and tachycardia because chronically blocked β receptors up-regulate.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a generic negative feedback loop. Then add a positive feedback example (oxytocin and labor). Show the difference in where the loop ends.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which type of trigger releases insulin?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why might a patient develop tolerance to a chronically used hormone-mimetic drug?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Humoral (↑ blood glucose triggers β-cell insulin release).</li>
+            <li>Receptor down-regulation — chronic stimulation reduces receptor density and responsiveness, requiring higher doses for the same effect.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 3 -->
+    <article class="concept-card" id="c3" data-tags="AP">
+      <p class="card-eyebrow">Endocrine &middot; Concept 3 of 13</p>
+      <h2 class="card-title">Hypothalamic-pituitary axis <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">The pituitary is the relay between the brain and most peripheral endocrine organs. The anterior lobe is glandular and controlled chemically via a portal blood system. The posterior lobe is neural and controlled by axons descending from the hypothalamus.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Anatomic setup:</strong>
+            <ul>
+              <li>Pituitary sits in the sella turcica of the sphenoid bone, attached to the hypothalamus by the infundibulum.</li>
+              <li>Anterior lobe (adenohypophysis): derived from oral ectoderm (Rathke's pouch). Glandular epithelial.</li>
+              <li>Posterior lobe (neurohypophysis): derived from neuroectoderm. Axons + supporting cells (pituicytes).</li>
+            </ul>
+          </li>
+          <li><strong>Anterior pituitary control: the hypophyseal portal system.</strong>
+            <ul>
+              <li>Hypothalamic neurons release "releasing hormones" (or inhibiting hormones) into a capillary plexus in the median eminence.</li>
+              <li>Portal veins carry them down to the anterior pituitary.</li>
+              <li>Anterior pituitary cells (acidophils, basophils) release their hormones into systemic circulation.</li>
+            </ul>
+          </li>
+          <li><strong>Posterior pituitary control: direct neural.</strong>
+            <ul>
+              <li>Cell bodies of supraoptic and paraventricular nuclei in the hypothalamus synthesize ADH and oxytocin.</li>
+              <li>Axons descend through the infundibulum into the posterior lobe.</li>
+              <li>Hormones are stored at axon terminals (Herring bodies) and released directly into blood.</li>
+            </ul>
+          </li>
+          <li><strong>Hypothalamic releasing/inhibiting hormones</strong> (six pairs, most are stimulating):
+            <ul>
+              <li>TRH → TSH (and PRL).</li>
+              <li>CRH → ACTH.</li>
+              <li>GnRH → FSH + LH.</li>
+              <li>GHRH → GH (somatostatin inhibits).</li>
+              <li>Dopamine: tonic inhibitor of prolactin.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: hypothalamic-pituitary connections</h3>
+        <figure class="diagram" aria-labelledby="dxHPA-title dxHPA-desc">
+          <svg viewBox="0 0 720 400" role="img" aria-labelledby="dxHPA-title dxHPA-desc">
+            <title id="dxHPA-title">Two control pathways from the hypothalamus to the anterior and posterior pituitary</title>
+            <desc id="dxHPA-desc">A schematic with the hypothalamus at the top. The left side shows hypothalamic neurons releasing peptide hormones into a primary capillary plexus, which travel through portal veins down to the anterior pituitary, where target cells release tropic hormones into the systemic circulation. The right side shows hypothalamic neurons whose axons descend directly through the infundibulum into the posterior pituitary, where stored hormones ADH and oxytocin are released into systemic capillaries.</desc>
+
+            <!-- Hypothalamus -->
+            <rect x="120" y="20" width="480" height="60" rx="8" fill="var(--navy-tint)" stroke="var(--navy)" stroke-width="1.5"/>
+            <text x="360" y="55" text-anchor="middle" class="lbl-bold">HYPOTHALAMUS</text>
+
+            <!-- LEFT: Portal pathway -->
+            <text x="170" y="105" class="lbl-bold lbl-small lbl-terra">Anterior path: chemical via portal</text>
+
+            <!-- Releasing hormone neurons -->
+            <circle cx="200" cy="125" r="6" fill="var(--terra-dark)"/>
+            <text x="210" y="129" class="lbl-small">Releasing hormone neuron</text>
+
+            <line x1="200" y1="131" x2="200" y2="160" stroke="var(--terra-dark)" stroke-width="2"/>
+            <polygon points="200,164 196,156 204,156" fill="var(--terra-dark)"/>
+
+            <!-- Primary plexus -->
+            <rect x="160" y="167" width="80" height="22" fill="rgba(194,115,77,0.18)" stroke="var(--terra-dark)" stroke-width="1"/>
+            <text x="200" y="183" text-anchor="middle" class="lbl-small lbl-bold">Primary plexus</text>
+
+            <!-- Portal veins -->
+            <line x1="200" y1="189" x2="200" y2="240" stroke="var(--terra-dark)" stroke-width="2"/>
+            <line x1="180" y1="189" x2="180" y2="240" stroke="var(--terra-dark)" stroke-width="2"/>
+            <line x1="220" y1="189" x2="220" y2="240" stroke="var(--terra-dark)" stroke-width="2"/>
+            <text x="250" y="220" class="lbl-small lbl-terra">Portal veins</text>
+
+            <!-- Anterior pituitary -->
+            <rect x="140" y="245" width="120" height="55" rx="6" fill="rgba(184,146,74,0.15)" stroke="var(--gold-deep)" stroke-width="2"/>
+            <text x="200" y="270" text-anchor="middle" class="lbl-bold">Anterior</text>
+            <text x="200" y="287" text-anchor="middle" class="lbl-small">(adenohypophysis)</text>
+
+            <!-- Hormones out -->
+            <line x1="200" y1="300" x2="200" y2="335" stroke="var(--navy)" stroke-width="2"/>
+            <polygon points="200,339 196,331 204,331" fill="var(--navy)"/>
+            <text x="120" y="358" class="lbl-small lbl-bold">→ GH, PRL, TSH, ACTH, FSH, LH</text>
+
+            <!-- RIGHT: Neural pathway -->
+            <text x="490" y="105" class="lbl-bold lbl-small">Posterior path: neural via axons</text>
+
+            <!-- Hypothalamic neuron with long axon -->
+            <circle cx="540" cy="125" r="6" fill="var(--navy)"/>
+            <text x="550" y="129" class="lbl-small">SON / PVN neuron</text>
+
+            <line x1="540" y1="131" x2="540" y2="240" stroke="var(--navy)" stroke-width="3"/>
+            <text x="555" y="180" class="lbl-small lbl-bold">Axon</text>
+
+            <!-- Posterior pituitary -->
+            <rect x="480" y="245" width="120" height="55" rx="6" fill="rgba(30,61,76,0.10)" stroke="var(--navy)" stroke-width="2"/>
+            <text x="540" y="270" text-anchor="middle" class="lbl-bold">Posterior</text>
+            <text x="540" y="287" text-anchor="middle" class="lbl-small">(neurohypophysis)</text>
+
+            <!-- Herring bodies indicator -->
+            <circle cx="530" cy="285" r="3" fill="var(--gold)" stroke="var(--gold-deep)"/>
+            <circle cx="550" cy="285" r="3" fill="var(--gold)" stroke="var(--gold-deep)"/>
+
+            <line x1="540" y1="300" x2="540" y2="335" stroke="var(--navy)" stroke-width="2"/>
+            <polygon points="540,339 536,331 544,331" fill="var(--navy)"/>
+            <text x="480" y="358" class="lbl-small lbl-bold">→ ADH, Oxytocin</text>
+
+            <!-- Infundibulum -->
+            <rect x="350" y="80" width="30" height="170" fill="var(--white)" stroke="var(--navy)" stroke-dasharray="3 3"/>
+            <text x="365" y="170" text-anchor="middle" class="lbl-small" transform="rotate(-90 365 170)">Infundibulum</text>
+
+            <!-- Sella turcica box -->
+            <rect x="130" y="240" width="480" height="65" fill="none" stroke="var(--navy)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <text x="610" y="270" class="lbl-small" text-anchor="end">Sella turcica</text>
+          </svg>
+          <figcaption>Left: anterior pituitary is controlled chemically via the hypophyseal portal system. Right: posterior pituitary is controlled neurally by axons descending from the supraoptic and paraventricular nuclei. Both lobes sit in the sella turcica.</figcaption>
+        </figure>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pituitary adenomas</strong> can be functioning (most commonly prolactinomas → galactorrhea, infertility) or non-functioning (mass effect → bitemporal hemianopia from optic chiasm compression, headache). <strong>Sheehan syndrome:</strong> post-partum hemorrhage → pituitary infarction → hypopituitarism (failure to lactate is often the first clue).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Reproduce the diagram. Add the six hypothalamic releasing/inhibiting hormones on the anterior pituitary side. Trace where each goes after it acts on the anterior pituitary.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which pituitary lobe is controlled directly by axons from the hypothalamus?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why might a non-functioning pituitary adenoma cause bitemporal hemianopia?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Posterior (neurohypophysis).</li>
+            <li>The pituitary sits below the optic chiasm. An enlarging mass compresses the crossing nasal retinal fibers, eliminating peripheral (temporal) vision in both eyes.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 4 -->
+    <article class="concept-card" id="c4" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 4 of 13</p>
+      <h2 class="card-title">Anterior pituitary hormones <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Six hormones from six cell types. Most are tropic (control other glands). GH and PRL act directly on tissues. Each pairs with a hypothalamic releaser, an effect, and a clinical disorder of excess or deficiency.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>GH (growth hormone)</strong> from somatotrophs (acidophils):
+            <ul>
+              <li>↑ Bone &amp; tissue growth (via IGF-1 from liver). Anabolic.</li>
+              <li>Hyperglycemic (insulin antagonist).</li>
+              <li>Excess: gigantism (before puberty), acromegaly (after). Deficiency: short stature in children.</li>
+            </ul>
+          </li>
+          <li><strong>PRL (prolactin)</strong> from lactotrophs (acidophils):
+            <ul>
+              <li>Stimulates milk production. Tonically inhibited by dopamine.</li>
+              <li>Excess: galactorrhea, amenorrhea, infertility (suppresses GnRH). Dopamine agonists (cabergoline, bromocriptine) treat prolactinoma.</li>
+            </ul>
+          </li>
+          <li><strong>TSH (thyroid-stimulating hormone)</strong> from thyrotrophs (basophils):
+            <ul>
+              <li>Stimulates thyroid → T3, T4.</li>
+              <li>Used to differentiate primary vs secondary thyroid disorders.</li>
+            </ul>
+          </li>
+          <li><strong>ACTH (adrenocorticotropic hormone)</strong> from corticotrophs (basophils):
+            <ul>
+              <li>Stimulates adrenal cortex (cortisol primarily). Mild aldosterone and androgen effects.</li>
+              <li>Cushing disease = pituitary ACTH adenoma.</li>
+            </ul>
+          </li>
+          <li><strong>FSH, LH</strong> (gonadotrophs, basophils):
+            <ul>
+              <li>FSH: stimulates follicle development (♀) / spermatogenesis (♂).</li>
+              <li>LH: triggers ovulation, corpus luteum (♀) / testosterone production by Leydig cells (♂).</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>MSH (melanocyte-stimulating hormone):</strong> from POMC cleavage, same precursor as ACTH. Hyperpigmentation in primary adrenal failure (high ACTH/MSH precursor) — Addison's "bronze skin."</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Hormone</th><th>Target</th><th>Excess</th><th>Deficiency</th></tr></thead>
+          <tbody>
+            <tr><td>GH</td><td>Liver (IGF-1), tissues</td><td>Gigantism, acromegaly</td><td>Short stature</td></tr>
+            <tr><td>PRL</td><td>Breast</td><td>Galactorrhea, infertility</td><td>Failure to lactate (Sheehan)</td></tr>
+            <tr><td>TSH</td><td>Thyroid</td><td>Secondary hyperthyroid (rare)</td><td>Secondary hypothyroid</td></tr>
+            <tr><td>ACTH</td><td>Adrenal cortex</td><td>Cushing disease</td><td>Secondary adrenal insufficiency</td></tr>
+            <tr><td>FSH/LH</td><td>Gonads</td><td>Precocious puberty</td><td>Hypogonadism, infertility</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Acromegaly</strong> in adults: enlarging hands/feet/jaw, deepening voice, glucose intolerance, sleep apnea, cardiomyopathy. GH suppression test with oral glucose challenge is diagnostic. <strong>Stalk effect:</strong> any pituitary stalk damage disrupts dopamine delivery → PRL rises (lost inhibition) while other hormones fall (lost releasing hormones).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a tree: hypothalamus releases TRH/CRH/GnRH/GHRH/dopamine → anterior pituitary releases six hormones → each acts on a target organ. Label disorders of excess and deficiency at each branch.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which hypothalamic input chronically inhibits prolactin?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient with a pituitary stalk lesion has ↑ prolactin and ↓ TSH. Explain.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Dopamine.</li>
+            <li>Stalk damage interrupts hypothalamic-to-pituitary signaling. Dopamine cannot reach lactotrophs → PRL rises (disinhibition). TRH and other releasing hormones also cannot reach their targets → TSH falls (loss of stimulation).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 5 -->
+    <article class="concept-card" id="c5" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 5 of 13</p>
+      <h2 class="card-title">Posterior pituitary hormones: ADH and oxytocin <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The posterior pituitary stores two hormones made in the hypothalamus: ADH controls water, oxytocin drives labor and milk let-down.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>ADH (vasopressin):</strong>
+            <ul>
+              <li>Made in supraoptic nucleus.</li>
+              <li>Stimuli: ↑ plasma osmolarity, ↓ blood volume/BP, nausea, pain, opioids.</li>
+              <li>V2 receptors at collecting duct → aquaporin-2 insertion → ↑ water reabsorption.</li>
+              <li>V1 receptors on vascular smooth muscle → vasoconstriction (at high levels, in shock).</li>
+              <li>Disorders: SIADH (excess), central DI (deficient), nephrogenic DI (kidney resistance). Detailed in renal notes Concept 7.</li>
+            </ul>
+          </li>
+          <li><strong>Oxytocin:</strong>
+            <ul>
+              <li>Made in paraventricular nucleus.</li>
+              <li>Stimuli: uterine stretch, infant suckling.</li>
+              <li>Effects: uterine smooth muscle contraction (labor — positive feedback), milk let-down (myoepithelial cells in alveoli of breast).</li>
+              <li>Clinical use: synthetic oxytocin (Pitocin) for labor induction; postpartum hemorrhage prevention.</li>
+              <li>Also implicated in social bonding behaviors.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Hormone</th><th>Made in</th><th>Stimulus</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>ADH</td><td>Supraoptic nucleus</td><td>↑ Osm, ↓ volume</td><td>Water reabsorption</td></tr>
+            <tr><td>Oxytocin</td><td>Paraventricular nucleus</td><td>Stretch, suckling</td><td>Uterine contraction, milk let-down</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Oxytocin's role in labor is the classic example of <strong>positive feedback</strong> in human physiology: uterine stretch → oxytocin release → uterine contraction → more stretch → more oxytocin → escalation until delivery. The loop terminates when the baby is out.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the oxytocin positive feedback loop in labor and the ADH negative feedback loop for water balance side by side. Highlight where each terminates.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which posterior pituitary hormone is used clinically to induce labor?</li>
+          <li><span class="qc-meta">DOK 2.</span> Where are ADH and oxytocin actually synthesized?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Oxytocin (Pitocin).</li>
+            <li>In the hypothalamus (supraoptic and paraventricular nuclei). They are stored in the posterior pituitary at axon terminals.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 6 -->
+    <article class="concept-card" id="c6" data-tags="AP">
+      <p class="card-eyebrow">Endocrine &middot; Concept 6 of 13</p>
+      <h2 class="card-title">Thyroid: structure, T3/T4, calcitonin <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">The thyroid sets metabolic rate. T4 is the storage form; T3 is the active form. Calcitonin is a side gig — modest role in calcium handling in humans.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Anatomy:</strong>
+            <ul>
+              <li>Butterfly-shaped, in anterior neck inferior to larynx. Two lobes connected by isthmus. Highly vascular.</li>
+              <li>Functional unit: thyroid follicle (sphere of follicular cells with central colloid).</li>
+              <li>Parafollicular (C) cells between follicles — secrete calcitonin.</li>
+            </ul>
+          </li>
+          <li><strong>T3 / T4 synthesis (4 steps):</strong>
+            <ol>
+              <li>Iodide trapping (Na/I symporter) → follicular cell.</li>
+              <li>Oxidation to I₂; iodination of tyrosine residues on thyroglobulin (in colloid) → MIT, DIT.</li>
+              <li>Coupling: MIT + DIT → T3; DIT + DIT → T4.</li>
+              <li>Endocytosis of thyroglobulin; lysosomal cleavage → T3, T4 released to blood.</li>
+            </ol>
+          </li>
+          <li><strong>T4 vs T3:</strong>
+            <ul>
+              <li>T4: 90% of output. Half-life ~7 days. Pro-hormone (peripheral conversion to T3 by deiodinase).</li>
+              <li>T3: more potent, shorter half-life (~1 day). Most binds to nuclear receptors.</li>
+              <li>Both lipid-soluble → travel bound to thyroxine-binding globulin (TBG).</li>
+            </ul>
+          </li>
+          <li><strong>Effects of thyroid hormone</strong> (broad and metabolic):
+            <ul>
+              <li>↑ Basal metabolic rate, heat production.</li>
+              <li>↑ Na/K ATPase activity → ↑ O₂ consumption.</li>
+              <li>↑ Cardiac output, HR (β-receptor sensitivity ↑).</li>
+              <li>Permissive for GH and catecholamine effects.</li>
+              <li>Required for normal CNS development and bone maturation in children.</li>
+            </ul>
+          </li>
+          <li><strong>Calcitonin:</strong> from C cells. Released when Ca²⁺ ↑. Inhibits osteoclasts → modest ↓ in serum Ca²⁺. Minor role in humans (compared to PTH).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: thyroid feedback loop (HPT axis)</h3>
+        <figure class="diagram" aria-labelledby="dxHPT-title dxHPT-desc">
+          <svg viewBox="0 0 660 360" role="img" aria-labelledby="dxHPT-title dxHPT-desc">
+            <title id="dxHPT-title">Hypothalamic-pituitary-thyroid feedback axis</title>
+            <desc id="dxHPT-desc">A vertical feedback loop. The hypothalamus releases TRH, which travels to the anterior pituitary. The pituitary releases TSH, which stimulates the thyroid. The thyroid secretes T3 and T4. Both T3 and T4 feed back negatively to inhibit both the hypothalamus and the anterior pituitary, completing the negative feedback loop.</desc>
+
+            <!-- Hypothalamus -->
+            <rect x="220" y="20" width="220" height="50" rx="6" fill="var(--navy-tint)" stroke="var(--navy)" stroke-width="1.5"/>
+            <text x="330" y="50" text-anchor="middle" class="lbl-bold">HYPOTHALAMUS</text>
+
+            <line x1="330" y1="70" x2="330" y2="98" stroke="var(--navy)" stroke-width="2"/>
+            <polygon points="330,102 326,94 334,94" fill="var(--navy)"/>
+            <text x="340" y="90" class="lbl-bold lbl-small">TRH</text>
+
+            <!-- Pituitary -->
+            <rect x="220" y="105" width="220" height="50" rx="6" fill="var(--navy-tint)" stroke="var(--navy)" stroke-width="1.5"/>
+            <text x="330" y="135" text-anchor="middle" class="lbl-bold">Anterior pituitary</text>
+
+            <line x1="330" y1="155" x2="330" y2="183" stroke="var(--navy)" stroke-width="2"/>
+            <polygon points="330,187 326,179 334,179" fill="var(--navy)"/>
+            <text x="340" y="175" class="lbl-bold lbl-small">TSH</text>
+
+            <!-- Thyroid -->
+            <rect x="220" y="190" width="220" height="50" rx="6" fill="rgba(184,146,74,0.18)" stroke="var(--gold-deep)" stroke-width="2"/>
+            <text x="330" y="220" text-anchor="middle" class="lbl-bold lbl-gold">THYROID</text>
+
+            <line x1="330" y1="240" x2="330" y2="270" stroke="var(--gold-deep)" stroke-width="2.5"/>
+            <polygon points="330,274 326,266 334,266" fill="var(--gold-deep)"/>
+            <text x="340" y="262" class="lbl-bold lbl-gold">T3 + T4</text>
+
+            <!-- Targets -->
+            <rect x="220" y="280" width="220" height="50" rx="6" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.5"/>
+            <text x="330" y="305" text-anchor="middle" class="lbl-bold lbl-terra">↑ BMR, HR, growth</text>
+            <text x="330" y="322" text-anchor="middle" class="lbl-small">All tissues</text>
+
+            <!-- Negative feedback arrows -->
+            <path d="M 440 215 Q 540 215, 540 130 Q 540 45, 440 45" stroke="var(--terra-dark)" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+            <polygon points="440,42 448,46 440,50" fill="var(--terra-dark)"/>
+            <text x="555" y="135" class="lbl-small lbl-terra lbl-bold">⊖ Negative feedback</text>
+
+            <path d="M 220 215 Q 130 215, 130 130 Q 130 45, 220 45" stroke="var(--terra-dark)" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+            <polygon points="220,42 212,46 220,50" fill="var(--terra-dark)"/>
+            <text x="100" y="135" class="lbl-small lbl-terra lbl-bold" text-anchor="end">⊖</text>
+          </svg>
+          <figcaption>Classic negative feedback: T3 and T4 inhibit both hypothalamus (TRH) and pituitary (TSH). This is why TSH is the most sensitive screening test for thyroid function.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: hyper vs hypothyroidism</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>Hyperthyroidism</th><th>Hypothyroidism</th></tr></thead>
+          <tbody>
+            <tr><td>Energy / weight</td><td>Weight loss despite ↑ appetite, heat intolerance</td><td>Weight gain, cold intolerance, fatigue</td></tr>
+            <tr><td>Heart</td><td>Tachycardia, AFib, palpitations</td><td>Bradycardia</td></tr>
+            <tr><td>GI</td><td>Hyperdefecation</td><td>Constipation</td></tr>
+            <tr><td>Skin / hair</td><td>Warm, moist; hair thin</td><td>Dry, coarse; hair brittle</td></tr>
+            <tr><td>Mental</td><td>Anxious, restless</td><td>Slow thinking, depression</td></tr>
+            <tr><td>Labs (primary)</td><td>↑ T3/T4, ↓ TSH</td><td>↓ T3/T4, ↑ TSH</td></tr>
+            <tr><td>Common cause</td><td>Graves disease (TSH receptor antibody)</td><td>Hashimoto thyroiditis (anti-TPO Ab)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Thyroid storm</strong> (extreme hyperthyroidism): hyperthermia, tachyarrhythmia, agitation, heart failure. Triggered by infection, surgery, trauma in a hyperthyroid patient. Mortality without treatment. Manage with β-blocker, PTU/methimazole, iodine, steroids, supportive. <strong>Myxedema coma</strong> (severe hypothyroidism): hypothermia, bradycardia, altered mental status. Mortality high. IV levothyroxine, hydrocortisone (also cover adrenal insufficiency), supportive.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Reproduce the HPT axis. Add a thyroid follicle showing the four synthesis steps. Label TBG carrying T3/T4 in blood.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient has ↓ T4 and ↑ TSH. Where is the problem?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why is TSH the best single screening test for thyroid disease?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Primary hypothyroidism (thyroid gland failure). TSH rises because the negative feedback is lost.</li>
+            <li>Because of the loop's logarithmic sensitivity: a small change in T4 produces a large reciprocal change in TSH. TSH detects even subtle thyroid dysfunction before T4 shifts measurably.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 7 -->
+    <article class="concept-card" id="c7" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 7 of 13</p>
+      <h2 class="card-title">Parathyroid and calcium balance <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Four small glands behind the thyroid keep serum calcium in a tight window. PTH is the calcium-raising hormone. Calcitriol (active vitamin D) and calcitonin round out the system.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Anatomy:</strong> 4 glands on posterior surface of thyroid. Chief cells secrete PTH; oxyphil cells (function unclear).</li>
+          <li><strong>Trigger:</strong> ↓ ionized Ca²⁺ detected by Ca-sensing receptor on chief cells.</li>
+          <li><strong>PTH actions (raise serum Ca, lower phosphate):</strong>
+            <ul>
+              <li><em>Bone:</em> ↑ osteoclast resorption (indirect, via osteoblasts) → ↑ Ca²⁺ and phosphate released.</li>
+              <li><em>Kidney:</em> ↑ Ca²⁺ reabsorption at DCT; ↓ phosphate reabsorption at PCT (phosphaturia); ↑ 1α-hydroxylase → ↑ calcitriol.</li>
+              <li><em>Gut (indirect, via calcitriol):</em> ↑ Ca²⁺ and phosphate absorption.</li>
+            </ul>
+          </li>
+          <li><strong>Vitamin D activation:</strong>
+            <ul>
+              <li>Skin (UVB) or diet → cholecalciferol (D3) → liver (25-hydroxylation) → 25-OH-D (storage form, measured clinically) → kidney (1α-hydroxylation, PTH-driven) → 1,25-(OH)₂-D = calcitriol (active).</li>
+            </ul>
+          </li>
+          <li><strong>Calcium distribution:</strong> 99% in bone. Plasma 8.5-10.5 mg/dL total (40% albumin-bound, 50% ionized = active, 10% complexed).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Hormone</th><th>Trigger</th><th>Effect on Ca</th><th>Effect on phosphate</th></tr></thead>
+          <tbody>
+            <tr><td>PTH</td><td>↓ Ca²⁺</td><td>↑</td><td>↓ (renal phosphaturia)</td></tr>
+            <tr><td>Calcitriol</td><td>PTH, ↓ Ca²⁺, ↓ phosphate</td><td>↑</td><td>↑</td></tr>
+            <tr><td>Calcitonin</td><td>↑ Ca²⁺</td><td>↓ (modest)</td><td>↓ (modest)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Hypercalcemia signs:</strong> "stones, bones, groans, psychiatric overtones" — kidney stones, bone pain, GI/abdominal pain, confusion. ECG: shortened QT. <strong>Hypocalcemia signs:</strong> perioral tingling, paresthesias, Chvostek (facial tap → twitch), Trousseau (carpal spasm with BP cuff), prolonged QT. <strong>Primary hyperparathyroidism:</strong> adenoma → ↑ Ca, ↓ phosphate, ↑ PTH. <strong>Secondary hyperparathyroidism in CKD:</strong> failing kidney can't make calcitriol → ↓ Ca → PTH rises chronically → bone disease.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a three-organ diagram (bone, kidney, gut). Show PTH arrows at each organ. Add calcitriol arrows. Mark vitamin D activation steps from skin → liver → kidney.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Where in the kidney is vitamin D activated?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does CKD cause hypocalcemia despite normal calcium intake?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Proximal tubule (1α-hydroxylase).</li>
+            <li>The failing kidney can't activate vitamin D (1α-hydroxylase deficient) → ↓ calcitriol → ↓ intestinal Ca²⁺ absorption → hypocalcemia. Phosphate retention worsens the picture by complexing with Ca²⁺. Triggers secondary hyperparathyroidism and renal osteodystrophy.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 8 -->
+    <article class="concept-card" id="c8" data-tags="AP">
+      <p class="card-eyebrow">Endocrine &middot; Concept 8 of 13</p>
+      <h2 class="card-title">Adrenal cortex: zones and hormones <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">Three zones, three steroid classes. "GFR" from outside in maps to "Salt, Sugar, Sex." Aldosterone, cortisol, androgens.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Cortex zones (outside in) — mnemonic "GFR makes salt, sugar, sex":</strong>
+            <ul>
+              <li><em>Zona Glomerulosa:</em> mineralocorticoids (aldosterone). Salt.</li>
+              <li><em>Zona Fasciculata:</em> glucocorticoids (cortisol). Sugar.</li>
+              <li><em>Zona Reticularis:</em> androgens (DHEA, androstenedione). Sex.</li>
+            </ul>
+          </li>
+          <li><strong>Aldosterone</strong> (mineralocorticoid):
+            <ul>
+              <li>Trigger: AT-II (RAAS) and high K⁺. <em>Not</em> ACTH-driven.</li>
+              <li>Target: principal cells of cortical collecting duct.</li>
+              <li>Action: ↑ Na/water reabsorption, ↑ K/H secretion → ↑ volume, ↑ BP.</li>
+              <li>Detailed in renal notes (Concept 8).</li>
+            </ul>
+          </li>
+          <li><strong>Cortisol</strong> (glucocorticoid):
+            <ul>
+              <li>Trigger: ACTH (from pituitary, driven by CRH).</li>
+              <li>Diurnal: peak ~8 AM, trough late evening.</li>
+              <li>Effects:
+                <ul>
+                  <li><em>Metabolic:</em> ↑ gluconeogenesis (hyperglycemia), ↑ protein catabolism, ↑ lipolysis.</li>
+                  <li><em>Anti-inflammatory + immunosuppressive:</em> ↓ leukocyte function, ↓ cytokines, ↑ neutrophil count (demargination).</li>
+                  <li><em>Permissive:</em> required for catecholamine vasoconstriction.</li>
+                  <li><em>Other:</em> ↓ bone formation, ↑ gastric acid, ↑ amyloid in CNS.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Adrenal androgens (DHEA):</strong>
+            <ul>
+              <li>Weak androgens, peripheral conversion to testosterone and estradiol.</li>
+              <li>Main source of androgens in adult females.</li>
+              <li>Pathologic excess: congenital adrenal hyperplasia (CAH) → virilization.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: cortisol excess vs deficiency</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>Cushing (↑ cortisol)</th><th>Addison (↓ cortisol + aldo)</th></tr></thead>
+          <tbody>
+            <tr><td>BP</td><td>↑ (HTN)</td><td>↓ (hypotension, orthostatic)</td></tr>
+            <tr><td>Glucose</td><td>↑ (hyperglycemia)</td><td>↓ (hypoglycemia)</td></tr>
+            <tr><td>Sodium</td><td>↑ or normal</td><td>↓ (hyponatremia)</td></tr>
+            <tr><td>Potassium</td><td>↓ or normal</td><td>↑ (hyperkalemia)</td></tr>
+            <tr><td>Habitus</td><td>Central obesity, moon face, buffalo hump, purple striae, thin skin, easy bruising</td><td>Weight loss, fatigue, hyperpigmentation (if primary)</td></tr>
+            <tr><td>Bones / mood</td><td>Osteoporosis, depression/psychosis</td><td>Adrenal crisis if stressed</td></tr>
+            <tr><td>Primary cause</td><td>Pituitary adenoma (Cushing disease), adrenal tumor, exogenous steroids</td><td>Autoimmune adrenalitis</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Exogenous steroid use</strong> is the most common cause of Cushingoid features. Chronic prednisone suppresses HPA axis → sudden withdrawal can cause adrenal crisis. Always taper. <strong>Addisonian crisis:</strong> shock, hypoglycemia, hyperkalemia, hyponatremia in someone with adrenal insufficiency under stress (illness, surgery). Treat with IV hydrocortisone, fluids, glucose. <strong>Hyperpigmentation</strong> in primary adrenal failure: high ACTH precursor → MSH activity → bronze skin, especially in skin creases and oral mucosa.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the adrenal cortex in cross section with three zones labeled. Add the hormone each zone makes and one effect of each. Color the medulla separately.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient on chronic high-dose prednisone abruptly stops. What is the danger?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why does primary adrenal insufficiency cause hyperpigmentation but secondary does not?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Adrenal crisis. Chronic exogenous steroid has suppressed the HPA axis; native adrenal output is shut down. Abrupt withdrawal removes both the exogenous and endogenous source → hypotension, hypoglycemia, shock.</li>
+            <li>Primary: adrenal failure → ↓ cortisol → loss of negative feedback → ↑ CRH and ACTH. ACTH is cleaved from POMC, which also generates MSH (melanocyte-stimulating hormone) → hyperpigmentation. Secondary: pituitary failure → ↓ ACTH (and thus ↓ MSH) → no hyperpigmentation.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 9 -->
+    <article class="concept-card" id="c9" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 9 of 13</p>
+      <h2 class="card-title">Adrenal medulla: epinephrine and norepinephrine <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The adrenal medulla is a modified sympathetic ganglion. Preganglionic sympathetic fibers synapse directly on chromaffin cells, which dump catecholamines into the blood as part of the fight-or-flight response.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Anatomy:</strong> chromaffin cells in the adrenal medulla. Neural crest origin (not mesoderm like the cortex).</li>
+          <li><strong>Synapse:</strong> sympathetic preganglionic fiber → chromaffin cell (acts as a modified post-ganglionic neuron). Release goes directly into blood.</li>
+          <li><strong>Output:</strong> ~80% epinephrine, ~20% norepinephrine.</li>
+          <li><strong>Effects:</strong>
+            <ul>
+              <li>↑ HR, ↑ contractility (β1).</li>
+              <li>Vasoconstriction in skin and GI (α1); vasodilation in skeletal muscle (β2 — epinephrine only).</li>
+              <li>Bronchodilation (β2).</li>
+              <li>↑ Glycogenolysis, ↑ gluconeogenesis, ↑ lipolysis.</li>
+              <li>Pupil dilation, ↓ GI motility.</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>Pheochromocytoma:</strong> chromaffin tumor → episodic catecholamine release → headache, palpitations, sweating, severe paroxysmal HTN. Triad. Workup: plasma or urine metanephrines. Treat with α-blocker (phenoxybenzamine) first, then β-blocker, then surgery.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Receptor</th><th>Tissue</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>α1</td><td>Vascular smooth muscle</td><td>Vasoconstriction</td></tr>
+            <tr><td>β1</td><td>Heart</td><td>↑ HR, ↑ contractility</td></tr>
+            <tr><td>β2</td><td>Bronchi, skeletal muscle vessels</td><td>Bronchodilation, vasodilation</td></tr>
+            <tr><td>α2</td><td>Pre-synaptic (negative feedback)</td><td>↓ NE release</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>The adrenal medulla and the sympathetic nervous system together drive the "fight-or-flight" response. Clinically, IV epinephrine in anaphylaxis works on all four major receptors at once: α1 raises BP, β1 supports HR/contractility, β2 reverses bronchospasm. This is why epinephrine is first-line in anaphylaxis, not antihistamines.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the sympathetic pre-ganglionic fiber synapsing on a chromaffin cell. Show the cell releasing E and NE into a capillary. List four target effects with the receptor type next to each.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> What is the embryologic origin of the adrenal medulla?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why is α-blockade given before β-blockade in pheochromocytoma?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Neural crest (unlike the cortex, which is mesoderm).</li>
+            <li>Catecholamine surge causes both α1 vasoconstriction and β2 vasodilation. Blocking β2 first removes the vasodilation while α1 vasoconstriction continues unopposed → hypertensive crisis. α-blockade first, then β-blockade, prevents this.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 10: Pancreatic islets -->
+    <article class="concept-card" id="c10" data-tags="AP">
+      <p class="card-eyebrow">Endocrine &middot; Concept 10 of 13</p>
+      <h2 class="card-title">Pancreatic islets: insulin, glucagon, somatostatin <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">Glucose homeostasis lives in the pancreas. Insulin stores energy when fed; glucagon mobilizes it when fasted. Diabetes is what happens when this loop breaks.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Anatomy:</strong> islets of Langerhans (~1 million per pancreas, scattered through exocrine tissue).</li>
+          <li><strong>Cell types:</strong>
+            <ul>
+              <li>β cells (~70%): insulin. Core of islet.</li>
+              <li>α cells (~20%): glucagon. Periphery.</li>
+              <li>δ cells (~5%): somatostatin (inhibits both insulin and glucagon, also GH).</li>
+              <li>PP/F cells: pancreatic polypeptide.</li>
+            </ul>
+          </li>
+          <li><strong>Insulin (anabolic, "fed state"):</strong>
+            <ul>
+              <li>Trigger: ↑ blood glucose (sensed by GLUT-2 in β cell), incretin hormones (GLP-1, GIP).</li>
+              <li>Receptor: tyrosine kinase. Insulin-sensitive glucose uptake via GLUT-4 (muscle, adipose).</li>
+              <li>Actions: ↑ glucose uptake (muscle, fat), ↑ glycogenesis (liver, muscle), ↑ lipogenesis, ↑ protein synthesis, ↓ gluconeogenesis, ↓ lipolysis, ↓ ketogenesis.</li>
+              <li>Also drives K⁺ into cells (useful in hyperK treatment).</li>
+            </ul>
+          </li>
+          <li><strong>Glucagon (catabolic, "fasted state"):</strong>
+            <ul>
+              <li>Trigger: ↓ blood glucose, amino acids, sympathetic stimulation.</li>
+              <li>Actions in liver: ↑ glycogenolysis, ↑ gluconeogenesis, ↑ ketogenesis.</li>
+              <li>Counter-regulatory hormone like cortisol, growth hormone, epinephrine.</li>
+            </ul>
+          </li>
+          <li><strong>Somatostatin:</strong> "inhibitor of everything." Inhibits insulin, glucagon, GH, gastrin, secretin. Octreotide (analog) used in variceal bleeding, acromegaly.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: glucose feedback loop</h3>
+        <figure class="diagram" aria-labelledby="dxGlu-title dxGlu-desc">
+          <svg viewBox="0 0 720 360" role="img" aria-labelledby="dxGlu-title dxGlu-desc">
+            <title id="dxGlu-title">Insulin and glucagon feedback on blood glucose</title>
+            <desc id="dxGlu-desc">A central blood glucose target with two opposing arms. High blood glucose stimulates beta cells to release insulin, which drives glucose into muscle and adipose tissue and stores glycogen in liver and muscle, lowering blood glucose. Low blood glucose stimulates alpha cells to release glucagon, which triggers liver glycogenolysis and gluconeogenesis, raising blood glucose.</desc>
+
+            <!-- Central target -->
+            <rect x="280" y="150" width="160" height="60" rx="8" fill="var(--gold)" fill-opacity="0.20" stroke="var(--gold-deep)" stroke-width="2"/>
+            <text x="360" y="178" text-anchor="middle" class="lbl-bold lbl-gold">Blood glucose</text>
+            <text x="360" y="195" text-anchor="middle" class="lbl-small lbl-gold">target ~70-100 mg/dL</text>
+
+            <!-- LEFT: High glucose → insulin -->
+            <rect x="50" y="40" width="160" height="48" rx="6" fill="var(--white)" stroke="var(--terra-dark)" stroke-width="1.5"/>
+            <text x="130" y="60" text-anchor="middle" class="lbl-bold lbl-terra">↑ Glucose (fed)</text>
+            <text x="130" y="78" text-anchor="middle" class="lbl-small">After a meal</text>
+
+            <path d="M 130 88 L 130 130" stroke="var(--terra-dark)" stroke-width="2"/>
+            <polygon points="130,134 126,126 134,126" fill="var(--terra-dark)"/>
+
+            <rect x="50" y="135" width="160" height="42" rx="6" fill="rgba(194,115,77,0.10)" stroke="var(--terra-dark)" stroke-width="1.5"/>
+            <text x="130" y="158" text-anchor="middle" class="lbl-bold lbl-terra">β cells → INSULIN</text>
+
+            <path d="M 130 177 L 130 230" stroke="var(--terra-dark)" stroke-width="2"/>
+            <polygon points="130,234 126,226 134,226" fill="var(--terra-dark)"/>
+
+            <rect x="20" y="240" width="220" height="80" rx="6" fill="var(--white)" stroke="var(--terra-dark)" stroke-width="1.2"/>
+            <text x="130" y="258" text-anchor="middle" class="lbl-small lbl-bold lbl-terra">Insulin actions:</text>
+            <text x="35" y="278" class="lbl-small">↑ Glucose uptake (GLUT-4)</text>
+            <text x="35" y="293" class="lbl-small">↑ Glycogenesis (liver/muscle)</text>
+            <text x="35" y="308" class="lbl-small">↑ Lipogenesis, protein synth</text>
+
+            <!-- Arrow back to glucose -->
+            <path d="M 240 280 Q 360 280, 360 215" stroke="var(--terra-dark)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+            <polygon points="357,217 360,210 363,217" fill="var(--terra-dark)"/>
+            <text x="320" y="270" class="lbl-small lbl-terra">↓ glucose</text>
+
+            <!-- RIGHT: Low glucose → glucagon -->
+            <rect x="510" y="40" width="160" height="48" rx="6" fill="var(--white)" stroke="var(--navy)" stroke-width="1.5"/>
+            <text x="590" y="60" text-anchor="middle" class="lbl-bold">↓ Glucose (fasted)</text>
+            <text x="590" y="78" text-anchor="middle" class="lbl-small">Between meals</text>
+
+            <path d="M 590 88 L 590 130" stroke="var(--navy)" stroke-width="2"/>
+            <polygon points="590,134 586,126 594,126" fill="var(--navy)"/>
+
+            <rect x="510" y="135" width="160" height="42" rx="6" fill="rgba(30,61,76,0.10)" stroke="var(--navy)" stroke-width="1.5"/>
+            <text x="590" y="158" text-anchor="middle" class="lbl-bold">α cells → GLUCAGON</text>
+
+            <path d="M 590 177 L 590 230" stroke="var(--navy)" stroke-width="2"/>
+            <polygon points="590,234 586,226 594,226" fill="var(--navy)"/>
+
+            <rect x="490" y="240" width="200" height="80" rx="6" fill="var(--white)" stroke="var(--navy)" stroke-width="1.2"/>
+            <text x="590" y="258" text-anchor="middle" class="lbl-small lbl-bold">Glucagon actions:</text>
+            <text x="500" y="278" class="lbl-small">↑ Glycogenolysis (liver)</text>
+            <text x="500" y="293" class="lbl-small">↑ Gluconeogenesis</text>
+            <text x="500" y="308" class="lbl-small">↑ Ketogenesis</text>
+
+            <path d="M 490 280 Q 380 280, 380 215" stroke="var(--navy)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+            <polygon points="383,217 380,210 377,217" fill="var(--navy)"/>
+            <text x="400" y="270" class="lbl-small">↑ glucose</text>
+          </svg>
+          <figcaption>Two arms, one set point. Insulin restores normal glucose when high; glucagon restores it when low. Diabetes is failure of the insulin arm (T1 = no production; T2 = resistance).</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: diabetes types</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>Type 1 DM</th><th>Type 2 DM</th></tr></thead>
+          <tbody>
+            <tr><td>Cause</td><td>Autoimmune β-cell destruction</td><td>Insulin resistance + relative deficiency</td></tr>
+            <tr><td>Onset</td><td>Younger, abrupt</td><td>Older, gradual (now also pediatric obesity)</td></tr>
+            <tr><td>Insulin level</td><td>↓ to absent</td><td>↑ early, ↓ late</td></tr>
+            <tr><td>Body habitus</td><td>Normal/thin</td><td>Often obese</td></tr>
+            <tr><td>Ketosis</td><td>DKA prone</td><td>HHS prone (rare DKA)</td></tr>
+            <tr><td>Treatment</td><td>Always insulin</td><td>Lifestyle, metformin, SGLT2-i, GLP-1 RA, eventually insulin</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>DKA</strong> (T1): no insulin → fat breakdown → ketones → metabolic acidosis + hyperglycemia + osmotic diuresis. pH &lt; 7.30, AG ↑, ketones positive. Treat with fluids, insulin, electrolyte replacement (especially K). <strong>HHS</strong> (T2): some insulin present prevents ketosis; severe hyperglycemia (often &gt; 600) and hyperosmolar dehydration. <strong>Hypoglycemia</strong> in diabetics: missed meal, insulin overdose, exercise. Sx: tremor, sweating, confusion. Treat: oral glucose if alert; D50W or glucagon if not.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Reproduce the glucose feedback loop. Add counter-regulatory hormones (cortisol, GH, epinephrine, glucagon) on the glucagon side. Mark where each diabetes drug class acts.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which islet cell type secretes insulin?</li>
+          <li><span class="qc-meta">DOK 4.</span> A T2DM patient with HbA1c 11% has BMI 34. Why might starting metformin be more appropriate than insulin?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>β cells (beta cells) of the pancreatic islets.</li>
+            <li>Metformin reduces hepatic glucose output and improves peripheral insulin sensitivity. It addresses the primary defect in T2 (insulin resistance) without driving further weight gain or hypoglycemia. Insulin works but causes weight gain (insulin is anabolic) and worsens the underlying resistance. Modern algorithms add SGLT2 inhibitors and GLP-1 receptor agonists early for weight and cardiorenal benefit, reserving insulin for late or symptomatic patients.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 11: Pineal + other tissues -->
+    <article class="concept-card" id="c11" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 11 of 13</p>
+      <h2 class="card-title">Pineal + other endocrine tissues <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Many organs do endocrine work as a side job. The pineal sets the clock. The heart, kidney, GI tract, placenta, and skin all release hormones tuned to their main jobs.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Pineal gland:</strong>
+            <ul>
+              <li>Roof of third ventricle (epithalamus).</li>
+              <li>Pinealocytes secrete melatonin in response to darkness (suprachiasmatic nucleus → sympathetic input).</li>
+              <li>Melatonin sets circadian rhythm and regulates reproductive timing in some species.</li>
+              <li>"Brain sand" (corpora arenacea) — calcifications, increase with age, useful radiographic landmark.</li>
+            </ul>
+          </li>
+          <li><strong>Heart:</strong>
+            <ul>
+              <li>ANP (atrial natriuretic peptide): from atrial myocytes when stretched. ↑ Na excretion, ↑ GFR, ↓ renin/aldosterone. Counter-balances RAAS.</li>
+              <li>BNP (B-type natriuretic peptide): from ventricular myocytes. Same effects. Used clinically as HF biomarker.</li>
+            </ul>
+          </li>
+          <li><strong>Kidney:</strong>
+            <ul>
+              <li>Renin: JG cells.</li>
+              <li>Erythropoietin (EPO): peritubular fibroblasts → bone marrow → RBC production.</li>
+              <li>Calcitriol: 1α-hydroxylation of 25-OH-D in PCT.</li>
+            </ul>
+          </li>
+          <li><strong>GI tract:</strong>
+            <ul>
+              <li>Gastrin (stomach G cells): ↑ HCl secretion.</li>
+              <li>Secretin (duodenum): ↑ bicarbonate from pancreas.</li>
+              <li>CCK (duodenum): ↑ bile release, ↑ pancreatic enzymes, satiety.</li>
+              <li>Ghrelin (stomach): "hunger hormone."</li>
+              <li>GLP-1, GIP (incretins): ↑ insulin release after meal. Target of GLP-1 RA drugs.</li>
+            </ul>
+          </li>
+          <li><strong>Placenta (pregnancy):</strong>
+            <ul>
+              <li>hCG: maintains corpus luteum early; pregnancy test target.</li>
+              <li>Human placental lactogen (hPL): insulin-like, contributes to gestational insulin resistance.</li>
+              <li>Estrogen and progesterone: maintain pregnancy.</li>
+            </ul>
+          </li>
+          <li><strong>Skin:</strong> produces 7-dehydrocholesterol → vitamin D3 with UVB exposure.</li>
+          <li><strong>Adipose:</strong> leptin (satiety, long-term energy signaling), adiponectin (insulin sensitivity).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Organ</th><th>Hormone</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Pineal</td><td>Melatonin</td><td>Circadian rhythm</td></tr>
+            <tr><td>Heart</td><td>ANP, BNP</td><td>↑ Na/H₂O excretion</td></tr>
+            <tr><td>Kidney</td><td>Renin, EPO, calcitriol</td><td>BP, RBC production, Ca</td></tr>
+            <tr><td>Stomach</td><td>Gastrin, ghrelin</td><td>HCl, hunger</td></tr>
+            <tr><td>Duodenum</td><td>CCK, secretin, GLP-1</td><td>Digestion, insulin</td></tr>
+            <tr><td>Placenta</td><td>hCG, hPL, E2, P</td><td>Maintain pregnancy</td></tr>
+            <tr><td>Adipose</td><td>Leptin, adiponectin</td><td>Satiety, insulin sensitivity</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>BNP</strong> elevation (&gt; ~100 pg/mL) supports heart failure diagnosis. Higher levels correlate with severity. <strong>GLP-1 receptor agonists</strong> (semaglutide, liraglutide) and SGLT2 inhibitors are now first-line add-ons for T2DM with cardiovascular or renal disease — they exploit gut and renal endocrine biology that wasn't well used a decade ago.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Make a body diagram. Label every non-traditional endocrine organ (heart, kidney, GI segments, placenta, skin, adipose, pineal). Put one hormone next to each.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which organ produces erythropoietin?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does CKD often cause anemia?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Kidney (peritubular fibroblasts).</li>
+            <li>Failing kidney → ↓ EPO → ↓ RBC production. Normocytic normochromic anemia of CKD. Treat with ESAs and ensure adequate iron stores.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 12: Stress / HPA -->
+    <article class="concept-card" id="c12" data-tags="P">
+      <p class="card-eyebrow">Endocrine &middot; Concept 12 of 13</p>
+      <h2 class="card-title">Stress response and the HPA axis <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Acute stress is the sympathetic-adrenal medullary (SAM) response. Sustained stress is the hypothalamic-pituitary-adrenal (HPA) axis. Both prepare the body to spend energy and resist injury — but chronic activation is itself pathologic.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Two stress systems:</strong>
+            <ul>
+              <li><em>SAM (fast, seconds):</em> hypothalamus → sympathetic → adrenal medulla → E + NE.</li>
+              <li><em>HPA (slow, minutes-hours):</em> hypothalamus → CRH → pituitary → ACTH → adrenal cortex → cortisol.</li>
+            </ul>
+          </li>
+          <li><strong>Acute adaptive effects:</strong>
+            <ul>
+              <li>↑ Cardiac output, ↑ BP, ↑ blood glucose, ↑ alertness.</li>
+              <li>Shunts blood from GI/skin to muscle and brain.</li>
+              <li>Mobilizes fuel: glycogenolysis, gluconeogenesis, lipolysis.</li>
+              <li>Suppresses non-essential functions: digestion, growth, reproduction, immune function.</li>
+            </ul>
+          </li>
+          <li><strong>Chronic activation (chronic stress, untreated depression, chronic inflammation):</strong>
+            <ul>
+              <li>HTN, insulin resistance, central obesity, osteoporosis, immune suppression, mood disturbance, hippocampal atrophy.</li>
+              <li>Essentially mimics endogenous Cushing.</li>
+            </ul>
+          </li>
+          <li><strong>Cortisol diurnal pattern:</strong> peak ~6-8 AM, trough late evening. Lost in disease (flat diurnal pattern in chronic stress, Cushing).</li>
+          <li class="deep-dive"><strong>Stress-induced hyperglycemia</strong> in critical illness: high cortisol + catecholamines + inflammatory cytokines → insulin resistance. Common in ICU even in non-diabetics. Tight glucose control improves outcomes.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Phase</th><th>Mediators</th><th>Timeline</th></tr></thead>
+          <tbody>
+            <tr><td>Acute alarm</td><td>SAM: E, NE</td><td>Seconds to minutes</td></tr>
+            <tr><td>Resistance</td><td>HPA: cortisol</td><td>Minutes to hours</td></tr>
+            <tr><td>Exhaustion / chronic</td><td>Sustained cortisol</td><td>Days to years</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Chronic stress is now well-linked to cardiovascular disease, immune dysfunction, and metabolic syndrome. Stress reduction interventions (sleep, exercise, mindfulness, social support) are not soft additions — they shift HPA axis activity measurably. <strong>Cortisol-binding globulin</strong> changes (pregnancy, OCP) raise total cortisol without raising free cortisol — interpret total cortisol levels accordingly.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw both stress pathways side by side. SAM on left, HPA on right. Add timeline arrows. List one acute and one chronic consequence at the end of each.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which axis produces cortisol elevation?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does chronic stress contribute to central obesity?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>HPA axis (hypothalamic-pituitary-adrenal).</li>
+            <li>Sustained cortisol promotes central adiposity (visceral fat has high glucocorticoid receptor density), insulin resistance, and appetite for energy-dense food. Plus chronic stress disrupts sleep, further raising cortisol and insulin resistance.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 13: Common endocrine disorders -->
+    <article class="concept-card" id="c13" data-tags="CLIN">
+      <p class="card-eyebrow">Endocrine &middot; Concept 13 of 13</p>
+      <h2 class="card-title">Common endocrine disorders <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Each endocrine disorder is either too much hormone, too little hormone, or a wrong response. Most clinical patterns predict themselves once you know what the hormone normally does — just reverse the effect for deficiency, amplify it for excess.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Diabetes mellitus</strong> — see Concept 10 for types.
+            <ul>
+              <li>Complications: micro (retinopathy, nephropathy, neuropathy) and macro (CAD, stroke, PAD).</li>
+              <li>HbA1c target generally &lt; 7% (individualized).</li>
+              <li>Goal SBP &lt; 130 in DM (depending on guidelines).</li>
+            </ul>
+          </li>
+          <li><strong>Thyroid:</strong>
+            <ul>
+              <li>Hyperthyroidism: Graves (autoantibody to TSH receptor), toxic multinodular goiter, toxic adenoma, thyroiditis.</li>
+              <li>Hypothyroidism: Hashimoto (anti-TPO Ab), post-ablation, iodine deficiency.</li>
+              <li>Treatment: hyper → methimazole, β-blocker for sx, radioiodine, surgery. Hypo → levothyroxine.</li>
+            </ul>
+          </li>
+          <li><strong>Adrenal:</strong>
+            <ul>
+              <li>Cushing: pituitary (Cushing disease, ACTH-secreting adenoma), adrenal (cortisol-secreting tumor), exogenous (steroids most common).</li>
+              <li>Addison: primary adrenal failure (autoimmune most common in developed world).</li>
+              <li>Primary hyperaldosteronism (Conn): adrenal adenoma → HTN, hypokalemia, low renin.</li>
+              <li>Pheochromocytoma: chromaffin tumor.</li>
+            </ul>
+          </li>
+          <li><strong>Pituitary:</strong>
+            <ul>
+              <li>Prolactinoma (most common functioning adenoma).</li>
+              <li>Acromegaly / gigantism (GH excess).</li>
+              <li>Hypopituitarism (Sheehan, surgical, radiation, infiltrative).</li>
+              <li>Diabetes insipidus (central or nephrogenic).</li>
+              <li>SIADH.</li>
+            </ul>
+          </li>
+          <li><strong>Parathyroid:</strong>
+            <ul>
+              <li>Primary hyperparathyroidism (adenoma; ↑ Ca, ↓ phosphate, ↑ PTH).</li>
+              <li>Secondary in CKD.</li>
+              <li>Hypoparathyroidism (post-thyroidectomy most common).</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>MEN syndromes</strong> (multiple endocrine neoplasia):
+            <ul>
+              <li>MEN1: parathyroid + pancreas + pituitary (3 P's).</li>
+              <li>MEN2A: medullary thyroid + pheochromocytoma + parathyroid.</li>
+              <li>MEN2B: medullary thyroid + pheochromocytoma + mucosal neuromas + marfanoid habitus.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Disorder</th><th>Classic finding</th><th>First-line test</th></tr></thead>
+          <tbody>
+            <tr><td>T2DM</td><td>Polyuria, polydipsia, obesity</td><td>HbA1c, fasting glucose</td></tr>
+            <tr><td>Hyperthyroid</td><td>Weight loss, tremor, tachy, heat intolerance</td><td>TSH ↓, free T4 ↑</td></tr>
+            <tr><td>Hypothyroid</td><td>Weight gain, fatigue, cold intolerance</td><td>TSH ↑, free T4 ↓</td></tr>
+            <tr><td>Cushing</td><td>Central obesity, striae, HTN</td><td>24-h urine cortisol or low-dose dex suppression</td></tr>
+            <tr><td>Addison</td><td>Fatigue, hyperpigmentation, hypotension, hyperK</td><td>AM cortisol, ACTH, ACTH stim test</td></tr>
+            <tr><td>Pheo</td><td>Episodic HTN, headache, sweating, palpitations</td><td>Plasma/urine metanephrines</td></tr>
+            <tr><td>Prolactinoma</td><td>Galactorrhea, amenorrhea, infertility</td><td>Serum prolactin, MRI pituitary</td></tr>
+            <tr><td>Hyperparathyroid</td><td>"Stones, bones, groans, moans"</td><td>Ca, PTH, phosphate</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>For nursing assessment: <strong>endocrine emergencies look like extreme physiology</strong> — DKA (acidotic, dehydrated), thyroid storm (tachy, hyperthermic, agitated), myxedema coma (bradycardic, hypothermic, obtunded), Addisonian crisis (hypotensive, hypoglycemic, hyperK). Always check glucose and electrolytes in altered mental status. Take a medication history — exogenous steroids, levothyroxine, insulin, sulfonylureas drive much endocrine pathology.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a one-page "endocrine emergencies" reference. Five rows: DKA, HHS, thyroid storm, myxedema coma, Addisonian crisis. Columns: vital sign pattern, key labs, first three nursing actions.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which lab pattern indicates primary hyperthyroidism: TSH ↑ T4 ↓ or TSH ↓ T4 ↑?</li>
+          <li><span class="qc-meta">DOK 4.</span> A post-op thyroidectomy patient develops perioral tingling and Chvostek's sign. What happened?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>TSH ↓ with T4 ↑. The thyroid is overproducing, suppressing the pituitary's TSH via negative feedback.</li>
+            <li>Inadvertent removal of or injury to parathyroid glands during thyroid surgery → acute hypoparathyroidism → hypocalcemia → neuromuscular irritability (perioral tingling, Chvostek, Trousseau). Check ionized Ca, give IV calcium gluconate, look for prolonged QT on ECG.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+  </main>
+
+  <footer class="byline">
+    <p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Endocrine master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const toc = document.getElementById('toc-list');
+  document.querySelectorAll('.concept-card').forEach((card, idx) => {
+    const title = card.querySelector('.card-title');
+    if (!title) return;
+    const clone = title.cloneNode(true);
+    clone.querySelectorAll('.tag-pill').forEach(t => t.remove());
+    const text = clone.textContent.trim();
+    const li = document.createElement('li');
+    li.dataset.tags = card.dataset.tags;
+    li.innerHTML = `<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;
+    toc.appendChild(li);
+  });
+})();
+
+let currentView = 'combined';
+let currentDepth = 'full';
+const cntShown = document.getElementById('cnt-shown');
+
+function viewMatchesTags(view, tags) {
+  const parts = (tags || '').split(/\s+/);
+  if (view === 'combined') return true;
+  if (view === 'anatomy')  return parts.includes('A')  || parts.includes('AP') || parts.includes('CLIN');
+  if (view === 'physio')   return parts.includes('P')  || parts.includes('AP') || parts.includes('CLIN');
+  return true;
+}
+function applyFilters() {
+  document.body.classList.toggle('depth-essentials', currentDepth === 'essentials');
+  let shown = 0;
+  document.querySelectorAll('.concept-card').forEach(card => {
+    const viewOk = viewMatchesTags(currentView, card.dataset.tags);
+    const depthOk = currentDepth === 'full' || card.dataset.depth !== 'deep';
+    const show = viewOk && depthOk;
+    card.hidden = !show;
+    if (show) shown++;
+  });
+  document.querySelectorAll('#toc-list li').forEach(li => {
+    const viewOk = viewMatchesTags(currentView, li.dataset.tags);
+    const depthOk = currentDepth === 'full' || li.dataset.depth !== 'deep';
+    li.hidden = !(viewOk && depthOk);
+  });
+  cntShown.textContent = shown;
+}
+document.querySelectorAll('[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentView = btn.dataset.view;
+    applyFilters();
+  });
+});
+document.querySelectorAll('[data-depth]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentDepth = btn.dataset.depth;
+    applyFilters();
+  });
+});
+
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const course = params.get('course');
+  const COURSE_MAP = {
+    'BIO004': { eyebrow: 'BIO 004 Human Anatomy · Solano Community College',                     view:'anatomy',  depth:'full' },
+    'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology · American River College',          view:'combined', depth:'full' },
+    'BIO304': { eyebrow: 'BIO 304 Human Anatomy & Physiology (Online) · American River College', view:'combined', depth:'essentials' }
+  };
+  if (course && COURSE_MAP[course]) {
+    const c = COURSE_MAP[course];
+    const eb = document.getElementById('course-eyebrow');
+    if (eb) eb.textContent = c.eyebrow + ' · Endocrine';
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === c.view ? 'true' : 'false'));
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === c.depth ? 'true' : 'false'));
+    currentView = c.view; currentDepth = c.depth;
+  }
+  const v = params.get('view');
+  const d = params.get('depth');
+  if (v && ['combined','anatomy','physio'].includes(v)) {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'));
+    currentView = v;
+  }
+  if (d && ['full','essentials'].includes(d)) {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === d ? 'true' : 'false'));
+    currentDepth = d;
+  }
+})();
+
+applyFilters();
+
+(function(){
+  const frameId = 'endocrine-notes';
+  function sendHeight() {
+    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    try { window.parent.postMessage({ type: 'iframe-height', id: frameId, height: h }, '*'); } catch(e){}
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  if ('ResizeObserver' in window) new ResizeObserver(sendHeight).observe(document.body);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lymphatic &amp; Immune — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; }
+  .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; }
+  a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; }
+  a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; }
+  .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; }
+  .seg button:hover { background:var(--navy-tint); }
+  .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; }
+  @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; }
+  .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); }
+  .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; }
+  li.deep-dive::before { margin-right:6px; }
+  .deep-dive.callout { border-left-width:4px; border-left-color:var(--gold); }
+  .deep-dive.callout::before { display:none; }
+  .deep-dive.callout h3::after { content:" · DEEP DIVE"; font-size:10px; color:var(--gold-deep); letter-spacing:0.08em; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); }
+  .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; }
+  .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; }
+  .card-section li { margin-bottom:6px; }
+  .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; }
+  table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; }
+  table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; }
+  .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; }
+  .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); }
+  .callout-clinical h3 { color:var(--terra-dark); }
+  .callout-drawing { border-color:var(--gold-deep); background:var(--white); }
+  .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; }
+  .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; }
+  .quick-check li { margin-bottom:8px; }
+  .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; }
+  details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; }
+  details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); }
+  .tag-P { color:var(--terra-dark); background:var(--white); }
+  .tag-AP { color:var(--gold-deep); background:var(--white); }
+  .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); }
+  footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; }
+  .top-link:hover { text-decoration:underline; }
+  @media print {
+    body { background:var(--white); }
+    .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; }
+    details.answers[open] > summary { display:none; }
+    details.answers:not([open]) > *:not(summary) { display:block; }
+    .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; }
+    .toc { display:none; }
+    .quick-check { background:var(--white); }
+    .concept-card[hidden] { display:none !important; }
+    a { color:var(--navy); text-decoration:none; }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Lymphatic &amp; Immune System</h1>
+    <p class="usage">The lymphatic system is the drain; the immune system is the defense force. They share architecture: lymph nodes are where leukocytes meet antigens drained from tissue. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy"  aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio"   aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full"       aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">12</strong> concepts</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 class="toc-h" id="toc-h">Contents</h2>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
+  <main id="main">
+
+    <!-- 1: Lymphatic anatomy -->
+    <article class="concept-card" id="c1" data-tags="A">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 1 of 12</p>
+      <h2 class="card-title">Lymphatic anatomy and function <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">Capillary exchange leaves about 3 L of fluid in the interstitium per day. The lymphatic system collects it, screens it through lymph nodes, and returns it to the bloodstream near the heart.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Three functions:</strong>
+            <ul>
+              <li>Fluid balance: return ~3 L/day of interstitial fluid to circulation.</li>
+              <li>Immune surveillance: filter lymph through nodes; expose antigens to immune cells.</li>
+              <li>Lipid absorption: lacteals in intestinal villi absorb dietary fat (chylomicrons) → cisterna chyli → thoracic duct.</li>
+            </ul>
+          </li>
+          <li><strong>Vessel hierarchy:</strong>
+            <ul>
+              <li>Lymphatic capillaries (closed-ended, in tissues) → larger lymphatic vessels (with valves like veins) → lymphatic trunks → ducts.</li>
+            </ul>
+          </li>
+          <li><strong>Two main ducts (return to blood):</strong>
+            <ul>
+              <li><em>Right lymphatic duct:</em> drains right upper quadrant of body (right arm, right side of head/neck/thorax) → right subclavian vein.</li>
+              <li><em>Thoracic duct:</em> drains everything else (~75% of the body) → left subclavian vein.</li>
+            </ul>
+          </li>
+          <li><strong>Lymph flow:</strong> low pressure, one-way (valves). Driven by:
+            <ul>
+              <li>Skeletal muscle pump.</li>
+              <li>Respiratory pump.</li>
+              <li>Smooth muscle in lymphatic walls.</li>
+              <li>Pulsation of nearby arteries.</li>
+            </ul>
+          </li>
+          <li><strong>Edema</strong> from lymphatic dysfunction (lymphedema): post-mastectomy with axillary node dissection, filariasis (Wuchereria bancrofti), congenital. Distinct from cardiovascular edema by location and pattern.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Drainage region</th><th>Duct</th><th>Empties into</th></tr></thead>
+          <tbody>
+            <tr><td>Right upper quadrant of body</td><td>Right lymphatic duct</td><td>Right subclavian vein</td></tr>
+            <tr><td>Everything else (~75%)</td><td>Thoracic duct</td><td>Left subclavian vein</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Post-mastectomy lymphedema</strong>: axillary node dissection or radiation disrupts arm drainage → chronic ipsilateral arm swelling. Manage with compression, manual drainage, exercise; avoid blood draws and BPs on affected arm. <strong>Cancer staging</strong>: regional lymph node involvement (the "N" in TNM) is critical to prognosis because cancers spread through lymphatics.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a body outline with the two ducts. Color the right upper quadrant drainage (right duct) and the rest (thoracic duct). Show where each empties into the venous system.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which duct drains the left leg?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why is lymphedema common after axillary lymph node dissection?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Thoracic duct (drains everything except right upper quadrant of body).</li>
+            <li>Removing axillary nodes disrupts the main lymphatic drainage pathway for the arm. With limited collateral pathways, interstitial fluid accumulates → chronic arm swelling.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 2: Lymphoid organs -->
+    <article class="concept-card" id="c2" data-tags="A">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 2 of 12</p>
+      <h2 class="card-title">Lymphoid organs: primary and secondary <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">Primary lymphoid organs make lymphocytes. Secondary lymphoid organs are where they meet antigens and become activated.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Primary lymphoid organs (lymphocyte development):</strong>
+            <ul>
+              <li><em>Bone marrow:</em> all lymphocytes originate here. B cells also mature here (B is for Bone marrow).</li>
+              <li><em>Thymus:</em> T cells mature here (T is for Thymus). Behind the sternum; involutes after puberty. Critical site for negative selection — T cells that react to self are eliminated.</li>
+            </ul>
+          </li>
+          <li><strong>Secondary lymphoid organs (immune activation):</strong>
+            <ul>
+              <li><em>Lymph nodes:</em> distributed along lymphatic vessels. Filter lymph; site of B and T cell activation.
+                <ul>
+                  <li>Cortex: B cells in follicles (germinal centers when activated).</li>
+                  <li>Paracortex: T cells, dendritic cells.</li>
+                  <li>Medulla: plasma cells, macrophages.</li>
+                </ul>
+              </li>
+              <li><em>Spleen:</em> filters blood (no afferent lymphatics).
+                <ul>
+                  <li>White pulp: T cells + B cells around central artery.</li>
+                  <li>Red pulp: filtration; macrophages remove old RBCs and encapsulated bacteria.</li>
+                  <li>Splenectomy patient: ↑ risk from encapsulated bacteria (Strep pneumo, H. influenzae, N. meningitidis) → must be vaccinated.</li>
+                </ul>
+              </li>
+              <li><em>MALT (mucosa-associated lymphoid tissue):</em>
+                <ul>
+                  <li>Tonsils (pharyngeal/adenoid, palatine, lingual).</li>
+                  <li>Peyer's patches (ileum).</li>
+                  <li>Appendix.</li>
+                  <li>BALT (bronchus-associated), GALT (gut-associated).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Organ</th><th>Type</th><th>Main role</th></tr></thead>
+          <tbody>
+            <tr><td>Bone marrow</td><td>Primary</td><td>Make all lymphocytes; mature B cells</td></tr>
+            <tr><td>Thymus</td><td>Primary</td><td>Mature T cells</td></tr>
+            <tr><td>Lymph nodes</td><td>Secondary</td><td>Filter lymph, activate lymphocytes</td></tr>
+            <tr><td>Spleen</td><td>Secondary</td><td>Filter blood</td></tr>
+            <tr><td>MALT</td><td>Secondary</td><td>Mucosal surveillance</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Asplenic patient management:</strong> vaccinate against encapsulated bacteria, prophylactic antibiotics in select cases (especially pediatric), educate to seek care for fevers. <strong>Lymphadenopathy patterns:</strong> infection (tender, mobile, often unilateral) vs malignancy (firm, fixed, painless, generalized). Generalized lymphadenopathy + B symptoms (fever, night sweats, weight loss) → lymphoma workup.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a lymph node in cross-section. Label cortex, paracortex, medulla. Mark which lymphocyte type lives where. Then sketch spleen white pulp and red pulp.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Where do T cells mature?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why must asplenic patients be vaccinated against encapsulated bacteria?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Thymus.</li>
+            <li>The spleen's red pulp macrophages are the primary filter for opsonized encapsulated bacteria in blood. Without the spleen, these organisms (Strep pneumoniae, H. influenzae, N. meningitidis) can cause overwhelming sepsis quickly.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 3: Innate immunity -->
+    <article class="concept-card" id="c3" data-tags="P">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 3 of 12</p>
+      <h2 class="card-title">Innate immunity <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Innate immunity is the first responder: barriers, inflammation, phagocytes, complement, NK cells. Fast (minutes to hours), nonspecific, no memory. Buys time for adaptive immunity to ramp up.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Physical and chemical barriers:</strong>
+            <ul>
+              <li>Skin: keratinized epithelium, sebum (slightly acidic), normal flora competing with pathogens.</li>
+              <li>Mucous membranes: mucus traps; cilia sweep; lysozyme in tears, saliva, mucus.</li>
+              <li>Stomach acid (pH 1-2): kills most ingested pathogens.</li>
+              <li>Antimicrobial peptides (defensins) in many tissues.</li>
+            </ul>
+          </li>
+          <li><strong>Cellular innate defenses:</strong>
+            <ul>
+              <li><em>Neutrophils:</em> first arrival to infection, phagocytose, short-lived. "Polys."</li>
+              <li><em>Macrophages:</em> tissue-resident phagocytes (Kupffer in liver, alveolar in lung, microglia in brain). Antigen presentation to T cells.</li>
+              <li><em>Dendritic cells:</em> professional antigen-presenting cells; bridge innate and adaptive.</li>
+              <li><em>NK cells:</em> kill virus-infected and tumor cells lacking MHC I.</li>
+              <li><em>Mast cells, basophils, eosinophils:</em> allergic and antiparasitic responses.</li>
+            </ul>
+          </li>
+          <li><strong>Inflammation (cardinal signs: redness, heat, swelling, pain, ± loss of function):</strong>
+            <ul>
+              <li>Vasodilation (histamine, prostaglandins, NO) → redness, heat.</li>
+              <li>↑ Vascular permeability → exudate → swelling.</li>
+              <li>Chemotaxis pulls neutrophils to the site.</li>
+              <li>Pyrogens (IL-1, TNF, IL-6) reset hypothalamic set point → fever.</li>
+            </ul>
+          </li>
+          <li><strong>Complement system:</strong> ~30 plasma proteins activated in cascade.
+            <ul>
+              <li>Three activation paths: classical (Ig-driven), lectin (mannose-binding), alternative (spontaneous on pathogen surface).</li>
+              <li>Three main functions: opsonization (C3b coats pathogen → easier phagocytosis), MAC (membrane attack complex; C5b-9 punches holes), inflammation (C3a, C5a recruit cells).</li>
+            </ul>
+          </li>
+          <li><strong>Pattern recognition:</strong> innate cells use PRRs (e.g., toll-like receptors, TLRs) to detect PAMPs (pathogen-associated molecular patterns like LPS, peptidoglycan, viral RNA). Generic but effective.</li>
+          <li class="deep-dive"><strong>Cytokines:</strong> chemical messengers of the immune system. Interleukins (IL-#), interferons (IFN-α/β block viral replication; IFN-γ activates macrophages), TNF (key inflammatory mediator), chemokines (recruit cells).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>Innate</th><th>Adaptive</th></tr></thead>
+          <tbody>
+            <tr><td>Speed</td><td>Minutes to hours</td><td>Days</td></tr>
+            <tr><td>Specificity</td><td>Generic (PAMPs)</td><td>Antigen-specific</td></tr>
+            <tr><td>Memory</td><td>None (limited "trained immunity")</td><td>Yes (lifelong in some)</td></tr>
+            <tr><td>Diversity</td><td>Limited receptors</td><td>~10¹¹ unique receptors</td></tr>
+            <tr><td>Examples</td><td>Phagocytes, complement, NK</td><td>T cells, B cells</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Sepsis</strong> is dysregulated inflammation: bacterial PAMPs activate innate immunity systemically → massive cytokine release → vasodilation, capillary leak, coagulation → distributive shock. <strong>Anti-cytokine drugs</strong> (anti-TNF infliximab/adalimumab; anti-IL-6 tocilizumab) treat RA, IBD, COVID-19 severe inflammation. Side effect: ↑ infection risk because inflammation is also defense.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build the complement cascade conceptually: three input paths converge on C3 cleavage → three output functions (opsonization, MAC, inflammation). You don't have to memorize every step, just the architecture.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which cells are the first responders to acute bacterial infection?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does sepsis cause hypotension?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Neutrophils (PMNs).</li>
+            <li>PAMPs from bacteria trigger massive cytokine release (TNF, IL-1, IL-6). These cause widespread vasodilation (↓ TPR), endothelial dysfunction with capillary leak (↓ effective circulating volume), and myocardial depression → distributive shock.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 4: Adaptive immunity overview -->
+    <article class="concept-card" id="c4" data-tags="P">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 4 of 12</p>
+      <h2 class="card-title">Adaptive immunity overview <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Adaptive immunity is slow but precise. Two arms: cell-mediated (T cells) attacks infected cells, humoral (B cells, antibodies) attacks extracellular threats. Both have memory.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Two arms:</strong>
+            <ul>
+              <li>Cell-mediated (T cells): targets intracellular pathogens (viruses, intracellular bacteria, tumor cells) and orchestrates broader immune response.</li>
+              <li>Humoral (B cells → plasma cells → antibodies): targets extracellular pathogens and toxins.</li>
+            </ul>
+          </li>
+          <li><strong>Hallmarks:</strong>
+            <ul>
+              <li>Specificity: each lymphocyte has a unique receptor for one antigen.</li>
+              <li>Diversity: ~10¹¹ different receptors generated by V(D)J recombination.</li>
+              <li>Memory: after first exposure, expanded memory population mounts faster, larger response next time.</li>
+              <li>Self-tolerance: lymphocytes that recognize self are deleted during development (central tolerance) or anergized (peripheral tolerance).</li>
+            </ul>
+          </li>
+          <li><strong>Timeline of primary vs secondary response:</strong>
+            <ul>
+              <li>Primary: 5-10 days to detectable antibody. Mostly IgM first, then class switch to IgG.</li>
+              <li>Secondary: 1-3 days to large IgG response. Higher affinity, longer-lasting. Memory in action.</li>
+            </ul>
+          </li>
+          <li><strong>Clonal selection:</strong> antigen finds the rare lymphocyte with a matching receptor → that lymphocyte proliferates → clone of effector cells + memory cells.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Arm</th><th>Cells</th><th>Targets</th><th>Effector molecule</th></tr></thead>
+          <tbody>
+            <tr><td>Cell-mediated</td><td>T cells (CD4, CD8)</td><td>Intracellular pathogens, tumor</td><td>Perforin, granzymes, cytokines</td></tr>
+            <tr><td>Humoral</td><td>B cells → plasma cells</td><td>Extracellular pathogens, toxins</td><td>Antibodies (IgG, IgM, IgA, IgE, IgD)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Vaccines exploit memory.</strong> Live vaccines mimic primary exposure most closely (strong, durable memory) but carry small risk of disease in immunocompromised. Inactivated and subunit vaccines are safer but often need adjuvants and boosters. mRNA vaccines deliver instructions for cells to make the antigen, prompting both T and B cell responses.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Plot antibody titer vs time across primary and secondary exposures. Mark the IgM-to-IgG class switch in the primary response and the faster, higher, IgG-dominated secondary response.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which arm of adaptive immunity primarily targets extracellular bacteria?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why is the secondary immune response faster and stronger?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Humoral (antibody-mediated).</li>
+            <li>Memory B and T cells from the primary exposure are already expanded and ready. On re-exposure, they activate quickly, produce more antibody (mostly IgG, higher affinity through affinity maturation), and clear the pathogen often before symptoms develop.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 5: T cells -->
+    <article class="concept-card" id="c5" data-tags="P">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 5 of 12</p>
+      <h2 class="card-title">T cells: helper, cytotoxic, regulatory <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">T cells see antigen only when displayed in MHC. CD4 helper T cells orchestrate; CD8 cytotoxic T cells execute; regulatory T cells restrain.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>T-cell receptor (TCR):</strong> recognizes peptide bound to MHC. Cannot recognize free antigen (unlike B-cell receptor).</li>
+          <li><strong>Two main subsets:</strong>
+            <ul>
+              <li><em>CD4⁺ helper T cells:</em> recognize peptide on MHC II (on antigen-presenting cells: dendritic cells, macrophages, B cells).
+                <ul>
+                  <li>Th1: secrete IFN-γ → activate macrophages, fight intracellular pathogens.</li>
+                  <li>Th2: IL-4/5/13 → help B cells, antiparasite, allergy.</li>
+                  <li>Th17: IL-17 → recruit neutrophils, mucosal defense.</li>
+                  <li>Tfh: help B cells in germinal centers.</li>
+                </ul>
+              </li>
+              <li><em>CD8⁺ cytotoxic T cells:</em> recognize peptide on MHC I (on virtually all nucleated cells). Kill infected or tumor cells via perforin + granzymes or Fas-FasL.</li>
+              <li><em>T-regulatory (Treg):</em> CD4⁺ FoxP3⁺. Suppress immune responses. Lost or dysfunctional → autoimmunity.</li>
+            </ul>
+          </li>
+          <li><strong>Two-signal activation:</strong>
+            <ol>
+              <li>Signal 1: TCR binds peptide-MHC.</li>
+              <li>Signal 2: costimulation (CD28 on T cell binds B7 on APC).</li>
+              <li>Without signal 2 → anergy (functional inactivation). Used by cancer cells to escape immunity.</li>
+            </ol>
+          </li>
+          <li><strong>Memory T cells</strong> persist long-term; faster, broader response on re-exposure.</li>
+          <li class="deep-dive"><strong>Immune checkpoints</strong> (deep dive): PD-1/PD-L1 and CTLA-4 normally damp T cell responses to prevent autoimmunity. Checkpoint inhibitors (pembrolizumab, ipilimumab) release this brake to treat cancer — and can cause immune-related adverse events (colitis, hepatitis, pneumonitis, endocrinopathies).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Subset</th><th>Marker</th><th>MHC</th><th>Function</th></tr></thead>
+          <tbody>
+            <tr><td>Helper</td><td>CD4</td><td>MHC II</td><td>Coordinate, activate B cells / macrophages</td></tr>
+            <tr><td>Cytotoxic</td><td>CD8</td><td>MHC I</td><td>Kill infected / tumor cells</td></tr>
+            <tr><td>Regulatory</td><td>CD4 FoxP3</td><td>—</td><td>Suppress, maintain tolerance</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>HIV</strong> destroys CD4 T cells → loss of help → susceptibility to opportunistic infections (PJP, CMV, MAC, Cryptococcus, Toxoplasma, Kaposi sarcoma). AIDS-defining: CD4 &lt; 200 or AIDS-defining illness. Treatment: combination ART suppresses viral replication, restores CD4 count.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the two-signal activation. Add a third panel showing what happens with signal 1 only (anergy). Connect to checkpoint inhibitor mechanism.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which MHC class do CD8 T cells recognize?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why are PJP and CMV called "opportunistic" infections?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>MHC class I.</li>
+            <li>They cause disease primarily when host immune defense is compromised (HIV, immunosuppression, transplant patients). The pathogens themselves are common in the environment but normally controlled by intact cell-mediated immunity.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 6: B cells and antibodies -->
+    <article class="concept-card" id="c6" data-tags="P">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 6 of 12</p>
+      <h2 class="card-title">B cells and antibodies <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">B cells make antibodies. Five antibody classes do different jobs in different places. After activation, B cells become plasma cells (antibody factories) and memory cells (next-time-faster).</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>B-cell receptor (BCR):</strong> membrane-bound antibody. Recognizes intact antigen directly, no MHC needed.</li>
+          <li><strong>Activation:</strong>
+            <ol>
+              <li>Antigen binds BCR → internalized → presented on MHC II.</li>
+              <li>Helper T cell (Tfh) recognizes the peptide-MHC II → provides CD40L + cytokines.</li>
+              <li>B cell proliferates in germinal center → affinity maturation + class switching.</li>
+              <li>Differentiates into plasma cells (high-rate antibody production) + memory B cells.</li>
+            </ol>
+          </li>
+          <li><strong>Antibody (immunoglobulin) structure:</strong>
+            <ul>
+              <li>Y-shape: 2 heavy chains + 2 light chains.</li>
+              <li>Variable regions (top of Y): bind antigen.</li>
+              <li>Constant region (stem of Y): determines class (G, M, A, E, D).</li>
+            </ul>
+          </li>
+          <li><strong>Five antibody classes:</strong>
+            <ul>
+              <li><em>IgG:</em> most abundant, crosses placenta (passive immunity to baby), main secondary response.</li>
+              <li><em>IgM:</em> first to appear in primary response; pentamer; great at complement fixation and agglutination.</li>
+              <li><em>IgA:</em> dimer in secretions (saliva, tears, breast milk, mucus). Mucosal defense.</li>
+              <li><em>IgE:</em> binds mast cells / basophils → release histamine on antigen binding. Allergy + antiparasite.</li>
+              <li><em>IgD:</em> mostly on naive B-cell surface; function less clear.</li>
+            </ul>
+          </li>
+          <li><strong>Antibody functions:</strong>
+            <ul>
+              <li>Neutralization: block pathogen binding.</li>
+              <li>Opsonization: tag for phagocytosis.</li>
+              <li>Complement activation: classical pathway via IgG/IgM.</li>
+              <li>ADCC (antibody-dependent cell-mediated cytotoxicity): NK cells kill antibody-coated targets.</li>
+              <li>Agglutination, precipitation.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Class</th><th>Structure</th><th>Where / when</th><th>Key role</th></tr></thead>
+          <tbody>
+            <tr><td>IgG</td><td>Monomer</td><td>Plasma, crosses placenta</td><td>Most abundant; secondary response</td></tr>
+            <tr><td>IgM</td><td>Pentamer</td><td>Plasma, first response</td><td>Primary response, complement</td></tr>
+            <tr><td>IgA</td><td>Dimer in secretions</td><td>Mucosa, breast milk</td><td>Mucosal defense, passive infant</td></tr>
+            <tr><td>IgE</td><td>Monomer</td><td>Mast cells</td><td>Allergy, parasites</td></tr>
+            <tr><td>IgD</td><td>Monomer</td><td>Naive B-cell surface</td><td>Activation marker</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Serology basics:</strong> IgM ↑ = acute or recent infection. IgG ↑ = past infection or vaccination. Both ↑ = recent infection with developing memory. <strong>Monoclonal antibodies in medicine:</strong> infliximab (anti-TNF, RA/IBD), rituximab (anti-CD20, B-cell lymphoma, RA, MS), trastuzumab (anti-HER2, breast cancer), nivolumab (anti-PD-1, multiple cancers).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the Y-shape antibody with heavy chains, light chains, variable, constant, antigen-binding sites. Then sketch IgM pentamer and IgA dimer for contrast.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which antibody crosses the placenta?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient has ↑ IgM and ↑ IgG for the same pathogen. What does that suggest?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>IgG.</li>
+            <li>Recent or current infection with developing memory. IgM is from acute response; IgG is from class switching that follows. Pure ↑ IgM = early acute; pure ↑ IgG = past or vaccinated.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 7: MHC presentation -->
+    <article class="concept-card" id="c7" data-tags="P">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 7 of 12</p>
+      <h2 class="card-title">MHC class I and II presentation <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">MHC molecules display peptide samples on the cell surface so T cells can audit them. Class I is on every nucleated cell ("internal report"). Class II is on professional APCs ("dispatch to T cells").</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>MHC I:</strong>
+            <ul>
+              <li>Expressed on all nucleated cells (not RBCs).</li>
+              <li>Loads peptides from endogenous proteins (proteasome → TAP → ER).</li>
+              <li>Presents to CD8⁺ T cells.</li>
+              <li>If a cell is virus-infected or tumor, abnormal peptides display → CD8 kills it.</li>
+              <li>Lack of MHC I (tumor strategy) → NK cell kills (NK kills "missing self").</li>
+            </ul>
+          </li>
+          <li><strong>MHC II:</strong>
+            <ul>
+              <li>Expressed on professional APCs: dendritic cells, macrophages, B cells.</li>
+              <li>Loads peptides from exogenous proteins (engulfed in phagosome → fuse with MHC II vesicle).</li>
+              <li>Presents to CD4⁺ helper T cells.</li>
+              <li>Drives both cell-mediated and humoral arms by activating helper T cells.</li>
+            </ul>
+          </li>
+          <li><strong>HLA</strong> = human equivalent name for MHC. Highly polymorphic (everyone different) → tissue matching for transplant.</li>
+          <li><strong>HLA disease associations:</strong>
+            <ul>
+              <li>HLA-B27: ankylosing spondylitis.</li>
+              <li>HLA-DR3/DR4: T1DM, autoimmune thyroid.</li>
+              <li>HLA-DQ2/DQ8: celiac disease.</li>
+              <li>HLA-DR2: MS, SLE.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>MHC I</th><th>MHC II</th></tr></thead>
+          <tbody>
+            <tr><td>Where</td><td>All nucleated cells</td><td>Professional APCs</td></tr>
+            <tr><td>Loads peptide from</td><td>Endogenous (cytosol)</td><td>Exogenous (engulfed)</td></tr>
+            <tr><td>Presents to</td><td>CD8⁺ T cells</td><td>CD4⁺ T cells</td></tr>
+            <tr><td>Outcome</td><td>Cytotoxic killing of infected/tumor</td><td>Helper activation, B cell help</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Transplant rejection</strong> is driven by HLA mismatch. <em>Hyperacute rejection</em>: preformed anti-donor antibodies → minutes. <em>Acute</em>: T-cell mediated, days to weeks. <em>Chronic</em>: months to years. Immunosuppressants (calcineurin inhibitors like tacrolimus, mTOR inhibitors, anti-proliferative agents) suppress T-cell activation to prevent rejection — at cost of infection and malignancy risk.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a two-column diagram contrasting MHC I and II pathways. Show source of peptide, processing, where in the cell loading happens, which T cell it activates, and the outcome.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> CD4 T cells recognize peptide on which MHC class?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why does a tumor that downregulates MHC I become vulnerable to NK cells?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>MHC II.</li>
+            <li>NK cells use "missing self" recognition: they actively kill cells that fail to display normal MHC I. Tumors hiding from CD8 by losing MHC I become visible to NK cells. This is one rationale for combining NK-based therapies with checkpoint inhibitors.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 8: Vaccines + active/passive -->
+    <article class="concept-card" id="c8" data-tags="P">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 8 of 12</p>
+      <h2 class="card-title">Active vs passive immunity, vaccines <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Active immunity means your own immune system made the antibodies and memory. Passive immunity means you got someone else's antibodies — fast but temporary, no memory.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Active immunity</strong> (your own response, memory):
+            <ul>
+              <li>Natural: actual infection.</li>
+              <li>Artificial: vaccination.</li>
+            </ul>
+          </li>
+          <li><strong>Passive immunity</strong> (someone else's antibodies, no memory, short-lived):
+            <ul>
+              <li>Natural: maternal IgG across placenta, IgA in breast milk.</li>
+              <li>Artificial: immunoglobulin therapy (IVIG, RhoGAM, post-exposure rabies HRIG, tetanus immunoglobulin, antivenom, monoclonal antibodies).</li>
+            </ul>
+          </li>
+          <li><strong>Vaccine types:</strong>
+            <ul>
+              <li><em>Live attenuated:</em> weakened pathogen (MMR, varicella, rotavirus, yellow fever, nasal flu, oral polio). Strongest response, longest immunity. Avoid in immunocompromised and pregnancy.</li>
+              <li><em>Inactivated:</em> killed pathogen (IPV, hepatitis A, rabies, injectable flu). Multiple doses, weaker response.</li>
+              <li><em>Subunit / conjugate:</em> piece of pathogen (HBV surface antigen, HPV VLP, Hib polysaccharide-protein conjugate, acellular pertussis).</li>
+              <li><em>Toxoid:</em> inactivated toxin (tetanus, diphtheria). Makes anti-toxin antibodies.</li>
+              <li><em>mRNA:</em> genetic instructions for cells to make antigen briefly (COVID-19). Engages both T and B cell responses.</li>
+              <li><em>Viral vector:</em> harmless virus carries genetic material (some COVID, Ebola). Triggers strong T-cell response.</li>
+            </ul>
+          </li>
+          <li><strong>Herd immunity:</strong> when enough of the population is immune that transmission becomes inefficient → protects the vulnerable who cannot be vaccinated. Threshold varies by pathogen reproductive number.</li>
+          <li><strong>Adjuvants</strong> (aluminum salts, oil emulsions): boost immune response to subunit vaccines.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Type</th><th>Onset</th><th>Duration</th><th>Memory</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Active natural</td><td>Days</td><td>Years to lifelong</td><td>Yes</td><td>Recovery from chickenpox</td></tr>
+            <tr><td>Active artificial</td><td>Days-weeks</td><td>Years</td><td>Yes</td><td>Vaccination</td></tr>
+            <tr><td>Passive natural</td><td>Immediate</td><td>Weeks-months</td><td>No</td><td>Maternal IgG, breast milk IgA</td></tr>
+            <tr><td>Passive artificial</td><td>Immediate</td><td>Weeks</td><td>No</td><td>IVIG, RhoGAM, antivenom</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>RhoGAM</strong> (Rh immunoglobulin) given to Rh-negative pregnant patients prevents maternal sensitization against Rh-positive fetal RBCs — prevents hemolytic disease of the newborn in subsequent pregnancies. Classic passive immunity. <strong>Post-exposure rabies</strong>: HRIG (passive, immediate protection) + active vaccine series (longer protection). <strong>Monoclonal antibodies for RSV</strong> (palivizumab, nirsevimab): passive prophylaxis in high-risk infants.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Plot a graph: antibody titer vs time for active artificial (vaccination) and passive artificial (IVIG). Show the rapid rise / steady plateau of active vs the immediate but declining curve of passive.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Is the MMR vaccine live attenuated or inactivated?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why might a transplant patient on immunosuppression not be a candidate for live attenuated vaccines?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Live attenuated.</li>
+            <li>Suppressed immunity may fail to control even attenuated pathogens, risking vaccine-strain disease. Use inactivated or subunit vaccines instead, and try to immunize before transplant when possible.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 9: Hypersensitivity I-IV -->
+    <article class="concept-card" id="c9" data-tags="CLIN">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 9 of 12</p>
+      <h2 class="card-title">Hypersensitivity types I-IV <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Four classes of damaging immune response: IgE-mediated allergy (I), antibody-mediated cell destruction (II), immune complex (III), T-cell mediated (IV). Each has a signature mechanism and time course.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Type I — Immediate / IgE-mediated:</strong>
+            <ul>
+              <li>Mechanism: IgE on mast cells. Antigen cross-links IgE → mast cell degranulation → histamine, leukotrienes, prostaglandins.</li>
+              <li>Onset: minutes.</li>
+              <li>Examples: allergic rhinitis, food allergies, asthma, anaphylaxis.</li>
+              <li>Treatment: antihistamines, mast cell stabilizers, corticosteroids; epinephrine for anaphylaxis.</li>
+            </ul>
+          </li>
+          <li><strong>Type II — Cytotoxic / antibody-mediated:</strong>
+            <ul>
+              <li>Mechanism: IgG or IgM binds antigen on cell surface → complement activation, opsonization, ADCC → cell destruction.</li>
+              <li>Onset: hours.</li>
+              <li>Examples: transfusion reactions (ABO mismatch), hemolytic disease of newborn, autoimmune hemolytic anemia, ITP, Graves disease (stimulating), myasthenia gravis (blocking), Goodpasture.</li>
+            </ul>
+          </li>
+          <li><strong>Type III — Immune complex:</strong>
+            <ul>
+              <li>Mechanism: antibody-antigen complexes deposit in tissues → activate complement → inflammation.</li>
+              <li>Onset: hours to days.</li>
+              <li>Examples: SLE (most), serum sickness, post-streptococcal GN, polyarteritis nodosa.</li>
+              <li>"Locations classic for deposition": joints, skin, glomeruli, blood vessels.</li>
+            </ul>
+          </li>
+          <li><strong>Type IV — Delayed / T cell-mediated:</strong>
+            <ul>
+              <li>Mechanism: sensitized T cells (Th1, CD8) attack antigen on tissue. No antibody role.</li>
+              <li>Onset: 48-72 hours (delayed).</li>
+              <li>Examples: TB skin test (PPD), contact dermatitis (poison ivy, nickel), graft rejection, type 1 diabetes mellitus, MS, RA.</li>
+            </ul>
+          </li>
+          <li><strong>Mnemonic for the four types:</strong> ACID — Anaphylactic (I), Cytotoxic (II), Immune complex (III), Delayed (IV).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Type</th><th>Mediator</th><th>Onset</th><th>Classic example</th></tr></thead>
+          <tbody>
+            <tr><td>I Anaphylactic</td><td>IgE on mast cells</td><td>Minutes</td><td>Anaphylaxis, asthma</td></tr>
+            <tr><td>II Cytotoxic</td><td>IgG/IgM on cell surface</td><td>Hours</td><td>Transfusion rxn, AIHA</td></tr>
+            <tr><td>III Immune complex</td><td>Ag-Ab complexes</td><td>Hours to days</td><td>SLE, serum sickness</td></tr>
+            <tr><td>IV Delayed</td><td>T cells</td><td>48-72 hr</td><td>PPD, contact dermatitis</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Anaphylaxis</strong> (Type I): hives, angioedema, bronchospasm, hypotension, GI symptoms — minutes after exposure. Epinephrine IM (0.3-0.5 mg adult) is the first drug — works on α1, β1, β2 all at once. Antihistamines and steroids are adjuncts, not replacements. <strong>SJS/TEN</strong> is a severe drug-related delayed hypersensitivity (Type IV-like) — separate, severe entity.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a 4-row table: type, mechanism cartoon, time course, 2 examples. Use this as your reference card.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A TB skin test (PPD) reaction develops 48 hours after placement. Hypersensitivity type?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why is epinephrine first-line in anaphylaxis instead of diphenhydramine?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Type IV (delayed, T-cell mediated).</li>
+            <li>Anaphylaxis is multi-system (airway, breathing, circulation). Epinephrine reverses bronchospasm (β2), supports blood pressure (α1, β1), and stabilizes mast cells. Antihistamines only block histamine at H1 — they don't reverse bronchospasm or hypotension and cannot stop the cascade.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 10: Autoimmunity -->
+    <article class="concept-card" id="c10" data-tags="CLIN">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 10 of 12</p>
+      <h2 class="card-title">Autoimmunity <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Autoimmunity is the immune system attacking self. The trigger is failure of self-tolerance — sometimes genetic, often environmental, usually a combination. Patterns range from a single organ to multi-system disease.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Mechanisms of self-tolerance breakdown:</strong>
+            <ul>
+              <li>Failure of central tolerance (thymus, bone marrow).</li>
+              <li>Failure of peripheral tolerance (Tregs, anergy, deletion).</li>
+              <li>Molecular mimicry: pathogen antigen looks like self (rheumatic fever after strep).</li>
+              <li>Sequestered self-antigens exposed (sympathetic ophthalmia after eye trauma).</li>
+              <li>Polyclonal activation (some infections trigger broad immune responses).</li>
+            </ul>
+          </li>
+          <li><strong>Single-organ autoimmunity:</strong>
+            <ul>
+              <li>Hashimoto thyroiditis: anti-TPO, anti-thyroglobulin → hypothyroid.</li>
+              <li>Graves: anti-TSH receptor (stimulating) → hyperthyroid.</li>
+              <li>Type 1 DM: anti-β-cell antibodies → insulin deficiency.</li>
+              <li>Pernicious anemia: anti-intrinsic factor → B12 deficiency.</li>
+              <li>MS: T cells against CNS myelin.</li>
+              <li>Myasthenia gravis: anti-AChR at NMJ.</li>
+              <li>Vitiligo: anti-melanocyte.</li>
+            </ul>
+          </li>
+          <li><strong>Systemic autoimmunity:</strong>
+            <ul>
+              <li>SLE: anti-dsDNA, anti-Smith, ANA. Rash (malar), arthritis, serositis, hematologic, renal, neuro, antibodies.</li>
+              <li>RA: anti-CCP, RF. Symmetric small joint arthritis, often with systemic features.</li>
+              <li>Sjögren: anti-Ro/SSA, anti-La/SSB. Dry eyes, dry mouth, parotid swelling.</li>
+              <li>Scleroderma: anti-Scl-70 (diffuse) or anti-centromere (limited, CREST).</li>
+              <li>Polymyositis/dermatomyositis: anti-Jo1. Proximal muscle weakness.</li>
+            </ul>
+          </li>
+          <li><strong>Diagnosis tools:</strong> autoantibody panels (ANA, anti-dsDNA, RF, anti-CCP, anti-TPO, etc.), inflammatory markers (ESR, CRP), organ-specific testing.</li>
+          <li><strong>Treatment principles:</strong> immunosuppressants (steroids, methotrexate, hydroxychloroquine, biologics like anti-TNF, anti-IL-6, anti-CD20), organ-specific replacement (levothyroxine in Hashimoto, insulin in T1DM).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Disease</th><th>Key autoantibody</th><th>Tissue attacked</th></tr></thead>
+          <tbody>
+            <tr><td>Hashimoto</td><td>Anti-TPO, anti-thyroglobulin</td><td>Thyroid follicular cells</td></tr>
+            <tr><td>Graves</td><td>Anti-TSH receptor (stimulating)</td><td>Thyroid (overdrive)</td></tr>
+            <tr><td>T1DM</td><td>Anti-GAD, anti-insulin, anti-β-cell</td><td>Pancreatic β cells</td></tr>
+            <tr><td>MS</td><td>(T cell-mediated)</td><td>CNS myelin</td></tr>
+            <tr><td>Myasthenia gravis</td><td>Anti-AChR</td><td>NMJ</td></tr>
+            <tr><td>SLE</td><td>Anti-dsDNA, anti-Sm, ANA</td><td>Multiple organs</td></tr>
+            <tr><td>RA</td><td>Anti-CCP, RF</td><td>Synovial joints</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Many autoimmune diseases follow a relapsing-remitting course. Triggers for flares: infection, stress, hormonal changes (often female predominance), medications, UV light (in SLE). Counsel patients on trigger avoidance and medication adherence.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>List the organ-specific autoimmune diseases vs systemic. Color-code by which mechanism (Type II, III, or IV) predominates.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which autoantibody is most specific for SLE?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why are women more commonly affected by most autoimmune diseases?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Anti-double-stranded DNA (anti-dsDNA). Anti-Smith is also highly specific. ANA is sensitive but not specific.</li>
+            <li>Multiple proposed mechanisms: sex hormones (estrogen tends to enhance immune responses), X chromosome (twice the immune genes), microchimerism from pregnancy, differences in immune regulation. The female-to-male ratio is striking in SLE (~9:1) and others.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 11: Immunodeficiency -->
+    <article class="concept-card" id="c11" data-tags="CLIN">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 11 of 12</p>
+      <h2 class="card-title">Immunodeficiency <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Immunodeficiencies are either primary (genetic, often pediatric) or secondary (acquired — HIV, malignancy, drugs, malnutrition). The arm that's broken predicts the infection pattern.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Pattern recognition by deficit:</strong>
+            <ul>
+              <li><em>B-cell / antibody deficits:</em> recurrent encapsulated bacterial infections (Strep pneumo, H. flu) and giardiasis. Examples: X-linked agammaglobulinemia, CVID, selective IgA deficiency.</li>
+              <li><em>T-cell deficits:</em> opportunistic infections (PJP, CMV, fungi) and recurrent viral infections. Examples: SCID, DiGeorge syndrome, HIV (acquired).</li>
+              <li><em>Phagocyte deficits:</em> catalase-positive organisms (Staph aureus, Aspergillus, Burkholderia). Examples: chronic granulomatous disease, Chediak-Higashi.</li>
+              <li><em>Complement deficits:</em> recurrent Neisseria infections (C5-9 deficiency); SLE-like (C1, C4, C2 deficiency).</li>
+            </ul>
+          </li>
+          <li><strong>HIV / AIDS:</strong>
+            <ul>
+              <li>RNA retrovirus; infects CD4+ cells via CD4 receptor + co-receptors (CCR5, CXCR4).</li>
+              <li>Stages: acute retroviral syndrome (flu-like) → clinical latency (years) → symptomatic → AIDS.</li>
+              <li>AIDS-defining: CD4 &lt; 200 or AIDS-defining illness (PJP, esophageal candidiasis, Kaposi sarcoma, CMV retinitis, cerebral toxoplasmosis, etc.).</li>
+              <li>Treatment: combination ART (often single-pill regimens). Goal: undetectable viral load, CD4 recovery. U=U: undetectable = untransmittable.</li>
+              <li>Prevention: condoms, PrEP (pre-exposure prophylaxis with tenofovir/emtricitabine or long-acting injectable), PEP (post-exposure prophylaxis within 72 hours).</li>
+            </ul>
+          </li>
+          <li><strong>Secondary (acquired) immunodeficiency causes:</strong>
+            <ul>
+              <li>HIV infection.</li>
+              <li>Malignancy (especially hematologic).</li>
+              <li>Chemotherapy / radiation.</li>
+              <li>Immunosuppressive drugs (corticosteroids, calcineurin inhibitors, biologics).</li>
+              <li>Malnutrition.</li>
+              <li>Splenectomy (functional asplenia).</li>
+              <li>Stress, sleep deprivation (modest).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Deficit</th><th>Typical pathogens</th><th>Test</th></tr></thead>
+          <tbody>
+            <tr><td>B-cell / antibody</td><td>Encapsulated bacteria, Giardia</td><td>Quantitative immunoglobulins</td></tr>
+            <tr><td>T-cell</td><td>PJP, CMV, fungi, virus</td><td>CD4 count, lymphocyte subsets</td></tr>
+            <tr><td>Phagocyte</td><td>Staph aureus, Aspergillus</td><td>Neutrophil count, oxidative burst</td></tr>
+            <tr><td>Complement</td><td>Neisseria (recurrent)</td><td>CH50, individual complement levels</td></tr>
+            <tr><td>HIV/AIDS</td><td>Opportunistic (PJP, Crypto, MAC)</td><td>HIV antibody/antigen, viral load, CD4</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Nursing care for immunocompromised patients: <strong>strict hand hygiene</strong>, mask if neutropenic, avoid live vaccines, screen visitors for illness, treat fevers as emergencies (neutropenic fever ANC &lt; 500 + T ≥ 38.3 needs blood cultures and empiric broad-spectrum abx within an hour). <strong>PEP for HIV exposure</strong> (needlestick, sexual assault): start within 72 hours, ideally within 2 hours; 28-day course.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a "branch by infection pattern" flowchart. Recurrent encapsulated bacteria → check antibodies. Opportunistic / viral → check T cells / HIV. Staph and Aspergillus → check neutrophil function. Recurrent Neisseria → check complement.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient has recurrent Neisseria meningitidis infections. Which immune component should you test?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why does HIV preferentially destroy CD4 cells, and what's the clinical consequence?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Late complement components (C5-9). MAC formation is critical for killing Neisseria; defects predispose specifically to recurrent neisserial disease.</li>
+            <li>HIV envelope protein gp120 binds CD4 and a co-receptor (CCR5 or CXCR4) to enter the cell. Replication ultimately destroys the host CD4 cell. Loss of CD4 cells removes immune coordination → opportunistic infections (PJP, MAC), reactivation of latent infections (TB, herpes, CMV), and certain malignancies (Kaposi sarcoma, lymphoma).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 12: Common conditions -->
+    <article class="concept-card" id="c12" data-tags="CLIN">
+      <p class="card-eyebrow">Lymphatic &amp; Immune &middot; Concept 12 of 12</p>
+      <h2 class="card-title">Common lymphatic and immune conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Most clinical immunology pathology is one of five patterns: infection, allergy, autoimmunity, immunodeficiency, malignancy. Each was covered in the concepts above. This card consolidates the most common conditions.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Lymphadenopathy:</strong>
+            <ul>
+              <li>Infectious (most common): bacterial (regional, tender), viral (often generalized, EBV/CMV/HIV), TB, cat-scratch, syphilis.</li>
+              <li>Malignant: lymphoma (Hodgkin: Reed-Sternberg cells, contiguous spread, painless; non-Hodgkin: diffuse, B symptoms), leukemia, metastatic carcinoma.</li>
+              <li>Autoimmune: SLE, RA, sarcoid.</li>
+              <li>Drug-induced: phenytoin, allopurinol.</li>
+            </ul>
+          </li>
+          <li><strong>Splenomegaly</strong> causes:
+            <ul>
+              <li>Infection: mononucleosis (EBV), malaria, endocarditis.</li>
+              <li>Portal hypertension (cirrhosis).</li>
+              <li>Hematologic: lymphoma, leukemia, hemolytic anemias.</li>
+              <li>Storage diseases (Gaucher).</li>
+            </ul>
+          </li>
+          <li><strong>Allergic disease spectrum:</strong>
+            <ul>
+              <li>Allergic rhinitis ("hay fever"): IgE to pollen, dander, dust mite.</li>
+              <li>Asthma (allergic phenotype).</li>
+              <li>Atopic dermatitis (eczema).</li>
+              <li>Food allergies: peanut, tree nut, shellfish, milk, egg.</li>
+              <li>Anaphylaxis.</li>
+            </ul>
+          </li>
+          <li><strong>Lymphoma:</strong>
+            <ul>
+              <li>Hodgkin lymphoma: bimodal age distribution, often presents with painless cervical lymphadenopathy + B symptoms. Reed-Sternberg cells on biopsy. Highly curable.</li>
+              <li>Non-Hodgkin lymphoma: many subtypes (DLBCL most common aggressive; follicular most common indolent). Diverse presentations.</li>
+            </ul>
+          </li>
+          <li><strong>Leukemia:</strong>
+            <ul>
+              <li>Acute: ALL (childhood most common), AML (adult most common). Rapid onset, fatigue, bleeding, infections.</li>
+              <li>Chronic: CLL (older adults, often asymptomatic incidental finding), CML (Philadelphia chromosome).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Pattern</th><th>Examples</th><th>Workup starter</th></tr></thead>
+          <tbody>
+            <tr><td>Acute infection</td><td>Bacterial pneumonia, cellulitis</td><td>CBC, cultures, imaging</td></tr>
+            <tr><td>Allergy</td><td>Anaphylaxis, rhinitis</td><td>Skin testing, specific IgE</td></tr>
+            <tr><td>Autoimmunity</td><td>SLE, RA, Hashimoto</td><td>ANA, RF, anti-CCP, organ-specific Abs</td></tr>
+            <tr><td>Immunodeficiency</td><td>HIV, CVID, neutropenia</td><td>CD4, immunoglobulins, CBC with differential</td></tr>
+            <tr><td>Malignancy</td><td>Lymphoma, leukemia</td><td>CBC, smear, lymph node or marrow biopsy</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Red flags for lymphadenopathy needing urgent workup: <strong>painless, hard, fixed, supraclavicular, persistent &gt; 6 weeks, accompanied by B symptoms</strong> (fever &gt; 38, drenching night sweats, weight loss &gt; 10% in 6 months). Supraclavicular nodes are especially concerning — left ("Virchow's") often signals GI malignancy.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a decision tree: lymphadenopathy → tender or not → regional or generalized → with B symptoms or not → likely cause and next workup.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which lymph node, when enlarged, suggests GI malignancy?</li>
+          <li><span class="qc-meta">DOK 4.</span> A 30-year-old has painless cervical lymphadenopathy, fever, drenching night sweats. What's the concern and what's the diagnostic test?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Left supraclavicular (Virchow's node) — drains via thoracic duct; often involved by abdominal malignancy.</li>
+            <li>Hodgkin lymphoma (or other lymphoma). Definitive test: <strong>excisional lymph node biopsy</strong> (not just FNA — need tissue architecture to look for Reed-Sternberg cells and classify subtype).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+  </main>
+
+  <footer class="byline">
+    <p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Lymphatic &amp; immune master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const toc = document.getElementById('toc-list');
+  document.querySelectorAll('.concept-card').forEach((card, idx) => {
+    const title = card.querySelector('.card-title');
+    if (!title) return;
+    const clone = title.cloneNode(true);
+    clone.querySelectorAll('.tag-pill').forEach(t => t.remove());
+    const text = clone.textContent.trim();
+    const li = document.createElement('li');
+    li.dataset.tags = card.dataset.tags;
+    li.innerHTML = `<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;
+    toc.appendChild(li);
+  });
+})();
+
+let currentView='combined', currentDepth='full';
+const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Lymphatic & Immune';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='lymphatic-immune-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

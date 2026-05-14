@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integumentary System — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Integumentary System</h1>
+    <p class="usage">Skin is the largest organ. It is the body's barrier, sensor, thermostat, vitamin D factory, and first line of immune defense — all in one. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">10</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="AP">
+    <p class="card-eyebrow">Integumentary &middot; Concept 1 of 10</p>
+    <h2 class="card-title">Skin functions overview <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Seven jobs in one organ. Memorize the list and you can predict what disease will affect when skin breaks down.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Protection:</strong> barrier against pathogens, chemicals, UV, mechanical trauma, water loss.</li>
+        <li><strong>Thermoregulation:</strong> sweat (evaporative cooling), vasodilation/constriction of dermal vessels, hair (less so in humans), insulation by subcutaneous fat.</li>
+        <li><strong>Sensation:</strong> mechanoreceptors, thermoreceptors, nociceptors → touch, pressure, temperature, pain, vibration, proprioception.</li>
+        <li><strong>Vitamin D synthesis:</strong> UVB converts 7-dehydrocholesterol → cholecalciferol (D3). First step before liver and kidney activation.</li>
+        <li><strong>Immune defense:</strong> antimicrobial peptides, normal flora competing with pathogens, Langerhans cells (dendritic cells in epidermis), low pH (~5).</li>
+        <li><strong>Excretion:</strong> small amounts of waste in sweat (urea, lactate, salt).</li>
+        <li><strong>Blood reservoir:</strong> dermis holds ~5% of blood volume; shifts available in stress.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Function</th><th>Loss consequence</th></tr></thead>
+      <tbody>
+        <tr><td>Protection / barrier</td><td>Infection, fluid loss (burns)</td></tr>
+        <tr><td>Thermoregulation</td><td>Hyperthermia or hypothermia</td></tr>
+        <tr><td>Sensation</td><td>Unrecognized injury (diabetic neuropathy → foot ulcers)</td></tr>
+        <tr><td>Vit D synthesis</td><td>Rickets, osteomalacia</td></tr>
+        <tr><td>Immune defense</td><td>Cellulitis, fungal infection</td></tr>
+      </tbody></table>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which vitamin is synthesized in skin with UV exposure?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why are burn patients at high risk of infection and dehydration?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Vitamin D (cholecalciferol → 25-OH-D in liver → calcitriol in kidney).</li><li>Loss of barrier function: no protection against bacterial entry → infection. Loss of water-vapor barrier → massive insensible fluid loss → dehydration and shock. Same surface area, two consequences.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Integumentary &middot; Concept 2 of 10</p>
+    <h2 class="card-title">Epidermis: layers and cell types <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The epidermis is stratified squamous epithelium that turns over every ~30 days. Cells are born at the bottom, mature upward, and shed at the top as dead keratin.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Avascular:</strong> nutrients diffuse from dermal capillaries.</li>
+        <li><strong>Five layers</strong> (deep → superficial, "Come Let's Get Sun Burned"):
+          <ul><li>Stratum basale: single layer of dividing cells. Stem cells produce keratinocytes. Melanocytes and Merkel cells live here.</li>
+          <li>Stratum spinosum: several layers; cells linked by desmosomes ("spiny" appearance). Langerhans cells (immune) here.</li>
+          <li>Stratum granulosum: cells accumulate keratohyalin granules; nuclei start to disintegrate.</li>
+          <li>Stratum lucidum: thin, clear layer present only in thick skin (palms, soles).</li>
+          <li>Stratum corneum: 20-30 layers of dead, flattened, keratinized cells. The barrier.</li></ul>
+        </li>
+        <li><strong>Four cell types:</strong>
+          <ul><li>Keratinocytes (~90%): produce keratin (the durable fibrous protein) and waterproofing lipids.</li>
+          <li>Melanocytes (~5%): produce melanin in melanosomes; transfer to keratinocytes via dendritic processes. UV protection.</li>
+          <li>Langerhans cells (~3%): dendritic immune cells. Antigen sampling and presentation.</li>
+          <li>Merkel cells (~1%): tactile mechanoreceptors at stratum basale; associated with sensory nerve endings.</li></ul>
+        </li>
+        <li><strong>Thick vs thin skin:</strong>
+          <ul><li>Thick: palms, soles. Has stratum lucidum. No hair follicles. Many sweat glands.</li>
+          <li>Thin: everywhere else. Has hair, sebaceous glands.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Albinism</strong>: defective tyrosinase → no melanin synthesis despite normal melanocyte count. <strong>Vitiligo</strong>: autoimmune destruction of melanocytes → patchy depigmentation. <strong>Melanoma</strong>: malignancy of melanocytes — ABCDE warning signs: Asymmetry, Border irregular, Color varied, Diameter &gt; 6 mm, Evolving.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which epidermal layer is present only in thick skin?</li>
+      <li><span class="qc-meta">DOK 2.</span> Which cells produce keratin?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Stratum lucidum.</li><li>Keratinocytes (~90% of epidermal cells).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="A">
+    <p class="card-eyebrow">Integumentary &middot; Concept 3 of 10</p>
+    <h2 class="card-title">Dermis and hypodermis <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Dermis is the working layer — vessels, nerves, glands, hair follicles, muscles. Hypodermis (subcutaneous tissue) is the cushion and insulator.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Dermis (two regions):</strong>
+          <ul><li><em>Papillary layer:</em> superficial. Loose CT with dermal papillae projecting into epidermis (fingerprint patterns). Contains capillaries and Meissner corpuscles (light touch).</li>
+          <li><em>Reticular layer:</em> deep. Dense irregular CT. Contains hair follicles, glands, larger vessels, Pacinian corpuscles (pressure), Ruffini corpuscles (stretch).</li></ul>
+        </li>
+        <li><strong>Tension lines (Langer's lines):</strong> collagen orientation in dermis. Surgical incisions parallel to lines heal better; perpendicular leave more visible scars.</li>
+        <li><strong>Striae (stretch marks):</strong> dermal tearing from rapid growth or stretching (pregnancy, rapid weight gain, Cushing).</li>
+        <li><strong>Hypodermis (subcutaneous tissue, superficial fascia):</strong>
+          <ul><li>Mostly adipose + loose CT.</li>
+          <li>Insulation, energy storage, shock absorption.</li>
+          <li>Major site for SC injections (insulin, heparin, vaccines).</li>
+          <li>Sex differences in distribution (female: hips, thighs; male: abdomen).</li></ul>
+        </li>
+        <li><strong>Vascular supply:</strong> two plexuses — cutaneous (between dermis and hypodermis) + subpapillary (between dermis layers). Heavy parasympathetic + sympathetic innervation for thermoregulation.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Decubitus ulcers (pressure injuries)</strong>: prolonged pressure compresses capillaries → tissue ischemia → necrosis. Common over bony prominences (sacrum, heels, hips, occiput). Stages I-IV (and unstageable). Prevention: turn q2h, offload pressure, nutrition, moisture management.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which dermal mechanoreceptor responds to light touch and is most concentrated in dermal papillae?</li>
+      <li><span class="qc-meta">DOK 2.</span> What's the major use of the hypodermis in nursing practice?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Meissner corpuscle.</li><li>Subcutaneous injection site (insulin, heparin, many vaccines, growth hormone).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="A">
+    <p class="card-eyebrow">Integumentary &middot; Concept 4 of 10</p>
+    <h2 class="card-title">Accessory structures: hair, nails, glands <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Hair, nails, and skin glands all derive from epidermal cells that have specialized further down. Each has clinical relevance for nutrition, hormones, and disease.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Hair:</strong>
+          <ul><li>Hair shaft (above skin) + root (within follicle).</li>
+          <li>Follicle extends into dermis (sometimes hypodermis). Bulb at base contains matrix (dividing cells).</li>
+          <li>Arrector pili muscle: smooth muscle attached to follicle. Contracts → goosebumps (vestigial thermoregulation).</li>
+          <li>Hair growth cycle: anagen (growth), catagen (regression), telogen (rest).</li>
+          <li>Alopecia: hair loss. Causes — androgenic (pattern baldness), telogen effluvium (stress, illness), alopecia areata (autoimmune), chemotherapy.</li></ul>
+        </li>
+        <li><strong>Nails:</strong>
+          <ul><li>Hard keratinized plate. Nail plate, nail bed, lunula (visible nail matrix), cuticle (eponychium), free edge.</li>
+          <li>Growth ~0.1 mm/day (fingernails); toenails slower.</li>
+          <li>Clinical signs: clubbing (chronic hypoxia, CF, HF), spoon nails / koilonychia (iron deficiency), Beau lines (severe illness arrest), splinter hemorrhages (endocarditis), pitting (psoriasis), yellow (fungal, lymphedema).</li></ul>
+        </li>
+        <li><strong>Skin glands:</strong>
+          <ul><li><em>Sebaceous (oil) glands:</em> connected to hair follicle. Holocrine secretion (whole cell). Produce sebum (lipid mix). Lubricate skin, antibacterial. Acne when blocked + colonized by Cutibacterium acnes.</li>
+          <li><em>Eccrine sweat glands:</em> all over body, abundant on palms, soles, forehead. Produce dilute, watery sweat (mostly water + NaCl). Thermoregulation. Innervated by sympathetic cholinergic fibers (unique — sympathetic but uses ACh).</li>
+          <li><em>Apocrine sweat glands:</em> in axilla, groin, areola. Become active at puberty. Secrete thicker, lipid-rich fluid into hair follicle. Source of body odor (after bacterial action). Sexual scent signals.</li>
+          <li><em>Ceruminous glands:</em> modified apocrine in ear canal. Produce cerumen (earwax) with sebum.</li>
+          <li><em>Mammary glands:</em> modified apocrine in breast.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Acne vulgaris:</strong> sebum + dead keratinocytes block follicle → C. acnes overgrowth → inflammation. Treatment ladder: topical retinoids → benzoyl peroxide → topical antibiotics → oral antibiotics → hormonal therapy → isotretinoin (severe). <strong>Hyperhidrosis</strong>: excessive sweating. Treat: aluminum chloride, glycopyrrolate, botulinum toxin injections.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Sweat glands receive sympathetic innervation — what's unusual about the neurotransmitter?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient has clubbing of the fingernails. What chronic condition might this suggest?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Eccrine sweat glands are innervated by sympathetic fibers that release acetylcholine (instead of norepinephrine). They are anatomically sympathetic but chemically cholinergic — the major ANS exception.</li><li>Chronic hypoxia: cyanotic heart disease, COPD, interstitial lung disease, cystic fibrosis, infective endocarditis, IBD, certain cancers.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="A">
+    <p class="card-eyebrow">Integumentary &middot; Concept 5 of 10</p>
+    <h2 class="card-title">Skin color and pigmentation <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Three pigments combine to produce skin color: melanin (brown/black/yellow-red from melanocytes), hemoglobin (red from RBCs in dermal vessels), carotene (yellow-orange from diet). Disease changes any of them in clinically useful ways.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Melanin:</strong>
+          <ul><li>Eumelanin (brown-black) and pheomelanin (yellow-red).</li>
+          <li>Produced in melanosomes by melanocytes; transferred to keratinocytes.</li>
+          <li>Skin color differences come from melanin amount and distribution, not number of melanocytes (similar in all ethnicities).</li>
+          <li>Function: shields nuclear DNA from UV damage; reduces vitamin D synthesis at temperate latitudes (evolutionary tradeoff).</li>
+          <li>UV exposure → ↑ melanin production (tan).</li></ul>
+        </li>
+        <li><strong>Hemoglobin in dermal vessels:</strong>
+          <ul><li>Bright red oxygenated → flushed appearance (fever, exercise, embarrassment).</li>
+          <li>Dark red/blue deoxygenated → cyanosis (central in mouth/lips, peripheral in extremities).</li></ul>
+        </li>
+        <li><strong>Carotene:</strong> from diet (yellow/orange vegetables); accumulates in stratum corneum and hypodermis. Excess intake → carotenoderma (orange palms).</li>
+        <li><strong>Bilirubin:</strong> not normal skin pigment but jaundice → yellow-green when serum bilirubin &gt; ~2-3 mg/dL. Earliest in sclera.</li>
+        <li><strong>Clinically useful color changes:</strong>
+          <ul><li>Pallor: vasoconstriction (shock), anemia (low Hb).</li>
+          <li>Erythema: vasodilation (fever, inflammation, blush, sunburn).</li>
+          <li>Cyanosis: ↑ deoxyhemoglobin (≥ 5 g/dL).</li>
+          <li>Jaundice: ↑ bilirubin.</li>
+          <li>Bronze: Addison disease (high ACTH/MSH activity); hemochromatosis.</li>
+          <li>Petechiae/purpura: blood escaping into skin (thrombocytopenia, sepsis, trauma).</li>
+          <li>Pruritus without rash: liver disease, lymphoma, CKD.</li></ul>
+        </li>
+        <li class="deep-dive"><strong>Examining color in dark skin:</strong> color changes are less obvious. Use mucous membranes (oral mucosa, conjunctiva), nail beds, palms/soles for assessing pallor, cyanosis, and jaundice. Compare to baseline.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Cyanosis becomes visible at ~5 g/dL of deoxygenated Hb regardless of total Hb. Anemic patients can be profoundly hypoxic without obvious cyanosis (not enough Hb to deoxygenate to 5). Polycythemic patients may look cyanotic with minimally reduced SpO₂. Pulse oximetry, not color alone, guides assessment.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which pigment is most responsible for variation in skin color among individuals?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why might a severely anemic patient look pale rather than cyanotic despite hypoxia?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Melanin (specifically the amount produced and distributed, not melanocyte count).</li><li>Cyanosis requires ≥5 g/dL of deoxyhemoglobin. With severe anemia (Hb 6), the patient may not have enough Hb at all to deoxygenate to that threshold. Pulse ox or ABG will show true oxygenation; visible color is unreliable.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="P">
+    <p class="card-eyebrow">Integumentary &middot; Concept 6 of 10</p>
+    <h2 class="card-title">Thermoregulation <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">The skin is the body's radiator. Hypothalamus is the thermostat (set point ~37 °C). Heat is gained from metabolism and environment; lost through skin (radiation, conduction, convection, evaporation).</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Set point:</strong> hypothalamic preoptic area. Core temp tightly regulated (~36-37 °C).</li>
+        <li><strong>Heat sources:</strong>
+          <ul><li>Basal metabolism, muscle activity (esp. shivering), digestion, hormones (thyroid).</li></ul>
+        </li>
+        <li><strong>Heat loss mechanisms:</strong>
+          <ul><li><em>Radiation:</em> infrared emission to cooler surroundings (largest at rest, ~60%).</li>
+          <li><em>Conduction:</em> direct contact (e.g., cold surface).</li>
+          <li><em>Convection:</em> moving air or water carries heat away.</li>
+          <li><em>Evaporation:</em> sweat → vapor (uses ~0.58 kcal/g). Dominant at high temps and during exercise.</li></ul>
+        </li>
+        <li><strong>Response to heat (cool down):</strong>
+          <ul><li>Vasodilation of dermal vessels (radiate more).</li>
+          <li>Sweating (eccrine glands).</li>
+          <li>Behavior: remove clothing, seek shade, drink cold fluids.</li></ul>
+        </li>
+        <li><strong>Response to cold (heat up):</strong>
+          <ul><li>Vasoconstriction of dermal vessels (conserve core heat).</li>
+          <li>Shivering (involuntary muscle activity → heat).</li>
+          <li>Non-shivering thermogenesis (brown adipose tissue, esp. in infants).</li>
+          <li>Piloerection (goosebumps — limited effect in humans).</li>
+          <li>Behavior: clothing, shelter, food.</li></ul>
+        </li>
+        <li><strong>Fever:</strong> resetting of hypothalamic set point upward by pyrogens (IL-1, IL-6, TNF, PGE2). Body actively tries to reach the new higher set point → chills, vasoconstriction, shivering. Once the source resolves and set point drops, body actively cools → sweating, vasodilation.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Heat illness spectrum:</strong> heat cramps → heat exhaustion (sweating maintained, T &lt; 40, intact mentation) → heatstroke (T ≥ 40, altered mentation, often anhidrosis, multi-organ failure). Heatstroke: medical emergency, cool aggressively. <strong>Hypothermia:</strong> &lt; 35 °C. Mild (32-35), moderate (28-32), severe (&lt; 28). Severe: arrhythmias, "Osborn waves" on ECG. "Not dead until warm and dead." <strong>Malignant hyperthermia:</strong> rare reaction to certain anesthetics (succinylcholine, halothane) in genetically susceptible. RYR1 mutation → uncontrolled SR Ca²⁺ release → muscle hypermetabolism, hyperthermia. Treat with dantrolene.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which heat loss mechanism dominates during exercise in hot weather?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does a fever cause shivering even though the body is already warm?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Evaporation (sweating). Radiation and convection become insufficient at high ambient temperatures.</li><li>Pyrogens reset the hypothalamic set point upward. The body now perceives itself as too cold (relative to the new set point) → triggers heat-generating responses (shivering, vasoconstriction). Once the infection resolves, set point drops back; the body now feels too hot → sweats and vasodilates. "Chills then sweats" is the hallmark.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="P">
+    <p class="card-eyebrow">Integumentary &middot; Concept 7 of 10</p>
+    <h2 class="card-title">Barrier, immune, sensory functions <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Beyond temperature, skin has several physiologic jobs. Each fails in a distinct clinical pattern.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Barrier function:</strong>
+          <ul><li>Stratum corneum lipid lamellae prevent water loss + chemical penetration.</li>
+          <li>Tight junctions in stratum granulosum.</li>
+          <li>Acid mantle (pH ~5) limits bacterial growth.</li>
+          <li>Loss → transepidermal water loss + infection risk (e.g., burns, eczema, exfoliative skin disease).</li></ul>
+        </li>
+        <li><strong>Immune defense:</strong>
+          <ul><li>Antimicrobial peptides (defensins, cathelicidins).</li>
+          <li>Langerhans cells in epidermis: dendritic cells, sample antigen, migrate to lymph nodes.</li>
+          <li>Skin-resident T cells and other lymphocytes.</li>
+          <li>Normal flora outcompetes pathogens.</li></ul>
+        </li>
+        <li><strong>Sensory function:</strong>
+          <ul><li>Mechanoreceptors:
+            <ul><li>Meissner corpuscles: dermal papillae, light touch.</li>
+            <li>Pacinian corpuscles: deep dermis/hypodermis, deep pressure + vibration.</li>
+            <li>Merkel discs: stratum basale, sustained light touch + pressure (textures).</li>
+            <li>Ruffini endings: dermis, sustained stretch (proprioception).</li>
+            <li>Hair follicle receptors: detect hair movement.</li></ul>
+          </li>
+          <li>Free nerve endings: pain (nociception), temperature (thermoreception).</li>
+          <li>Sensory information ascends via DCML (touch, vibration, proprioception) or spinothalamic (pain, temperature, crude touch) pathways — see nervous system notes.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Atopic dermatitis (eczema):</strong> impaired barrier (filaggrin mutations) + Th2-skewed immune response. Dry, itchy, inflamed skin in flexures. Treatment: moisturizers (restore barrier), topical steroids, calcineurin inhibitors, dupilumab (anti-IL-4/IL-13). <strong>Loss of protective sensation</strong> in diabetic peripheral neuropathy → unrecognized foot injuries → ulcers → infection → potential amputation. Annual foot exam, daily self-inspection, well-fitting shoes.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which sensory receptor responds to vibration and deep pressure?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is daily foot inspection essential for diabetic patients?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Pacinian corpuscle.</li><li>Diabetic peripheral neuropathy removes the pain signal that normally alerts to injury (blister, cut, foreign body). Without sensation, small wounds go unnoticed and progress to deep ulcers, infection (often polymicrobial), osteomyelitis, and gangrene. Daily inspection catches problems before they escalate.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="P">
+    <p class="card-eyebrow">Integumentary &middot; Concept 8 of 10</p>
+    <h2 class="card-title">Wound healing <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Wound healing has four overlapping phases. Most acute wounds heal predictably; chronic wounds get stuck somewhere — usually in inflammation.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Four phases:</strong>
+          <ol><li><em>Hemostasis</em> (minutes): vasoconstriction, platelet plug, coagulation cascade.</li>
+          <li><em>Inflammatory</em> (days 1-3): neutrophils, then macrophages clear debris; vasodilation; redness, warmth, swelling, pain.</li>
+          <li><em>Proliferative</em> (days 3-21): fibroblasts lay down collagen; angiogenesis; granulation tissue forms; epithelial cells migrate across wound bed; wound contraction (myofibroblasts).</li>
+          <li><em>Remodeling/maturation</em> (weeks to ≥ 1 year): type III collagen replaced by stronger type I; tensile strength recovers to ~70-80% of original.</li></ol>
+        </li>
+        <li><strong>Healing types:</strong>
+          <ul><li>Primary intention: clean, approximated edges (surgical incision); minimal scar.</li>
+          <li>Secondary intention: open wound, fills with granulation tissue from below; more scar.</li>
+          <li>Tertiary (delayed primary) intention: left open initially (to manage infection or edema) then surgically closed later.</li></ul>
+        </li>
+        <li><strong>Factors that impair healing:</strong>
+          <ul><li>Local: infection, poor blood supply (PAD, smoking), foreign body, repetitive trauma, pressure, desiccation.</li>
+          <li>Systemic: diabetes, malnutrition (protein, vit C, zinc), corticosteroids (suppress inflammatory phase), age, immune compromise, chronic disease.</li></ul>
+        </li>
+        <li><strong>Abnormal healing:</strong>
+          <ul><li>Hypertrophic scar: thick, raised, stays within wound boundary.</li>
+          <li>Keloid: extends beyond original wound; genetic predisposition.</li>
+          <li>Contracture: scar shortens, restricts movement (especially over joints, post-burn).</li>
+          <li>Chronic wound: failure to progress through phases in expected time.</li></ul>
+        </li>
+        <li><strong>Pressure injury staging:</strong>
+          <ul><li>Stage 1: non-blanchable erythema, intact skin.</li>
+          <li>Stage 2: partial-thickness loss, dermis exposed (looks like a shallow ulcer or intact/ruptured blister).</li>
+          <li>Stage 3: full-thickness loss, fat visible, no bone/tendon/muscle.</li>
+          <li>Stage 4: full thickness with exposed bone, tendon, or muscle.</li>
+          <li>Unstageable: full thickness covered by slough/eschar.</li>
+          <li>Deep tissue pressure injury: persistent non-blanchable deep red, maroon, or purple discoloration.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Optimal wound healing requires: <strong>nutrition</strong> (adequate protein, vitamin C for collagen cross-linking, zinc), <strong>perfusion</strong> (control diabetes, smoking cessation, address PAD), <strong>moisture balance</strong> (moist wound bed heals faster than wet or dry), <strong>infection control</strong> (debridement, dressings, antibiotics only if true infection), <strong>offloading pressure</strong>. Negative pressure wound therapy (wound vacs), bioengineered skin substitutes, and hyperbaric oxygen are advanced options.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which wound healing phase involves macrophage cleanup and is prolonged in chronic wounds?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why do chronic glucocorticoid users heal poorly?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Inflammatory phase.</li><li>Glucocorticoids suppress all phases of wound healing — they reduce inflammation (needed to clear debris and recruit fibroblasts), impair collagen synthesis, and weaken the proliferative phase. Result: delayed closure, weaker scar, ↑ infection risk.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="CLIN">
+    <p class="card-eyebrow">Integumentary &middot; Concept 9 of 10</p>
+    <h2 class="card-title">Burns: classification and management <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Burns are classified by depth and total body surface area (TBSA). Deep and extensive burns are life-threatening through fluid loss and infection.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Causes:</strong> thermal (flame, scald), chemical, electrical, radiation, friction.</li>
+        <li><strong>Burn depth:</strong>
+          <ul><li><em>Superficial (formerly 1st degree):</em> epidermis only. Red, painful, dry, no blisters. Heals in ~1 week with no scar. Example: sunburn.</li>
+          <li><em>Superficial partial-thickness (2nd degree, superficial):</em> epidermis + papillary dermis. Red, blistered, very painful, moist. Heals ~1-3 weeks usually without significant scar.</li>
+          <li><em>Deep partial-thickness (2nd degree, deep):</em> epidermis + most dermis. Pale, dry, less sensitive (some nerve loss). Slow healing (3+ weeks) with scar; often needs grafting.</li>
+          <li><em>Full-thickness (3rd degree):</em> entire dermis destroyed. White, leathery, charred, dry; PAINLESS (nerves destroyed). Requires grafting.</li>
+          <li><em>4th degree:</em> extends to bone, muscle, tendon. Requires reconstruction.</li></ul>
+        </li>
+        <li><strong>Total body surface area (TBSA) — Rule of 9s</strong> (adult):
+          <ul><li>Head/neck: 9%.</li>
+          <li>Each arm: 9%.</li>
+          <li>Anterior trunk: 18%.</li>
+          <li>Posterior trunk: 18%.</li>
+          <li>Each leg: 18%.</li>
+          <li>Perineum: 1%.</li>
+          <li>Pediatric pattern: relatively larger head, smaller legs (modified rule).</li></ul>
+        </li>
+        <li><strong>Fluid resuscitation (Parkland formula):</strong>
+          <ul><li>4 mL × kg × % TBSA (partial + full thickness only) of lactated Ringers in first 24 hours.</li>
+          <li>Half in first 8 hours from time of burn, half over next 16 hours.</li>
+          <li>Titrate to urine output (~0.5 mL/kg/hr adult).</li></ul>
+        </li>
+        <li><strong>Acute concerns:</strong>
+          <ul><li>Airway: facial burns, singed nasal hair, soot in sputum, hoarseness → suspect inhalation injury → consider intubation early.</li>
+          <li>Hypovolemia from massive capillary leak (peaks 24-48 hours).</li>
+          <li>Hypothermia: loss of skin = loss of insulation. Keep patient warm.</li>
+          <li>Pain control: IV opioids.</li>
+          <li>Tetanus update.</li>
+          <li>NG tube (ileus common in large burns).</li>
+          <li>Foley to monitor UOP.</li></ul>
+        </li>
+        <li><strong>Late concerns:</strong> infection (greatest cause of mortality after initial resuscitation), nutritional support (hypermetabolic state), contracture, psychological recovery.</li>
+        <li><strong>Burn center referral criteria:</strong> partial thickness &gt; 10% TBSA, any full-thickness, burns to face/hands/feet/perineum/joints, electrical/chemical, inhalation, pediatric, comorbidities.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>The painless burn is often the worst burn. Full-thickness burns are insensate because nerve endings are destroyed; surrounding partial-thickness areas hurt enormously. <strong>Carbon monoxide poisoning</strong> in fire victims: SpO₂ reads normal but oxygen content is reduced. Use co-oximetry to measure carboxyhemoglobin. Treat with 100% O₂ (± hyperbaric).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> A patient with full-thickness burns over anterior trunk and both arms. What's the estimated TBSA in an adult?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why might a patient with severe burns have a "reassuring" pulse oximetry reading but still be hypoxic?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>18% (anterior trunk) + 9% + 9% (each arm) = 36% TBSA.</li><li>Carbon monoxide from smoke binds Hb 240× more avidly than O₂. Carboxyhemoglobin reads as oxyhemoglobin on standard pulse oximetry, giving a falsely normal reading. Actual oxygen delivery is markedly reduced. Diagnose with co-oximetry; treat with 100% oxygen.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="CLIN">
+    <p class="card-eyebrow">Integumentary &middot; Concept 10 of 10</p>
+    <h2 class="card-title">Skin cancers and common skin conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Three main skin cancers, listed by frequency and aggressiveness: BCC (most common, rarely metastasizes), SCC (more aggressive), melanoma (most dangerous). UV exposure is the main risk for all.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Basal cell carcinoma (BCC):</strong>
+          <ul><li>Most common cancer in humans. Slow-growing, locally invasive, rarely metastasizes.</li>
+          <li>Pearly papule with telangiectasias; central ulceration ("rodent ulcer").</li>
+          <li>Sun-exposed areas (face, ears).</li>
+          <li>Treatment: excision; Mohs surgery for face.</li></ul>
+        </li>
+        <li><strong>Squamous cell carcinoma (SCC):</strong>
+          <ul><li>2nd most common. More aggressive than BCC; can metastasize.</li>
+          <li>Scaly, red, ulcerated lesion. Often on lips, ears, hands.</li>
+          <li>Precursor: actinic keratosis (rough, scaly, erythematous).</li>
+          <li>Treatment: excision; topical for early; chemo/immune for advanced.</li></ul>
+        </li>
+        <li><strong>Melanoma:</strong>
+          <ul><li>Malignancy of melanocytes. Less common but accounts for most skin cancer deaths.</li>
+          <li>Risk: fair skin, multiple sunburns (especially blistering childhood), family history, atypical moles, immunosuppression.</li>
+          <li>ABCDE signs: <strong>A</strong>symmetry, <strong>B</strong>order irregular, <strong>C</strong>olor varied, <strong>D</strong>iameter &gt; 6 mm, <strong>E</strong>volving.</li>
+          <li>Depth (Breslow thickness) is the most important prognostic factor.</li>
+          <li>Treatment: wide excision ± sentinel node biopsy; targeted therapy (BRAF inhibitors) and immune checkpoint inhibitors (pembrolizumab, nivolumab, ipilimumab) revolutionized advanced disease.</li></ul>
+        </li>
+        <li><strong>Other common skin conditions:</strong>
+          <ul><li><em>Psoriasis:</em> autoimmune; well-demarcated erythematous plaques with silvery scale, esp. elbows/knees/scalp. T-cell driven. Treat: topical steroids, vitamin D analogs, phototherapy, biologics (anti-TNF, anti-IL-17, anti-IL-23).</li>
+          <li><em>Eczema/atopic dermatitis:</em> covered in Concept 7.</li>
+          <li><em>Contact dermatitis:</em> Type IV (allergic, e.g., poison ivy, nickel) or irritant.</li>
+          <li><em>Acne:</em> covered in Concept 4.</li>
+          <li><em>Cellulitis:</em> bacterial infection of dermis + subcutaneous tissue. Usually Strep or Staph. Red, warm, tender, swollen with ill-defined borders. Treat with antibiotics covering streptococci (cephalexin) ± MRSA coverage if risk factors (clindamycin, TMP-SMX, doxycycline).</li>
+          <li><em>Necrotizing fasciitis:</em> "flesh-eating" deep tissue infection. Pain out of proportion to exam, rapid progression, crepitus, systemic toxicity. Surgical emergency.</li>
+          <li><em>Herpes zoster (shingles):</em> reactivation of varicella in dermatomal distribution. Painful vesicular rash. Treat with antivirals (acyclovir, valacyclovir) within 72 hours.</li>
+          <li><em>Stevens-Johnson syndrome (SJS) / TEN:</em> severe Type IV reaction usually to a drug. Painful skin sloughing of epidermis from dermis; mucous membrane involvement; like internal burn. SJS &lt; 10% TBSA detachment; TEN &gt; 30%. ICU-level supportive care.</li></ul>
+        </li>
+        <li><strong>Prevention messaging:</strong> SPF 30+ sunscreen, reapply q2h or after swimming, sun protective clothing, avoid peak hours (10 AM-4 PM), no tanning beds, annual skin exams in high-risk patients.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Suspect <strong>necrotizing fasciitis</strong> in any cellulitis-like infection with <em>pain out of proportion</em>, rapid spread, systemic toxicity, bullae, or crepitus. Do not wait — surgical debridement within hours is the only effective treatment. Mortality 25-30% even with aggressive care.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which skin cancer is responsible for most skin cancer deaths despite being less common than BCC and SCC?</li>
+      <li><span class="qc-meta">DOK 4.</span> A patient on a new antibiotic develops painful skin peeling and oral mucosal blisters. What's the concern and what's the immediate action?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Melanoma.</li><li>SJS/TEN (depending on % TBSA detachment). <strong>Stop the suspected drug immediately</strong>, transfer to a burn unit, treat as a major burn with fluid resuscitation, wound care, monitoring for sepsis. Sulfa drugs, anticonvulsants (lamotrigine, carbamazepine), allopurinol, NSAIDs, and some antibiotics are common triggers. Mortality is significant.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Integumentary master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Integumentary';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='integumentary-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

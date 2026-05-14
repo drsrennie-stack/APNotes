@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A&amp;P Topic Map (Nursing-Level) | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1E3D4C;
+    --navy-deep: #142a36;
+    --navy-tint: #EDF1F3;
+    --gold: #B8924A;
+    --gold-deep: #8f7136;
+    --terra: #C2734D;
+    --terra-dark: #A0522D;
+    --white: #FFFFFF;
+    --off-white: #FAFAF9;
+    --rest-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --hover-shadow: 0 8px 16px rgba(0,0,0,0.10);
+    --transition: transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease, border-color 150ms ease;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+  body {
+    margin: 0;
+    background: var(--off-white);
+    color: var(--navy);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  /* Skip link */
+  .skip-link {
+    position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+  }
+  .skip-link:focus {
+    position: fixed; left: 12px; top: 12px; width: auto; height: auto; padding: 10px 14px;
+    background: var(--navy); color: var(--white); z-index: 9999; border-radius: 4px;
+    font-weight: 600; text-decoration: none;
+  }
+  /* Focus visibility */
+  :focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--terra-dark); }
+
+  .page-wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 64px; }
+
+  /* Header */
+  header.atlas-header { margin-bottom: 28px; }
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--terra-dark);
+    font-weight: 500;
+    margin: 0 0 10px;
+  }
+  h1.page-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    color: var(--navy);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    margin: 0 0 8px;
+  }
+  .subhead {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    color: var(--terra-dark);
+    font-size: clamp(17px, 2vw, 22px);
+    margin: 0 0 14px;
+  }
+  .usage {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: var(--navy);
+    font-size: 15px;
+    max-width: 760px;
+    margin: 0;
+  }
+
+  /* Filter bar */
+  .controls {
+    background: var(--white);
+    border: 1px solid var(--navy-tint);
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin: 22px 0 28px;
+    box-shadow: var(--rest-shadow);
+    transition: var(--transition);
+  }
+  .controls:hover { box-shadow: var(--hover-shadow); }
+  .controls-row { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: flex-start; }
+  .control-group { display: flex; flex-direction: column; gap: 8px; }
+  .control-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--terra-dark);
+    font-weight: 700;
+  }
+  .seg {
+    display: inline-flex;
+    border: 1px solid var(--navy);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+  }
+  .seg button {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    background: var(--white);
+    color: var(--navy);
+    border: none;
+    border-right: 1px solid var(--navy);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .seg button:last-child { border-right: none; }
+  .seg button:hover { background: var(--navy-tint); }
+  .seg button[aria-pressed="true"] {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .meta-counts {
+    margin-left: auto;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--navy);
+    background: var(--navy-tint);
+    border: 1px solid var(--navy);
+    border-radius: 4px;
+    padding: 6px 12px;
+    align-self: center;
+  }
+  .meta-counts strong { color: var(--navy-deep); }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    margin: 0 0 22px;
+    padding: 12px 16px;
+    background: var(--white);
+    border: 1px solid var(--navy-tint);
+    border-radius: 4px;
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--navy);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid currentColor;
+    line-height: 1.2;
+  }
+  .badge-a    { color: var(--navy); background: var(--navy-tint); }
+  .badge-p    { color: var(--terra-dark); background: var(--white); }
+  .badge-ap   { color: var(--gold-deep); background: var(--white); }
+  .badge-clin { color: var(--navy-deep); background: var(--white); border-style: dashed; }
+
+  .status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    border: 1.5px solid currentColor;
+  }
+  .status-has   { color: var(--navy); background: var(--navy-tint); }
+  .status-part  { color: var(--gold-deep); background: var(--white); }
+  .status-gap   { color: var(--terra-dark); background: var(--white); border-style: dashed; }
+
+  /* System cards */
+  .systems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  @media (min-width: 760px) {
+    .systems-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .system {
+    background: var(--white);
+    border: 1px solid var(--navy-tint);
+    border-radius: 6px;
+    padding: 0;
+    box-shadow: var(--rest-shadow);
+    transition: var(--transition);
+    overflow: hidden;
+  }
+  .system:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+  }
+  .system summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border-bottom: 1px solid transparent;
+  }
+  .system summary::-webkit-details-marker { display: none; }
+  .system[open] summary { border-bottom: 1px solid var(--navy-tint); }
+  .system summary:hover { background: var(--off-white); }
+  .system summary:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: -3px;
+  }
+  .sys-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy);
+    margin: 0;
+  }
+  .sys-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--terra-dark);
+    font-weight: 500;
+    margin: 0 0 2px;
+  }
+  .sys-counts {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--navy);
+    display: inline-flex;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .sys-counts span {
+    background: var(--navy-tint);
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid var(--navy);
+  }
+  .chev {
+    width: 16px; height: 16px; flex-shrink: 0;
+    transition: transform 200ms ease;
+    color: var(--navy);
+  }
+  .system[open] .chev { transform: rotate(90deg); }
+
+  .concept-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0 14px;
+  }
+  .concept {
+    padding: 10px 22px;
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 1px solid var(--off-white);
+    font-size: 14px;
+    transition: background-color 150ms ease;
+  }
+  .concept:last-child { border-bottom: none; }
+  .concept:hover { background: var(--off-white); }
+  .concept-name { color: var(--navy); }
+  .concept-tags { display: inline-flex; gap: 6px; flex-shrink: 0; }
+  .concept[hidden] { display: none; }
+  .concept-note {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 12.5px;
+    color: var(--terra-dark);
+    grid-column: 2 / -1;
+    margin-top: 2px;
+  }
+
+  /* Section dividers */
+  h2.section-h {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    color: var(--terra-dark);
+    font-size: 20px;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--navy-tint);
+  }
+
+  /* Gap callout */
+  .gap-box {
+    background: var(--white);
+    border: 1px solid var(--terra);
+    border-left: 3px solid var(--terra);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 28px 0;
+    box-shadow: var(--rest-shadow);
+  }
+  .gap-box h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    color: var(--terra-dark);
+    font-size: 17px;
+    margin: 0 0 10px;
+  }
+  .gap-box ul { margin: 0; padding-left: 20px; }
+  .gap-box li { margin-bottom: 6px; color: var(--navy); }
+
+  /* Footer */
+  footer.byline {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--navy-tint);
+    font-size: 13px;
+    color: var(--navy);
+  }
+  footer.byline .signature {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  /* Visually hidden */
+  .vh {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0; overflow: hidden;
+    clip: rect(0,0,0,0); border: 0;
+  }
+
+  /* Print */
+  @media print {
+    body { background: var(--white); }
+    .controls, .skip-link { display: none; }
+    .system { break-inside: avoid; box-shadow: none; border-color: var(--navy); }
+    .system summary { cursor: default; }
+    .system details, .system { page-break-inside: avoid; }
+    .concept-list { padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page-wrap">
+  <header class="atlas-header">
+    <p class="eyebrow">BIO 004 &middot; BIO 431 &middot; BIO 304 &middot; Course Rewrite Scaffold</p>
+    <h1 class="page-title">Anatomy &amp; Physiology Topic Map</h1>
+    <p class="subhead">Concept scaffold for major-level nursing A&amp;P</p>
+    <p class="usage">Use the filters to switch between Anatomy, Physiology, and Combined A&amp;P views. Each concept is tagged by content type and flagged with its Drive status so you can see what we have, what is partial, and what is a true gap before we start writing the new note set.</p>
+  </header>
+
+  <main id="main">
+
+    <section class="controls" aria-labelledby="filters-h">
+      <h2 id="filters-h" class="vh">Filters</h2>
+      <div class="controls-row">
+        <div class="control-group" role="group" aria-labelledby="view-label">
+          <span class="control-label" id="view-label">View</span>
+          <div class="seg" role="tablist" aria-label="Content view">
+            <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+            <button type="button" data-view="anatomy"  aria-pressed="false">Anatomy only</button>
+            <button type="button" data-view="physio"   aria-pressed="false">Physiology only</button>
+          </div>
+        </div>
+        <div class="control-group" role="group" aria-labelledby="status-label">
+          <span class="control-label" id="status-label">Drive status</span>
+          <div class="seg" role="tablist" aria-label="Drive status filter">
+            <button type="button" data-status="all"  aria-pressed="true">All</button>
+            <button type="button" data-status="has"  aria-pressed="false">Has notes</button>
+            <button type="button" data-status="part" aria-pressed="false">Partial</button>
+            <button type="button" data-status="gap"  aria-pressed="false">Gaps</button>
+          </div>
+        </div>
+        <div class="meta-counts" aria-live="polite" id="counts">
+          Showing <strong id="cnt-shown">0</strong> of <strong id="cnt-total">0</strong> concepts
+        </div>
+      </div>
+    </section>
+
+    <section class="legend" aria-label="Legend">
+      <span class="legend-item"><span class="badge badge-a">A</span> Anatomy</span>
+      <span class="legend-item"><span class="badge badge-p">P</span> Physiology</span>
+      <span class="legend-item"><span class="badge badge-ap">A&amp;P</span> Integrated</span>
+      <span class="legend-item"><span class="badge badge-clin">CLIN</span> Clinical correlation</span>
+      <span class="legend-item"><span class="status status-has" aria-hidden="true">&check;</span> Has Drive notes</span>
+      <span class="legend-item"><span class="status status-part" aria-hidden="true">~</span> Partial in Drive</span>
+      <span class="legend-item"><span class="status status-gap" aria-hidden="true">!</span> Gap (needs building)</span>
+    </section>
+
+    <div class="gap-box" role="region" aria-labelledby="gaps-h">
+      <h2 id="gaps-h">Gaps I noticed in your Drive (for nursing-level scope)</h2>
+      <ul>
+        <li><strong>Special senses</strong> beyond eye basics: dedicated notes for ear (hearing + vestibular), gustation, and olfaction. Important for nursing (vertigo, dysphagia precursors, cranial nerve testing).</li>
+        <li><strong>Hematology physiology</strong>: erythropoiesis with EPO control, hemostasis cascade, ABO/Rh blood typing, transfusion reactions. Load-bearing for nursing.</li>
+        <li><strong>Embryology / development</strong>: germ layers, fetal circulation, fetal-to-neonatal shift, common congenital defects. No files found.</li>
+        <li><strong>ANS receptor pharmacology primer</strong>: alpha, beta, muscarinic, nicotinic with drug class hooks. Sets up nursing pharmacology.</li>
+        <li><strong>Genetics basics</strong>: Mendelian inheritance, sex-linked, common inherited conditions. Optional but useful for nursing scope.</li>
+      </ul>
+    </div>
+
+    <div id="topic-map" class="systems-grid">
+      <!-- Cards rendered by script -->
+    </div>
+
+  </main>
+
+  <footer class="byline">
+    <p>Topic map prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Draft scaffold &mdash; concepts and Drive status are starting points, not final scope.</p>
+  </footer>
+</div>
+
+<script>
+/* ---------- Data ---------- */
+/* tag: 'A' | 'P' | 'AP' | 'CLIN'  (tags can include CLIN as secondary)
+   status: 'has' | 'part' | 'gap'
+   note: optional short clinical/teaching note */
+const SYSTEMS = [
+  {
+    id: 'foundations',
+    name: 'Foundations',
+    eyebrow: 'Module 1',
+    concepts: [
+      { name: 'Anatomical position, planes, directional terms, body regions, cavities, serous membranes', tags: ['A'], status: 'has' },
+      { name: 'Levels of organization (chemical → organismal)', tags: ['AP'], status: 'has' },
+      { name: 'Disease vs disorder, signs vs symptoms', tags: ['AP','CLIN'], status: 'has' },
+      { name: 'Inorganic chemistry: atoms, bonds, water, pH, buffers', tags: ['P'], status: 'has' },
+      { name: 'Organic chemistry: carbohydrates, lipids, proteins, nucleic acids, ATP', tags: ['P'], status: 'has' },
+      { name: 'Cell anatomy: membrane, organelles, nucleus, cytoskeleton', tags: ['A'], status: 'has' },
+      { name: 'Membrane transport: diffusion, osmosis, active transport, vesicular', tags: ['P'], status: 'part' },
+      { name: 'Cell signaling and receptor types', tags: ['P'], status: 'part' },
+      { name: 'Cell cycle and mitosis', tags: ['P'], status: 'part' },
+      { name: 'Tissue types: epithelial, connective, muscle, nervous', tags: ['A'], status: 'has' },
+      { name: 'Glands: exocrine vs endocrine introduction', tags: ['A'], status: 'has' },
+      { name: 'Body membranes: cutaneous, mucous, serous, synovial', tags: ['A'], status: 'has' },
+      { name: 'Homeostasis and feedback loops (positive and negative)', tags: ['P'], status: 'has' }
+    ]
+  },
+  {
+    id: 'integumentary',
+    name: 'Integumentary',
+    eyebrow: 'Skin, hair, nails',
+    concepts: [
+      { name: 'Epidermis: layers and cell types', tags: ['A'], status: 'has' },
+      { name: 'Dermis and hypodermis', tags: ['A'], status: 'has' },
+      { name: 'Accessory structures: hair, glands, nails', tags: ['A'], status: 'has' },
+      { name: 'Skin color and pigmentation (incl. clinical dx clues)', tags: ['A','CLIN'], status: 'has' },
+      { name: 'Thermoregulation', tags: ['P'], status: 'part' },
+      { name: 'Barrier, immune, sensory functions', tags: ['P'], status: 'part' },
+      { name: 'Vitamin D synthesis (skin → liver → kidney)', tags: ['P'], status: 'part' },
+      { name: 'Wound healing phases', tags: ['P','CLIN'], status: 'part' },
+      { name: 'Burns: degree classification, rule of 9s', tags: ['AP','CLIN'], status: 'has' },
+      { name: 'Skin cancers: BCC, SCC, melanoma (ABCDE)', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'skeletal',
+    name: 'Skeletal',
+    eyebrow: 'Bone & joints',
+    concepts: [
+      { name: 'Functions of the skeleton', tags: ['AP'], status: 'has' },
+      { name: 'Bone classifications (long, short, flat, irregular, sesamoid)', tags: ['A'], status: 'has' },
+      { name: 'Gross long bone anatomy (diaphysis, epiphysis, periosteum, marrow)', tags: ['A'], status: 'has' },
+      { name: 'Bone microanatomy: compact (osteons), spongy (trabeculae)', tags: ['A'], status: 'has' },
+      { name: 'Bone cells: osteoblast, osteoclast, osteocyte, osteogenic', tags: ['AP'], status: 'has' },
+      { name: 'Ossification: intramembranous vs endochondral', tags: ['P'], status: 'part' },
+      { name: 'Bone growth (length, width) and remodeling', tags: ['P'], status: 'part' },
+      { name: 'Calcium homeostasis: PTH, calcitonin, vitamin D', tags: ['P'], status: 'has' },
+      { name: 'Bone fractures and healing stages', tags: ['CLIN'], status: 'part' },
+      { name: 'Axial skeleton: skull, vertebral column, thoracic cage', tags: ['A'], status: 'has' },
+      { name: 'Appendicular skeleton: girdles and limbs', tags: ['A'], status: 'has' },
+      { name: 'Joint classifications (structural and functional)', tags: ['A'], status: 'has' },
+      { name: 'Synovial joint anatomy and types', tags: ['A'], status: 'has' },
+      { name: 'Joint movements (flexion, abduction, rotation, etc.)', tags: ['A'], status: 'has' },
+      { name: 'Common joint disorders: OA, RA, gout', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'muscular',
+    name: 'Muscular',
+    eyebrow: 'Skeletal, cardiac, smooth',
+    concepts: [
+      { name: 'Three muscle tissue types: skeletal, cardiac, smooth', tags: ['A'], status: 'has' },
+      { name: 'Skeletal muscle gross anatomy and fascia organization', tags: ['A'], status: 'has' },
+      { name: 'Microanatomy: sarcomere, myofilaments, T-tubules, SR', tags: ['AP'], status: 'has' },
+      { name: 'Excitation-contraction coupling', tags: ['P'], status: 'has' },
+      { name: 'Sliding filament mechanism', tags: ['P'], status: 'has' },
+      { name: 'Cross-bridge cycle and ATP role', tags: ['P'], status: 'has' },
+      { name: 'Motor unit and neuromuscular junction', tags: ['AP'], status: 'has' },
+      { name: 'Muscle metabolism: aerobic/anaerobic, fatigue, O2 debt', tags: ['P'], status: 'has' },
+      { name: 'Muscle fiber types: Type I, IIa, IIx', tags: ['P'], status: 'has' },
+      { name: 'Length-tension and force-velocity relationships', tags: ['P'], status: 'part' },
+      { name: 'Smooth muscle physiology', tags: ['P'], status: 'part' },
+      { name: 'Cardiac muscle physiology (preview to CV)', tags: ['P'], status: 'part' },
+      { name: 'Naming muscles, origin/insertion/action principles', tags: ['A'], status: 'has' },
+      { name: 'Major muscle groups: head/neck, trunk, upper limb, lower limb', tags: ['A'], status: 'has' },
+      { name: 'Common muscle conditions: MD, MG, atrophy', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'nervous',
+    name: 'Nervous & Special Senses',
+    eyebrow: 'CNS, PNS, ANS, senses',
+    concepts: [
+      { name: 'Nervous system divisions (CNS/PNS; somatic/autonomic)', tags: ['A'], status: 'has' },
+      { name: 'Neuron anatomy and classifications', tags: ['A'], status: 'has' },
+      { name: 'Glial cells: 4 CNS, 2 PNS', tags: ['A'], status: 'has' },
+      { name: 'Resting membrane potential', tags: ['P'], status: 'has' },
+      { name: 'Action potential generation and propagation', tags: ['P'], status: 'has' },
+      { name: 'Synaptic transmission: chemical and electrical', tags: ['P'], status: 'has' },
+      { name: 'Neurotransmitters: ACh, NE, DA, 5-HT, GABA, glutamate', tags: ['P'], status: 'has' },
+      { name: 'Reflexes: monosynaptic and polysynaptic', tags: ['P'], status: 'part' },
+      { name: 'Brain anatomy: cerebrum, lobes, deep nuclei, brainstem, cerebellum', tags: ['A'], status: 'has' },
+      { name: 'Cranial nerves I–XII (function and testing)', tags: ['AP'], status: 'part' },
+      { name: 'Spinal cord anatomy and major tracts', tags: ['A'], status: 'has' },
+      { name: 'Meninges, CSF, ventricles', tags: ['A'], status: 'has' },
+      { name: 'Blood-brain barrier', tags: ['AP'], status: 'part' },
+      { name: 'Sensory pathways: DCML, spinothalamic', tags: ['P'], status: 'part' },
+      { name: 'Motor pathways: corticospinal, extrapyramidal', tags: ['P'], status: 'part' },
+      { name: 'ANS: sympathetic vs parasympathetic anatomy', tags: ['AP'], status: 'has' },
+      { name: 'ANS receptors: alpha, beta, muscarinic, nicotinic (pharm-ready)', tags: ['P','CLIN'], status: 'gap', note: 'Builds the bridge to nursing pharmacology — propose building from scratch.' },
+      { name: 'Vision: eye anatomy, photoreceptors, visual pathway', tags: ['AP'], status: 'part' },
+      { name: 'Hearing: ear anatomy, transduction, auditory pathway', tags: ['AP'], status: 'gap', note: 'Limited Drive coverage. Building from scratch.' },
+      { name: 'Balance: vestibular apparatus and pathways', tags: ['AP'], status: 'gap' },
+      { name: 'Olfaction and gustation', tags: ['AP'], status: 'gap' },
+      { name: 'Common neuro conditions: stroke, MS, Parkinson’s, seizures', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'endocrine',
+    name: 'Endocrine',
+    eyebrow: 'Hormonal control',
+    concepts: [
+      { name: 'Endocrine vs nervous system comparison', tags: ['AP'], status: 'has' },
+      { name: 'Hormone classes: peptide, steroid, amine', tags: ['P'], status: 'has' },
+      { name: 'Hormone mechanisms: membrane vs intracellular receptors', tags: ['P'], status: 'has' },
+      { name: 'Hormone control: humoral, neural, hormonal triggers', tags: ['P'], status: 'has' },
+      { name: 'Receptor regulation: up- and down-regulation', tags: ['P'], status: 'has' },
+      { name: 'Hypothalamic-pituitary axis (portal system, neural link)', tags: ['AP'], status: 'has' },
+      { name: 'Anterior pituitary hormones (GH, PRL, TSH, ACTH, FSH, LH)', tags: ['P'], status: 'has' },
+      { name: 'Posterior pituitary hormones (ADH, oxytocin)', tags: ['P'], status: 'has' },
+      { name: 'Thyroid: T3, T4, calcitonin', tags: ['P'], status: 'has' },
+      { name: 'Parathyroid: PTH and calcium balance', tags: ['P'], status: 'has' },
+      { name: 'Adrenal cortex: aldosterone, cortisol, androgens', tags: ['P'], status: 'has' },
+      { name: 'Adrenal medulla: epinephrine, norepinephrine', tags: ['P'], status: 'has' },
+      { name: 'Pancreatic islets: insulin, glucagon, somatostatin', tags: ['P'], status: 'has' },
+      { name: 'Pineal: melatonin and circadian regulation', tags: ['P'], status: 'has' },
+      { name: 'Other endocrine tissues: heart (ANP), kidney (renin, EPO), GI, placenta', tags: ['P'], status: 'has' },
+      { name: 'Stress response: HPA axis', tags: ['P','CLIN'], status: 'part' },
+      { name: 'Endocrine disorders: diabetes (T1, T2, gestational), thyroid, adrenal', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'cv-heart',
+    name: 'Cardiovascular — Heart',
+    eyebrow: 'Pump function',
+    concepts: [
+      { name: 'Heart location, pericardium, wall layers', tags: ['A'], status: 'has' },
+      { name: 'Chambers, valves, great vessels', tags: ['A'], status: 'has' },
+      { name: 'Coronary circulation', tags: ['A'], status: 'has' },
+      { name: 'Conduction system: SA, AV, bundle of His, Purkinje', tags: ['AP'], status: 'has' },
+      { name: 'ECG basics: P, QRS, T and intervals', tags: ['P'], status: 'has' },
+      { name: 'Cardiac cycle: systole/diastole and heart sounds', tags: ['P'], status: 'has' },
+      { name: 'Cardiac output (HR × SV) and regulation', tags: ['P'], status: 'has' },
+      { name: 'Preload, afterload, contractility', tags: ['P'], status: 'has' },
+      { name: 'Frank-Starling mechanism', tags: ['P'], status: 'has' },
+      { name: 'ANS control of the heart', tags: ['P'], status: 'has' },
+      { name: 'Common cardiac conditions: MI, HF, arrhythmias', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'cv-vessels',
+    name: 'Cardiovascular — Vessels',
+    eyebrow: 'Hemodynamics',
+    concepts: [
+      { name: 'Blood vessel histology: artery, vein, capillary, sinusoid', tags: ['A'], status: 'has' },
+      { name: 'Major systemic arteries', tags: ['A'], status: 'part' },
+      { name: 'Major systemic veins', tags: ['A'], status: 'part' },
+      { name: 'Pulmonary circulation', tags: ['A'], status: 'has' },
+      { name: 'Hemodynamics: pressure, flow, resistance, Poiseuille', tags: ['P'], status: 'has' },
+      { name: 'Capillary exchange and Starling forces', tags: ['P'], status: 'has' },
+      { name: 'Blood pressure regulation: short-term (baroreceptors) and long-term (RAAS)', tags: ['P'], status: 'has' },
+      { name: 'Common vascular conditions: HTN, atherosclerosis, DVT, aneurysm', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'blood',
+    name: 'Blood / Hematology',
+    eyebrow: 'Plasma & formed elements',
+    concepts: [
+      { name: 'Blood composition and functions', tags: ['AP'], status: 'has' },
+      { name: 'Plasma proteins', tags: ['P'], status: 'part' },
+      { name: 'RBC structure and function', tags: ['AP'], status: 'part' },
+      { name: 'Hemoglobin and oxygen carrying', tags: ['P'], status: 'has' },
+      { name: 'Erythropoiesis and EPO control', tags: ['P'], status: 'gap', note: 'Build from scratch.' },
+      { name: 'WBC types and function', tags: ['AP'], status: 'part' },
+      { name: 'Platelets and hemostasis (vasc spasm → plug → coagulation cascade)', tags: ['P','CLIN'], status: 'gap', note: 'Build from scratch — load-bearing for nursing.' },
+      { name: 'Blood typing: ABO, Rh, compatibility, transfusion reactions', tags: ['AP','CLIN'], status: 'gap', note: 'Build from scratch — load-bearing for nursing.' },
+      { name: 'Blood disorders: anemias, leukemias, bleeding/clotting disorders', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'lymph-immune',
+    name: 'Lymphatic & Immune',
+    eyebrow: 'Defense & fluid return',
+    concepts: [
+      { name: 'Lymphatic vessels, fluid, and return to circulation', tags: ['AP'], status: 'has' },
+      { name: 'Lymphoid organs: primary (marrow, thymus); secondary (nodes, spleen, MALT)', tags: ['A'], status: 'has' },
+      { name: 'Innate immunity: barriers, inflammation, complement, phagocytes, NK', tags: ['P'], status: 'has' },
+      { name: 'Adaptive immunity overview: cell-mediated vs humoral', tags: ['P'], status: 'has' },
+      { name: 'T cells: CD4 helper, CD8 cytotoxic, regulatory', tags: ['P'], status: 'has' },
+      { name: 'B cells and antibody classes (IgG, IgA, IgM, IgE, IgD)', tags: ['P'], status: 'has' },
+      { name: 'MHC class I and II presentation', tags: ['P'], status: 'has' },
+      { name: 'Active vs passive immunity', tags: ['P'], status: 'has' },
+      { name: 'Vaccines: types and mechanisms', tags: ['P','CLIN'], status: 'part' },
+      { name: 'Hypersensitivity types I–IV', tags: ['CLIN'], status: 'has' },
+      { name: 'Autoimmunity (e.g., SLE, RA, T1DM, MS)', tags: ['CLIN'], status: 'part' },
+      { name: 'Immunodeficiency (incl. HIV/AIDS)', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'respiratory',
+    name: 'Respiratory',
+    eyebrow: 'Ventilation & gas exchange',
+    concepts: [
+      { name: 'Upper airway anatomy', tags: ['A'], status: 'has' },
+      { name: 'Lower airway and lung anatomy', tags: ['A'], status: 'has' },
+      { name: 'Pleural cavities', tags: ['A'], status: 'has' },
+      { name: 'Conducting vs respiratory zones; alveolar architecture', tags: ['A'], status: 'has' },
+      { name: 'Ventilation mechanics (Boyle’s law, intrapleural pressure)', tags: ['P'], status: 'has' },
+      { name: 'Lung volumes and capacities', tags: ['P'], status: 'has' },
+      { name: 'Compliance, resistance, surface tension, surfactant', tags: ['P'], status: 'has' },
+      { name: 'Gas exchange: Dalton’s and Henry’s laws, alveolar-arterial gradient', tags: ['P'], status: 'has' },
+      { name: 'O2 transport: Hb dissociation curve and shifts', tags: ['P'], status: 'has' },
+      { name: 'CO2 transport: 3 forms, chloride shift', tags: ['P'], status: 'has' },
+      { name: 'Control of breathing: medullary centers, chemoreceptors', tags: ['P'], status: 'has' },
+      { name: 'Respiratory acid-base: respiratory acidosis and alkalosis', tags: ['P'], status: 'has' },
+      { name: 'Common respiratory conditions: asthma, COPD, pneumonia, ARDS, PE', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'digestive',
+    name: 'Digestive / GI',
+    eyebrow: 'Tract & accessory organs',
+    concepts: [
+      { name: 'GI tract overview, peritoneum, mesentery', tags: ['A'], status: 'has' },
+      { name: 'GI wall layers: mucosa, submucosa, muscularis, serosa', tags: ['A'], status: 'has' },
+      { name: 'Enteric nervous system and gut motility', tags: ['AP'], status: 'part' },
+      { name: 'Mouth, pharynx, esophagus and swallowing phases', tags: ['AP'], status: 'has' },
+      { name: 'Stomach anatomy and gastric phases of secretion', tags: ['AP'], status: 'has' },
+      { name: 'Small intestine: anatomy, digestion, absorption', tags: ['AP'], status: 'has' },
+      { name: 'Large intestine, microbiome, fecal formation', tags: ['AP'], status: 'has' },
+      { name: 'Liver anatomy and functions (incl. bile)', tags: ['AP'], status: 'has' },
+      { name: 'Gallbladder', tags: ['AP'], status: 'has' },
+      { name: 'Pancreas exocrine function', tags: ['AP'], status: 'has' },
+      { name: 'Carbohydrate digestion and absorption', tags: ['P'], status: 'has' },
+      { name: 'Protein digestion and absorption', tags: ['P'], status: 'has' },
+      { name: 'Lipid digestion, micelles, chylomicrons', tags: ['P'], status: 'has' },
+      { name: 'Vitamin and mineral absorption sites', tags: ['P'], status: 'part' },
+      { name: 'Common GI conditions: GERD, PUD, IBD, hepatitis, cirrhosis, pancreatitis', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'renal',
+    name: 'Urinary + Fluid/Electrolyte/Acid-Base',
+    eyebrow: 'Filtration & balance',
+    concepts: [
+      { name: 'Kidney gross anatomy and position', tags: ['A'], status: 'has' },
+      { name: 'Nephron anatomy and cortical vs juxtamedullary types', tags: ['A'], status: 'has' },
+      { name: 'Renal blood supply (incl. peritubular and vasa recta)', tags: ['A'], status: 'has' },
+      { name: 'Glomerular filtration: GFR and filtration pressures', tags: ['P'], status: 'has' },
+      { name: 'Tubular reabsorption: PCT, LoH, DCT, collecting duct', tags: ['P'], status: 'has' },
+      { name: 'Tubular secretion', tags: ['P'], status: 'has' },
+      { name: 'Countercurrent multiplier and exchanger', tags: ['P'], status: 'has' },
+      { name: 'ADH and water balance', tags: ['P'], status: 'has' },
+      { name: 'RAAS and sodium balance', tags: ['P'], status: 'has' },
+      { name: 'Potassium balance', tags: ['P'], status: 'part' },
+      { name: 'Calcium and phosphate balance (renal contribution)', tags: ['P'], status: 'has' },
+      { name: 'Acid-base: renal role, buffers, compensation', tags: ['P'], status: 'has' },
+      { name: 'Micturition reflex', tags: ['AP'], status: 'has' },
+      { name: 'Fluid compartments: ICF, ECF (interstitial/plasma)', tags: ['P'], status: 'has' },
+      { name: 'Osmolarity, tonicity, fluid shifts', tags: ['P'], status: 'has' },
+      { name: 'Electrolytes: Na, K, Ca, Mg, Cl, PO4 — roles and clinical disorders', tags: ['P','CLIN'], status: 'has' },
+      { name: 'Acid-base disorders: metabolic, respiratory, mixed, compensation', tags: ['P','CLIN'], status: 'has' },
+      { name: 'Common renal conditions: AKI, CKD, UTI, nephrolithiasis', tags: ['CLIN'], status: 'part' }
+    ]
+  },
+  {
+    id: 'reproductive',
+    name: 'Reproductive + Development',
+    eyebrow: 'Cycles, pregnancy, birth',
+    concepts: [
+      { name: 'Male reproductive anatomy', tags: ['A'], status: 'has' },
+      { name: 'Spermatogenesis and testosterone', tags: ['P'], status: 'part' },
+      { name: 'Female reproductive anatomy', tags: ['A'], status: 'has' },
+      { name: 'Ovarian cycle', tags: ['P'], status: 'has' },
+      { name: 'Uterine cycle', tags: ['P'], status: 'has' },
+      { name: 'Hormonal regulation: GnRH, FSH, LH, estrogen, progesterone', tags: ['P'], status: 'has' },
+      { name: 'Fertilization and implantation', tags: ['P'], status: 'has' },
+      { name: 'Pregnancy physiology (maternal adaptations)', tags: ['P'], status: 'part' },
+      { name: 'Lactation', tags: ['P'], status: 'part' },
+      { name: 'Embryology: germ layers, fetal circulation, fetal-to-neonatal shift', tags: ['AP'], status: 'gap', note: 'Build from scratch.' },
+      { name: 'Common congenital defects (overview)', tags: ['CLIN'], status: 'gap' },
+      { name: 'Parturition: stages of labor', tags: ['P'], status: 'part' },
+      { name: 'Common reproductive conditions: PCOS, endometriosis, BPH, prostate ca, breast ca', tags: ['CLIN'], status: 'part' }
+    ]
+  }
+];
+
+/* ---------- Render ---------- */
+const root = document.getElementById('topic-map');
+const cntShown = document.getElementById('cnt-shown');
+const cntTotal = document.getElementById('cnt-total');
+
+function tagBadge(t) {
+  const label = t === 'A' ? 'A' : t === 'P' ? 'P' : t === 'AP' ? 'A&P' : 'CLIN';
+  const cls = t === 'A' ? 'badge-a' : t === 'P' ? 'badge-p' : t === 'AP' ? 'badge-ap' : 'badge-clin';
+  return `<span class="badge ${cls}" aria-label="${label}">${label}</span>`;
+}
+
+function statusDot(s) {
+  if (s === 'has')  return `<span class="status status-has"  aria-label="Has Drive notes" title="Has Drive notes">&check;</span>`;
+  if (s === 'part') return `<span class="status status-part" aria-label="Partial in Drive" title="Partial in Drive">~</span>`;
+  return `<span class="status status-gap"  aria-label="Gap (needs building)" title="Gap (needs building)">!</span>`;
+}
+
+function renderSystem(sys) {
+  const html = `
+    <details class="system" id="sys-${sys.id}" open>
+      <summary>
+        <div>
+          <p class="sys-eyebrow">${sys.eyebrow}</p>
+          <h3 class="sys-title">${sys.name}</h3>
+        </div>
+        <span class="sys-counts" aria-label="Concept counts">
+          <span title="Has notes">${sys.concepts.filter(c=>c.status==='has').length} &check;</span>
+          <span title="Partial">${sys.concepts.filter(c=>c.status==='part').length} ~</span>
+          <span title="Gaps">${sys.concepts.filter(c=>c.status==='gap').length} !</span>
+        </span>
+        <svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3l6 5-6 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <ul class="concept-list">
+        ${sys.concepts.map(c => `
+          <li class="concept" data-tags="${c.tags.join(' ')}" data-status="${c.status}">
+            <span>${statusDot(c.status)}</span>
+            <div>
+              <span class="concept-name">${c.name}</span>
+              ${c.note ? `<p class="concept-note">${c.note}</p>` : ''}
+            </div>
+            <span class="concept-tags">${c.tags.map(tagBadge).join('')}</span>
+          </li>
+        `).join('')}
+      </ul>
+    </details>
+  `;
+  return html;
+}
+
+root.innerHTML = SYSTEMS.map(renderSystem).join('');
+
+/* ---------- Filters ---------- */
+let currentView = 'combined';   // combined | anatomy | physio
+let currentStatus = 'all';      // all | has | part | gap
+
+function applyFilters() {
+  let shown = 0, total = 0;
+  document.querySelectorAll('.concept').forEach(li => {
+    total++;
+    const tags = (li.dataset.tags || '').split(' ');
+    const status = li.dataset.status;
+    let viewOk = true;
+    if (currentView === 'anatomy') viewOk = tags.includes('A')  || tags.includes('AP');
+    if (currentView === 'physio')  viewOk = tags.includes('P')  || tags.includes('AP');
+    const statusOk = currentStatus === 'all' ? true : status === currentStatus;
+    const show = viewOk && statusOk;
+    li.hidden = !show;
+    if (show) shown++;
+  });
+  cntShown.textContent = shown;
+  cntTotal.textContent = total;
+}
+
+document.querySelectorAll('[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentView = btn.dataset.view;
+    applyFilters();
+  });
+});
+document.querySelectorAll('[data-status]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-status]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentStatus = btn.dataset.status;
+    applyFilters();
+  });
+});
+
+applyFilters();
+
+/* ---------- Iframe height sender ---------- */
+(function () {
+  const frameId = 'ap-topic-map';
+  function sendHeight() {
+    const h = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+    try {
+      window.parent.postMessage({ type: 'iframe-height', id: frameId, height: h }, '*');
+    } catch (e) { /* ignore */ }
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  if ('ResizeObserver' in window) {
+    const ro = new ResizeObserver(sendHeight);
+    ro.observe(document.body);
+  }
+  // Send on filter changes too
+  const obs = new MutationObserver(sendHeight);
+  obs.observe(document.body, { childList: true, subtree: true, attributes: true });
+})();
+</script>
+</body>
+</html>

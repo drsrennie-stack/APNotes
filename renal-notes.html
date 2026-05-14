@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renal + Fluid/Electrolyte/Acid-Base — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; }
+  .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; }
+  a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; }
+  a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+
+  header.atlas-header { margin-bottom:22px; }
+  .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; }
+  .seg button:hover { background:var(--navy-tint); }
+  .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; }
+  @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; }
+  .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); }
+  .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; }
+  li.deep-dive::before { margin-right:6px; }
+  article.concept-card[data-depth="deep"] { border-left:4px solid var(--gold); }
+  article.concept-card[data-depth="deep"]::before { display:none; }
+  .deep-dive.callout { border-left-width:4px; border-left-color:var(--gold); }
+  .deep-dive.callout::before { display:none; }
+  .deep-dive.callout h3::after { content:" · DEEP DIVE"; font-size:10px; color:var(--gold-deep); letter-spacing:0.08em; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+
+  figure.diagram { margin:14px 0 4px; padding:0; }
+  figure.diagram svg { width:100%; max-width:700px; height:auto; display:block; margin:0 auto; background:var(--off-white); border:1px solid var(--navy-tint); border-radius:4px; }
+  figure.diagram figcaption { font-family:'Lora',serif; font-style:italic; font-size:13px; color:var(--navy); margin-top:8px; text-align:center; line-height:1.4; }
+  figure.diagram svg text { font-family:'DM Sans',sans-serif; fill:var(--navy); font-size:12px; }
+  figure.diagram svg .lbl-bold { font-weight:700; }
+  figure.diagram svg .lbl-terra { fill:var(--terra-dark); }
+  figure.diagram svg .lbl-gold { fill:var(--gold-deep); }
+  figure.diagram svg .lbl-small { font-size:10.5px; }
+  figure.diagram svg .ax-line { stroke:var(--navy); stroke-width:1; fill:none; }
+  figure.diagram svg .curve-main { stroke:var(--navy); stroke-width:2.4; fill:none; }
+
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); }
+  .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; }
+  .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; }
+  .card-section li { margin-bottom:6px; }
+  .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; }
+  table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; }
+  table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; }
+  .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; }
+  .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); }
+  .callout-clinical h3 { color:var(--terra-dark); }
+  .callout-drawing { border-color:var(--gold-deep); background:var(--white); }
+  .callout-drawing h3 { color:var(--gold-deep); }
+
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; }
+  .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; }
+  .quick-check li { margin-bottom:8px; }
+  .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; }
+  details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; }
+  details.answers[open] > summary { margin-bottom:6px; }
+
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); }
+  .tag-P { color:var(--terra-dark); background:var(--white); }
+  .tag-AP { color:var(--gold-deep); background:var(--white); }
+  .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); }
+  footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; }
+  .top-link:hover { text-decoration:underline; }
+
+  /* Practice tool button (external CTA) */
+  .practice-tool {
+    margin-top:14px;
+    padding:18px 20px;
+    background:var(--white);
+    border:1px solid var(--navy);
+    border-left:4px solid var(--gold);
+    border-radius:4px;
+  }
+  .practice-tool h3 {
+    font-family:'DM Sans',sans-serif;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--gold-deep);
+    font-weight:700;
+    margin:0 0 6px;
+  }
+  .practice-tool p.tool-desc {
+    font-family:'Lora',serif;
+    font-style:italic;
+    font-size:14px;
+    color:var(--navy);
+    margin:0 0 14px;
+    line-height:1.45;
+  }
+  a.practice-btn {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--navy);
+    color:var(--white) !important;
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    padding:12px 22px;
+    border-radius:4px;
+    text-decoration:none;
+    border:2px solid var(--navy);
+    transition:var(--transition);
+  }
+  a.practice-btn:hover {
+    background:var(--navy-deep);
+    border-color:var(--navy-deep);
+    transform:translateY(-1px);
+    box-shadow:var(--hover-shadow);
+  }
+  a.practice-btn:focus-visible {
+    outline:3px solid var(--gold);
+    outline-offset:3px;
+  }
+  a.practice-btn .ext-icon {
+    font-size:13px;
+    transform:translateY(-1px);
+  }
+  @media print {
+    .practice-tool a.practice-btn { background:var(--white); color:var(--navy) !important; border-color:var(--navy); }
+    .practice-tool a.practice-btn::after { content:" → medmasterscollaborative.com/new-abg-case"; font-size:11px; font-weight:400; }
+  }
+
+  @media print {
+    body { background:var(--white); }
+    .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; }
+    details.answers[open] > summary { display:none; }
+    details.answers:not([open]) > *:not(summary) { display:block; }
+    .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; }
+    .toc { display:none; }
+    .quick-check { background:var(--white); }
+    .concept-card[hidden] { display:none !important; }
+    a { color:var(--navy); text-decoration:none; }
+    figure.diagram svg { background:var(--white); }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Renal + Fluid, Electrolyte &amp; Acid-Base</h1>
+    <p class="usage">The kidneys do four things: filter, reabsorb, secrete, and adjust. Everything in this unit (volume, sodium, potassium, calcium, acid-base) is one of those four operations applied to a different substance. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy"  aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio"   aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full"       aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">14</strong> concepts</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 class="toc-h" id="toc-h">Contents</h2>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
+  <main id="main">
+
+    <!-- 1: Kidney anatomy -->
+    <article class="concept-card" id="c1" data-tags="A">
+      <p class="card-eyebrow">Renal &middot; Concept 1 of 14</p>
+      <h2 class="card-title">Kidney gross anatomy and position <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The kidneys are retroperitoneal bean-shaped filters sitting against the posterior abdominal wall. Right kidney sits slightly lower than the left because of the liver above.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Location:</strong> retroperitoneal, T12 to L3. R kidney lower than L by ~1-2 cm (liver displaces it). Each ~12 cm long.</li>
+          <li><strong>External features:</strong> hilum (medial); concave indentation where renal artery, vein, and ureter enter/exit. Renal capsule (fibrous), perirenal fat (cushion), renal fascia (anchor).</li>
+          <li><strong>Internal regions:</strong>
+            <ul>
+              <li>Cortex (outer): contains glomeruli, PCT, DCT.</li>
+              <li>Medulla (inner): contains renal pyramids (8-15 per kidney). Pyramids project apex (papilla) toward minor calyx. Long loops of Henle and collecting ducts.</li>
+              <li>Renal columns: extensions of cortex between pyramids.</li>
+            </ul>
+          </li>
+          <li><strong>Drainage path:</strong> papilla → minor calyx → major calyx → renal pelvis → ureter → bladder → urethra.</li>
+          <li><strong>Functions:</strong>
+            <ul>
+              <li>Filter blood &amp; produce urine (waste removal).</li>
+              <li>Regulate fluid and electrolyte balance.</li>
+              <li>Regulate acid-base.</li>
+              <li>Long-term BP regulation (RAAS).</li>
+              <li>Erythropoietin → RBC production.</li>
+              <li>Activate vitamin D (1,25-(OH)₂-D).</li>
+              <li>Gluconeogenesis (fasting).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Region</th><th>What's there</th><th>Function</th></tr></thead>
+          <tbody>
+            <tr><td>Cortex</td><td>Glomeruli, PCT, DCT</td><td>Filtration, reabsorption</td></tr>
+            <tr><td>Medulla (pyramids)</td><td>LoH, collecting ducts</td><td>Concentration of urine</td></tr>
+            <tr><td>Calyces, pelvis</td><td>Urine collection</td><td>Drainage to ureter</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Kidney stones</strong> (nephrolithiasis) typically lodge at three narrowings: ureteropelvic junction, where the ureter crosses the iliac vessels, and ureterovesical junction. Severe colicky flank-to-groin pain.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a kidney sectioned through the long axis. Label cortex, medulla, pyramids, papilla, minor and major calyces, renal pelvis, ureter.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which kidney sits lower and why?</li>
+          <li><span class="qc-meta">DOK 2.</span> Name three non-filtration functions of the kidney.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Right kidney, displaced by the liver above.</li>
+            <li>Any three of: BP regulation (RAAS), EPO production, vitamin D activation, acid-base balance, gluconeogenesis.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 2: Nephron -->
+    <article class="concept-card" id="c2" data-tags="A">
+      <p class="card-eyebrow">Renal &middot; Concept 2 of 14</p>
+      <h2 class="card-title">Nephron anatomy and types <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The nephron is the functional unit. One million per kidney. Each has a filter (renal corpuscle) and a tubule that processes the filtrate into urine.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Nephron parts in order of flow:</strong>
+            <ul>
+              <li><em>Renal corpuscle:</em> glomerulus (capillary tuft) + Bowman's capsule.</li>
+              <li><em>Proximal convoluted tubule (PCT):</em> in cortex. Workhorse of reabsorption.</li>
+              <li><em>Loop of Henle (LoH):</em> descending limb (water permeable, salt impermeable) and ascending limb (salt permeable, water impermeable).</li>
+              <li><em>Distal convoluted tubule (DCT):</em> in cortex. Fine-tuning by aldosterone, PTH.</li>
+              <li><em>Collecting duct (CD):</em> several nephrons share. ADH acts here.</li>
+            </ul>
+          </li>
+          <li><strong>Two nephron types:</strong>
+            <ul>
+              <li>Cortical (~85%): short LoH staying mostly in cortex.</li>
+              <li>Juxtamedullary (~15%): long LoH diving deep into medulla. Create the medullary osmotic gradient.</li>
+            </ul>
+          </li>
+          <li><strong>Filtration barrier (3 layers):</strong>
+            <ul>
+              <li>Fenestrated capillary endothelium (keeps cells in).</li>
+              <li>Glomerular basement membrane (negative charge, keeps albumin in).</li>
+              <li>Podocyte foot processes with filtration slits (keeps larger proteins in).</li>
+            </ul>
+          </li>
+          <li><strong>Juxtaglomerular apparatus (JGA):</strong>
+            <ul>
+              <li>JG cells (modified smooth muscle of afferent arteriole): secrete renin.</li>
+              <li>Macula densa (specialized cells of DCT): sense NaCl concentration in tubular fluid.</li>
+              <li>Mesangial cells: structural + contractile.</li>
+            </ul>
+          </li>
+          <li><strong>Micturition</strong> (deep dive): stretch receptors in bladder → afferent to spinal cord → parasympathetic (S2-S4) → detrusor contracts, internal sphincter opens. Cortical control over external sphincter.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Segment</th><th>Main job</th><th>Key regulator</th></tr></thead>
+          <tbody>
+            <tr><td>Glomerulus</td><td>Filter</td><td>BP, arteriolar tone</td></tr>
+            <tr><td>PCT</td><td>Bulk reabsorption (~67% Na/H₂O)</td><td>Iso-osmotic, mostly unregulated</td></tr>
+            <tr><td>LoH</td><td>Create medullary gradient</td><td>—</td></tr>
+            <tr><td>DCT</td><td>Fine-tune Na, Ca</td><td>Aldosterone, PTH</td></tr>
+            <tr><td>CD</td><td>Final H₂O, Na, K, H⁺ balance</td><td>ADH, aldosterone</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Proteinuria</strong> implies damage to the filtration barrier (commonly podocyte injury or basement membrane). <strong>Hematuria with RBC casts</strong> implies glomerular injury (glomerulonephritis). The nephron tells you where in the kidney pathology is happening.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch one nephron from afferent arteriole to collecting duct. Label every segment. Add the JGA with macula densa next to the afferent arteriole.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which cells secrete renin?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why is proteinuria a marker of glomerular damage and not tubular damage?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Juxtaglomerular (JG) cells of the afferent arteriole.</li>
+            <li>The filtration barrier normally excludes albumin and larger proteins. Damage to podocytes or basement membrane allows protein leak. Tubular damage shows up as different markers (e.g., glucosuria, low molecular weight proteinuria, casts).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 3: Renal blood supply -->
+    <article class="concept-card" id="c3" data-tags="A">
+      <p class="card-eyebrow">Renal &middot; Concept 3 of 14</p>
+      <h2 class="card-title">Renal blood supply <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The kidney has two capillary beds in series: glomerular (high pressure for filtration) and peritubular (low pressure for reabsorption). The arteriolar geometry makes that possible.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Path:</strong> renal artery → segmental → interlobar → arcuate → cortical radiate → <em>afferent arteriole</em> → <em>glomerulus</em> → <em>efferent arteriole</em> → peritubular capillaries (cortical nephrons) or vasa recta (juxtamedullary nephrons) → cortical radiate v → arcuate v → interlobar v → renal vein.</li>
+          <li><strong>Two arterioles, two beds:</strong>
+            <ul>
+              <li>Afferent constricts → ↓ glomerular pressure → ↓ GFR.</li>
+              <li>Efferent constricts → ↑ glomerular pressure → ↑ GFR (up to a point, then ↓ renal blood flow limits filtration).</li>
+            </ul>
+          </li>
+          <li><strong>Renal blood flow (RBF):</strong> ~1.1 L/min (~20-25% of CO). The kidneys receive a disproportionate share of CO for their mass.</li>
+          <li><strong>Filtration fraction (FF):</strong> GFR/RBF ≈ 20%. The other 80% leaves via efferent arteriole.</li>
+          <li class="deep-dive"><strong>Autoregulation</strong> keeps RBF and GFR constant across MAP 80-180 mmHg via two mechanisms:
+            <ul>
+              <li>Myogenic: stretch of afferent arteriole → reflex constriction.</li>
+              <li>Tubuloglomerular feedback: ↑ NaCl at macula densa → adenosine → afferent constriction → ↓ GFR.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Vessel change</th><th>Effect on GFR</th><th>Effect on RBF</th></tr></thead>
+          <tbody>
+            <tr><td>Afferent constricts</td><td>↓</td><td>↓</td></tr>
+            <tr><td>Afferent dilates</td><td>↑</td><td>↑</td></tr>
+            <tr><td>Efferent constricts</td><td>↑ (modest)</td><td>↓</td></tr>
+            <tr><td>Efferent dilates</td><td>↓</td><td>↑</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>ACE inhibitors</strong> dilate the efferent arteriole → ↓ glomerular pressure. Protective in diabetic nephropathy (prevents hyperfiltration injury). But can cause acute kidney injury in patients with bilateral renal artery stenosis, where they depend on AT-II–driven efferent constriction to maintain GFR. <strong>NSAIDs</strong> block prostaglandins → afferent constriction → ↓ RBF → AKI risk in dehydrated patients.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the two arterioles around a glomerulus, then the peritubular capillaries wrapped around the PCT and DCT. Add arrows showing how afferent vs efferent tone changes GFR.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which arteriole, when constricted, ↑ GFR?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why might ACE inhibitors cause AKI in bilateral renal artery stenosis?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Efferent arteriole (modestly, until RBF falls too low).</li>
+            <li>In renal artery stenosis, perfusion pressure to the glomerulus is low. The kidney compensates by AT-II–driven efferent constriction to maintain glomerular pressure and GFR. ACE inhibitors block AT-II formation → efferent dilates → glomerular pressure falls → GFR collapses.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 4: GFR -->
+    <article class="concept-card" id="c4" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 4 of 14</p>
+      <h2 class="card-title">Glomerular filtration and GFR <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Filtration is just hydrostatic pressure pushing water and small solutes across a membrane, opposed by oncotic pressure and capsular pressure. GFR is the rate.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Starling forces at the glomerulus:</strong>
+            <ul>
+              <li>P<sub>GC</sub> (glomerular capillary hydrostatic, ~55 mmHg): pushes OUT.</li>
+              <li>π<sub>GC</sub> (glomerular oncotic, ~30 mmHg): pulls IN.</li>
+              <li>P<sub>BC</sub> (Bowman's capsule hydrostatic, ~15 mmHg): pushes IN (resists filtration).</li>
+              <li>Net filtration pressure ≈ 55 − 30 − 15 = <strong>+10 mmHg</strong> outward.</li>
+            </ul>
+          </li>
+          <li><strong>Normal GFR ≈ 125 mL/min ≈ 180 L/day.</strong> Almost all of it reabsorbed (we urinate ~1.5 L/day).</li>
+          <li><strong>What changes GFR:</strong>
+            <ul>
+              <li>↑ Afferent constriction → ↓ GFR.</li>
+              <li>↑ Efferent constriction → ↑ GFR.</li>
+              <li>↑ P<sub>BC</sub> (obstruction): ↓ GFR.</li>
+              <li>↑ π<sub>GC</sub> (dehydration with concentrated plasma proteins): ↓ GFR.</li>
+              <li>Surface area loss (lost nephrons): ↓ GFR.</li>
+            </ul>
+          </li>
+          <li><strong>Creatinine clearance</strong> as GFR estimate:
+            <ul>
+              <li>CrCl = (U<sub>Cr</sub> × V) / P<sub>Cr</sub>.</li>
+              <li>Creatinine: produced by muscle at steady rate, freely filtered, slightly secreted (modest overestimate).</li>
+              <li>Serum creatinine ↑ as GFR ↓ but lags acute changes.</li>
+              <li>Estimating equations: Cockcroft-Gault, MDRD, CKD-EPI.</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>Inulin clearance</strong> is the gold standard — freely filtered, not reabsorbed, not secreted. Rarely used clinically. Iohexol clearance is the modern reference.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked calculations</h3>
+        <ol>
+          <li><strong>Creatinine clearance:</strong> 24-hour urine creatinine 1,440 mg, urine volume 1,500 mL, serum creatinine 1.0 mg/dL.
+            <ul>
+              <li>U<sub>Cr</sub> = 1,440 mg / 1,500 mL = 0.96 mg/mL = 96 mg/dL.</li>
+              <li>V = 1,500 mL / 1,440 min = 1.04 mL/min.</li>
+              <li>CrCl = (96 × 1.04) / 1.0 = <strong>~100 mL/min</strong>.</li>
+              <li><em>Interpretation:</em> low end of normal.</li>
+            </ul>
+          </li>
+          <li><strong>Acute change:</strong> Patient with stable baseline Cr 1.0 → 2.0 over 48 h.
+            <ul>
+              <li>Doubling Cr ≈ halving GFR. Estimated GFR drops from ~100 to ~50.</li>
+              <li><em>Interpretation:</em> meets KDIGO criteria for AKI stage 2.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Serum creatinine is convenient but flawed. Sarcopenia ↓ production → falsely "normal" creatinine in low-mass patients (elderly, women). Cystatin C is an alternative for those patients. <strong>CKD staging</strong> uses eGFR: stage 1 (≥90 with damage), 2 (60-89), 3a (45-59), 3b (30-44), 4 (15-29), 5 (&lt;15, dialysis range).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the glomerulus with the three Starling forces. Label P<sub>GC</sub>, π<sub>GC</sub>, P<sub>BC</sub>. Compute net filtration pressure.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> If P<sub>GC</sub> drops to 40 (severe hypotension), what happens to NFP and GFR?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why might an elderly woman's "normal" serum creatinine still represent reduced GFR?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>NFP = 40 − 30 − 15 = −5 mmHg. Net filtration would stop → GFR ≈ 0 → pre-renal AKI. This is why sustained hypotension is nephrotoxic.</li>
+            <li>Creatinine is generated by muscle. Sarcopenia (lower muscle mass) ↓ generation, so serum Cr looks "normal" despite reduced clearance. Use estimating equations that include age, sex, race; consider cystatin C.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 5: Reabsorption + Secretion -->
+    <article class="concept-card" id="c5" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 5 of 14</p>
+      <h2 class="card-title">Tubular reabsorption and secretion <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The kidney filters 180 L/day and produces ~1.5 L of urine. The PCT does the bulk recovery; the LoH builds the gradient; the DCT and collecting duct fine-tune to match the body's needs.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>PCT (where the volume work happens):</strong>
+            <ul>
+              <li>Reabsorbs ~67% of filtered Na⁺ and water (iso-osmotic).</li>
+              <li>100% of filtered glucose, amino acids, ~85% bicarbonate.</li>
+              <li>Driven by basolateral Na/K ATPase establishing the Na⁺ gradient.</li>
+              <li>Apical transporters: SGLT (Na-glucose), Na/H exchanger, Na-amino acid cotransporters.</li>
+              <li>Secretes organic acids (incl. uric acid, many drugs).</li>
+            </ul>
+          </li>
+          <li><strong>Loop of Henle (gradient builder):</strong>
+            <ul>
+              <li>Descending: water permeable, salt impermeable. Filtrate concentrates.</li>
+              <li>Thick ascending: Na/K/2Cl symporter pumps salt out, water stays. Filtrate dilutes.</li>
+              <li>Net: creates and maintains the medullary osmotic gradient (300 mOsm cortex → 1,200 mOsm deep medulla).</li>
+            </ul>
+          </li>
+          <li><strong>DCT:</strong>
+            <ul>
+              <li>Na-Cl symporter (target of thiazide diuretics).</li>
+              <li>Ca²⁺ reabsorption regulated by PTH.</li>
+            </ul>
+          </li>
+          <li><strong>Collecting duct (the fine-tuner):</strong>
+            <ul>
+              <li>Principal cells: reabsorb Na⁺ (ENaC), secrete K⁺, respond to aldosterone and ADH (aquaporin-2 insertion).</li>
+              <li>α-Intercalated cells: secrete H⁺, reabsorb HCO₃⁻ (acid disposal).</li>
+              <li>β-Intercalated cells: secrete HCO₃⁻ (alkali disposal).</li>
+            </ul>
+          </li>
+          <li><strong>Tubular secretion:</strong> moves substances from blood → tubule. Used for K⁺ (CD), H⁺ (CD), organic anions and cations (PCT).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Segment</th><th>What is reabsorbed</th><th>Diuretic that acts here</th></tr></thead>
+          <tbody>
+            <tr><td>PCT</td><td>~67% Na/H₂O, glucose, AA, HCO₃⁻</td><td>Acetazolamide (carbonic anhydrase)</td></tr>
+            <tr><td>Descending LoH</td><td>Water</td><td>—</td></tr>
+            <tr><td>Thick ascending LoH</td><td>Na, K, 2Cl (symporter)</td><td>Loop diuretics (furosemide)</td></tr>
+            <tr><td>DCT</td><td>Na, Cl, Ca</td><td>Thiazides (HCTZ)</td></tr>
+            <tr><td>CD principal</td><td>Na (ENaC), water (ADH)</td><td>K⁺-sparing (amiloride, spironolactone)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Diuretic ladder for fluid overload:</strong> loops are most potent (huge sodium load behind them). Thiazides are next, useful in resistant HTN combined with loops. K⁺-sparing diuretics protect against hypokalemia. <strong>Glucosuria</strong>: when blood glucose &gt; 180 mg/dL, SGLT transport saturates → glucose spills into urine. SGLT2 inhibitors (empagliflozin, dapagliflozin) deliberately exploit this for diabetes and HF.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the nephron with PCT, LoH, DCT, CD. Mark where each diuretic class acts and what substance is moving at each site.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which segment reabsorbs ~67% of filtered sodium?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient on furosemide develops hypokalemia. Trace the mechanism.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Proximal convoluted tubule (PCT).</li>
+            <li>Furosemide blocks Na/K/2Cl in thick ascending LoH → ↑ Na delivery to the CD → principal cells exchange Na (in) for K (out) under aldosterone → ↑ K⁺ excretion → hypokalemia. Treat with K⁺ supplementation or add a K⁺-sparing agent.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 6: Countercurrent -->
+    <article class="concept-card" id="c6" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 6 of 14</p>
+      <h2 class="card-title">Countercurrent multiplier and exchanger <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The kidney concentrates urine using a clever trick: a salt pump in the ascending limb creates a gradient that the descending limb passively follows. The vasa recta preserve the gradient by flowing in opposite directions.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Countercurrent multiplier</strong> (the loop of Henle):
+            <ul>
+              <li>Thick ascending limb pumps Na/K/2Cl out → interstitium becomes salty.</li>
+              <li>Descending limb is water-permeable → water leaves filtrate into salty interstitium.</li>
+              <li>Filtrate at the bottom of the loop reaches ~1,200 mOsm.</li>
+              <li>Net effect: builds the medullary osmotic gradient (300 → 1,200 mOsm).</li>
+            </ul>
+          </li>
+          <li><strong>Countercurrent exchanger</strong> (the vasa recta):
+            <ul>
+              <li>Blood vessels run parallel to LoH, descending and ascending limbs adjacent.</li>
+              <li>Passively trade water and solutes with surrounding interstitium without washing out the gradient.</li>
+            </ul>
+          </li>
+          <li><strong>Urea recycling</strong> (deep dive):
+            <ul>
+              <li>Urea is reabsorbed in the deep CD (ADH-dependent), entering the medullary interstitium, contributing ~half of the 1,200 mOsm.</li>
+              <li>Some diffuses into the thin LoH and is recycled.</li>
+            </ul>
+          </li>
+          <li><strong>Why it matters:</strong> the gradient is the engine that lets the collecting duct (under ADH) extract water from the filtrate to concentrate urine. No gradient = no concentration.</li>
+          <li class="deep-dive"><strong>Loss of gradient:</strong> chronic loop diuretic use, severe medullary injury → impaired concentrating ability → polyuria.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Structure</th><th>What it does</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>Thick ascending LoH</td><td>Active salt pump</td><td>Multiplies gradient</td></tr>
+            <tr><td>Descending LoH</td><td>Passive water loss</td><td>Filtrate concentrates</td></tr>
+            <tr><td>Vasa recta</td><td>Passive countercurrent flow</td><td>Preserves gradient</td></tr>
+            <tr><td>Collecting duct + ADH</td><td>Aquaporin-2 insertion</td><td>Water reabsorbed → concentrated urine</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Loop diuretics destroy the gradient.</strong> Furosemide blocks Na/K/2Cl → ↓ medullary osmolarity → ↓ ability to concentrate urine even with ADH. Useful clinically: rapid diuresis. Side effect: cannot concentrate urine well during therapy. <strong>Diabetes insipidus</strong>: central DI (low ADH) and nephrogenic DI (kidney unresponsive to ADH) both cause dilute polyuria; central DI responds to desmopressin, nephrogenic does not.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the LoH with osmolarities marked at top (300), bottom (1,200), thick ascending exit (100). Add the vasa recta running antiparallel. Show ADH-driven water reabsorption in the CD.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Maximum osmolarity of human medullary interstitium?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why can a patient on chronic furosemide not concentrate urine even when dehydrated?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>~1,200 mOsm/kg.</li>
+            <li>Furosemide blocks the Na/K/2Cl transporter that drives the countercurrent multiplier. Without active salt pumping, the medullary gradient collapses. ADH can still try to extract water from the collecting duct, but with no osmotic gradient to draw against, water cannot be removed efficiently.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 7: ADH and water balance -->
+    <article class="concept-card" id="c7" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 7 of 14</p>
+      <h2 class="card-title">ADH and water balance <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">ADH (vasopressin) is the master regulator of water. It inserts aquaporins in the collecting duct to recapture water when plasma is too concentrated.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Made in:</strong> hypothalamus (supraoptic + paraventricular nuclei). <strong>Released from:</strong> posterior pituitary.</li>
+          <li><strong>Stimuli for release:</strong>
+            <ul>
+              <li>↑ Plasma osmolarity (sensed by hypothalamic osmoreceptors, threshold ~280 mOsm).</li>
+              <li>↓ Blood volume / BP (sensed by atrial and arterial baroreceptors).</li>
+              <li>Nausea, pain, anxiety, opioids (non-osmotic).</li>
+            </ul>
+          </li>
+          <li><strong>Two receptors:</strong>
+            <ul>
+              <li>V2: principal cells of CD → aquaporin-2 insertion → water reabsorption.</li>
+              <li>V1: vascular smooth muscle → vasoconstriction (at high levels, in shock).</li>
+            </ul>
+          </li>
+          <li><strong>Without ADH:</strong> CD impermeable to water → dilute urine, polyuria (up to ~20 L/day).</li>
+          <li><strong>With maximum ADH:</strong> CD very permeable → concentrated urine (~1,200 mOsm).</li>
+          <li><strong>Disorders:</strong>
+            <ul>
+              <li>SIADH: too much ADH → water retention → hyponatremia, concentrated urine.</li>
+              <li>Central DI: too little ADH (pituitary injury) → dilute polyuria, hypernatremia. Responds to desmopressin.</li>
+              <li>Nephrogenic DI: kidney resistance to ADH (lithium, hypercalcemia, congenital) → dilute polyuria. Does not respond to desmopressin.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Condition</th><th>ADH</th><th>Urine</th><th>Serum Na</th></tr></thead>
+          <tbody>
+            <tr><td>Dehydration</td><td>↑↑</td><td>Concentrated, low volume</td><td>Normal-high</td></tr>
+            <tr><td>SIADH</td><td>↑ inappropriately</td><td>Concentrated</td><td>↓ (hyponatremia)</td></tr>
+            <tr><td>Central DI</td><td>↓</td><td>Dilute, polyuria</td><td>↑</td></tr>
+            <tr><td>Nephrogenic DI</td><td>Normal/high</td><td>Dilute, polyuria</td><td>↑</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Hyponatremia from SIADH</strong>: treat by restricting free water; severe symptomatic cases may need hypertonic saline (cautiously — too-rapid correction risks osmotic demyelination). <strong>Lithium-induced nephrogenic DI</strong> is common in long-term users. <strong>"Water deprivation test"</strong> differentiates DI from primary polydipsia and central from nephrogenic by response to desmopressin.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the hypothalamic-posterior pituitary axis. Show osmoreceptors → ADH release → V2 receptor → aquaporin insertion in CD principal cell → water reabsorption.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient on lithium develops polyuria and dilute urine. Most likely diagnosis?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why is rapid correction of severe hyponatremia dangerous?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Lithium-induced nephrogenic diabetes insipidus.</li>
+            <li>Brain cells adapt to chronic hyponatremia by losing osmolytes. Rapid correction makes plasma hypertonic relative to brain cells → water shifts out → osmotic demyelination (formerly "central pontine myelinolysis"). Correct Na slowly (≤ 8-10 mEq/L per 24 h in chronic).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 8: RAAS / sodium / aldosterone -->
+    <article class="concept-card" id="c8" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 8 of 14</p>
+      <h2 class="card-title">RAAS, sodium balance, and aldosterone <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The kidney owns long-term BP through volume control. Sodium is the volume hormone, and aldosterone is the sodium hormone. RAAS ties them together.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>RAAS cascade</strong> (see cardiovascular notes for the full diagram):
+            <ul>
+              <li>↓ Renal perfusion or ↓ NaCl at macula densa or ↑ sympathetic → JG cells release renin.</li>
+              <li>Renin cleaves angiotensinogen (liver) → AT-I.</li>
+              <li>ACE (lung endothelium) converts AT-I → AT-II.</li>
+              <li>AT-II effects: vasoconstriction, ↑ aldosterone, ↑ ADH, ↑ thirst, direct ↑ PCT Na reabsorption.</li>
+            </ul>
+          </li>
+          <li><strong>Aldosterone</strong> (adrenal cortex, zona glomerulosa):
+            <ul>
+              <li>Targets principal cells of cortical CD.</li>
+              <li>Inserts ENaC (apical) and Na/K ATPase (basolateral) → Na⁺ reabsorbed, K⁺ secreted.</li>
+              <li>Also stimulates α-intercalated cells → H⁺ secretion.</li>
+              <li>Net: ↑ volume, ↑ BP, ↓ K⁺, slight acid loss.</li>
+            </ul>
+          </li>
+          <li><strong>Counter-regulators:</strong>
+            <ul>
+              <li>ANP and BNP: released from atrial / ventricular myocytes when stretched → ↑ Na excretion, ↑ GFR, ↓ renin, ↓ aldosterone.</li>
+              <li>Pressure natriuresis: ↑ BP → mechanical ↑ Na excretion.</li>
+            </ul>
+          </li>
+          <li><strong>Disorders:</strong>
+            <ul>
+              <li>Primary hyperaldosteronism (Conn syndrome): adrenal adenoma → ↑ aldosterone → HTN, hypokalemia, metabolic alkalosis, low renin.</li>
+              <li>Secondary hyperaldosteronism: ↑ renin → ↑ aldosterone (renal artery stenosis, HF, cirrhosis).</li>
+              <li>Addison disease (primary adrenal failure): ↓ aldosterone → hyponatremia, hyperkalemia, hypotension, acidosis.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>State</th><th>Renin</th><th>Aldosterone</th><th>Na</th><th>K</th></tr></thead>
+          <tbody>
+            <tr><td>Primary hyperaldo (Conn)</td><td>↓</td><td>↑↑</td><td>Normal/↑</td><td>↓</td></tr>
+            <tr><td>Secondary hyperaldo</td><td>↑</td><td>↑</td><td>Normal/↑</td><td>↓</td></tr>
+            <tr><td>Addison</td><td>↑</td><td>↓</td><td>↓</td><td>↑</td></tr>
+            <tr><td>SIADH (compare)</td><td>Normal</td><td>Normal</td><td>↓ (dilution)</td><td>Normal</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>ACE inhibitors / ARBs / MRAs</strong> all reduce aldosterone action, dropping Na/water retention and conserving K⁺. <strong>Spironolactone</strong> reduces mortality in HFrEF by blocking aldosterone's pro-fibrotic and remodeling effects on the heart (beyond just diuresis).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the cortical collecting duct principal cell. Show ENaC apical, Na/K ATPase basolateral, ROMK channel apical for K⁺ secretion. Add aldosterone receptor on the basolateral side activating gene transcription.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> What electrolyte pattern do you expect in Addison's disease?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why does spironolactone reduce mortality in HFrEF beyond its diuretic effect?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>↓ Na, ↑ K, ± metabolic acidosis (mineralocorticoid deficiency).</li>
+            <li>Aldosterone promotes cardiac fibrosis and adverse remodeling beyond its renal effects. Mineralocorticoid receptor antagonism (spironolactone, eplerenone) reduces fibrosis, arrhythmias, and remodeling, lowering mortality in HFrEF independent of diuresis.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 9: Potassium -->
+    <article class="concept-card" id="c9" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 9 of 14</p>
+      <h2 class="card-title">Potassium balance <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Potassium lives mostly inside cells. Small shifts in serum K⁺ have huge consequences for excitable tissues. The kidney is the long-term gatekeeper; aldosterone, pH, and insulin shift it acutely.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Distribution:</strong> ~98% intracellular, ~2% extracellular. Serum K⁺ 3.5-5.0 mEq/L.</li>
+          <li><strong>Acute shifts (between compartments):</strong>
+            <ul>
+              <li>Insulin pushes K⁺ INTO cells (used therapeutically in hyperkalemia).</li>
+              <li>β2 agonists push K⁺ INTO cells (albuterol used in hyperK).</li>
+              <li>Alkalosis pushes K⁺ INTO cells (in exchange for H⁺).</li>
+              <li>Acidosis pushes K⁺ OUT (causes hyperkalemia in DKA at presentation).</li>
+              <li>Cell lysis (rhabdo, hemolysis, TLS) releases K⁺ → hyperkalemia.</li>
+            </ul>
+          </li>
+          <li><strong>Renal handling:</strong>
+            <ul>
+              <li>PCT: ~65% reabsorbed.</li>
+              <li>Thick ascending LoH: ~25% reabsorbed (Na/K/2Cl).</li>
+              <li>DCT / CD: variable. Principal cells SECRETE K⁺ under aldosterone; α-intercalated cells can REABSORB K⁺ in deficit states.</li>
+            </ul>
+          </li>
+          <li><strong>Hyperkalemia (K⁺ &gt; 5.0):</strong>
+            <ul>
+              <li>Causes: renal failure, K-sparing diuretics, ACE-I/ARBs, Addison, acidosis, cell lysis, hemolyzed sample.</li>
+              <li>ECG: peaked T waves → wide QRS → loss of P → sine wave → asystole.</li>
+              <li>Emergency treatment ("C BIG K"):
+                <ul>
+                  <li>C: Calcium gluconate (stabilizes myocardium, does not lower K).</li>
+                  <li>B: Bicarbonate if acidotic (shifts K in).</li>
+                  <li>I: Insulin + glucose (shifts K in).</li>
+                  <li>G: β2-Agonist (e.g., albuterol, shifts K in).</li>
+                  <li>K: Kayexalate / patiromer / dialysis (remove K from body).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Hypokalemia (K⁺ &lt; 3.5):</strong>
+            <ul>
+              <li>Causes: diuretics, vomiting, diarrhea, hyperaldosteronism, alkalosis, insulin therapy.</li>
+              <li>ECG: U waves, flattened T, prolonged QT.</li>
+              <li>Symptoms: weakness, cramps, arrhythmias, ileus.</li>
+              <li>Replace K orally if possible; IV slowly (≤ 10 mEq/hr peripherally, ≤ 20 mEq/hr central). Also replace Mg²⁺ (low Mg perpetuates low K).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>State</th><th>K⁺ shift</th><th>ECG hallmark</th></tr></thead>
+          <tbody>
+            <tr><td>Hyperkalemia</td><td>Cellular leak or retention</td><td>Peaked T → wide QRS → sine wave</td></tr>
+            <tr><td>Hypokalemia</td><td>Loss or shift in</td><td>U waves, flat T, long QT</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Always check magnesium when treating hypokalemia. Low Mg²⁺ keeps ROMK channels open → ongoing K⁺ secretion. You cannot fix K⁺ without fixing Mg²⁺. Also: digoxin toxicity is potentiated by hypokalemia (both compete for Na/K ATPase).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the K⁺ shift compartments. Show ECF and ICF with K⁺ percentages. Add arrows for insulin, β2, alkalosis (into cell) and acidosis, cell lysis (out of cell).</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which ECG change is the earliest in hyperkalemia?</li>
+          <li><span class="qc-meta">DOK 4.</span> A DKA patient with K⁺ 5.8 on arrival drops to 3.0 after insulin. Explain.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Peaked (tented) T waves.</li>
+            <li>DKA causes acidosis, which drives K⁺ out of cells → measured serum K⁺ is high even though total body K⁺ is depleted (from osmotic losses in urine). Insulin shifts K⁺ back INTO cells, unmasking the deficit → rapid drop. Always replace K⁺ in DKA once not severely hyperkalemic. Watch K closely as you treat.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 10: Calcium/phosphate -->
+    <article class="concept-card" id="c10" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 10 of 14</p>
+      <h2 class="card-title">Calcium and phosphate balance <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Calcium and phosphate move together but are regulated like rivals. PTH raises Ca²⁺ and lowers phosphate; calcitriol raises both. The kidney converts vitamin D to its active form.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Calcium distribution:</strong> 99% in bone. Plasma ~10 mg/dL (total) or ~1.2 mmol/L (ionized). 40% bound to albumin, 50% free (ionized = active), 10% complexed.</li>
+          <li><strong>Three hormones, two organs (gut, kidney, bone):</strong>
+            <ul>
+              <li><em>PTH</em> (parathyroid, in response to ↓ Ca²⁺):
+                <ul>
+                  <li>Bone: ↑ resorption → ↑ Ca²⁺ and phosphate release.</li>
+                  <li>Kidney: ↑ Ca²⁺ reabsorption (DCT), ↓ phosphate reabsorption (PCT) → phosphaturia.</li>
+                  <li>Kidney: ↑ 1α-hydroxylase → ↑ active vitamin D.</li>
+                </ul>
+              </li>
+              <li><em>Calcitriol</em> (active vitamin D, 1,25-(OH)₂-D):
+                <ul>
+                  <li>Gut: ↑ Ca²⁺ AND phosphate absorption.</li>
+                  <li>Bone: permissive for PTH-mediated resorption.</li>
+                  <li>Kidney: modest ↑ Ca²⁺ reabsorption.</li>
+                </ul>
+              </li>
+              <li><em>Calcitonin</em> (thyroid C cells): mild ↓ Ca²⁺ via inhibition of osteoclasts. Minor role in humans.</li>
+            </ul>
+          </li>
+          <li><strong>Vitamin D activation:</strong>
+            <ul>
+              <li>Skin (UVB) or diet → cholecalciferol (D3).</li>
+              <li>Liver: 25-hydroxylation → 25-OH-D (storage form, what we measure).</li>
+              <li>Kidney: 1α-hydroxylation → 1,25-(OH)₂-D (active).</li>
+            </ul>
+          </li>
+          <li><strong>Phosphate:</strong> PCT reabsorption regulated by PTH (inhibits) and FGF23 (inhibits in CKD).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Hormone</th><th>Ca</th><th>Phosphate</th><th>Trigger</th></tr></thead>
+          <tbody>
+            <tr><td>PTH</td><td>↑</td><td>↓ (renal)</td><td>↓ Ca²⁺</td></tr>
+            <tr><td>Calcitriol</td><td>↑</td><td>↑</td><td>PTH, ↓ Ca²⁺, ↓ phosphate</td></tr>
+            <tr><td>Calcitonin</td><td>↓ (modest)</td><td>↓ (modest)</td><td>↑ Ca²⁺</td></tr>
+            <tr><td>FGF23 (deep)</td><td>—</td><td>↓ (renal)</td><td>↑ Phosphate</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>CKD mineral-bone disease:</strong> failing kidney can't activate vitamin D → ↓ Ca²⁺ → secondary hyperparathyroidism → bone disease. Phosphate also retained → ↑ FGF23. Manage with phosphate binders, vitamin D analogs, calcimimetics. <strong>Hypocalcemia signs:</strong> Chvostek (facial tap twitches), Trousseau (carpal spasm with BP cuff), perioral tingling, prolonged QT. <strong>Hypercalcemia:</strong> "stones, bones, groans, psychiatric overtones" — kidney stones, bone pain, GI/abdominal pain, confusion. Shortens QT.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the three-organ map (bone, gut, kidney). Add PTH, calcitriol, calcitonin arrows showing what each does at each organ.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Where in the kidney is vitamin D activated?</li>
+          <li><span class="qc-meta">DOK 3.</span> In primary hyperparathyroidism, what happens to serum Ca, phosphate, and urine phosphate?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Proximal tubule via 1α-hydroxylase.</li>
+            <li>↑ Serum Ca (from bone, gut, kidney). ↓ Serum phosphate (PTH inhibits PCT phosphate reabsorption). ↑ Urine phosphate (phosphaturia).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 11: Renal acid-base -->
+    <article class="concept-card" id="c11" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 11 of 14</p>
+      <h2 class="card-title">Renal acid-base regulation <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The lungs handle volatile acid (CO₂) by ventilation. The kidneys handle fixed acid (H⁺ from metabolism) by reabsorbing bicarbonate and secreting protons. Slower than the lungs, but the only way to actually remove H⁺ from the body.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Three buffer systems:</strong>
+            <ul>
+              <li>Bicarbonate (extracellular, fastest, regulated by both lungs and kidneys): H⁺ + HCO₃⁻ ⇌ H₂CO₃ ⇌ CO₂ + H₂O.</li>
+              <li>Protein (intracellular, esp. Hb): histidine residues.</li>
+              <li>Phosphate (urinary, intracellular).</li>
+            </ul>
+          </li>
+          <li><strong>Renal acid handling (two main jobs):</strong>
+            <ul>
+              <li><em>Reabsorb filtered HCO₃⁻</em> (PCT, ~85%; thick ascending LoH, ~10%; DCT/CD, ~5%). Done via H⁺ secretion + carbonic anhydrase.</li>
+              <li><em>Generate new HCO₃⁻</em> by excreting H⁺ buffered by phosphate (titratable acid) and ammonia (NH₃ + H⁺ → NH₄⁺).</li>
+            </ul>
+          </li>
+          <li><strong>α-Intercalated cells</strong> (CD): pump H⁺ into urine via H⁺-ATPase and H⁺/K⁺-ATPase. Generate HCO₃⁻ on the basolateral side.</li>
+          <li><strong>β-Intercalated cells</strong> (CD): secrete HCO₃⁻ in alkalosis. Mirror image.</li>
+          <li><strong>Compensation rules:</strong>
+            <ul>
+              <li>Respiratory acidosis → kidney retains HCO₃⁻ (takes days; expect ~3.5 mEq HCO₃⁻ rise per 10 mmHg PaCO₂ rise in chronic).</li>
+              <li>Metabolic acidosis → lungs hyperventilate (within minutes). Winters formula: expected PaCO₂ = 1.5 × HCO₃⁻ + 8 (±2).</li>
+              <li>Metabolic alkalosis → hypoventilation, but limited by hypoxia.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Type of acid</th><th>Handled by</th><th>Speed</th></tr></thead>
+          <tbody>
+            <tr><td>Volatile (CO₂)</td><td>Lung</td><td>Minutes</td></tr>
+            <tr><td>Fixed (H⁺ from diet, metabolism)</td><td>Kidney</td><td>Hours to days</td></tr>
+            <tr><td>Buffer (HCO₃⁻ generation)</td><td>Kidney (phosphate + ammonia)</td><td>Days</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Renal tubular acidosis (RTA):</strong>
+        <ul>
+          <li>Type 1 (distal): cannot secrete H⁺ → urine pH high, hypokalemia, hypercalciuria, kidney stones.</li>
+          <li>Type 2 (proximal): cannot reabsorb HCO₃⁻ → bicarbonate wasting, hypokalemia.</li>
+          <li>Type 4 (hyperkalemic): low aldosterone or resistance → ↓ Na/K/H exchange, hyperkalemia, mild acidosis.</li>
+        </ul>
+        </p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw an α-intercalated cell. Show H⁺-ATPase apical pumping H⁺ into urine. Inside, carbonic anhydrase regenerates HCO₃⁻ which exits basolaterally via the Cl/HCO₃ exchanger. Add the urine phosphate buffer (HPO₄²⁻ + H⁺ → H₂PO₄⁻).</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A metabolic acidosis patient has HCO₃⁻ 14. What PaCO₂ would represent appropriate respiratory compensation?</li>
+          <li><span class="qc-meta">DOK 4.</span> Explain why Type 1 distal RTA produces both acidosis and kidney stones.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Winters: PaCO₂ ≈ 1.5 × 14 + 8 = 21 + 8 = <strong>29 (±2)</strong>. Higher than that = co-existing respiratory acidosis; lower = co-existing respiratory alkalosis.</li>
+            <li>Distal H⁺ secretion fails → systemic acidosis. Urine cannot be acidified, so calcium phosphate precipitates more readily. Acidosis also drives bone Ca²⁺ release → hypercalciuria → stones. Plus, citrate (a natural stone inhibitor) is reabsorbed more in acidosis → low urinary citrate worsens stone formation.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 12: Fluid compartments + osmolarity -->
+    <article class="concept-card" id="c12" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 12 of 14</p>
+      <h2 class="card-title">Fluid compartments, osmolarity, tonicity <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Total body water is ~60% of body weight. It splits between intracellular and extracellular spaces. Sodium dominates ECF, potassium dominates ICF, and water moves freely between them along osmotic gradients.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Total body water (TBW):</strong> ~60% of BW in adult males, ~50% in females. Decreases with age and adiposity.</li>
+          <li><strong>Compartment split (60-40-20 rule for males):</strong>
+            <ul>
+              <li>Total body water: 60% BW (in a 70 kg male ≈ 42 L).</li>
+              <li>Intracellular fluid (ICF): 40% BW (~28 L). Dominant cation: K⁺.</li>
+              <li>Extracellular fluid (ECF): 20% BW (~14 L). Dominant cation: Na⁺.
+                <ul>
+                  <li>Interstitial: ~15% BW.</li>
+                  <li>Plasma: ~5% BW.</li>
+                  <li>Transcellular (CSF, GI, joint): ~1%.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Osmolarity:</strong> total solute concentration in solution (mOsm/L). Normal plasma 285-295.</li>
+          <li><strong>Effective osmolarity (tonicity):</strong> only solutes that don't freely cross membranes count. Na⁺, glucose, mannitol = effective. Urea = ineffective (crosses freely).</li>
+          <li><strong>Tonicity of common IV fluids</strong> (vs plasma):
+            <ul>
+              <li>0.9% NS: isotonic (308 mOsm).</li>
+              <li>Lactated Ringers: isotonic (273 mOsm), more physiologic electrolytes.</li>
+              <li>5% Dextrose (D5W): isotonic in the bag, hypotonic once dextrose is metabolized — distributes as free water.</li>
+              <li>0.45% NS: hypotonic.</li>
+              <li>3% NaCl: hypertonic (used for severe hyponatremia, ICP).</li>
+            </ul>
+          </li>
+          <li><strong>Water movement:</strong>
+            <ul>
+              <li>Hypertonic ECF (e.g., hypernatremia) → water leaves cells → cells shrink.</li>
+              <li>Hypotonic ECF (e.g., hyponatremia) → water enters cells → cells swell. In brain → cerebral edema.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked calculation</h3>
+        <ol>
+          <li><strong>Plasma osmolarity:</strong> Na 140, glucose 90, BUN 14.
+            <ul>
+              <li>P<sub>osm</sub> ≈ 2 × [Na] + glucose/18 + BUN/2.8 = 280 + 5 + 5 = <strong>290 mOsm/L</strong>.</li>
+              <li><em>Interpretation:</em> normal.</li>
+            </ul>
+          </li>
+          <li><strong>DKA case:</strong> Na 130, glucose 720, BUN 28.
+            <ul>
+              <li>P<sub>osm</sub> = 2 × 130 + 720/18 + 28/2.8 = 260 + 40 + 10 = <strong>310 mOsm/L</strong>.</li>
+              <li><em>Interpretation:</em> hyperosmolar despite "low" Na. Glucose drags water out of cells, diluting Na (corrected Na: add 1.6 mEq for every 100 glucose above 100 → 130 + 1.6 × 6.2 ≈ 140).</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Fluid choice matters. <strong>Hypovolemic shock:</strong> isotonic (NS or LR) replaces ECF volume. <strong>Hypernatremia:</strong> hypotonic (½ NS, D5W) corrects free water deficit. <strong>Hyponatremia (severe symptomatic):</strong> 3% NS to raise Na slowly. Free water deficit ≈ TBW × (Na − 140) / 140.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the body compartments with percentages. Mark Na⁺ in ECF and K⁺ in ICF. Show what happens to cell volume in hypotonic vs hypertonic solutions.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Dominant cation in the ECF? In the ICF?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why is D5W effectively a hypotonic free-water infusion despite being isotonic in the bag?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>ECF: Na⁺. ICF: K⁺.</li>
+            <li>The dextrose is rapidly metabolized to CO₂ and H₂O by cells, leaving behind essentially distilled water. The water distributes across TBW (about 1/3 ECF, 2/3 ICF), so D5W functions as free water and is used to correct hypernatremia.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 13: Acid-base disorders -->
+    <article class="concept-card" id="c13" data-tags="P">
+      <p class="card-eyebrow">Renal &middot; Concept 13 of 14</p>
+      <h2 class="card-title">Acid-base disorder interpretation <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Use a stepwise method on every ABG. Identify the primary disorder, evaluate compensation, calculate the anion gap, and check for mixed disorders. Patterns emerge quickly with practice.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Six-step interpretation:</strong>
+            <ol>
+              <li>pH: acidemic (&lt;7.35), alkalemic (&gt;7.45), normal?</li>
+              <li>PaCO₂: which way moves it?</li>
+              <li>HCO₃⁻: which way moves it?</li>
+              <li>Identify primary disorder (whichever value moves with the pH).</li>
+              <li>Check expected compensation. If outside the predicted range → mixed disorder.</li>
+              <li>If metabolic acidosis → calculate anion gap (AG = Na − Cl − HCO₃⁻; normal 8-12).</li>
+            </ol>
+          </li>
+          <li><strong>Compensation rules:</strong>
+            <ul>
+              <li>Acute respiratory acidosis: HCO₃⁻ ↑ 1 per 10 PaCO₂ ↑.</li>
+              <li>Chronic respiratory acidosis: HCO₃⁻ ↑ 3.5 per 10 PaCO₂ ↑.</li>
+              <li>Metabolic acidosis: PaCO₂ = 1.5 × HCO₃⁻ + 8 (Winters).</li>
+              <li>Metabolic alkalosis: PaCO₂ ↑ 0.7 per 1 HCO₃⁻ ↑ (limited by hypoxic drive).</li>
+            </ul>
+          </li>
+          <li><strong>High AG metabolic acidosis (MUDPILES):</strong>
+            <ul>
+              <li>Methanol, Uremia, DKA, Propylene glycol, Iron/INH, Lactate, Ethylene glycol, Salicylates.</li>
+            </ul>
+          </li>
+          <li><strong>Normal AG metabolic acidosis:</strong>
+            <ul>
+              <li>Diarrhea (lose HCO₃⁻), RTA, acetazolamide. Cl⁻ rises to fill the gap (hyperchloremic).</li>
+            </ul>
+          </li>
+          <li><strong>Mixed disorders:</strong> two primaries at once. Examples:
+            <ul>
+              <li>Salicylate poisoning: metabolic acidosis + respiratory alkalosis.</li>
+              <li>DKA with vomiting: high AG metabolic acidosis + metabolic alkalosis.</li>
+              <li>COPD on diuretic: respiratory acidosis + metabolic alkalosis.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked ABG interpretations</h3>
+        <ol>
+          <li><strong>ABG:</strong> pH 7.10, PaCO₂ 22, HCO₃⁻ 6, Na 138, Cl 100.
+            <ul>
+              <li>Acidemic. HCO₃⁻ ↓ → primary metabolic acidosis.</li>
+              <li>Winters: expected PaCO₂ = 1.5 × 6 + 8 = 17 (±2). Actual 22 = co-existing respiratory acidosis.</li>
+              <li>AG = 138 − 100 − 6 = 32 → high AG.</li>
+              <li><strong>Mixed: high AG metabolic acidosis + respiratory acidosis.</strong> Severe DKA with respiratory failure.</li>
+            </ul>
+          </li>
+          <li><strong>ABG:</strong> pH 7.55, PaCO₂ 48, HCO₃⁻ 40, Cl 90.
+            <ul>
+              <li>Alkalemic. HCO₃⁻ ↑ → primary metabolic alkalosis.</li>
+              <li>Expected PaCO₂ ↑ 0.7 per 1 HCO₃⁻ above 24 = 0.7 × 16 ≈ 11; expected ~40+11 = 51. Actual 48 ≈ expected → appropriate respiratory compensation.</li>
+              <li><strong>Metabolic alkalosis with appropriate compensation.</strong> Cause: vomiting, diuretics, NGT suction.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="practice-tool" aria-labelledby="abg-practice-h">
+        <h3 id="abg-practice-h">Practice</h3>
+        <p class="tool-desc">Work through unlimited self-generated ABG cases with worked interpretations on the MedMasters case generator. Each load is a new case.</p>
+        <a class="practice-btn" href="https://www.medmasterscollaborative.com/new-abg-case" target="_blank" rel="noopener">
+          <span>Open the ABG case generator</span>
+          <span class="ext-icon" aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>For nursing assessment, ask: Does the patient look acidemic (fast breathing, altered mental status), alkalemic (cramping, tetany), or compensated? Pair the ABG with the patient. A pH of 7.50 in a frantically anxious patient is panic-driven respiratory alkalosis; a pH of 7.50 in a vomiting patient is metabolic alkalosis.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build an ABG flowchart you can use at the bedside: pH first → PaCO₂ vs HCO₃⁻ → identify primary → check compensation → AG if metabolic acidosis. Put it on a card.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> AG 22 in metabolic acidosis with a history of NSAID overdose and tinnitus suggests what cause?</li>
+          <li><span class="qc-meta">DOK 4.</span> A COPD patient on furosemide has pH 7.42, PaCO₂ 60, HCO₃⁻ 38. Interpret.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Salicylate poisoning. Often a mixed acid-base picture: respiratory alkalosis (direct stimulation of medullary chemoreceptors) plus high AG metabolic acidosis.</li>
+            <li>pH near normal. PaCO₂ ↑ would normally cause acidemia, but HCO₃⁻ ↑↑ way more than expected for compensation of chronic resp acidosis (expected ~32 at PaCO₂ 60). The extra HCO₃⁻ is from the loop diuretic causing metabolic alkalosis. Diagnosis: <strong>mixed chronic respiratory acidosis + metabolic alkalosis</strong>.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 14: Common renal conditions -->
+    <article class="concept-card" id="c14" data-tags="CLIN">
+      <p class="card-eyebrow">Renal &middot; Concept 14 of 14</p>
+      <h2 class="card-title">Common renal conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Renal pathology splits into acute (AKI), chronic (CKD), tubular (RTA, AIN, ATN), glomerular, and infectious / structural (UTI, stones). The first sort tells you most of what you need to know.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Acute kidney injury (AKI)</strong> (KDIGO):
+            <ul>
+              <li>↑ Cr ≥ 0.3 mg/dL in 48h, or ≥ 1.5× baseline in 7 days, or urine output &lt; 0.5 mL/kg/h × 6h.</li>
+              <li>Three categories:
+                <ul>
+                  <li><em>Prerenal</em> (~60%): low perfusion. Hypovolemia, HF, sepsis, NSAIDs. FE<sub>Na</sub> &lt; 1%, BUN/Cr &gt; 20.</li>
+                  <li><em>Intrinsic:</em> ATN (ischemic or nephrotoxic), AIN (drug, autoimmune), glomerulonephritis. FE<sub>Na</sub> &gt; 2%.</li>
+                  <li><em>Postrenal:</em> obstruction (stone, BPH, malignancy). Diagnose with ultrasound.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Chronic kidney disease (CKD):</strong>
+            <ul>
+              <li>eGFR &lt; 60 for &gt; 3 months, or evidence of damage (proteinuria, structural).</li>
+              <li>Stages 1-5 by eGFR (see Concept 4).</li>
+              <li>Complications: HTN, anemia (↓ EPO), hyperphosphatemia, hypocalcemia, secondary hyperparathyroidism, acidosis, uremia.</li>
+              <li>Management: BP control (ACE-I/ARB), glycemic control, SGLT2 inhibitors (reduce CKD progression), phosphate binders, EPO, vitamin D analogs.</li>
+            </ul>
+          </li>
+          <li><strong>UTI:</strong>
+            <ul>
+              <li>Lower (cystitis): dysuria, frequency, urgency, suprapubic pain.</li>
+              <li>Upper (pyelonephritis): fever, flank pain, CVA tenderness, often nausea.</li>
+              <li>Most common pathogens: E. coli (~80%), Staph saprophyticus, Klebsiella, Enterococcus.</li>
+              <li>Catheter-associated UTI risk rises with each day → review catheter need daily.</li>
+            </ul>
+          </li>
+          <li><strong>Nephrolithiasis:</strong>
+            <ul>
+              <li>Calcium oxalate (~75%), uric acid, struvite (infection), cystine.</li>
+              <li>Severe colicky flank-to-groin pain, hematuria, nausea.</li>
+              <li>Stones &lt; 5 mm often pass; &gt; 10 mm usually need intervention.</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>Glomerular disease patterns:</strong>
+            <ul>
+              <li>Nephritic: hematuria, RBC casts, HTN, mild proteinuria, low GFR. Post-infectious GN, IgA, anti-GBM, ANCA vasculitis.</li>
+              <li>Nephrotic: proteinuria &gt; 3.5 g/day, hypoalbuminemia, edema, hyperlipidemia. Minimal change, FSGS, membranous, diabetic, amyloid.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Category</th><th>Hallmark</th><th>Workup</th></tr></thead>
+          <tbody>
+            <tr><td>Prerenal AKI</td><td>↑ BUN/Cr ratio, FE<sub>Na</sub> &lt;1%</td><td>Fluid challenge if appropriate</td></tr>
+            <tr><td>ATN</td><td>Muddy brown casts, FE<sub>Na</sub> &gt;2%</td><td>Remove nephrotoxin, supportive</td></tr>
+            <tr><td>AIN</td><td>Eosinophils, drug exposure</td><td>Stop drug</td></tr>
+            <tr><td>Postrenal</td><td>Hydronephrosis on US</td><td>Relieve obstruction</td></tr>
+            <tr><td>CKD</td><td>eGFR &lt; 60 &gt; 3 mo</td><td>BP/glucose/proteinuria mgmt</td></tr>
+            <tr><td>Pyelonephritis</td><td>Fever + flank pain</td><td>Antibiotics, urine culture</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>The bedside nursing approach to AKI: <strong>volume status, medication review, urine output, foley patency.</strong> Three quick wins — stop nephrotoxins (NSAIDs, contrast, aminoglycosides where possible), correct hypovolemia, rule out obstruction. <strong>For CKD patients</strong>, every encounter is a chance to reinforce BP and glucose targets, medication adherence, and preparation for renal replacement therapy when GFR &lt; 20.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch a decision tree for AKI: prerenal vs intrinsic vs postrenal. Add the FE<sub>Na</sub>, BUN/Cr ratio, urine sediment findings under each branch.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient with AKI has FE<sub>Na</sub> 0.5%, BUN/Cr 28, oliguria, and recent diarrhea. Which AKI category?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why is anemia a hallmark of CKD?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Prerenal AKI from volume depletion. The kidneys are healthy but underperfused, so they avidly reabsorb sodium (low FE<sub>Na</sub>) and urea (high BUN/Cr ratio).</li>
+            <li>The kidney makes erythropoietin (EPO) in peritubular fibroblasts in response to hypoxia. In CKD, EPO production declines → ↓ RBC production → normocytic normochromic anemia. Treated with ESA (erythropoiesis-stimulating agents) and iron.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+  </main>
+
+  <footer class="byline">
+    <p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Renal master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const toc = document.getElementById('toc-list');
+  document.querySelectorAll('.concept-card').forEach((card, idx) => {
+    const title = card.querySelector('.card-title');
+    if (!title) return;
+    const clone = title.cloneNode(true);
+    clone.querySelectorAll('.tag-pill').forEach(t => t.remove());
+    const text = clone.textContent.trim();
+    const li = document.createElement('li');
+    li.dataset.tags = card.dataset.tags;
+    li.innerHTML = `<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;
+    toc.appendChild(li);
+  });
+})();
+
+let currentView  = 'combined';
+let currentDepth = 'full';
+const cntShown   = document.getElementById('cnt-shown');
+
+function viewMatchesTags(view, tags) {
+  const parts = (tags || '').split(/\s+/);
+  if (view === 'combined') return true;
+  if (view === 'anatomy')  return parts.includes('A')  || parts.includes('AP') || parts.includes('CLIN');
+  if (view === 'physio')   return parts.includes('P')  || parts.includes('AP') || parts.includes('CLIN');
+  return true;
+}
+function applyFilters() {
+  document.body.classList.toggle('depth-essentials', currentDepth === 'essentials');
+  let shown = 0;
+  document.querySelectorAll('.concept-card').forEach(card => {
+    const viewOk  = viewMatchesTags(currentView, card.dataset.tags);
+    const depthOk = currentDepth === 'full' || card.dataset.depth !== 'deep';
+    const show = viewOk && depthOk;
+    card.hidden = !show;
+    if (show) shown++;
+  });
+  document.querySelectorAll('#toc-list li').forEach(li => {
+    const viewOk  = viewMatchesTags(currentView, li.dataset.tags);
+    const depthOk = currentDepth === 'full' || li.dataset.depth !== 'deep';
+    li.hidden = !(viewOk && depthOk);
+  });
+  cntShown.textContent = shown;
+}
+document.querySelectorAll('[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentView = btn.dataset.view;
+    applyFilters();
+  });
+});
+document.querySelectorAll('[data-depth]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentDepth = btn.dataset.depth;
+    applyFilters();
+  });
+});
+
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const course = params.get('course');
+  const COURSE_MAP = {
+    'BIO004': { eyebrow: 'BIO 004 Human Anatomy · Solano Community College',                     view: 'anatomy',  depth: 'full' },
+    'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology · American River College',          view: 'combined', depth: 'full' },
+    'BIO304': { eyebrow: 'BIO 304 Human Anatomy & Physiology (Online) · American River College', view: 'combined', depth: 'essentials' }
+  };
+  if (course && COURSE_MAP[course]) {
+    const c = COURSE_MAP[course];
+    const eb = document.getElementById('course-eyebrow');
+    if (eb) eb.textContent = c.eyebrow + ' · Renal';
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === c.view ? 'true' : 'false'));
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === c.depth ? 'true' : 'false'));
+    currentView = c.view;
+    currentDepth = c.depth;
+  }
+  const v = params.get('view');
+  const d = params.get('depth');
+  if (v && ['combined','anatomy','physio'].includes(v)) {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'));
+    currentView = v;
+  }
+  if (d && ['full','essentials'].includes(d)) {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === d ? 'true' : 'false'));
+    currentDepth = d;
+  }
+})();
+
+applyFilters();
+
+(function(){
+  const frameId = 'renal-notes';
+  function sendHeight() {
+    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    try { window.parent.postMessage({ type: 'iframe-height', id: frameId, height: h }, '*'); } catch(e){}
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  if ('ResizeObserver' in window) new ResizeObserver(sendHeight).observe(document.body);
+})();
+</script>
+</body>
+</html>

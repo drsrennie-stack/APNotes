@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nervous System &amp; Special Senses — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; }
+  .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; }
+  a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; }
+  a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; }
+  .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; }
+  .seg button:hover { background:var(--navy-tint); }
+  .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; }
+  @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; }
+  .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); }
+  .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; }
+  li.deep-dive::before { margin-right:6px; }
+  .deep-dive.callout { border-left-width:4px; border-left-color:var(--gold); }
+  .deep-dive.callout::before { display:none; }
+  .deep-dive.callout h3::after { content:" · DEEP DIVE"; font-size:10px; color:var(--gold-deep); letter-spacing:0.08em; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  figure.diagram { margin:14px 0 4px; padding:0; }
+  figure.diagram svg { width:100%; max-width:700px; height:auto; display:block; margin:0 auto; background:var(--off-white); border:1px solid var(--navy-tint); border-radius:4px; }
+  figure.diagram figcaption { font-family:'Lora',serif; font-style:italic; font-size:13px; color:var(--navy); margin-top:8px; text-align:center; line-height:1.4; }
+  figure.diagram svg text { font-family:'DM Sans',sans-serif; fill:var(--navy); font-size:12px; }
+  figure.diagram svg .lbl-bold { font-weight:700; }
+  figure.diagram svg .lbl-terra { fill:var(--terra-dark); }
+  figure.diagram svg .lbl-gold { fill:var(--gold-deep); }
+  figure.diagram svg .lbl-small { font-size:10.5px; }
+  figure.diagram svg .ax-line { stroke:var(--navy); stroke-width:1; fill:none; }
+  figure.diagram svg .curve-main { stroke:var(--navy); stroke-width:2.4; fill:none; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); }
+  .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; }
+  .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; }
+  .card-section li { margin-bottom:6px; }
+  .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; }
+  table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; }
+  table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; }
+  .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; }
+  .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); }
+  .callout-clinical h3 { color:var(--terra-dark); }
+  .callout-drawing { border-color:var(--gold-deep); background:var(--white); }
+  .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; }
+  .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; }
+  .quick-check li { margin-bottom:8px; }
+  .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; }
+  details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; }
+  details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); }
+  .tag-P { color:var(--terra-dark); background:var(--white); }
+  .tag-AP { color:var(--gold-deep); background:var(--white); }
+  .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); }
+  footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; }
+  .top-link:hover { text-decoration:underline; }
+  @media print {
+    body { background:var(--white); }
+    .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; }
+    details.answers[open] > summary { display:none; }
+    details.answers:not([open]) > *:not(summary) { display:block; }
+    .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; }
+    .toc { display:none; }
+    .quick-check { background:var(--white); }
+    .concept-card[hidden] { display:none !important; }
+    a { color:var(--navy); text-decoration:none; }
+    figure.diagram svg { background:var(--white); }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Nervous System &amp; Special Senses</h1>
+    <p class="usage">The nervous system is signal: detect, integrate, command. Every clinical neuro question reduces to <em>where is the lesion</em> and <em>what kind of signal is broken</em>. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy"  aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio"   aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full"       aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">16</strong> concepts</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 class="toc-h" id="toc-h">Contents</h2>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
+  <main id="main">
+
+    <!-- 1: Divisions and organization -->
+    <article class="concept-card" id="c1" data-tags="A">
+      <p class="card-eyebrow">Nervous &middot; Concept 1 of 16</p>
+      <h2 class="card-title">Nervous system organization <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The nervous system splits in two ways: anatomically (CNS vs PNS) and functionally (somatic vs autonomic). Knowing which compartment a problem lives in is half of the diagnosis.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Anatomic divisions:</strong>
+            <ul>
+              <li>CNS (central): brain + spinal cord. Wrapped in meninges, bathed in CSF.</li>
+              <li>PNS (peripheral): cranial nerves (12 pairs) + spinal nerves (31 pairs) + ganglia.</li>
+            </ul>
+          </li>
+          <li><strong>Functional divisions (within the PNS):</strong>
+            <ul>
+              <li>Somatic: voluntary motor to skeletal muscle + sensory from skin/joints.</li>
+              <li>Autonomic (ANS): involuntary motor to smooth muscle, cardiac muscle, glands. Two branches: sympathetic and parasympathetic.</li>
+              <li>Enteric (often called a "third division"): GI tract intrinsic neurons. Can function autonomously.</li>
+            </ul>
+          </li>
+          <li><strong>Signal types:</strong>
+            <ul>
+              <li>Afferent (sensory): toward CNS.</li>
+              <li>Efferent (motor): away from CNS.</li>
+            </ul>
+          </li>
+          <li><strong>Three core functions:</strong>
+            <ul>
+              <li>Sensory input → integration → motor output.</li>
+              <li>The brain layers higher functions (cognition, emotion, memory) on top of this loop.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Division</th><th>Direction</th><th>Effector</th><th>Conscious?</th></tr></thead>
+          <tbody>
+            <tr><td>Somatic motor</td><td>Efferent</td><td>Skeletal muscle</td><td>Voluntary</td></tr>
+            <tr><td>Somatic sensory</td><td>Afferent</td><td>Skin, joints, special senses</td><td>Conscious</td></tr>
+            <tr><td>Autonomic motor</td><td>Efferent</td><td>Smooth muscle, cardiac, glands</td><td>Involuntary</td></tr>
+            <tr><td>Visceral sensory</td><td>Afferent</td><td>From viscera</td><td>Mostly unconscious</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Localizing a lesion starts with: is this CNS or PNS? UMN (upper motor neuron, CNS) lesions show spasticity, hyperreflexia, Babinski sign. LMN (lower motor neuron, PNS) lesions show flaccid weakness, hyporeflexia, fasciculations, atrophy. ALS is rare in that both UMN and LMN are involved.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a one-page organization chart: nervous system → CNS / PNS → somatic / autonomic → sympathetic / parasympathetic / enteric. Add afferent vs efferent arrows.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which division controls the heart, glands, and smooth muscle?</li>
+          <li><span class="qc-meta">DOK 2.</span> Are cranial nerves part of the CNS or PNS?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Autonomic nervous system (within the PNS).</li>
+            <li>PNS. The brain is CNS, but the cranial nerves themselves emerge from the brain and travel peripherally.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 2: Neurons and glial cells -->
+    <article class="concept-card" id="c2" data-tags="A">
+      <p class="card-eyebrow">Nervous &middot; Concept 2 of 16</p>
+      <h2 class="card-title">Neurons and glial cells <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">Neurons signal. Glial cells support, insulate, defend, and recycle. Both matter — most CNS tumors are glial, not neuronal.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Neuron parts:</strong>
+            <ul>
+              <li>Soma (cell body): contains nucleus, organelles.</li>
+              <li>Dendrites: receive input. Many per neuron.</li>
+              <li>Axon hillock: integration zone; where the action potential is initiated.</li>
+              <li>Axon: conducts AP. One per neuron, can branch at ends (telodendria).</li>
+              <li>Axon terminal (synaptic bouton): releases neurotransmitter.</li>
+            </ul>
+          </li>
+          <li><strong>Neuron functional types:</strong>
+            <ul>
+              <li>Sensory (afferent): toward CNS.</li>
+              <li>Motor (efferent): away from CNS.</li>
+              <li>Interneuron: between neurons in CNS. Most neurons in the body are interneurons.</li>
+            </ul>
+          </li>
+          <li><strong>Glial cells (CNS, 4 types):</strong>
+            <ul>
+              <li>Astrocyte: most abundant. Blood-brain barrier, ion buffering, structural support, glutamate cycling.</li>
+              <li>Oligodendrocyte: myelinates CNS axons (one cell wraps multiple axons).</li>
+              <li>Microglia: resident immune cells. Phagocytose debris, present antigen.</li>
+              <li>Ependymal cells: line ventricles, make CSF (choroid plexus).</li>
+            </ul>
+          </li>
+          <li><strong>Glial cells (PNS, 2 types):</strong>
+            <ul>
+              <li>Schwann cell: myelinates PNS axons (one cell, one segment of one axon).</li>
+              <li>Satellite cell: surrounds neuron cell bodies in ganglia.</li>
+            </ul>
+          </li>
+          <li><strong>Myelin:</strong> insulating wrapping. Speeds AP via saltatory conduction (jumps between nodes of Ranvier). Loss of myelin (MS, Guillain-Barré) slows or blocks conduction.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Cell</th><th>Where</th><th>Main job</th></tr></thead>
+          <tbody>
+            <tr><td>Astrocyte</td><td>CNS</td><td>BBB, ion balance, support</td></tr>
+            <tr><td>Oligodendrocyte</td><td>CNS</td><td>Myelin (multi-axon)</td></tr>
+            <tr><td>Microglia</td><td>CNS</td><td>Immune defense</td></tr>
+            <tr><td>Ependymal</td><td>CNS ventricles</td><td>CSF production + flow</td></tr>
+            <tr><td>Schwann</td><td>PNS</td><td>Myelin (one segment)</td></tr>
+            <tr><td>Satellite</td><td>PNS ganglia</td><td>Neuron cell-body support</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Most primary CNS tumors are glial</strong> (gliomas — glioblastoma, astrocytoma, oligodendroglioma). Neurons rarely divide in the adult brain; gliomas come from cells that still divide. <strong>MS</strong>: autoimmune attack on CNS myelin (oligodendrocytes). <strong>Guillain-Barré:</strong> autoimmune attack on PNS myelin (Schwann cells) after infection. Both cause weakness and sensory loss but at different anatomic locations.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a typical neuron with all parts labeled. Show one oligodendrocyte myelinating two CNS axons; show one Schwann cell on one PNS axon. Mark nodes of Ranvier.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which glial cell forms the blood-brain barrier?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does demyelination slow or stop nerve conduction?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Astrocytes (their end-feet wrap brain capillaries).</li>
+            <li>Saltatory conduction depends on AP jumping between nodes of Ranvier — the myelin insulates the in-between segments. Loss of myelin → AP must propagate continuously like in unmyelinated fibers (much slower), or fails altogether if Na⁺ channels are not present in the formerly myelinated segments.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 3: Resting + action potential -->
+    <article class="concept-card" id="c3" data-tags="P">
+      <p class="card-eyebrow">Nervous &middot; Concept 3 of 16</p>
+      <h2 class="card-title">Resting + action potentials <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">A resting neuron is polarized at ≈ −70 mV because of selective permeability and the Na/K ATPase. An action potential is a fast, all-or-none reversal of that polarity that propagates down the axon.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Resting membrane potential:</strong> ~ −70 mV inside (relative to outside).
+            <ul>
+              <li>Na/K ATPase: pumps 3 Na⁺ out, 2 K⁺ in. Maintains gradients.</li>
+              <li>Resting membrane is much more permeable to K⁺ than Na⁺ (K⁺ leak channels). K⁺ exits → inside becomes negative.</li>
+              <li>Nernst / Goldman equations describe the equilibrium quantitatively.</li>
+            </ul>
+          </li>
+          <li><strong>Action potential phases:</strong>
+            <ul>
+              <li>Threshold (~ −55 mV): if depolarization reaches it, AP fires.</li>
+              <li>Depolarization: voltage-gated Na⁺ channels open → Na⁺ rushes in → membrane swings to ~ +30 mV.</li>
+              <li>Repolarization: Na⁺ channels inactivate, voltage-gated K⁺ channels open → K⁺ exits.</li>
+              <li>Hyperpolarization: K⁺ channels close slowly → brief overshoot below −70 mV.</li>
+              <li>Return to rest: Na/K ATPase restores ion gradients gradually.</li>
+            </ul>
+          </li>
+          <li><strong>All-or-none:</strong> once threshold is reached, AP magnitude is fixed. Stronger stimuli → more frequent APs, not bigger ones.</li>
+          <li><strong>Refractory periods:</strong>
+            <ul>
+              <li>Absolute: Na⁺ channels inactivated; cannot fire again. Sets max firing rate.</li>
+              <li>Relative: K⁺ still leaving; need stronger stimulus.</li>
+            </ul>
+          </li>
+          <li><strong>Conduction:</strong>
+            <ul>
+              <li>Unmyelinated: continuous propagation. Slow (~1 m/s).</li>
+              <li>Myelinated: saltatory. Jumps between nodes of Ranvier. Fast (up to ~120 m/s).</li>
+              <li>Speed also depends on axon diameter (larger = faster).</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>Local anesthetics</strong> (lidocaine) block voltage-gated Na⁺ channels → no AP → no signal. <strong>Tetrodotoxin</strong> (pufferfish) does the same with extreme potency.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: action potential phases</h3>
+        <figure class="diagram" aria-labelledby="dxAP-title dxAP-desc">
+          <svg viewBox="0 0 660 360" role="img" aria-labelledby="dxAP-title dxAP-desc">
+            <title id="dxAP-title">Neuronal action potential phases</title>
+            <desc id="dxAP-desc">A graph with time on the X axis and membrane potential on the Y axis. The trace starts at resting potential of negative 70 millivolts, rises sharply through threshold at negative 55 to peak at plus 30 (depolarization driven by sodium influx), then falls sharply back below resting potential (repolarization driven by potassium efflux), briefly hyperpolarizes, and returns to resting potential.</desc>
+            <line x1="60" y1="40" x2="60" y2="300" class="ax-line"/>
+            <line x1="60" y1="300" x2="620" y2="300" class="ax-line"/>
+            <text x="55" y="65" text-anchor="end" class="lbl-small">+30</text>
+            <text x="55" y="155" text-anchor="end" class="lbl-small">−55 (threshold)</text>
+            <text x="55" y="200" text-anchor="end" class="lbl-small">−70 (rest)</text>
+            <text x="55" y="260" text-anchor="end" class="lbl-small">−90</text>
+            <text x="340" y="335" text-anchor="middle" class="lbl-bold">Time (ms)</text>
+            <text x="20" y="170" class="lbl-bold" transform="rotate(-90 20 170)">Membrane potential (mV)</text>
+            <line x1="60" y1="155" x2="620" y2="155" stroke="var(--navy-tint)" stroke-dasharray="3 3"/>
+            <line x1="60" y1="200" x2="620" y2="200" stroke="var(--navy-tint)" stroke-dasharray="3 3"/>
+            <path d="M 60 200 L 130 200 L 145 165 L 160 70 L 200 70 L 235 230 L 280 260 L 360 230 L 480 200 L 620 200" class="curve-main"/>
+            <text x="170" y="60" class="lbl-bold lbl-terra">Depolarization</text>
+            <text x="170" y="78" class="lbl-small lbl-terra">Na⁺ in</text>
+            <text x="285" y="180" class="lbl-bold lbl-terra">Repolarization</text>
+            <text x="285" y="195" class="lbl-small lbl-terra">K⁺ out</text>
+            <text x="340" y="285" class="lbl-bold lbl-gold">Hyperpol.</text>
+            <text x="80" y="195" class="lbl-small">Rest</text>
+            <text x="480" y="195" class="lbl-small">Return to rest</text>
+            <rect x="145" y="42" width="220" height="6" fill="var(--gold)" opacity="0.65"/>
+            <text x="255" y="35" text-anchor="middle" class="lbl-small lbl-gold lbl-bold">Absolute refractory period</text>
+          </svg>
+          <figcaption>The classic neuronal action potential. Compare to the cardiac AP in the cardiovascular notes (Concept 4a): cardiac has a long plateau, neuronal does not.</figcaption>
+        </figure>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Hyperkalemia</strong> shifts resting membrane potential toward threshold initially (cells more excitable, peaked T waves on ECG), but at high levels inactivates Na⁺ channels → conduction failure (wide QRS, asystole). <strong>Hypocalcemia</strong> lowers threshold → easier firing → tetany and seizures. <strong>Demyelinating disease</strong> slows or stops saltatory conduction → weakness, sensory deficits.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Reproduce the AP curve. Label resting, threshold, depolarization, repolarization, hyperpolarization. Mark which ion channel state corresponds to each phase. Add the refractory periods.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which ion drives depolarization in a neuron?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does myelination dramatically increase conduction speed?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Na⁺ (sodium) influx through voltage-gated channels.</li>
+            <li>Myelin insulates internodal segments, so the AP only "regenerates" at nodes of Ranvier where Na⁺ channels are clustered. The AP effectively jumps from node to node (saltatory conduction) instead of propagating continuously, multiplying speed without requiring a larger axon.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 4: Synaptic transmission + neurotransmitters -->
+    <article class="concept-card" id="c4" data-tags="P">
+      <p class="card-eyebrow">Nervous &middot; Concept 4 of 16</p>
+      <h2 class="card-title">Synaptic transmission and neurotransmitters <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The action potential ends at the synapse. Calcium drives neurotransmitter release. The neurotransmitter determines whether the postsynaptic cell fires next or stays quiet.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Chemical synapse steps:</strong>
+            <ol>
+              <li>AP arrives at axon terminal.</li>
+              <li>Voltage-gated Ca²⁺ channels open → Ca²⁺ enters terminal.</li>
+              <li>Ca²⁺ triggers synaptic vesicles to fuse with presynaptic membrane.</li>
+              <li>Neurotransmitter (NT) released into synaptic cleft.</li>
+              <li>NT binds postsynaptic receptors.</li>
+              <li>Postsynaptic ion channels open → EPSP (excitatory) or IPSP (inhibitory).</li>
+              <li>NT cleared by reuptake, enzymatic degradation, or diffusion.</li>
+            </ol>
+          </li>
+          <li><strong>Summation</strong> (how single synapses combine):
+            <ul>
+              <li>Temporal: rapid repeated input from one synapse.</li>
+              <li>Spatial: simultaneous input from multiple synapses.</li>
+              <li>If EPSPs raise membrane to threshold at the axon hillock → AP fires.</li>
+            </ul>
+          </li>
+          <li><strong>Major neurotransmitters:</strong>
+            <ul>
+              <li><em>Glutamate:</em> main excitatory CNS NT. Implicated in stroke, seizures.</li>
+              <li><em>GABA:</em> main inhibitory CNS NT. Target of benzos, alcohol, barbiturates.</li>
+              <li><em>Glycine:</em> inhibitory in spinal cord and brainstem.</li>
+              <li><em>Acetylcholine (ACh):</em> NMJ, all autonomic ganglia, parasympathetic postganglionic, CNS cognition. Lost in Alzheimer.</li>
+              <li><em>Norepinephrine (NE):</em> sympathetic postganglionic, locus coeruleus. Mood, arousal.</li>
+              <li><em>Dopamine (DA):</em> reward, motor (substantia nigra → striatum, lost in Parkinson). Schizophrenia involves dysregulation.</li>
+              <li><em>Serotonin (5-HT):</em> mood, sleep, appetite. SSRI target.</li>
+              <li><em>Histamine:</em> wakefulness. H1 antagonists cause sedation.</li>
+              <li><em>Endorphins / enkephalins:</em> endogenous opioids. Pain modulation.</li>
+            </ul>
+          </li>
+          <li><strong>Electrical synapses</strong> (gap junctions): direct cytoplasmic continuity, bidirectional, very fast. Found in cardiac muscle and some CNS regions.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>NT</th><th>Effect</th><th>Where</th><th>Clinical link</th></tr></thead>
+          <tbody>
+            <tr><td>Glutamate</td><td>Excitatory</td><td>CNS</td><td>Excitotoxicity in stroke</td></tr>
+            <tr><td>GABA</td><td>Inhibitory</td><td>CNS</td><td>Benzos, alcohol, seizures</td></tr>
+            <tr><td>ACh</td><td>Variable</td><td>NMJ, ANS, CNS</td><td>Alzheimer, myasthenia, organophosphates</td></tr>
+            <tr><td>NE</td><td>Variable</td><td>Sympathetic, CNS</td><td>Depression, panic</td></tr>
+            <tr><td>Dopamine</td><td>Variable</td><td>Basal ganglia, mesolimbic</td><td>Parkinson, schizophrenia, addiction</td></tr>
+            <tr><td>Serotonin</td><td>Variable</td><td>Raphe nuclei → CNS</td><td>Depression, anxiety, GI motility</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Many psychiatric meds target NT systems:</strong> SSRIs (block 5-HT reuptake), SNRIs (5-HT + NE), benzos (potentiate GABA), antipsychotics (D2 antagonists). <strong>Drugs of abuse</strong> all funnel through the mesolimbic dopamine reward pathway. <strong>Serotonin syndrome</strong> (too much serotonergic activity, e.g., SSRI + MAOI + tramadol): hyperthermia, agitation, clonus, autonomic instability. Medical emergency.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the synapse with the seven steps numbered. Show one excitatory and one inhibitory postsynaptic potential summing at the axon hillock with threshold marked.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which ion triggers neurotransmitter release at the axon terminal?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does an SSRI take weeks to work despite blocking reuptake immediately?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Ca²⁺ (calcium).</li>
+            <li>Immediate effect is more synaptic serotonin, but receptor adaptation (down-regulation of presynaptic auto-receptors, gene expression changes, neuroplasticity) takes 2-6 weeks to translate into clinical mood improvement.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 5: Reflexes -->
+    <article class="concept-card" id="c5" data-tags="P">
+      <p class="card-eyebrow">Nervous &middot; Concept 5 of 16</p>
+      <h2 class="card-title">Reflexes <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">A reflex is the simplest unit of neural behavior: a hard-wired sensor-to-effector loop that runs without conscious control. Knowing the loop tells you what each clinical reflex actually tests.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Five components of a reflex arc:</strong>
+            <ol>
+              <li>Receptor (e.g., muscle spindle).</li>
+              <li>Afferent (sensory) neuron.</li>
+              <li>Integration center (CNS — often just one synapse in cord, or interneuron).</li>
+              <li>Efferent (motor) neuron.</li>
+              <li>Effector (muscle or gland).</li>
+            </ol>
+          </li>
+          <li><strong>Monosynaptic reflex:</strong> one synapse between afferent and efferent. Stretch reflex (knee jerk). Tests integrity of L2-L4 (patellar).</li>
+          <li><strong>Polysynaptic reflex:</strong> includes interneurons. Withdrawal reflex (pull hand from hot stove). Often with crossed extensor (opposite leg extends when one withdraws).</li>
+          <li><strong>Reciprocal inhibition:</strong> when one muscle contracts, its antagonist is reflexively inhibited via interneuron.</li>
+          <li><strong>Deep tendon reflexes (DTRs)</strong> tested clinically:
+            <ul>
+              <li>Biceps: C5-C6.</li>
+              <li>Brachioradialis: C5-C6.</li>
+              <li>Triceps: C7-C8.</li>
+              <li>Patellar: L2-L4.</li>
+              <li>Achilles: S1-S2.</li>
+            </ul>
+          </li>
+          <li><strong>Babinski sign:</strong> stroking the lateral plantar surface → fanning of toes. Normal in infants (incomplete myelination). After ~2 yr: pathologic, suggests UMN lesion.</li>
+          <li><strong>UMN vs LMN reflex pattern:</strong>
+            <ul>
+              <li>UMN: hyperreflexia, spasticity, positive Babinski.</li>
+              <li>LMN: hyporeflexia, flaccid weakness, fasciculations.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: DTR scale</h3>
+        <table class="summary">
+          <thead><tr><th>Grade</th><th>Finding</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>Absent</td></tr>
+            <tr><td>1+</td><td>Diminished</td></tr>
+            <tr><td>2+</td><td>Normal</td></tr>
+            <tr><td>3+</td><td>Brisk (could be normal or early UMN)</td></tr>
+            <tr><td>4+</td><td>Hyperactive with clonus → UMN lesion</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Brain death exam</strong> includes loss of all brainstem reflexes (pupillary, corneal, gag, vestibulo-ocular, cough). <strong>Spinal shock</strong> (acute spinal cord injury): areflexia below the lesion temporarily, then hyperreflexia as UMN pattern emerges weeks later.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the patellar reflex arc with all five components labeled. Then draw a withdrawal reflex (foot on tack) with the polysynaptic interneurons + the crossed extensor in the opposite leg.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which spinal levels does the patellar reflex test?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does Babinski's sign appear in a UMN lesion?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>L2-L4.</li>
+            <li>Normally, descending corticospinal input from the motor cortex suppresses the primitive plantar flexion reflex pattern → adult shows toe flexion (downgoing toes). When the UMN tract is damaged, that suppression is lost and the primitive pattern returns: toes fan upward (positive Babinski).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 6: Brain anatomy -->
+    <article class="concept-card" id="c6" data-tags="A">
+      <p class="card-eyebrow">Nervous &middot; Concept 6 of 16</p>
+      <h2 class="card-title">Brain anatomy <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The brain has four major regions: cerebrum, diencephalon, brainstem, cerebellum. Each lobe of the cerebrum has signature functions and a signature deficit when injured.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Cerebrum (left + right hemispheres, four lobes each):</strong>
+            <ul>
+              <li>Frontal: motor cortex (primary, premotor, supplementary), Broca's area (left, speech production), executive function, personality.</li>
+              <li>Parietal: somatosensory cortex, body schema, spatial orientation.</li>
+              <li>Temporal: auditory cortex, Wernicke's area (left, language comprehension), memory (hippocampus), olfactory cortex.</li>
+              <li>Occipital: visual cortex.</li>
+            </ul>
+          </li>
+          <li><strong>Deep cerebral structures:</strong>
+            <ul>
+              <li>Basal ganglia (caudate, putamen, globus pallidus, plus substantia nigra and subthalamic nucleus): motor program selection, habit learning. Lost in Parkinson, Huntington.</li>
+              <li>Hippocampus: declarative memory consolidation. Damaged in Alzheimer.</li>
+              <li>Amygdala: emotional salience, fear.</li>
+              <li>Corpus callosum: connects hemispheres.</li>
+            </ul>
+          </li>
+          <li><strong>Diencephalon:</strong>
+            <ul>
+              <li>Thalamus: relay station for almost all sensory input to cortex.</li>
+              <li>Hypothalamus: homeostasis (temperature, thirst, hunger, circadian, ANS, neuroendocrine).</li>
+              <li>Epithalamus: pineal (melatonin).</li>
+            </ul>
+          </li>
+          <li><strong>Brainstem (caudal to rostral: medulla, pons, midbrain):</strong>
+            <ul>
+              <li>Medulla: cardiorespiratory centers, decussation of corticospinal pyramids.</li>
+              <li>Pons: relay between cerebrum and cerebellum, sleep.</li>
+              <li>Midbrain: substantia nigra, red nucleus, ocular motor nuclei.</li>
+              <li>Cranial nerves III-XII emerge here.</li>
+            </ul>
+          </li>
+          <li><strong>Cerebellum:</strong> motor coordination, balance, motor learning. Lesion → ataxia, dysmetria, intention tremor.</li>
+          <li><strong>Functional lateralization (in most right-handed people):</strong>
+            <ul>
+              <li>Left hemisphere: language, math, analytic.</li>
+              <li>Right hemisphere: spatial, music, holistic.</li>
+              <li>Each hemisphere controls the contralateral side of the body.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: lobe deficits</h3>
+        <table class="summary">
+          <thead><tr><th>Lobe</th><th>Function</th><th>Deficit if injured</th></tr></thead>
+          <tbody>
+            <tr><td>Frontal</td><td>Motor, executive, Broca</td><td>Contralateral weakness, expressive aphasia, personality change</td></tr>
+            <tr><td>Parietal</td><td>Sensory, spatial</td><td>Sensory loss, neglect (often R hemisphere)</td></tr>
+            <tr><td>Temporal</td><td>Hearing, Wernicke, memory</td><td>Hearing loss, receptive aphasia, memory deficit</td></tr>
+            <tr><td>Occipital</td><td>Vision</td><td>Visual field cuts, cortical blindness</td></tr>
+            <tr><td>Cerebellum</td><td>Coordination, balance</td><td>Ataxia, intention tremor</td></tr>
+            <tr><td>Basal ganglia</td><td>Motor programming</td><td>Movement disorders (Parkinson, Huntington)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Stroke localization is mostly about MCA territory (most common stroke): contralateral motor and sensory deficits, often face and arm worse than leg, plus aphasia if dominant (usually left) hemisphere. ACA strokes hit leg more than face/arm. PCA strokes affect vision and memory.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch a lateral view of the brain. Label four lobes, Broca's and Wernicke's areas, primary motor cortex (homunculus orientation), primary sensory cortex, cerebellum, brainstem. Add the basal ganglia underneath as deep structures.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient cannot speak fluently but understands commands. Which area is likely damaged?</li>
+          <li><span class="qc-meta">DOK 3.</span> Which structure relays nearly all sensory input to the cortex?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Broca's area (left frontal lobe). Expressive (non-fluent) aphasia.</li>
+            <li>Thalamus.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 7: Cranial nerves -->
+    <article class="concept-card" id="c7" data-tags="AP">
+      <p class="card-eyebrow">Nervous &middot; Concept 7 of 16</p>
+      <h2 class="card-title">Cranial nerves I-XII <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">Twelve pairs emerge directly from the brain. Each has a function (sensory, motor, or both) and a specific testable behavior at the bedside.</p>
+
+      <section class="card-section">
+        <h3>Notes — the twelve, with bedside test</h3>
+        <ul>
+          <li><strong>I — Olfactory:</strong> smell (sensory). Test: smell each nostril separately.</li>
+          <li><strong>II — Optic:</strong> vision (sensory). Test: acuity, visual fields, pupillary light reflex.</li>
+          <li><strong>III — Oculomotor:</strong> most extraocular muscles, eyelid (LPS), pupillary constriction (parasympathetic). Test: H-pattern eye movement, pupil response, ptosis check.</li>
+          <li><strong>IV — Trochlear:</strong> superior oblique (eye looks down-and-in). Test: H-pattern; diplopia going down stairs is classic.</li>
+          <li><strong>V — Trigeminal:</strong> facial sensation (3 branches: V1, V2, V3), muscles of mastication. Test: light touch + pinprick on three branches; clench jaw; corneal reflex (V afferent, VII efferent).</li>
+          <li><strong>VI — Abducens:</strong> lateral rectus (eye abducts). Test: lateral gaze.</li>
+          <li><strong>VII — Facial:</strong> facial expression muscles, taste anterior 2/3 tongue, lacrimation/salivation. Test: raise eyebrows, smile, close eyes against resistance. Bell's palsy = LMN VII (whole side); central lesion spares forehead.</li>
+          <li><strong>VIII — Vestibulocochlear:</strong> hearing + balance. Test: Weber and Rinne, head impulse test.</li>
+          <li><strong>IX — Glossopharyngeal:</strong> taste posterior 1/3 tongue, swallowing, gag reflex (afferent). Test: gag reflex.</li>
+          <li><strong>X — Vagus:</strong> swallowing, voice, parasympathetic to thoracic and abdominal viscera. Test: uvula midline on "ahh," gag (efferent), voice quality.</li>
+          <li><strong>XI — Accessory:</strong> trapezius, SCM. Test: shoulder shrug, head turn against resistance.</li>
+          <li><strong>XII — Hypoglossal:</strong> tongue muscles. Test: stick out tongue; deviates toward side of LMN lesion.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary mnemonics</h3>
+        <table class="summary">
+          <thead><tr><th>Mnemonic line</th><th>Use</th></tr></thead>
+          <tbody>
+            <tr><td>"On Old Olympus' Towering Tops A Finn And German Viewed Some Hops"</td><td>Names of the 12 in order</td></tr>
+            <tr><td>"Some Say Marry Money But My Brother Says Big Brains Matter More"</td><td>Sensory / motor / both: S S M M B M B S B B M M (for I-XII)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pupillary light reflex</strong>: afferent CN II, efferent CN III. An unreactive dilated pupil with new headache and altered consciousness = CN III compression from uncal herniation (medical emergency). <strong>Diplopia</strong> patterns: CN IV → down-and-in difficulty (going down stairs); CN VI → lateral gaze difficulty (cannot abduct affected eye). <strong>Bell's palsy</strong> is a peripheral CN VII lesion → entire ipsilateral facial weakness including forehead. Central VII lesion → forehead spared because forehead has bilateral cortical input.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a 12-row table: nerve, function (S/M/B), bedside test, classic lesion finding. Use this as your bedside reference card.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which cranial nerve innervates the lateral rectus?</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient has new right-sided facial droop including the forehead. Central or peripheral lesion, and which nerve?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>CN VI (abducens).</li>
+            <li>Peripheral (LMN) lesion of CN VII (Bell's palsy on the right). Central lesions spare the forehead because the forehead motor cortex has bilateral projections.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 8: Spinal cord, meninges, CSF -->
+    <article class="concept-card" id="c8" data-tags="A">
+      <p class="card-eyebrow">Nervous &middot; Concept 8 of 16</p>
+      <h2 class="card-title">Spinal cord, meninges, CSF, ventricles <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The CNS lives inside protective layers, suspended in fluid. CSF cushions, removes waste, and circulates from ventricles through subarachnoid space.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Spinal cord:</strong>
+            <ul>
+              <li>Extends foramen magnum → L1-L2 (ends as conus medullaris).</li>
+              <li>Below L2 = cauda equina (lumbar puncture safe here).</li>
+              <li>31 spinal nerve pairs: 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, 1 coccygeal.</li>
+              <li>Cross-section: gray matter (H-shaped, contains cell bodies) surrounded by white matter (tracts).</li>
+              <li>Anterior horn: LMN cell bodies. Posterior horn: sensory entry. Lateral horn (T1-L2): sympathetic preganglionic cell bodies.</li>
+            </ul>
+          </li>
+          <li><strong>Meninges (3 layers, outer to inner):</strong>
+            <ul>
+              <li>Dura mater: tough, fibrous. Two layers (periosteal, meningeal) in skull, one layer in spine.</li>
+              <li>Arachnoid mater: spider-web-like, no vessels.</li>
+              <li>Pia mater: delicate, hugs CNS surface, vascular.</li>
+            </ul>
+          </li>
+          <li><strong>Three spaces:</strong>
+            <ul>
+              <li>Epidural: outside dura (in spine, contains fat and venous plexus; in skull, only with pathology — epidural hematoma from MMA tear).</li>
+              <li>Subdural: between dura and arachnoid (bridging veins → subdural hematoma).</li>
+              <li>Subarachnoid: between arachnoid and pia. Contains CSF and major vessels (ruptured aneurysm → SAH).</li>
+            </ul>
+          </li>
+          <li><strong>Ventricular system + CSF flow:</strong>
+            <ol>
+              <li>Lateral ventricles (2) → interventricular foramen of Monro →</li>
+              <li>3rd ventricle → cerebral aqueduct →</li>
+              <li>4th ventricle → exits via foramina of Luschka/Magendie →</li>
+              <li>Subarachnoid space → reabsorbed at arachnoid granulations into dural venous sinuses.</li>
+            </ol>
+          </li>
+          <li><strong>CSF:</strong> ~150 mL total. Produced by choroid plexus (ependymal cells) at ~500 mL/day. Clear, low protein, normal glucose ~⅔ serum. Functions: buoyancy, protection, waste removal.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Hemorrhage</th><th>Location</th><th>Source</th><th>CT appearance</th></tr></thead>
+          <tbody>
+            <tr><td>Epidural</td><td>Between skull and dura</td><td>Middle meningeal artery (often after temporal bone fx)</td><td>Lens-shaped, doesn't cross sutures</td></tr>
+            <tr><td>Subdural</td><td>Between dura and arachnoid</td><td>Bridging veins (elderly, alcoholics, infants)</td><td>Crescent-shaped, crosses sutures</td></tr>
+            <tr><td>Subarachnoid</td><td>Between arachnoid and pia</td><td>Ruptured aneurysm</td><td>Blood in sulci/basal cisterns</td></tr>
+            <tr><td>Intracerebral</td><td>Within brain parenchyma</td><td>HTN, AVM, tumor</td><td>Focal hyperdensity</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Lumbar puncture</strong> at L3-L4 or L4-L5 — below conus, no cord to hit. <strong>Hydrocephalus:</strong> obstructed CSF flow (e.g., aqueductal stenosis) or impaired reabsorption → ↑ ventricular pressure → headache, vomiting, papilledema, AMS. <strong>Bacterial meningitis</strong> CSF: ↑ WBC (PMNs), ↑ protein, ↓ glucose. <strong>Viral:</strong> ↑ WBC (lymphocytes), normal glucose.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the ventricles in sequence with arrows. Add the choroid plexus locations, the three meningeal layers, and label where each hemorrhage type sits.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Why is LP performed below L2?</li>
+          <li><span class="qc-meta">DOK 3.</span> A "lucid interval" after head trauma followed by rapid decline is classic for what hemorrhage?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>The spinal cord ends around L1-L2. Below that is cauda equina (loose nerve roots that float aside). Safer to enter than risking the cord.</li>
+            <li>Epidural hematoma — arterial bleed (middle meningeal artery) expands rapidly; "lucid interval" before mass effect overwhelms compensation.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 9: Sensory + motor pathways -->
+    <article class="concept-card" id="c9" data-tags="P">
+      <p class="card-eyebrow">Nervous &middot; Concept 9 of 16</p>
+      <h2 class="card-title">Sensory and motor pathways <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Two big sensory tracts and two big motor tracts. Each crosses (decussates) at a specific level, so the deficit predicts the lesion side.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Two main ascending sensory pathways:</strong>
+            <ul>
+              <li><em>Dorsal column-medial lemniscus (DCML):</em> fine touch, vibration, proprioception.
+                <ul>
+                  <li>First-order neuron enters dorsal column → ascends ipsilaterally to medulla → synapses → decussates → ascends medial lemniscus → thalamus → primary sensory cortex.</li>
+                  <li>Decussation: <strong>medulla</strong>.</li>
+                </ul>
+              </li>
+              <li><em>Spinothalamic tract:</em> pain, temperature, crude touch.
+                <ul>
+                  <li>First-order neuron enters → synapses in dorsal horn → second-order decussates at that level → ascends in lateral spinothalamic → thalamus → cortex.</li>
+                  <li>Decussation: <strong>spinal cord (immediately at level of entry)</strong>.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Two main descending motor pathways:</strong>
+            <ul>
+              <li><em>Corticospinal (pyramidal):</em> voluntary movement, esp. distal limbs.
+                <ul>
+                  <li>Cortex → internal capsule → midbrain → pons → ~85% decussate at <strong>pyramids of medulla</strong> → lateral corticospinal tract → synapse on LMN → muscle.</li>
+                  <li>~15% don't decussate (ventral corticospinal tract, decussate at level of action).</li>
+                </ul>
+              </li>
+              <li><em>Extrapyramidal tracts</em> (rubrospinal, reticulospinal, vestibulospinal, tectospinal): posture, balance, gross movement. Modulate the corticospinal output.</li>
+            </ul>
+          </li>
+          <li><strong>UMN vs LMN signs revisited:</strong>
+            <ul>
+              <li>UMN: spasticity, hyperreflexia, positive Babinski, no atrophy (until late).</li>
+              <li>LMN: flaccid weakness, hyporeflexia, fasciculations, atrophy.</li>
+            </ul>
+          </li>
+          <li><strong>Brown-Séquard syndrome</strong> (cord hemisection): ipsilateral loss of motor and DCML (vibration/proprioception) below lesion; contralateral loss of pain/temperature starting one or two levels below the lesion (because spinothalamic decussates at level of entry).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Pathway</th><th>What it carries</th><th>Decussates at</th></tr></thead>
+          <tbody>
+            <tr><td>DCML</td><td>Fine touch, vibration, proprioception</td><td>Medulla</td></tr>
+            <tr><td>Spinothalamic</td><td>Pain, temperature, crude touch</td><td>Spinal cord at entry</td></tr>
+            <tr><td>Corticospinal (lateral)</td><td>Voluntary motor</td><td>Pyramids of medulla</td></tr>
+            <tr><td>Corticospinal (ventral)</td><td>Voluntary motor (axial)</td><td>At level of action</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Stroke pattern</strong> reflects pathway decussation. A right cortical stroke (above medulla) produces left-sided weakness and left-sided sensory loss because the tracts have not yet crossed (motor) or have already crossed (sensory). <strong>Anterior cord syndrome</strong> (often from anterior spinal artery infarct): bilateral motor + spinothalamic loss; DCML preserved (different blood supply).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a spinal cord cross-section. Color the dorsal columns (DCML), the lateral spinothalamic tract, and the lateral corticospinal tract. Mark where each decussates.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Where does the spinothalamic tract decussate?</li>
+          <li><span class="qc-meta">DOK 4.</span> A right T6 hemisection causes which deficits below the lesion?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>At the spinal cord level of entry (the second-order neuron crosses immediately).</li>
+            <li>Brown-Séquard pattern: <strong>ipsilateral</strong> motor and vibration/proprioception loss (DCML and lateral corticospinal haven't decussated yet at T6), <strong>contralateral</strong> pain/temperature loss starting one or two levels below (spinothalamic already crossed at entry).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 10: ANS overview -->
+    <article class="concept-card" id="c10" data-tags="AP">
+      <p class="card-eyebrow">Nervous &middot; Concept 10 of 16</p>
+      <h2 class="card-title">Autonomic nervous system: sympathetic vs parasympathetic <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">Two opposing branches, each with a two-neuron path from CNS to effector. Sympathetic is fight-or-flight (thoracolumbar, short pre / long post). Parasympathetic is rest-and-digest (craniosacral, long pre / short post).</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Two-neuron pathway in both branches:</strong>
+            <ol>
+              <li>Preganglionic neuron: cell body in CNS → axon to autonomic ganglion (releases ACh on nicotinic receptors).</li>
+              <li>Postganglionic neuron: cell body in ganglion → axon to effector (releases NE in sympathetic, ACh in parasympathetic).</li>
+            </ol>
+          </li>
+          <li><strong>Sympathetic (thoracolumbar):</strong>
+            <ul>
+              <li>Preganglionic cell bodies in lateral horn T1-L2.</li>
+              <li>Short preganglionic axons → sympathetic chain ganglia (paravertebral) or prevertebral ganglia (celiac, SMG, IMG).</li>
+              <li>Long postganglionic axons → effectors throughout body.</li>
+              <li>Exception: adrenal medulla. Preganglionic fiber synapses directly on chromaffin cells (no postganglionic neuron) → systemic release of E and NE.</li>
+            </ul>
+          </li>
+          <li><strong>Parasympathetic (craniosacral):</strong>
+            <ul>
+              <li>Cranial outflow: CN III, VII, IX, X (vagus carries ~75% of all parasympathetic fibers).</li>
+              <li>Sacral outflow: S2-S4 (pelvic splanchnic nerves to pelvic organs).</li>
+              <li>Long preganglionic → ganglia located in or near target organ.</li>
+              <li>Short postganglionic → effector.</li>
+            </ul>
+          </li>
+          <li><strong>Dual innervation:</strong> most organs receive both branches with opposing effects. Notable exceptions:
+            <ul>
+              <li>Adrenal medulla: sympathetic only.</li>
+              <li>Sweat glands: sympathetic only (but uses ACh — unique).</li>
+              <li>Vascular smooth muscle: mostly sympathetic only.</li>
+              <li>Pilomotor muscles: sympathetic only.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Organ</th><th>Sympathetic effect</th><th>Parasympathetic effect</th></tr></thead>
+          <tbody>
+            <tr><td>Heart</td><td>↑ HR, ↑ contractility (β1)</td><td>↓ HR (M2)</td></tr>
+            <tr><td>Bronchi</td><td>Bronchodilation (β2)</td><td>Bronchoconstriction (M3)</td></tr>
+            <tr><td>GI</td><td>↓ Motility (α/β)</td><td>↑ Motility, ↑ secretions (M3)</td></tr>
+            <tr><td>Bladder detrusor</td><td>Relax (β3)</td><td>Contract (M3) → void</td></tr>
+            <tr><td>Pupil</td><td>Dilate (α1)</td><td>Constrict (M3)</td></tr>
+            <tr><td>Sweat glands</td><td>Sweating (M, unique)</td><td>—</td></tr>
+            <tr><td>Vessels (most)</td><td>Vasoconstriction (α1) or dilate skeletal muscle (β2 via epi)</td><td>—</td></tr>
+            <tr><td>Liver</td><td>Glycogenolysis (β2)</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Horner syndrome</strong>: disruption of sympathetic outflow to face → ipsilateral ptosis, miosis, anhidrosis. Causes: Pancoast tumor, carotid dissection, lateral medullary stroke. <strong>Vagal tone</strong> dominates at rest — that's why HR rises with inspiration (less vagal input) and slows with expiration. <strong>Autonomic dysreflexia</strong> in spinal cord injury above T6: noxious stimulus below the lesion triggers massive sympathetic outflow without supraspinal modulation → severe HTN, headache, flushing above level, pallor below. Medical emergency.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the two-neuron pathways for each branch, side by side. Mark preganglionic and postganglionic neurotransmitters. Add 5 organs and indicate what each branch does to each.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which cranial nerve carries most parasympathetic fibers?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why are sweat glands considered an exception in the ANS?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Vagus nerve (CN X).</li>
+            <li>They have only sympathetic innervation (no parasympathetic), but the postganglionic sympathetic neurons release acetylcholine instead of norepinephrine. Anatomically sympathetic, chemically cholinergic.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 11: ANS RECEPTOR PHARMACOLOGY PRIMER -->
+    <article class="concept-card" id="c11" data-tags="P">
+      <p class="card-eyebrow">Nervous &middot; Concept 11 of 16</p>
+      <h2 class="card-title">ANS receptor pharmacology primer <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Every autonomic drug works on one of a small set of receptors. Memorize the receptor map once and the pharmacology of antihypertensives, asthma drugs, GI motility drugs, mydriatics, urinary drugs, and shock pressors becomes one consistent system.</p>
+
+      <section class="card-section">
+        <h3>Notes — the receptor map</h3>
+        <ul>
+          <li><strong>Cholinergic receptors (respond to ACh):</strong>
+            <ul>
+              <li><em>Nicotinic (N):</em> at <em>all autonomic ganglia</em> (both sympathetic and parasympathetic) and at the <em>neuromuscular junction</em>. Ionotropic (fast).</li>
+              <li><em>Muscarinic (M1-M5):</em> at parasympathetic targets (and the unique sweat gland sympathetic outflow). Metabotropic.
+                <ul>
+                  <li>M1 — CNS, gastric parietal cells.</li>
+                  <li>M2 — heart (↓ HR, ↓ AV conduction).</li>
+                  <li>M3 — smooth muscle (bronchoconstriction, GI/bladder contraction, glands).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Adrenergic receptors (respond to NE / E):</strong>
+            <ul>
+              <li><em>α1:</em> vascular smooth muscle → vasoconstriction; iris dilator → mydriasis; bladder neck → contraction (urinary retention).</li>
+              <li><em>α2:</em> presynaptic on sympathetic terminals → negative feedback on NE release; CNS sympathetic dampening (clonidine).</li>
+              <li><em>β1:</em> heart → ↑ HR, ↑ contractility, ↑ conduction; kidney JG cells → ↑ renin.</li>
+              <li><em>β2:</em> bronchial smooth muscle → bronchodilation; vascular smooth muscle (skeletal muscle) → vasodilation; liver → glycogenolysis; uterus → relaxation.</li>
+              <li><em>β3:</em> bladder detrusor → relaxation; adipose → lipolysis.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Drug class hooks — exemplars</h3>
+        <table class="summary">
+          <thead><tr><th>Receptor</th><th>Agonist (mimic)</th><th>Antagonist (block)</th><th>Therapeutic use</th></tr></thead>
+          <tbody>
+            <tr><td>α1</td><td>Phenylephrine, NE</td><td>Prazosin, doxazosin, tamsulosin</td><td>Pressor (agonist); HTN, BPH (antagonist)</td></tr>
+            <tr><td>α2 (central)</td><td>Clonidine, dexmedetomidine</td><td>—</td><td>HTN, sedation, withdrawal</td></tr>
+            <tr><td>β1</td><td>Dobutamine</td><td>Metoprolol, atenolol (selective); propranolol (non-selective)</td><td>Inotrope (agonist); HTN, HF, post-MI (antagonist)</td></tr>
+            <tr><td>β2</td><td>Albuterol, salmeterol, terbutaline</td><td>Propranolol (non-selective β)</td><td>Asthma, COPD, tocolysis (agonist)</td></tr>
+            <tr><td>β3</td><td>Mirabegron</td><td>—</td><td>Overactive bladder</td></tr>
+            <tr><td>α &amp; β both</td><td>Epinephrine, NE</td><td>Carvedilol, labetalol</td><td>Anaphylaxis, shock; HTN, HF</td></tr>
+            <tr><td>M (muscarinic)</td><td>Bethanechol, pilocarpine</td><td>Atropine, ipratropium, oxybutynin, scopolamine</td><td>Glaucoma, urinary retention (agonist); bradycardia, COPD, overactive bladder, motion sickness (antagonist)</td></tr>
+            <tr><td>Nicotinic (NMJ)</td><td>—</td><td>Vecuronium, rocuronium (non-depolarizing); succinylcholine (depolarizing)</td><td>Paralysis for surgery, intubation</td></tr>
+            <tr><td>Nicotinic (ganglia)</td><td>Nicotine (low dose)</td><td>—</td><td>Smoking cessation (transdermal nicotine)</td></tr>
+            <tr><td>AChE inhibitors</td><td>↑ ACh everywhere</td><td>—</td><td>Myasthenia (pyridostigmine), Alzheimer (donepezil); toxicity = organophosphates</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Putting it together — what does each drug do at the bedside?</h3>
+        <ul>
+          <li><strong>Albuterol</strong> (β2 agonist): bronchodilation in asthma. Side effects: tremor, tachycardia (some β1 cross-reactivity).</li>
+          <li><strong>Metoprolol</strong> (β1 antagonist): ↓ HR, ↓ contractility, ↓ renin. Used in HF, HTN, post-MI, AFib rate control.</li>
+          <li><strong>Atropine</strong> (M antagonist): ↑ HR, ↓ secretions, mydriasis. Used in symptomatic bradycardia and as antidote to AChE inhibitor poisoning.</li>
+          <li><strong>Phenylephrine</strong> (α1 agonist): vasoconstriction → ↑ BP. Used in distributive shock and as a nasal decongestant.</li>
+          <li><strong>Tamsulosin</strong> (α1A antagonist): relaxes bladder neck → improves urine flow in BPH.</li>
+          <li><strong>Clonidine</strong> (α2 central agonist): ↓ central sympathetic outflow → ↓ BP, sedation.</li>
+          <li><strong>Pyridostigmine</strong> (AChE inhibitor): ↑ ACh at NMJ → improves myasthenia gravis weakness.</li>
+          <li><strong>Succinylcholine</strong> (nicotinic NMJ agonist, depolarizing): rapid muscle paralysis for intubation; brief duration.</li>
+        </ul>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Organophosphate poisoning</strong> (pesticide exposure) = AChE inhibition → too much ACh everywhere. Symptoms = "SLUDGE-M": Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis, Miosis. Treat with atropine (block muscarinic) + pralidoxime (regenerate AChE).</p>
+        <p><strong>Anticholinergic toxicity</strong> ("hot, dry, blind, mad, full") — diphenhydramine, antipsychotics, TCAs, scopolamine: hyperthermia, dry skin, mydriasis, confusion, urinary retention. Treat with supportive care; physostigmine in severe cases.</p>
+        <p><strong>β-blocker overdose</strong>: bradycardia, hypotension, hypoglycemia. Treat with glucagon (bypasses β receptor, uses cAMP independently).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a one-page ANS receptor map. Two columns (cholinergic vs adrenergic), each with receptor types and locations. Add three drug classes per receptor.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient on a non-selective β-blocker like propranolol develops wheezing. Mechanism?</li>
+          <li><span class="qc-meta">DOK 4.</span> A farmer presents with miosis, drooling, urinating, diarrhea, vomiting, and weakness. What is the toxin, and what are the two antidotes?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does albuterol cause tachycardia and tremor as side effects despite being a "β2" agonist?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Non-selective β-blockade also blocks β2 in the bronchi → bronchoconstriction. Avoid in asthma; use β1-selective (metoprolol, atenolol) if a β-blocker is needed.</li>
+            <li>Organophosphate (AChE inhibitor) poisoning. Antidotes: <strong>atropine</strong> (muscarinic antagonist, treats the SLUDGE symptoms) and <strong>pralidoxime / 2-PAM</strong> (regenerates AChE if given before aging).</li>
+            <li>"β2-selective" is relative, not absolute. At therapeutic doses albuterol still hits some β1 (tachycardia) and β2 in skeletal muscle (tremor). Long-acting agents (salmeterol) are more selective.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 12: Vision -->
+    <article class="concept-card" id="c12" data-tags="AP">
+      <p class="card-eyebrow">Nervous &middot; Concept 12 of 16</p>
+      <h2 class="card-title">Vision: eye anatomy and visual pathway <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">Light is focused by cornea + lens, converted to electrical signal by photoreceptors, and processed by retinal neurons before traveling through the optic nerve to the brain. Where the visual pathway is interrupted predicts the visual field cut.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Eye layers (outside in):</strong>
+            <ul>
+              <li>Fibrous tunic: sclera (white), cornea (anterior, refractive).</li>
+              <li>Vascular tunic (uvea): choroid, ciliary body, iris.</li>
+              <li>Neural tunic: retina.</li>
+            </ul>
+          </li>
+          <li><strong>Refractive elements (in order light passes):</strong>
+            <ul>
+              <li>Cornea (~⅔ of refraction).</li>
+              <li>Aqueous humor (anterior chamber).</li>
+              <li>Pupil (size controlled by iris).</li>
+              <li>Lens (accommodation by ciliary muscle: contraction → lens rounds for near vision).</li>
+              <li>Vitreous humor.</li>
+            </ul>
+          </li>
+          <li><strong>Retina cells (light comes through outer layers first to reach photoreceptors):</strong>
+            <ul>
+              <li>Photoreceptors:
+                <ul>
+                  <li>Rods: dim light, peripheral, no color.</li>
+                  <li>Cones: bright light, color (3 types: S/M/L wavelength), central vision (fovea is all cones).</li>
+                </ul>
+              </li>
+              <li>Bipolar cells: relay.</li>
+              <li>Ganglion cells: their axons form the optic nerve.</li>
+              <li>Horizontal and amacrine cells: lateral processing.</li>
+            </ul>
+          </li>
+          <li><strong>Phototransduction</strong> (light onto retinal):
+            <ul>
+              <li>Rhodopsin (rods) or photopsin (cones) absorbs photon → 11-cis-retinal → all-trans-retinal → G-protein cascade → ↓ cGMP → close Na⁺ channels → hyperpolarization → ↓ NT release.</li>
+              <li>Counterintuitive: photoreceptors hyperpolarize in light (they're depolarized in dark).</li>
+            </ul>
+          </li>
+          <li><strong>Visual pathway:</strong>
+            <ul>
+              <li>Retina → optic nerve (CN II) → optic chiasm → optic tract → lateral geniculate nucleus (thalamus) → optic radiations → primary visual cortex (occipital lobe).</li>
+              <li>At the chiasm: nasal retinal fibers cross; temporal fibers stay ipsilateral.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: visual field deficits</h3>
+        <table class="summary">
+          <thead><tr><th>Lesion site</th><th>Visual field defect</th><th>Classic cause</th></tr></thead>
+          <tbody>
+            <tr><td>Optic nerve</td><td>Ipsilateral monocular blindness</td><td>Optic neuritis (MS), trauma</td></tr>
+            <tr><td>Optic chiasm (center)</td><td>Bitemporal hemianopia</td><td>Pituitary adenoma</td></tr>
+            <tr><td>Optic tract</td><td>Contralateral homonymous hemianopia</td><td>Stroke, tumor</td></tr>
+            <tr><td>Optic radiation (temporal)</td><td>Contralateral upper quadrantanopia ("pie in the sky")</td><td>Temporal lobe lesion</td></tr>
+            <tr><td>Optic radiation (parietal)</td><td>Contralateral lower quadrantanopia</td><td>Parietal lobe lesion</td></tr>
+            <tr><td>Occipital cortex</td><td>Homonymous hemianopia, macular sparing</td><td>PCA stroke</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Glaucoma</strong>: ↑ intraocular pressure (often impaired aqueous humor outflow) → optic nerve damage. Open-angle (chronic, asymptomatic until late) and closed-angle (acute emergency: red painful eye, fixed dilated pupil, halos around lights). <strong>Macular degeneration</strong>: central vision loss with intact peripheral. <strong>Retinal detachment</strong>: sudden "curtain" over visual field, flashes, floaters.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the visual pathway from both eyes through the chiasm to the cortex. For each lesion site in the table, draw the field cut.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient with a pituitary adenoma develops what type of visual field deficit?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why is the fovea optimized for high-acuity vision?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Bitemporal hemianopia — the tumor compresses the optic chiasm at the crossing nasal retinal fibers, eliminating the temporal field of each eye.</li>
+            <li>The fovea is densely packed with cones (no rods), each cone has a 1:1 wiring to a bipolar and ganglion cell, and the overlying retinal layers are pushed aside, so light hits photoreceptors directly. Maximum spatial resolution.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 13: Hearing -->
+    <article class="concept-card" id="c13" data-tags="AP">
+      <p class="card-eyebrow">Nervous &middot; Concept 13 of 16</p>
+      <h2 class="card-title">Hearing: ear anatomy and auditory pathway <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">Sound is air pressure waves → mechanical bone vibration → fluid wave in the cochlea → bending of hair cell stereocilia → electrical signal to brain. Where in this chain the problem sits determines what kind of hearing loss the patient has.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Three compartments:</strong>
+            <ul>
+              <li><em>External ear:</em> pinna (auricle), external auditory canal, tympanic membrane.</li>
+              <li><em>Middle ear:</em> air-filled cavity with three ossicles (malleus → incus → stapes). Eustachian tube to nasopharynx equalizes pressure.</li>
+              <li><em>Inner ear:</em> bony labyrinth filled with perilymph; membranous labyrinth filled with endolymph. Contains cochlea (hearing) and vestibular apparatus (balance, Concept 14).</li>
+            </ul>
+          </li>
+          <li><strong>Sound transmission pathway:</strong>
+            <ol>
+              <li>Sound wave → tympanic membrane vibrates.</li>
+              <li>Malleus → incus → stapes amplifies and transmits.</li>
+              <li>Stapes pushes on oval window → fluid wave in cochlea (scala vestibuli).</li>
+              <li>Fluid wave travels along basilar membrane → bends hair cell stereocilia in organ of Corti.</li>
+              <li>Hair cell mechanotransduction → opens K⁺ channels → depolarization → release glutamate onto auditory nerve (CN VIII).</li>
+              <li>Pressure dissipates at round window.</li>
+            </ol>
+          </li>
+          <li><strong>Tonotopic organization:</strong> basilar membrane is stiff and narrow at base, floppy and wide at apex. High-frequency sounds peak at base; low-frequency sounds peak at apex. Maps onto primary auditory cortex.</li>
+          <li><strong>Auditory pathway:</strong> CN VIII → cochlear nuclei (medulla) → superior olivary nucleus (bilateral) → inferior colliculus (midbrain) → medial geniculate nucleus (thalamus) → primary auditory cortex (temporal lobe).</li>
+          <li><strong>Bilateral pathway</strong> means unilateral cortical lesions rarely cause complete deafness.</li>
+          <li><strong>Hearing loss types:</strong>
+            <ul>
+              <li>Conductive: problem in external or middle ear (wax, otitis media, otosclerosis, perforated TM). Sound can't reach the inner ear normally.</li>
+              <li>Sensorineural: problem in inner ear or auditory nerve (noise damage, presbycusis, ototoxic drugs, Ménière, acoustic neuroma).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: Weber and Rinne tests</h3>
+        <table class="summary">
+          <thead><tr><th>Test</th><th>Normal</th><th>Conductive loss (one ear)</th><th>Sensorineural loss (one ear)</th></tr></thead>
+          <tbody>
+            <tr><td>Weber (tuning fork on forehead)</td><td>Equal both sides</td><td>Lateralizes to <strong>affected</strong> ear</td><td>Lateralizes to <strong>unaffected</strong> ear</td></tr>
+            <tr><td>Rinne (mastoid then ear)</td><td>AC &gt; BC bilaterally</td><td>BC &gt; AC on affected side</td><td>AC &gt; BC on affected side (both reduced)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Ototoxic drugs:</strong> aminoglycosides (gentamicin), loop diuretics (high-dose furosemide), cisplatin, salicylates (reversible at high doses). Mostly damage cochlear hair cells → sensorineural loss. <strong>Acoustic neuroma</strong> (vestibular schwannoma): tumor on CN VIII at cerebellopontine angle → progressive unilateral SNHL, tinnitus, balance issues. <strong>Presbycusis</strong>: age-related high-frequency SNHL → trouble in noisy rooms before quiet conversation.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the sound transmission chain from ear canal to organ of Corti. Mark where in the chain conductive vs sensorineural loss happens.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> What are the three middle ear ossicles in order from tympanic membrane to oval window?</li>
+          <li><span class="qc-meta">DOK 3.</span> A patient with right ear hearing loss has Weber lateralizing to the right. Conductive or sensorineural?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Malleus → incus → stapes.</li>
+            <li>Conductive loss in the right ear. Weber lateralizes to the affected side in conductive loss because there's no competing ambient noise masking bone-conducted sound on that side.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 14: Vestibular -->
+    <article class="concept-card" id="c14" data-tags="AP">
+      <p class="card-eyebrow">Nervous &middot; Concept 14 of 16</p>
+      <h2 class="card-title">Balance: vestibular apparatus and pathways <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">The vestibular system tells the brain how the head is oriented and moving. Two structures: semicircular canals (rotation) and otolith organs (linear acceleration + gravity). Mismatch among vestibular, visual, and proprioceptive input = vertigo or motion sickness.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Two functional units:</strong>
+            <ul>
+              <li>Semicircular canals (3 per side: anterior, posterior, lateral): detect <em>angular (rotational) acceleration</em>. Endolymph movement bends cupula → bends hair cells in ampulla.</li>
+              <li>Otolith organs (utricle, saccule): detect <em>linear acceleration</em> and head tilt relative to gravity. Otoconia (calcium carbonate crystals) sit on a gelatinous membrane over hair cells; gravity shifts them.</li>
+            </ul>
+          </li>
+          <li><strong>Hair cell transduction:</strong> stereocilia bend → mechanotransduction channels open → K⁺ enters from endolymph → depolarization → release glutamate onto vestibular nerve (CN VIII).</li>
+          <li><strong>Central pathway:</strong>
+            <ul>
+              <li>Vestibular nerve → vestibular nuclei (pons/medulla) → outputs to:
+                <ul>
+                  <li>Cerebellum (coordination).</li>
+                  <li>Spinal cord via vestibulospinal tract (posture).</li>
+                  <li>Cranial nerve nuclei III, IV, VI via medial longitudinal fasciculus (eye movements — vestibulo-ocular reflex, VOR).</li>
+                  <li>Cerebral cortex (conscious perception of motion).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Vestibulo-ocular reflex (VOR):</strong> head turns one way → eyes reflexively move the opposite way at the same speed → image stays stable on the retina. Tested with head impulse test.</li>
+          <li><strong>Three-way integration:</strong> balance requires agreement among vestibular, visual, and proprioceptive (joint position) input. Conflict produces vertigo or motion sickness.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary: peripheral vs central vertigo</h3>
+        <table class="summary">
+          <thead><tr><th>Feature</th><th>Peripheral (inner ear / CN VIII)</th><th>Central (brainstem / cerebellum)</th></tr></thead>
+          <tbody>
+            <tr><td>Onset</td><td>Sudden, severe</td><td>Gradual, less severe</td></tr>
+            <tr><td>Nystagmus</td><td>Horizontal, unidirectional, fatigable</td><td>Vertical or multi-directional, non-fatigable</td></tr>
+            <tr><td>Hearing</td><td>Often affected</td><td>Usually normal</td></tr>
+            <tr><td>Other neuro signs</td><td>Absent</td><td>Often present (diplopia, dysarthria, ataxia)</td></tr>
+            <tr><td>Common causes</td><td>BPPV, vestibular neuritis, Ménière, acoustic neuroma</td><td>Stroke, MS, tumor</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>BPPV</strong> (benign paroxysmal positional vertigo): otoconia displaced into a semicircular canal (usually posterior). Brief vertigo with head position changes. Dix-Hallpike test confirms; Epley maneuver treats. <strong>Ménière disease:</strong> endolymphatic hydrops → episodic triad of vertigo, fluctuating SNHL, tinnitus, with aural fullness. <strong>Vestibular neuritis:</strong> viral inflammation of vestibular nerve → severe vertigo days to weeks, no hearing loss.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the vestibular apparatus: three semicircular canals at orthogonal angles, plus utricle and saccule. For each, write what motion it senses and how the hair cells get activated.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which vestibular structure detects rotational acceleration?</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient has acute vertigo, diplopia, and dysarthria. Peripheral or central, and why does the answer matter?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Semicircular canals (three per side, oriented in three planes).</li>
+            <li>Central. Diplopia and dysarthria are brainstem cranial nerve signs that don't occur with peripheral vestibular disease. The danger: posterior circulation stroke (cerebellar or brainstem). Urgent imaging needed; time matters for thrombolytics.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 15: Smell + taste -->
+    <article class="concept-card" id="c15" data-tags="AP">
+      <p class="card-eyebrow">Nervous &middot; Concept 15 of 16</p>
+      <h2 class="card-title">Olfaction and gustation <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+      <p class="given">Smell and taste are chemical senses. Smell uses CN I (olfactory) and is the only sense that does not relay through the thalamus first. Taste uses three cranial nerves and relies on five basic tastes plus enormous input from smell.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Olfaction:</strong>
+            <ul>
+              <li>Olfactory epithelium in the roof of the nasal cavity. Bipolar olfactory neurons with cilia extending into mucus.</li>
+              <li>Odorant binds GPCR on cilia → G-protein → ↑ cAMP → opens cation channel → depolarization.</li>
+              <li>Axons (CN I fibers) pass through cribriform plate → synapse at olfactory bulb → olfactory tract → directly to <em>olfactory cortex (piriform), amygdala, hippocampus</em>. <strong>Bypasses thalamus.</strong></li>
+              <li>Adaptation is rapid — you stop noticing your own perfume in minutes.</li>
+              <li>Anosmia (loss of smell): viral URI, COVID-19, head trauma (cribriform fracture shears olfactory fibers), neurodegenerative disease (Alzheimer, Parkinson — often early sign).</li>
+            </ul>
+          </li>
+          <li><strong>Gustation:</strong>
+            <ul>
+              <li>Taste buds in tongue papillae (mainly fungiform, foliate, circumvallate), plus palate, pharynx, epiglottis.</li>
+              <li>Each taste bud has 50-150 taste receptor cells (with microvilli) + supporting cells.</li>
+              <li>Five basic tastes:
+                <ul>
+                  <li>Sweet: GPCR (T1R2/T1R3).</li>
+                  <li>Bitter: GPCR (T2R family — many).</li>
+                  <li>Umami: GPCR (T1R1/T1R3), responds to glutamate.</li>
+                  <li>Salty: Na⁺ enters epithelial Na⁺ channels directly.</li>
+                  <li>Sour: H⁺ blocks K⁺ channels (and other mechanisms) → depolarization.</li>
+                </ul>
+              </li>
+              <li>Three cranial nerves carry taste:
+                <ul>
+                  <li>CN VII (facial): anterior 2/3 tongue (chorda tympani branch).</li>
+                  <li>CN IX (glossopharyngeal): posterior 1/3 tongue.</li>
+                  <li>CN X (vagus): epiglottis and pharynx.</li>
+                </ul>
+              </li>
+              <li>Pathway: cranial nerve → nucleus solitarius (medulla) → thalamus → primary gustatory cortex (insula).</li>
+              <li>Most "flavor" is actually smell (retronasal olfaction) — that's why food tastes bland when you have a cold.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Sense</th><th>Cranial nerve(s)</th><th>Pathway shortcut</th></tr></thead>
+          <tbody>
+            <tr><td>Smell</td><td>CN I</td><td>Direct to olfactory cortex (no thalamic relay)</td></tr>
+            <tr><td>Taste (anterior 2/3)</td><td>CN VII</td><td>→ nucleus solitarius → thalamus → insula</td></tr>
+            <tr><td>Taste (posterior 1/3)</td><td>CN IX</td><td>→ nucleus solitarius → thalamus → insula</td></tr>
+            <tr><td>Taste (epiglottis/pharynx)</td><td>CN X</td><td>→ nucleus solitarius → thalamus → insula</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Sudden anosmia</strong> was the most reliable early symptom of COVID-19 infection during the pandemic. <strong>Anosmia is often the earliest sign of neurodegenerative disease</strong>: olfactory bulbs sit close to entry points of α-synuclein (Parkinson) and amyloid (Alzheimer) pathology. <strong>Loss of taste with stroke</strong> is rare — bilateral pathway provides redundancy.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the tongue. Label the three cranial nerves that carry taste by region. Then sketch the olfactory pathway from epithelium → cribriform plate → bulb → cortex, noting it bypasses the thalamus.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which is the only sensory modality that does NOT relay through the thalamus before reaching the cortex?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does food taste bland when you have a cold?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Olfaction (smell). It projects directly from olfactory bulb to olfactory cortex.</li>
+            <li>Most of what we perceive as "flavor" is actually retronasal olfaction — odorants released from food in the mouth travel up to the olfactory epithelium. Nasal congestion blocks that pathway, so only the five basic tastes register.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- 16: Common neuro conditions -->
+    <article class="concept-card" id="c16" data-tags="CLIN">
+      <p class="card-eyebrow">Nervous &middot; Concept 16 of 16</p>
+      <h2 class="card-title">Common neurological conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Most neuro pathology is one of four patterns: vascular (stroke), demyelinating, neurodegenerative, or seizure. Localizing the lesion and identifying the pattern narrows the diagnosis quickly.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Stroke:</strong>
+            <ul>
+              <li><em>Ischemic (~80%):</em> thrombotic, embolic, lacunar. tPA window ≤ 4.5 h (some up to 9 h with imaging). Mechanical thrombectomy up to 24 h in selected.</li>
+              <li><em>Hemorrhagic (~20%):</em> intracerebral or subarachnoid. Often from HTN (deep, basal ganglia) or aneurysm (SAH).</li>
+              <li>BE FAST: Balance, Eyes (vision change), Face droop, Arm drift, Speech, Time.</li>
+              <li>Localization: MCA (contralateral arm/face weakness, aphasia if dominant); ACA (leg); PCA (visual field cut).</li>
+            </ul>
+          </li>
+          <li><strong>Multiple sclerosis (MS):</strong>
+            <ul>
+              <li>Autoimmune demyelination of CNS (oligodendrocytes).</li>
+              <li>Lesions disseminated in space and time on MRI.</li>
+              <li>Sx: optic neuritis, internuclear ophthalmoplegia, sensory disturbance, fatigue, bladder dysfunction.</li>
+              <li>Treatment: corticosteroids for acute exacerbations; disease-modifying therapies long-term.</li>
+            </ul>
+          </li>
+          <li><strong>Parkinson disease:</strong>
+            <ul>
+              <li>Degeneration of dopaminergic neurons in substantia nigra → ↓ dopamine to striatum.</li>
+              <li>TRAP: Tremor (at rest, "pill-rolling"), Rigidity (cogwheel), Akinesia/bradykinesia, Postural instability.</li>
+              <li>Treatment: levodopa/carbidopa, dopamine agonists, MAO-B inhibitors, deep brain stimulation.</li>
+            </ul>
+          </li>
+          <li><strong>Alzheimer disease:</strong>
+            <ul>
+              <li>Most common dementia. Amyloid plaques + tau neurofibrillary tangles → hippocampal and cortical atrophy.</li>
+              <li>Progressive memory loss, then executive dysfunction, then personality change and global decline.</li>
+              <li>Treatment: AChE inhibitors (donepezil), NMDA modulator (memantine), anti-amyloid antibodies in select cases.</li>
+            </ul>
+          </li>
+          <li><strong>Seizures and epilepsy:</strong>
+            <ul>
+              <li>Seizure = abnormal synchronous neuronal firing. Epilepsy = recurrent unprovoked seizures.</li>
+              <li>Types: focal (one area, with or without awareness) vs generalized (both hemispheres). Tonic-clonic, absence, myoclonic.</li>
+              <li>Status epilepticus: seizure &gt; 5 min or recurrent without recovery between → emergency.</li>
+              <li>First-line acute: benzodiazepines (lorazepam IV).</li>
+            </ul>
+          </li>
+          <li><strong>Other key conditions:</strong>
+            <ul>
+              <li>Migraine: throbbing, often unilateral, photophobia, phonophobia, ± aura.</li>
+              <li>Meningitis: fever + neck stiffness + altered mental status (classic triad). LP confirms.</li>
+              <li>Myasthenia gravis: anti-AChR antibodies at NMJ → fatigable weakness, especially ocular. Improves with AChE inhibitors.</li>
+              <li>Guillain-Barré: ascending flaccid paralysis post-infection; albuminocytologic dissociation on LP; IVIG or plasmapheresis.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Condition</th><th>Hallmark</th><th>Initial action</th></tr></thead>
+          <tbody>
+            <tr><td>Ischemic stroke</td><td>Sudden focal deficit</td><td>Non-contrast CT, tPA if &lt; 4.5 h and eligible</td></tr>
+            <tr><td>Hemorrhagic stroke</td><td>Sudden severe headache, deficit</td><td>BP control, neurosurgery</td></tr>
+            <tr><td>MS</td><td>Disseminated lesions in space/time</td><td>MRI, steroids for relapse</td></tr>
+            <tr><td>Parkinson</td><td>TRAP</td><td>L-dopa</td></tr>
+            <tr><td>Alzheimer</td><td>Progressive memory loss</td><td>Cognitive testing, supportive</td></tr>
+            <tr><td>Status epilepticus</td><td>Seizure &gt; 5 min</td><td>IV lorazepam, then load with antiepileptic</td></tr>
+            <tr><td>Meningitis</td><td>Fever + stiff neck + AMS</td><td>Blood cultures, empiric abx (don't wait for LP)</td></tr>
+            <tr><td>Myasthenia gravis</td><td>Fatigable weakness, ptosis</td><td>AChR antibody, AChE inhibitor</td></tr>
+            <tr><td>Guillain-Barré</td><td>Ascending paralysis post-infection</td><td>LP, IVIG or plasmapheresis, ventilatory monitoring</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Bedside neuro exam (basic): mental status, cranial nerves, motor (strength, tone, reflexes), sensory, coordination, gait. Localize first ("UMN or LMN; cortical, brainstem, cord, or peripheral?"), then diagnose. <strong>Time is brain</strong> — ischemic stroke loses ~2 million neurons per minute. Rapid recognition matters.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a one-page neuro emergency reference: stroke (BE FAST, BP rules, tPA eligibility), status epilepticus protocol, GCS scale, and the NIH stroke scale categories.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient with new right arm weakness and expressive aphasia. Which artery?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why is a clinical lumbar puncture deferred in bacterial meningitis if there are signs of ↑ ICP?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Left MCA (middle cerebral artery). Both motor cortex for arm/face and Broca's area are in MCA territory.</li>
+            <li>Sudden CSF removal from below can shift the brain → herniation (uncal or tonsillar). Get a non-contrast head CT first if signs of ↑ ICP (papilledema, focal deficits, AMS). Don't delay empiric antibiotics waiting for imaging or LP.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+  </main>
+
+  <footer class="byline">
+    <p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Nervous &amp; special senses master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const toc = document.getElementById('toc-list');
+  document.querySelectorAll('.concept-card').forEach((card, idx) => {
+    const title = card.querySelector('.card-title');
+    if (!title) return;
+    const clone = title.cloneNode(true);
+    clone.querySelectorAll('.tag-pill').forEach(t => t.remove());
+    const text = clone.textContent.trim();
+    const li = document.createElement('li');
+    li.dataset.tags = card.dataset.tags;
+    li.innerHTML = `<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;
+    toc.appendChild(li);
+  });
+})();
+
+let currentView = 'combined';
+let currentDepth = 'full';
+const cntShown = document.getElementById('cnt-shown');
+
+function viewMatchesTags(view, tags) {
+  const parts = (tags || '').split(/\s+/);
+  if (view === 'combined') return true;
+  if (view === 'anatomy')  return parts.includes('A')  || parts.includes('AP') || parts.includes('CLIN');
+  if (view === 'physio')   return parts.includes('P')  || parts.includes('AP') || parts.includes('CLIN');
+  return true;
+}
+function applyFilters() {
+  document.body.classList.toggle('depth-essentials', currentDepth === 'essentials');
+  let shown = 0;
+  document.querySelectorAll('.concept-card').forEach(card => {
+    const viewOk = viewMatchesTags(currentView, card.dataset.tags);
+    const depthOk = currentDepth === 'full' || card.dataset.depth !== 'deep';
+    const show = viewOk && depthOk;
+    card.hidden = !show;
+    if (show) shown++;
+  });
+  document.querySelectorAll('#toc-list li').forEach(li => {
+    const viewOk = viewMatchesTags(currentView, li.dataset.tags);
+    const depthOk = currentDepth === 'full' || li.dataset.depth !== 'deep';
+    li.hidden = !(viewOk && depthOk);
+  });
+  cntShown.textContent = shown;
+}
+document.querySelectorAll('[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentView = btn.dataset.view;
+    applyFilters();
+  });
+});
+document.querySelectorAll('[data-depth]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentDepth = btn.dataset.depth;
+    applyFilters();
+  });
+});
+
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const course = params.get('course');
+  const COURSE_MAP = {
+    'BIO004': { eyebrow: 'BIO 004 Human Anatomy · Solano Community College',                     view:'anatomy',  depth:'full' },
+    'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology · American River College',          view:'combined', depth:'full' },
+    'BIO304': { eyebrow: 'BIO 304 Human Anatomy & Physiology (Online) · American River College', view:'combined', depth:'essentials' }
+  };
+  if (course && COURSE_MAP[course]) {
+    const c = COURSE_MAP[course];
+    const eb = document.getElementById('course-eyebrow');
+    if (eb) eb.textContent = c.eyebrow + ' · Nervous & Special Senses';
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === c.view ? 'true' : 'false'));
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === c.depth ? 'true' : 'false'));
+    currentView = c.view; currentDepth = c.depth;
+  }
+  const v = params.get('view');
+  const d = params.get('depth');
+  if (v && ['combined','anatomy','physio'].includes(v)) {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'));
+    currentView = v;
+  }
+  if (d && ['full','essentials'].includes(d)) {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === d ? 'true' : 'false'));
+    currentDepth = d;
+  }
+})();
+
+applyFilters();
+
+(function(){
+  const frameId = 'nervous-notes';
+  function sendHeight() {
+    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    try { window.parent.postMessage({ type: 'iframe-height', id: frameId, height: h }, '*'); } catch(e){}
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  if ('ResizeObserver' in window) new ResizeObserver(sendHeight).observe(document.body);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muscular System — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  figure.diagram { margin:14px 0 4px; padding:0; }
+  figure.diagram svg { width:100%; max-width:700px; height:auto; display:block; margin:0 auto; background:var(--off-white); border:1px solid var(--navy-tint); border-radius:4px; }
+  figure.diagram figcaption { font-family:'Lora',serif; font-style:italic; font-size:13px; color:var(--navy); margin-top:8px; text-align:center; line-height:1.4; }
+  figure.diagram svg text { font-family:'DM Sans',sans-serif; fill:var(--navy); font-size:12px; }
+  figure.diagram svg .lbl-bold { font-weight:700; } figure.diagram svg .lbl-small { font-size:10.5px; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } figure.diagram svg { background:var(--white); } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Muscular System</h1>
+    <p class="usage">Muscle has one job: turn chemical energy (ATP) into movement or force. Skeletal muscle moves bones. Smooth muscle moves substances through tubes. Cardiac muscle pumps blood (see cardiovascular notes Concept 4a). Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">12</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="A">
+    <p class="card-eyebrow">Muscular &middot; Concept 1 of 12</p>
+    <h2 class="card-title">Three muscle tissue types <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Skeletal, cardiac, smooth — three muscle tissues, three jobs. Each shares the basic contractile machinery (actin + myosin) but is built differently for its specific demand.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Skeletal muscle:</strong>
+          <ul><li>Voluntary, attached to bones.</li>
+          <li>Long, cylindrical, multinucleated fibers.</li>
+          <li>Striated (sarcomere alignment visible).</li>
+          <li>Innervated by somatic motor neurons; one neuromuscular junction per fiber.</li>
+          <li>Action potential ~2 ms; can tetanize.</li></ul>
+        </li>
+        <li><strong>Cardiac muscle:</strong>
+          <ul><li>Involuntary; only in heart.</li>
+          <li>Branched, mono- or binucleated cells.</li>
+          <li>Striated; intercalated discs (gap junctions + desmosomes).</li>
+          <li>Long AP (~250 ms with plateau); cannot tetanize.</li>
+          <li>Detailed in cardiovascular notes Concept 4a.</li></ul>
+        </li>
+        <li><strong>Smooth muscle:</strong>
+          <ul><li>Involuntary; in walls of hollow organs (vessels, gut, airways, bladder, uterus).</li>
+          <li>Spindle-shaped, single nucleus.</li>
+          <li>Not striated (actin and myosin not in regular sarcomeres).</li>
+          <li>Slow, sustained contractions with less ATP.</li>
+          <li>Innervated by ANS, hormones, local factors.</li></ul>
+        </li>
+        <li><strong>Common to all three:</strong>
+          <ul><li>Excitability (respond to stimulus).</li>
+          <li>Contractility (shorten or generate force).</li>
+          <li>Extensibility (can be stretched).</li>
+          <li>Elasticity (return to resting length).</li>
+          <li>Actin + myosin as contractile machinery.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Feature</th><th>Skeletal</th><th>Cardiac</th><th>Smooth</th></tr></thead>
+      <tbody>
+        <tr><td>Control</td><td>Voluntary</td><td>Involuntary</td><td>Involuntary</td></tr>
+        <tr><td>Cell shape</td><td>Long, cylindrical, multinucleate</td><td>Branched, 1-2 nuclei</td><td>Spindle, 1 nucleus</td></tr>
+        <tr><td>Striations</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Intercalated discs</td><td>No</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Tetanize</td><td>Yes</td><td>No (long refractory)</td><td>Variable</td></tr>
+        <tr><td>Speed</td><td>Fast</td><td>Moderate</td><td>Slow</td></tr>
+      </tbody></table>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which muscle type lacks striations?</li>
+      <li><span class="qc-meta">DOK 2.</span> Why can't cardiac muscle tetanize?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Smooth muscle.</li><li>Long action potential plateau and long refractory period mean a second stimulus cannot fire until the first contraction is nearly complete. This is essential — the heart must relax between beats to fill.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Muscular &middot; Concept 2 of 12</p>
+    <h2 class="card-title">Skeletal muscle gross anatomy and fascia <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">A muscle is a hierarchy: whole muscle → bundles (fascicles) → fibers (cells) → myofibrils → myofilaments. Each level is wrapped in connective tissue that anchors to tendons.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>CT wrappings (outer to inner):</strong>
+          <ul><li>Epimysium: surrounds entire muscle.</li>
+          <li>Perimysium: surrounds each fascicle (bundle of fibers).</li>
+          <li>Endomysium: surrounds each muscle fiber (cell).</li>
+          <li>All three converge to form tendons that anchor to bone.</li></ul>
+        </li>
+        <li><strong>Muscle attachments:</strong>
+          <ul><li>Origin: stationary attachment (usually proximal).</li>
+          <li>Insertion: moves toward the origin during contraction (usually distal).</li>
+          <li>Some muscles cross multiple joints.</li></ul>
+        </li>
+        <li><strong>Functional roles in movement:</strong>
+          <ul><li>Agonist (prime mover): primary force generator.</li>
+          <li>Antagonist: opposes the agonist (relaxes when agonist contracts).</li>
+          <li>Synergist: assists agonist.</li>
+          <li>Fixator: stabilizes the origin or proximal joint.</li></ul>
+        </li>
+        <li><strong>Fascia:</strong>
+          <ul><li>Superficial fascia (hypodermis): adipose + loose CT.</li>
+          <li>Deep fascia: dense CT surrounding muscles, separating compartments.</li>
+          <li>Forms compartments — basis of compartment syndrome (rising pressure within a fascial compartment compromises perfusion).</li></ul>
+        </li>
+        <li><strong>Blood supply:</strong> rich, especially in active muscles. Capillaries between each fiber.</li>
+        <li><strong>Innervation:</strong> each fiber has one NMJ from a somatic motor neuron.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Compartment syndrome</strong> (introduced in skeletal notes): pressure within a fascial compartment exceeds perfusion pressure → ischemia, necrosis. Pain out of proportion to injury, pain with passive stretch, paresthesia. Surgical fasciotomy is the only definitive treatment. Common in tibial fractures, crush injuries, reperfusion.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which CT layer surrounds a single muscle fiber?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does compartment syndrome require urgent fasciotomy?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Endomysium.</li><li>The fascia surrounding a compartment is inelastic. Once pressure exceeds perfusion pressure, capillary flow stops → muscle and nerve ischemia → irreversible damage within hours. Fasciotomy releases the compartment, restoring flow.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="AP">
+    <p class="card-eyebrow">Muscular &middot; Concept 3 of 12</p>
+    <h2 class="card-title">Muscle microanatomy: sarcomere, myofilaments, T-tubules, SR <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">The sarcomere is the functional unit. Two filaments (actin and myosin) slide past each other in a regulated way. The sarcoplasmic reticulum stores Ca²⁺ and the T-tubules deliver the electrical signal deep into the cell.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Sarcolemma:</strong> muscle cell membrane. Has invaginations called T-tubules.</li>
+        <li><strong>Sarcoplasmic reticulum (SR):</strong> modified smooth ER. Stores Ca²⁺. Terminal cisternae flank each T-tubule (triad = T-tubule + 2 terminal cisternae).</li>
+        <li><strong>Myofibrils:</strong> the contractile rods inside the fiber. Each is a chain of sarcomeres end-to-end.</li>
+        <li><strong>Sarcomere</strong> (Z-disc to Z-disc):
+          <ul><li>Z disc: anchor point; defines the sarcomere boundary.</li>
+          <li>A band: full myosin (dark band). Includes overlap with actin.</li>
+          <li>I band: only actin (light band). Includes Z disc.</li>
+          <li>H zone: only myosin, no overlap (lighter region in middle of A band).</li>
+          <li>M line: anchors myosin in the middle of the sarcomere.</li></ul>
+        </li>
+        <li><strong>Thick filaments (myosin):</strong>
+          <ul><li>~300 myosin molecules per thick filament.</li>
+          <li>Each myosin has a globular head (binds actin, hydrolyzes ATP) and a long tail.</li></ul>
+        </li>
+        <li><strong>Thin filaments (actin):</strong>
+          <ul><li>F-actin (filamentous, made of G-actin monomers).</li>
+          <li>Tropomyosin: covers myosin-binding sites on actin at rest.</li>
+          <li>Troponin complex (TnT, TnI, TnC): TnC binds Ca²⁺ → conformational change → tropomyosin shifts → myosin can bind.</li></ul>
+        </li>
+        <li><strong>Other structural proteins</strong> (deep dive):
+          <ul><li>Titin: huge spring-like protein from Z-disc to M-line; elastic recoil.</li>
+          <li>Nebulin: anchors actin.</li>
+          <li>Dystrophin: connects sarcomere to sarcolemma. Mutated in Duchenne muscular dystrophy.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Diagram: sarcomere bands</h3>
+      <figure class="diagram" aria-labelledby="dxSar-title dxSar-desc">
+        <svg viewBox="0 0 700 240" role="img" aria-labelledby="dxSar-title dxSar-desc">
+          <title id="dxSar-title">Sarcomere structure showing Z discs, A band, I band, H zone, M line, and filaments</title>
+          <desc id="dxSar-desc">A horizontal sarcomere spans from one Z disc to another. Thin filaments (actin) extend inward from each Z disc into the I band, partially overlapping with thick filaments (myosin) anchored at the central M line. The A band spans the full extent of thick filaments. The H zone is the central region of the A band where only thick filaments exist. During contraction, Z discs are pulled closer together as actin slides past myosin; the H zone narrows but the A band length stays the same.</desc>
+          <line x1="80" y1="40" x2="80" y2="180" stroke="var(--navy)" stroke-width="3"/>
+          <text x="80" y="200" text-anchor="middle" class="lbl-bold">Z disc</text>
+          <line x1="620" y1="40" x2="620" y2="180" stroke="var(--navy)" stroke-width="3"/>
+          <text x="620" y="200" text-anchor="middle" class="lbl-bold">Z disc</text>
+          <line x1="350" y1="55" x2="350" y2="165" stroke="var(--gold-deep)" stroke-width="2"/>
+          <text x="350" y="50" text-anchor="middle" class="lbl-bold" fill="var(--gold-deep)">M line</text>
+          <g stroke="var(--terra-dark)" stroke-width="2.5" fill="none">
+            <line x1="80" y1="80" x2="280" y2="80"/><line x1="80" y1="100" x2="280" y2="100"/><line x1="80" y1="120" x2="280" y2="120"/><line x1="80" y1="140" x2="280" y2="140"/>
+            <line x1="620" y1="80" x2="420" y2="80"/><line x1="620" y1="100" x2="420" y2="100"/><line x1="620" y1="120" x2="420" y2="120"/><line x1="620" y1="140" x2="420" y2="140"/>
+          </g>
+          <text x="180" y="65" text-anchor="middle" class="lbl-small" fill="var(--terra-dark)">Actin (thin)</text>
+          <g stroke="var(--navy)" stroke-width="6" fill="none">
+            <line x1="200" y1="90" x2="500" y2="90"/><line x1="200" y1="110" x2="500" y2="110"/><line x1="200" y1="130" x2="500" y2="130"/>
+          </g>
+          <text x="350" y="160" text-anchor="middle" class="lbl-small" fill="var(--navy)">Myosin (thick)</text>
+          <line x1="200" y1="220" x2="500" y2="220" stroke="var(--navy)" stroke-width="1.4"/>
+          <line x1="200" y1="215" x2="200" y2="225" stroke="var(--navy)" stroke-width="1.4"/>
+          <line x1="500" y1="215" x2="500" y2="225" stroke="var(--navy)" stroke-width="1.4"/>
+          <text x="350" y="234" text-anchor="middle" class="lbl-bold lbl-small">A band</text>
+          <line x1="80" y1="30" x2="200" y2="30" stroke="var(--gold-deep)" stroke-width="1.4"/>
+          <line x1="80" y1="25" x2="80" y2="35" stroke="var(--gold-deep)" stroke-width="1.4"/>
+          <line x1="200" y1="25" x2="200" y2="35" stroke="var(--gold-deep)" stroke-width="1.4"/>
+          <text x="140" y="20" text-anchor="middle" class="lbl-bold lbl-small" fill="var(--gold-deep)">I band</text>
+          <line x1="500" y1="30" x2="620" y2="30" stroke="var(--gold-deep)" stroke-width="1.4"/>
+          <line x1="500" y1="25" x2="500" y2="35" stroke="var(--gold-deep)" stroke-width="1.4"/>
+          <line x1="620" y1="25" x2="620" y2="35" stroke="var(--gold-deep)" stroke-width="1.4"/>
+          <text x="560" y="20" text-anchor="middle" class="lbl-bold lbl-small" fill="var(--gold-deep)">I band</text>
+          <line x1="280" y1="170" x2="420" y2="170" stroke="var(--terra-dark)" stroke-width="1.4"/>
+          <line x1="280" y1="165" x2="280" y2="175" stroke="var(--terra-dark)" stroke-width="1.4"/>
+          <line x1="420" y1="165" x2="420" y2="175" stroke="var(--terra-dark)" stroke-width="1.4"/>
+          <text x="350" y="184" text-anchor="middle" class="lbl-bold lbl-small" fill="var(--terra-dark)">H zone</text>
+        </svg>
+        <figcaption>Z discs at each end. Actin (thin, terra) extends from Z toward center. Myosin (thick, navy) is anchored at the M line and overlaps actin in the A band. During contraction, the H zone and I bands narrow; A band length is unchanged.</figcaption>
+      </figure>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Duchenne muscular dystrophy (DMD):</strong> X-linked recessive defect in dystrophin → muscle fibers tear during contraction → progressive weakness, calf pseudohypertrophy, wheelchair by ~12 yr, respiratory failure. Gower's sign (using hands to climb up legs to stand). <strong>Cardiac troponin</strong>: TnI and TnT are the most specific serum markers of myocardial cell injury (rise in MI).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which sarcomere region narrows during contraction but the A band does not?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why are cardiac troponins T and I used as MI markers?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>H zone (and I band). The A band reflects total myosin length, which is constant.</li><li>They are unique to cardiac muscle (different isoforms than skeletal). When cardiac myocytes die during MI, troponins leak into blood and can be measured. Specificity for cardiac injury is high; sensitivity rises with high-sensitivity assays.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="P">
+    <p class="card-eyebrow">Muscular &middot; Concept 4 of 12</p>
+    <h2 class="card-title">Excitation-contraction coupling <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Excitation (action potential) and contraction (cross-bridge cycling) are linked by Ca²⁺. The signal arrives at the NMJ; depolarization spreads along the sarcolemma and into T-tubules; the SR releases Ca²⁺; troponin says "go."</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>The eight-step chain (skeletal muscle):</strong>
+          <ol><li>Motor neuron AP arrives at axon terminal at NMJ.</li>
+          <li>Voltage-gated Ca²⁺ channels open → Ca²⁺ enters terminal.</li>
+          <li>ACh released into synaptic cleft.</li>
+          <li>ACh binds nicotinic receptors on motor end plate → Na⁺ enters → end plate potential → triggers AP in sarcolemma.</li>
+          <li>AP propagates along sarcolemma + down T-tubules.</li>
+          <li>T-tubule depolarization opens voltage-gated DHP receptors → mechanically linked to ryanodine receptors (RyR1) on SR → SR releases Ca²⁺ (mechanical coupling, no extracellular Ca²⁺ needed in skeletal muscle).</li>
+          <li>Ca²⁺ binds troponin C → tropomyosin shifts → myosin-binding sites on actin exposed.</li>
+          <li>Cross-bridge cycling begins (next concept).</li></ol>
+        </li>
+        <li><strong>Contrast with cardiac muscle:</strong> cardiac muscle uses calcium-induced calcium release (CICR) and depends on extracellular Ca²⁺. See cardiovascular notes Concept 4a.</li>
+        <li><strong>Relaxation:</strong>
+          <ol><li>AP stops; ACh degraded by acetylcholinesterase.</li>
+          <li>SR Ca²⁺-ATPase (SERCA) pumps Ca²⁺ back into SR (active transport).</li>
+          <li>Ca²⁺ falls → troponin releases tropomyosin → myosin-binding sites covered → cross-bridges detach → muscle relaxes.</li></ol>
+        </li>
+        <li><strong>Drug points:</strong>
+          <ul><li>AChE inhibitors (neostigmine, pyridostigmine, donepezil, organophosphates) ↑ ACh at NMJ → more contraction (used in myasthenia; poisoning with pesticides).</li>
+          <li>Succinylcholine: nicotinic agonist (depolarizing) → sustained depolarization → flaccid paralysis (after brief fasciculations) → used in rapid sequence intubation.</li>
+          <li>Vecuronium, rocuronium: non-depolarizing nicotinic antagonists → flaccid paralysis (for surgery).</li>
+          <li>Botulinum toxin: blocks ACh release at NMJ → flaccid paralysis. Therapeutic (Botox for dystonia, spasticity, migraines, cosmesis).</li>
+          <li>Dantrolene: blocks SR Ca²⁺ release → treats malignant hyperthermia.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Myasthenia gravis:</strong> autoantibodies against the nicotinic ACh receptor at NMJ → fewer functional receptors → fatigable weakness. Most prominent in eye muscles (ptosis, diplopia), face, and proximal limbs. Improves with rest; worsens at end of day. Treat with AChE inhibitors (boost ACh), immunosuppressants, thymectomy (often thymic hyperplasia or thymoma).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What ion binds troponin to start contraction?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why does succinylcholine cause brief fasciculations before paralysis?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Calcium (Ca²⁺).</li><li>Succinylcholine is a nicotinic AChR agonist that opens the channels and keeps them open. Initial channel opening triggers an AP and brief muscle contraction (fasciculation). Sustained depolarization then inactivates voltage-gated Na⁺ channels → the muscle cannot fire another AP → flaccid paralysis. Brief muscle fasciculations precede paralysis; can cause myalgia and hyperkalemia (a clinical concern).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="P">
+    <p class="card-eyebrow">Muscular &middot; Concept 5 of 12</p>
+    <h2 class="card-title">Sliding filament mechanism + cross-bridge cycle <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Filaments don't shorten — they slide. Myosin heads pull actin toward the center of the sarcomere using ATP, one cycle at a time, until Ca²⁺ falls.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Sliding filament theory:</strong> during contraction, actin filaments slide past myosin filaments → Z discs pulled closer → sarcomere shortens. The filaments themselves stay the same length.</li>
+        <li><strong>What shortens / what doesn't:</strong>
+          <ul><li>Shortens: H zone, I band, sarcomere as a whole.</li>
+          <li>Stays the same: A band (= myosin filament length), individual actin or myosin filament lengths.</li></ul>
+        </li>
+        <li><strong>Cross-bridge cycle (4 steps, repeating):</strong>
+          <ol><li><em>Cross-bridge formation:</em> myosin head (energized, with ADP + Pi bound) attaches to exposed actin site.</li>
+          <li><em>Power stroke:</em> myosin head pivots, pulling actin toward sarcomere center. ADP + Pi released.</li>
+          <li><em>Cross-bridge detachment:</em> new ATP binds myosin → myosin releases from actin.</li>
+          <li><em>Re-energizing:</em> ATP is hydrolyzed to ADP + Pi → myosin head "cocks" back, ready for the next cycle.</li></ol>
+        </li>
+        <li><strong>Continues while:</strong> Ca²⁺ present AND ATP available. When Ca²⁺ falls (Concept 4 relaxation) → tropomyosin re-covers actin sites → cycle stops.</li>
+        <li><strong>Rigor mortis:</strong>
+          <ul><li>At death, ATP synthesis stops.</li>
+          <li>SR can't pump Ca²⁺ back → Ca²⁺ stays elevated → cross-bridges stay attached.</li>
+          <li>Without ATP to detach myosin, muscles stay locked in contraction (rigor).</li>
+          <li>Resolves over hours-days as proteolysis breaks down filaments.</li></ul>
+        </li>
+        <li><strong>Twitch:</strong> single AP → single contraction (~50-100 ms). Has latent, contraction, relaxation phases.</li>
+        <li><strong>Summation:</strong> AP arrives before relaxation complete → contractions sum.</li>
+        <li><strong>Tetanus:</strong> AP frequency so high that no relaxation occurs between → sustained maximum contraction. Unfused (incomplete) → fused (complete) tetanus. <em>Note:</em> "tetanus" here means physiologic sustained contraction, not the disease.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Rigor mortis</strong> begins ~2-4 hours after death, peaks ~12 hours, resolves ~24-48 hours. Forensic time-of-death estimation. <strong>ATP and muscle</strong>: in extreme exercise, ATP supply temporarily lags demand; you don't get "out of ATP" entirely (would be rigor) but creatine phosphate buffers + lactic acid accumulates. After death, all production stops, leading to rigor.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which sarcomere band stays the same length during contraction?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is ATP required for muscle <em>relaxation</em>, not just contraction?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>A band (= myosin filament length).</li><li>ATP binds myosin to detach it from actin (cross-bridge detachment), and ATP powers SERCA to pump Ca²⁺ back into the SR. Without ATP, cross-bridges remain attached AND Ca²⁺ stays elevated → rigor. Both detachment and reuptake fail at the same time.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="AP">
+    <p class="card-eyebrow">Muscular &middot; Concept 6 of 12</p>
+    <h2 class="card-title">Motor unit and NMJ <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">A motor unit is one motor neuron + all the fibers it innervates. Small motor units = fine control. Large units = power.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Motor unit:</strong> one alpha motor neuron + all the muscle fibers it innervates (all-or-none — when the neuron fires, all its fibers contract together).</li>
+        <li><strong>Size principle:</strong>
+          <ul><li>Small motor units (few fibers per neuron): fine control. Examples — extraocular muscles (~10 fibers per neuron), intrinsic hand muscles.</li>
+          <li>Large motor units (many fibers per neuron): power, not precision. Examples — quadriceps, gastrocnemius (~1,000 fibers per neuron).</li>
+          <li>Recruitment order: small (slow) units first, large (fast) later as force demand increases.</li></ul>
+        </li>
+        <li><strong>Force gradation:</strong>
+          <ul><li>Recruitment: more motor units activated → more force.</li>
+          <li>Frequency: higher AP frequency → temporal summation → up to tetanus.</li></ul>
+        </li>
+        <li><strong>Neuromuscular junction (NMJ) anatomy:</strong>
+          <ul><li>Axon terminal containing ACh-filled vesicles.</li>
+          <li>Synaptic cleft.</li>
+          <li>Motor end plate: specialized region of sarcolemma with junctional folds and densely packed nicotinic AChRs.</li>
+          <li>Acetylcholinesterase in the cleft degrades ACh after release.</li></ul>
+        </li>
+        <li><strong>NMJ disease:</strong>
+          <ul><li>Myasthenia gravis: anti-AChR antibodies → fewer functional receptors → fatigable weakness.</li>
+          <li>Lambert-Eaton syndrome: anti-presynaptic Ca²⁺ channel antibodies → ↓ ACh release. Often paraneoplastic (small cell lung cancer). Strength improves with use (opposite of MG).</li>
+          <li>Botulism: Clostridium botulinum toxin blocks ACh release → descending flaccid paralysis. "Floppy baby" in infants.</li>
+          <li>Tetanus (the disease, distinct from physiological tetanus): Clostridium tetani toxin blocks inhibitory NT release in CNS → sustained excitation → spastic paralysis ("lockjaw").</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Myasthenia vs Lambert-Eaton</strong> (key distinction): MG weakens with use ("eyelids droop as the day goes on"); LEMS strengthens with use ("first few squeezes weak, gets stronger"). Both involve NMJ but at different sites. MG: postsynaptic AChR; LEMS: presynaptic Ca²⁺ channel. Anti-AChR Abs in MG; anti-VGCC Abs in LEMS, often paraneoplastic.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Why do extraocular muscles have very small motor units?</li>
+      <li><span class="qc-meta">DOK 3.</span> A patient has progressive descending paralysis after eating canned food. Mechanism?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Fine motor control. Small motor units (few fibers per neuron) allow precise adjustment of muscle force — needed for tracking and visual control.</li><li>Botulism. Botulinum toxin blocks ACh release at NMJ (and at parasympathetic synapses), causing descending flaccid paralysis. Treat with antitoxin + supportive care.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="P">
+    <p class="card-eyebrow">Muscular &middot; Concept 7 of 12</p>
+    <h2 class="card-title">Muscle metabolism: ATP sources and fatigue <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Muscle has three ATP sources for three time scales: instant (creatine phosphate), short-term (anaerobic glycolysis), long-term (aerobic respiration). Fatigue is multi-factorial — not just lactic acid.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Three ATP sources:</strong>
+          <ol><li><em>Creatine phosphate (CP):</em>
+            <ul><li>Immediate, but brief (~10 seconds).</li>
+            <li>CP + ADP → ATP + creatine (catalyzed by creatine kinase).</li>
+            <li>Replenished at rest from ATP + creatine.</li></ul>
+          </li>
+          <li><em>Anaerobic glycolysis:</em>
+            <ul><li>Lasts ~30 seconds to ~2 minutes.</li>
+            <li>Glucose → pyruvate → lactate (in cytoplasm).</li>
+            <li>Net 2 ATP per glucose.</li>
+            <li>Produces H⁺ (acidosis) along with lactate; H⁺ contributes to fatigue and burning sensation, more than lactate itself.</li></ul>
+          </li>
+          <li><em>Aerobic respiration:</em>
+            <ul><li>Sustained activity.</li>
+            <li>Glucose, fatty acids, amino acids → pyruvate → mitochondrial Krebs cycle + ETC.</li>
+            <li>Net ~30-32 ATP per glucose.</li>
+            <li>Requires O₂; needs blood flow and time.</li></ul>
+          </li></ol>
+        </li>
+        <li><strong>Oxygen debt (EPOC):</strong> elevated post-exercise oxygen consumption to:
+          <ul><li>Restore CP and ATP stores.</li>
+          <li>Convert lactate back to glucose (Cori cycle in liver).</li>
+          <li>Replace O₂ in myoglobin and Hb.</li>
+          <li>Re-equilibrate temperature and hormones.</li></ul>
+        </li>
+        <li><strong>Muscle fatigue causes</strong> (multifactorial):
+          <ul><li>↑ H⁺ (acidosis) interferes with contractile machinery.</li>
+          <li>K⁺ accumulation in T-tubules reduces excitability.</li>
+          <li>Depletion of glycogen, CP.</li>
+          <li>Inadequate Ca²⁺ release from SR.</li>
+          <li>Central fatigue (CNS-mediated, motivation, neurotransmitter changes).</li></ul>
+        </li>
+        <li><strong>Heat production:</strong> muscle is ~75% inefficient → much energy lost as heat. Major contributor to thermoregulation (shivering generates heat).</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Rhabdomyolysis:</strong> muscle injury (crush, prolonged immobility, severe exertion, statins, drugs) → myocyte breakdown → myoglobin released → AKI (myoglobinuria), hyperkalemia, hyperphosphatemia, hypocalcemia, ↑ CK. Treat: aggressive IV fluids, monitor electrolytes, address cause. Suspect in anyone with cola-colored urine after exertion or prolonged immobilization.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which ATP source is fastest but has the shortest duration?</li>
+      <li><span class="qc-meta">DOK 4.</span> A marathon runner collapses with dark urine, K 6.5, Cr 2.5. Diagnosis and immediate intervention?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Creatine phosphate (CP). Instant; lasts ~10 seconds.</li><li>Rhabdomyolysis with AKI. Aggressive IV fluids (NS) to flush myoglobin and protect kidneys. Treat hyperkalemia (calcium gluconate for myocardial protection; insulin + glucose + albuterol to shift; consider bicarbonate to alkalinize urine and shift K). Hospitalize. Monitor CK trend and renal function.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="P">
+    <p class="card-eyebrow">Muscular &middot; Concept 8 of 12</p>
+    <h2 class="card-title">Muscle fiber types: Type I, IIa, IIx <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Slow oxidative (Type I) fibers fatigue resistant. Fast glycolytic (Type IIx) fibers explosive. Type IIa fibers in between. Genetics, hormones, and training shift the mix.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Type I (slow oxidative, "slow twitch", red):</strong>
+          <ul><li>High myoglobin (red color), high mitochondria, high capillary density.</li>
+          <li>Aerobic metabolism dominant.</li>
+          <li>Slow contraction, fatigue resistant.</li>
+          <li>Postural muscles (paraspinals, soleus, deep neck flexors).</li>
+          <li>Endurance athletes have proportionally more.</li></ul>
+        </li>
+        <li><strong>Type IIa (fast oxidative-glycolytic, intermediate, pink):</strong>
+          <ul><li>Combination of oxidative + glycolytic capacity.</li>
+          <li>Faster than Type I; more fatigue-resistant than Type IIx.</li>
+          <li>Suited to moderate-intensity sustained activity (e.g., middle-distance running).</li></ul>
+        </li>
+        <li><strong>Type IIx (fast glycolytic, "fast twitch", white):</strong>
+          <ul><li>Low myoglobin, fewer mitochondria, fewer capillaries.</li>
+          <li>Anaerobic glycolysis dominant.</li>
+          <li>Fast, powerful, fatigue quickly.</li>
+          <li>Sprinters, weightlifters have more.</li></ul>
+        </li>
+        <li><strong>Training effects:</strong>
+          <ul><li>Endurance training: ↑ mitochondrial density, ↑ capillaries; shifts Type IIx → Type IIa.</li>
+          <li>Strength training: ↑ fiber cross-sectional area (hypertrophy), modest fiber-type shift.</li>
+          <li>Genetic ceiling on fiber type ratio.</li></ul>
+        </li>
+        <li><strong>Disuse / immobilization:</strong> rapid atrophy, especially of Type I (postural) muscles. Astronauts and bedbound patients lose mass quickly.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Property</th><th>Type I</th><th>Type IIa</th><th>Type IIx</th></tr></thead>
+      <tbody>
+        <tr><td>Speed</td><td>Slow</td><td>Fast</td><td>Fastest</td></tr>
+        <tr><td>Fatigue resistance</td><td>High</td><td>Moderate</td><td>Low</td></tr>
+        <tr><td>Color</td><td>Red</td><td>Pink</td><td>White</td></tr>
+        <tr><td>Metabolism</td><td>Oxidative</td><td>Both</td><td>Glycolytic</td></tr>
+        <tr><td>Best for</td><td>Endurance, posture</td><td>Middle distance</td><td>Sprint, power</td></tr>
+      </tbody></table>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which fiber type is best suited for marathon running?</li>
+      <li><span class="qc-meta">DOK 2.</span> What change does endurance training cause within Type II fibers?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Type I (slow oxidative).</li><li>Shift from Type IIx toward Type IIa — more oxidative capacity, fatigue resistance.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="P">
+    <p class="card-eyebrow">Muscular &middot; Concept 9 of 12</p>
+    <h2 class="card-title">Length-tension and force-velocity relationships <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Muscle generates maximum force when sarcomeres are at optimal overlap. Stretch too much or shorten too much, and force drops. Move faster, and you can't generate as much force.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Length-tension curve:</strong>
+          <ul><li>Maximum tension at optimal sarcomere length (~2.0-2.2 µm in skeletal): myosin heads have full access to actin binding sites.</li>
+          <li>Overstretched: filaments don't overlap enough → fewer cross-bridges → less force.</li>
+          <li>Over-shortened: filaments collide; Z discs press into thick filaments → less force.</li></ul>
+        </li>
+        <li><strong>Why this matters:</strong>
+          <ul><li>Body keeps muscles near optimal length most of the time via reflex tone.</li>
+          <li>Joint geometry positions muscles for best force generation in expected range.</li>
+          <li>For cardiac muscle: Frank-Starling mechanism uses this principle — more preload (stretch) → more force, up to a point. See cardiovascular notes.</li></ul>
+        </li>
+        <li><strong>Force-velocity curve:</strong>
+          <ul><li>Concentric contraction (shortening): force ↓ as velocity ↑. Heavy loads can only be lifted slowly.</li>
+          <li>Isometric (no length change): peak force.</li>
+          <li>Eccentric (lengthening under load): force higher than isometric — explains why eccentric loading causes more soreness and microtrauma.</li></ul>
+        </li>
+        <li><strong>Isometric vs isotonic contractions:</strong>
+          <ul><li>Isometric: length constant, tension changes (holding a heavy object still).</li>
+          <li>Isotonic concentric: tension constant, muscle shortens (lifting).</li>
+          <li>Isotonic eccentric: tension constant, muscle lengthens (lowering).</li></ul>
+        </li>
+        <li><strong>Muscle tone:</strong> low-level continuous contraction even at rest. Maintains posture, joint stability. Lost in flaccid paralysis; exaggerated in spasticity.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Eccentric exercise</strong> (e.g., downhill running, lowering weights slowly) produces more microtrauma and delayed-onset muscle soreness (DOMS) than concentric. Useful for tendon rehabilitation (eccentric loading promotes tendon remodeling). <strong>Spasticity</strong> (UMN lesion): velocity-dependent ↑ resistance to passive stretch. Treat with PT, baclofen, botulinum injections, dantrolene.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which contraction type generates the most force per cross-bridge?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does an extremely stretched muscle generate less force?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Eccentric (lengthening under load).</li><li>At extreme stretch, actin and myosin filaments overlap less — fewer cross-bridges can form simultaneously, so total tension drops.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="P">
+    <p class="card-eyebrow">Muscular &middot; Concept 10 of 12</p>
+    <h2 class="card-title">Smooth muscle physiology <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Smooth muscle works differently from skeletal — slower, more sustained, more efficient. It is regulated by ANS, hormones, and local factors, and can stay contracted for hours without fatigue.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Structure:</strong>
+          <ul><li>Single-nucleus spindle cells, no sarcomeres (no striations).</li>
+          <li>Actin and myosin present, but in irregular networks, not sarcomere units.</li>
+          <li>Dense bodies (analogous to Z discs) anchor actin.</li>
+          <li>Found in walls of GI, vessels, bronchi, bladder, uterus, eye (iris, ciliary).</li></ul>
+        </li>
+        <li><strong>Two organizational types:</strong>
+          <ul><li>Single-unit (visceral): cells electrically coupled via gap junctions → contract as a sheet. Examples: gut, bladder, uterus, small vessels.</li>
+          <li>Multi-unit: each cell innervated individually → fine control. Examples: large arteries, iris muscles, arrector pili, vas deferens.</li></ul>
+        </li>
+        <li><strong>Activation</strong> (different from skeletal):
+          <ul><li>Ca²⁺ enters cytoplasm (from extracellular AND SR).</li>
+          <li>Ca²⁺ binds calmodulin (not troponin).</li>
+          <li>Ca-calmodulin activates myosin light chain kinase (MLCK).</li>
+          <li>MLCK phosphorylates myosin light chain → activates myosin head → cross-bridge cycling.</li>
+          <li>Relaxation: myosin light chain phosphatase removes the phosphate.</li></ul>
+        </li>
+        <li><strong>Properties:</strong>
+          <ul><li>Slow contractions (seconds rather than ms).</li>
+          <li>Latch state: can maintain force with minimal ATP — keeps vessels and sphincters tonically contracted.</li>
+          <li>Plasticity: can adapt length over time (stress relaxation) — bladder fills gradually without rising pressure.</li>
+          <li>Spontaneous contraction in some (pacemaker cells in gut, uterus).</li></ul>
+        </li>
+        <li><strong>Regulation:</strong>
+          <ul><li>ANS: sympathetic and parasympathetic act on different receptors per tissue (see nervous system ANS receptor primer).</li>
+          <li>Hormones: oxytocin → uterus; angiotensin II → vessels; histamine → vessels and bronchi.</li>
+          <li>Local: tissue hypoxia → vasodilation; stretch → contraction (myogenic).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Asthma medications</strong> work on smooth muscle of bronchi: β2 agonists (albuterol) relax via cAMP cascade; muscarinic antagonists (ipratropium) prevent constriction. <strong>Oxytocin</strong> (Pitocin) drives uterine smooth muscle contraction in labor. <strong>Constipation drugs</strong>: prokinetics like metoclopramide and erythromycin stimulate GI smooth muscle. <strong>Bladder overactivity</strong>: muscarinic antagonists (oxybutynin, tolterodine) reduce detrusor contraction.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> What protein replaces troponin in smooth muscle Ca²⁺ signaling?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why can smooth muscle maintain tone with minimal ATP?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Calmodulin (binds Ca²⁺ → activates MLCK → phosphorylates myosin).</li><li>Latch state: dephosphorylated cross-bridges remain attached for prolonged periods at low ATP cost. Vessels and sphincters can hold tone for hours.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c11" data-tags="A">
+    <p class="card-eyebrow">Muscular &middot; Concept 11 of 12</p>
+    <h2 class="card-title">Muscle naming + major groups <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Muscle names usually encode location, shape, size, action, or origin/insertion. Memorize the patterns and you can decode hundreds of muscle names.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Naming conventions:</strong>
+          <ul><li>Location: brachii (arm), abdominis (abdomen), femoris (thigh), oris (mouth).</li>
+          <li>Shape: deltoid (triangular), trapezius (trapezoid), rhomboid (diamond), serratus (saw-toothed).</li>
+          <li>Size: maximus, minimus, longus, brevis.</li>
+          <li>Direction of fibers: rectus (straight), oblique, transverse.</li>
+          <li>Number of heads: biceps (2), triceps (3), quadriceps (4).</li>
+          <li>Action: flexor, extensor, abductor, adductor, levator, depressor.</li>
+          <li>Origin and insertion: sternocleidomastoid (origin: sternum + clavicle; insertion: mastoid).</li></ul>
+        </li>
+        <li><strong>Major muscle groups — head and neck:</strong>
+          <ul><li>Facial expression: orbicularis oculi/oris, zygomaticus, frontalis (CN VII).</li>
+          <li>Mastication: masseter, temporalis, pterygoids (CN V).</li>
+          <li>Neck: SCM (rotates head opposite, flexes neck; CN XI); trapezius (CN XI); platysma.</li></ul>
+        </li>
+        <li><strong>Trunk:</strong>
+          <ul><li>Anterior: pectoralis major and minor, rectus abdominis ("six pack"), external and internal obliques, transversus abdominis.</li>
+          <li>Posterior: trapezius, latissimus dorsi, rhomboids, erector spinae group.</li>
+          <li>Diaphragm: principal muscle of inspiration (C3-C5, phrenic nerve).</li>
+          <li>Intercostals: external (inspire), internal (forced expiration).</li></ul>
+        </li>
+        <li><strong>Upper limb:</strong>
+          <ul><li>Shoulder: deltoid, rotator cuff (SITS — Supraspinatus, Infraspinatus, Teres minor, Subscapularis).</li>
+          <li>Arm: biceps brachii (flex elbow, supinate), triceps brachii (extend elbow), brachialis (flex elbow).</li>
+          <li>Forearm flexors (anterior): finger flexors, pronator teres.</li>
+          <li>Forearm extensors (posterior): finger extensors, supinator.</li>
+          <li>Hand: thenar (thumb), hypothenar (pinky), lumbricals, interossei.</li></ul>
+        </li>
+        <li><strong>Lower limb:</strong>
+          <ul><li>Gluteal: gluteus maximus (extend hip), gluteus medius/minimus (abduct, stabilize pelvis).</li>
+          <li>Thigh anterior: quadriceps femoris (4 heads — rectus femoris, vastus lateralis/medialis/intermedius). Extend knee.</li>
+          <li>Thigh medial: adductors.</li>
+          <li>Thigh posterior: hamstrings (biceps femoris, semitendinosus, semimembranosus). Flex knee, extend hip.</li>
+          <li>Leg anterior: tibialis anterior (dorsiflexion).</li>
+          <li>Leg posterior: gastrocnemius, soleus (plantar flexion via Achilles tendon).</li>
+          <li>Foot intrinsics.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Rotator cuff tear</strong>: supraspinatus most commonly injured (impingement under acromion). Pain with overhead reach. <strong>Quadriceps weakness</strong>: classic sign of femoral nerve injury, advanced osteoarthritis, prolonged immobilization. Difficulty rising from a chair. <strong>Achilles rupture</strong>: sudden pain in calf, often during push-off. Thompson test positive (squeezing calf with patient prone doesn't produce plantar flexion).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which four muscles make up the rotator cuff?</li>
+      <li><span class="qc-meta">DOK 2.</span> Which muscle's name tells you it has three heads?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>SITS: Supraspinatus, Infraspinatus, Teres minor, Subscapularis.</li><li>Triceps (brachii or surae).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c12" data-tags="CLIN">
+    <p class="card-eyebrow">Muscular &middot; Concept 12 of 12</p>
+    <h2 class="card-title">Common muscle conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Muscle disease falls into a few patterns: inherited dystrophy, autoimmune myositis, drug/toxin-induced, neuromuscular junction disorder, simple injury, or rhabdomyolysis. Each has distinct lab + EMG patterns.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Muscle injury patterns:</strong>
+          <ul><li>Strain: muscle/tendon overstretch or tear. Pain, swelling, decreased function. RICE.</li>
+          <li>Contusion: blunt trauma. Hematoma in muscle.</li>
+          <li>Cramp: involuntary painful contraction. Often dehydration, electrolyte imbalance.</li>
+          <li>DOMS: delayed-onset muscle soreness from eccentric work. Peaks 24-72 hours; self-limited.</li></ul>
+        </li>
+        <li><strong>Muscular dystrophies</strong> (inherited):
+          <ul><li>Duchenne (X-linked): dystrophin absent. Onset ~3-5 yr. Calf pseudohypertrophy. Gower's sign. Wheelchair by ~12. Cardiomyopathy + respiratory failure by 20s-30s. ↑ CK.</li>
+          <li>Becker (X-linked): dystrophin reduced/abnormal. Milder, later onset.</li>
+          <li>Myotonic dystrophy (autosomal dominant): myotonia (delayed relaxation), facial weakness, cataracts, cardiac, endocrine features.</li></ul>
+        </li>
+        <li><strong>Inflammatory myopathies (autoimmune):</strong>
+          <ul><li>Polymyositis: proximal muscle weakness, ↑ CK, anti-Jo1 antibody. T-cell mediated.</li>
+          <li>Dermatomyositis: same + skin findings (heliotrope rash on eyelids, Gottron papules on knuckles). Paraneoplastic associations.</li>
+          <li>Inclusion body myositis: older adults, distal and proximal involvement, slower course.</li></ul>
+        </li>
+        <li><strong>NMJ disorders</strong> (review):
+          <ul><li>Myasthenia gravis: anti-AChR Abs. Fatigable, especially ocular.</li>
+          <li>Lambert-Eaton: anti-VGCC Abs. Strengthens with use. Paraneoplastic.</li>
+          <li>Botulism: blocks ACh release. Descending paralysis.</li></ul>
+        </li>
+        <li><strong>Drug-induced muscle disorders:</strong>
+          <ul><li>Statin myopathy: myalgias, ↑ CK, occasionally rhabdomyolysis. Manage: stop drug, alternative, hydration.</li>
+          <li>Corticosteroid myopathy: chronic use → proximal weakness, atrophy of Type II fibers. Normal CK (distinguishes from polymyositis).</li>
+          <li>Colchicine, alcohol, fibrates: also implicated.</li></ul>
+        </li>
+        <li><strong>Rhabdomyolysis</strong> (review Concept 7): crush injury, severe exercise, statins, prolonged immobilization (often elderly fall + lying for hours), seizures, drugs (cocaine, heroin). Triad: myalgia, muscle weakness, dark urine. Labs: ↑↑ CK, K, phosphate; ↓ Ca; AKI. Aggressive IV fluids.</p></li>
+        <li><strong>Compartment syndrome</strong> (review Concept 2): surgical emergency.</li>
+        <li><strong>Fibromyalgia:</strong> chronic widespread musculoskeletal pain, fatigue, sleep disturbance, cognitive symptoms. Tender points; no inflammation, no muscle weakness on exam, normal CK. Treat with exercise, sleep hygiene, CBT, certain meds (duloxetine, milnacipran, pregabalin, amitriptyline).</li>
+        <li><strong>Malignant hyperthermia</strong> (deep dive): rare autosomal dominant. RYR1 mutation. Exposure to volatile anesthetics or succinylcholine → uncontrolled SR Ca²⁺ release → muscle hypermetabolism, hyperthermia (often &gt; 40 °C), rhabdomyolysis, hyperkalemia, acidosis. Treat: dantrolene (blocks RYR1), stop trigger, cooling, supportive.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Nursing assessment of muscle complaints: <strong>distribution</strong> (proximal vs distal; symmetric vs not), <strong>onset</strong> (acute vs gradual), <strong>weakness vs pain</strong>, <strong>fatigability</strong>, <strong>associated systemic features</strong> (rash, organ involvement, family history), <strong>drug history</strong> (statins, steroids), <strong>creatine kinase</strong> as a screen for muscle injury. Hospitalize any patient with dark urine after exertion or prolonged immobilization until rhabdomyolysis is excluded.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> A child has progressive proximal weakness, calf pseudohypertrophy, and uses his hands to push up his legs to stand. Most likely diagnosis?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why is corticosteroid myopathy distinguishable from polymyositis even though both cause proximal weakness?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Duchenne muscular dystrophy. Gower's sign + calf pseudohypertrophy + onset in early childhood is classic.</li><li>Corticosteroid myopathy: <strong>normal CK</strong>, normal EMG findings of inflammation. Polymyositis: <strong>↑ CK</strong>, inflammatory infiltrate on biopsy, anti-Jo1 may be positive. Polymyositis is autoimmune; corticosteroid myopathy is drug-induced and reversible by reducing/stopping steroids.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Muscular master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Muscular';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='muscular-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

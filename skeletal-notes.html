@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeletal System — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .subhead { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:clamp(17px,2vw,22px); margin:0 0 14px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Skeletal System</h1>
+    <p class="usage">Bone is not inert. It is a living tissue that supports, protects, stores Ca²⁺ and phosphate, makes blood cells, and remodels itself continuously. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">12</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="AP">
+    <p class="card-eyebrow">Skeletal &middot; Concept 1 of 12</p>
+    <h2 class="card-title">Functions of the skeleton <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Six jobs in one organ system: support, protect, move, store, make blood, and signal.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Support:</strong> framework for the body, anchor for soft tissues.</li>
+        <li><strong>Protection:</strong> skull → brain; thoracic cage → heart and lungs; vertebral column → spinal cord; pelvis → reproductive and urinary organs.</li>
+        <li><strong>Movement:</strong> bones are levers; muscles pull on them to produce motion at joints.</li>
+        <li><strong>Mineral storage:</strong> 99% of body Ca²⁺ and ~85% of phosphate live in bone. Exchanged with blood under PTH, calcitonin, calcitriol control.</li>
+        <li><strong>Hematopoiesis:</strong> red bone marrow makes all formed elements of blood (RBC, WBC, platelets).</li>
+        <li><strong>Triglyceride storage:</strong> yellow marrow (in medullary cavities of long bones in adults).</li>
+        <li><strong>Endocrine function:</strong> osteocalcin (from osteoblasts) influences insulin sensitivity and glucose metabolism.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Bone is the largest reservoir of Ca²⁺. Pathologies of any of the six functions show up clinically: osteoporosis (support fails → fragility fractures), leukemias (hematopoiesis fails), bone metastases (often from breast, prostate, lung). Vitamin D deficiency cripples mineral storage capability.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What percentage of body calcium is stored in bone?</li>
+      <li><span class="qc-meta">DOK 2.</span> Which bone marrow type is the active hematopoietic site in an adult?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>~99%.</li><li>Red marrow (in axial skeleton, pelvis, proximal femur/humerus).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Skeletal &middot; Concept 2 of 12</p>
+    <h2 class="card-title">Bone classifications <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Bones come in five shapes. Shape predicts function and dominant tissue type.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Long bones:</strong> length &gt; width. Femur, humerus, tibia, phalanges. Hematopoiesis in epiphyses (children). Mostly compact bone with cancellous ends.</li>
+        <li><strong>Short bones:</strong> cube-shaped. Carpals, tarsals. Mostly cancellous (spongy) wrapped in thin compact bone.</li>
+        <li><strong>Flat bones:</strong> thin and curved. Skull bones, sternum, ribs, scapulae. Two layers of compact bone with cancellous (diploë) between. Major hematopoietic site in adults.</li>
+        <li><strong>Irregular bones:</strong> vertebrae, facial bones, hip bones. Complex shape, mostly cancellous.</li>
+        <li><strong>Sesamoid bones:</strong> embedded in tendons (e.g., patella, pisiform). Reduce friction and reposition tendon to improve mechanical advantage.</li>
+        <li><strong>Total in adult skeleton:</strong> ~206 named bones.</li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Class</th><th>Example</th><th>Predominant tissue</th></tr></thead>
+      <tbody>
+        <tr><td>Long</td><td>Femur, humerus</td><td>Compact (with cancellous ends)</td></tr>
+        <tr><td>Short</td><td>Carpals, tarsals</td><td>Cancellous</td></tr>
+        <tr><td>Flat</td><td>Skull, sternum, ribs</td><td>Diploë (cancellous between compact)</td></tr>
+        <tr><td>Irregular</td><td>Vertebrae, facial</td><td>Cancellous</td></tr>
+        <tr><td>Sesamoid</td><td>Patella</td><td>Compact</td></tr>
+      </tbody></table>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which bone class are vertebrae?</li>
+      <li><span class="qc-meta">DOK 2.</span> Why is the patella considered a sesamoid bone?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Irregular bones.</li><li>It is embedded within the quadriceps tendon, which acts on the knee. Its position improves the mechanical advantage of the quadriceps for knee extension.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="A">
+    <p class="card-eyebrow">Skeletal &middot; Concept 3 of 12</p>
+    <h2 class="card-title">Gross long bone anatomy <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The femur is the model. Every long bone has the same parts: ends, shaft, growth plates (in kids), marrow cavity, and protective layers.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Diaphysis:</strong> the shaft. Thick compact bone wall, central medullary cavity (yellow marrow in adults).</li>
+        <li><strong>Epiphysis:</strong> ends. Cancellous bone with red marrow + thin compact bone outer layer. Articulates at joints, covered by hyaline cartilage (articular cartilage).</li>
+        <li><strong>Metaphysis:</strong> between diaphysis and epiphysis. Contains the <em>epiphyseal plate</em> in growing bones (cartilage where length growth happens) or <em>epiphyseal line</em> in adults (closed plate).</li>
+        <li><strong>Periosteum:</strong> outer membrane.
+          <ul><li>Outer fibrous layer: dense CT, anchors tendons/ligaments.</li>
+          <li>Inner osteogenic layer: contains osteoblasts and osteoclasts for appositional growth + repair.</li>
+          <li>Richly innervated (pain) and vascularized.</li></ul>
+        </li>
+        <li><strong>Endosteum:</strong> lines internal surfaces (medullary cavity, canals).</li>
+        <li><strong>Articular cartilage:</strong> hyaline cartilage on epiphyseal joint surfaces. Smooth, slick, avascular. Damage doesn't heal well.</li>
+        <li><strong>Nutrient foramen:</strong> opening for nutrient artery into shaft.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Fracture types by location:</strong> diaphyseal (shaft, often midshaft); metaphyseal (common in osteoporotic distal radius); epiphyseal in children (Salter-Harris grading because of risk to growth plate). <strong>Avascular necrosis</strong> (e.g., femoral head): poor vascular supply makes some bone regions vulnerable to ischemic death.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What is the function of articular cartilage?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is a fracture through the epiphyseal plate in a child concerning?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Smooth, slick, avascular hyaline cartilage that reduces friction and absorbs shock at joints.</li><li>The epiphyseal plate is where longitudinal bone growth occurs. Damage can cause premature closure → uneven growth or limb-length discrepancy. Salter-Harris classification predicts risk; orthopedic follow-up is essential.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="A">
+    <p class="card-eyebrow">Skeletal &middot; Concept 4 of 12</p>
+    <h2 class="card-title">Bone microanatomy: compact vs spongy <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Compact bone is the dense outer wall, organized into cylinders called osteons. Spongy bone is the inner lattice of trabeculae aligned along stress lines.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Compact (cortical) bone:</strong>
+          <ul><li>Outer layer of bones, ~80% of bone mass.</li>
+          <li>Organized into <em>osteons</em> (Haversian systems): concentric lamellae around a central (Haversian) canal carrying vessels and nerves.</li>
+          <li>Volkmann (perforating) canals: run perpendicular, connect Haversian canals.</li>
+          <li>Osteocytes sit in lacunae between lamellae, connected by canaliculi (tiny tunnels for diffusion and communication).</li></ul>
+        </li>
+        <li><strong>Spongy (cancellous, trabecular) bone:</strong>
+          <ul><li>Inner lattice. No osteons.</li>
+          <li>Trabeculae (struts) align along lines of mechanical stress (Wolff's law).</li>
+          <li>Spaces between trabeculae hold red marrow.</li>
+          <li>High surface area → site of greatest bone turnover; first affected by osteoporosis.</li></ul>
+        </li>
+        <li><strong>Bone matrix:</strong>
+          <ul><li>Organic (~30%): collagen type I (tensile strength), proteoglycans, glycoproteins. Resists tension.</li>
+          <li>Inorganic (~65%): hydroxyapatite [Ca₁₀(PO₄)₆(OH)₂]. Resists compression.</li>
+          <li>Water (~5%).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Osteoporosis</strong> strikes spongy bone first (high turnover, large surface area) → vertebral compression fractures and Colles (distal radius) fractures often precede hip fractures. DEXA scan measures BMD; T-score ≤ −2.5 = osteoporosis. <strong>Osteogenesis imperfecta</strong>: defective collagen I → brittle bones, blue sclerae, hearing loss.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What is the structural unit of compact bone?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why does osteoporosis affect spongy bone first?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Osteon (Haversian system).</li><li>Spongy bone has higher surface-area-to-volume ratio and faster turnover, so net bone loss manifests earlier as visible architectural weakening.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="AP">
+    <p class="card-eyebrow">Skeletal &middot; Concept 5 of 12</p>
+    <h2 class="card-title">Bone cells <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Four cell types build, maintain, and demolish bone. Their balance is what determines whether bone mass is rising or falling.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Osteogenic (osteoprogenitor) cells:</strong> stem cells in periosteum and endosteum. Divide to become osteoblasts.</li>
+        <li><strong>Osteoblasts:</strong> bone-building cells.
+          <ul><li>Synthesize osteoid (organic matrix).</li>
+          <li>Initiate mineralization.</li>
+          <li>Once trapped in their own matrix, become osteocytes.</li>
+          <li>Make osteocalcin (endocrine marker of bone formation).</li></ul>
+        </li>
+        <li><strong>Osteocytes:</strong> mature bone cells in lacunae.
+          <ul><li>Maintain bone matrix.</li>
+          <li>Communicate via canaliculi.</li>
+          <li>Mechanoreceptors → sense load, signal remodeling.</li>
+          <li>Most abundant bone cell (~90%).</li></ul>
+        </li>
+        <li><strong>Osteoclasts:</strong> bone-resorbing cells.
+          <ul><li>Large, multinucleated, derived from monocyte/macrophage lineage (not from osteoblast lineage).</li>
+          <li>Live on bone surface in resorption pits.</li>
+          <li>Secrete H⁺ + lysosomal enzymes (cathepsin K) to dissolve mineral and digest matrix.</li>
+          <li>Activated by RANKL (from osteoblasts) — denosumab blocks RANKL therapeutically.</li>
+          <li>Inhibited by calcitonin and bisphosphonates.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary</h3>
+      <table class="summary"><thead><tr><th>Cell</th><th>Role</th><th>Origin</th></tr></thead>
+      <tbody>
+        <tr><td>Osteogenic</td><td>Stem cell → osteoblast</td><td>Mesenchyme</td></tr>
+        <tr><td>Osteoblast</td><td>Build matrix, mineralize</td><td>Osteogenic cell</td></tr>
+        <tr><td>Osteocyte</td><td>Maintain, sense load</td><td>Trapped osteoblast</td></tr>
+        <tr><td>Osteoclast</td><td>Resorb bone</td><td>Monocyte / macrophage lineage</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Bisphosphonates</strong> (alendronate, zoledronate): bind hydroxyapatite, taken up by osteoclasts, inhibit their function → ↓ resorption → preserve bone mass. Used in osteoporosis, Paget, malignancy. Side effects: GI upset, osteonecrosis of the jaw, atypical femoral fractures with chronic use. <strong>Denosumab</strong>: monoclonal antibody against RANKL → blocks osteoclast activation. <strong>Paget disease of bone</strong>: disordered remodeling with excessive osteoclast activity → enlarged, weak bone.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which cell type derives from monocyte/macrophage lineage rather than mesenchyme?</li>
+      <li><span class="qc-meta">DOK 3.</span> How does denosumab reduce bone resorption?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Osteoclast.</li><li>Denosumab is a monoclonal antibody against RANKL. RANKL is required for osteoclast differentiation and activation; blocking it shuts down osteoclast function → ↓ resorption → preserved bone.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="P">
+    <p class="card-eyebrow">Skeletal &middot; Concept 6 of 12</p>
+    <h2 class="card-title">Ossification: how bone forms <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Bone forms by one of two pathways: directly from a connective tissue membrane (intramembranous), or by replacing a cartilage template (endochondral). Most of the skeleton uses the cartilage route.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Intramembranous ossification:</strong>
+          <ul><li>Direct conversion of mesenchymal CT → bone.</li>
+          <li>Forms flat bones of skull, clavicle, mandible.</li>
+          <li>Steps: mesenchymal cells aggregate → osteoblast differentiation → osteoid → mineralization → spongy bone → remodeling to compact bone exterior.</li></ul>
+        </li>
+        <li><strong>Endochondral ossification:</strong>
+          <ul><li>Cartilage model replaced by bone. Forms most of the skeleton (long bones, axial skeleton minus the flat skull bones).</li>
+          <li>Steps:
+            <ol><li>Hyaline cartilage model laid down (chondrocytes).</li>
+            <li>Primary ossification center forms in diaphysis: chondrocytes hypertrophy → die → cavities form → vascular invasion → osteoblasts deposit bone on cartilage scaffold.</li>
+            <li>Secondary ossification centers form in epiphyses.</li>
+            <li>Epiphyseal plate persists between primary and secondary centers — site of length growth.</li>
+            <li>At skeletal maturity, plate closes (epiphyseal line) — no further length growth.</li></ol>
+          </li></ul>
+        </li>
+        <li><strong>Epiphyseal plate zones (proximal to distal):</strong>
+          <ul><li>Resting cartilage zone.</li>
+          <li>Proliferating zone: chondrocytes divide in columns.</li>
+          <li>Hypertrophic zone: chondrocytes enlarge.</li>
+          <li>Calcification zone: matrix calcifies, chondrocytes die.</li>
+          <li>Ossification zone: bone replaces calcified cartilage.</li></ul>
+        </li>
+        <li><strong>Length growth</strong> happens at the epiphyseal plate (interstitial growth of cartilage).</li>
+        <li><strong>Width growth (appositional)</strong> happens at the periosteum: osteoblasts add bone to outside; osteoclasts widen marrow cavity inside.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Growth plate closure</strong> happens at different ages for different bones (hand by ~16, long bones by ~18-21). After closure, no further linear growth. <strong>Achondroplasia</strong>: most common form of dwarfism. FGFR3 mutation → ↓ chondrocyte proliferation in plate → shortened long bones, normal trunk.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which ossification pathway forms long bones?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is bone length growth no longer possible after epiphyseal plate closure?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Endochondral.</li><li>The plate is the cartilage zone where new bone replaces continuously growing cartilage. Once it ossifies completely (epiphyseal line), there is no cartilage scaffold for new bone, so longitudinal growth stops.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c7" data-tags="P">
+    <p class="card-eyebrow">Skeletal &middot; Concept 7 of 12</p>
+    <h2 class="card-title">Bone growth and remodeling <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Bone is replaced throughout life. Wolff's law: bone adapts to the load placed on it. Stress builds bone; immobility wastes it.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Remodeling</strong>: continuous coordinated activity of osteoclasts (resorb) + osteoblasts (deposit). Replaces ~10% of skeleton per year.</li>
+        <li><strong>Wolff's law:</strong> bone density and architecture adapt to mechanical loading. Weight-bearing exercise → ↑ BMD. Disuse (bedrest, microgravity, casting) → ↓ BMD rapidly.</li>
+        <li><strong>Hormonal regulators (review from endocrine):</strong>
+          <ul><li>PTH: ↑ resorption (↑ serum Ca²⁺).</li>
+          <li>Calcitriol (active vit D): permissive for resorption; also ↑ gut Ca absorption.</li>
+          <li>Calcitonin: modest ↓ resorption.</li>
+          <li>Growth hormone (and IGF-1): stimulate growth at epiphyseal plate before closure.</li>
+          <li>Thyroid hormone: permissive for normal growth.</li>
+          <li>Sex hormones: trigger growth spurt at puberty AND eventually close the epiphyseal plates. Estrogen also restrains osteoclasts in adults; menopause-related estrogen loss accelerates resorption → postmenopausal osteoporosis.</li>
+          <li>Glucocorticoids (cortisol, prednisone): ↑ resorption + ↓ formation → glucocorticoid-induced osteoporosis with chronic use.</li></ul>
+        </li>
+        <li><strong>Calcium homeostasis</strong> (review): bone is the Ca²⁺ buffer. ↓ Ca²⁺ → PTH ↑ → ↑ resorption + ↑ kidney Ca reabsorption + ↑ calcitriol activation. ↑ Ca²⁺ → calcitonin ↑ (modest).</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Osteoporosis</strong>: BMD &lt; −2.5 (T-score). Postmenopausal women, older men, glucocorticoid users, smokers, alcohol overuse, low BMI. Prevention: weight-bearing exercise, adequate calcium + vitamin D, smoking cessation. Treatment: bisphosphonates, denosumab, teriparatide (PTH analog, anabolic), romosozumab (sclerostin antagonist, anabolic). <strong>Osteomalacia / rickets:</strong> defective mineralization from vitamin D deficiency. Adult osteomalacia → bone pain, weakness. Rickets in children → bowed legs, growth retardation.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Why does prolonged bedrest cause loss of bone density?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is postmenopausal estrogen loss a risk factor for osteoporosis?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Wolff's law — without mechanical loading, osteoclast activity exceeds osteoblast activity → net bone loss. Astronauts and bedbound patients can lose ~1% of bone mass per week.</li><li>Estrogen restrains osteoclast activity. With loss of estrogen at menopause, osteoclast activity ↑ → accelerated resorption → bone loss of ~3-5% per year early after menopause.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c8" data-tags="CLIN">
+    <p class="card-eyebrow">Skeletal &middot; Concept 8 of 12</p>
+    <h2 class="card-title">Bone fractures and healing <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Fractures heal in four phases over weeks to months. Reduction (returning bones to alignment) and immobilization let the natural process work.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Fracture types</strong> (by pattern):
+          <ul><li>Closed (simple) vs open (compound — bone through skin, infection risk).</li>
+          <li>Complete vs incomplete (greenstick — typical in kids).</li>
+          <li>Transverse, oblique, spiral, comminuted (many fragments), impacted.</li>
+          <li>Pathologic: through diseased bone (osteoporosis, tumor, infection).</li>
+          <li>Stress: cumulative microdamage in heavy training.</li></ul>
+        </li>
+        <li><strong>Salter-Harris</strong>: classifies pediatric fractures involving the growth plate (I-V).</li>
+        <li><strong>Healing phases:</strong>
+          <ol><li><em>Hematoma formation</em> (hours to days): blood clot at fracture site.</li>
+          <li><em>Fibrocartilaginous (soft) callus</em> (days to ~3 weeks): granulation tissue → fibrocartilage bridge.</li>
+          <li><em>Bony (hard) callus</em> (3 weeks to ~3 months): osteoblasts replace fibrocartilage with woven bone.</li>
+          <li><em>Remodeling</em> (months to years): woven bone replaced with mature lamellar bone along stress lines.</li></ol>
+        </li>
+        <li><strong>Reduction:</strong> realigning fragments. Closed (manual) or open (surgical, often with internal fixation — plates, screws, rods).</li>
+        <li><strong>Healing requirements:</strong> good vascular supply, adequate nutrition (protein, Ca, vit D), no infection, mechanical stability, minimal smoking.</li>
+        <li><strong>Complications:</strong>
+          <ul><li>Compartment syndrome (especially long bone fractures): rising pressure in fascial compartment → 6 P's (pain out of proportion, paresthesia, pallor, pulselessness late, paralysis, poikilothermia). Surgical emergency (fasciotomy).</li>
+          <li>Fat embolism syndrome (long bone or pelvic fractures, 24-72 h post-injury): respiratory distress, neurologic symptoms, petechiae over chest/axilla.</li>
+          <li>Avascular necrosis: especially scaphoid, femoral head, talus — fragments cut off from blood supply.</li>
+          <li>Nonunion / malunion.</li>
+          <li>Infection (osteomyelitis), especially open fractures.</li>
+          <li>DVT (immobility).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Nursing care: <strong>neurovascular checks</strong> (pulses, color, temperature, capillary refill, sensation, motor function) distal to fracture or cast/splint at baseline and serially. Elevate, ice, immobilize. Pain control. Watch for compartment syndrome (pain out of proportion to injury, pain with passive stretch, increasing analgesic requirements). Early ambulation when allowed to prevent DVT and bone loss.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> Which fracture pattern is typical in children due to flexible bones?</li>
+      <li><span class="qc-meta">DOK 4.</span> A patient with a midshaft femur fracture complains of severe pain unrelieved by morphine, with tense swelling. Diagnosis and action?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Greenstick — incomplete fracture where bone bends and only partially breaks.</li><li>Compartment syndrome. Surgical emergency. Notify provider immediately; do not elevate above heart (further reduces perfusion); prepare for fasciotomy. Pain out of proportion to injury, pain on passive stretch, and increasing pressure are early signs (5 P's). Pulselessness is late.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c9" data-tags="A">
+    <p class="card-eyebrow">Skeletal &middot; Concept 9 of 12</p>
+    <h2 class="card-title">Axial skeleton <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The axial skeleton is the central column: skull, vertebral column, thoracic cage. 80 bones total. Protects the brain, spinal cord, heart, lungs.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Skull</strong> (22 bones):
+          <ul><li>Cranial bones (8): frontal, 2 parietal, 2 temporal, occipital, sphenoid, ethmoid.</li>
+          <li>Facial bones (14): maxillae, mandible, zygomatic, nasal, lacrimal, palatine, vomer, inferior conchae.</li>
+          <li>Sutures: coronal, sagittal, squamous, lambdoid.</li>
+          <li>Foramen magnum: spinal cord exit (occipital).</li>
+          <li>Fontanelles: soft spots in infants (close ~2 yr).</li></ul>
+        </li>
+        <li><strong>Vertebral column</strong> (33 vertebrae):
+          <ul><li>7 cervical (C1 atlas, C2 axis), 12 thoracic, 5 lumbar, 5 fused sacral, 4 fused coccygeal.</li>
+          <li>Curvatures: cervical and lumbar (concave posteriorly = lordotic); thoracic and sacral (convex posteriorly = kyphotic).</li>
+          <li>Intervertebral discs: anulus fibrosus + nucleus pulposus. Herniation → nerve compression.</li>
+          <li>Vertebral parts: body, vertebral arch (pedicles, laminae), spinous process, transverse processes, articular processes, foramen.</li></ul>
+        </li>
+        <li><strong>Thoracic cage</strong> (25 bones):
+          <ul><li>12 pairs of ribs:
+            <ul><li>True ribs (1-7): attach directly to sternum via costal cartilage.</li>
+            <li>False ribs (8-10): attach to rib 7 via shared cartilage.</li>
+            <li>Floating ribs (11-12): no anterior attachment.</li></ul>
+          </li>
+          <li>Sternum (manubrium, body, xiphoid process).</li>
+          <li>Costal cartilages.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Vertebral compression fractures</strong>: common in osteoporotic patients. Often asymptomatic, sometimes acute back pain after minor trauma. <strong>Disc herniation</strong>: most common L4-L5 or L5-S1 → sciatica down the leg. <strong>Scoliosis</strong>: lateral curvature. <strong>Kyphosis</strong>: excessive thoracic curvature (dowager's hump in osteoporosis). <strong>Lordosis</strong>: exaggerated lumbar curvature.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> How many cervical vertebrae are there?</li>
+      <li><span class="qc-meta">DOK 2.</span> Which ribs are called "floating ribs"?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Seven.</li><li>Ribs 11 and 12 — they have no anterior attachment.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c10" data-tags="A">
+    <p class="card-eyebrow">Skeletal &middot; Concept 10 of 12</p>
+    <h2 class="card-title">Appendicular skeleton <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The appendicular skeleton is the limbs plus the girdles that anchor them: pectoral girdle for the upper limbs, pelvic girdle for the lower limbs. 126 bones.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Pectoral girdle</strong> (4 bones):
+          <ul><li>Clavicles + scapulae.</li>
+          <li>Very mobile, attached to axial skeleton only by SC joint at sternum (clavicle to manubrium).</li>
+          <li>Scapula features: acromion, coracoid process, glenoid cavity (articulates with humerus).</li></ul>
+        </li>
+        <li><strong>Upper limb</strong> (60 bones total, 30 each):
+          <ul><li>Humerus (head, anatomical and surgical necks, deltoid tuberosity, distal: trochlea, capitulum, epicondyles).</li>
+          <li>Radius (lateral) + ulna (medial). Radial head; ulnar olecranon.</li>
+          <li>Carpals (8): scaphoid, lunate, triquetrum, pisiform, trapezium, trapezoid, capitate, hamate.</li>
+          <li>Metacarpals (5).</li>
+          <li>Phalanges (14): 2 in thumb, 3 in each other digit.</li></ul>
+        </li>
+        <li><strong>Pelvic girdle</strong>:
+          <ul><li>Hip bones (coxae): each fused from ilium + ischium + pubis.</li>
+          <li>Pelvis = sacrum + coccyx + hip bones.</li>
+          <li>Sex differences: female pelvis broader, shallower, larger pelvic outlet for childbirth.</li>
+          <li>Acetabulum: socket for femoral head.</li></ul>
+        </li>
+        <li><strong>Lower limb</strong> (60 bones total, 30 each):
+          <ul><li>Femur (longest, strongest bone): head, neck (common fracture site in osteoporosis), greater + lesser trochanter, distal condyles.</li>
+          <li>Patella (sesamoid).</li>
+          <li>Tibia (medial, weight-bearing) + fibula (lateral).</li>
+          <li>Tarsals (7): talus, calcaneus, navicular, cuboid, 3 cuneiforms.</li>
+          <li>Metatarsals (5).</li>
+          <li>Phalanges (14): same as hand pattern.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Hip fracture in elderly</strong>: actually fracture of femoral neck or intertrochanteric area. Mortality 20-30% at one year, often from complications (PE, pneumonia, deconditioning). Early surgical repair + ambulation reduces mortality. <strong>Scaphoid fracture</strong>: fall on outstretched hand → snuffbox tenderness. Risk of avascular necrosis because blood enters distally; suspected even with negative initial X-ray (immobilize and reimage in 10-14 days).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which carpal bone, when fractured, is at high risk for avascular necrosis?</li>
+      <li><span class="qc-meta">DOK 3.</span> Why is the femoral neck a common fracture site in osteoporotic patients?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Scaphoid (blood supply enters distally; proximal fragment is vulnerable to ischemia after a waist fracture).</li><li>Femoral neck has a relatively thin cortex, complex stress distribution, and high trabecular content. Osteoporotic trabecular weakening makes it the weak link under stress (falls, twisting).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c11" data-tags="A">
+    <p class="card-eyebrow">Skeletal &middot; Concept 11 of 12</p>
+    <h2 class="card-title">Joints: classifications, synovial anatomy, movements <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Joints are classified by structure (what holds them together) and function (how much they move). Most clinically important joints are synovial — freely moveable.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Structural classification:</strong>
+          <ul><li>Fibrous: bones joined by dense CT. Sutures (skull), syndesmoses (distal tib-fib), gomphoses (tooth in socket).</li>
+          <li>Cartilaginous: bones joined by cartilage. Synchondroses (epiphyseal plate, 1st rib to sternum), symphyses (pubic symphysis, intervertebral discs).</li>
+          <li>Synovial: bones separated by joint cavity with synovial fluid. Most limb joints.</li></ul>
+        </li>
+        <li><strong>Functional classification:</strong>
+          <ul><li>Synarthrosis: immobile (sutures).</li>
+          <li>Amphiarthrosis: slightly movable (intervertebral discs).</li>
+          <li>Diarthrosis: freely movable (synovial joints).</li></ul>
+        </li>
+        <li><strong>Synovial joint anatomy:</strong>
+          <ul><li>Articular (hyaline) cartilage on bone ends.</li>
+          <li>Joint cavity with synovial fluid (lubrication, nutrition for avascular cartilage).</li>
+          <li>Articular capsule: fibrous outer + synovial inner.</li>
+          <li>Reinforcing ligaments (intra-/extra-capsular).</li>
+          <li>Some joints have menisci (knee), bursae (reduce friction), tendon sheaths.</li></ul>
+        </li>
+        <li><strong>Six types of synovial joints:</strong>
+          <ul><li>Plane (gliding): intercarpal.</li>
+          <li>Hinge: elbow, knee, IP joints — flex/extend only.</li>
+          <li>Pivot: atlanto-axial — rotation only.</li>
+          <li>Condyloid (ellipsoid): metacarpophalangeal — biaxial.</li>
+          <li>Saddle: thumb carpometacarpal — biaxial with more range.</li>
+          <li>Ball-and-socket: shoulder, hip — triaxial, greatest range.</li></ul>
+        </li>
+        <li><strong>Movement terms:</strong>
+          <ul><li>Flexion / extension: decrease / increase angle.</li>
+          <li>Abduction / adduction: away from / toward midline.</li>
+          <li>Rotation (medial / lateral).</li>
+          <li>Circumduction.</li>
+          <li>Special: pronation/supination, dorsiflexion/plantarflexion, inversion/eversion, opposition.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p><strong>Sprain</strong>: ligament injury (graded I-III). <strong>Strain</strong>: muscle or tendon injury. <strong>Dislocation</strong>: bone ends separated at a joint. <strong>Subluxation</strong>: partial displacement. RICE: rest, ice, compression, elevation. <strong>Synovitis / effusion</strong>: joint swelling from inflammation; can arthrocentese for diagnosis (infection, crystal, bleed).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What type of joint is the shoulder?</li>
+      <li><span class="qc-meta">DOK 2.</span> What's the difference between a sprain and a strain?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Ball-and-socket (synovial, triaxial).</li><li>Sprain = ligament injury. Strain = muscle or tendon injury.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c12" data-tags="CLIN">
+    <p class="card-eyebrow">Skeletal &middot; Concept 12 of 12</p>
+    <h2 class="card-title">Common bone and joint conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Most skeletal pathology falls into one of four buckets: degenerative (OA, osteoporosis), inflammatory/autoimmune (RA, AS), metabolic (Paget, osteomalacia), or infectious/neoplastic (osteomyelitis, primary or metastatic tumors).</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Osteoarthritis (OA):</strong> degenerative wear of articular cartilage. Asymmetric, weight-bearing joints (knees, hips, lumbar spine), DIP joints (Heberden nodes), PIP (Bouchard). Morning stiffness &lt; 30 min. Pain worse with use, better with rest. Treat: weight loss, exercise, acetaminophen, NSAIDs, intra-articular injections, joint replacement.</li>
+        <li><strong>Rheumatoid arthritis (RA):</strong> autoimmune (anti-CCP, RF). Symmetric small joint involvement (MCP, PIP — spares DIP), morning stiffness &gt; 1 hour, systemic features. Pannus erodes cartilage and bone. Ulnar deviation, swan neck, boutonnière deformities. Treat: DMARDs (methotrexate first-line), biologics (anti-TNF, anti-IL-6, JAK inhibitors).</li>
+        <li><strong>Gout:</strong> uric acid crystal deposition. Acute monoarthritis (often 1st MTP — podagra). Negatively birefringent needle-shaped crystals. Acute: NSAIDs, colchicine, steroids. Long-term: allopurinol (xanthine oxidase inhibitor).</li>
+        <li><strong>Pseudogout (CPPD):</strong> calcium pyrophosphate crystals. Positively birefringent rhomboid crystals. Knee common.</li>
+        <li><strong>Osteoporosis</strong> (Concept 7): fragility fractures.</li>
+        <li><strong>Osteomalacia / rickets:</strong> impaired mineralization from vitamin D deficiency.</li>
+        <li><strong>Paget disease of bone:</strong> disordered remodeling → enlarged, weak bone. Often asymptomatic; may cause pain, deformity, hearing loss (if skull), fractures, high-output HF if extensive.</li>
+        <li><strong>Osteomyelitis:</strong> bone infection. Often Staph aureus. Hematogenous (more in children) or contiguous spread (adults — diabetic foot ulcers). Tender, warm, ESR/CRP elevated. MRI sensitive; biopsy definitive. Long-course IV antibiotics, debridement.</li>
+        <li><strong>Septic arthritis:</strong> infected joint. Hot, swollen, painful, fevered, won't bear weight. Arthrocentesis is diagnostic (WBC &gt; 50,000, often &gt; 100,000). Emergency — joint destruction in hours.</li>
+        <li><strong>Spondyloarthropathies</strong> (deep dive):
+          <ul><li>Ankylosing spondylitis (HLA-B27): axial inflammation, "bamboo spine."</li>
+          <li>Psoriatic arthritis: with psoriasis.</li>
+          <li>Reactive arthritis: post-infection.</li>
+          <li>IBD-associated.</li></ul>
+        </li>
+        <li><strong>Bone tumors:</strong>
+          <ul><li>Primary: osteosarcoma (most common malignant primary in young), Ewing sarcoma, chondrosarcoma, multiple myeloma (older adults, lytic lesions, hypercalcemia, anemia, renal).</li>
+          <li>Metastatic (more common than primary): from breast, prostate, lung, kidney, thyroid.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="card-section"><h3>Summary: OA vs RA</h3>
+      <table class="summary"><thead><tr><th>Feature</th><th>OA</th><th>RA</th></tr></thead>
+      <tbody>
+        <tr><td>Pattern</td><td>Asymmetric, weight-bearing, DIP</td><td>Symmetric, small joints MCP/PIP, spares DIP</td></tr>
+        <tr><td>Morning stiffness</td><td>&lt; 30 min</td><td>&gt; 1 hour</td></tr>
+        <tr><td>Pain</td><td>Worse with use</td><td>Worse with rest</td></tr>
+        <tr><td>Systemic</td><td>No</td><td>Yes (fatigue, malaise, rheumatoid nodules)</td></tr>
+        <tr><td>Labs</td><td>Normal</td><td>↑ ESR/CRP, anti-CCP, RF</td></tr>
+        <tr><td>Mechanism</td><td>Wear</td><td>Autoimmune</td></tr>
+      </tbody></table>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Suspect <strong>septic arthritis</strong> in any acutely hot, swollen joint with fever or systemic illness. Tap the joint without delay. Joint destruction can be rapid; empiric antibiotics + surgical washout if confirmed. Mortality 10-15%. Differentiate from gout or pseudogout via crystal analysis.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 2.</span> A patient has hot, red, painful first MTP joint with negatively birefringent needle-shaped crystals on arthrocentesis. Diagnosis and acute treatment?</li>
+      <li><span class="qc-meta">DOK 4.</span> Why is septic arthritis a surgical emergency?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Acute gout. Acute: NSAID (or colchicine, or steroids if both contraindicated). Long-term urate lowering (allopurinol) after the acute attack settles.</li><li>Bacterial enzymes and inflammatory cytokines destroy articular cartilage rapidly — sometimes within hours. Delay leads to permanent joint destruction and risk of bacteremia/sepsis. Tap the joint promptly; treat empirically pending culture; surgical washout often needed.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Skeletal master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Skeletal';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='skeletal-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>

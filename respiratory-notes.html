@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respiratory — A&amp;P Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1E3D4C; --navy-deep: #142a36; --navy-tint: #EDF1F3;
+    --gold: #B8924A; --gold-deep: #8f7136;
+    --terra: #C2734D; --terra-dark: #A0522D;
+    --white: #FFFFFF; --off-white: #FAFAF9;
+    --rest-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --hover-shadow: 0 8px 16px rgba(0,0,0,0.10);
+    --transition: transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+  body { margin: 0; background: var(--off-white); color: var(--navy); font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-size: 16px; line-height: 1.55; }
+  .skip-link { position: absolute; left: -9999px; }
+  .skip-link:focus { position: fixed; left: 12px; top: 12px; padding: 10px 14px; background: var(--navy); color: var(--white); z-index: 9999; border-radius: 4px; font-weight: 600; text-decoration: none; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+  a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--terra-dark); }
+  .page-wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+
+  header.atlas-header { margin-bottom: 22px; }
+  .eyebrow { font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--terra-dark); font-weight: 500; margin: 0 0 10px; }
+  h1.page-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--navy); font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin: 0 0 8px; }
+  .subhead { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: var(--terra-dark); font-size: clamp(17px, 2vw, 22px); margin: 0 0 14px; }
+  .usage { font-family: 'Lora', serif; font-style: italic; color: var(--navy); font-size: 15px; max-width: 760px; margin: 0; }
+
+  .filter-bar { position: sticky; top: 0; z-index: 50; background: var(--off-white); padding: 14px 0 12px; margin: 0 0 22px; border-bottom: 1px solid var(--navy-tint); }
+  .filter-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .filter-label { font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--terra-dark); font-weight: 700; }
+  .seg { display: inline-flex; border: 1px solid var(--navy); border-radius: 4px; overflow: hidden; background: var(--white); }
+  .seg button { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; padding: 8px 14px; background: var(--white); color: var(--navy); border: none; border-right: 1px solid var(--navy); cursor: pointer; transition: var(--transition); }
+  .seg button:last-child { border-right: none; }
+  .seg button:hover { background: var(--navy-tint); }
+  .seg button[aria-pressed="true"] { background: var(--navy); color: var(--white); }
+  .counter { margin-left: auto; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--navy); background: var(--navy-tint); border: 1px solid var(--navy); border-radius: 4px; padding: 6px 12px; }
+
+  .toc { background: var(--white); border: 1px solid var(--navy-tint); border-radius: 6px; padding: 18px 22px; margin-bottom: 30px; box-shadow: var(--rest-shadow); }
+  .toc-h { font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--terra-dark); font-weight: 700; margin: 0 0 10px; }
+  .toc-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 4px 18px; }
+  @media (min-width: 720px) { .toc-list { grid-template-columns: 1fr 1fr; } }
+  .toc-list li[hidden] { display: none; }
+  .toc-list a { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; font-size: 14px; text-decoration: none; color: var(--navy); }
+  .toc-list a:hover { color: var(--terra-dark); text-decoration: underline; }
+  .toc-num { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--terra-dark); font-weight: 700; min-width: 22px; }
+
+  /* Depth tagging */
+  .deep-dive, [data-depth="deep"] { border-left: 3px solid var(--gold); padding-left: 12px; position: relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content: "DEEP DIVE"; display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; color: var(--gold-deep); background: rgba(184,146,74,0.10); padding: 1px 6px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+  li.deep-dive { list-style: none; margin-left: -18px; }
+  li.deep-dive::before { margin-right: 6px; }
+  article.concept-card[data-depth="deep"] { border-left: 4px solid var(--gold); }
+  article.concept-card[data-depth="deep"]::before { display: none; }
+  .deep-dive.callout { border-left-width: 4px; border-left-color: var(--gold); }
+  .deep-dive.callout::before { display: none; }
+  .deep-dive.callout h3::after { content: " · DEEP DIVE"; font-size: 10px; color: var(--gold-deep); letter-spacing: 0.08em; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display: none !important; }
+
+  /* Diagrams */
+  figure.diagram { margin: 14px 0 4px; padding: 0; }
+  figure.diagram svg { width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto; background: var(--off-white); border: 1px solid var(--navy-tint); border-radius: 4px; }
+  figure.diagram figcaption { font-family: 'Lora', serif; font-style: italic; font-size: 13px; color: var(--navy); margin-top: 8px; text-align: center; line-height: 1.4; }
+  figure.diagram svg text { font-family: 'DM Sans', sans-serif; fill: var(--navy); font-size: 12px; }
+  figure.diagram svg .lbl-bold { font-weight: 700; }
+  figure.diagram svg .lbl-terra { fill: var(--terra-dark); }
+  figure.diagram svg .lbl-gold { fill: var(--gold-deep); }
+  figure.diagram svg .lbl-small { font-size: 10.5px; }
+  figure.diagram svg .ax-line { stroke: var(--navy); stroke-width: 1; fill: none; }
+  figure.diagram svg .curve-main { stroke: var(--navy); stroke-width: 2.4; fill: none; }
+  figure.diagram svg .curve-alt  { stroke: var(--terra-dark); stroke-width: 2.4; fill: none; stroke-dasharray: 5 4; }
+  figure.diagram svg .curve-warn { stroke: var(--gold-deep); stroke-width: 2.4; fill: none; stroke-dasharray: 2 3; }
+
+  /* Concept cards */
+  .concept-card { background: var(--white); border: 1px solid var(--navy-tint); border-radius: 6px; padding: 24px 26px; margin-bottom: 22px; box-shadow: var(--rest-shadow); transition: var(--transition); }
+  .concept-card:hover { transform: translateY(-2px); box-shadow: var(--hover-shadow); }
+  .concept-card[hidden] { display: none; }
+  .card-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--terra-dark); font-weight: 500; margin: 0 0 6px; }
+  .card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--navy); font-size: 22px; line-height: 1.25; margin: 0 0 12px; }
+  .given { font-family: 'Lora', serif; font-style: italic; color: var(--navy); font-size: 16px; line-height: 1.5; margin: 0 0 18px; padding-left: 14px; border-left: 2px solid var(--gold); }
+  .card-section { margin-top: 18px; }
+  .card-section h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: var(--terra-dark); font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 10px; }
+  .card-section ul, .card-section ol { margin: 0; padding-left: 22px; }
+  .card-section li { margin-bottom: 6px; }
+  .card-section li ul { margin-top: 4px; margin-bottom: 6px; padding-left: 20px; }
+
+  table.summary { width: 100%; border-collapse: collapse; margin: 6px 0 4px; font-size: 14px; }
+  table.summary th, table.summary td { text-align: left; padding: 8px 10px; border: 1px solid var(--navy); vertical-align: top; }
+  table.summary thead th { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.summary tbody tr:nth-child(even) td { background: var(--off-white); }
+
+  .callout { border: 1px solid; border-left-width: 3px; border-radius: 4px; padding: 14px 16px; margin-top: 14px; }
+  .callout h3 { margin: 0 0 6px; font-size: 13px; letter-spacing: 0.06em; }
+  .callout p, .callout ul { margin: 0; }
+  .callout-clinical { border-color: var(--terra-dark); background: var(--white); }
+  .callout-clinical h3 { color: var(--terra-dark); }
+  .callout-drawing { border-color: var(--gold-deep); background: var(--white); }
+  .callout-drawing h3 { color: var(--gold-deep); }
+
+  .quick-check { margin-top: 18px; background: var(--navy-tint); border: 1px solid var(--navy); border-radius: 4px; padding: 14px 16px; }
+  .quick-check h3 { font-family: 'DM Sans', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy); font-weight: 700; margin: 0 0 10px; }
+  .quick-check ol { margin: 0; padding-left: 22px; }
+  .quick-check li { margin-bottom: 8px; }
+  .qc-meta { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--terra-dark); font-weight: 700; }
+  details.answers { margin-top: 10px; }
+  details.answers > summary { cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--navy); font-weight: 700; padding: 4px 0; }
+  details.answers[open] > summary { margin-bottom: 6px; }
+
+  .tag-pill { display: inline-flex; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 7px; border-radius: 3px; border: 1px solid currentColor; margin-left: 6px; vertical-align: middle; }
+  .tag-A { color: var(--navy); background: var(--navy-tint); }
+  .tag-P { color: var(--terra-dark); background: var(--white); }
+  .tag-AP { color: var(--gold-deep); background: var(--white); }
+  .tag-CLIN { color: var(--navy-deep); background: var(--white); border-style: dashed; }
+
+  footer.byline { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--navy-tint); font-size: 13px; color: var(--navy); }
+  footer.byline .signature { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--navy); }
+
+  .top-link { display: inline-block; margin-top: 12px; font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--terra-dark); text-decoration: none; }
+  .top-link:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: var(--white); }
+    .filter-bar, .skip-link, .top-link, details.answers > summary { display: none; }
+    details.answers[open] > summary { display: none; }
+    details.answers:not([open]) > *:not(summary) { display: block; }
+    .concept-card { break-inside: avoid; page-break-inside: avoid; box-shadow: none; border-color: var(--navy); margin-bottom: 14px; }
+    .toc { display: none; }
+    .quick-check { background: var(--white); }
+    .concept-card[hidden] { display: none !important; }
+    a { color: var(--navy); text-decoration: none; }
+    figure.diagram svg { background: var(--white); }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Respiratory Anatomy &amp; Physiology</h1>
+    <p class="usage">Breathing is two problems: get air in and out (ventilation), and move O₂ and CO₂ across the alveolar membrane (gas exchange). Every concept here lives in one of those two stories. Use the <strong>View</strong> filter for Anatomy / Physiology / Combined and the <strong>Depth</strong> filter for Essentials (BIO 304) or Full (BIO 431).</p>
+  </header>
+
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy"  aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio"   aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full"       aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">12</strong> concepts</span>
+    </div>
+  </div>
+
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 class="toc-h" id="toc-h">Contents</h2>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
+  <main id="main">
+
+    <!-- CONCEPT 1: Upper airway -->
+    <article class="concept-card" id="c1" data-tags="A">
+      <p class="card-eyebrow">Respiratory &middot; Concept 1 of 12</p>
+      <h2 class="card-title">Upper airway anatomy <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The upper airway warms, humidifies, filters, and routes air. By the time air reaches the trachea, it should be ≈37 °C, ≈100% humidity, and largely particle-free.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Nose &amp; nasal cavity:</strong> nares → vestibule → conchae (superior, middle, inferior) create turbulence → trap particles. Lined by respiratory epithelium (pseudostratified ciliated columnar with goblet cells). Olfactory epithelium in the superior cavity.</li>
+          <li><strong>Paranasal sinuses:</strong> frontal, ethmoid, sphenoid, maxillary. Lighten skull, resonate voice, drain into nasal cavity.</li>
+          <li><strong>Pharynx</strong> (3 regions):
+            <ul>
+              <li>Nasopharynx: air only. Pharyngeal tonsil (adenoid), auditory tube openings.</li>
+              <li>Oropharynx: air + food. Palatine and lingual tonsils.</li>
+              <li>Laryngopharynx: air + food. Continuous below with larynx and esophagus.</li>
+            </ul>
+          </li>
+          <li><strong>Larynx:</strong> 9 cartilages including thyroid, cricoid (only complete ring), and epiglottis (closes airway during swallowing). Houses true and false vocal cords. Innervated by recurrent laryngeal nerve (branch of CN X).</li>
+          <li><strong>Trachea:</strong> ~10-12 cm long. C-shaped hyaline cartilage rings (open posteriorly toward esophagus). Lined by respiratory epithelium. Bifurcates at carina (T4-T5).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Structure</th><th>Function</th><th>Clinical landmark</th></tr></thead>
+          <tbody>
+            <tr><td>Nasal conchae</td><td>↑ turbulence, warm + humidify</td><td>Epistaxis at Kiesselbach's plexus</td></tr>
+            <tr><td>Epiglottis</td><td>Diverts food to esophagus</td><td>Aspiration if reflex impaired</td></tr>
+            <tr><td>Cricoid cartilage</td><td>Only complete tracheal ring</td><td>Cricothyrotomy landmark</td></tr>
+            <tr><td>Carina</td><td>Tracheal bifurcation</td><td>Aspirated objects → R main bronchus (more vertical)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Aspiration</strong> tends to travel to the right main bronchus because it is more vertical and wider than the left. <strong>Epistaxis:</strong> 90% from Kiesselbach's plexus (anterior septum). <strong>Cricothyrotomy</strong> through the cricothyroid membrane is the emergency surgical airway, performed below the thyroid and above the cricoid cartilage.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch a sagittal view of the upper airway from nose to trachea. Label the conchae, the three pharynx regions, the epiglottis, true and false cords, cricoid cartilage, and the carina.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which is the only complete cartilage ring of the trachea?</li>
+          <li><span class="qc-meta">DOK 2.</span> An aspirated peanut is more likely to enter which main bronchus, and why?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Cricoid cartilage.</strong></li>
+            <li><strong>Right main bronchus</strong> — it is more vertical, wider, and shorter than the left.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 2: Lower airway + lung anatomy -->
+    <article class="concept-card" id="c2" data-tags="A">
+      <p class="card-eyebrow">Respiratory &middot; Concept 2 of 12</p>
+      <h2 class="card-title">Lower airway, lung anatomy, pleura <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">From the trachea down, the airway divides about 23 times. Each division gets smaller and loses cartilage support, until it ends in the alveoli where gas exchange happens.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Bronchial tree:</strong> trachea → main bronchi → lobar (secondary) bronchi → segmental (tertiary) bronchi → bronchioles → terminal bronchioles → respiratory bronchioles → alveolar ducts → alveolar sacs.</li>
+          <li><strong>Right lung:</strong> 3 lobes (superior, middle, inferior); horizontal + oblique fissures.</li>
+          <li><strong>Left lung:</strong> 2 lobes (superior, inferior); oblique fissure only. Has the cardiac notch and lingula.</li>
+          <li><strong>Hilum:</strong> where the main bronchus, pulmonary artery (in front), and pulmonary veins (below) enter/exit the lung. Lymph nodes here.</li>
+          <li><strong>Pleural membranes:</strong>
+            <ul>
+              <li>Parietal pleura: lines thoracic cavity, diaphragm, mediastinum.</li>
+              <li>Visceral pleura: covers the lung surface, including into fissures.</li>
+              <li>Pleural cavity: thin film of serous fluid; creates surface tension that couples lung to chest wall.</li>
+            </ul>
+          </li>
+          <li><strong>Diaphragm:</strong> main inspiratory muscle. Innervated by phrenic nerve (C3, C4, C5 — "C3, 4, 5 keep the diaphragm alive").</li>
+          <li class="deep-dive"><strong>Accessory muscles of inspiration</strong> (used in distress): SCM, scalenes, pec minor.</li>
+          <li class="deep-dive"><strong>Expiratory muscles</strong> (forced expiration only; passive at rest): abdominals, internal intercostals.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Structure</th><th>Feature</th><th>Clinical note</th></tr></thead>
+          <tbody>
+            <tr><td>Right lung</td><td>3 lobes, horizontal + oblique fissure</td><td>RML pneumonia common</td></tr>
+            <tr><td>Left lung</td><td>2 lobes, cardiac notch, lingula</td><td>Heart sits left</td></tr>
+            <tr><td>Pleural cavity</td><td>Serous fluid coupling</td><td>Pneumothorax breaks the seal → lung collapse</td></tr>
+            <tr><td>Diaphragm</td><td>Main inspiratory muscle</td><td>Phrenic nerve (C3-5)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pneumothorax:</strong> air in the pleural space breaks the surface-tension coupling → lung collapses (recoils inward). Tension pneumothorax pushes mediastinum, drops CO. Needle decompression at 2nd intercostal space, midclavicular line. <strong>Pleural effusion:</strong> fluid in pleural space (transudative = HF; exudative = infection/malignancy). <strong>Phrenic injury</strong> at C3-C5 (high cervical spinal cord trauma) → diaphragm paralysis → ventilatory failure.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw both lungs in the chest. Label lobes, fissures, hilum, cardiac notch, lingula, diaphragm, and pleural layers. Mark the phrenic nerve origin.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> How many lobes does each lung have?</li>
+          <li><span class="qc-meta">DOK 3.</span> A C2 spinal cord injury is typically lethal without ventilator support. Why?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Right = 3, left = 2.</li>
+            <li>The phrenic nerve originates at C3-C5. A C2 injury cuts off motor input to the diaphragm → no spontaneous ventilation possible.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 3: Conducting vs respiratory zones, alveolar architecture -->
+    <article class="concept-card" id="c3" data-tags="A">
+      <p class="card-eyebrow">Respiratory &middot; Concept 3 of 12</p>
+      <h2 class="card-title">Conducting zone, respiratory zone, alveolar architecture <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+      <p class="given">The conducting zone moves air. The respiratory zone exchanges gas. The dividing line is the respiratory bronchiole, where the first alveoli appear.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Conducting zone:</strong> nose → terminal bronchioles. No gas exchange. ≈150 mL of "anatomical dead space." Cartilage diminishes, smooth muscle increases as you descend.</li>
+          <li><strong>Respiratory zone:</strong> respiratory bronchioles → alveolar ducts → alveolar sacs. Site of gas exchange.</li>
+          <li><strong>Alveolus:</strong> ~300 million per lung. Total surface area ~70-100 m² (roughly a tennis court).</li>
+          <li><strong>Alveolar wall cell types:</strong>
+            <ul>
+              <li>Type I pneumocytes (~95% of surface): thin squamous, gas exchange.</li>
+              <li>Type II pneumocytes: cuboidal, produce surfactant, divide to replace Type I after injury.</li>
+              <li>Alveolar macrophages ("dust cells"): phagocytose debris.</li>
+            </ul>
+          </li>
+          <li><strong>Respiratory membrane:</strong> ≈0.5 µm thick. From alveolus to blood:
+            <ol>
+              <li>Surfactant film</li>
+              <li>Type I pneumocyte</li>
+              <li>Fused basement membranes</li>
+              <li>Capillary endothelium</li>
+            </ol>
+          </li>
+          <li><strong>Pores of Kohn:</strong> openings between adjacent alveoli; allow collateral ventilation.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Zone</th><th>Where</th><th>Function</th></tr></thead>
+          <tbody>
+            <tr><td>Conducting</td><td>Trachea → terminal bronchioles</td><td>Move + condition air</td></tr>
+            <tr><td>Transitional</td><td>Respiratory bronchioles</td><td>Some alveoli; some conduction</td></tr>
+            <tr><td>Respiratory</td><td>Alveolar ducts + sacs</td><td>Gas exchange</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Emphysema</strong> destroys alveolar walls → loss of surface area + loss of elastic recoil. <strong>Pulmonary fibrosis</strong> thickens the respiratory membrane → impaired diffusion. <strong>Pulmonary edema</strong> adds fluid to the membrane → also impaired diffusion. All three reduce DLCO (diffusing capacity).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch one alveolus with its capillary. Label Type I cell, Type II cell, surfactant film, capillary endothelium, basement membranes, and the four-layer respiratory membrane. Add an alveolar macrophage in the lumen.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which alveolar cell type produces surfactant?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does pulmonary fibrosis reduce gas diffusion?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Type II pneumocyte.</li>
+            <li>Fibrosis thickens the respiratory membrane. By Fick's law, diffusion rate ∝ 1/membrane thickness, so a thicker membrane slows gas movement, especially for O₂ which is less soluble than CO₂.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 4: Ventilation mechanics -->
+    <article class="concept-card" id="c4" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 4 of 12</p>
+      <h2 class="card-title">Ventilation mechanics (Boyle's law, pressures) <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Air moves down pressure gradients. The diaphragm and chest wall change thoracic volume; pressures change; air flows in or out. That is the whole story of breathing.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Boyle's law:</strong> at constant temperature, P × V = constant. ↑ volume → ↓ pressure → air flows in.</li>
+          <li><strong>Three pressures to track:</strong>
+            <ul>
+              <li>Atmospheric (P<sub>atm</sub>) = 760 mmHg at sea level.</li>
+              <li>Intra-alveolar (P<sub>alv</sub>) = pressure inside the alveoli.</li>
+              <li>Intrapleural (P<sub>ip</sub>) = pressure in the pleural space. Always slightly negative (~ −4 mmHg at rest), creating suction that keeps lungs expanded against chest wall.</li>
+            </ul>
+          </li>
+          <li><strong>Inspiration</strong> (active):
+            <ul>
+              <li>Diaphragm contracts ↓, external intercostals lift ribs ↑.</li>
+              <li>Thoracic volume ↑ → P<sub>ip</sub> drops more negative (~ −6 mmHg).</li>
+              <li>Lungs expand → P<sub>alv</sub> drops below P<sub>atm</sub> (~ −1 mmHg).</li>
+              <li>Air flows in until P<sub>alv</sub> = P<sub>atm</sub>.</li>
+            </ul>
+          </li>
+          <li><strong>Expiration</strong> (passive at rest):
+            <ul>
+              <li>Diaphragm relaxes, ribs drop.</li>
+              <li>Elastic recoil of lung ↓ thoracic volume.</li>
+              <li>P<sub>alv</sub> rises above P<sub>atm</sub> (~ +1 mmHg).</li>
+              <li>Air flows out.</li>
+            </ul>
+          </li>
+          <li><strong>Transpulmonary pressure</strong> = P<sub>alv</sub> − P<sub>ip</sub>. Keeps the lungs from collapsing. Always positive in healthy lungs.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Phase</th><th>Diaphragm</th><th>P<sub>ip</sub></th><th>P<sub>alv</sub></th><th>Airflow</th></tr></thead>
+          <tbody>
+            <tr><td>Rest</td><td>Relaxed</td><td>−4</td><td>0 (= P<sub>atm</sub>)</td><td>None</td></tr>
+            <tr><td>Inspiration</td><td>Contracts ↓</td><td>−6</td><td>−1</td><td>In</td></tr>
+            <tr><td>End-inspiration</td><td>Held</td><td>−6</td><td>0</td><td>None</td></tr>
+            <tr><td>Expiration</td><td>Relaxes</td><td>−4</td><td>+1</td><td>Out</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Pneumothorax breaks intrapleural negativity.</strong> Air enters the pleural space → P<sub>ip</sub> rises to 0 (or positive in tension) → lung recoils inward → collapse. <strong>Mechanical ventilation</strong> reverses the physiology: positive pressure is applied to push air in (P<sub>alv</sub> &gt; P<sub>atm</sub>). This raises intrathoracic pressure and can ↓ venous return → ↓ CO.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Plot the three pressures (P<sub>atm</sub>, P<sub>alv</sub>, P<sub>ip</sub>) versus time across one inspiration and expiration. Mark when airflow is in, out, or zero.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> If intrapleural pressure becomes 0, what happens to the lung?</li>
+          <li><span class="qc-meta">DOK 3.</span> Why does positive pressure ventilation sometimes cause hypotension?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>The lung collapses (recoils inward) because the negative pressure that held it against the chest wall is gone — pneumothorax.</li>
+            <li>Positive intrathoracic pressure compresses the great veins and right atrium → ↓ venous return → ↓ preload → ↓ CO → ↓ BP. Worse in hypovolemic patients.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 5: Lung volumes and capacities (with diagram) -->
+    <article class="concept-card" id="c5" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 5 of 12</p>
+      <h2 class="card-title">Lung volumes and capacities <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Volumes are the things you measure directly; capacities are sums of volumes. Knowing which is which is half of pulmonary function testing.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>The four volumes (everyone has one of each):</strong>
+            <ul>
+              <li><em>Tidal volume (TV):</em> ≈500 mL. Quiet breath in and out.</li>
+              <li><em>Inspiratory reserve volume (IRV):</em> ≈3,000 mL. Extra in after a normal inspiration.</li>
+              <li><em>Expiratory reserve volume (ERV):</em> ≈1,200 mL. Extra out after a normal expiration.</li>
+              <li><em>Residual volume (RV):</em> ≈1,200 mL. Left in lung after maximal expiration. Cannot be measured by spirometry alone.</li>
+            </ul>
+          </li>
+          <li><strong>Four capacities (sums of volumes):</strong>
+            <ul>
+              <li><em>Inspiratory capacity (IC):</em> TV + IRV ≈3,500 mL.</li>
+              <li><em>Functional residual capacity (FRC):</em> ERV + RV ≈2,400 mL. Lung volume at end of normal expiration.</li>
+              <li><em>Vital capacity (VC):</em> IRV + TV + ERV ≈4,700 mL. Maximum inhalation to maximum exhalation.</li>
+              <li><em>Total lung capacity (TLC):</em> VC + RV ≈5,900 mL.</li>
+            </ul>
+          </li>
+          <li><strong>Anatomical dead space:</strong> ≈150 mL. Air in conducting zone that doesn't reach alveoli.</li>
+          <li><strong>Alveolar ventilation:</strong> (TV − dead space) × respiratory rate. The number that actually matters for gas exchange. At 500 mL TV, 12 breaths/min: (500 − 150) × 12 = <strong>4,200 mL/min</strong>.</li>
+          <li><strong>FEV<sub>1</sub>/FVC ratio</strong> (forced expiratory volume in 1 sec / forced vital capacity):
+            <ul>
+              <li>Normal ≥0.70.</li>
+              <li>Obstructive disease (asthma, COPD): &lt;0.70 — air trapped, expiration slow.</li>
+              <li>Restrictive disease (fibrosis): normal or ↑ ratio with reduced volumes.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: spirometry tracing</h3>
+        <figure class="diagram" aria-labelledby="dxSpir-title dxSpir-desc">
+          <svg viewBox="0 0 700 380" role="img" aria-labelledby="dxSpir-title dxSpir-desc">
+            <title id="dxSpir-title">Spirometry tracing showing lung volumes and capacities</title>
+            <desc id="dxSpir-desc">A horizontal time axis with lung volume on the vertical axis. Three tidal breaths trace a sinusoidal pattern near the middle of the volume range. Then the subject inhales maximally, reaching total lung capacity. Then exhales maximally, reaching residual volume. The four volumes (tidal, inspiratory reserve, expiratory reserve, residual) and four capacities (inspiratory, functional residual, vital, total lung) are labeled.</desc>
+
+            <line x1="80" y1="40" x2="80" y2="340" class="ax-line"/>
+            <line x1="80" y1="340" x2="660" y2="340" class="ax-line"/>
+            <text x="375" y="365" text-anchor="middle" class="lbl-bold">Time</text>
+            <text x="30" y="190" class="lbl-bold" transform="rotate(-90 30 190)">Lung volume (mL)</text>
+
+            <!-- Volume reference lines -->
+            <line x1="80" y1="60"  x2="660" y2="60"  stroke="var(--navy-tint)" stroke-dasharray="2 3"/>
+            <line x1="80" y1="120" x2="660" y2="120" stroke="var(--navy-tint)" stroke-dasharray="2 3"/>
+            <line x1="80" y1="195" x2="660" y2="195" stroke="var(--navy-tint)" stroke-dasharray="2 3"/>
+            <line x1="80" y1="230" x2="660" y2="230" stroke="var(--navy-tint)" stroke-dasharray="2 3"/>
+            <line x1="80" y1="295" x2="660" y2="295" stroke="var(--navy-tint)" stroke-dasharray="2 3"/>
+
+            <text x="75" y="63" text-anchor="end" class="lbl-small">5900 TLC</text>
+            <text x="75" y="123" text-anchor="end" class="lbl-small">2900</text>
+            <text x="75" y="198" text-anchor="end" class="lbl-small">2400 FRC</text>
+            <text x="75" y="233" text-anchor="end" class="lbl-small">1900</text>
+            <text x="75" y="298" text-anchor="end" class="lbl-small">1200 RV</text>
+
+            <!-- Tidal breath trace -->
+            <path d="M 90 230 Q 110 195, 130 230 Q 150 195, 170 230 Q 190 195, 210 230 L 240 230" class="curve-main"/>
+            <!-- Max inhale to TLC -->
+            <path d="M 240 230 Q 290 80, 350 60" class="curve-main"/>
+            <!-- Max exhale to RV -->
+            <path d="M 350 60 Q 430 240, 500 295" class="curve-main"/>
+            <!-- Resume normal -->
+            <path d="M 500 295 Q 540 240, 580 230 Q 620 195, 660 230" class="curve-main"/>
+
+            <!-- Volume brackets on the right -->
+            <line x1="610" y1="60"  x2="610" y2="195" stroke="var(--terra-dark)" stroke-width="1.4"/>
+            <line x1="606" y1="60"  x2="614" y2="60"  stroke="var(--terra-dark)" stroke-width="1.4"/>
+            <line x1="606" y1="195" x2="614" y2="195" stroke="var(--terra-dark)" stroke-width="1.4"/>
+            <text x="618" y="130" class="lbl-small lbl-terra">IRV 3000</text>
+
+            <line x1="610" y1="195" x2="610" y2="230" stroke="var(--terra-dark)" stroke-width="1.4"/>
+            <line x1="606" y1="230" x2="614" y2="230" stroke="var(--terra-dark)" stroke-width="1.4"/>
+            <text x="618" y="218" class="lbl-small lbl-terra">TV 500</text>
+
+            <line x1="610" y1="230" x2="610" y2="295" stroke="var(--terra-dark)" stroke-width="1.4"/>
+            <line x1="606" y1="295" x2="614" y2="295" stroke="var(--terra-dark)" stroke-with="1.4"/>
+            <text x="618" y="265" class="lbl-small lbl-terra">ERV 1200</text>
+
+            <line x1="610" y1="295" x2="610" y2="340" stroke="var(--terra-dark)" stroke-width="1.4"/>
+            <text x="618" y="320" class="lbl-small lbl-terra">RV 1200</text>
+
+            <!-- Capacities on the left -->
+            <line x1="380" y1="60"  x2="380" y2="195" stroke="var(--gold-deep)" stroke-width="1.4"/>
+            <line x1="376" y1="60"  x2="384" y2="60"  stroke="var(--gold-deep)" stroke-width="1.4"/>
+            <line x1="376" y1="195" x2="384" y2="195" stroke="var(--gold-deep)" stroke-width="1.4"/>
+            <text x="388" y="130" class="lbl-small lbl-gold lbl-bold">IC 3500</text>
+
+            <line x1="430" y1="195" x2="430" y2="340" stroke="var(--gold-deep)" stroke-width="1.4"/>
+            <text x="438" y="270" class="lbl-small lbl-gold lbl-bold">FRC 2400</text>
+
+            <line x1="475" y1="60"  x2="475" y2="295" stroke="var(--gold-deep)" stroke-width="1.4"/>
+            <text x="483" y="180" class="lbl-small lbl-gold lbl-bold">VC 4700</text>
+
+            <line x1="525" y1="60"  x2="525" y2="340" stroke="var(--gold-deep)" stroke-width="1.4"/>
+            <text x="533" y="200" class="lbl-small lbl-gold lbl-bold">TLC 5900</text>
+          </svg>
+          <figcaption>Volumes (terra) are independent measurements. Capacities (gold) are sums of two or more volumes. FRC and TLC require special techniques (helium dilution or body plethysmography) because RV cannot be exhaled.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked calculations</h3>
+        <ol>
+          <li><strong>Minute ventilation:</strong> RR 14, TV 500 mL.
+            <ul>
+              <li>V<sub>E</sub> = RR × TV = 14 × 500 = <strong>7,000 mL/min</strong>.</li>
+              <li><em>Interpretation:</em> normal (4-8 L/min).</li>
+            </ul>
+          </li>
+          <li><strong>Alveolar ventilation:</strong> same patient, dead space ≈150 mL.
+            <ul>
+              <li>V<sub>A</sub> = RR × (TV − V<sub>D</sub>) = 14 × (500 − 150) = <strong>4,900 mL/min</strong>.</li>
+              <li><em>Interpretation:</em> alveolar ventilation is what matters for CO₂ removal. PaCO₂ ∝ 1/V<sub>A</sub>.</li>
+            </ul>
+          </li>
+          <li><strong>Shallow rapid breathing trap:</strong> Same minute ventilation (7,000 mL/min) achieved with RR 28, TV 250 mL.
+            <ul>
+              <li>V<sub>A</sub> = 28 × (250 − 150) = 28 × 100 = <strong>2,800 mL/min</strong>.</li>
+              <li><em>Interpretation:</em> Same V<sub>E</sub>, but only 57% of the alveolar ventilation. Shallow breathing wastes ventilation on dead space → CO₂ retention.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Obstructive (asthma, COPD):</strong> ↑ RV, ↑ FRC, ↑ TLC (air trapping), ↓ FEV<sub>1</sub>/FVC. <strong>Restrictive (fibrosis, kyphoscoliosis):</strong> ↓ all volumes proportionally, FEV<sub>1</sub>/FVC normal or ↑. <strong>Bedside use:</strong> incentive spirometry post-op aims to restore inspiratory capacity and prevent atelectasis.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Reproduce the spirometry tracing from memory. Label all four volumes and four capacities with normal values.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> Which volume cannot be measured by spirometry?</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient with severe COPD has FRC 4,500 mL (normal 2,400). Explain mechanistically.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Residual volume (RV). Anything containing RV (FRC, TLC) requires special techniques.</li>
+            <li>COPD causes airway obstruction and loss of elastic recoil. Air is trapped behind narrowed airways at end-expiration, ↑ RV and ↑ ERV → ↑ FRC. The lungs are over-inflated and stiffer to inflate further, increasing work of breathing.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 6: Compliance, resistance, surface tension, surfactant -->
+    <article class="concept-card" id="c6" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 6 of 12</p>
+      <h2 class="card-title">Compliance, resistance, surface tension, surfactant <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Three things determine how hard you have to work to breathe: how stretchy the lungs are (compliance), how open the airways are (resistance), and how much the alveoli want to collapse (surface tension).</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Compliance (C):</strong> ΔV / ΔP. How easily lungs expand for a given pressure change.
+            <ul>
+              <li>↑ Compliance: emphysema (loss of elastic tissue). Lungs inflate easily but recoil poorly.</li>
+              <li>↓ Compliance: fibrosis, pulmonary edema, atelectasis. Stiff lungs require more pressure to inflate.</li>
+            </ul>
+          </li>
+          <li><strong>Resistance (R):</strong> mostly determined by airway radius (R ∝ 1/r⁴, like in vessels).
+            <ul>
+              <li>Bronchoconstriction (asthma, vagal tone): ↑ R.</li>
+              <li>Bronchodilation (β2 agonists, sympathetic, anticholinergics): ↓ R.</li>
+              <li>Mucus, edema, foreign body: ↑ R.</li>
+            </ul>
+          </li>
+          <li><strong>Surface tension:</strong> water molecules at the alveolar air-fluid interface attract each other and tend to collapse the alveolus.
+            <ul>
+              <li>Laplace's law: P = 2T/r. Smaller alveoli have higher collapse pressure → without surfactant, small alveoli would empty into large ones.</li>
+            </ul>
+          </li>
+          <li><strong>Surfactant:</strong> dipalmitoyl phosphatidylcholine (DPPC) + proteins, produced by Type II pneumocytes.
+            <ul>
+              <li>Reduces surface tension, especially in small alveoli.</li>
+              <li>Equalizes pressure across alveoli of different sizes → stable lung.</li>
+              <li>Production begins ~24 weeks gestation; mature by ~35 weeks.</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>Hysteresis:</strong> the inflation pressure-volume curve does not match the deflation curve. Energy is lost to overcoming surface tension during inflation.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Property</th><th>Determinant</th><th>↑ Means</th><th>Example disease</th></tr></thead>
+          <tbody>
+            <tr><td>Compliance</td><td>Elastic + surfactant</td><td>Lungs stretch easily</td><td>↑ Emphysema; ↓ Fibrosis, edema</td></tr>
+            <tr><td>Resistance</td><td>Airway radius</td><td>Harder to move air</td><td>↑ Asthma, COPD</td></tr>
+            <tr><td>Surface tension</td><td>Air-fluid interface</td><td>Collapse tendency</td><td>↑ NRDS (low surfactant)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Neonatal respiratory distress syndrome (NRDS):</strong> premature infants with immature Type II pneumocytes → not enough surfactant → ↑ surface tension → atelectasis → ↓ compliance → respiratory failure. Treated with exogenous surfactant + ventilatory support. Antenatal steroids accelerate surfactant production. <strong>ARDS</strong> (adults): inflammation damages Type II cells and floods alveoli → also surfactant dysfunction + ↓ compliance.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw two alveoli connected by a duct, one small and one large. Apply Laplace's law. Then add surfactant to the small one and re-draw — show how it equalizes pressure.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Why is surfactant especially important in small alveoli?</li>
+          <li><span class="qc-meta">DOK 3.</span> Predict what happens to compliance in a pulmonary edema patient and why.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>By Laplace's law, P = 2T/r. Smaller alveoli have higher collapse pressure for the same surface tension. Surfactant lowers T more in small alveoli, equalizing pressure across alveoli of different sizes.</li>
+            <li>Compliance ↓. Fluid in the alveoli and interstitium increases surface tension and stiffness → more pressure needed to inflate the same volume.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 7: Gas exchange -->
+    <article class="concept-card" id="c7" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 7 of 12</p>
+      <h2 class="card-title">Gas exchange (Dalton's, Henry's, A-a gradient) <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Gases move across the alveolar membrane by simple diffusion — driven by partial pressure differences. O₂ enters blood, CO₂ exits, and the system reaches near-equilibrium in about a third of a second.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Dalton's law:</strong> total pressure of a gas mixture = sum of partial pressures. At sea level (P<sub>atm</sub> = 760 mmHg), air is ~21% O₂, so PiO₂ = 0.21 × 760 = 160 mmHg.</li>
+          <li><strong>Henry's law:</strong> amount of gas dissolved ∝ partial pressure × solubility. CO₂ is ~20× more soluble than O₂.</li>
+          <li><strong>Partial pressures along the path</strong> (sea level, normal lung):
+            <ul>
+              <li>Inspired air: PiO₂ 160, PiCO₂ ≈ 0.</li>
+              <li>Alveolar: PAO₂ ≈ 100, PACO₂ ≈ 40.</li>
+              <li>Arterial: PaO₂ ≈ 95-100, PaCO₂ ≈ 40.</li>
+              <li>Mixed venous: PvO₂ ≈ 40, PvCO₂ ≈ 46.</li>
+            </ul>
+          </li>
+          <li><strong>Alveolar gas equation</strong> (simplified): PAO₂ = FiO₂ × (P<sub>atm</sub> − 47) − PaCO₂/0.8.
+            <ul>
+              <li>At sea level on room air: PAO₂ ≈ 0.21 × (760 − 47) − 40/0.8 = 150 − 50 = <strong>100 mmHg</strong>.</li>
+            </ul>
+          </li>
+          <li><strong>A-a gradient:</strong> PAO₂ − PaO₂.
+            <ul>
+              <li>Normal &lt; 10-15 (young), up to ~25 (older).</li>
+              <li>↑ A-a gradient = problem at the alveolar-capillary interface (V/Q mismatch, shunt, diffusion limit).</li>
+              <li>Normal A-a with hypoxemia = hypoventilation or low FiO₂.</li>
+            </ul>
+          </li>
+          <li><strong>V/Q ratio</strong> (ventilation / perfusion):
+            <ul>
+              <li>Ideal ≈ 0.8.</li>
+              <li>V/Q = 0: shunt (perfusion but no ventilation, e.g., pneumonia, atelectasis). Does not correct with O₂.</li>
+              <li>V/Q = ∞: dead space (ventilation but no perfusion, e.g., PE).</li>
+              <li>Regional: apex V/Q &gt; 1 (more vent), base V/Q &lt; 1 (more perfusion). Both shift toward 1 with exercise.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Defect</th><th>A-a gradient</th><th>Responds to O₂?</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Hypoventilation</td><td>Normal</td><td>Yes</td><td>Opioid overdose</td></tr>
+            <tr><td>Low FiO₂</td><td>Normal</td><td>Yes</td><td>Altitude</td></tr>
+            <tr><td>V/Q mismatch</td><td>↑</td><td>Yes (partial)</td><td>Asthma, COPD</td></tr>
+            <tr><td>Shunt</td><td>↑↑</td><td>Poorly</td><td>Pneumonia, ARDS</td></tr>
+            <tr><td>Diffusion limit</td><td>↑</td><td>Yes</td><td>Fibrosis</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>The A-a gradient is the single best discriminator of hypoxemia cause. <strong>Hypoventilation</strong> (e.g., opioid overdose) hypoxemia improves with naloxone or BiPAP. <strong>Shunt</strong> hypoxemia (pneumonia, ARDS) barely responds to 100% O₂ because the blood passing through unventilated alveoli never sees the higher oxygen. That is why ARDS often needs PEEP and prone positioning to recruit collapsed alveoli.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch an alveolus next to a capillary. Label PAO₂, PACO₂, PvO₂, PvCO₂, PaO₂, PaCO₂ at the entry and exit of the capillary. Add arrows showing the direction of O₂ and CO₂ diffusion.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Calculate PAO₂ on room air at sea level with PaCO₂ = 50.</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient with ARDS has PaO₂ 55 on 100% O₂. Explain why FiO₂ alone is not enough.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>PAO₂ = 0.21 × (760 − 47) − 50/0.8 = 150 − 62.5 = <strong>~87 mmHg</strong>.</li>
+            <li>ARDS causes massive shunt (perfusion through collapsed/flooded alveoli that never reach oxygen). Adding FiO₂ raises alveolar O₂ in ventilated alveoli but does nothing for the shunted blood. PEEP and prone positioning recruit collapsed alveoli, reducing the shunt fraction.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 8: O2 transport (with Hb curve) -->
+    <article class="concept-card" id="c8" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 8 of 12</p>
+      <h2 class="card-title">Oxygen transport: hemoglobin and the dissociation curve <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Almost all oxygen rides on hemoglobin. The sigmoid binding curve makes Hb both eager to load up in the lungs and willing to let go in tissues. Shifts in the curve change how readily it releases.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Two forms in blood:</strong>
+            <ul>
+              <li>Dissolved O₂ (Henry's law): tiny, ~0.3 mL O₂/dL plasma at PaO₂ 100. Drives diffusion.</li>
+              <li>Hb-bound O₂: ~98.5% of carried O₂. 1 g Hb carries 1.34 mL O₂ when fully saturated.</li>
+            </ul>
+          </li>
+          <li><strong>O₂ content:</strong> CaO₂ = (1.34 × Hb × SaO₂) + (0.003 × PaO₂). Hb level matters as much as saturation.</li>
+          <li><strong>Hemoglobin:</strong> 4 subunits (2α, 2β), each with a heme + Fe²⁺. Cooperative binding → sigmoid curve.</li>
+          <li><strong>Sigmoid binding curve:</strong>
+            <ul>
+              <li>Flat upper plateau (PaO₂ &gt; 60): drops in PaO₂ have small effect on SaO₂.</li>
+              <li>Steep middle (PaO₂ 20-60): small changes in PaO₂ → large SaO₂ shifts.</li>
+              <li>P<sub>50</sub> ≈ 27 mmHg: PaO₂ at which Hb is 50% saturated.</li>
+            </ul>
+          </li>
+          <li><strong>Right shift</strong> (↓ Hb affinity, easier O₂ release):
+            <ul>
+              <li>↑ PCO₂, ↑ H⁺ (low pH), ↑ temperature, ↑ 2,3-BPG.</li>
+              <li>Mnemonic: "C-BPG-AT" (acidic, hypercapnic, hot, high BPG → release oxygen in working tissue).</li>
+            </ul>
+          </li>
+          <li><strong>Left shift</strong> (↑ Hb affinity, harder release):
+            <ul>
+              <li>↓ PCO₂, ↑ pH, ↓ temperature, ↓ 2,3-BPG.</li>
+              <li>Carbon monoxide (binds 240× more avidly than O₂), HbF (fetal Hb).</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Diagram: oxyhemoglobin dissociation curve</h3>
+        <figure class="diagram" aria-labelledby="dxHb-title dxHb-desc">
+          <svg viewBox="0 0 640 400" role="img" aria-labelledby="dxHb-title dxHb-desc">
+            <title id="dxHb-title">Oxyhemoglobin dissociation curve with right and left shifts</title>
+            <desc id="dxHb-desc">A graph with arterial oxygen tension on the X axis and hemoglobin saturation on the Y axis. The normal curve is sigmoid, reaching about 50 percent saturation at 27 millimeters of mercury and plateauing above 90 percent saturation by 60 millimeters of mercury. A right-shifted curve drawn in terra represents conditions like fever, acidosis, hypercapnia, and high 2,3-BPG, releasing oxygen more readily to tissue. A left-shifted curve drawn in gold represents alkalosis, cold, low 2,3-BPG, and carbon monoxide binding, holding oxygen more tightly.</desc>
+
+            <!-- Axes -->
+            <line x1="70" y1="40" x2="70" y2="340" class="ax-line"/>
+            <line x1="70" y1="340" x2="600" y2="340" class="ax-line"/>
+            <text x="335" y="370" text-anchor="middle" class="lbl-bold">PaO₂ (mmHg)</text>
+            <text x="30" y="190" class="lbl-bold" transform="rotate(-90 30 190)">SaO₂ (%)</text>
+
+            <!-- X labels -->
+            <text x="70"  y="358" text-anchor="middle" class="lbl-small">0</text>
+            <text x="180" y="358" text-anchor="middle" class="lbl-small">20</text>
+            <text x="290" y="358" text-anchor="middle" class="lbl-small">40</text>
+            <text x="400" y="358" text-anchor="middle" class="lbl-small">60</text>
+            <text x="510" y="358" text-anchor="middle" class="lbl-small">80</text>
+            <text x="600" y="358" text-anchor="middle" class="lbl-small">100</text>
+
+            <!-- Y labels -->
+            <text x="65" y="50"  text-anchor="end" class="lbl-small">100</text>
+            <text x="65" y="100" text-anchor="end" class="lbl-small">80</text>
+            <text x="65" y="160" text-anchor="end" class="lbl-small">60</text>
+            <text x="65" y="220" text-anchor="end" class="lbl-small">40</text>
+            <text x="65" y="280" text-anchor="end" class="lbl-small">20</text>
+            <text x="65" y="340" text-anchor="end" class="lbl-small">0</text>
+
+            <!-- Normal curve (sigmoid) -->
+            <path d="M 70 340 C 130 340, 200 310, 220 240 C 240 180, 280 110, 350 80 C 430 60, 500 55, 600 50" class="curve-main"/>
+            <!-- Right shift -->
+            <path d="M 70 340 C 150 340, 240 300, 270 230 C 290 170, 330 110, 400 90 C 480 70, 540 60, 600 55" class="curve-alt"/>
+            <!-- Left shift -->
+            <path d="M 70 340 C 110 320, 170 270, 200 200 C 220 140, 260 90, 320 65 C 400 50, 490 48, 600 47" class="curve-warn"/>
+
+            <!-- P50 marker -->
+            <line x1="220" y1="190" x2="220" y2="340" stroke="var(--navy)" stroke-width="0.8" stroke-dasharray="2 2"/>
+            <line x1="70"  y1="190" x2="220" y2="190" stroke="var(--navy)" stroke-width="0.8" stroke-dasharray="2 2"/>
+            <text x="225" y="200" class="lbl-small lbl-bold">P₅₀ ≈ 27</text>
+
+            <!-- Plateau region marker -->
+            <rect x="395" y="50" width="200" height="40" fill="var(--gold)" fill-opacity="0.12" stroke="none"/>
+            <text x="495" y="42" text-anchor="middle" class="lbl-small lbl-bold">Plateau (alveolar loading)</text>
+
+            <!-- Steep region marker -->
+            <text x="220" y="280" class="lbl-small">Steep region (tissue unloading)</text>
+
+            <!-- Labels for curves -->
+            <text x="430" y="105" class="lbl-small lbl-terra lbl-bold">Right shift</text>
+            <text x="430" y="120" class="lbl-small lbl-terra">↑ T, ↑ CO₂, ↑ H⁺, ↑ 2,3-BPG</text>
+            <text x="305" y="80" class="lbl-small lbl-gold lbl-bold">Left shift</text>
+            <text x="305" y="95" class="lbl-small lbl-gold">↓ T, ↓ CO₂, alkalosis, CO</text>
+          </svg>
+          <figcaption>The flat upper plateau is forgiving: PaO₂ can drop from 100 to 60 with SaO₂ still ≥ 90%. The steep middle is where small changes in PaO₂ produce big changes in SaO₂ — this is where pulse oximetry gets dangerous fast.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked calculation</h3>
+        <ol>
+          <li><strong>O₂ content:</strong> Patient with Hb 12 g/dL, SaO₂ 95%, PaO₂ 90.
+            <ul>
+              <li>CaO₂ = (1.34 × 12 × 0.95) + (0.003 × 90) = 15.3 + 0.27 = <strong>~15.6 mL O₂/dL blood</strong>.</li>
+            </ul>
+          </li>
+          <li><strong>Anemia paradox:</strong> same SaO₂, but Hb drops to 7.
+            <ul>
+              <li>CaO₂ = (1.34 × 7 × 0.95) + 0.27 = 8.9 + 0.27 = <strong>~9.2 mL O₂/dL</strong>.</li>
+              <li><em>Interpretation:</em> SaO₂ is still 95% but content is 40% lower. Pulse ox alone misses anemia.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Carbon monoxide poisoning:</strong> CO binds Hb 240× more strongly than O₂, shifts the curve left, and impairs unloading. SaO₂ on standard pulse oximetry can be falsely normal — need co-oximetry. Treat with 100% O₂ ± hyperbaric. <strong>Fetal Hb:</strong> higher affinity (lower P₅₀) so fetus can extract O₂ from maternal blood at the placenta. <strong>Acidosis and fever</strong> right-shift the curve, which helps tissue unloading in stressed metabolic states.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Sketch the normal Hb curve. Add a right-shifted curve and label four causes. Add a left-shifted curve and label three causes. Mark P₅₀ for normal vs each shift.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient running a fever of 39 °C — which way does the dissociation curve shift, and what does that do clinically?</li>
+          <li><span class="qc-meta">DOK 4.</span> A house fire victim has SpO₂ 99% on pulse oximetry but is confused and tachycardic. What's the diagnosis and what test confirms it?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Right shift. ↓ affinity → easier O₂ release to tissues that need it during fever/sepsis (high metabolic demand).</li>
+            <li>Carbon monoxide poisoning. Carboxyhemoglobin reads as oxyhemoglobin on standard pulse oximetry, falsely reassuring. Confirm with co-oximetry measuring carboxyhemoglobin level. Treat with 100% O₂; consider hyperbaric.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 9: CO2 transport -->
+    <article class="concept-card" id="c9" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 9 of 12</p>
+      <h2 class="card-title">CO₂ transport: three forms and the chloride shift <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">CO₂ is more soluble than O₂ and travels in three forms, with bicarbonate doing most of the work. The chloride shift inside the red cell is what makes it possible.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Three forms in blood:</strong>
+            <ul>
+              <li>Bicarbonate (HCO₃⁻): ~70%. The main carrier.</li>
+              <li>Carbaminohemoglobin (bound to Hb's N-terminus, not the heme): ~23%.</li>
+              <li>Dissolved CO₂: ~7%.</li>
+            </ul>
+          </li>
+          <li><strong>The bicarbonate reaction</strong> (inside red cell):
+            <ul>
+              <li>CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻ (catalyzed by carbonic anhydrase).</li>
+              <li>H⁺ is buffered by deoxyhemoglobin (Haldane effect — deoxy-Hb is a better buffer and CO₂ carrier).</li>
+              <li>HCO₃⁻ exits the RBC into plasma in exchange for Cl⁻ (chloride shift, via band 3 anion exchanger).</li>
+            </ul>
+          </li>
+          <li><strong>At the lung:</strong> reaction reverses. HCO₃⁻ + H⁺ → CO₂ + H₂O → exhaled.</li>
+          <li><strong>Haldane effect:</strong> deoxygenation of Hb (in tissues) ↑ its ability to bind CO₂ and H⁺. Helps load CO₂ at tissues, unload at lung.</li>
+          <li><strong>Bohr effect</strong> (mirror image, on O₂): ↑ CO₂ and ↑ H⁺ in tissues ↓ Hb affinity for O₂ → more O₂ release. Same chemistry, different lens.</li>
+          <li><strong>CO₂-acid-base link:</strong> PaCO₂ ∝ 1/alveolar ventilation. ↑ ventilation → ↓ CO₂ → respiratory alkalosis. ↓ ventilation → ↑ CO₂ → respiratory acidosis.</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Form</th><th>Approx %</th><th>Where</th></tr></thead>
+          <tbody>
+            <tr><td>HCO₃⁻ (bicarb)</td><td>~70%</td><td>Plasma (after chloride shift)</td></tr>
+            <tr><td>Carbamino-Hb</td><td>~23%</td><td>Hb N-terminus</td></tr>
+            <tr><td>Dissolved CO₂</td><td>~7%</td><td>Plasma + RBC</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>Carbonic anhydrase inhibitors (acetazolamide) reduce the rate of CO₂ → HCO₃⁻ conversion → ↓ HCO₃⁻ reabsorption in the kidney → mild metabolic acidosis. Used in altitude sickness, glaucoma, and as a diuretic. <strong>End-tidal CO₂ (EtCO₂)</strong> monitoring: rapid drop signals decreased CO production (cardiac arrest), increased dead space (PE), or disconnection from ventilator.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw an RBC at the tissue capillary. Show CO₂ entering, the carbonic anhydrase reaction, H⁺ buffering on Hb, HCO₃⁻ exiting in exchange for Cl⁻. Then redraw at the lung capillary with the reaction reversed.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 1.</span> What enzyme catalyzes CO₂ + H₂O ⇌ H₂CO₃?</li>
+          <li><span class="qc-meta">DOK 3.</span> Explain how the Haldane effect helps CO₂ transport in tissues vs lung.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Carbonic anhydrase.</li>
+            <li>In tissues, Hb releases O₂ → becomes deoxy-Hb → deoxy-Hb has higher affinity for CO₂ and H⁺ → loads more CO₂. At the lung, Hb binds O₂ → becomes oxy-Hb → kicks CO₂ off → CO₂ diffuses out for exhalation.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 10: Control of breathing -->
+    <article class="concept-card" id="c10" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 10 of 12</p>
+      <h2 class="card-title">Control of breathing <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">The medulla sets the rhythm. Chemoreceptors fine-tune it based on CO₂ (primary driver in health) and O₂ (rescue driver in extremes). Voluntary input from the cortex can override briefly.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Brainstem centers:</strong>
+            <ul>
+              <li>Dorsal respiratory group (DRG): inspiratory rhythm generator.</li>
+              <li>Ventral respiratory group (VRG): forced expiration and inspiration.</li>
+              <li>Pontine respiratory centers (pneumotaxic, apneustic): fine-tune rate and depth.</li>
+            </ul>
+          </li>
+          <li><strong>Central chemoreceptors</strong> (medulla):
+            <ul>
+              <li>Respond to ↑ CO₂ via ↓ pH of CSF.</li>
+              <li>Dominant driver of ventilation in healthy people.</li>
+              <li>CO₂ crosses blood-brain barrier easily; H⁺ does not. So CSF acid-base shifts mirror CO₂.</li>
+            </ul>
+          </li>
+          <li><strong>Peripheral chemoreceptors</strong> (carotid + aortic bodies):
+            <ul>
+              <li>Carotid bodies (CN IX) and aortic bodies (CN X).</li>
+              <li>Respond to ↓ PaO₂ (especially &lt; 60), ↑ PaCO₂, ↑ H⁺.</li>
+              <li>Rapid response. Important in hypoxemia.</li>
+            </ul>
+          </li>
+          <li><strong>Hypoxic drive</strong> (deep dive):
+            <ul>
+              <li>In chronic CO₂ retention (severe COPD), central chemoreceptors blunt to high CO₂.</li>
+              <li>Hypoxia becomes the primary stimulus to breathe.</li>
+              <li>Giving 100% O₂ can paradoxically suppress respiratory drive — titrate O₂ to SpO₂ 88-92% in chronic COPD.</li>
+            </ul>
+          </li>
+          <li><strong>Other inputs:</strong>
+            <ul>
+              <li>Stretch receptors (Hering-Breuer reflex): prevent over-inflation.</li>
+              <li>Irritant receptors: cough reflex, bronchoconstriction.</li>
+              <li>J-receptors: in alveolar wall; activated by congestion → rapid shallow breathing.</li>
+              <li>Cortical override: voluntary breath holding, hyperventilation, speech.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Receptor</th><th>Stimulus</th><th>Output</th></tr></thead>
+          <tbody>
+            <tr><td>Central chemoreceptors</td><td>↑ PaCO₂ (via ↓ CSF pH)</td><td>↑ Ventilation (main driver)</td></tr>
+            <tr><td>Peripheral (carotid/aortic)</td><td>↓ PaO₂ (&lt; 60), ↑ CO₂, ↑ H⁺</td><td>↑ Ventilation</td></tr>
+            <tr><td>Stretch (Hering-Breuer)</td><td>Lung inflation</td><td>Inhibit further inspiration</td></tr>
+            <tr><td>J-receptors</td><td>Pulmonary congestion</td><td>Rapid shallow breathing</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Opioids</strong> blunt central chemoreceptor response to CO₂ → ↓ RR, ↑ PaCO₂. Reverse with naloxone. <strong>COPD with chronic hypercapnia:</strong> use lowest FiO₂ that maintains SpO₂ 88-92% to preserve hypoxic drive. <strong>Cheyne-Stokes respiration</strong> (crescendo-decrescendo with apnea): seen in HF and CNS injury — circulatory delay between lungs and brain produces oscillating CO₂.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw the feedback loop: central + peripheral chemoreceptors → medulla → respiratory muscles → ventilation → blood gases → back to receptors. Add the cortex as a top-down override.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> Which is the primary driver of ventilation in a healthy person?</li>
+          <li><span class="qc-meta">DOK 4.</span> Why do we use cautious oxygen titration in some COPD patients?</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Central chemoreceptors responding to PaCO₂ (via CSF pH).</li>
+            <li>Chronic CO₂ retention blunts central chemoreceptors. The patient then relies on hypoxia (sensed by peripheral chemoreceptors) to drive ventilation. Over-correction with high FiO₂ removes that stimulus → hypoventilation → CO₂ retention worsens (hypercapnic respiratory failure). Goal: SpO₂ 88-92%, not 100%.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 11: Respiratory acid-base -->
+    <article class="concept-card" id="c11" data-tags="P">
+      <p class="card-eyebrow">Respiratory &middot; Concept 11 of 12</p>
+      <h2 class="card-title">Respiratory acid-base balance <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+      <p class="given">Lungs control CO₂. Kidneys control HCO₃⁻. The Henderson-Hasselbalch equation links them. Acid-base disorders are about which one shifted first and whether the other compensated.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Henderson-Hasselbalch:</strong> pH = 6.1 + log([HCO₃⁻] / (0.03 × PaCO₂)).
+            <ul>
+              <li>Normal pH = 7.35-7.45; HCO₃⁻ = 22-26; PaCO₂ = 35-45.</li>
+            </ul>
+          </li>
+          <li><strong>Four primary disorders:</strong>
+            <ul>
+              <li>Respiratory acidosis: ↑ PaCO₂, ↓ pH. Hypoventilation (opioids, COPD, neuromuscular).</li>
+              <li>Respiratory alkalosis: ↓ PaCO₂, ↑ pH. Hyperventilation (anxiety, pain, sepsis, salicylates).</li>
+              <li>Metabolic acidosis: ↓ HCO₃⁻, ↓ pH. DKA, lactic, renal failure, diarrhea.</li>
+              <li>Metabolic alkalosis: ↑ HCO₃⁻, ↑ pH. Vomiting, diuretics, hyperaldosteronism.</li>
+            </ul>
+          </li>
+          <li><strong>Compensation</strong> (the other system tries to restore pH; rarely complete):
+            <ul>
+              <li>Respiratory disorders → renal compensation (slow, days). ↑ or ↓ HCO₃⁻.</li>
+              <li>Metabolic disorders → respiratory compensation (fast, minutes). ↑ or ↓ ventilation.</li>
+            </ul>
+          </li>
+          <li><strong>Quick ABG read:</strong>
+            <ol>
+              <li>pH: acidemic, alkalemic, or normal?</li>
+              <li>PaCO₂: respiratory?</li>
+              <li>HCO₃⁻: metabolic?</li>
+              <li>Which moves WITH the pH change = primary disorder.</li>
+              <li>Which moves AGAINST = compensation.</li>
+            </ol>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Disorder</th><th>pH</th><th>PaCO₂</th><th>HCO₃⁻</th><th>Compensation direction</th></tr></thead>
+          <tbody>
+            <tr><td>Resp acidosis</td><td>↓</td><td>↑ (primary)</td><td>↑ (renal, slow)</td><td>Kidney retains HCO₃⁻</td></tr>
+            <tr><td>Resp alkalosis</td><td>↑</td><td>↓ (primary)</td><td>↓ (renal, slow)</td><td>Kidney excretes HCO₃⁻</td></tr>
+            <tr><td>Metabolic acidosis</td><td>↓</td><td>↓ (resp, fast)</td><td>↓ (primary)</td><td>Hyperventilation</td></tr>
+            <tr><td>Metabolic alkalosis</td><td>↑</td><td>↑ (resp, limited)</td><td>↑ (primary)</td><td>Hypoventilation (limited by hypoxia)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Worked ABG interpretations</h3>
+        <ol>
+          <li><strong>ABG #1:</strong> pH 7.25, PaCO₂ 60, HCO₃⁻ 26.
+            <ul>
+              <li>pH ↓ (acidemic). PaCO₂ ↑ (moves WITH pH change, primary). HCO₃⁻ near normal (no compensation yet).</li>
+              <li><strong>Acute respiratory acidosis.</strong> Causes: opioid OD, COPD exacerbation, neuromuscular weakness.</li>
+            </ul>
+          </li>
+          <li><strong>ABG #2:</strong> pH 7.35, PaCO₂ 60, HCO₃⁻ 34.
+            <ul>
+              <li>pH near low normal. PaCO₂ ↑, HCO₃⁻ ↑.</li>
+              <li><strong>Chronic respiratory acidosis with renal compensation.</strong> Likely chronic COPD.</li>
+            </ul>
+          </li>
+          <li><strong>ABG #3:</strong> pH 7.15, PaCO₂ 25, HCO₃⁻ 10.
+            <ul>
+              <li>pH ↓↓ (acidemic). HCO₃⁻ ↓ (primary, metabolic). PaCO₂ ↓ (respiratory compensation, blowing off CO₂).</li>
+              <li><strong>Metabolic acidosis with respiratory compensation.</strong> DKA, lactic acidosis, sepsis.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p><strong>Kussmaul breathing:</strong> deep rapid respirations in metabolic acidosis (DKA), blowing off CO₂ to compensate. <strong>Anion gap</strong> (= Na − Cl − HCO₃; normal 8-12): elevated gap acidosis (MUDPILES — methanol, uremia, DKA, propylene glycol, INH/iron, lactate, ethylene glycol, salicylates) vs normal gap (diarrhea, RTA).</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Draw a 2x2 acid-base grid: pH (high/low) × PaCO₂ (high/low). Place the four disorders. Add HCO₃⁻ shifts that fit each.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> An anxious patient has pH 7.50, PaCO₂ 28, HCO₃⁻ 22. Diagnosis?</li>
+          <li><span class="qc-meta">DOK 4.</span> A DKA patient has pH 7.10, PaCO₂ 18, HCO₃⁻ 6, AG 26. Walk through the interpretation.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li>Acute respiratory alkalosis. Hyperventilation drops PaCO₂; HCO₃⁻ not yet compensated.</li>
+            <li>Severe acidemia (pH 7.10). HCO₃⁻ very low → primary metabolic acidosis. PaCO₂ low → respiratory compensation (Kussmaul breathing). Anion gap 26 (high) → high-AG metabolic acidosis. In DKA the gap comes from ketoacids (β-hydroxybutyrate, acetoacetate). Treatment: fluids, insulin, electrolyte replacement (especially K⁺).</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+    <!-- CONCEPT 12: Common conditions -->
+    <article class="concept-card" id="c12" data-tags="CLIN">
+      <p class="card-eyebrow">Respiratory &middot; Concept 12 of 12</p>
+      <h2 class="card-title">Common respiratory conditions <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+      <p class="given">Most respiratory pathology is one of four patterns: airway obstruction, alveolar collapse or flooding, perfusion failure, or central/neuromuscular drive failure.</p>
+
+      <section class="card-section">
+        <h3>Notes</h3>
+        <ul>
+          <li><strong>Asthma:</strong> reversible airway obstruction. Bronchoconstriction + airway inflammation + mucus.
+            <ul>
+              <li>Triggered by allergens, exercise, infection, cold.</li>
+              <li>Findings: wheeze, prolonged expiration, ↓ FEV₁/FVC, responds to bronchodilators.</li>
+              <li>Treatment: short-acting β2 agonists (rescue), inhaled corticosteroids (control), leukotriene modifiers.</li>
+            </ul>
+          </li>
+          <li><strong>COPD</strong> (chronic bronchitis + emphysema): irreversible airway obstruction.
+            <ul>
+              <li>Chronic bronchitis: productive cough ≥ 3 mo × 2 yr. ↑ mucus, inflammation.</li>
+              <li>Emphysema: destruction of alveolar walls. ↓ surface area, ↓ elastic recoil → air trapping.</li>
+              <li>Findings: barrel chest, prolonged expiration, hyperinflation on CXR.</li>
+              <li>Treatment: smoking cessation (only proven mortality reduction), bronchodilators, ICS in select, O₂ if hypoxemic, vaccines.</li>
+            </ul>
+          </li>
+          <li><strong>Pneumonia:</strong> alveolar consolidation from infection.
+            <ul>
+              <li>CAP (Streptococcus pneumoniae most common), HAP (Pseudomonas, MRSA risk), aspiration (anaerobes), viral (influenza, RSV, COVID).</li>
+              <li>Findings: fever, productive cough, crackles, ↑ WBC, infiltrate on CXR, ↑ A-a gradient (shunt).</li>
+            </ul>
+          </li>
+          <li><strong>ARDS:</strong> inflammatory non-cardiogenic pulmonary edema.
+            <ul>
+              <li>Berlin criteria: bilateral infiltrates, PaO₂/FiO₂ &lt; 300, not cardiogenic, within 7 days of insult.</li>
+              <li>↓ Compliance, massive shunt, hypoxemia poorly responsive to FiO₂.</li>
+              <li>Management: lung-protective ventilation (low TV ~6 mL/kg, plateau pressure &lt; 30), PEEP, prone positioning.</li>
+            </ul>
+          </li>
+          <li><strong>Pulmonary embolism:</strong> clot in pulmonary artery.
+            <ul>
+              <li>Source: deep vein thrombosis. Virchow's triad: stasis, endothelial injury, hypercoagulability.</li>
+              <li>Findings: sudden dyspnea, pleuritic chest pain, tachycardia, hypoxemia, ↑ A-a gradient (dead space).</li>
+              <li>Treatment: anticoagulation; thrombolytics or thrombectomy if massive (hemodynamic instability).</li>
+            </ul>
+          </li>
+          <li class="deep-dive"><strong>Pulmonary hypertension:</strong> sustained ↑ pulmonary arterial pressure. PAH (idiopathic, drugs) vs secondary (HF, COPD, chronic PE). RV strain → cor pulmonale.</li>
+          <li class="deep-dive"><strong>Pneumothorax:</strong> air in pleural space. Spontaneous (tall thin males), traumatic, iatrogenic (central line), tension (medical emergency).</li>
+        </ul>
+      </section>
+
+      <section class="card-section">
+        <h3>Summary</h3>
+        <table class="summary">
+          <thead><tr><th>Condition</th><th>Pattern</th><th>Bedside clue</th><th>Initial action</th></tr></thead>
+          <tbody>
+            <tr><td>Asthma</td><td>Reversible obstruction</td><td>Wheeze, prolonged expiration</td><td>SABA, O₂, steroids</td></tr>
+            <tr><td>COPD exacerbation</td><td>Fixed obstruction + trigger</td><td>↑ dyspnea, ↑ sputum, hypoxemia</td><td>O₂ (titrate), bronchodilators, steroids, abx if infection</td></tr>
+            <tr><td>Pneumonia</td><td>Shunt</td><td>Fever, crackles, infiltrate</td><td>Antibiotics, O₂, fluids</td></tr>
+            <tr><td>ARDS</td><td>Severe shunt + ↓ compliance</td><td>Hypoxia refractory to O₂</td><td>Lung-protective ventilation, PEEP, prone</td></tr>
+            <tr><td>PE</td><td>Dead space</td><td>Sudden dyspnea, ↑ A-a</td><td>Anticoagulation, imaging</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="callout callout-clinical">
+        <h3>CLINICAL THREAD</h3>
+        <p>The nursing assessment cascade in respiratory distress: airway patency, RR, work of breathing (accessory muscles, retractions, tripoding), breath sounds (wheeze, crackles, absent), SpO₂, mental status. Look at the pattern, not just one number. A patient with a "normal" SpO₂ on supplemental O₂ but who is using accessory muscles and confused is decompensating.</p>
+      </aside>
+
+      <aside class="callout callout-drawing">
+        <h3>DRAW IT</h3>
+        <p>Build a respiratory failure decision tree. Branch 1: oxygenation vs ventilation failure. Branch 2: airway, alveolar, perfusion, or drive. Place each diagnosis above into a leaf.</p>
+      </aside>
+
+      <section class="quick-check">
+        <h3>Quick check</h3>
+        <ol>
+          <li><span class="qc-meta">DOK 2.</span> A patient with asthma has FEV₁/FVC 0.55, improves to 0.78 after albuterol. What does the change indicate?</li>
+          <li><span class="qc-meta">DOK 4.</span> A patient with severe ARDS has PaO₂ 60 on 100% O₂. Explain the physiology and the rationale for prone positioning.</li>
+        </ol>
+        <details class="answers"><summary>Show answers</summary>
+          <ol>
+            <li><strong>Reversibility of airway obstruction</strong> — characteristic of asthma. COPD typically shows minimal or no improvement post-bronchodilator.</li>
+            <li>ARDS causes massive shunt: blood flows past collapsed/flooded alveoli without picking up O₂. FiO₂ doesn't help shunted blood because it never sees the higher alveolar O₂. Prone positioning redistributes perfusion away from the dorsal lung (where the most consolidation typically accumulates from gravity-dependent edema) and recruits dorsal alveoli, reducing shunt fraction → improved oxygenation.</li>
+          </ol>
+        </details>
+      </section>
+      <a href="#top" class="top-link">↑ Back to top</a>
+    </article>
+
+  </main>
+
+  <footer class="byline">
+    <p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Respiratory master concept set, BIO 004 / BIO 431 / BIO 304 course rewrite.</p>
+  </footer>
+</div>
+
+<script>
+/* Build TOC */
+(function(){
+  const toc = document.getElementById('toc-list');
+  document.querySelectorAll('.concept-card').forEach((card, idx) => {
+    const title = card.querySelector('.card-title');
+    if (!title) return;
+    const clone = title.cloneNode(true);
+    clone.querySelectorAll('.tag-pill').forEach(t => t.remove());
+    const text = clone.textContent.trim();
+    const tags = card.dataset.tags;
+    const li = document.createElement('li');
+    li.dataset.tags = tags;
+    li.innerHTML = `<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;
+    toc.appendChild(li);
+  });
+})();
+
+let currentView  = 'combined';
+let currentDepth = 'full';
+const cntShown   = document.getElementById('cnt-shown');
+
+function viewMatchesTags(view, tags) {
+  const parts = (tags || '').split(/\s+/);
+  if (view === 'combined') return true;
+  if (view === 'anatomy')  return parts.includes('A')  || parts.includes('AP') || parts.includes('CLIN');
+  if (view === 'physio')   return parts.includes('P')  || parts.includes('AP') || parts.includes('CLIN');
+  return true;
+}
+function applyFilters() {
+  document.body.classList.toggle('depth-essentials', currentDepth === 'essentials');
+  let shown = 0;
+  document.querySelectorAll('.concept-card').forEach(card => {
+    const viewOk  = viewMatchesTags(currentView, card.dataset.tags);
+    const depthOk = currentDepth === 'full' || card.dataset.depth !== 'deep';
+    const show = viewOk && depthOk;
+    card.hidden = !show;
+    if (show) shown++;
+  });
+  document.querySelectorAll('#toc-list li').forEach(li => {
+    const viewOk  = viewMatchesTags(currentView, li.dataset.tags);
+    const depthOk = currentDepth === 'full' || li.dataset.depth !== 'deep';
+    li.hidden = !(viewOk && depthOk);
+  });
+  cntShown.textContent = shown;
+}
+document.querySelectorAll('[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentView = btn.dataset.view;
+    applyFilters();
+  });
+});
+document.querySelectorAll('[data-depth]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    currentDepth = btn.dataset.depth;
+    applyFilters();
+  });
+});
+
+/* URL params: ?course=BIO431 or ?view=anatomy&depth=essentials */
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const course = params.get('course');
+  const COURSE_MAP = {
+    'BIO004': { eyebrow: 'BIO 004 Human Anatomy · Solano Community College',                     view: 'anatomy',  depth: 'full' },
+    'BIO431': { eyebrow: 'BIO 431 Human Anatomy & Physiology · American River College',          view: 'combined', depth: 'full' },
+    'BIO304': { eyebrow: 'BIO 304 Human Anatomy & Physiology (Online) · American River College', view: 'combined', depth: 'essentials' }
+  };
+  if (course && COURSE_MAP[course]) {
+    const c = COURSE_MAP[course];
+    const eb = document.getElementById('course-eyebrow');
+    if (eb) eb.textContent = c.eyebrow + ' · Respiratory';
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === c.view ? 'true' : 'false'));
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === c.depth ? 'true' : 'false'));
+    currentView = c.view;
+    currentDepth = c.depth;
+  }
+  const v = params.get('view');
+  const d = params.get('depth');
+  if (v && ['combined','anatomy','physio'].includes(v)) {
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'));
+    currentView = v;
+  }
+  if (d && ['full','essentials'].includes(d)) {
+    document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', b.dataset.depth === d ? 'true' : 'false'));
+    currentDepth = d;
+  }
+})();
+
+applyFilters();
+
+/* Iframe height sender */
+(function(){
+  const frameId = 'respiratory-notes';
+  function sendHeight() {
+    const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    try { window.parent.postMessage({ type: 'iframe-height', id: frameId, height: h }, '*'); } catch(e){}
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  if ('ResizeObserver' in window) new ResizeObserver(sendHeight).observe(document.body);
+})();
+</script>
+</body>
+</html>

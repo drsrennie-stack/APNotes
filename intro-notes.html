@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intro to A&amp;P — Concept Notes | Dr. Sharilyn Rennie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3; --gold:#B8924A; --gold-deep:#8f7136; --terra:#C2734D; --terra-dark:#A0522D; --white:#FFFFFF; --off-white:#FAFAF9; --rest-shadow:0 1px 3px rgba(0,0,0,0.08); --hover-shadow:0 8px 16px rgba(0,0,0,0.10); --transition:transform 200ms ease, box-shadow 200ms ease, background-color 150ms ease; }
+  *, *::before, *::after { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:100px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:0.01ms !important; scroll-behavior:auto !important; } }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-size:16px; line-height:1.55; }
+  .skip-link { position:absolute; left:-9999px; } .skip-link:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:9999; border-radius:4px; font-weight:600; text-decoration:none; }
+  :focus-visible { outline:3px solid var(--gold); outline-offset:2px; border-radius:2px; } a { color:var(--navy); text-decoration-thickness:1px; text-underline-offset:3px; } a:hover { color:var(--terra-dark); }
+  .page-wrap { max-width:980px; margin:0 auto; padding:28px 24px 80px; }
+  header.atlas-header { margin-bottom:22px; } .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1.page-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 8px; }
+  .usage { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:15px; max-width:760px; margin:14px 0 0; }
+  .filter-bar { position:sticky; top:0; z-index:50; background:var(--off-white); padding:14px 0 12px; margin:0 0 22px; border-bottom:1px solid var(--navy-tint); }
+  .filter-row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; } .filter-label { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; }
+  .seg { display:inline-flex; border:1px solid var(--navy); border-radius:4px; overflow:hidden; background:var(--white); }
+  .seg button { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; padding:8px 14px; background:var(--white); color:var(--navy); border:none; border-right:1px solid var(--navy); cursor:pointer; transition:var(--transition); }
+  .seg button:last-child { border-right:none; } .seg button:hover { background:var(--navy-tint); } .seg button[aria-pressed="true"] { background:var(--navy); color:var(--white); }
+  .counter { margin-left:auto; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--navy); background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:6px 12px; }
+  .toc { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:18px 22px; margin-bottom:30px; box-shadow:var(--rest-shadow); }
+  .toc-h { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:700; margin:0 0 10px; }
+  .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 18px; } @media (min-width:720px) { .toc-list { grid-template-columns:1fr 1fr; } }
+  .toc-list li[hidden] { display:none; } .toc-list a { display:flex; align-items:baseline; gap:8px; padding:4px 0; font-size:14px; text-decoration:none; color:var(--navy); } .toc-list a:hover { color:var(--terra-dark); text-decoration:underline; }
+  .toc-num { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; min-width:22px; }
+  .deep-dive, [data-depth="deep"] { border-left:3px solid var(--gold); padding-left:12px; position:relative; }
+  .deep-dive::before, [data-depth="deep"]::before { content:"DEEP DIVE"; display:inline-block; font-family:'DM Sans',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.08em; color:var(--gold-deep); background:rgba(184,146,74,0.10); padding:1px 6px; border-radius:3px; margin-right:8px; vertical-align:middle; }
+  li.deep-dive { list-style:none; margin-left:-18px; } li.deep-dive::before { margin-right:6px; }
+  body.depth-essentials .deep-dive, body.depth-essentials [data-depth="deep"] { display:none !important; }
+  .concept-card { background:var(--white); border:1px solid var(--navy-tint); border-radius:6px; padding:24px 26px; margin-bottom:22px; box-shadow:var(--rest-shadow); transition:var(--transition); }
+  .concept-card:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); } .concept-card[hidden] { display:none; }
+  .card-eyebrow { font-family:'DM Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--terra-dark); font-weight:500; margin:0 0 6px; }
+  .card-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); font-size:22px; line-height:1.25; margin:0 0 12px; }
+  .given { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:16px; line-height:1.5; margin:0 0 18px; padding-left:14px; border-left:2px solid var(--gold); }
+  .card-section { margin-top:18px; } .card-section h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; color:var(--terra-dark); font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin:0 0 10px; }
+  .card-section ul, .card-section ol { margin:0; padding-left:22px; } .card-section li { margin-bottom:6px; } .card-section li ul { margin-top:4px; margin-bottom:6px; padding-left:20px; }
+  table.summary { width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px; } table.summary th, table.summary td { text-align:left; padding:8px 10px; border:1px solid var(--navy); vertical-align:top; }
+  table.summary thead th { background:var(--navy); color:var(--white); font-family:'DM Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; } table.summary tbody tr:nth-child(even) td { background:var(--off-white); }
+  .callout { border:1px solid; border-left-width:3px; border-radius:4px; padding:14px 16px; margin-top:14px; } .callout h3 { margin:0 0 6px; font-size:13px; letter-spacing:0.06em; } .callout p, .callout ul { margin:0; }
+  .callout-clinical { border-color:var(--terra-dark); background:var(--white); } .callout-clinical h3 { color:var(--terra-dark); } .callout-drawing { border-color:var(--gold-deep); background:var(--white); } .callout-drawing h3 { color:var(--gold-deep); }
+  .quick-check { margin-top:18px; background:var(--navy-tint); border:1px solid var(--navy); border-radius:4px; padding:14px 16px; } .quick-check h3 { font-family:'DM Sans',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--navy); font-weight:700; margin:0 0 10px; }
+  .quick-check ol { margin:0; padding-left:22px; } .quick-check li { margin-bottom:8px; } .qc-meta { font-family:'DM Sans',sans-serif; font-size:11px; color:var(--terra-dark); font-weight:700; }
+  details.answers { margin-top:10px; } details.answers > summary { cursor:pointer; font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; color:var(--navy); font-weight:700; padding:4px 0; } details.answers[open] > summary { margin-bottom:6px; }
+  .tag-pill { display:inline-flex; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; padding:2px 7px; border-radius:3px; border:1px solid currentColor; margin-left:6px; vertical-align:middle; }
+  .tag-A { color:var(--navy); background:var(--navy-tint); } .tag-P { color:var(--terra-dark); background:var(--white); } .tag-AP { color:var(--gold-deep); background:var(--white); } .tag-CLIN { color:var(--navy-deep); background:var(--white); border-style:dashed; }
+  footer.byline { margin-top:48px; padding-top:18px; border-top:1px solid var(--navy-tint); font-size:13px; color:var(--navy); } footer.byline .signature { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; color:var(--navy); }
+  .top-link { display:inline-block; margin-top:12px; font-size:13px; font-family:'DM Sans',sans-serif; color:var(--terra-dark); text-decoration:none; } .top-link:hover { text-decoration:underline; }
+  @media print { body { background:var(--white); } .filter-bar, .skip-link, .top-link, details.answers > summary { display:none; } details.answers[open] > summary { display:none; } details.answers:not([open]) > *:not(summary) { display:block; } .concept-card { break-inside:avoid; page-break-inside:avoid; box-shadow:none; border-color:var(--navy); margin-bottom:14px; } .toc { display:none; } .quick-check { background:var(--white); } .concept-card[hidden] { display:none !important; } a { color:var(--navy); text-decoration:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="page-wrap" id="top">
+  <header class="atlas-header">
+    <p class="eyebrow" id="course-eyebrow">Concept Notes</p>
+    <h1 class="page-title">Introduction to Anatomy &amp; Physiology</h1>
+    <p class="usage">A common language for the body, the levels at which it's organized, and the dynamic stability (homeostasis) that keeps it alive. These concepts feed every system that follows.</p>
+  </header>
+  <div class="filter-bar" role="region" aria-label="Filters">
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <div class="seg" role="tablist" aria-label="Content view">
+        <button type="button" data-view="combined" aria-pressed="true">Combined A&amp;P</button>
+        <button type="button" data-view="anatomy" aria-pressed="false">Anatomy only</button>
+        <button type="button" data-view="physio" aria-pressed="false">Physiology only</button>
+      </div>
+      <span class="filter-label">Depth</span>
+      <div class="seg" role="tablist" aria-label="Depth filter">
+        <button type="button" data-depth="full" aria-pressed="true">Full (BIO 431)</button>
+        <button type="button" data-depth="essentials" aria-pressed="false">Essentials (BIO 304)</button>
+      </div>
+      <span class="counter" aria-live="polite" id="counter">Showing <strong id="cnt-shown">6</strong> concepts</span>
+    </div>
+  </div>
+  <nav class="toc" aria-labelledby="toc-h"><h2 class="toc-h" id="toc-h">Contents</h2><ol class="toc-list" id="toc-list"></ol></nav>
+  <main id="main">
+
+  <article class="concept-card" id="c1" data-tags="AP">
+    <p class="card-eyebrow">Intro to A&amp;P &middot; Concept 1 of 6</p>
+    <h2 class="card-title">What are anatomy and physiology? <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Anatomy is structure. Physiology is function. The two are inseparable: structure predicts function, and the body's function constraints what structures could survive.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Anatomy</strong> (study of structures):
+          <ul><li>Gross (macroscopic): seen with naked eye. Subdivisions:
+            <ul><li>Regional: by body area.</li>
+            <li>Systemic: by organ system.</li>
+            <li>Surface: external + palpable structures.</li></ul>
+          </li>
+          <li>Microscopic anatomy:
+            <ul><li>Cytology: cells.</li>
+            <li>Histology: tissues.</li></ul>
+          </li>
+          <li>Developmental anatomy (embryology); pathological anatomy (diseased structures).</li></ul>
+        </li>
+        <li><strong>Physiology</strong> (study of function):
+          <ul><li>Subdivisions usually by system (cardiovascular, renal, etc.) or by level (cell, organ, organismal).</li>
+          <li>Often "physiology of X" — pathophysiology = physiology gone wrong.</li></ul>
+        </li>
+        <li><strong>Complementarity of structure and function:</strong>
+          <ul><li>Bones are rigid because they support weight.</li>
+          <li>Alveoli are thin because gas must diffuse across them.</li>
+          <li>The small intestine has villi because it absorbs nutrients.</li>
+          <li>Knowing one half predicts the other.</li></ul>
+        </li>
+        <li><strong>Necessary life functions:</strong> maintain boundaries, movement, responsiveness (excitability), digestion, metabolism, excretion, reproduction, growth.</li>
+        <li><strong>Survival needs:</strong> nutrients, oxygen, water, normal body temperature, appropriate atmospheric pressure.</li>
+        <li><strong>Disease vs disorder:</strong>
+          <ul><li>Disease: identifiable cause (infection, genetic, environmental) and clear pathologic process.</li>
+          <li>Disorder: disruption of normal function, sometimes without identifiable cause.</li></ul>
+        </li>
+        <li><strong>Signs vs symptoms:</strong>
+          <ul><li>Sign: objective, measurable (fever, rash, ↑ HR).</li>
+          <li>Symptom: subjective, reported by patient (pain, fatigue, nausea).</li></ul>
+        </li>
+      </ul>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which subdivision of anatomy studies tissues?</li>
+      <li><span class="qc-meta">DOK 2.</span> Is fever a sign or a symptom?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Histology.</li><li>Sign — it can be objectively measured. Fatigue or feeling unwell are symptoms (subjective).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c2" data-tags="A">
+    <p class="card-eyebrow">Intro to A&amp;P &middot; Concept 2 of 6</p>
+    <h2 class="card-title">Anatomical position, planes, directional terms, regions <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">Standard language. Anatomical position is the reference; every directional term assumes the body is in it, no matter the actual position.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Anatomical position:</strong> standing erect, facing observer, arms at sides, palms forward, feet together.</li>
+        <li><strong>Directional terms:</strong>
+          <ul><li>Superior (cranial) / Inferior (caudal).</li>
+          <li>Anterior (ventral) / Posterior (dorsal).</li>
+          <li>Medial (midline) / Lateral (away from midline).</li>
+          <li>Proximal / Distal (relative to point of attachment).</li>
+          <li>Superficial / Deep.</li>
+          <li>Ipsilateral (same side) / Contralateral (opposite side).</li>
+          <li>Bilateral / Unilateral.</li></ul>
+        </li>
+        <li><strong>Body planes:</strong>
+          <ul><li>Sagittal: divides into left/right. Midsagittal = equal halves; parasagittal = unequal.</li>
+          <li>Frontal (coronal): divides into anterior/posterior.</li>
+          <li>Transverse (horizontal, cross-section): divides into superior/inferior.</li>
+          <li>Oblique: at angle other than 90°.</li></ul>
+        </li>
+        <li><strong>Body regions</strong> (anterior, key terms):
+          <ul><li>Head/neck: cephalic, frontal, orbital, otic, nasal, oral, cervical.</li>
+          <li>Trunk: thoracic, mammary, abdominal, umbilical, pelvic, inguinal, pubic.</li>
+          <li>Upper limb: acromial, brachial (arm), antebrachial (forearm), antecubital (front elbow), carpal (wrist), palmar, digital, pollex (thumb).</li>
+          <li>Lower limb: coxal (hip), femoral (thigh), patellar (kneecap), crural (leg/shin), tarsal (ankle), pedal (foot), hallux (big toe).</li></ul>
+        </li>
+        <li><strong>Posterior regions:</strong> cephalic, cervical, dorsal/vertebral, scapular, lumbar (lower back), sacral, gluteal, popliteal (back of knee), sural (calf), calcaneal (heel), plantar (sole).</li>
+        <li><strong>Abdominal regions (9):</strong> right hypochondriac, epigastric, left hypochondriac; right lumbar, umbilical, left lumbar; right iliac (inguinal), hypogastric (pubic), left iliac.</li>
+        <li><strong>Abdominal quadrants (4, clinical):</strong> RUQ, LUQ, RLQ, LLQ. Used to localize pain.</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Pain by quadrant: RUQ → liver, gallbladder. Epigastric → stomach, pancreas, MI (referred). LUQ → spleen. RLQ → appendix. LLQ → diverticulitis. Periumbilical → small bowel or early appendix. Diffuse → peritonitis, mesenteric ischemia, bowel obstruction.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Which plane divides the body into superior and inferior portions?</li>
+      <li><span class="qc-meta">DOK 2.</span> Which body region refers to the front of the elbow?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Transverse (horizontal).</li><li>Antecubital.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c3" data-tags="A">
+    <p class="card-eyebrow">Intro to A&amp;P &middot; Concept 3 of 6</p>
+    <h2 class="card-title">Body cavities and serous membranes <span class="tag-pill tag-A" aria-label="Anatomy">A</span></h2>
+    <p class="given">The body has two main cavities; each is subdivided to wall off organ systems. Serous membranes line the closed cavities and reduce friction as organs move.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Dorsal cavity:</strong>
+          <ul><li>Cranial cavity: contains brain.</li>
+          <li>Spinal (vertebral) cavity: contains spinal cord.</li></ul>
+        </li>
+        <li><strong>Ventral cavity:</strong>
+          <ul><li>Thoracic: divided by mediastinum (central — heart, trachea, esophagus, great vessels, thymus) and two pleural cavities (lungs).</li>
+          <li>Abdominopelvic: separated from thoracic by diaphragm. Abdominal (most GI, liver, kidneys) + pelvic (bladder, internal reproductive organs, rectum).</li></ul>
+        </li>
+        <li><strong>Serous membranes:</strong> line closed cavities; each has two layers.
+          <ul><li>Pericardium (heart): parietal + visceral; pericardial cavity with serous fluid.</li>
+          <li>Pleura (lungs): parietal + visceral; pleural cavity.</li>
+          <li>Peritoneum (abdomen): parietal + visceral; peritoneal cavity.</li>
+          <li>Function: reduce friction between organ and wall; allow organ movement (heart beating, lungs expanding, bowel peristalsis).</li></ul>
+        </li>
+        <li><strong>Intraperitoneal organs:</strong> stomach, jejunum, ileum, transverse colon, sigmoid colon, liver, spleen.</li>
+        <li><strong>Retroperitoneal organs</strong> (mnemonic SAD PUCKER): Suprarenals, Aorta + IVC, Duodenum (2nd/3rd), Pancreas (except tail), Ureters, Colon (asc + desc), Kidneys, Esophagus, Rectum.</li>
+        <li><strong>Mediastinum borders:</strong>
+          <ul><li>Superior: thoracic inlet.</li>
+          <li>Inferior: diaphragm.</li>
+          <li>Anterior: sternum.</li>
+          <li>Posterior: vertebral column.</li>
+          <li>Lateral: lungs.</li></ul>
+        </li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Inflammation of each serous membrane has its own name and signature finding: <strong>pericarditis</strong> (friction rub, sharp chest pain worse lying flat), <strong>pleurisy</strong> (sharp chest pain with breathing, pleural rub), <strong>peritonitis</strong> (rigid abdomen, rebound tenderness, fever — surgical emergency).</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> What structure separates the thoracic and abdominopelvic cavities?</li>
+      <li><span class="qc-meta">DOK 3.</span> Is the pancreas intraperitoneal or retroperitoneal?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Diaphragm.</li><li>Retroperitoneal (except the tail, which is intraperitoneal).</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c4" data-tags="AP">
+    <p class="card-eyebrow">Intro to A&amp;P &middot; Concept 4 of 6</p>
+    <h2 class="card-title">Levels of organization and the 11 organ systems <span class="tag-pill tag-AP" aria-label="Anatomy and Physiology">A&amp;P</span></h2>
+    <p class="given">Six levels of organization build from atoms to a whole organism. Each level has emergent properties — abilities the level below cannot perform.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Six levels, smallest to largest:</strong>
+          <ol><li>Chemical: atoms, molecules.</li>
+          <li>Cellular: smallest unit of life.</li>
+          <li>Tissue: similar cells with shared function.</li>
+          <li>Organ: 2+ tissue types working together.</li>
+          <li>Organ system: organs cooperating.</li>
+          <li>Organism: the whole living being.</li></ol>
+        </li>
+        <li><strong>11 organ systems</strong> (with primary functions):
+          <ul><li>Integumentary: barrier, thermoregulation, sensation, vit D.</li>
+          <li>Skeletal: support, protection, movement, blood cell production, mineral storage.</li>
+          <li>Muscular: movement, posture, heat.</li>
+          <li>Nervous: rapid coordination, sensing, integration.</li>
+          <li>Endocrine: slow, sustained chemical coordination.</li>
+          <li>Cardiovascular: transport blood.</li>
+          <li>Lymphatic + Immune: fluid return, defense.</li>
+          <li>Respiratory: gas exchange.</li>
+          <li>Digestive: ingest, digest, absorb, eliminate.</li>
+          <li>Urinary: filter blood, fluid + electrolyte + acid-base balance.</li>
+          <li>Reproductive: produce gametes, support pregnancy.</li></ul>
+        </li>
+        <li><strong>Cross-system collaboration:</strong> no system works alone. Cardiovascular distributes what respiratory absorbs. Nervous and endocrine coordinate everything. Immune and integumentary defend.</li>
+      </ul>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Place in order from smallest to largest: tissue, atom, organ, cell.</li>
+      <li><span class="qc-meta">DOK 2.</span> Which organ system is primarily responsible for fluid and electrolyte balance?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Atom (chemical) → cell → tissue → organ.</li><li>Urinary.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c5" data-tags="P">
+    <p class="card-eyebrow">Intro to A&amp;P &middot; Concept 5 of 6</p>
+    <h2 class="card-title">Homeostasis and feedback loops <span class="tag-pill tag-P" aria-label="Physiology">P</span></h2>
+    <p class="given">Homeostasis is dynamic stability — variables stay within tight ranges despite external change. Negative feedback corrects deviations; positive feedback amplifies until an event completes.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Homeostasis:</strong> maintenance of relatively stable internal conditions despite external change. Active, not static.</li>
+        <li><strong>Components of a feedback loop:</strong>
+          <ol><li>Stimulus: change in a variable.</li>
+          <li>Sensor (receptor): detects change.</li>
+          <li>Control center: processes input vs set point.</li>
+          <li>Effector: produces the response.</li>
+          <li>Response: corrects or amplifies the variable.</li></ol>
+        </li>
+        <li><strong>Negative feedback (workhorse):</strong>
+          <ul><li>Response opposes the original change → restores baseline.</li>
+          <li>Examples: thermoregulation, BP (baroreflex), glucose (insulin/glucagon), Ca²⁺ (PTH), thyroid (TSH-T4), cortisol (CRH-ACTH).</li></ul>
+        </li>
+        <li><strong>Positive feedback (rare in humans):</strong>
+          <ul><li>Response amplifies the original change. Self-terminates when event completes.</li>
+          <li>Examples: oxytocin in labor, LH surge at ovulation, blood clotting cascade, action potential depolarization.</li></ul>
+        </li>
+        <li><strong>Set point:</strong> the target value the system tries to maintain. Can be reset (fever resets temperature set point).</li>
+        <li><strong>When homeostasis fails:</strong> disease. Most chronic diseases are framed as homeostatic failures of a specific variable (glucose, BP, fluid, pH).</li>
+      </ul>
+    </section>
+    <aside class="callout callout-clinical"><h3>CLINICAL THREAD</h3><p>Every chronic disease can be framed as a homeostatic failure. Diabetes: insulin can't maintain glucose set point. Heart failure: CO can't maintain perfusion. Hypothyroidism: T4 can't maintain metabolic rate. The drug treatments restore or substitute for the broken feedback loop element.</p></aside>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Is blood clotting an example of positive or negative feedback?</li>
+      <li><span class="qc-meta">DOK 3.</span> A fever sets the hypothalamic temperature set point higher. Why does this cause shivering?</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Positive — each step amplifies the next until the clot forms (terminates when bleeding stops).</li><li>The body now perceives its current temperature as below the new (higher) set point → activates heat-generating responses (shivering, vasoconstriction). When the fever breaks, set point drops; the body now feels too warm → sweats and vasodilates.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  <article class="concept-card" id="c6" data-tags="CLIN">
+    <p class="card-eyebrow">Intro to A&amp;P &middot; Concept 6 of 6</p>
+    <h2 class="card-title">Disease, signs, and symptoms — clinical reasoning <span class="tag-pill tag-CLIN" aria-label="Clinical">CLIN</span></h2>
+    <p class="given">Clinical thinking starts with separating what you see (signs) from what the patient reports (symptoms), then matching them to a pattern. Anatomy gives you where; physiology tells you why.</p>
+    <section class="card-section"><h3>Notes</h3>
+      <ul>
+        <li><strong>Disease</strong>: identifiable cause + measurable pathology. Examples: diabetes (insulin signaling), tuberculosis (Mycobacterium), MI (coronary occlusion).</li>
+        <li><strong>Disorder</strong>: disruption of function, sometimes without a clear single cause. Examples: anxiety disorder, IBS, functional bowel disorders.</li>
+        <li><strong>Sign</strong>: objective, measurable by an observer. Examples: fever, rash, tachycardia, JVD, jaundice.</li>
+        <li><strong>Symptom</strong>: subjective, reported by patient. Examples: pain, fatigue, nausea, dizziness.</li>
+        <li><strong>Building a clinical picture:</strong>
+          <ul><li>History (mostly symptoms).</li>
+          <li>Physical exam (mostly signs).</li>
+          <li>Labs and imaging (more signs — objective).</li>
+          <li>Differential diagnosis: list of possible explanations, ranked by likelihood.</li>
+          <li>Working diagnosis: most likely based on current data.</li></ul>
+        </li>
+        <li><strong>Inflammatory disorders</strong> (early examples to anchor the rest of the course):
+          <ul><li>Peritonitis: rigid abdomen, fever, rebound tenderness. Cause: infection, perforation, ruptured appendix.</li>
+          <li>Pleurisy: sharp chest pain on inspiration; viral or pneumonia.</li>
+          <li>Pericarditis: chest pain worse lying flat, friction rub; viral or autoimmune.</li>
+          <li>Meningitis: fever, neck stiffness, headache; bacterial or viral.</li></ul>
+        </li>
+        <li><strong>Cardinal signs of inflammation</strong> (Celsus, 1st century AD): redness (rubor), heat (calor), swelling (tumor), pain (dolor), loss of function (functio laesa). Caused by vasodilation, ↑ permeability, pain mediators, and tissue damage.</li>
+      </ul>
+    </section>
+    <section class="quick-check"><h3>Quick check</h3>
+      <ol><li><span class="qc-meta">DOK 1.</span> Is shortness of breath a sign or a symptom?</li>
+      <li><span class="qc-meta">DOK 3.</span> Name the four cardinal signs of inflammation (Celsus).</li></ol>
+      <details class="answers"><summary>Show answers</summary>
+        <ol><li>Symptom (subjective; reported by patient). Tachypnea (the measurable fast respiratory rate) is the sign.</li><li>Redness (rubor), heat (calor), swelling (tumor), pain (dolor). Loss of function (functio laesa) was added later.</li></ol>
+      </details>
+    </section>
+    <a href="#top" class="top-link">↑ Back to top</a>
+  </article>
+
+  </main>
+  <footer class="byline"><p>Notes prepared by <span class="signature">Dr. Sharilyn Rennie</span>. Introduction to A&amp;P master concept set.</p></footer>
+</div>
+<script>
+(function(){const toc=document.getElementById('toc-list');document.querySelectorAll('.concept-card').forEach((card,idx)=>{const title=card.querySelector('.card-title');if(!title)return;const clone=title.cloneNode(true);clone.querySelectorAll('.tag-pill').forEach(t=>t.remove());const text=clone.textContent.trim();const li=document.createElement('li');li.dataset.tags=card.dataset.tags;li.innerHTML=`<a href="#${card.id}"><span class="toc-num">${(idx+1).toString().padStart(2,'0')}</span><span>${text}</span></a>`;toc.appendChild(li);});})();
+let currentView='combined',currentDepth='full';const cntShown=document.getElementById('cnt-shown');
+function viewMatchesTags(view,tags){const p=(tags||'').split(/\s+/);if(view==='combined')return true;if(view==='anatomy')return p.includes('A')||p.includes('AP')||p.includes('CLIN');if(view==='physio')return p.includes('P')||p.includes('AP')||p.includes('CLIN');return true;}
+function applyFilters(){document.body.classList.toggle('depth-essentials',currentDepth==='essentials');let s=0;document.querySelectorAll('.concept-card').forEach(c=>{const vo=viewMatchesTags(currentView,c.dataset.tags);const dod=currentDepth==='full'||c.dataset.depth!=='deep';const sh=vo&&dod;c.hidden=!sh;if(sh)s++;});document.querySelectorAll('#toc-list li').forEach(li=>{const vo=viewMatchesTags(currentView,li.dataset.tags);const dod=currentDepth==='full'||li.dataset.depth!=='deep';li.hidden=!(vo&&dod);});cntShown.textContent=s;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentView=b.dataset.view;applyFilters();}));
+document.querySelectorAll('[data-depth]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-depth]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');currentDepth=b.dataset.depth;applyFilters();}));
+(function(){const p=new URLSearchParams(window.location.search);const c=p.get('course');const M={'BIO004':{eyebrow:'BIO 004 Human Anatomy · Solano Community College',view:'anatomy',depth:'full'},'BIO431':{eyebrow:'BIO 431 Human Anatomy & Physiology · American River College',view:'combined',depth:'full'},'BIO304':{eyebrow:'BIO 304 Human Anatomy & Physiology (Online) · American River College',view:'combined',depth:'essentials'}};if(c&&M[c]){const x=M[c];const eb=document.getElementById('course-eyebrow');if(eb)eb.textContent=x.eyebrow+' · Intro to A&P';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===x.view?'true':'false'));document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===x.depth?'true':'false'));currentView=x.view;currentDepth=x.depth;}const v=p.get('view');const d=p.get('depth');if(v&&['combined','anatomy','physio'].includes(v)){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v?'true':'false'));currentView=v;}if(d&&['full','essentials'].includes(d)){document.querySelectorAll('[data-depth]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.depth===d?'true':'false'));currentDepth=d;}})();
+applyFilters();
+(function(){const id='intro-notes';function s(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);try{window.parent.postMessage({type:'iframe-height',id:id,height:h},'*');}catch(e){}}window.addEventListener('load',s);window.addEventListener('resize',s);if('ResizeObserver' in window)new ResizeObserver(s).observe(document.body);})();
+</script>
+</body>
+</html>
