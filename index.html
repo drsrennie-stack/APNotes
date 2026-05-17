@@ -262,11 +262,23 @@
     .card { transition:none; }
     .card:hover, .card:focus-visible { transform:none; }
   }
+
+  /* Hub switcher */
+  .hub-switch { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 24px; font-family:'DM Sans',sans-serif; font-size:12px; }
+  .hub-switch a { padding:6px 12px; border:1px solid var(--gray-line); border-radius:4px; text-decoration:none; color:var(--navy); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; background:var(--white); transition:background 150ms ease, border-color 150ms ease; }
+  .hub-switch a:hover, .hub-switch a:focus-visible { background:var(--navy-tint); border-color:var(--gold); outline:none; }
+  .hub-switch a[aria-current="page"] { background:var(--navy); color:var(--white); border-color:var(--navy); }
+  @media print { .hub-switch { display:none; } }
 </style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
 <div class="wrap">
+  <nav class="hub-switch" aria-label="Concept Notes hubs">
+    <a href="index.html" aria-current="page">Combined</a>
+    <a href="anatomy.html">Anatomy</a>
+    <a href="physiology.html">Physiology</a>
+  </nav>
   <header class="page">
     <p class="eyebrow" id="eyebrow">Concept Notes</p>
     <h1 id="pageTitle">Anatomy &amp; Physiology Concept Notes</h1>
@@ -360,7 +372,7 @@
     'BIO004': {
       eyebrow: 'BIO 004 Human Anatomy · Solano Community College',
       title: 'BIO 004 Human Anatomy',
-      lead: 'Eight-week summer intensive. Five blocks, anatomy only. Each unit page can be filtered to the Anatomy view to hide physiology content.',
+      lead: 'Eight-week summer intensive. Five blocks, anatomy only. Each unit page locks to the Anatomy view automatically.',
       bannerLabel: 'BIO 004 Human Anatomy at Solano Community College',
       sectionLabel: 'Block',
       sections: [
@@ -369,6 +381,20 @@
         { title: 'Muscles, Heart & Blood',           units: ['muscular','regional','cardio','blood'] },
         { title: 'Lymph, Endocrine, Respiratory, GI',units: ['lymph','endocrine','resp','gi'] },
         { title: 'Renal, Reproductive, Nervous',     units: ['renal','repro','nervous'] }
+      ]
+    },
+    'BIO005': {
+      eyebrow: 'BIO 005 Human Physiology · Solano Community College',
+      title: 'BIO 005 Human Physiology',
+      lead: 'Eight-week summer physiology course. Five blocks structured like a typical physiology sequence: cellular foundations, neuromuscular, endocrine control, transport (cardio + respiratory), and maintenance (renal, GI, reproductive). Physiology view locked on every unit.',
+      bannerLabel: 'BIO 005 Human Physiology at Solano Community College',
+      sectionLabel: 'Block',
+      sections: [
+        { title: 'Foundations of Physiology',         units: ['intro','chem','cells','tissues','integ'] },
+        { title: 'Nervous System & Muscle Physiology',units: ['nervous','muscular'] },
+        { title: 'Endocrine System & Calcium Homeostasis', units: ['endocrine','skeletal'] },
+        { title: 'Cardiovascular, Blood & Respiratory',units: ['blood','cardio','lymph','resp'] },
+        { title: 'Renal, Digestive & Reproductive',   units: ['renal','gi','repro'] }
       ]
     },
     'BIO430': {
