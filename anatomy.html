@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Anatomy Concept Notes | Dr. Sharilyn Rennie</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:#1E3D4C; --navy-deep:#142a36; --navy-tint:#EDF1F3;
+    --gold:#B8924A; --gold-deep:#8f7136;
+    --terra:#C2734D; --terra-dark:#A0522D;
+    --white:#FFFFFF; --off-white:#FAFAF9;
+    --gray-line:#D9DEE1; --gray-text:#5A6E78;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--off-white); color:var(--navy); font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  a.skip { position:absolute; left:-9999px; }
+  a.skip:focus { position:fixed; left:12px; top:12px; padding:10px 14px; background:var(--navy); color:var(--white); z-index:1000; border-radius:4px; }
+  .wrap { max-width:1100px; margin:0 auto; padding:48px 24px 80px; }
+
+  /* Hub switcher */
+  .hub-switch { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 24px; font-family:'DM Sans',sans-serif; font-size:12px; }
+  .hub-switch a { padding:6px 12px; border:1px solid var(--gray-line); border-radius:4px; text-decoration:none; color:var(--navy); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; background:var(--white); transition:background 150ms ease, border-color 150ms ease; }
+  .hub-switch a:hover, .hub-switch a:focus-visible { background:var(--navy-tint); border-color:var(--gold); outline:none; }
+  .hub-switch a[aria-current="page"] { background:var(--navy); color:var(--white); border-color:var(--navy); }
+
+  header.page { margin-bottom:32px; }
+  .eyebrow { font-family:'DM Sans',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.10em; color:var(--terra-dark); font-weight:500; margin:0 0 10px; }
+  h1 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--navy); font-size:36px; line-height:1.15; margin:0 0 12px; letter-spacing:-0.01em; }
+  .lead { font-family:'Lora',serif; font-style:italic; color:var(--navy); font-size:18px; max-width:780px; margin:0 0 8px; }
+  .byline { font-family:'DM Sans',sans-serif; font-size:13px; color:var(--gray-text); margin:0; }
+
+  .focus-banner { margin:20px 0 0; padding:14px 18px; background:var(--navy-tint); border-left:4px solid var(--gold); border-radius:4px; font-size:14px; color:var(--navy); line-height:1.55; }
+  .focus-banner strong { color:var(--navy-deep); }
+
+  h2.section { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.10em; color:var(--terra-dark); margin:44px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--gray-line); }
+  h2.section:first-of-type { margin-top:24px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .card { background:var(--white); border:1px solid var(--gray-line); border-radius:6px; padding:20px 22px; text-decoration:none; color:var(--navy); display:flex; flex-direction:column; box-shadow:0 1px 3px rgba(0,0,0,0.08); transition:transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease; }
+  .card:hover, .card:focus-visible { transform:translateY(-2px); box-shadow:0 8px 16px rgba(0,0,0,0.10); border-color:var(--gold); outline:none; }
+  .card:focus-visible { outline:3px solid var(--gold); outline-offset:2px; }
+  .card h3 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:18px; color:var(--navy); margin:0 0 10px; line-height:1.25; }
+  .card p { font-size:14px; line-height:1.5; color:var(--gray-text); margin:0; flex:1; }
+  .card .arrow { margin-top:14px; font-family:'DM Sans',sans-serif; font-size:13px; color:var(--gold-deep); font-weight:600; }
+  .card:hover .arrow, .card:focus-visible .arrow { color:var(--terra-dark); }
+
+  .usage { background:var(--white); border:1px solid var(--gray-line); border-radius:6px; padding:22px 26px; margin:48px 0 0; }
+  .usage h2 { font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; color:var(--terra-dark); margin:0 0 10px; text-transform:none; letter-spacing:0; border:none; padding:0; }
+  .usage p { font-size:14px; line-height:1.6; margin:0 0 8px; color:var(--navy); }
+  .usage p:last-child { margin-bottom:0; }
+
+  footer.page { margin-top:56px; padding-top:18px; border-top:1px solid var(--gray-line); font-size:13px; color:var(--gray-text); }
+
+  @media (max-width:520px) { .wrap { padding:32px 16px 60px; } h1 { font-size:28px; } .lead { font-size:16px; } .grid { grid-template-columns:1fr; } }
+  @media print { body { background:var(--white); } .card { break-inside:avoid; box-shadow:none; } a { color:var(--navy); } .hub-switch { display:none; } }
+  @media (prefers-reduced-motion: reduce) { .card { transition:none; } .card:hover, .card:focus-visible { transform:none; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<div class="wrap">
+
+  <nav class="hub-switch" aria-label="Concept Notes hubs">
+    <a href="index.html">Combined</a>
+    <a href="anatomy.html" aria-current="page">Anatomy</a>
+    <a href="physiology.html">Physiology</a>
+  </nav>
+
+  <header class="page">
+    <p class="eyebrow">Anatomy Hub</p>
+    <h1>Human Anatomy Concept Notes</h1>
+    <p class="lead">Sixteen anatomy-focused units organized by region and system. Click any unit to open it with the Anatomy view preselected.</p>
+    <p class="byline">Prepared by Dr. Sharilyn Rennie</p>
+    <div class="focus-banner" role="status">
+      <strong>Anatomy focus, not anatomy lock.</strong> Each unit opens with the Anatomy view preselected. If you want to peek at the related physiology, switch the View filter at the top of the unit to Combined or Physiology &mdash; you have full access. This hub just gets you to anatomy content faster.
+    </div>
+  </header>
+
+  <main id="main" aria-label="Unit library">
+    <!-- Sections rendered by JS below -->
+  </main>
+
+  <section class="usage" aria-labelledby="usage-h">
+    <h2 id="usage-h">How to use this hub</h2>
+    <p>Each card links to a unit page with the View filter preset to Anatomy. The Depth filter (Full / Essentials) and View filter remain unlocked, so you can adjust to match your study level.</p>
+    <p>Need physiology too? Use the Physiology hub link at the top of this page, or switch the View filter inside any unit.</p>
+  </section>
+
+  <footer class="page">
+    <p>Anatomy Concept Notes hub prepared by Dr. Sharilyn Rennie. WCAG 2.2 AA target across the library.</p>
+  </footer>
+</div>
+
+<script>
+  /* Shared UNITS catalog */
+  var UNITS = {
+    intro:      { title: 'Introduction to Anatomy & Physiology', href: 'intro-notes.html',
+                  desc: 'Terminology, anatomical position, planes, regions, cavities, levels of organization, homeostasis.' },
+    cells:      { title: 'Cells', href: 'cells-notes.html',
+                  desc: 'Cell anatomy and organelles, membrane structure, transport, the cell cycle.' },
+    tissues:    { title: 'Tissues & Body Membranes', href: 'tissues-notes.html',
+                  desc: 'Four primary tissue types, glands, the four body membranes, tissue repair.' },
+    integ:      { title: 'Integumentary System', href: 'integumentary-notes.html',
+                  desc: 'Skin layers, accessory structures (hair, glands, nails), wound healing, burn classification.' },
+    skeletal:   { title: 'Skeletal System', href: 'skeletal-notes.html',
+                  desc: 'Bone tissue, ossification, axial and appendicular skeleton, fractures, remodeling.' },
+    joints:     { title: 'Articulations (Joints)', href: 'articulations-notes.html',
+                  desc: 'Classification, fibrous / cartilaginous / synovial anatomy, six synovial types, knee / shoulder / hip deep dive.' },
+    muscular:   { title: 'Muscular System', href: 'muscular-notes.html',
+                  desc: 'Skeletal, cardiac, and smooth muscle structure, sarcomere, motor units, fiber types.' },
+    regional:   { title: 'Regional Muscle Anatomy & Joints', href: 'regional-muscles-notes.html',
+                  desc: 'Major muscles by region anchored to the joints they cross. Origin, insertion, action, innervation.' },
+    nervous:    { title: 'Nervous System & Special Senses', href: 'nervous-notes.html',
+                  desc: 'Neurons, CNS / PNS structure, brain and spinal cord anatomy, vision, hearing, balance, taste, smell.' },
+    endocrine:  { title: 'Endocrine System', href: 'endocrine-notes.html',
+                  desc: 'Endocrine glands and structural anatomy, hormone classes, locations.' },
+    blood:      { title: 'Blood & Hematology', href: 'blood-hematology-notes.html',
+                  desc: 'Plasma and formed elements, ABO and Rh, blood film findings.' },
+    cardio:     { title: 'Cardiovascular System', href: 'cardiovascular-notes.html',
+                  desc: 'Heart anatomy (chambers, valves, vessels, conduction), great vessels, vascular routes.' },
+    lymph:      { title: 'Lymphatic & Immune System', href: 'lymphatic-immune-notes.html',
+                  desc: 'Lymph circulation, primary and secondary lymphoid organs, immune cell types.' },
+    resp:       { title: 'Respiratory System', href: 'respiratory-notes.html',
+                  desc: 'Upper and lower airways, alveolar architecture, pleura, accessory respiratory structures.' },
+    gi:         { title: 'Digestive System', href: 'gi-notes.html',
+                  desc: 'GI tract anatomy from mouth to anus, accessory organs (liver, gallbladder, pancreas), peritoneum.' },
+    renal:      { title: 'Urinary & Renal System', href: 'renal-notes.html',
+                  desc: 'Kidney and nephron anatomy, ureters, bladder, urethra, retroperitoneal relationships.' },
+    repro:      { title: 'Reproductive System', href: 'reproductive-notes.html',
+                  desc: 'Male and female reproductive anatomy, embryology, fetal circulation.' }
+  };
+
+  /* Anatomy hub layout: region/system progression */
+  var SECTIONS = [
+    { title: 'Foundations',             units: ['intro','cells','tissues','integ'] },
+    { title: 'Support & Movement',      units: ['skeletal','joints','muscular','regional'] },
+    { title: 'Communication & Control', units: ['nervous','endocrine'] },
+    { title: 'Transport & Defense',     units: ['blood','cardio','lymph'] },
+    { title: 'Energy & Maintenance',    units: ['resp','gi','renal'] },
+    { title: 'Continuity',              units: ['repro'] }
+  ];
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  function unitHref(u) {
+    /* Append ?view=anatomy and &hub=anatomy so the unit opens with Anatomy preselected
+       and the back-link routes back to this hub. */
+    var sep = u.href.indexOf('?') === -1 ? '?' : '&';
+    return u.href + sep + 'view=anatomy&hub=anatomy';
+  }
+
+  function renderCard(unitKey) {
+    var u = UNITS[unitKey];
+    if (!u) return '';
+    return '<a class="card" href="' + escapeHtml(unitHref(u)) + '">' +
+             '<h3>' + escapeHtml(u.title) + '</h3>' +
+             '<p>' + escapeHtml(u.desc) + '</p>' +
+             '<span class="arrow" aria-hidden="true">Open unit &rarr;</span>' +
+           '</a>';
+  }
+
+  function render() {
+    var main = document.getElementById('main');
+    if (!main) return;
+    var html = '';
+    SECTIONS.forEach(function (section, i) {
+      html += '<section aria-labelledby="sec-' + i + '">';
+      html += '<h2 class="section" id="sec-' + i + '">' + escapeHtml(section.title) + '</h2>';
+      html += '<div class="grid">';
+      section.units.forEach(function (k) { html += renderCard(k); });
+      html += '</div></section>';
+    });
+    main.innerHTML = html;
+  }
+
+  render();
+
+  /* Iframe height + target=_top for non-external links */
+  (function () {
+    var iframeId = window.name || 'anatomy-hub';
+    function sendHeight() {
+      try {
+        var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        if (window.parent && window.parent !== window) window.parent.postMessage({ type: 'resize-iframe', id: iframeId, height: h }, '*');
+      } catch (e) {}
+    }
+    window.addEventListener('load', sendHeight);
+    window.addEventListener('resize', sendHeight);
+    if (typeof ResizeObserver !== 'undefined') new ResizeObserver(sendHeight).observe(document.body);
+    function tagLinks() {
+      document.querySelectorAll('a[href]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (!href) return;
+        if (/^https?:\/\//i.test(href)) { a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener'); }
+        else if (!a.getAttribute('target')) { a.setAttribute('target', '_top'); }
+      });
+    }
+    setTimeout(tagLinks, 0);
+    window.addEventListener('load', tagLinks);
+  })();
+</script>
+</body>
+</html>
